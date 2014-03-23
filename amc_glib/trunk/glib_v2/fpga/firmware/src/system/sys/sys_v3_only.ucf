@@ -1,0 +1,348 @@
+#######################################
+## CLOCKS
+#######################################
+NET "clk125_2_p" 							LOC = V6;
+NET "clk125_2_n" 							LOC = V5;
+NET "clk125_2_p" 							TNM_NET = "clk125_2_p";
+NET "clk125_2_n" 							TNM_NET = "clk125_2_n";
+TIMESPEC TS_clk125_2_p = 				    PERIOD    "clk125_2_p" 8 ns HIGH 50 %;
+TIMESPEC TS_clk125_2_n = 				    PERIOD    "clk125_2_n" TS_clk125_2_p  PHASE 4 ns HIGH 50 %;
+
+NET "xpoint_4x4_out3_p"						LOC = J9  			;	# IO_L0P_GC_34	
+NET "xpoint_4x4_out3_n"						LOC = H9				;	# IO_L0N_GC_34
+NET "xpoint_4x4_out3_p" 						TNM_NET = xpoint_4x4_out3_p;
+NET "xpoint_4x4_out3_n" 						TNM_NET = xpoint_4x4_out3_n;
+
+TIMESPEC TS_xpoint_4x4_out3_p = 				PERIOD "xpoint_4x4_out3_p" 25 ns HIGH 50%;
+TIMESPEC TS_xpoint_4x4_out3_n = 				PERIOD "xpoint_4x4_out3_n" TS_xpoint_4x4_out3_p PHASE 12.5 ns HIGH 50%;
+
+
+#######################################
+#######################################
+## SYSTEM BENCHTOP PHYSICAL CONSTRAINTS
+#######################################
+#######################################
+
+CONFIG PART = xc6vlx130tff1156-1;
+
+################
+## SYSTEM PLL ##
+################
+
+INST "system/glib_pll/mmcm_adv_inst"	                              LOC = MMCM_ADV_X0Y4   ;     
+INST "system/glib_pll/clkout2_buf" 		                              LOC = BUFGCTRL_X0Y2   ;    # clkout2 (ipb_clk)
+INST "system/glib_pll/clkout5_buf" 		                              LOC = BUFGCTRL_X0Y5   ;    # clkout5 (clk_inv_62_5_from_glib_pll)
+INST "system/glib_pll/clkout6_buf" 		                              LOC = BUFGCTRL_X0Y6   ;    # clkout6 (clk_200_from_glib_pll)
+                           
+#########################
+## GBT PHASE MONITORING #
+#########################
+ 
+## CDCE Lock signal
+                                                                           # 1.679ns         # 1.512ns      # 1.375ns     
+INST "system/cdce_synch/fsm_sync"                                    LOC = SLICE_X31Y36    ; #SLICE_X33Y36; #SLICE_X35Y36;
+INST "system/cdce_synch/fsm_sync"                                    BEL = AFF             ;
+
+NET  "cdce_sync_OBUF"
+ROUTE = "{3;1;6vlx130tff1156;fae76467!-1;-59632;-204800;S!0;-843;-584!1;"
+         "2698;-393!2;8592;0!3;7354;1033!4;0;-8!5;-886;-82!6;-2552;-174!7;-80;16!8;"
+         "-883;352;L!}"                                                                    ;
+
+## PLL
+
+INST "system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst"           LOC = MMCM_ADV_X0Y5   ;
+INST "system/gbt_phase_monitoring/ttclk_pll/clkout1_buf"             LOC = BUFHCE_X1Y34    ;
+INST "system/gbt_phase_monitoring/ttclk_pll/clkf_buf"                LOC = BUFHCE_X1Y35    ;
+ 
+## SFP 
+ 
+INST "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce_bufg"            LOC = BUFGCTRL_X0Y0   ;
+INST "system/gbt_phase_monitoring/sfp_cdce_pm/ttclk_x6_ffd"          BEL = AFF             ;
+INST "system/gbt_phase_monitoring/sfp_cdce_pm/ttclk_x6_ffd"          LOC = SLICE_X56Y100   ;
+INST "system/gbt_phase_monitoring/sfp_cdce_pm/ttclk_x6_cdce_ffd"     BEL = AFF             ;
+INST "system/gbt_phase_monitoring/sfp_cdce_pm/ttclk_x6_cdce_ffd"     LOC = SLICE_X56Y101   ;
+INST "system/gbt_phase_monitoring/sfp_cdce_pm/Mxor_test_xor_xo<0>1"  BEL = A5LUT           ;
+INST "system/gbt_phase_monitoring/sfp_cdce_pm/Mxor_test_xor_xo<0>1"  LOC = SLICE_X57Y100   ;
+INST "system/gbt_phase_monitoring/sfp_cdce_pm/xor_ffd"               BEL = AFF             ;
+INST "system/gbt_phase_monitoring/sfp_cdce_pm/xor_ffd"               LOC = SLICE_X57Y100   ;
+ 
+## FMC1
+ 
+INST "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce_bufg"           LOC = BUFGCTRL_X0Y23  ;
+INST "system/gbt_phase_monitoring/fmc1_cdce_pm/ttclk_x6_ffd"         BEL = AFF             ;
+INST "system/gbt_phase_monitoring/fmc1_cdce_pm/ttclk_x6_ffd"         LOC = SLICE_X58Y100   ;
+INST "system/gbt_phase_monitoring/fmc1_cdce_pm/ttclk_x6_cdce_ffd"    BEL = AFF             ;
+INST "system/gbt_phase_monitoring/fmc1_cdce_pm/ttclk_x6_cdce_ffd"    LOC = SLICE_X58Y101   ;
+INST "system/gbt_phase_monitoring/fmc1_cdce_pm/Mxor_test_xor_xo<0>1" BEL = A5LUT           ;
+INST "system/gbt_phase_monitoring/fmc1_cdce_pm/Mxor_test_xor_xo<0>1" LOC = SLICE_X59Y100   ;
+INST "system/gbt_phase_monitoring/fmc1_cdce_pm/xor_ffd"              BEL = AFF             ;
+INST "system/gbt_phase_monitoring/fmc1_cdce_pm/xor_ffd"              LOC = SLICE_X59Y100   ;
+ 
+###############################
+## SYSTEM AREA FLOORPLANNING ##
+###############################
+ 
+INST "system/rst" 							      AREA_GROUP = "pblock_sys"                     ;
+INST "system/glib_pll" 						      AREA_GROUP = "pblock_sys"                     ;
+INST "system/*eth*"							      AREA_GROUP = "pblock_sys"                     ;
+#INST "system/*ipb*"		 					      AREA_GROUP = "pblock_sys"                     ;
+INST "system/*arb*"		 					      AREA_GROUP = "pblock_sys"                     ;
+INST "system/*fabric*"		 				      AREA_GROUP = "pblock_sys"                     ;
+INST "system/*sys*"					      		AREA_GROUP = "pblock_sys"                     ;
+#INST "system/sram1_if"						      AREA_GROUP = "pblock_sys"                     ;
+#INST "system/sram2_if"						      AREA_GROUP = "pblock_sys"                     ;
+#INST "system/flash_if"						      AREA_GROUP = "pblock_sys"                     ;
+#INST "system/buffers"						      AREA_GROUP = "pblock_sys"                     ;
+INST "system/wb_bridge"						      AREA_GROUP = "pblock_sys"                     ;
+INST "system/icap_if"						      AREA_GROUP = "pblock_sys"                     ;
+INST "system/ip_mac" 						      AREA_GROUP = "pblock_sys"                     ;
+INST "system/i2c*" 							      AREA_GROUP = "pblock_sys"                     ;
+INST "system/spi" 							      AREA_GROUP = "pblock_sys"                     ;
+INST "system/cdce_synch" 					      AREA_GROUP = "pblock_sys"                     ;
+INST "system/gbt_phase_monitoring"           AREA_GROUP = "pblock_sys"                     ;
+AREA_GROUP "pblock_sys" 					      RANGE=CLOCKREGION_X1Y2:CLOCKREGION_X1Y2       ;
+
+
+############################################################################################
+############################################################################################
+############################################################################################
+############################################################################################
+
+
+#######################################
+## AMC Port 0
+#######################################
+
+NET "amc_port_tx_p[0]"						      LOC = V1	  ;  # MGTTXP1_114	
+NET "amc_port_tx_n[0]"						      LOC = V2    ;	# MGTTXN1_114
+NET "amc_port_rx_p[0]"						      LOC = W3    ;	# MGTRXP1_114
+NET "amc_port_rx_n[0]"						      LOC = W4    ;	# MGTRXN1_114
+  
+ 
+#######################################
+## GBE PHY
+#######################################
+
+NET "gbe_tx_p" 								      LOC = T1		;	# MGTTXP2_114
+NET "gbe_tx_n" 								      LOC = T2		;	# MGTTXN2_114
+NET "gbe_rx_p" 								      LOC = U3		;	# MGTRXP2_114				
+NET "gbe_rx_n" 								      LOC = U4		;	# MGTRXN2_114
+      
+NET "gbe_int_n"	  							      LOC = AL15	;	# IO_L3P_32
+NET "gbe_reset_n"								  LOC = AK16	;	# IO_L19N_32
+NET "gbe_scl"	     				              LOC = AL16	;	# IO_L19P_32
+NET "gbe_sda"  						        	  LOC = AL14	;	# IO_L3N_32
+
+#######################################
+## RESERVED FMC2 MGT
+#######################################
+#NET "fmc2_tx_p"								LOC = P1				;	# MGTTXP3_114
+#NET "fmc2_tx_n"								LOC = P2				;	# MGTTXN3_114
+#NET "fmc2_rx_p"								LOC = R3				;	# MGTRXP3_114
+#NET "fmc2_rx_n"								LOC = R4				;	# MGTRXN3_114
+
+#######################################
+## CLOCK CIRCUITRY CTRL
+#######################################
+NET "cdce_pwr_down" 							LOC = AF19			;	# IO_L8P_SRCC_22
+NET "cdce_ref_sel" 							LOC = AG21       	;	# IO_L18N_22
+NET "cdce_sync" 								LOC = AL18        ;	# IO_L1N_22
+NET "cdce_spi_clk" 							LOC = AC20        ;	# IO_L6P_22
+NET "cdce_spi_le" 							LOC = AD20        ;	# IO_L6N_22
+NET "cdce_spi_mosi" 							LOC = AE19        ;	# IO_L8N_SRCC_22
+NET "cdce_pll_lock" 							LOC = AD21			;	# IO_L0N_22
+NET "cdce_spi_miso" 							LOC = AE21			;	# IO_L0P_22
+NET "xpoint_4x4_s40"	   					LOC = AK21			;	# IO_L16P_22
+NET "xpoint_4x4_s30"	   					LOC = AG22			;	# IO_L2P_22
+NET "xpoint_4x4_s20"	   					LOC = AJ22			;	# IO_L4N_VREF_22
+NET "xpoint_4x4_s10"	   					LOC = AN19			;	# IO_L5P_22
+NET "xpoint_4x4_s41"	   					LOC = AJ21			;	# IO_L16N_22
+NET "xpoint_4x4_s31"	   					LOC = AL20			;	# IO_L7N_22
+NET "xpoint_4x4_s21"	   					LOC = AH22			;	# IO_L2N_22
+NET "xpoint_4x4_s11"	   					LOC = AM18			;	# IO_L1P_22
+NET "xpoint_2x2_s0"	 						LOC = AN18			;	# IO_L3N_22
+NET "xpoint_2x2_s1"	 						LOC = AP19			;	# IO_L3P_22
+NET "ics874003_fsel"	 						LOC = AN20			;	# IO_L5N_22
+NET "ics874003_mr"	 						LOC = AM20			;	# IO_L7P_22
+NET "ics874003_oe"	 						LOC = AM22			;	# IO_L17P_22
+NET "tclkb_dr_en"								LOC = AK22			;	# IO_L4P_22
+
+#######################################
+## fpga aux signals
+#######################################
+NET "fpga_rs0"	   							LOC = AA23			;	# IO_L16P_RS0_24
+NET "fpga_rs1"  								LOC = AG23			;	# IO_L15N_RS1_24
+NET "fpga_scl"  								LOC = AP20			;	# IO_L9P_MRCC_22
+NET "fpga_sda"									LOC = AP21			;	# IO_L9N_MRCC_22
+NET "fpga_clkout"	  							LOC = AD30			;	# IO_L9P_MRCC_13
+NET "fpga_reset_b"	 						LOC = AE33			;	# IO_L10P_MRCC_13
+NET "fpga_power_on_reset_b"				LOC = AC30			;	# IO_L9N_MRCC_13
+
+#######################################
+## FMC1 
+#######################################
+NET "fmc1_present_l"  						LOC = AN22			;	# IO_L17N_22
+NET "fmc2_present_l"							LOC = AG20			;	# IO_L18P_22
+
+#######################################
+## SRAM1 
+#######################################
+NET "sram1_adv_ld_l"							LOC = AN27			;	# IO_L9P_MRCC_23
+NET "sram1_ce1_l"								LOC = AG17			;	# IO_L8N_SRCC_32
+NET "sram1_cen_l"	   						LOC = AE17			;	# IO_L16N_32
+NET "sram1_clk"	  							LOC = AC15			;	# IO_L9P_MRCC_32
+NET "sram1_mode"		 	   				LOC = AM15			;	# IO_L5N_32
+NET "sram1_oe_l"		 	   				LOC = AC18			;	# IO_L11P_SRCC_32
+NET "sram1_we_l"		 	   				LOC = AD17			;	# IO_L16P_32
+NET "sram1_addr[0]"							LOC = AE18			;	# IO_L18P_32
+NET "sram1_addr[1]"							LOC = AF18			;	# IO_L18N_32
+NET "sram1_addr[2]"							LOC = AJ17			;	# IO_L6P_32
+NET "sram1_addr[3]"							LOC = AJ24			;	# IO_L14P_23
+NET "sram1_addr[4]"							LOC = AJ25			;	# IO_L8N_SRCC_23
+NET "sram1_addr[5]"							LOC = AH17			;	# IO_L8P_SRCC_32
+NET "sram1_addr[6]"							LOC = AL25			;	# IO_L16N_23
+NET "sram1_addr[7]"							LOC = AH25			;	# IO_L8P_SRCC_23
+NET "sram1_addr[8]"							LOC = AM17			;	# IO_L15P_32
+NET "sram1_addr[9]"							LOC = AN17			;	# IO_L13P_32
+NET "sram1_addr[10]"							LOC = AM26			;	# IO_L13N_23
+NET "sram1_addr[11]"							LOC = AK23			;	# IO_L18P_23
+NET "sram1_addr[12]"							LOC = AL26			;	# IO_L13P_23
+NET "sram1_addr[13]"							LOC = AC17			;	# IO_L11N_SRCC_32
+NET "sram1_addr[14]"							LOC = AN15			;	# IO_L5P_32
+NET "sram1_addr[15]"							LOC = AP15			;	# IO_L7N_32
+NET "sram1_addr[16]"							LOC = AP27			;	# IO_L15P_23
+NET "sram1_addr[17]"							LOC = AK24			;	# IO_L14N_VREF_23
+NET "sram1_addr[18]"							LOC = AM25			;	# IO_L16P_23
+NET "sram1_addr[19]"							LOC = AH27			;	# IO_L0P_23
+NET "sram1_addr[20]"							LOC = AG26			;	# IO_L2N_23
+NET "sram1_data[0]"		 	   			LOC = AN29			;	# IO_L5P_23
+NET "sram1_data[1]"		 	   			LOC = AN30			;	# IO_L1P_23
+NET "sram1_data[2]"		 	   			LOC = AM30			;	# IO_L1N_23
+NET "sram1_data[3]"		 	   			LOC = AP30			;	# IO_L3P_23
+NET "sram1_data[4]"		 	   			LOC = AL29			;	# IO_L4P_23
+NET "sram1_data[5]"		 	   			LOC = AH24			;	# IO_L11N_SRCC_23
+NET "sram1_data[6]"		 	   			LOC = AK29			;	# IO_L4N_VREF_23
+NET "sram1_data[7]"		 	   			LOC = AJ27			;	# IO_L10N_MRCC_23
+NET "sram1_data[8]"		 	   			LOC = AJ26			;	# IO_L12N_VRP_23
+NET "sram1_data[9]"		 	   			LOC = AP31			;	# IO_L3N_23
+NET "sram1_data[10]"		 	   			LOC = AL28			;	# IO_L6P_23
+NET "sram1_data[11]"		 	   			LOC = AK27			;	# IO_L10P_MRCC_23
+NET "sram1_data[12]"		 	   			LOC = AK28			;	# IO_L6N_23
+NET "sram1_data[13]"		 	   			LOC = AM28			;	# IO_L7N_23
+NET "sram1_data[14]"		 	   			LOC = AN28			;	# IO_L7P_23
+NET "sram1_data[15]"		 	   			LOC = AP29			;	# IO_L5N_23
+NET "sram1_data[16]"		 	   			LOC = AG16			;	# IO_L4P_32
+NET "sram1_data[17]"		 	   			LOC = AD16			;	# IO_L10N_MRCC_32
+NET "sram1_data[18]"		 	   			LOC = AH18			;	# IO_L12P_VRN_32
+NET "sram1_data[19]"		 	   			LOC = AG18			;	# IO_L12N_VRP_32
+NET "sram1_data[20]"		 	   			LOC = AF16			;	# IO_L4N_VREF_32
+NET "sram1_data[21]"		 	   			LOC = AP24			;	# IO_L19N_23
+NET "sram1_data[22]"		 	   			LOC = AN24			;	# IO_L17N_23
+NET "sram1_data[23]"		 	   			LOC = AL24			;	# IO_L18N_23
+NET "sram1_data[24]"		 	   			LOC = AP25			;	# IO_L19P_23
+NET "sram1_data[25]"		 	   			LOC = AN25			;	# IO_L17P_23
+NET "sram1_data[26]"		 	   			LOC = AP26			;	# IO_L15N_23
+NET "sram1_data[27]"		 	   			LOC = AM27			;	# IO_L9N_MRCC_23
+NET "sram1_data[28]"		 	   			LOC = AJ15			;	# IO_L2P_32
+NET "sram1_data[29]"		 	   			LOC = AE16			;	# IO_L10P_MRCC_32
+NET "sram1_data[30]"		 	   			LOC = AP17			;	# IO_L13N_32
+NET "sram1_data[31]"		 	   			LOC = AM16			;	# IO_L15N_32
+NET "sram1_data[32]"		 	   			LOC = AH28			;	# IO_L0N_23
+NET "sram1_data[33]"		 	   			LOC = AK26			;	# IO_L12P_VRN_23
+NET "sram1_data[34]"		 	   			LOC = AK18			;	# IO_L17P_32
+NET "sram1_data[35]"		 	   			LOC = AH15			;	# IO_L2N_32
+
+#######################################
+## SRAM2 
+#######################################
+NET "sram2_adv_ld_l"	   					LOC = AH9			;	# IO_L11P_SRCC_34
+NET "sram2_ce1_l"								LOC = AC23			;	# IO_L18P_24
+NET "sram2_ce2"								LOC = Y24			;	# IO_L14P_FCS_B_24
+NET "sram2_cen_l"								LOC = AC10			;	# IO_L10P_MRCC_34
+NET "sram2_clk"	  							LOC = L10			;	# IO_L9P_MRCC_34
+NET "sram2_mode"					 	 	 	LOC = AB10			;	# IO_L10N_MRCC_34
+NET "sram2_oe_l"					 	 	 	LOC = AA24			;	# IO_L14N_VREF_FOE_B_MOSI_I_24
+NET "sram2_we_l"					 	 	 	LOC = AF23			;	# IO_L15P_FWE_B_24
+NET "sram2_addr[0]"		 	   			LOC = AL8			;	# IO_L13N_A00_D16_34
+NET "sram2_addr[1]"		 	   			LOC = AK8			;	# IO_L13P_A01_D17_34
+NET "sram2_addr[2]"		 	   			LOC = AC9			;	# IO_L12N_A02_D18_34
+NET "sram2_addr[3]"		 	   			LOC = AD10			;	# IO_L12P_A03_D19_34
+NET "sram2_addr[4]"		 	   			LOC = C8				;	# IO_L7N_A04_D20_34
+NET "sram2_addr[5]"		 	   			LOC = B8				;	# IO_L7P_A05_D21_34
+NET "sram2_addr[6]"		 	   			LOC = E9				;	# IO_L6N_A06_D22_34
+NET "sram2_addr[7]"		 	   			LOC = E8				;	# IO_L6P_A07_D23_34
+NET "sram2_addr[8]"		 	   			LOC = A8				;	# IO_L5N_A08_D24_34
+NET "sram2_addr[9]"		 	   			LOC = A9				;	# IO_L5P_A09_D25_34
+NET "sram2_addr[10]"		 	   			LOC = D9				;	# IO_L4N_VREF_A10_D26_34
+NET "sram2_addr[11]"		 	   			LOC = C9				;	# IO_L4P_A11_D27_34
+NET "sram2_addr[12]"		 	   			LOC = D10			;	# IO_L3N_A12_D28_34
+NET "sram2_addr[13]"		 	   			LOC = C10			;	# IO_L3P_A13_D29_34
+NET "sram2_addr[14]"		 	   			LOC = F10			;	# IO_L2N_A14_D30_34
+NET "sram2_addr[15]"		 	   			LOC = F9				;	# IO_L2P_A15_D31_34
+NET "sram2_addr[16]"		 	   			LOC = AH8			;	# IO_L18N_A16_34
+NET "sram2_addr[17]"		 	   			LOC = AG8			;	# IO_L18P_A17_34
+NET "sram2_addr[18]"		 	   			LOC = AP9			;	# IO_L17N_A18_34
+NET "sram2_addr[19]"		 	   			LOC = AN9			;	# IO_L17P_A19_34
+NET "sram2_addr[20]"		 	   			LOC = AF10			;	# IO_L16N_A20_34
+NET "sram2_data[0]"							LOC = AF24			;	# IO_L13N_D0_FS0_24
+NET "sram2_data[1]"					 	 	LOC = AF25			;	# IO_L13P_D1_FS1_24
+NET "sram2_data[2]"					 	 	LOC = W24			;	# IO_L12N_D2_FS2_24
+NET "sram2_data[3]"					 	 	LOC = V24			;	# IO_L12P_D3_24
+NET "sram2_data[4]"					 	 	LOC = H24			;	# IO_L7N_D4_24
+NET "sram2_data[5]"					 	 	LOC = H25			;	# IO_L7P_D5_24
+NET "sram2_data[6]"					 	 	LOC = P24			;	# IO_L6N_D6_24
+NET "sram2_data[7]"					 	 	LOC = R24			;	# IO_L6P_D7_24
+NET "sram2_data[8]"					 	 	LOC = G23			;	# IO_L5N_D8_24
+NET "sram2_data[9]"					 	 	LOC = H23			;	# IO_L5P_D9_24
+NET "sram2_data[10]"					 	 	LOC = N24			;	# IO_L4N_VREF_D10_24
+NET "sram2_data[11]"					 	 	LOC = N23			;	# IO_L4P_D11_24
+NET "sram2_data[12]"					 	 	LOC = F23			;	# IO_L3N_D12_24
+NET "sram2_data[13]"					 	 	LOC = F24			;	# IO_L3P_D13_24
+NET "sram2_data[14]"					 	 	LOC = L24			;	# IO_L2N_D14_24
+NET "sram2_data[15]"					 	 	LOC = M23			;	# IO_L2P_D15_24
+NET "sram2_data[16]"					 	 	LOC = AE24			;	# IO_L11N_SRCC_24
+NET "sram2_data[17]"					 	 	LOC = AD24			;	# IO_L11P_SRCC_24
+NET "sram2_data[18]"					 	 	LOC = V23			;	# IO_L10N_MRCC_24
+NET "sram2_data[19]"					 	 	LOC = U23			;	# IO_L10P_MRCC_24
+NET "sram2_data[20]"					 	 	LOC = J24			;	# IO_L9N_MRCC_24
+NET "sram2_data[21]"					 	 	LOC = J25			;	# IO_L9P_MRCC_24
+NET "sram2_data[22]"					 	 	LOC = T23			;	# IO_L8N_SRCC_24
+NET "sram2_data[23]"					 	 	LOC = T24			;	# IO_L8P_SRCC_24
+NET "sram2_data[24]"					 	 	LOC = AD22			;	# IO_L19N_24
+NET "sram2_data[25]"					 	 	LOC = AC22			;	# IO_L19P_24
+NET "sram2_data[26]"					 	 	LOC = AC24			;	# IO_L18N_24
+NET "sram2_data[27]"					 	 	LOC = AJ14			;	# IO_L1N_32
+NET "sram2_data[28]"					 	 	LOC = AK14			;	# IO_L1P_32
+NET "sram2_data[29]"					 	 	LOC = AB23			;	# IO_L16N_CSO_B_24
+NET "sram2_data[30]"					 	 	LOC = AD9			;	# IO_L14P_A25_34
+NET "sram2_data[31]"					 	 	LOC = AJ9			;	# IO_L11N_SRCC_34
+NET "sram2_data[32]"					 	 	LOC = L9				;	# IO_L8P_SRCC_34
+NET "sram2_data[33]"					 	 	LOC = K9				;	# IO_L8N_SRCC_34
+NET "sram2_data[34]"					 	 	LOC = AG15			;	# IO_L0P_32
+NET "sram2_data[35]"					 	 	LOC = AF15			;	# IO_L0N_32
+
+#######################################
+## SFP CAGE
+#######################################
+NET "sfp_mod_abs[1]"							LOC = AD19			;	# IO_L14N_VREF_22
+NET "sfp_mod_abs[2]"		   	   		LOC = AH20			;	# IO_L12N_VRP_22
+NET "sfp_mod_abs[3]"		   	   		LOC = AL19			;	# IO_L10N_MRCC_22
+NET "sfp_mod_abs[4]"		   	   		LOC = AL23			;	# IO_L15N_22
+NET "sfp_rxlos[1]"							LOC = AC19			;	# IO_L14P_22
+NET "sfp_rxlos[2]"			   	      LOC = AF20			;	# IO_L11P_SRCC_22
+NET "sfp_rxlos[3]"			   	      LOC = AJ20			;	# IO_L12P_VRN_22
+NET "sfp_rxlos[4]"			   	      LOC = AM21			;	# IO_L13P_22
+NET "sfp_txfault[1]"							LOC = AF21			;	# IO_L11N_SRCC_22
+NET "sfp_txfault[2]"		   	   		LOC = AK19			;	# IO_L10P_MRCC_22
+NET "sfp_txfault[3]"		   	   		LOC = AL21			;	# IO_L13N_22
+NET "sfp_txfault[4]"	   					LOC = AM23			;	# IO_L15P_22
+
+#######################################
+## CPLD FPGA INTERFACE
+#######################################
+NET "v6_cpld[0]"		   	   			LOC = AE32			;	# IO_L14N_VREF_13
+NET "v6_cpld[1]"		   	   			LOC = AB27			;	# IO_L15P_13
+NET "v6_cpld[2]"		   	   			LOC = AC27			;	# IO_L15N_13
+NET "v6_cpld[3]"		   	   			LOC = AG33			;	# IO_L16P_13
+NET "v6_cpld[4]"		   	   			LOC = AG32			;	# IO_L16N_13
+NET "v6_cpld[5]"		   	   			LOC = AA26			;	# IO_L17P_13

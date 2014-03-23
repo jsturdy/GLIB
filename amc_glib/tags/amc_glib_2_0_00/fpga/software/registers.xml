@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<chip name="FPGA1">
+	<branch name="system_regs" 				address="0x00000000" mask="0x000000FF" >
+		<leaf name="board_id" 				address="0x00000000" >
+			<bitfield name="board_id_char4" 		offset="0"   width="8" />
+			<bitfield name="board_id_char3" 		offset="8"   width="8" />
+			<bitfield name="board_id_char2" 		offset="16"  width="8" />
+			<bitfield name="board_id_char1" 		offset="24"  width="8" />
+		</leaf>
+		<leaf name="sys_id" 				address="0x00000001" >
+			<bitfield name="sys_id_char4" 			offset="0"   width="8" />
+			<bitfield name="sys_id_char3" 			offset="8"   width="8" />
+			<bitfield name="sys_id_char2" 			offset="16"  width="8" />
+			<bitfield name="sys_id_char1" 			offset="24"  width="8" />
+		</leaf>
+		<leaf name="firmware_id" 			address="0x00000002"  >
+			<bitfield name="firmware_dd" 			offset="0"  width="5" />
+            <bitfield name="firmware_mm" 			offset="5"  width="4" />
+			<bitfield name="firmware_yy" 			offset="9"  width="7" />
+			<bitfield name="firmware_ver_build"     offset="16" width="8" />
+			<bitfield name="firmware_ver_minor"     offset="24" width="4" />
+			<bitfield name="firmware_ver_major"     offset="28" width="4" />
+		</leaf>
+		<leaf name="test_reg"         		address="0x00000003" />
+		<leaf name="ctrl" 					address="0x00000004"  >
+			<bitfield name="pcie_clk_fsel" 			offset="0"  width="1" />
+			<bitfield name="pcie_clk_mr" 			offset="1"  width="1" />
+			<bitfield name="pcie_clk_oe" 			offset="2"  width="1" />
+			<bitfield name="cdce_powerup" 			offset="4"  width="1" />
+			<bitfield name="cdce_refsel" 			offset="5"  width="1" />
+			<bitfield name="cdce_sync"	 			offset="6"  width="1" />
+			<bitfield name="cdce_ctrl_sel" 			offset="7"  width="1" />
+			<bitfield name="tclka_dr_en"			offset="8"  width="1" />
+			<bitfield name="tclkb_dr_en"			offset="9"  width="1" />
+			<bitfield name="xpoint_2x2_s1"			offset="10" width="1" />
+			<bitfield name="xpoint_2x2_s2"			offset="11" width="1" />
+			<bitfield name="xpoint_4x4_s1"			offset="12" width="2" />
+			<bitfield name="xpoint_4x4_s2"			offset="14" width="2" />
+			<bitfield name="xpoint_4x4_s3"			offset="16" width="2" />
+			<bitfield name="xpoint_4x4_s4"			offset="18" width="2" />
+		</leaf>
+		<leaf name="ctrl_2"                 address="0x00000005" />
+		<leaf name="status" 				address="0x00000006"  >
+			<bitfield name="glib_sfp1_status"		offset="0"  width="3" />
+			<bitfield name="glib_sfp1_mod_abs"		offset="0"  width="1" />
+			<bitfield name="glib_sfp1_rxlos"		offset="1"  width="1" />
+			<bitfield name="glib_sfp1_txfault" 		offset="2"  width="1" />
+			<bitfield name="glib_sfp2_status"		offset="4"  width="3" />
+			<bitfield name="glib_sfp2_mod_abs"		offset="4"  width="1" />
+			<bitfield name="glib_sfp2_rxlos"		offset="5"  width="1" />
+			<bitfield name="glib_sfp2_txfault" 		offset="6"  width="1" />
+			<bitfield name="glib_sfp3_status"		offset="8"  width="3" />
+			<bitfield name="glib_sfp3_mod_abs"		offset="8"  width="1" />
+			<bitfield name="glib_sfp3_rxlos"		offset="9"  width="1" />
+			<bitfield name="glib_sfp3_txfault" 		offset="10" width="1" />
+			<bitfield name="glib_sfp4_status"		offset="12" width="3" />
+			<bitfield name="glib_sfp4_mod_abs"		offset="12" width="1" />
+			<bitfield name="glib_sfp4_rxlos"		offset="13" width="1" />
+			<bitfield name="glib_sfp4_txfault" 		offset="14" width="1" />
+			<bitfield name="gbe_int"		 		offset="16" width="1" />
+			<bitfield name="fmc1_present" 			offset="17" width="1" />
+			<bitfield name="fmc2_present" 			offset="18" width="1" />
+			<bitfield name="fpga_reset" 			offset="19" width="1" />
+			<bitfield name="v6_cpld" 				offset="20" width="6" />
+			<bitfield name="cdce_lock" 				offset="28" width="1" />
+            <bitfield name="cdce_phase_mon_status"	offset="29" width="1" />
+		</leaf>
+		<leaf name="status_2"   			address="0x00000007" />
+		<leaf name="ctrl_sram"   			address="0x00000008"  >
+			<bitfield name="sram1_user_logic"		offset="0"  width="1"/>
+			<bitfield name="sram1_bist_run"			offset="1"  width="1"/>
+			<bitfield name="sram2_user_logic"		offset="16" width="1"/>
+			<bitfield name="sram2_bist_run"			offset="17" width="1"/>
+			<bitfield name="flash_select"			offset="20" width="1"/>
+		</leaf>
+		<leaf name="status_sram"			address="0x00000009" >
+			<bitfield name="sram1_bist_done"		offset="0"  width="1"/>
+			<bitfield name="sram1_bist_ok"			offset="1"  width="1"/>
+			<bitfield name="sram1_bist_errors"		offset="4"  width="8"/>
+			<bitfield name="sram2_bist_done"		offset="16" width="1"/>
+			<bitfield name="sram2_bist_ok"			offset="17" width="1"/>
+			<bitfield name="sram2_bist_errors"		offset="20" width="8"/>
+		</leaf>
+		<leaf name="spi_txdata"			  	address="0x0000000A" />
+		<leaf name="spi_command"			address="0x0000000B"  >
+			<bitfield name="spi_prescaler" 			offset="0"  width="12"/>
+			<bitfield name="spi_cpol" 				offset="12" width="1" />
+			<bitfield name="spi_cpha" 				offset="13" width="1" />
+			<bitfield name="spi_msb_first" 			offset="14" width="1" />
+			<bitfield name="spi_hold" 				offset="15" width="3" />
+			<bitfield name="spi_ss_delay" 			offset="18" width="10"/>
+			<bitfield name="spi_strobe" 			offset="31" width="1" />
+			<bitfield name="spi_autoclear" 			offset="28" width="4" />
+		</leaf>
+		<leaf name="spi_rxdata"				address="0x0000000C" />
+		<leaf name="i2c_settings"			address="0x0000000D"  >
+			<bitfield name="i2c_prescaler" 			offset="0"  width="10"/>
+			<bitfield name="i2c_bus_select"			offset="10" width="1" />
+			<bitfield name="i2c_enable"				offset="11" width="1" />
+		</leaf>
+		<leaf name="i2c_command"      		address="0x0000000E"  >
+			<bitfield name="i2c_comm_wr_data" 		offset="0"  width="8" />
+			<bitfield name="i2c_comm_reg_addr" 		offset="8"  width="8" />
+			<bitfield name="i2c_comm_slave_addr" 	offset="16" width="7" />
+			<bitfield name="i2c_comm_wr" 			offset="23" width="1" />
+			<bitfield name="i2c_comm_ralmode" 		offset="24" width="1" />
+			<bitfield name="i2c_comm_extmode" 		offset="25" width="1" />
+			<bitfield name="i2c_comm_strobe" 		offset="31" width="1" />
+			<bitfield name="i2c_comm_autoclear" 	offset="28" width="4" />
+		</leaf>
+		<leaf name="i2c_reply"				address="0x0000000F"  >
+			<bitfield name="i2c_reply_rd_data_8b" 	offset="0"  width="8" />
+			<bitfield name="i2c_reply_ral_addr" 	offset="8"  width="8"/>
+			<bitfield name="i2c_reply_rd_data_16b" 	offset="0"  width="16"/>
+			<bitfield name="i2c_reply_slave_addr" 	offset="16" width="7" />
+			<bitfield name="i2c_reply_wr" 			offset="23" width="1" />
+			<bitfield name="i2c_reply_ralmode" 		offset="24" width="1" />
+			<bitfield name="i2c_reply_extmode" 		offset="25" width="1" />
+			<bitfield name="i2c_status" 			offset="26" width="2"/>
+			<bitfield name="i2c_reply_done" 		offset="26" width="1" />
+			<bitfield name="i2c_reply_error" 		offset="27" width="1"/>
+			<bitfield name="i2c_reply_error_rdack1"	offset="28" width="1"/>
+			<bitfield name="i2c_reply_error_rdack2"	offset="29" width="1"/>
+			<bitfield name="i2c_reply_error_rdack3"	offset="30" width="1"/>
+			<bitfield name="i2c_reply_error_rdack4"	offset="31" width="1"/>
+		</leaf>
+	</branch>
+	<branch name="sram1_space" 				address="0x02000000" mask="0x00FFFFFF" >
+		<leaf name="sram1" 					address="0x02000000" />
+	</branch>
+	<branch name="sram2_space" 				address="0x04000000" mask="0x00FFFFFF" >
+		<leaf name="sram2" 					address="0x04000000" />
+	</branch>
+	<branch name="user_ipb_space" 			address="0x40000000" mask="0x3FFFFFFF" >
+		<leaf name="user_ipb_regs"			address="0x40000000" />
+	</branch>
+
+	<branch name="user_wb_space" 			address="0x80000000" mask="0x7FFFFFFF" >
+		<leaf name="user_wb_regs"			address="0x80000000" />
+		
+		<leaf name="user_board_id"			address="0x80000000"  >
+			<bitfield name="user_board_id_char4" 	offset="0"   width="8" />
+			<bitfield name="user_board_id_char3" 	offset="8"   width="8" />
+			<bitfield name="user_board_id_char2" 	offset="16"  width="8" />
+			<bitfield name="user_board_id_char1" 	offset="24"  width="8" />
+		</leaf>
+
+		<leaf name="user_sys_id"			address="0x80000001"  >
+			<bitfield name="user_sys_id_char4" 		offset="0"   width="8" />
+			<bitfield name="user_sys_id_char3" 		offset="8"   width="8" />
+			<bitfield name="user_sys_id_char2" 		offset="16"  width="8" />
+			<bitfield name="user_sys_id_char1" 		offset="24"  width="8" />
+		</leaf>
+
+		<leaf name="user_firmware_id" 		address="0x80000002"  >
+			<bitfield name="user_firmware_dd" 		offset="0"  width="5" />
+            <bitfield name="user_firmware_mm" 		offset="5"  width="4" />
+			<bitfield name="user_firmware_yy" 		offset="9"  width="7" />
+			<bitfield name="user_ver_build" 		offset="16" width="8" />
+			<bitfield name="user_ver_minor"     	offset="24" width="4" />
+			<bitfield name="user_ver_major"     	offset="28" width="4" />
+		</leaf>
+
+		<leaf name="user_fmc1_gbt_status" 	address="0x80000004"  >
+			<bitfield name="fmc1_gbt_bitslips" 		offset="0"  width="8" />
+            <bitfield name="fmc1_gbt_aligned" 		offset="8"  width="1" />
+		</leaf>
+
+		<leaf name="user_fmc1_bert1_wrd_L" 	address="0x80000005"  />
+		<leaf name="user_fmc1_bert1_wrd_H" 	address="0x80000006"  />
+		<leaf name="user_fmc1_bert1_err_L" 	address="0x80000007"  />
+		<leaf name="user_fmc1_bert1_err_H" 	address="0x80000008"  />
+
+		<leaf name="user_sfp_gbt_status" 	address="0x8000000a"  >
+			<bitfield name="sfp_gbt_bitslips" 		offset="0"  width="8" />
+            <bitfield name="sfp_gbt_aligned" 		offset="8"  width="1" />
+		</leaf>
+
+		<leaf name="user_sfp_bert1_wrd_L" 	address="0x8000000b"  />
+		<leaf name="user_sfp_bert1_wrd_H" 	address="0x8000000c"  />
+		<leaf name="user_sfp_bert1_err_L" 	address="0x8000000d"  />
+		<leaf name="user_sfp_bert1_err_H" 	address="0x8000000e"  />
+
+		<leaf name="usr_i2c_reply"			address="0x8000000f"  >
+			<bitfield name="usr_i2c_reply_rd_data_8b" 	offset="0"  width="8" />
+			<bitfield name="usr_i2c_reply_ral_addr" 	offset="8"  width="8"/>
+			<bitfield name="usr_i2c_reply_rd_data_16b" 	offset="0"  width="16"/>
+			<bitfield name="usr_i2c_reply_slave_addr" 	offset="16" width="7" />
+			<bitfield name="usr_i2c_reply_wr" 			offset="23" width="1" />
+			<bitfield name="usr_i2c_reply_ralmode" 		offset="24" width="1" />
+			<bitfield name="usr_i2c_reply_extmode" 		offset="25" width="1" />
+			<bitfield name="usr_i2c_status" 			offset="26" width="2"/>
+			<bitfield name="usr_i2c_reply_done" 		offset="26" width="1" />
+			<bitfield name="usr_i2c_reply_error" 		offset="27" width="1"/>
+			<bitfield name="usr_i2c_reply_error_rdack1"	offset="28" width="1"/>
+			<bitfield name="usr_i2c_reply_error_rdack2"	offset="29" width="1"/>
+			<bitfield name="usr_i2c_reply_error_rdack3"	offset="30" width="1"/>
+			<bitfield name="usr_i2c_reply_error_rdack4"	offset="31" width="1"/>
+		</leaf>	
+		
+		<leaf name="user_fmc1_bitslip_ctrl" address="0x80000010"  >
+			<bitfield name="fmc1_slide_enable" 		offset="16" width="1" />
+			<bitfield name="fmc1_slide_manual" 		offset="12" width="1" />
+			<bitfield name="fmc1_slide_run" 		offset="8"  width="1" />
+			<bitfield name="fmc1_slide_nbr" 		offset="0"  width="5" />
+ 		</leaf>
+
+		<leaf name="user_fmc1_link_ctrl" 	address="0x80000011"  >
+			<bitfield name="fmc1_gtx_tx_reset" 		offset="0"  width="1" />
+			<bitfield name="fmc1_gtx_tx_sync_rst" 	offset="1"  width="1" />
+			<bitfield name="fmc1_gbt_tx_rst" 		offset="2"  width="1" />
+			<bitfield name="fmc1_gtx_tx_pwrdown" 	offset="4"  width="2" />
+			<bitfield name="fmc1_gtx_rx_reset" 		offset="8"  width="1" />
+			<bitfield name="fmc1_gtx_rx_sync_rst" 	offset="9"  width="1" />
+			<bitfield name="fmc1_gbt_rx_rst" 		offset="10" width="1" />
+			<bitfield name="fmc1_gtx_rx_pwrdown" 	offset="12" width="2" />
+			<bitfield name="fmc1_gtx_loopback" 	    offset="28" width="3" />
+		</leaf>
+
+		<leaf name="user_fmc1_sram_ctrl" 	address="0x80000012"  />
+
+		<leaf name="user_fmc1_gtx_ctrl" 	address="0x80000013"  >
+			<bitfield name="fmc1_diff_swing" 		offset="0"  width="4" />
+			<bitfield name="fmc1_pstemph" 	        offset="4"  width="5" />
+			<bitfield name="fmc1_preemph" 		    offset="12" width="4" />
+			<bitfield name="fmc1_eqmix" 			offset="16" width="3" />
+			<bitfield name="fmc1_rxpol" 			offset="20" width="1" />
+			<bitfield name="fmc1_txpol" 			offset="24" width="1" />
+		</leaf>
+
+		<leaf name="user_fmc1_bert1_ctrl" 	address="0x80000014"  >
+			<bitfield name="fmc1_bert1_latency" 	offset="0"  width="5" />
+			<bitfield name="fmc1_bert1_load" 		offset="8"  width="1" />
+			<bitfield name="fmc1_bert1_enable" 		offset="12" width="1" />
+			<bitfield name="fmc1_bert1_latch" 	    offset="16" width="1" />
+			<bitfield name="fmc1_bert1_clear" 		offset="20" width="1" />
+		</leaf>
+
+		<leaf name="user_sfp_bitslip_ctrl" address="0x80000018"  >
+			<bitfield name="sfp_slide_enable" 		offset="16" width="1" />
+			<bitfield name="sfp_slide_manual" 		offset="12" width="1" />
+			<bitfield name="sfp_slide_run" 			offset="8"  width="1" />
+			<bitfield name="sfp_slide_nbr" 			offset="0"  width="5" />
+ 		</leaf>
+
+		<leaf name="user_sfp_link_ctrl" 	address="0x80000019"  >
+			<bitfield name="sfp_gtx_tx_reset" 		offset="0"  width="1" />
+			<bitfield name="sfp_gtx_tx_sync_rst" 	offset="1"  width="1" />
+			<bitfield name="sfp_gbt_tx_rst" 		offset="2"  width="1" />
+			<bitfield name="sfp_gtx_tx_pwrdown" 	offset="4"  width="2" />
+			<bitfield name="sfp_gtx_rx_reset" 		offset="8"  width="1" />
+			<bitfield name="sfp_gtx_rx_sync_rst" 	offset="9"  width="1" />
+			<bitfield name="sfp_gbt_rx_rst" 		offset="10" width="1" />
+			<bitfield name="sfp_gtx_rx_pwrdown" 	offset="12" width="2" />
+			<bitfield name="sfp_gtx_loopback" 	    offset="28" width="3" />
+		</leaf>
+
+		<leaf name="user_sfp_sram_ctrl" 	address="0x8000001a"  />
+
+		<leaf name="user_sfp_gtx_ctrl" 		address="0x8000001b"  >
+			<bitfield name="sfp_diff_swing" 		offset="0"  width="4" />
+			<bitfield name="sfp_pstemph" 	        offset="4"  width="5" />
+			<bitfield name="sfp_preemph" 		    offset="12" width="4" />
+			<bitfield name="sfp_eqmix" 				offset="16" width="3" />
+			<bitfield name="sfp_rxpol" 				offset="20" width="1" />
+			<bitfield name="sfp_txpol" 				offset="24" width="1" />
+		</leaf>
+		<leaf name="user_sfp_bert1_ctrl" 	address="0x8000001c"  >
+			<bitfield name="sfp_bert1_latency" 		offset="0"  width="5" />
+			<bitfield name="sfp_bert1_load" 		offset="8"  width="1" />
+			<bitfield name="sfp_bert1_enable" 		offset="12" width="1" />
+			<bitfield name="sfp_bert1_latch" 	    offset="16" width="1" />
+			<bitfield name="sfp_bert1_clear" 		offset="20" width="1" />
+		</leaf>		
+
+		<leaf name="usr_i2c_settings"		address="0x8000001e"  >
+			<bitfield name="usr_i2c_prescaler" 			offset="0"  width="10"/>
+			<bitfield name="usr_i2c_bus_select"			offset="10" width="1" />
+			<bitfield name="usr_i2c_enable"				offset="11" width="1" />
+		</leaf>
+
+		<leaf name="usr_i2c_command"      	address="0x8000001f"  >
+			<bitfield name="usr_i2c_comm_wr_data" 		offset="0"  width="8" />
+			<bitfield name="usr_i2c_comm_reg_addr" 		offset="8"  width="8" />
+			<bitfield name="usr_i2c_comm_slave_addr"	offset="16" width="7" />
+			<bitfield name="usr_i2c_comm_wr" 			offset="23" width="1" />
+			<bitfield name="usr_i2c_comm_ralmode" 		offset="24" width="1" />
+			<bitfield name="usr_i2c_comm_extmode" 		offset="25" width="1" />
+			<bitfield name="usr_i2c_comm_strobe" 		offset="31" width="1" />
+		</leaf>
+
+		<leaf name="user_fmc1_bert2_wrd_L" 	address="0x80000025"  />
+		<leaf name="user_fmc1_bert2_wrd_H" 	address="0x80000026"  />
+		<leaf name="user_fmc1_bert2_err_L" 	address="0x80000027"  />
+		<leaf name="user_fmc1_bert2_err_H" 	address="0x80000028"  />
+
+		<leaf name="user_sfp_bert2_wrd_L" 	address="0x8000002b"  />
+		<leaf name="user_sfp_bert2_wrd_H" 	address="0x8000002c"  />
+		<leaf name="user_sfp_bert2_err_L" 	address="0x8000002d"  />
+		<leaf name="user_sfp_bert2_err_H" 	address="0x8000002e"  />
+
+		<leaf name="user_fmc1_bert2_ctrl" 	address="0x80000034"  >
+			<bitfield name="fmc1_bert2_latency" 	offset="0"  width="5" />
+			<bitfield name="fmc1_bert2_load" 		offset="8"  width="1" />
+			<bitfield name="fmc1_bert2_enable" 		offset="12" width="1" />
+			<bitfield name="fmc1_bert2_latch" 	    offset="16" width="1" />
+			<bitfield name="fmc1_bert2_clear" 		offset="20" width="1" />
+		</leaf>		
+
+		<leaf name="user_sfp_bert2_ctrl" 	address="0x8000003c"  >
+			<bitfield name="sfp_bert2_latency" 		offset="0"  width="5" />
+			<bitfield name="sfp_bert2_load" 		offset="8"  width="1" />
+			<bitfield name="sfp_bert2_enable" 		offset="12" width="1" />
+			<bitfield name="sfp_bert2_latch" 	    offset="16" width="1" />
+			<bitfield name="sfp_bert2_clear" 		offset="20" width="1" />
+		</leaf>
+		</branch>
+</chip>
+

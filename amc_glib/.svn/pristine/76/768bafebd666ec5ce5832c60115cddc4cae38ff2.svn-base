@@ -1,0 +1,30 @@
+#######################################
+##
+#######################################
+NET "sfp_refclk_p[0]"							LOC = AK6		;	# MGTREFCLK0P_112 ###########	cdce62005_clkout0_p
+NET "sfp_refclk_n[0]"							LOC = AK5		;	# MGTREFCLK0N_112 ###########	cdce62005_clkout0_p
+#NET "sfp_refclk_p[1]"							LOC = AH6		;	# MGTREFCLK1P_112 ########### clk_125_1_p	
+#NET "sfp_refclk_n[1]"							LOC = AH5		;	# MGTREFCLK1N_112 ########### clk_125_1_n	
+#NET "ext_fat_pipe_refclk_p[0]"				LOC = AD6		;	# MGTREFCLK0P_113 ###########	cdce62005_clkout1_p
+#NET "ext_fat_pipe_refclk_n[0]"				LOC = AD5		;	# MGTREFCLK0N_113 ###########	cdce62005_clkout1_n
+#NET "ext_fat_pipe_refclk_p[1]"				LOC = AB6		;	# MGTREFCLK1P_113 ###########	ics874003_clkout1_p    
+#NET "ext_fat_pipe_refclk_n[1]"				LOC = AB5		;	# MGTREFCLK1N_113 ###########	ics874003_clkout1_n   
+#NET "fat_pipe_refclk_p[0]"					LOC = M6			;	# MGTREFCLK1P_115 ###########	cdce62005_clkout2_p
+#NET "fat_pipe_refclk_n[0]"					LOC = M5			;	# MGTREFCLK1N_115 ###########	cdce62005_clkout2_n
+#NET "fat_pipe_refclk_p[1]"					LOC = P6			;	# MGTREFCLK0P_115 ###########	ics874003_clk0_p   
+#NET "fat_pipe_refclk_n[1]"					LOC = P5			;	# MGTREFCLK0N_115 ###########	ics874003_clk0_n  
+NET "fmc1_refclk_p[0]"							LOC = H6			;	# MGTREFCLK0P_116 ###########	cdce62005_clkout3_p  
+NET "fmc1_refclk_n[0]"							LOC = H5			;	# MGTREFCLK0N_116 ###########	cdce62005_clkout3_n 	   
+#NET "fmc1_refclk_p[1]"							LOC = F6			;	# MGTREFCLK1P_116 ########### clk_125_3_p	  
+#NET "fmc1_refclk_n[1]"							LOC = F5			;	# MGTREFCLK1N_116 ########### clk_125_3_n
+
+NET "sfp_refclk_p[0]" 							TNM_NET = "sfp_refclk_p_0";
+#NET "sfp_refclk_n[0]" 							TNM_NET = "sfp_refclk_n_0";
+TIMESPEC TS_sfp_refclk_p = 					PERIOD    "sfp_refclk_p_0" 240 MHz HIGH 50 %;
+#TIMESPEC TS_sfp_refclk_n = 					PERIOD    "sfp_refclk_n_0" TS_sfp_refclk_p    PHASE 480 MHz HIGH 50 %;
+
+NET "fmc1_refclk_p[0]" 							TNM_NET = "fmc1_refclk_p_0";
+#NET "fmc1_refclk_n[0]" 						TNM_NET = "fmc1_refclk_n_0";
+TIMESPEC TS_fmc1_refclk_p = 					PERIOD    "fmc1_refclk_p_0" 240 MHz HIGH 50 %;
+#TIMESPEC TS_fmc1_refclk_n = 					PERIOD    "fmc1_refclk_n_0" TS_fmc1_refclk_p  PHASE 480 MHz HIGH 50 %;
+

@@ -9,10 +9,10 @@
     <!-- along with the project source files, is sufficient to open and    -->
     <!-- implement in ISE Project Navigator.                               -->
     <!--                                                                   -->
-    <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+    <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
   </header>
 
-  <version xil_pn:ise_version="14.6" xil_pn:schema_version="2"/>
+  <version xil_pn:ise_version="14.5" xil_pn:schema_version="2"/>
 
   <files>
     <file xil_pn:name="../../src/system/sys/glib_top.vhd" xil_pn:type="FILE_VHDL">
@@ -365,38 +365,134 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="264"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="172"/>
     </file>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/ipbus_ctrl.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/ipbus_package.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/ipbus_trans_decl.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/stretcher.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/trans_arb.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/transactor.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/transactor_cfg.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/transactor_if.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/transactor_sm.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_buffer_selector.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_build_arp.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_build_payload.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_build_ping.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_build_resend.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_build_status.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_byte_sum.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_clock_crossing_if.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_do_rx_reset.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_dualportram.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_dualportram_rx.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_dualportram_tx.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_if_flat.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_ipaddr_block.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_packet_parser.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_rarp_block.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_rxram_mux.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_rxram_shim.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_rxtransactor_if_simple.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_status_buffer.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_tx_mux.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_txtransactor_if_simple.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ethernet/hdl/emac_hostbus_decl.vhd" xil_pn:type="FILE_VHDL"/>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/ipbus_ctrl.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="265"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="155"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/ipbus_package.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="267"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="49"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/ipbus_trans_decl.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="268"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="48"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/stretcher.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="269"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="125"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/trans_arb.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="270"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="123"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/transactor.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="271"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="124"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/transactor_cfg.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="272"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="100"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/transactor_if.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="273"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="99"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/transactor_sm.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="274"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="98"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_buffer_selector.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="275"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="97"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_build_arp.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="276"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="96"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_build_payload.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="277"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="95"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_build_ping.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="278"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="94"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_build_resend.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="279"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="93"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_build_status.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="280"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="92"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_byte_sum.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="281"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="91"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_clock_crossing_if.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="282"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="90"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_do_rx_reset.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="283"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="89"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_dualportram.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="284"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="88"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_dualportram_rx.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="285"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="87"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_dualportram_tx.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="286"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="86"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_if_flat.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="287"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="122"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_ipaddr_block.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="288"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="85"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_packet_parser.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="289"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="84"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_rarp_block.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="290"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="83"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_rxram_mux.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="291"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="82"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_rxram_shim.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="292"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="81"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_rxtransactor_if_simple.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="293"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="80"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_status_buffer.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="294"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="79"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_tx_mux.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="295"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="77"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ipbus_core/hdl/udp_txtransactor_if_simple.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="296"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="78"/>
+    </file>
+    <file xil_pn:name="../../../../../../../ipbus_2_0_v1/firmware/ethernet/hdl/emac_hostbus_decl.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="297"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="126"/>
+    </file>
     <file xil_pn:name="../../src/system/pll/glib_pll.xco" xil_pn:type="FILE_COREGEN">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="265"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="164"/>
@@ -718,7 +814,7 @@
     <property xil_pn:name="Change Device Speed To" xil_pn:value="-1" xil_pn:valueState="default"/>
     <property xil_pn:name="Change Device Speed To Post Trace" xil_pn:value="-1" xil_pn:valueState="default"/>
     <property xil_pn:name="Combinatorial Logic Optimization" xil_pn:value="false" xil_pn:valueState="default"/>
-    <property xil_pn:name="Compile EDK Simulation Library" xil_pn:value="true" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Compile EDK Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile SIMPRIM (Timing) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile UNISIM (Functional) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile XilinxCoreLib (CORE Generator) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>

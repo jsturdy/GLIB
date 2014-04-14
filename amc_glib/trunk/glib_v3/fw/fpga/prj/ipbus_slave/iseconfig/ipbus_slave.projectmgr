@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="ipbus_slave" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/amc_p0_eth - eth_v6_basex - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/amc_p0_ipb_ctrl - ipbus_ctrl - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/amc_p1_eth - eth_v6_basex - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/amc_p1_ipb_ctrl - ipbus_ctrl - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/flash_if - flash_interface_wrapper - structural</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/gbt_phase_monitoring - cdce_phase_mon_v2_wrapper - structural</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/i2c_m - i2c_master_core - hierarchy</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/icap_if - icap_interface_wrapper - structural</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/phy_eth - eth_v6_sgmii - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/phy_ipb_ctrl - ipbus_ctrl - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/rst - rst_ctrl - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/sram1_if - glib_sram_interface_wrapper - structural</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/sram2_if - glib_sram_interface_wrapper - structural</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/sys_pcie - pcie_glib_wrapper - structural</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/high_speed_top_inst - high_speed_top - RTL</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/high_speed_top_inst - high_speed_top - RTL/high_speed_i - high_speed - RTL</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_deserializer_inst - link_deserializer - Behavioral/decode_8b10b_ctrl_inst - decode_8b10b_wrapper - xilinx/dec - decode_8b10b_top - xilinx/dec - decode_8b10b_rtl - xilinx/ldec - decode_8b10b_lut - xilinx</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_deserializer_inst - link_deserializer - Behavioral/decode_8b10b_data_inst - decode_8b10b_wrapper - xilinx</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_deserializer_inst - link_deserializer - Behavioral/decode_8b10b_reg_inst - decode_8b10b_wrapper - xilinx</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_serializer_inst - link_serializer - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_serializer_inst - link_serializer - Behavioral/encode_8b10b_ctrl_inst - encode_8b10b_wrapper - xilinx</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_serializer_inst - link_serializer - Behavioral/encode_8b10b_data_inst - encode_8b10b_wrapper - xilinx</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_serializer_inst - link_serializer - Behavioral/encode_8b10b_reg_inst - encode_8b10b_wrapper - xilinx</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_serializer_inst - link_serializer - Behavioral/encode_8b10b_wrapper_inst - encode_8b10b_wrapper - xilinx</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/amc_p0_eth - eth_v6_basex - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/amc_p0_ipb_ctrl - ipbus_ctrl - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/amc_p1_eth - eth_v6_basex - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/amc_p1_ipb_ctrl - ipbus_ctrl - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/flash_if - flash_interface_wrapper - structural</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/gbt_phase_monitoring - cdce_phase_mon_v2_wrapper - structural</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/i2c_m - i2c_master_core - hierarchy</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/icap_if - icap_interface_wrapper - structural</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/phy_eth - eth_v6_sgmii - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/phy_ipb_ctrl - ipbus_ctrl - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/rst - rst_ctrl - rtl</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/sram1_if - glib_sram_interface_wrapper - structural</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/sram2_if - glib_sram_interface_wrapper - structural</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch Y:|PhD|Code|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch/sys_pcie - pcie_glib_wrapper - structural</ClosedNode>
+         <ClosedNode>/high_speed_top - RTL C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|ipcore_dir|high_speed|example_design|high_speed_top.vhd/high_speed_i - high_speed - RTL</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>glib_top - glib_top_arch (C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/glib_top.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000238000000020000000000000000000000000200000064ffffffff000000810000000300000002000002380000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>glib_top - glib_top_arch (C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/glib_top.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Generate Programming File</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000160000000010000000100000000000000000000000064ffffffff000000810000000000000001000001600000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Generate Programming File</CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >27</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000392000000040101000100000000000000000000000064ffffffff000000810000000000000004000000d90000000100000000000000d700000001000000000000006600000001000000000000017c0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>cdce_phase_mon_v2.vhd</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>user_package_basic.vhd</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >94</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000160000000010001000100000000000000000000000064ffffffff000000810000000000000001000001600000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>user_package_basic.vhd</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000001cd0000011401000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000171000000010000000100000000000000000000000064ffffffff000000810000000000000001000001710000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000171000000010000000100000000000000000000000064ffffffff000000810000000000000001000001710000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/DEMO_TB_IMP - RTL C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|ipcore_dir|high_speed|simulation|demo_tb_imp.vhd/high_speed_top_i - high_speed_top - RTL</ClosedNode>
+         <ClosedNode>/DEMO_TB_IMP - RTL C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|ipcore_dir|high_speed|simulation|demo_tb_imp.vhd/high_speed_top_i - high_speed_top - RTL/high_speed_i - high_speed - RTL</ClosedNode>
+         <ClosedNode>/Unassigned User Library Modules/b10b_encoder_test - behavior</ClosedNode>
+         <ClosedNode>/Unassigned User Library Modules/serializer_test - behavior</ClosedNode>
+         <ClosedNode>/Unassigned User Library Modules/testbench - behavior</ClosedNode>
+         <ClosedNode>/b8b10_test - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|b8b10_test.vhd/decode_8b10b_ctrl_inst - decode_8b10b_wrapper - xilinx</ClosedNode>
+         <ClosedNode>/b8b10_test - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|b8b10_test.vhd/encode_8b10b_wrapper_inst - encode_8b10b_wrapper - xilinx</ClosedNode>
+         <ClosedNode>/deserializer_test - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|DeserializerTest.vhd/link_deserializer_inst - link_deserializer - Behavioral</ClosedNode>
+         <ClosedNode>/deserializer_test - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|deserializer_test.vhd/link_deserializer_inst - link_deserializer - Behavioral</ClosedNode>
+         <ClosedNode>/encode_decode_test - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|encode_decode_test.vhd/link_deserializer_inst - link_deserializer - Behavioral</ClosedNode>
+         <ClosedNode>/encode_decode_test - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|encode_decode_test.vhd/link_serializer_inst - link_serializer - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/system - system_core - mixed_arch</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_deserializer_inst - link_deserializer - Behavioral</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_deserializer_inst - link_deserializer - Behavioral/decode_8b10b_ctrl_inst - decode_8b10b_wrapper - xilinx</ClosedNode>
+         <ClosedNode>/glib_top - glib_top_arch C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|src|system|sys|glib_top.vhd/usr - user_logic - user_logic_arch/link_serializer_inst - link_serializer - Behavioral</ClosedNode>
+         <ClosedNode>/gtx_wrapper - Behavioral C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|gtx_wrapper.vhd</ClosedNode>
+         <ClosedNode>/serializer_test - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|SerializerTest.vhd/link_serializer_inst - link_serializer - Behavioral</ClosedNode>
+         <ClosedNode>/serializer_test - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|SerializerTest.vhd/link_serializer_inst - link_serializer - Behavioral/encode_8b10b_wrapper_inst - encode_8b10b_wrapper - xilinx</ClosedNode>
+         <ClosedNode>/serializer_test - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|encode_decode_test.vhd</ClosedNode>
+         <ClosedNode>/serializer_test - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|serializer_test.vhd</ClosedNode>
+         <ClosedNode>/serializer_test - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|serializer_test.vhd/link_serializer_inst - link_serializer - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior C:|Users|tlenzi|Desktop|GLIB|amc_glib|trunk|glib_v3|fw|fpga|prj|ipbus_slave|src|SerializerTest.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>DEMO_TB_IMP - RTL (C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/high_speed/simulation/demo_tb_imp.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000248000000020000000000000000000000000200000064ffffffff000000810000000300000002000002480000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>DEMO_TB_IMP - RTL (C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/high_speed/simulation/demo_tb_imp.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000171000000010000000100000000000000000000000064ffffffff000000810000000000000001000001710000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000171000000010000000100000000000000000000000064ffffffff000000810000000000000001000001710000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_BODY" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000171000000010000000100000000000000000000000064ffffffff000000810000000000000001000001710000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_DECL" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000171000000010000000100000000000000000000000064ffffffff000000810000000000000001000001710000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000171000000010000000100000000000000000000000064ffffffff000000810000000000000001000001710000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000171000000010000000100000000000000000000000064ffffffff000000810000000000000001000001710000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_NGC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000171000000010000000100000000000000000000000064ffffffff000000810000000000000001000001710000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+</Project>

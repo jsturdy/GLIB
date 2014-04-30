@@ -1,7 +1,7 @@
 ##############################################################
 #
-# Xilinx Core Generator version 14.6
-# Date: Wed Apr 02 13:57:05 2014
+# Xilinx Core Generator version 14.7
+# Date: Wed Apr 30 07:12:34 2014
 #
 ##############################################################
 #
@@ -188,7 +188,7 @@ CSET rx_idle_lo_cnt=0000
 CSET rx_line_rate=3.2
 CSET rx_oob_threshold=011
 CSET rx_refclk_x0_y0=REFCLK0_Q1
-CSET rx_refclk_x0_y1=REFCLK0_Q1
+CSET rx_refclk_x0_y1=REFCLK1_Q0
 CSET rx_refclk_x0_y10=REFCLK1_Q2
 CSET rx_refclk_x0_y11=REFCLK1_Q2
 CSET rx_refclk_x0_y12=REFCLK1_Q3
@@ -299,7 +299,7 @@ CSET use_comma_detect=true
 CSET use_external_rxusrclk=false
 CSET use_external_txusrclk=false
 CSET use_gtx_x0_y0=true
-CSET use_gtx_x0_y1=true
+CSET use_gtx_x0_y1=false
 CSET use_gtx_x0_y10=false
 CSET use_gtx_x0_y11=false
 CSET use_gtx_x0_y12=false
@@ -408,4 +408,4 @@ CSET wideband_highpass_mix=000
 MISC pkg_timestamp=2011-04-08T05:24:23Z
 # END Extra information
 GENERATE
-# CRC: 7f60aded
+# CRC: fa2b5311

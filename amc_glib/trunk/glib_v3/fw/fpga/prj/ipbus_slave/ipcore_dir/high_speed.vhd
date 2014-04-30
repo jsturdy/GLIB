@@ -126,58 +126,7 @@ port
     GTX0_TXRESETDONE_OUT                    : out  std_logic;
     --------------------- Transmit Ports - TX PRBS Generator -------------------
     GTX0_TXENPRBSTST_IN                     : in   std_logic_vector(2 downto 0);
-    GTX0_TXPRBSFORCEERR_IN                  : in   std_logic;
-
-    
-    
-    --_________________________________________________________________________
-    --_________________________________________________________________________
-    --GTX1  (X0Y1)
-    
-    ------------------------ Loopback and Powerdown Ports ----------------------
-    GTX1_LOOPBACK_IN                        : in   std_logic_vector(2 downto 0);
-    ----------------------- Receive Ports - 8b10b Decoder ----------------------
-    GTX1_RXCHARISK_OUT                      : out  std_logic_vector(1 downto 0);
-    GTX1_RXDISPERR_OUT                      : out  std_logic_vector(1 downto 0);
-    GTX1_RXNOTINTABLE_OUT                   : out  std_logic_vector(1 downto 0);
-    --------------- Receive Ports - Comma Detection and Alignment --------------
-    GTX1_RXCOMMADET_OUT                     : out  std_logic;
-    GTX1_RXENMCOMMAALIGN_IN                 : in   std_logic;
-    GTX1_RXENPCOMMAALIGN_IN                 : in   std_logic;
-    ----------------------- Receive Ports - PRBS Detection ---------------------
-    GTX1_PRBSCNTRESET_IN                    : in   std_logic;
-    GTX1_RXENPRBSTST_IN                     : in   std_logic_vector(2 downto 0);
-    GTX1_RXPRBSERR_OUT                      : out  std_logic;
-    ------------------- Receive Ports - RX Data Path interface -----------------
-    GTX1_RXDATA_OUT                         : out  std_logic_vector(15 downto 0);
-    GTX1_RXRECCLK_OUT                       : out  std_logic;
-    GTX1_RXUSRCLK2_IN                       : in   std_logic;
-    ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
-    GTX1_RXN_IN                             : in   std_logic;
-    GTX1_RXP_IN                             : in   std_logic;
-    --------------- Receive Ports - RX Loss-of-sync State Machine --------------
-    GTX1_RXLOSSOFSYNC_OUT                   : out  std_logic_vector(1 downto 0);
-    ------------------------ Receive Ports - RX PLL Ports ----------------------
-    GTX1_GTXRXRESET_IN                      : in   std_logic;
-    GTX1_MGTREFCLKRX_IN                     : in   std_logic;
-    GTX1_PLLRXRESET_IN                      : in   std_logic;
-    GTX1_RXPLLLKDET_OUT                     : out  std_logic;
-    GTX1_RXRESETDONE_OUT                    : out  std_logic;
-    ---------------- Transmit Ports - 8b10b Encoder Control Ports --------------
-    GTX1_TXCHARISK_IN                       : in   std_logic_vector(1 downto 0);
-    ------------------ Transmit Ports - TX Data Path interface -----------------
-    GTX1_TXDATA_IN                          : in   std_logic_vector(15 downto 0);
-    GTX1_TXOUTCLK_OUT                       : out  std_logic;
-    GTX1_TXUSRCLK2_IN                       : in   std_logic;
-    ---------------- Transmit Ports - TX Driver and OOB signaling --------------
-    GTX1_TXN_OUT                            : out  std_logic;
-    GTX1_TXP_OUT                            : out  std_logic;
-    ----------------------- Transmit Ports - TX PLL Ports ----------------------
-    GTX1_GTXTXRESET_IN                      : in   std_logic;
-    GTX1_TXRESETDONE_OUT                    : out  std_logic;
-    --------------------- Transmit Ports - TX PRBS Generator -------------------
-    GTX1_TXENPRBSTST_IN                     : in   std_logic_vector(2 downto 0);
-    GTX1_TXPRBSFORCEERR_IN                  : in   std_logic
+    GTX0_TXPRBSFORCEERR_IN                  : in   std_logic
 
     
 );
@@ -201,9 +150,6 @@ architecture RTL of high_speed is
   
     signal  gtx0_share_rxpll_i           :   std_logic_vector(1 downto 0);
     signal  gtx0_mgtrefclkrx_i           :   std_logic_vector(1 downto 0);
-  
-    signal  gtx1_share_rxpll_i           :   std_logic_vector(1 downto 0);
-    signal  gtx1_mgtrefclkrx_i           :   std_logic_vector(1 downto 0);
    
 --*************************** Component Declarations **************************
 component high_speed_gtx
@@ -283,7 +229,6 @@ begin
 
    
     gtx0_mgtrefclkrx_i <= (tied_to_ground_i & GTX0_MGTREFCLKRX_IN);
-    gtx1_mgtrefclkrx_i <= (tied_to_ground_i & GTX1_MGTREFCLKRX_IN);
 
  
     --------------------------- GTX Instances  -------------------------------   
@@ -353,75 +298,6 @@ begin
         --------------------- Transmit Ports - TX PRBS Generator -------------------
         TXENPRBSTST_IN                  =>      GTX0_TXENPRBSTST_IN,
         TXPRBSFORCEERR_IN               =>      GTX0_TXPRBSFORCEERR_IN
-
-    );
-
-
-
-    --_________________________________________________________________________
-    --_________________________________________________________________________
-    --GTX1  (X0Y1)
-
-    gtx1_high_speed_i : high_speed_gtx
-    generic map
-    (
-        -- Simulation attributes
-        GTX_SIM_GTXRESET_SPEEDUP    => WRAPPER_SIM_GTXRESET_SPEEDUP,
-        
-        -- Share RX PLL parameter
-        GTX_TX_CLK_SOURCE           => "RXPLL",
-        -- Save power parameter
-        GTX_POWER_SAVE              => "0000110100"
-    )
-    port map
-    (
-        ------------------------ Loopback and Powerdown Ports ----------------------
-        LOOPBACK_IN                     =>      GTX1_LOOPBACK_IN,
-        ----------------------- Receive Ports - 8b10b Decoder ----------------------
-        RXCHARISK_OUT                   =>      GTX1_RXCHARISK_OUT,
-        RXDISPERR_OUT                   =>      GTX1_RXDISPERR_OUT,
-        RXNOTINTABLE_OUT                =>      GTX1_RXNOTINTABLE_OUT,
-        --------------- Receive Ports - Comma Detection and Alignment --------------
-        RXCOMMADET_OUT                  =>      GTX1_RXCOMMADET_OUT,
-        RXENMCOMMAALIGN_IN              =>      GTX1_RXENMCOMMAALIGN_IN,
-        RXENPCOMMAALIGN_IN              =>      GTX1_RXENPCOMMAALIGN_IN,
-        ----------------------- Receive Ports - PRBS Detection ---------------------
-        PRBSCNTRESET_IN                 =>      GTX1_PRBSCNTRESET_IN,
-        RXENPRBSTST_IN                  =>      GTX1_RXENPRBSTST_IN,
-        RXPRBSERR_OUT                   =>      GTX1_RXPRBSERR_OUT,
-        ------------------- Receive Ports - RX Data Path interface -----------------
-        RXDATA_OUT                      =>      GTX1_RXDATA_OUT,
-        RXRECCLK_OUT                    =>      GTX1_RXRECCLK_OUT,
-        RXUSRCLK2_IN                    =>      GTX1_RXUSRCLK2_IN,
-        ------- Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR ------
-        RXN_IN                          =>      GTX1_RXN_IN,
-        RXP_IN                          =>      GTX1_RXP_IN,
-        --------------- Receive Ports - RX Loss-of-sync State Machine --------------
-        RXLOSSOFSYNC_OUT                =>      GTX1_RXLOSSOFSYNC_OUT,
-        ------------------------ Receive Ports - RX PLL Ports ----------------------
-        GTXRXRESET_IN                   =>      GTX1_GTXRXRESET_IN,
-        MGTREFCLKRX_IN                  =>      gtx1_mgtrefclkrx_i,
-        PLLRXRESET_IN                   =>      GTX1_PLLRXRESET_IN,
-        RXPLLLKDET_OUT                  =>      GTX1_RXPLLLKDET_OUT,
-        RXRESETDONE_OUT                 =>      GTX1_RXRESETDONE_OUT,
-        ---------------- Transmit Ports - 8b10b Encoder Control Ports --------------
-        TXCHARISK_IN                    =>      GTX1_TXCHARISK_IN,
-        ------------------ Transmit Ports - TX Data Path interface -----------------
-        TXDATA_IN                       =>      GTX1_TXDATA_IN,
-        TXOUTCLK_OUT                    =>      GTX1_TXOUTCLK_OUT,
-        TXUSRCLK2_IN                    =>      GTX1_TXUSRCLK2_IN,
-        ---------------- Transmit Ports - TX Driver and OOB signaling --------------
-        TXN_OUT                         =>      GTX1_TXN_OUT,
-        TXP_OUT                         =>      GTX1_TXP_OUT,
-        ----------------------- Transmit Ports - TX PLL Ports ----------------------
-        GTXTXRESET_IN                   =>      GTX1_GTXTXRESET_IN,
-        MGTREFCLKTX_IN                  =>      gtx1_mgtrefclkrx_i,
-        PLLTXRESET_IN                   =>      tied_to_ground_i,
-        TXPLLLKDET_OUT                  =>      open,
-        TXRESETDONE_OUT                 =>      GTX1_TXRESETDONE_OUT,
-        --------------------- Transmit Ports - TX PRBS Generator -------------------
-        TXENPRBSTST_IN                  =>      GTX1_TXENPRBSTST_IN,
-        TXPRBSFORCEERR_IN               =>      GTX1_TXPRBSFORCEERR_IN
 
     );
 

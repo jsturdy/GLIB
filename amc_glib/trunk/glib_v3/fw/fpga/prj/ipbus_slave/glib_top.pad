@@ -1,7 +1,7 @@
-Release 14.6 - par P.68d (nt64)
+Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Apr 03 11:28:41 2014
+Wed Apr 30 10:48:35 2014
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -431,8 +431,8 @@ AM1||OPAD|MGTTXP2_112|UNUSED|||||||||||
 AM2||OPAD|MGTTXN2_112|UNUSED|||||||||||
 AM3|||MGTAVTT_S||||||||||||
 AM4|||GND||||||||||||
-AM5|sfp_rx_p<2>|IPAD|MGTRXP1_112|||||||||LOCATED|NO||
-AM6|sfp_rx_n<2>|IPAD|MGTRXN1_112|||||||||LOCATED|NO||
+AM5||IPAD|MGTRXP1_112|UNUSED|||||||||||
+AM6||IPAD|MGTRXN1_112|UNUSED|||||||||||
 AM7|||GND||||||||||||
 AM8|||GND||||||||||||
 AM9|||VCCO_34|||34|||||2.50||||
@@ -463,8 +463,8 @@ AM33||IOBM|IO_L16P_12|UNUSED||12|||||||||
 AM34|||GND||||||||||||
 AN1|||GND||||||||||||
 AN2|||GND||||||||||||
-AN3|sfp_tx_p<2>|OPAD|MGTTXP1_112|||||||||LOCATED|NO||
-AN4|sfp_tx_n<2>|OPAD|MGTTXN1_112|||||||||LOCATED|NO||
+AN3||OPAD|MGTTXP1_112|UNUSED|||||||||||
+AN4||OPAD|MGTTXN1_112|UNUSED|||||||||||
 AN5|||GND||||||||||||
 AN6|||MGTAVCC_S||||||||||||
 AN7|||MGTRREF_115||||||||||||
@@ -495,12 +495,12 @@ AN31|||GND||||||||||||
 AN32||IOBM|IO_L17P_12|UNUSED||12|||||||||
 AN33|amc_port_tx_n<7>|IOB|IO_L8P_SRCC_12|OUTPUT|LVCMOS25*|12|12|SLOW||||UNLOCATED|NO|NONE|
 AN34|amc_port_tx_n<6>|IOB|IO_L8N_SRCC_12|OUTPUT|LVCMOS25*|12|12|SLOW||||UNLOCATED|NO|NONE|
-AP1|sfp_tx_p<1>|OPAD|MGTTXP0_112|||||||||LOCATED|NO||
-AP2|sfp_tx_n<1>|OPAD|MGTTXN0_112|||||||||LOCATED|NO||
+AP1|sfp_tx_p<1>|OPAD|MGTTXP0_112||||||||||NO||
+AP2|sfp_tx_n<1>|OPAD|MGTTXN0_112||||||||||NO||
 AP3|||GND||||||||||||
 AP4|||GND||||||||||||
-AP5|sfp_rx_p<1>|IPAD|MGTRXP0_112|||||||||LOCATED|NO||
-AP6|sfp_rx_n<1>|IPAD|MGTRXN0_112|||||||||LOCATED|NO||
+AP5|sfp_rx_p<1>|IPAD|MGTRXP0_112||||||||||NO||
+AP6|sfp_rx_n<1>|IPAD|MGTRXN0_112||||||||||NO||
 AP7|||MGTAVTTRCAL_115||||||||||||
 AP8|||GND||||||||||||
 AP9|sram2_addr<18>|IOB|IO_L17N_A18_34|OUTPUT|LVCMOS25*|34|24|FAST||||LOCATED|NO|NONE|

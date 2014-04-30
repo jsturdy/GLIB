@@ -1,4 +1,4 @@
-Release 14.6 Map P.68d (nt64)
+Release 14.7 Map P.20131013 (nt64)
 Xilinx Map Application Log File for Design 'glib_top'
 
 Design Information
@@ -10,7 +10,7 @@ Target Device  : xc6vlx130t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Thu Apr 03 11:23:30 2014
+Mapped Date    : Wed Apr 30 10:44:16 2014
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:56 - Part 'xc6vlx130t' is not a WebPack part.
@@ -695,9 +695,13 @@ WARNING:MapLib:701 - Signal amc_port_rx_de<19> connected to top level port
    amc_port_rx_de<19> has been removed.
 WARNING:MapLib:701 - Signal amc_port_rx_de<20> connected to top level port
    amc_port_rx_de<20> has been removed.
+WARNING:MapLib:701 - Signal sfp_tx_p<2> connected to top level port sfp_tx_p<2>
+   has been removed.
 WARNING:MapLib:701 - Signal sfp_tx_p<3> connected to top level port sfp_tx_p<3>
    has been removed.
 WARNING:MapLib:701 - Signal sfp_tx_p<4> connected to top level port sfp_tx_p<4>
+   has been removed.
+WARNING:MapLib:701 - Signal sfp_tx_n<2> connected to top level port sfp_tx_n<2>
    has been removed.
 WARNING:MapLib:701 - Signal sfp_tx_n<3> connected to top level port sfp_tx_n<3>
    has been removed.
@@ -1017,11 +1021,11 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 57 secs 
-Total CPU  time at the beginning of Placer: 56 secs 
+Total REAL time at the beginning of Placer: 48 secs 
+Total CPU  time at the beginning of Placer: 47 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:e60560f5) REAL time: 1 mins 4 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:bd3936cf) REAL time: 55 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:837 - Partially locked IO Bus is found. 
@@ -1051,35 +1055,23 @@ WARNING:Place:837 - Partially locked IO Bus is found.
 INFO:Place:834 - Only a subset of IOs are locked. Out of 246 IOs, 226 are locked
    and 20 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:e60560f5) REAL time: 1 mins 6 secs 
+Phase 2.7  Design Feasibility Check (Checksum:bd3936cf) REAL time: 56 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:6aeba5d2) REAL time: 1 mins 6 secs 
+Phase 3.31  Local Placement Optimization (Checksum:53ba985f) REAL time: 56 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:6aeba5d2) REAL time: 1 mins 6 secs 
+Phase 4.37  Local Placement Optimization (Checksum:53ba985f) REAL time: 56 secs 
 
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[1]_ipb_ack (type FF)
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
+   FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 Phase 5.2  Initial Placement for Architecture Specific Features
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[1]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[2]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[1]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
-   FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
    FF)
    The load component should be of clock buffer type.
@@ -1087,11 +1079,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
-   FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1102,18 +1090,36 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
-   FF)
+   system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[2]_ipb_ack (type FF)
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
+   FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
+   FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/ipb_from_slaves[1]_ipb_ack (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
+   FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/ipb_from_slaves[2]_ipb_ack (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
+   FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
 ....
@@ -1175,9 +1181,9 @@ Clock-Region: <CLOCKREGION_X1Y2>
 | clock |    region   |                                                                                      -----------------------------------------------
 |  type |  expansion  |                                                                                      | <IO/Regional clock Net Name>
 |-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
-|  BUFR | Upper/Lower |  17  |  0  |  0 |    0   |    0   |  2507 |     0 |     0 |   0  |   1  |  0  |   0  | "system/mac_clk<2>"
+|  BUFR | Upper/Lower |  17  |  0  |  0 |    0   |    0   |  2418 |     0 |     0 |   0  |   1  |  0  |   0  | "system/mac_clk<2>"
 |-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
-|  BUFR | Upper/Lower |  17  |  0  |  0 |    0   |    0   |  2509 |     0 |     0 |   0  |   1  |  0  |   0  | "system/mac_clk<0>"
+|  BUFR | Upper/Lower |  17  |  0  |  0 |    0   |    0   |  2420 |     0 |     0 |   0  |   1  |  0  |   0  | "system/mac_clk<0>"
 |-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
 
 
@@ -1247,24 +1253,21 @@ AREA_GROUP "CLKAG_system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/clk_ds
 CLOCKREGION_X1Y4, CLOCKREGION_X1Y2;
 
 
-Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:d7d9aa3f) REAL time: 1 mins 26 secs 
+Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:6098fadc) REAL time: 1 mins 14 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:d7d9aa3f) REAL time: 1 mins 26 secs 
+Phase 6.36  Local Placement Optimization (Checksum:6098fadc) REAL time: 1 mins 14 secs 
 
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 ....
-....
-............................................................................................
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
+.....
+.............................................................................
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
@@ -1272,12 +1275,16 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
+   The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
@@ -1286,19 +1293,19 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
 Phase 7.30  Global Clock Region Assignment
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
+   The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
@@ -1325,32 +1332,41 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_fr
 # Clock Region Assignment: SUCCESSFUL
 
 # Location of Clock Components
+INST "usr/txoutclk_bufg0_inst" LOC = "BUFGCTRL_X0Y1" ;
+INST "usr/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_USE_SOFTBSCAN_EQ0.I_USE_XST_TCK_WORKAROUND_EQ1.U_ICON_BSCAN_BUFG/U_BUFG" LOC = "BUFGCTRL_X0Y28" ;
 INST "system/cdce_synch/bufg_mux" LOC = "BUFGCTRL_X0Y29" ;
 INST "system/clkbuf_clk125_2" LOC = "BUFGCTRL_X0Y31" ;
 INST "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce_bufg" LOC = "BUFGCTRL_X0Y23" ;
-INST "system/clkbuf_pllout2" LOC = "BUFGCTRL_X0Y4" ;
+INST "system/clkbuf_pllout2" LOC = "BUFGCTRL_X0Y2" ;
 INST "system/clkbuf_pllout5" LOC = "BUFGCTRL_X0Y5" ;
 INST "system/clkbuf_xp1_clk1" LOC = "BUFGCTRL_X0Y30" ;
-INST "usr/high_speed_top_inst/chipscope.i_icon/U0/U_ICON/I_YES_BSCAN.U_BS/I_USE_SOFTBSCAN_EQ0.U_BUFG" LOC = "BUFGCTRL_X0Y28" ;
-INST "usr/high_speed_top_inst/txoutclk_bufg0_i" LOC = "BUFGCTRL_X0Y1" ;
 INST "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce_bufg" LOC = "BUFGCTRL_X0Y0" ;
 INST "system/sram1_if/sramInterfaceIoControl/clk_bufgmux" LOC = "BUFGCTRL_X0Y3" ;
-INST "system/sram2_if/sramInterfaceIoControl/clk_bufgmux" LOC = "BUFGCTRL_X0Y2" ;
+INST "system/sram2_if/sramInterfaceIoControl/clk_bufgmux" LOC = "BUFGCTRL_X0Y4" ;
 INST "xpoint1_clk1_p" LOC = "J9" ;
 INST "system/phy_en.phy_eth/clkbuf" LOC = "BUFR_X2Y5" ;
 INST "system/amc_p0_en.amc_p0_eth/clkbuf" LOC = "BUFR_X2Y4" ;
 INST "system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/bufr_clk_ds" LOC = "BUFR_X2Y7" ;
 INST "system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds" LOC = "BUFR_X2Y6" ;
-INST "usr/high_speed_top_inst/q1_clk0_refclk_ibufds_i" LOC = "IBUFDS_GTXE1_X0Y2" ;
+INST "usr/clk160MHz_inst" LOC = "IBUFDS_GTXE1_X0Y2" ;
 INST "system/mgtbuf_clk125_2" LOC = "IBUFDS_GTXE1_X0Y7" ;
 INST "system/gbt_phase_monitoring/ttclk_pll/clkf_buf" LOC = "BUFHCE_X1Y35" ;
 INST "system/gbt_phase_monitoring/ttclk_pll/clkout1_buf" LOC = "BUFHCE_X1Y34" ;
 INST "system/pll/mmcm_adv_inst" LOC = "MMCM_ADV_X0Y0" ;
 INST "system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst" LOC = "MMCM_ADV_X0Y5" ;
-INST "usr/high_speed_top_inst/high_speed_i/gtx0_high_speed_i/gtxe1_i" LOC = "GTXE1_X0Y0" ;
 INST "system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/gtxe1_i" LOC = "GTXE1_X0Y10" ;
 INST "system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/gtxe1_i" LOC = "GTXE1_X0Y9" ;
-INST "usr/high_speed_top_inst/high_speed_i/gtx1_high_speed_i/gtxe1_i" LOC = "GTXE1_X0Y1" ;
+INST "usr/high_speed_inst/gtx0_high_speed_i/gtxe1_i" LOC = "GTXE1_X0Y0" ;
+
+# usr/gtx0_txusrclk2 driven by BUFGCTRL_X0Y1
+NET "usr/gtx0_txusrclk2" TNM_NET = "TN_usr/gtx0_txusrclk2" ;
+TIMEGRP "TN_usr/gtx0_txusrclk2" AREA_GROUP = "CLKAG_usr/gtx0_txusrclk2" ;
+AREA_GROUP "CLKAG_usr/gtx0_txusrclk2" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4 ;
+
+# usr/csControl<0> driven by BUFGCTRL_X0Y28
+NET "usr/csControl<0>" TNM_NET = "TN_usr/csControl<0>" ;
+TIMEGRP "TN_usr/csControl<0>" AREA_GROUP = "CLKAG_usr/csControl<0>" ;
+AREA_GROUP "CLKAG_usr/csControl<0>" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4 ;
 
 # system/cdce_synch/clk_from_bufg_mux driven by BUFGCTRL_X0Y29
 NET "system/cdce_synch/clk_from_bufg_mux" TNM_NET = "TN_system/cdce_synch/clk_from_bufg_mux" ;
@@ -1367,10 +1383,10 @@ NET "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" TNM_NET = "TN_system/gbt_ph
 TIMEGRP "TN_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" AREA_GROUP = "CLKAG_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" ;
 AREA_GROUP "CLKAG_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" RANGE =   CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4 ;
 
-# user_wb_mosi[0]_wb_clk driven by BUFGCTRL_X0Y4
-NET "user_wb_mosi[0]_wb_clk" TNM_NET = "TN_user_wb_mosi[0]_wb_clk" ;
-TIMEGRP "TN_user_wb_mosi[0]_wb_clk" AREA_GROUP = "CLKAG_user_wb_mosi[0]_wb_clk" ;
-AREA_GROUP "CLKAG_user_wb_mosi[0]_wb_clk" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4 ;
+# user_ipb_clk driven by BUFGCTRL_X0Y2
+NET "user_ipb_clk" TNM_NET = "TN_user_ipb_clk" ;
+TIMEGRP "TN_user_ipb_clk" AREA_GROUP = "CLKAG_user_ipb_clk" ;
+AREA_GROUP "CLKAG_user_ipb_clk" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4 ;
 
 # system/ipb_inv_clk driven by BUFGCTRL_X0Y5
 NET "system/ipb_inv_clk" TNM_NET = "TN_system/ipb_inv_clk" ;
@@ -1382,16 +1398,6 @@ NET "system/xpoint1_clk1" TNM_NET = "TN_system/xpoint1_clk1" ;
 TIMEGRP "TN_system/xpoint1_clk1" AREA_GROUP = "CLKAG_system/xpoint1_clk1" ;
 AREA_GROUP "CLKAG_system/xpoint1_clk1" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4 ;
 
-# usr/high_speed_top_inst/ila_control_i<0> driven by BUFGCTRL_X0Y28
-NET "usr/high_speed_top_inst/ila_control_i<0>" TNM_NET = "TN_usr/high_speed_top_inst/ila_control_i<0>" ;
-TIMEGRP "TN_usr/high_speed_top_inst/ila_control_i<0>" AREA_GROUP = "CLKAG_usr/high_speed_top_inst/ila_control_i<0>" ;
-AREA_GROUP "CLKAG_usr/high_speed_top_inst/ila_control_i<0>" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4 ;
-
-# usr/high_speed_top_inst/gtx0_txusrclk2_i driven by BUFGCTRL_X0Y1
-NET "usr/high_speed_top_inst/gtx0_txusrclk2_i" TNM_NET = "TN_usr/high_speed_top_inst/gtx0_txusrclk2_i" ;
-TIMEGRP "TN_usr/high_speed_top_inst/gtx0_txusrclk2_i" AREA_GROUP = "CLKAG_usr/high_speed_top_inst/gtx0_txusrclk2_i" ;
-AREA_GROUP "CLKAG_usr/high_speed_top_inst/gtx0_txusrclk2_i" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4 ;
-
 # system/gbt_phase_monitoring/sfp_ttclk_x6_cdce driven by BUFGCTRL_X0Y0
 NET "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" TNM_NET = "TN_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" ;
 TIMEGRP "TN_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" AREA_GROUP = "CLKAG_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" ;
@@ -1402,7 +1408,7 @@ NET "system/sram_w[1]_clk" TNM_NET = "TN_system/sram_w[1]_clk" ;
 TIMEGRP "TN_system/sram_w[1]_clk" AREA_GROUP = "CLKAG_system/sram_w[1]_clk" ;
 AREA_GROUP "CLKAG_system/sram_w[1]_clk" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4 ;
 
-# system/sram_w[2]_clk driven by BUFGCTRL_X0Y2
+# system/sram_w[2]_clk driven by BUFGCTRL_X0Y4
 NET "system/sram_w[2]_clk" TNM_NET = "TN_system/sram_w[2]_clk" ;
 TIMEGRP "TN_system/sram_w[2]_clk" AREA_GROUP = "CLKAG_system/sram_w[2]_clk" ;
 AREA_GROUP "CLKAG_system/sram_w[2]_clk" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4 ;
@@ -1415,7 +1421,7 @@ AREA_GROUP "CLKAG_system/glib_pll_clkout_31_25_b" RANGE =   CLOCKREGION_X0Y0 ;
 # system/glib_pll_clkout_31_25_c driven by MMCM_ADV_X0Y0
 NET "system/glib_pll_clkout_31_25_c" TNM_NET = "TN_system/glib_pll_clkout_31_25_c" ;
 TIMEGRP "TN_system/glib_pll_clkout_31_25_c" AREA_GROUP = "CLKAG_system/glib_pll_clkout_31_25_c" ;
-AREA_GROUP "CLKAG_system/glib_pll_clkout_31_25_c" RANGE =   CLOCKREGION_X0Y0 ;
+AREA_GROUP "CLKAG_system/glib_pll_clkout_31_25_c" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0 ;
 
 # system/gbt_phase_monitoring/ttclk_x6 driven by BUFHCE_X1Y34
 NET "system/gbt_phase_monitoring/ttclk_x6" TNM_NET = "TN_system/gbt_phase_monitoring/ttclk_x6" ;
@@ -1440,7 +1446,7 @@ Number of Global Clock Networks: 18
 Clock Region Assignment: SUCCESSFUL
 
 Clock-Region: <CLOCKREGION_X0Y0> 
- key resource utilizations (used/available): global-clocks - 4/12 ;
+ key resource utilizations (used/available): global-clocks - 3/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1450,11 +1456,10 @@ Clock-Region: <CLOCKREGION_X0Y0>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/cdce_synch/clk_from_bufg_mux
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |system/sram_w[1]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     48 |user_wb_mosi[0]_wb_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |    764 |usr/high_speed_top_inst/ila_control_i<0>
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |system/sram_w[1]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    124 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |    825 | Total 
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    133 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
@@ -1469,15 +1474,15 @@ Clock-Region: <CLOCKREGION_X1Y0>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/sram_w[1]_clk
-      7 |      0 |      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    200 |    814 |usr/high_speed_top_inst/gtx0_txusrclk2_i
-      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    317 |    711 |usr/high_speed_top_inst/ila_control_i<0>
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      6 |user_ipb_clk
+      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |usr/gtx0_txusrclk2
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     10 |      0 |      2 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |    517 |   1525 | Total 
+      0 |      0 |      1 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      2 |      6 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X0Y1> 
- key resource utilizations (used/available): global-clocks - 6/12 ;
+ key resource utilizations (used/available): global-clocks - 4/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1487,18 +1492,16 @@ Clock-Region: <CLOCKREGION_X0Y1>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/cdce_synch/clk_from_bufg_mux
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    425 |system/sram_w[1]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     29 |system/sram_w[2]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      2 |user_clk125_2_bufg
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     50 |   1563 |user_wb_mosi[0]_wb_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |      0 |usr/high_speed_top_inst/ila_control_i<0>
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    421 |system/sram_w[1]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |system/sram_w[2]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |   1183 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     60 |   2020 | Total 
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |   1633 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X1Y1> 
- key resource utilizations (used/available): global-clocks - 2/12 ;
+ key resource utilizations (used/available): global-clocks - 3/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1507,15 +1510,16 @@ Clock-Region: <CLOCKREGION_X1Y1>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    337 |user_wb_mosi[0]_wb_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |      9 |usr/high_speed_top_inst/ila_control_i<0>
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |system/sram_w[1]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |system/sram_w[2]_clk
+     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |    491 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |    346 | Total 
+     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |    501 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X0Y2> 
- key resource utilizations (used/available): global-clocks - 4/12 ;
+ key resource utilizations (used/available): global-clocks - 5/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1525,11 +1529,12 @@ Clock-Region: <CLOCKREGION_X0Y2>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     22 |system/cdce_synch/clk_from_bufg_mux
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    407 |system/sram_w[2]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     59 |user_clk125_2_bufg
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     20 |    372 |user_wb_mosi[0]_wb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    391 |system/sram_w[2]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     36 |user_clk125_2_bufg
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |     76 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     13 |usr/csControl<0>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     22 |    860 | Total 
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |    538 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
@@ -1545,17 +1550,17 @@ Clock-Region: <CLOCKREGION_X1Y2>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/gbt_phase_monitoring/sfp_ttclk_x6_cdce
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |system/gbt_phase_monitoring/ttclk_x6
-      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/sram_w[2]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |     27 |system/gbt_phase_monitoring/ttclk_x6
+      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |system/sram_w[2]_clk
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      5 |user_clk125_2_bufg
-     17 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    174 |user_wb_mosi[0]_wb_clk
+     21 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |    619 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     17 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |    185 | Total 
+     21 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     34 |    669 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X0Y3> 
- key resource utilizations (used/available): global-clocks - 1/12 ;
+ key resource utilizations (used/available): global-clocks - 3/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1564,9 +1569,11 @@ Clock-Region: <CLOCKREGION_X0Y3>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      9 |user_wb_mosi[0]_wb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     26 |user_clk125_2_bufg
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     11 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |    209 |usr/csControl<0>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      9 | Total 
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |    246 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
@@ -1580,9 +1587,9 @@ Clock-Region: <CLOCKREGION_X1Y3>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      5 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     11 |user_wb_mosi[0]_wb_clk
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      3 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      5 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     11 | Total 
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      3 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
@@ -1625,155 +1632,105 @@ maybe moved to adjacent clock-regions as long as the "number of clocks per regio
 ######################################################################################
 
 
-Phase 7.30  Global Clock Region Assignment (Checksum:d7d9aa3f) REAL time: 1 mins 39 secs 
+Phase 7.30  Global Clock Region Assignment (Checksum:6098fadc) REAL time: 1 mins 24 secs 
 
 Phase 8.3  Local Placement Optimization
 ....
 ....
-Phase 8.3  Local Placement Optimization (Checksum:ef19bda4) REAL time: 1 mins 41 secs 
+Phase 8.3  Local Placement Optimization (Checksum:6484dba1) REAL time: 1 mins 26 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:ef19bda4) REAL time: 1 mins 41 secs 
+Phase 9.5  Local Placement Optimization (Checksum:6484dba1) REAL time: 1 mins 26 secs 
 
 Phase 10.8  Global Placement
-..................................................................................
-..........................................................................................................................................................................................................
 .............................................................................................................................
-..............................................................................
-Phase 10.8  Global Placement (Checksum:18369674) REAL time: 2 mins 41 secs 
+..........................................................................................................................................................................................................
+.................................................................................................................
+...........................................................................
+Phase 10.8  Global Placement (Checksum:e65a6743) REAL time: 2 mins 13 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:18369674) REAL time: 2 mins 42 secs 
+Phase 11.5  Local Placement Optimization (Checksum:e65a6743) REAL time: 2 mins 14 secs 
 
 Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:2ab10ae5) REAL time: 3 mins 15 secs 
+Phase 12.18  Placement Optimization (Checksum:9da25473) REAL time: 2 mins 42 secs 
 
 Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:2ab10ae5) REAL time: 3 mins 16 secs 
+Phase 13.5  Local Placement Optimization (Checksum:9da25473) REAL time: 2 mins 43 secs 
 
 Phase 14.34  Placement Validation
-Phase 14.34  Placement Validation (Checksum:97fdd61d) REAL time: 3 mins 16 secs 
+Phase 14.34  Placement Validation (Checksum:9f62e204) REAL time: 2 mins 43 secs 
 
-Total REAL time to Placer completion: 3 mins 22 secs 
-Total CPU  time to Placer completion: 3 mins 39 secs 
+Total REAL time to Placer completion: 2 mins 48 secs 
+Total CPU  time to Placer completion: 3 mins 
 Running post-placement packing...
 Writing output files...
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_908_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][2]_AND_743_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net usr/high_speed_top_inst/tx_data_vio_async_in_i<30> is sourced by a
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net usr/high_speed_top_inst/ila_control_i<13> is sourced by a
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_908_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][1]_AND_745_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][2]_AND_743_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][3]_AND_741_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net usr/high_speed_top_inst/rx_data_vio_async_in_i<30> is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][0]_AND_747_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net usr/high_speed_top_inst/rx_data_vio_async_in_i<31> is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][1]_AND_745_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[43].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[42].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[47].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[46].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[45].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[44].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[41].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[40].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[49].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[48].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[39].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[50].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[51].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[38].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[52].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[53].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[54].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[55].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[56].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[57].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[58].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[59].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[37].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<16>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<17>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<18>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<19>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[51].UPDATE_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<20>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<21>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<22>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<23>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<12>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<13>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<14>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<15>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/RESET> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<0>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<1>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<2>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<3>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[25].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[24].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
    MC_D1_O> is incomplete. The signal does not drive any load pins in the design.
@@ -1786,447 +1743,95 @@ WARNING:PhysDesignRules:367 - The signal
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<4>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<5>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<6>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<7>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<8>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<9>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<10>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<11>> is incomplete. The signal does not
+   drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_UPDATE_OUT[127].UPDATE_CELL/SHIFT_OUT> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<4>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<5>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<6>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<7>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<0>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<1>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<2>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<3>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<8>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<9>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<10>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<11>> is
-   incomplete. The signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[51].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[40].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[39].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[38].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[63].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[34].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[62].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[35].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[61].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[36].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[60].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<12>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<13>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<14>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<15>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<8>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<9>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<10>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<11>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<12>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<13>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<14>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<15>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[55].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[54].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[50].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[53].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[52].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[46].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[42].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[41].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[36].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[37].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[33].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<16>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<17>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<18>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<19>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<16>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<17>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<18>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<19>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<4>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<5>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<6>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<7>> is
-   incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[56].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[49].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[47].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<0>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<1>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<2>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<3>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[45].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[43].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[44].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[35].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<20>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<21>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<22>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<23>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<20>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<21>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<22>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<23>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<24>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<25>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<26>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<27>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[48].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[57].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[34].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[33].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_TRANS.U_ARM/din_latched> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[58].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/RESET> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[59].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<28>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<29>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/UPDATE<30>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<24>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<25>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/UPDATE<26>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.rx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[32].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.shared_vio_i/U0/I_VIO/GEN_SYNC_OUT[32].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[32].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[33].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[45].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[44].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<16>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<17>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<18>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<19>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[34].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[35].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[52].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[49].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[48].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[40].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<20>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<21>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<22>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<23>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<8>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<9>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<10>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<11>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<12>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<13>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<14>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<15>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<4>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<5>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<6>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<7>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<24>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<25>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<26>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<27>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<31>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[55].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[54].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[53].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[36].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[51].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[50].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[37].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[47].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[46].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[39].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[38].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[41].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<0>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<1>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<2>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/UPDATE<3>> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[59].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[58].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[56].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[57].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[43].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <usr/high_speed_top_inst/chipscope.tx_data_vio_i/U0/I_VIO/GEN_SYNC_OUT[42].SYNC_OUT_CELL/out_temp> is incomplete. The
-   signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:  651
+Number of warnings:  499
 Slice Logic Utilization:
-  Number of Slice Registers:                12,322 out of 160,000    7%
-    Number used as Flip Flops:              12,310
-    Number used as Latches:                     12
+  Number of Slice Registers:                10,250 out of 160,000    6%
+    Number used as Flip Flops:              10,239
+    Number used as Latches:                     11
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                     10,037 out of  80,000   12%
-    Number used as logic:                    9,258 out of  80,000   11%
-      Number using O6 output only:           6,003
-      Number using O5 output only:             434
-      Number using O5 and O6:                2,821
+  Number of Slice LUTs:                      8,606 out of  80,000   10%
+    Number used as logic:                    8,231 out of  80,000   10%
+      Number using O6 output only:           5,188
+      Number using O5 output only:             352
+      Number using O5 and O6:                2,691
       Number used as ROM:                        0
-    Number used as Memory:                     314 out of  27,840    1%
+    Number used as Memory:                      55 out of  27,840    1%
       Number used as Dual Port RAM:              0
       Number used as Single Port RAM:           48
         Number using O6 output only:             0
         Number using O5 output only:             2
         Number using O5 and O6:                 46
-      Number used as Shift Register:           266
-        Number using O6 output only:           227
+      Number used as Shift Register:             7
+        Number using O6 output only:             7
         Number using O5 output only:             0
-        Number using O5 and O6:                 39
-    Number used exclusively as route-thrus:    465
-      Number with same-slice register load:    424
-      Number with same-slice carry load:        41
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:    320
+      Number with same-slice register load:    294
+      Number with same-slice carry load:        26
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,640 out of  20,000   23%
-  Number of LUT Flip Flop pairs used:       13,364
-    Number with an unused Flip Flop:         3,033 out of  13,364   22%
-    Number with an unused LUT:               3,327 out of  13,364   24%
-    Number of fully used LUT-FF pairs:       7,004 out of  13,364   52%
-    Number of unique control sets:             538
+  Number of occupied Slices:                 3,740 out of  20,000   18%
+  Number of LUT Flip Flop pairs used:       11,161
+    Number with an unused Flip Flop:         2,787 out of  11,161   24%
+    Number with an unused LUT:               2,555 out of  11,161   22%
+    Number of fully used LUT-FF pairs:       5,819 out of  11,161   52%
+    Number of unique control sets:             437
     Number of slice register sites lost
-      to control set restrictions:           1,855 out of 160,000    1%
+      to control set restrictions:           1,305 out of 160,000    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -2242,18 +1847,16 @@ IO Utilization:
     IOB Flip Flops:                              2
     IOB Master Pads:                             1
     IOB Slave Pads:                              1
-    Number of bonded IPADs:                     12
-      Number of LOCed IPADs:                    12 out of      12  100%
-    Number of bonded OPADs:                      8
-      Number of LOCed OPADs:                     8 out of       8  100%
+    Number of bonded IPADs:                     10
+      Number of LOCed IPADs:                     8 out of      10   80%
+    Number of bonded OPADs:                      6
+      Number of LOCed OPADs:                     4 out of       6   66%
 
 Specific Feature Utilization:
-  Number of RAMB36E1/FIFO36E1s:                 40 out of     264   15%
-    Number using RAMB36E1 only:                 40
+  Number of RAMB36E1/FIFO36E1s:                 34 out of     264   12%
+    Number using RAMB36E1 only:                 34
     Number using FIFO36E1 only:                  0
-  Number of RAMB18E1/FIFO18E1s:                  1 out of     528    1%
-    Number using RAMB18E1 only:                  1
-    Number using FIFO18E1 only:                  0
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     528    0%
   Number of BUFG/BUFGCTRLs:                     11 out of      32   34%
     Number used as BUFGs:                        8
     Number used as BUFGCTRLs:                    3
@@ -2270,8 +1873,8 @@ Specific Feature Utilization:
   Number of DSP48E1s:                            0 out of     480    0%
   Number of EFUSE_USRs:                          0 out of       1    0%
   Number of FRAME_ECCs:                          0 out of       1    0%
-  Number of GTXE1s:                              4 out of      20   20%
-    Number of LOCed GTXE1s:                      2 out of       4   50%
+  Number of GTXE1s:                              3 out of      20   15%
+    Number of LOCed GTXE1s:                      1 out of       3   33%
   Number of IBUFDS_GTXE1s:                       2 out of      10   20%
   Number of ICAPs:                               1 out of       2   50%
   Number of IDELAYCTRLs:                         0 out of      15    0%
@@ -2283,12 +1886,12 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       2 out of       4   50%
 
-  Number of RPM macros:           16
-Average Fanout of Non-Clock Nets:                3.40
+  Number of RPM macros:            6
+Average Fanout of Non-Clock Nets:                3.70
 
-Peak Memory Usage:  922 MB
-Total REAL time to MAP completion:  3 mins 37 secs 
-Total CPU time to MAP completion (all processors):   3 mins 54 secs 
+Peak Memory Usage:  877 MB
+Total REAL time to MAP completion:  3 mins 1 secs 
+Total CPU time to MAP completion (all processors):   3 mins 13 secs 
 
 Mapping completed.
 See MAP report file "glib_top_map.mrp" for details.

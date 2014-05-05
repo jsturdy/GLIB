@@ -8,7 +8,7 @@ entity gtx_rx_mux is
 port(
     clk             : in std_logic;
     reset           : in std_logic;
-    vfat2_ipb_io    : inout vfat2_data_bus;  
+    vfat2_ipb_io    : inout vfat2_data_bus;
     rx_valid_i      : in std_logic;
     rx_data_i       : in std_logic_vector(15 downto 0)
 );
@@ -51,7 +51,9 @@ begin
                     if (vfat2_ipb_io.strobe = '0' and vfat2_ipb_io.acknowledge = '0') then
                         vfat2_ipb_io.strobe <= '1';
                     end if;       
-                    state := 0;          
+                    state := 0;   
+                else
+                    state := 0;
                 end if;
             end if;
         end if;

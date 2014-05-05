@@ -3,14 +3,14 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="impact" timeStamp="Thu Apr 03 14:15:19 2014">
+<application name="impact" timeStamp="Mon May 05 16:16:34 2014">
 <section name="Project Information" visible="false">
-<property name="ProjectID" value="e74257210c8a42bfb11ca8809944c8a9"/>
+<property name="ProjectID" value="b770975071414096bafd808789a8ce91"/>
 <property name="ProjectIteration" value="1"/>
 </section>
 <section name="iMPACT Project Info" visible="true">
 <property name="Use Project File" value="Yes"/>
-<property name="Project Entry" value="Stand Alone"/>
+<property name="Project Entry" value="ise"/>
 <property name="OS Name" value="Microsoft Windows 7 (64 Bit)"/>
 <property name="User Lic. Info" value="174110357_174110358_210552545_242"/>
 </section>
@@ -21,14 +21,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="Number of Non-Xilinx device" value="0"/>
 </item>
 <item name="Chain Description">
-<property name="Device1" value="spartan6"/>
-<property name="Part1" value="xc6slx150t"/>
+<property name="Device1" value="virtex6"/>
+<property name="Part1" value="xc6vlx130t"/>
 </item>
 <item name="Boundary Scan Operations Statistics">
-<property name="BSCAN Operation" value="Program -p 0
-"/>
-<property name="BSCAN Operation" value="Program -p 0
-"/>
 <property name="BSCAN Operation" value="Program -p 0
 "/>
 <property name="BSCAN Operation" value="Program -p 0

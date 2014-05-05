@@ -8,12 +8,12 @@ use work.user_package.all;
 
 entity ipbus_vfat2_slave is
 port(
-	clk         : in std_logic;
-	reset       : in std_logic;
-	ipb_mosi_i  : in ipb_wbus;
-	ipb_miso_o  : out ipb_rbus;
-    ipb_vfat2_io   : inout vfat2_data_bus;   
-    vfat2_ipb_io   : inout vfat2_data_bus
+	clk             : in std_logic;
+	reset           : in std_logic;
+	ipb_mosi_i      : in ipb_wbus;
+	ipb_miso_o      : out ipb_rbus;
+    ipb_vfat2_io    : inout vfat2_data_bus;   
+    vfat2_ipb_io    : inout vfat2_data_bus
 );
 end ipbus_vfat2_slave;
 
@@ -29,7 +29,7 @@ architecture rtl of ipbus_vfat2_slave is
 	attribute keep of error : signal is true;
 begin	
 
-	process(reset, clk)
+	process(clk)
 	begin
         if (rising_edge(clk)) then        
             if (reset = '1') then
@@ -42,7 +42,7 @@ begin
                 if (ipb_vfat2_io.strobe = '1' and ipb_vfat2_io.acknowledge = '1') then 
                     ipb_vfat2_io.strobe <= '0';
                 end if;
-            
+          
                 -- IPBus request
                 if (ipb_mosi_i.ipb_strobe = '1') then
                     -- GTX is not busy
@@ -65,14 +65,13 @@ begin
                         gtx_error <= '0';
                     -- If GTX is busy, set error
                     else
+                        ipb_miso_o.ipb_rdata <= "0000010" & ipb_mosi_i.ipb_write & "000" & ipb_mosi_i.ipb_addr(12 downto 8) & ipb_mosi_i.ipb_addr(7 downto 0) & x"10"; -- Code 10 = GTX busy
                         gtx_error <= '1';
                     end if;
                 else
                     gtx_error <= '0';
                 end if;
                 
-                
-
                 -- Reset acknowledgment signal
                 if (vfat2_ipb_io.strobe = '0' and vfat2_ipb_io.acknowledge = '1') then
                     vfat2_ipb_io.acknowledge <= '0';
@@ -81,7 +80,7 @@ begin
                 -- Receive data from GTX
                 if (vfat2_ipb_io.strobe = '1' and vfat2_ipb_io.acknowledge = '0') then
                     -- Set data bus
-                    ipb_miso_o.ipb_rdata <= "00000000" & vfat2_ipb_io.error & vfat2_ipb_io.valid & vfat2_ipb_io.readWrite_n & vfat2_ipb_io.chipSelect & vfat2_ipb_io.registerSelect & vfat2_ipb_io.data;
+                    ipb_miso_o.ipb_rdata <= "00000" & vfat2_ipb_io.error & vfat2_ipb_io.valid & vfat2_ipb_io.readWrite_n & "000" & vfat2_ipb_io.chipSelect & vfat2_ipb_io.registerSelect & vfat2_ipb_io.data;
                     vfat2_ipb_io.acknowledge <= '1';
                     -- Acknowledge IPBus
                     gtx_ack <= '1';

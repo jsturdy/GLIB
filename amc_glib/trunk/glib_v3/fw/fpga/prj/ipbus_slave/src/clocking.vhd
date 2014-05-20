@@ -5,24 +5,24 @@ use ieee.std_logic_1164.all;
 library unisim;
 use unisim.vcomponents.all;
 
-entity gtxClocking is
+entity gtx_clocking is
 port(
-    gtxClk_p    : in std_logic;
-    gtxClk_n    : in std_logic;
-    gtxClk      : out std_logic
+    gtx_clk_p   : in std_logic;
+    gtx_clk_n   : in std_logic;
+    gtx_clk     : out std_logic
 );
-end gtxClocking;
+end gtx_clocking;
 
-architecture Behavioral of gtxClocking is
+architecture Behavioral of gtx_clocking is
 begin
 
     gtx_clk_inst : ibufds_gtxe1
     port map(
-        O       => gtxClk,
+        O       => gtx_clk,
         ODIV2   => open,
         CEB     => '0',
-        I       => gtxClk_p,
-        IB      => gtxClk_n
+        I       => gtx_clk_p,
+        IB      => gtx_clk_n
     );    
 
 end Behavioral;

@@ -8,6 +8,7 @@ library unisim;
 use unisim.vcomponents.all;
 
 --! system packages
+library work;
 use work.system_flash_sram_package.all;
 use work.system_pcie_package.all;
 use work.system_package.all;
@@ -27,13 +28,13 @@ port(
     -- BANK_112(Q0):  
     clk125_1_p                  : in std_logic;  		    
     clk125_1_n                  : in std_logic;  		  
-    cdce_out0_p                 : in std_logic;  		  
-    cdce_out0_n                 : in std_logic; 		  
+    cdce_out0_p                 : in std_logic;   
+    cdce_out0_n                 : in std_logic;  		  
     -- BANK_113(Q1):                 
     fmc2_clk0_m2c_xpoint2_p     : in std_logic;
     fmc2_clk0_m2c_xpoint2_n     : in std_logic;
-    cdce_out1_p                 : in std_logic;       
-    cdce_out1_n                 : in std_logic;         
+    cdce_out1_p                 : in std_logic; -- GTX clock speed must be 160 MHz	      
+    cdce_out1_n                 : in std_logic; -- GTX clock speed must be 160 MHz	        
     -- BANK_114(Q2):                 
     pcie_clk_p                  : in std_logic; 			  
     pcie_clk_n                  : in std_logic;			  
@@ -202,113 +203,16 @@ port(
 end user_logic;
 							
 architecture user_logic_arch of user_logic is                    	
-    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
-    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
-    --@@@@@@@@ PLACE YOUR DECLARATIONS BELOW THIS COMMENT @@@@@@@@@--
-    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
-    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
 
-    signal ctrl_reg : array_32x32bit;
-    signal stat_reg : array_32x32bit;
-
-    signal led1 : std_logic;
-    signal led2 : std_logic;
-
-    signal test_word : std_logic_vector(31 downto 0);
-
-    signal ipbus_to_vfat2 : ipb_vfat2_bus;
-    signal vfat2_to_ipbus : ipb_vfat2_bus;
-
---@@@@@@@@@@@@@@@@@@@@@@--   
---@@@@@@@@@@@@@@@@@@@@@@--   
---@@@@@@@@@@@@@@@@@@@@@@--
-begin-- ARCHITECTURE
---@@@@@@@@@@@@@@@@@@@@@@--                              
---@@@@@@@@@@@@@@@@@@@@@@--
---@@@@@@@@@@@@@@@@@@@@@@--
- 
-
-    --#############################--
-    --## GLIB IP & MAC ADDRESSES ##--
-    --#############################--
+  
+begin 
    
-    --ip_addr_o <= x"c0a800a"     & amc_slot_i;  -- 192.168.0.[160:175]
+
+   
     ip_addr_o <= x"c0a80073";  -- 192.168.0.115
     mac_addr_o <= x"080030F100a" & amc_slot_i;  -- 08:00:30:F1:00:0[A0:AF] 
-
-    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
-    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
-    --@@@@@@@@@@@@ PLACE YOUR LOGIC BELOW THIS COMMENT @@@@@@@@@@@@--
-    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
-    --@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
-    
-    --===========================================--
-	-- Status registers IPBus
-	--===========================================--    
-	stat_regs_inst: entity work.ipb_user_status_regs
-	port map(
-        clk         => ipb_clk_i,
-        reset       => reset_i,
-        ipb_mosi_i  => ipb_mosi_i(user_ipb_stat_regs),
-        ipb_miso_o  => ipb_miso_o(user_ipb_stat_regs),
-        regs_i      => stat_reg
-	);
-	--===========================================--
-
-    --===========================================--
-	-- Control registers IPBus
-	--===========================================--    
-	ctrl_regs_inst: entity work.ipb_user_control_regs
-    port map(
-        clk         => ipb_clk_i,
-        reset       => reset_i,
-        ipb_mosi_i  => ipb_mosi_i(user_ipb_ctrl_regs),
-        ipb_miso_o  => ipb_miso_o(user_ipb_ctrl_regs),
-        regs_o  => ctrl_reg
-	);
-	--===========================================--
-    
-    --===========================================--
-	-- GBT IPBus slave
-	--===========================================--    
-    ipbus_transmitter_slave_inst : entity work.ipbus_transmitter_slave
-    port map(
-        clk     => ipb_clk_i,
-        reset       => reset_i,
-        ipb_mosi_i  => ipb_mosi_i(user_ipg_optohybrid),
-        ipb_miso_o  => ipb_miso_o(user_ipg_optohybrid),
-        ipb_gbt_i   => vfat2_to_ipbus,
-        ipb_gbt_o   => ipbus_to_vfat2
-    );
-	--===========================================--
-
-    --===========================================--
-    -- 8b 10b encoder
-    --===========================================--
-
-
-    --===========================================--
-	-- register mapping
-	--===========================================--    
-    led1 <= ctrl_reg(0);
-    led2 <= ctrl_reg(4);
-	test_word <= ctrl_reg(1);
-    
-	stat_reg(0)	<= x"67_6f_6c_64"; -- 'g' 'o' 'l' 'd'
-	stat_reg(1) <= test_word;
-	stat_reg(2)	<= std_logic_vector(to_unsigned(usr_ver_major,4)) &
-						std_logic_vector(to_unsigned(usr_ver_minor,4)) &
-						std_logic_vector(to_unsigned(usr_ver_build,8)) &
-						std_logic_vector(to_unsigned(usr_ver_year ,7)) &
-						std_logic_vector(to_unsigned(usr_ver_month,4)) &
-						std_logic_vector(to_unsigned(usr_ver_day  ,5)) ;
-	--===========================================--
-	
-    --===========================================--
-    -- I/O mapping
-    --===========================================--
-    user_v6_led_o(1) <= led1;
-    user_v6_led_o(2) <= led2;
-    --===========================================--
+    user_v6_led_o(1) <= '1';
+    user_v6_led_o(2) <= '0';   
+  
 	
 end user_logic_arch;

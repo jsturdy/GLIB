@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<BillOfMaterials Version="1" Minor="2">
+  <IPInstance name="v6_emac_v2_3_basex">
+    <FileSets>
+      <FileSet generator="apply_current_project_options_generator">
+        <File name="./apply_current_project_options_generator.xlog" type="ignore" timestamp="Fri May 09 07:01:34 GMT 2014" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="model_parameter_resolution_generator">
+        <File name="./model_parameter_resolution_generator.xlog" type="ignore" timestamp="Fri May 09 07:01:34 GMT 2014" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="ip_xco_generator">
+        <File name="./v6_emac_v2_3_basex.xco" type="xco" timestamp="Fri May 09 07:00:57 GMT 2014" checksum="0x5981DDB4"></File>
+      </FileSet>
+      <FileSet generator="ngc_netlist_generator">
+        <File name="./v6_emac_v2_3_basex/doc/ds835_v6_emac.pdf" type="ignore" timestamp="Fri May 09 07:01:17 GMT 2014" checksum="0x384557E8"></File>
+        <File name="./v6_emac_v2_3_basex/doc/ug800_v6_emac.pdf" type="ignore" timestamp="Fri May 09 07:01:17 GMT 2014" checksum="0x7FE8CB2C"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/axi_ipif/address_decoder.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xFCFC7464"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/axi_ipif/axi4_lite_ipif_wrapper.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x3288093C"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/axi_ipif/axi_lite_ipif.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xA35A5C19"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/axi_ipif/counter_f.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xB6FA2852"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/axi_ipif/ipif_pkg.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xBC9E215D"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/axi_ipif/pselect_f.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x53689A35"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/axi_ipif/slave_attachment.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xA4FFCA59"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/common/reset_sync.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xC6308C38"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/common/sync_block.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xC4CF6657"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/fifo/rx_client_fifo_8.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x91B6381F"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/fifo/ten_100_1g_eth_fifo.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xC2F06B1B"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/fifo/tx_client_fifo_8.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x6138101E"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/pat_gen/address_swap.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xF181FAC8"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/pat_gen/axi_mux.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x8A22A8C8"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/pat_gen/axi_pat_check.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x05491168"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/pat_gen/axi_pat_gen.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x59DFE470"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/pat_gen/axi_pipe.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x1B5D7514"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/pat_gen/basic_pat_gen.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x70C25B87"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/physical/double_reset.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xC53EEF3F"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/physical/v6_gtxwizard.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x97D17D40"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/physical/v6_gtxwizard.xco" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x7F513064"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/physical/v6_gtxwizard_gtx.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xC5C23DFA"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/physical/v6_gtxwizard_top.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xF11DCD14"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/v6_emac_v2_3_basex_block.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x7A1F9F68"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/v6_emac_v2_3_basex_example_design.ucf" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x1B6ACC13"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/v6_emac_v2_3_basex_example_design.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x4FC773EC"></File>
+        <File name="./v6_emac_v2_3_basex/example_design/v6_emac_v2_3_basex_fifo_block.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x8AA3D6EC"></File>
+        <File name="./v6_emac_v2_3_basex/implement/implement.bat" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x82765ED8"></File>
+        <File name="./v6_emac_v2_3_basex/implement/implement.sh" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xC3E9F597"></File>
+        <File name="./v6_emac_v2_3_basex/implement/xst.prj" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xAE6C0A6E"></File>
+        <File name="./v6_emac_v2_3_basex/implement/xst.scr" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xDA0DEF10"></File>
+        <File name="./v6_emac_v2_3_basex/simulation/demo_tb.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x7C8BA97A"></File>
+        <File name="./v6_emac_v2_3_basex/simulation/functional/simulate_mti.do" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x0F8A91E6"></File>
+        <File name="./v6_emac_v2_3_basex/simulation/functional/simulate_ncsim.sh" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x309A801C"></File>
+        <File name="./v6_emac_v2_3_basex/simulation/functional/wave_mti.do" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x5FB71EC2"></File>
+        <File name="./v6_emac_v2_3_basex/simulation/functional/wave_ncsim.sv" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x682FBFF1"></File>
+        <File name="./v6_emac_v2_3_basex/simulation/mdio_tb.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x8EEEA79F"></File>
+        <File name="./v6_emac_v2_3_basex/simulation/phy_tb.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xB53E1DB0"></File>
+        <File name="./v6_emac_v2_3_basex/simulation/timing/simulate_mti.do" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x577A4B93"></File>
+        <File name="./v6_emac_v2_3_basex/simulation/timing/simulate_ncsim.sh" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x57E0EFBE"></File>
+        <File name="./v6_emac_v2_3_basex/simulation/timing/wave_mti.do" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x418ADE63"></File>
+        <File name="./v6_emac_v2_3_basex/simulation/timing/wave_ncsim.sv" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0x7F9594ED"></File>
+        <File name="./v6_emac_v2_3_basex/v6_emac_v2_3_basex.vhd" type="ignore" timestamp="Fri May 09 07:00:58 GMT 2014" checksum="0xEB3A5FA3"></File>
+        <File name="./v6_emac_v2_3_basex/v6_emac_v2_3_readme.txt" type="ignore" timestamp="Fri May 09 07:01:17 GMT 2014" checksum="0x72071D33"></File>
+        <File name="./v6_emac_v2_3_basex.ngc" type="ngc" timestamp="Fri May 09 07:01:29 GMT 2014" checksum="0x3FBD1AEF"></File>
+        <File name="./v6_emac_v2_3_basex.vhd" type="vhdl" timestamp="Fri May 09 07:01:31 GMT 2014" checksum="0xCDAE4C6B"></File>
+        <File name="./v6_emac_v2_3_basex.vho" type="vho" timestamp="Fri May 09 07:01:17 GMT 2014" checksum="0xDBE1B528"></File>
+      </FileSet>
+      <FileSet generator="instantiation_template_generator">
+        <File name="./v6_emac_v2_3_basex.vho" type="vho" timestamp="Fri May 09 07:01:31 GMT 2014" checksum="0xDBE1B528"></File>
+      </FileSet>
+      <FileSet generator="asy_generator">
+        <File name="./v6_emac_v2_3_basex.asy" type="asy" timestamp="Fri May 09 07:01:31 GMT 2014" checksum="0x64FC8EBE"></File>
+      </FileSet>
+      <FileSet generator="xmdf_generator">
+        <File name="./v6_emac_v2_3_basex_xmdf.tcl" type="tclXmdf" timestamp="Fri May 09 07:01:31 GMT 2014" checksum="0x308922E8"></File>
+      </FileSet>
+      <FileSet generator="ise_generator">
+        <File name="./v6_emac_v2_3_basex.gise" type="ignore" timestamp="Fri May 09 07:01:33 GMT 2014" checksum="0xAF54EF1E"></File>
+        <File name="./v6_emac_v2_3_basex.xise" type="ignore" timestamp="Fri May 09 07:01:33 GMT 2014" checksum="0x883D3201"></File>
+      </FileSet>
+      <FileSet generator="deliver_readme_generator">
+        <File name="./deliver_readme_generator.xlog" type="ignore" timestamp="Fri May 09 07:01:34 GMT 2014" checksum="0xFFFFFFFF"></File>
+      </FileSet>
+      <FileSet generator="flist_generator">
+        <File name="./v6_emac_v2_3_basex_flist.txt" type="ignore" timestamp="Fri May 09 07:01:34 GMT 2014" checksum="0x84200A41"></File>
+      </FileSet>
+    </FileSets>
+  </IPInstance>
+</BillOfMaterials>

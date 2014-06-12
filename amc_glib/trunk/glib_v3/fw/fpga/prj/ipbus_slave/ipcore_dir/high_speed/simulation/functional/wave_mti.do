@@ -56,20 +56,15 @@ add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/gtx0_frame_check/star
 add wave -noupdate -format Logic -radix hexadecimal /DEMO_TB/high_speed_top_i/gtx0_frame_check/RX_DATA
 add wave -noupdate -format Logic -radix hexadecimal /DEMO_TB/high_speed_top_i/gtx0_frame_check/ERROR_COUNT
 add wave -noupdate -divider {GTX0_HIGH_SPEED }
-add wave -noupdate -divider {Loopback and Powerdown Ports }
-add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/LOOPBACK_IN
 add wave -noupdate -divider {Receive Ports - 8b10b Decoder }
 add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXCHARISK_OUT
 add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXDISPERR_OUT
 add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXNOTINTABLE_OUT
 add wave -noupdate -divider {Receive Ports - Comma Detection and Alignment }
+add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXBYTEISALIGNED_OUT
 add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXCOMMADET_OUT
 add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXENMCOMMAALIGN_IN
 add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXENPCOMMAALIGN_IN
-add wave -noupdate -divider {Receive Ports - PRBS Detection }
-add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/PRBSCNTRESET_IN
-add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXENPRBSTST_IN
-add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXPRBSERR_OUT
 add wave -noupdate -divider {Receive Ports - RX Data Path interface }
 add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXDATA_OUT
 add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXRECCLK_OUT
@@ -97,9 +92,6 @@ add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_hig
 add wave -noupdate -divider {Transmit Ports - TX PLL Ports }
 add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/GTXTXRESET_IN
 add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/TXRESETDONE_OUT
-add wave -noupdate -divider {Transmit Ports - TX PRBS Generator }
-add wave -noupdate -format Literal -radix hexadecimal /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/TXENPRBSTST_IN
-add wave -noupdate -format Logic /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/TXPRBSFORCEERR_IN
 
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {0 ps} 0}

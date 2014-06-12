@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Mon May 05 07:50:54 2014
+# Date: Mon May 26 08:40:41 2014
 #
 ##############################################################
 #
@@ -344,7 +344,7 @@ CSET use_port_drp=false
 CSET use_port_enmcommaalign=true
 CSET use_port_enpcommaalign=true
 CSET use_port_gtxtest=false
-CSET use_port_loopback=true
+CSET use_port_loopback=false
 CSET use_port_phystatus=false
 CSET use_port_plllkdet=true
 CSET use_port_plllkdeten=true
@@ -352,7 +352,7 @@ CSET use_port_pllpowerdown=false
 CSET use_port_refclkpowerdown=false
 CSET use_port_rxbufreset=false
 CSET use_port_rxbufstatus=false
-CSET use_port_rxbyteisaligned=false
+CSET use_port_rxbyteisaligned=true
 CSET use_port_rxbyterealign=false
 CSET use_port_rxcdrreset=false
 CSET use_port_rxchariscomma=false
@@ -378,17 +378,17 @@ CSET use_port_txcomsas=false
 CSET use_port_txcomwake=false
 CSET use_port_txdetectrx=false
 CSET use_port_txelecidle=false
-CSET use_port_txenprbstst=true
+CSET use_port_txenprbstst=false
 CSET use_port_txinhibit=false
 CSET use_port_txkerr=false
 CSET use_port_txoutclk=true
 CSET use_port_txpolarity=false
 CSET use_port_txpowerdown=false
-CSET use_port_txprbsforceerr=true
+CSET use_port_txprbsforceerr=false
 CSET use_port_txrate=false
 CSET use_port_txreset=false
 CSET use_port_txrundisp=false
-CSET use_prbs_detector=true
+CSET use_prbs_detector=false
 CSET use_resistor_cal_circuit=false
 CSET use_rx_eq=false
 CSET use_rx_oob=false
@@ -408,4 +408,4 @@ CSET wideband_highpass_mix=000
 MISC pkg_timestamp=2011-04-08T05:24:23Z
 # END Extra information
 GENERATE
-# CRC: fa2b5311
+# CRC: e5802dc7

@@ -73,20 +73,15 @@
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx0_frame_check:RX_DATA}
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx0_frame_check:ERROR_COUNT}
   gui_sg_addsignal -group high_speed_Group {{GTX0_HIGH_SPEED}} -divider
-  gui_sg_addsignal -group high_speed_Group {{Loopback and Powerdown Ports}} -divider
-  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:LOOPBACK_IN}
   gui_sg_addsignal -group high_speed_Group {{Receive Ports - 8b10b Decoder}} -divider
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXCHARISK_OUT}
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXDISPERR_OUT}
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXNOTINTABLE_OUT}
   gui_sg_addsignal -group high_speed_Group {{Receive Ports - Comma Detection and Alignment}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXBYTEISALIGNED_OUT}
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXCOMMADET_OUT}
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXENMCOMMAALIGN_IN}
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXENPCOMMAALIGN_IN}
-  gui_sg_addsignal -group high_speed_Group {{Receive Ports - PRBS Detection}} -divider
-  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:PRBSCNTRESET_IN}
-  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXENPRBSTST_IN}
-  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXPRBSERR_OUT}
   gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX Data Path interface}} -divider
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXDATA_OUT}
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXRECCLK_OUT}
@@ -114,9 +109,6 @@
   gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX PLL Ports}} -divider
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:GTXTXRESET_IN}
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:TXRESETDONE_OUT}
-  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX PRBS Generator}} -divider
-  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:TXENPRBSTST_IN}
-  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:TXPRBSFORCEERR_IN}
 
 
   gui_zoom -window Wave.1 -full

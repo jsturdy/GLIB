@@ -12,6 +12,9 @@ port(
     ipb_vfat2_en_i      : in std_logic;
     ipb_vfat2_data_i    : in std_logic_vector(31 downto 0);
     
+    ipb_opto_en_i       : in std_logic;
+    ipb_opto_data_i     : in std_logic_vector(31 downto 0);    
+    
     tx_kchar_o          : out std_logic_vector(1 downto 0);
     tx_data_o           : out std_logic_vector(15 downto 0)
 );
@@ -29,7 +32,7 @@ begin
         variable data : std_logic_vector(31 downto 0) := (others => '0');
     
         -- Last kchar sent
-        variable kchar_count : integer range 0 to 7 := 0;
+        variable kchar_count : integer range 0 to 1023 := 0;
 
     begin
     
@@ -65,23 +68,47 @@ begin
                         -- State 1 for next IPBus VFAT2 data
                         state := 1;
                         
+                        -- Reset kchar counter
+                        kchar_count := 0;
+                
+                    -- Check for OptoHybrid IPBus strobes
+                    elsif (ipb_opto_en_i = '1') then
+                       
+                        -- Get data
+                        data(31 downto 0) := ipb_opto_data_i;
+                        
+                        -- Set GTX data
+                        tx_data_o <= def_gtx_optohybrid_request & x"BC"; -- VFAT2 code
+                        
+                        -- Set KChar
+                        tx_kchar_o <= "01";
+                        
+                        -- State 1 for next IPBus VFAT2 data
+                        state := 1;
+                        
+                        -- Reset kchar counter
+                        kchar_count := 0;
+                        
                     else
                     
                         -- Set GTX data
-                        tx_data_o <= def_gtx_idle & x"BC"; -- Idle code
                         
                         -- Determine if kchar must be sent
-                        if (kchar_count = 7) then
+                        if (kchar_count = 1023) then -- Should be 7 for non testing
                         
                             -- Set kchar
                             tx_kchar_o <= "01";
                             
+                            tx_data_o <= def_gtx_idle & x"BC"; -- Idle code
+                            
                             kchar_count := 0;
-                        
+                            
                         else
-                        
+                       
                             -- Clear kchar
                             tx_kchar_o <= "00";
+                        
+                            tx_data_o <= def_gtx_idle & x"BC"; -- Idle code
                             
                             kchar_count := kchar_count + 1;
                             
@@ -89,7 +116,7 @@ begin
                         
                     end if;
                 
-                -- VFAT2 state 1
+                -- Data 1
                 elsif (state = 1) then
                 
                     -- Set TX datac
@@ -100,7 +127,7 @@ begin
                     -- Next state
                     state := 2;
                     
-                -- VFAT2 state 2
+                -- Data 2
                 elsif (state = 2) then
                 
                     -- Set TX data

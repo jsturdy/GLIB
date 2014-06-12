@@ -10,22 +10,21 @@ entity ipb_vfat2 is
 port(
 
     -- Clocks and reset
-	ipb_clk_i       : in std_logic;
-	tx_clk_i        : in std_logic;
-	rx_clk_i        : in std_logic;
-	reset_i         : in std_logic;
+	ipb_clk_i   : in std_logic;
+	gtx_clk_i   : in std_logic;
+	reset_i     : in std_logic;
     
     -- IPBus data
-	ipb_mosi_i      : in ipb_wbus;
-	ipb_miso_o      : out ipb_rbus;
+	ipb_mosi_i  : in ipb_wbus;
+	ipb_miso_o  : out ipb_rbus;
     
     -- Data to the GTX
-    tx_en_o         : out std_logic;
-    tx_data_o       : out std_logic_vector(31 downto 0);
+    tx_en_o     : out std_logic;
+    tx_data_o   : out std_logic_vector(31 downto 0);
     
     -- Data from the GTX
-    rx_en_i         : in std_logic;
-    rx_data_i       : in std_logic_vector(31 downto 0)
+    rx_en_i     : in std_logic;
+    rx_data_i   : in std_logic_vector(31 downto 0)
     
 );
 end ipb_vfat2;
@@ -57,7 +56,7 @@ begin
     port map(
         reset_i     => reset_i,
         clk_a_i     => ipb_clk_i,
-        clk_b_i     => tx_clk_i,
+        clk_b_i     => gtx_clk_i,
         en_a_i      => tx_en,
         en_b_o      => tx_en_o,
         failed_o    => tx_failed,
@@ -68,7 +67,7 @@ begin
     xclock_rx : entity work.xclock
     port map(
         reset_i     => reset_i,
-        clk_a_i     => rx_clk_i,
+        clk_a_i     => gtx_clk_i,
         clk_b_i     => ipb_clk_i,
         en_a_i      => rx_en_i,
         en_b_o      => rx_en,

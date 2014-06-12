@@ -1,8 +1,30 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon May 19 11:02:54 2014
+// Written by: Map P.20131013 on Thu Jun 12 11:52:27 2014
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "sfp_rxlos<1>" LOCATE = SITE "AC19" LEVEL 1;
+COMP "sfp_rxlos<2>" LOCATE = SITE "AF20" LEVEL 1;
+COMP "sfp_rxlos<3>" LOCATE = SITE "AJ20" LEVEL 1;
+COMP "sfp_rxlos<4>" LOCATE = SITE "AM21" LEVEL 1;
+COMP "fmc2_present_l" LOCATE = SITE "AG20" LEVEL 1;
+COMP "cdce_sync" LOCATE = SITE "AL18" LEVEL 1;
+COMP "sfp_txfault<1>" LOCATE = SITE "AF21" LEVEL 1;
+COMP "sfp_txfault<2>" LOCATE = SITE "AK19" LEVEL 1;
+COMP "sfp_txfault<3>" LOCATE = SITE "AL21" LEVEL 1;
+COMP "sfp_txfault<4>" LOCATE = SITE "AM23" LEVEL 1;
+COMP "fpga_power_on_reset_b" LOCATE = SITE "AC30" LEVEL 1;
+COMP "gbe_int_n" LOCATE = SITE "AL15" LEVEL 1;
+COMP "sram1_oe_l" LOCATE = SITE "AC18" LEVEL 1;
+COMP "sram1_mode" LOCATE = SITE "AM15" LEVEL 1;
+COMP "sram2_oe_l" LOCATE = SITE "AA24" LEVEL 1;
+COMP "sram2_mode" LOCATE = SITE "AB10" LEVEL 1;
+COMP "sram1_we_l" LOCATE = SITE "AD17" LEVEL 1;
+COMP "sram1_addr<10>" LOCATE = SITE "AM26" LEVEL 1;
+COMP "sram1_addr<11>" LOCATE = SITE "AK23" LEVEL 1;
+COMP "sram1_addr<12>" LOCATE = SITE "AL26" LEVEL 1;
+COMP "sram1_addr<20>" LOCATE = SITE "AG26" LEVEL 1;
+COMP "sram1_addr<13>" LOCATE = SITE "AC17" LEVEL 1;
 COMP "sram1_addr<14>" LOCATE = SITE "AN15" LEVEL 1;
 COMP "sram1_addr<15>" LOCATE = SITE "AP15" LEVEL 1;
 COMP "sram1_addr<16>" LOCATE = SITE "AP27" LEVEL 1;
@@ -225,34 +247,14 @@ COMP "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce_bufg" LOCATE = SITE
         "BUFGCTRL_X0Y23" LEVEL 1;
 COMP "system/gbt_phase_monitoring/ttclk_pll/clkout1_buf" LOCATE = SITE
         "BUFHCE_X1Y34" LEVEL 1;
-COMP "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i" LOCATE = SITE
+COMP "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i" LOCATE = SITE
         "GTXE1_X0Y0" LEVEL 1;
+COMP "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i" LOCATE = SITE
+        "GTXE1_X0Y3" LEVEL 1;
 COMP "system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst" LOCATE = SITE
         "MMCM_ADV_X0Y5" LEVEL 1;
 COMP "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce_bufg" LOCATE = SITE
         "BUFGCTRL_X0Y0" LEVEL 1;
-COMP "sfp_rxlos<1>" LOCATE = SITE "AC19" LEVEL 1;
-COMP "sfp_rxlos<2>" LOCATE = SITE "AF20" LEVEL 1;
-COMP "sfp_rxlos<3>" LOCATE = SITE "AJ20" LEVEL 1;
-COMP "sfp_rxlos<4>" LOCATE = SITE "AM21" LEVEL 1;
-COMP "fmc2_present_l" LOCATE = SITE "AG20" LEVEL 1;
-COMP "cdce_sync" LOCATE = SITE "AL18" LEVEL 1;
-COMP "sfp_txfault<1>" LOCATE = SITE "AF21" LEVEL 1;
-COMP "sfp_txfault<2>" LOCATE = SITE "AK19" LEVEL 1;
-COMP "sfp_txfault<3>" LOCATE = SITE "AL21" LEVEL 1;
-COMP "sfp_txfault<4>" LOCATE = SITE "AM23" LEVEL 1;
-COMP "fpga_power_on_reset_b" LOCATE = SITE "AC30" LEVEL 1;
-COMP "gbe_int_n" LOCATE = SITE "AL15" LEVEL 1;
-COMP "sram1_oe_l" LOCATE = SITE "AC18" LEVEL 1;
-COMP "sram1_mode" LOCATE = SITE "AM15" LEVEL 1;
-COMP "sram2_oe_l" LOCATE = SITE "AA24" LEVEL 1;
-COMP "sram2_mode" LOCATE = SITE "AB10" LEVEL 1;
-COMP "sram1_we_l" LOCATE = SITE "AD17" LEVEL 1;
-COMP "sram1_addr<10>" LOCATE = SITE "AM26" LEVEL 1;
-COMP "sram1_addr<11>" LOCATE = SITE "AK23" LEVEL 1;
-COMP "sram1_addr<12>" LOCATE = SITE "AL26" LEVEL 1;
-COMP "sram1_addr<20>" LOCATE = SITE "AG26" LEVEL 1;
-COMP "sram1_addr<13>" LOCATE = SITE "AC17" LEVEL 1;
 COMP "cdce_sync_OBUF" LOCATE = SITE "SLICE_X31Y36" LEVEL 1;
 COMP "system/gbt_phase_monitoring/sfp_cdce_pm/debug_test_d_clk_o" LOCATE =
         SITE "SLICE_X56Y100" LEVEL 1;
@@ -459,8 +461,34 @@ PIN system/phy_en.phy_ipb_ctrl/udp_if/ipbus_tx_ram/Mram_ram8_pins<62> = BEL
         "system/phy_en.phy_ipb_ctrl/udp_if/ipbus_tx_ram/Mram_ram8" PINNAME
         CLKARDCLKL;
 TIMEGRP system_glib_pll_clkout_31_25_a = BEL
-        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_error_tx" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/last_ipb_strobe" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/last_gtx_strobe" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_0" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_1" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_2" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_3" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_4" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_5" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_6" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_7" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_8" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_9" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_10" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_11" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_12" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_13" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_14" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_15" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_16" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_17" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_18" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_19" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_20" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_24" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_25" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_26" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_error_tx" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_error_rx" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_0" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_1" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_2" BEL
@@ -491,6 +519,7 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_27" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_28" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_29" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_ack" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_en_o" BEL
         "usr/ipb_vfat2_inst/xclock_tx/data_b_o_0" BEL
         "usr/ipb_vfat2_inst/xclock_tx/data_b_o_1" BEL
@@ -525,8 +554,29 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/ipb_vfat2_inst/xclock_tx/cnt_in_0" BEL
         "usr/ipb_vfat2_inst/xclock_tx/cnt_in_1" BEL
         "usr/ipb_vfat2_inst/xclock_tx/cnt_in_2" BEL
-        "usr/ipb_vfat2_inst/xclock_tx/failed_o" BEL "system/clkbuf_pllout2"
-        BEL "system/ip_mac/slv_mac_str_curr" BEL
+        "usr/ipb_vfat2_inst/xclock_tx/failed_o" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/en_b_o" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/cnt_out_0" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/cnt_out_1" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/cnt_out_2" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/cnt_in_0" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/cnt_in_1" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/cnt_in_2" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/failed_o" BEL
+        "usr/ipb_optohybrid_inst/xclock_rx/en_b_o" BEL
+        "usr/ipb_optohybrid_inst/xclock_rx/cnt_out_0" BEL
+        "usr/ipb_optohybrid_inst/xclock_rx/cnt_out_1" BEL
+        "usr/ipb_optohybrid_inst/xclock_rx/cnt_out_2" BEL
+        "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/last_ipb_strobe"
+        BEL
+        "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/last_gtx_strobe"
+        BEL
+        "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/ipb_error_tx"
+        BEL "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/ipb_ack"
+        BEL "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/tx_en_o"
+        BEL
+        "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/ipb_data_3"
+        BEL "system/clkbuf_pllout2" BEL "system/ip_mac/slv_mac_str_curr" BEL
         "system/ip_mac/slv_ip_str_curr" BEL "system/ip_mac/eep_mac_str_curr"
         BEL "system/ip_mac/eep_ip_str_curr" BEL "system/ip_mac/rarp_select"
         BEL "system/ip_mac/ip_from_usr" BEL "system/ip_mac/mac_from_slv" BEL
@@ -2817,8 +2867,34 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         BEL
         "system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD";
 TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
-        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_error_tx" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/last_ipb_strobe" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/last_gtx_strobe" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_0" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_1" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_2" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_3" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_4" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_5" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_6" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_7" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_8" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_9" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_10" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_11" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_12" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_13" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_14" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_15" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_16" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_17" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_18" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_19" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_20" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_24" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_25" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_data_26" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_error_tx" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_error_rx" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_0" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_1" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_2" BEL
@@ -2849,6 +2925,7 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_27" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_28" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_data_o_29" BEL
+        "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/ipb_ack" BEL
         "usr/ipb_vfat2_inst/ipb_vfat2_slow_clock_inst/tx_en_o" BEL
         "usr/ipb_vfat2_inst/xclock_tx/data_b_o_0" BEL
         "usr/ipb_vfat2_inst/xclock_tx/data_b_o_1" BEL
@@ -2883,8 +2960,29 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/ipb_vfat2_inst/xclock_tx/cnt_in_0" BEL
         "usr/ipb_vfat2_inst/xclock_tx/cnt_in_1" BEL
         "usr/ipb_vfat2_inst/xclock_tx/cnt_in_2" BEL
-        "usr/ipb_vfat2_inst/xclock_tx/failed_o" BEL "system/clkbuf_pllout2"
-        BEL "system/ip_mac/slv_mac_str_curr" BEL
+        "usr/ipb_vfat2_inst/xclock_tx/failed_o" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/en_b_o" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/cnt_out_0" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/cnt_out_1" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/cnt_out_2" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/cnt_in_0" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/cnt_in_1" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/cnt_in_2" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/failed_o" BEL
+        "usr/ipb_optohybrid_inst/xclock_rx/en_b_o" BEL
+        "usr/ipb_optohybrid_inst/xclock_rx/cnt_out_0" BEL
+        "usr/ipb_optohybrid_inst/xclock_rx/cnt_out_1" BEL
+        "usr/ipb_optohybrid_inst/xclock_rx/cnt_out_2" BEL
+        "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/last_ipb_strobe"
+        BEL
+        "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/last_gtx_strobe"
+        BEL
+        "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/ipb_error_tx"
+        BEL "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/ipb_ack"
+        BEL "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/tx_en_o"
+        BEL
+        "usr/ipb_optohybrid_inst/ipb_optohybrid_slow_clock_inst/ipb_data_3"
+        BEL "system/clkbuf_pllout2" BEL "system/ip_mac/slv_mac_str_curr" BEL
         "system/ip_mac/slv_ip_str_curr" BEL "system/ip_mac/eep_mac_str_curr"
         BEL "system/ip_mac/eep_ip_str_curr" BEL "system/ip_mac/rarp_select"
         BEL "system/ip_mac/ip_from_usr" BEL "system/ip_mac/mac_from_slv" BEL
@@ -5174,12 +5272,30 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD_D1"
         BEL
         "system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD";
-PIN usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<73> = BEL
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME
+PIN usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<73> = BEL
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME
         MGTREFCLKRX0;
-PIN usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<74> = BEL
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME
+PIN usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<74> = BEL
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME
         MGTREFCLKTX0;
+PIN usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<132> = BEL
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME
+        RXUSRCLK2;
+PIN usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<268> = BEL
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME
+        TXUSRCLK2;
+PIN usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<73> = BEL
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME
+        MGTREFCLKRX0;
+PIN usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<74> = BEL
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME
+        MGTREFCLKTX0;
+PIN usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<150> = BEL
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME
+        RXUSRCLK2;
+PIN usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<286> = BEL
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME
+        TXUSRCLK2;
 PIN
         usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<65>
         = BEL
@@ -5214,6 +5330,48 @@ TIMEGRP gtx_clk = BEL "usr/ipb_vfat2_inst/xclock_tx/en_b_o" BEL
         "usr/ipb_vfat2_inst/xclock_tx/cnt_out_0" BEL
         "usr/ipb_vfat2_inst/xclock_tx/cnt_out_1" BEL
         "usr/ipb_vfat2_inst/xclock_tx/cnt_out_2" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_0" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_1" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_2" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_3" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_4" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_5" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_6" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_7" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_8" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_9" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_10" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_11" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_12" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_13" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_14" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_15" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_16" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_17" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_18" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_19" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_20" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_21" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_22" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_23" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_24" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_25" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_26" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_27" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_28" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_29" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_30" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/data_b_o_31" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/cnt_in_0" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/cnt_in_1" BEL
+        "usr/ipb_vfat2_inst/xclock_rx/cnt_in_2" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/en_b_o" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/cnt_out_0" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/cnt_out_1" BEL
+        "usr/ipb_optohybrid_inst/xclock_tx/cnt_out_2" BEL
+        "usr/ipb_optohybrid_inst/xclock_rx/cnt_in_0" BEL
+        "usr/ipb_optohybrid_inst/xclock_rx/cnt_in_1" BEL
+        "usr/ipb_optohybrid_inst/xclock_rx/cnt_in_2" BEL
         "usr/gtx_tx_mux_inst/data_0" BEL "usr/gtx_tx_mux_inst/data_1" BEL
         "usr/gtx_tx_mux_inst/data_2" BEL "usr/gtx_tx_mux_inst/data_3" BEL
         "usr/gtx_tx_mux_inst/data_4" BEL "usr/gtx_tx_mux_inst/data_5" BEL
@@ -5249,12 +5407,91 @@ TIMEGRP gtx_clk = BEL "usr/ipb_vfat2_inst/xclock_tx/en_b_o" BEL
         "usr/gtx_tx_mux_inst/kchar_count_0" BEL
         "usr/gtx_tx_mux_inst/kchar_count_1" BEL
         "usr/gtx_tx_mux_inst/kchar_count_2" BEL
+        "usr/gtx_tx_mux_inst/kchar_count_3" BEL
+        "usr/gtx_tx_mux_inst/kchar_count_4" BEL
+        "usr/gtx_tx_mux_inst/kchar_count_5" BEL
+        "usr/gtx_tx_mux_inst/kchar_count_6" BEL
+        "usr/gtx_tx_mux_inst/kchar_count_7" BEL
+        "usr/gtx_tx_mux_inst/kchar_count_8" BEL
+        "usr/gtx_tx_mux_inst/kchar_count_9" BEL
         "usr/gtx_tx_mux_inst/state_FSM_FFd2" BEL
-        "usr/gtx_tx_mux_inst/state_FSM_FFd1" PIN
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<73>" PIN
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<74>" PIN
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<73>" PIN
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<74>" BEL
+        "usr/gtx_tx_mux_inst/state_FSM_FFd1" BEL "usr/gtx_rx_mux_inst/data_16"
+        BEL "usr/gtx_rx_mux_inst/data_17" BEL "usr/gtx_rx_mux_inst/data_18"
+        BEL "usr/gtx_rx_mux_inst/data_19" BEL "usr/gtx_rx_mux_inst/data_20"
+        BEL "usr/gtx_rx_mux_inst/data_21" BEL "usr/gtx_rx_mux_inst/data_22"
+        BEL "usr/gtx_rx_mux_inst/data_23" BEL "usr/gtx_rx_mux_inst/data_24"
+        BEL "usr/gtx_rx_mux_inst/data_25" BEL "usr/gtx_rx_mux_inst/data_26"
+        BEL "usr/gtx_rx_mux_inst/data_27" BEL "usr/gtx_rx_mux_inst/data_28"
+        BEL "usr/gtx_rx_mux_inst/data_29" BEL "usr/gtx_rx_mux_inst/data_30"
+        BEL "usr/gtx_rx_mux_inst/data_31" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_0" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_1" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_2" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_3" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_4" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_5" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_6" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_7" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_8" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_9" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_10" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_11" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_12" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_13" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_14" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_15" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_16" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_17" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_18" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_19" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_20" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_21" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_22" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_23" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_24" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_25" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_26" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_27" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_28" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_29" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_30" BEL
+        "usr/gtx_rx_mux_inst/ipb_vfat2_data_o_31" BEL
+        "usr/gtx_rx_mux_inst/state_FSM_FFd2" BEL
+        "usr/gtx_rx_mux_inst/state_FSM_FFd1" BEL "usr/gtx_rx_mux_inst/slave_0"
+        BEL "usr/gtx_rx_mux_inst/ipb_vfat2_en_o" BEL
+        "usr/gtx_rx_mux_inst/ipb_opto_en_o" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<73>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<74>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<132>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<268>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<73>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<74>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<132>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<268>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<73>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<74>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<132>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<268>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<73>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<74>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<132>" PIN
+        "usr/gtx_wrapper_04_inst/high_speed_gtx0_inst/gtxe1_i_pins<268>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<73>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<74>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<150>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<286>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<73>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<74>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<150>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<286>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<73>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<74>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<150>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<286>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<73>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<74>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<150>" PIN
+        "usr/gtx_wrapper_01_inst/high_speed_gtx0_inst/gtxe1_i_pins<286>" BEL
         "usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_TSEQ_NEQ2.U_TC_EQUATION/I_SRLT_NE_1.I_NMU_5_TO_8.U_TCL/I_OUTREG.U_DOUT"
         BEL
         "usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_STORAGE_QUAL/I_SRLT_NE_1.I_NMU_5_TO_8.U_TCL/I_OUTREG.U_DOUT"
@@ -6396,15 +6633,6 @@ TIMEGRP gtx_clk = BEL "usr/ipb_vfat2_inst/xclock_tx/en_b_o" BEL
         "usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36_pins<65>"
         PIN
         "usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36_pins<64>";
-PIN usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<148> = BEL
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME RXUSRCLK2;
-PIN usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<285> = BEL
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i" PINNAME TXUSRCLK2;
-TIMEGRP gtx0_txusrclk2 = PIN
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<148>" PIN
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<285>" PIN
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<148>" PIN
-        "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i_pins<285>";
 PIN
         system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/gtxe1_i_pins<73>
         = BEL
@@ -20469,7 +20697,6 @@ TS_xpoint1_clk1_p = PERIOD TIMEGRP "xpoint1_clk1_p" 25 ns HIGH 50%;
 TS_xpoint1_clk1_n = PERIOD TIMEGRP "xpoint1_clk1_n" TS_xpoint1_clk1_p PHASE
         12.5 ns HIGH 50%;
 TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
-TS_gtx0_txusrclk2 = PERIOD TIMEGRP "gtx0_txusrclk2" 6.25 ns HIGH 50%;
 TS_system_glib_pll_clkout_31_25_c = PERIOD TIMEGRP
         "system_glib_pll_clkout_31_25_c" TS_clk125_2_p / 0.25 HIGH 50%;
 TS_system_glib_pll_clkout_31_25_a = PERIOD TIMEGRP

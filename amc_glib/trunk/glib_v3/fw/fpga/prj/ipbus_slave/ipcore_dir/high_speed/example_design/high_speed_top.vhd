@@ -113,20 +113,15 @@ port
     --_________________________________________________________________________
     --GTX0  (X0_Y0)
 
-    ------------------------ Loopback and Powerdown Ports ----------------------
-    GTX0_LOOPBACK_IN                        : in   std_logic_vector(2 downto 0);
     ----------------------- Receive Ports - 8b10b Decoder ----------------------
     GTX0_RXCHARISK_OUT                      : out  std_logic_vector(1 downto 0);
     GTX0_RXDISPERR_OUT                      : out  std_logic_vector(1 downto 0);
     GTX0_RXNOTINTABLE_OUT                   : out  std_logic_vector(1 downto 0);
     --------------- Receive Ports - Comma Detection and Alignment --------------
+    GTX0_RXBYTEISALIGNED_OUT                : out  std_logic;
     GTX0_RXCOMMADET_OUT                     : out  std_logic;
     GTX0_RXENMCOMMAALIGN_IN                 : in   std_logic;
     GTX0_RXENPCOMMAALIGN_IN                 : in   std_logic;
-    ----------------------- Receive Ports - PRBS Detection ---------------------
-    GTX0_PRBSCNTRESET_IN                    : in   std_logic;
-    GTX0_RXENPRBSTST_IN                     : in   std_logic_vector(2 downto 0);
-    GTX0_RXPRBSERR_OUT                      : out  std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     GTX0_RXDATA_OUT                         : out  std_logic_vector(15 downto 0);
     GTX0_RXRECCLK_OUT                       : out  std_logic;
@@ -153,10 +148,7 @@ port
     GTX0_TXP_OUT                            : out  std_logic;
     ----------------------- Transmit Ports - TX PLL Ports ----------------------
     GTX0_GTXTXRESET_IN                      : in   std_logic;
-    GTX0_TXRESETDONE_OUT                    : out  std_logic;
-    --------------------- Transmit Ports - TX PRBS Generator -------------------
-    GTX0_TXENPRBSTST_IN                     : in   std_logic_vector(2 downto 0);
-    GTX0_TXPRBSFORCEERR_IN                  : in   std_logic
+    GTX0_TXRESETDONE_OUT                    : out  std_logic
 
 
 );
@@ -458,20 +450,15 @@ attribute syn_noprune of ila   : component is TRUE;
     --________________________________________________________________________
     --GTX0   (X0Y0)
 
-    ------------------------ Loopback and Powerdown Ports ----------------------
-    signal  gtx0_loopback_i                 : std_logic_vector(2 downto 0);
     ----------------------- Receive Ports - 8b10b Decoder ----------------------
     signal  gtx0_rxcharisk_i                : std_logic_vector(1 downto 0);
     signal  gtx0_rxdisperr_i                : std_logic_vector(1 downto 0);
     signal  gtx0_rxnotintable_i             : std_logic_vector(1 downto 0);
     --------------- Receive Ports - Comma Detection and Alignment --------------
+    signal  gtx0_rxbyteisaligned_i          : std_logic;
     signal  gtx0_rxcommadet_i               : std_logic;
     signal  gtx0_rxenmcommaalign_i          : std_logic;
     signal  gtx0_rxenpcommaalign_i          : std_logic;
-    ----------------------- Receive Ports - PRBS Detection ---------------------
-    signal  gtx0_prbscntreset_i             : std_logic;
-    signal  gtx0_rxenprbstst_i              : std_logic_vector(2 downto 0);
-    signal  gtx0_rxprbserr_i                : std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     signal  gtx0_rxdata_i                   : std_logic_vector(15 downto 0);
     signal  gtx0_rxrecclk_i                 : std_logic;
@@ -490,9 +477,6 @@ attribute syn_noprune of ila   : component is TRUE;
     ----------------------- Transmit Ports - TX PLL Ports ----------------------
     signal  gtx0_gtxtxreset_i               : std_logic;
     signal  gtx0_txresetdone_i              : std_logic;
-    --------------------- Transmit Ports - TX PRBS Generator -------------------
-    signal  gtx0_txenprbstst_i              : std_logic_vector(2 downto 0);
-    signal  gtx0_txprbsforceerr_i           : std_logic;
 
 
 
@@ -670,20 +654,15 @@ begin
         --_____________________________________________________________________
         --_____________________________________________________________________
         --GTX0  (X0Y0)
-        ------------------------ Loopback and Powerdown Ports ----------------------
-        GTX0_LOOPBACK_IN                =>      gtx0_loopback_i,
         ----------------------- Receive Ports - 8b10b Decoder ----------------------
         GTX0_RXCHARISK_OUT              =>      gtx0_rxcharisk_i,
         GTX0_RXDISPERR_OUT              =>      gtx0_rxdisperr_i,
         GTX0_RXNOTINTABLE_OUT           =>      gtx0_rxnotintable_i,
         --------------- Receive Ports - Comma Detection and Alignment --------------
+        GTX0_RXBYTEISALIGNED_OUT        =>      gtx0_rxbyteisaligned_i,
         GTX0_RXCOMMADET_OUT             =>      gtx0_rxcommadet_i,
         GTX0_RXENMCOMMAALIGN_IN         =>      gtx0_rxenmcommaalign_i,
         GTX0_RXENPCOMMAALIGN_IN         =>      gtx0_rxenpcommaalign_i,
-        ----------------------- Receive Ports - PRBS Detection ---------------------
-        GTX0_PRBSCNTRESET_IN            =>      gtx0_prbscntreset_i,
-        GTX0_RXENPRBSTST_IN             =>      gtx0_rxenprbstst_i,
-        GTX0_RXPRBSERR_OUT              =>      gtx0_rxprbserr_i,
         ------------------- Receive Ports - RX Data Path interface -----------------
         GTX0_RXDATA_OUT                 =>      gtx0_rxdata_i,
         GTX0_RXRECCLK_OUT               =>      gtx0_rxrecclk_i,
@@ -710,10 +689,7 @@ begin
         GTX0_TXP_OUT                    =>      TXP_OUT,
         ----------------------- Transmit Ports - TX PLL Ports ----------------------
         GTX0_GTXTXRESET_IN              =>      gtx0_gtxtxreset_i,
-        GTX0_TXRESETDONE_OUT            =>      gtx0_txresetdone_i,
-        --------------------- Transmit Ports - TX PRBS Generator -------------------
-        GTX0_TXENPRBSTST_IN             =>      gtx0_txenprbstst_i,
-        GTX0_TXPRBSFORCEERR_IN          =>      gtx0_txprbsforceerr_i
+        GTX0_TXRESETDONE_OUT            =>      gtx0_txresetdone_i
 
 
     );
@@ -1091,21 +1067,16 @@ chipscope : if EXAMPLE_USE_CHIPSCOPE = 1 generate
     gtx0_tx_data_vio_async_in_i(30)              <= gtx0_txresetdone_i;
     gtx0_tx_data_vio_async_in_i(29 downto 0)     <= "000000000000000000000000000000";
     gtx0_tx_data_vio_sync_in_i(31 downto 0)      <= "00000000000000000000000000000000";
-    gtx0_loopback_i                              <= tx_data_vio_async_out_i(30 downto 28);
-    gtx0_txenprbstst_i                           <= tx_data_vio_sync_out_i(31 downto 29);
-    gtx0_txprbsforceerr_i                        <= tx_data_vio_sync_out_i(28);
     gtx0_rx_data_vio_async_in_i(31)              <= gtx0_rxplllkdet_i;
     gtx0_rx_data_vio_async_in_i(30)              <= gtx0_rxresetdone_i;
     gtx0_rx_data_vio_async_in_i(29 downto 0)     <= "000000000000000000000000000000";
     gtx0_rx_data_vio_sync_in_i(31 downto 0)      <= "00000000000000000000000000000000";
     gtx0_pllrxreset_i                            <= rx_data_vio_async_out_i(31);
-    gtx0_prbscntreset_i                          <= rx_data_vio_sync_out_i(31);
-    gtx0_rxenprbstst_i                           <= rx_data_vio_sync_out_i(30 downto 28);
     gtx0_ila_in_i(84 downto 83)                  <= gtx0_rxcharisk_i;
     gtx0_ila_in_i(82 downto 81)                  <= gtx0_rxdisperr_i;
     gtx0_ila_in_i(80 downto 79)                  <= gtx0_rxnotintable_i;
-    gtx0_ila_in_i(78)                            <= gtx0_rxcommadet_i;
-    gtx0_ila_in_i(77)                            <= gtx0_rxprbserr_i;
+    gtx0_ila_in_i(78)                            <= gtx0_rxbyteisaligned_i;
+    gtx0_ila_in_i(77)                            <= gtx0_rxcommadet_i;
     gtx0_ila_in_i(76 downto 61)                  <= gtx0_rxdata_i;
     gtx0_ila_in_i(60 downto 59)                  <= gtx0_rxlossofsync_i;
     gtx0_ila_in_i(58 downto 51)                  <= gtx0_error_count_i;
@@ -1146,12 +1117,7 @@ no_chipscope : if EXAMPLE_USE_CHIPSCOPE = 0 generate
     gtxrxreset_i                                 <= tied_to_ground_i;
     user_tx_reset_i                              <= tied_to_ground_i;
     user_rx_reset_i                              <= tied_to_ground_i;
-    gtx0_loopback_i                              <= tied_to_ground_vec_i(2 downto 0);
-    gtx0_txenprbstst_i                           <= tied_to_ground_vec_i(2 downto 0);
-    gtx0_txprbsforceerr_i                        <= tied_to_ground_i;
     gtx0_pllrxreset_i                            <= tied_to_ground_i;
-    gtx0_prbscntreset_i                          <= tied_to_ground_i;
-    gtx0_rxenprbstst_i                           <= tied_to_ground_vec_i(2 downto 0);
 
 
 

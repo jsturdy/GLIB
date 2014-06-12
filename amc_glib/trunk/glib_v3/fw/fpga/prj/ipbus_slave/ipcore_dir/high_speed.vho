@@ -30,20 +30,15 @@ port
     --_________________________________________________________________________
     --GTX0  (X0_Y0)
 
-    ------------------------ Loopback and Powerdown Ports ----------------------
-    GTX0_LOOPBACK_IN                        : in   std_logic_vector(2 downto 0);
     ----------------------- Receive Ports - 8b10b Decoder ----------------------
     GTX0_RXCHARISK_OUT                      : out  std_logic_vector(1 downto 0);
     GTX0_RXDISPERR_OUT                      : out  std_logic_vector(1 downto 0);
     GTX0_RXNOTINTABLE_OUT                   : out  std_logic_vector(1 downto 0);
     --------------- Receive Ports - Comma Detection and Alignment --------------
+    GTX0_RXBYTEISALIGNED_OUT                : out  std_logic;
     GTX0_RXCOMMADET_OUT                     : out  std_logic;
     GTX0_RXENMCOMMAALIGN_IN                 : in   std_logic;
     GTX0_RXENPCOMMAALIGN_IN                 : in   std_logic;
-    ----------------------- Receive Ports - PRBS Detection ---------------------
-    GTX0_PRBSCNTRESET_IN                    : in   std_logic;
-    GTX0_RXENPRBSTST_IN                     : in   std_logic_vector(2 downto 0);
-    GTX0_RXPRBSERR_OUT                      : out  std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     GTX0_RXDATA_OUT                         : out  std_logic_vector(15 downto 0);
     GTX0_RXRECCLK_OUT                       : out  std_logic;
@@ -70,10 +65,7 @@ port
     GTX0_TXP_OUT                            : out  std_logic;
     ----------------------- Transmit Ports - TX PLL Ports ----------------------
     GTX0_GTXTXRESET_IN                      : in   std_logic;
-    GTX0_TXRESETDONE_OUT                    : out  std_logic;
-    --------------------- Transmit Ports - TX PRBS Generator -------------------
-    GTX0_TXENPRBSTST_IN                     : in   std_logic_vector(2 downto 0);
-    GTX0_TXPRBSFORCEERR_IN                  : in   std_logic
+    GTX0_TXRESETDONE_OUT                    : out  std_logic
 
 
 );
@@ -102,20 +94,15 @@ end component;
         --_____________________________________________________________________
         --GTX0  (X0Y0)
 
-        ------------------------ Loopback and Powerdown Ports ----------------------
-        GTX0_LOOPBACK_IN                =>      ,
         ----------------------- Receive Ports - 8b10b Decoder ----------------------
         GTX0_RXCHARISK_OUT              =>      ,
         GTX0_RXDISPERR_OUT              =>      ,
         GTX0_RXNOTINTABLE_OUT           =>      ,
         --------------- Receive Ports - Comma Detection and Alignment --------------
+        GTX0_RXBYTEISALIGNED_OUT        =>      ,
         GTX0_RXCOMMADET_OUT             =>      ,
         GTX0_RXENMCOMMAALIGN_IN         =>      ,
         GTX0_RXENPCOMMAALIGN_IN         =>      ,
-        ----------------------- Receive Ports - PRBS Detection ---------------------
-        GTX0_PRBSCNTRESET_IN            =>      ,
-        GTX0_RXENPRBSTST_IN             =>      ,
-        GTX0_RXPRBSERR_OUT              =>      ,
         ------------------- Receive Ports - RX Data Path interface -----------------
         GTX0_RXDATA_OUT                 =>      ,
         GTX0_RXRECCLK_OUT               =>      ,
@@ -142,10 +129,7 @@ end component;
         GTX0_TXP_OUT                    =>      ,
         ----------------------- Transmit Ports - TX PLL Ports ----------------------
         GTX0_GTXTXRESET_IN              =>      ,
-        GTX0_TXRESETDONE_OUT            =>      ,
-        --------------------- Transmit Ports - TX PRBS Generator -------------------
-        GTX0_TXENPRBSTST_IN             =>      ,
-        GTX0_TXPRBSFORCEERR_IN          =>      
+        GTX0_TXRESETDONE_OUT            =>      
 
 
     );

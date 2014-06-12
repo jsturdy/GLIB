@@ -55,20 +55,15 @@ wave add /DEMO_TB/high_speed_top_i/gtx0_frame_check/data_error_detected_r
 wave add /DEMO_TB/high_speed_top_i/gtx0_frame_check/start_of_packet_detected_r
 wave add /DEMO_TB/high_speed_top_i/gtx0_frame_check/RX_DATA
 wave add /DEMO_TB/high_speed_top_i/gtx0_frame_check/ERROR_COUNT
-divider add "Loopback and Powerdown Ports"
-wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/LOOPBACK_IN
 divider add "Receive Ports - 8b10b Decoder"
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXCHARISK_OUT
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXDISPERR_OUT
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXNOTINTABLE_OUT
 divider add "Receive Ports - Comma Detection and Alignment"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXBYTEISALIGNED_OUT
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXCOMMADET_OUT
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXENMCOMMAALIGN_IN
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXENPCOMMAALIGN_IN
-divider add "Receive Ports - PRBS Detection"
-wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/PRBSCNTRESET_IN
-wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXENPRBSTST_IN
-wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXPRBSERR_OUT
 divider add "Receive Ports - RX Data Path interface"
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXDATA_OUT
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXRECCLK_OUT
@@ -96,9 +91,6 @@ wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/TXP_OUT
 divider add "Transmit Ports - TX PLL Ports"
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/GTXTXRESET_IN
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/TXRESETDONE_OUT
-divider add "Transmit Ports - TX PRBS Generator"
-wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/TXENPRBSTST_IN
-wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/TXPRBSFORCEERR_IN
 
 run 61 us
 quit

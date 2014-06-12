@@ -45,10 +45,6 @@ begin
 
     process(ipb_clk_i)
     
-        -- Data counter
-        variable tx_cnt             : integer range 0 to 7 := 0;
-        variable rx_cnt             : integer range 0 to 7 := 0;
-    
         -- TX data
         variable tx_rd_chip_select  : std_logic_vector(7 downto 0) := (others => '0');
         variable tx_register_select : std_logic_vector(7 downto 0) := (others => '0'); 
@@ -77,9 +73,6 @@ begin
                 ipb_error_rx <= '0';
                 ipb_ack <= '0';
                 
-                tx_cnt := 0;
-                rx_cnt := 0;
-                
                 last_ipb_strobe := '0';
                 last_gtx_strobe := '0';
                 
@@ -106,9 +99,6 @@ begin
       
                     -- Strobe
                     tx_en_o <= '1';
-                    
-                    -- Increment the counter
-                    tx_cnt := tx_cnt + 1;
 
                 else
                     
@@ -122,9 +112,6 @@ begin
                 
                     -- Raise the error flag
                     ipb_error_tx <= '1';
-                    
-                    -- Decrement the counter
-                    tx_cnt := tx_cnt - 1;
 
                 else
                 
@@ -138,55 +125,39 @@ begin
 
                 -- A response from the GTX is present
                 if (last_gtx_strobe = '0' and rx_en_i = '1') then
-                
-                    -- Increment the counter
-                    rx_cnt := rx_cnt + 1;
-                    
-                    -- Check if the number of sent and received packages is the same (ignore packages which have timed out)
-                    if (tx_cnt = rx_cnt) then
             
-                        -- Unused - Read/Write - Chip select
-                        rx_rd_chip_select := rx_data_i(31 downto 24);
-                        -- Register select                        
-                        rx_register_select := rx_data_i(23 downto 16);
-                        -- Data
-                        rx_data := rx_data_i(15 downto 8);
-                        -- CRC
-                        rx_crc := def_gtx_vfat2_request xor rx_rd_chip_select xor rx_register_select xor rx_data;       
-                        
-                        -- Check CRC
-                        if (rx_crc = rx_data_i(7 downto 0)) then
-                        
-                            -- Set data bus
-                            ipb_data <= "00000" & rx_data_i(31) & rx_data_i(30) & rx_data_i(29) -- Unused - Error - Valid - Read/Write_n
-                                        & "000" & rx_data_i(28 downto 24)                       -- Chip select
-                                        & rx_data_i(23 downto 16)                               -- Register select
-                                        & rx_data_i(15 downto 8);                               -- Data
-                                        
-                            -- Reset IPBus error
-                            ipb_error_rx <= '0';
+                    -- Unused - Read/Write - Chip select
+                    rx_rd_chip_select := rx_data_i(31 downto 24);
+                    -- Register select                        
+                    rx_register_select := rx_data_i(23 downto 16);
+                    -- Data
+                    rx_data := rx_data_i(15 downto 8);
+                    -- CRC
+                    rx_crc := def_gtx_vfat2_request xor rx_rd_chip_select xor rx_register_select xor rx_data;       
+                    
+                    -- Check CRC
+                    if (rx_crc = rx_data_i(7 downto 0)) then
+                    
+                        -- Set data bus
+                        ipb_data <= "00000" & rx_data_i(31) & rx_data_i(30) & rx_data_i(29) -- Unused - Error - Valid - Read/Write_n
+                                    & "000" & rx_data_i(28 downto 24)                       -- Chip select
+                                    & rx_data_i(23 downto 16)                               -- Register select
+                                    & rx_data_i(15 downto 8);                               -- Data
+                                    
+                        -- Reset IPBus error
+                        ipb_error_rx <= '0';
 
-                            -- Set IPBus acknowledgment
-                            ipb_ack <= '1';
-                            
-                        else
-                        
-                            -- Set IPBus error
-                            ipb_error_rx <= '1';
-
-                            -- Reset IPBus acknowledgment
-                            ipb_ack <= '0';
-                                        
-                        end if;
+                        -- Set IPBus acknowledgment
+                        ipb_ack <= '1';
                         
                     else
                     
                         -- Set IPBus error
-                        ipb_error_rx <= '0';
+                        ipb_error_rx <= '1';
 
                         -- Reset IPBus acknowledgment
-                        ipb_ack <= '0';                        
-                    
+                        ipb_ack <= '0';
+                                    
                     end if;
                     
                 else

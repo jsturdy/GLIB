@@ -58,20 +58,15 @@
   waveform  add  -signals  :high_speed_top_i:gtx0_frame_check:RX_DATA
   waveform  add  -signals  :high_speed_top_i:gtx0_frame_check:ERROR_COUNT
   waveform  add  -label GTX0_HIGH_SPEED -comment GTX0_HIGH_SPEED
-  waveform  add  -label Loopback_and_Powerdown_Ports  -comment  Loopback_and_Powerdown_Ports
-  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:LOOPBACK_IN
   waveform  add  -label Receive_Ports_-_8b10b_Decoder  -comment  Receive_Ports_-_8b10b_Decoder
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXCHARISK_OUT
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXDISPERR_OUT
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXNOTINTABLE_OUT
   waveform  add  -label Receive_Ports_-_Comma_Detection_and_Alignment  -comment  Receive_Ports_-_Comma_Detection_and_Alignment
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXBYTEISALIGNED_OUT
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXCOMMADET_OUT
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXENMCOMMAALIGN_IN
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXENPCOMMAALIGN_IN
-  waveform  add  -label Receive_Ports_-_PRBS_Detection  -comment  Receive_Ports_-_PRBS_Detection
-  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:PRBSCNTRESET_IN
-  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXENPRBSTST_IN
-  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXPRBSERR_OUT
   waveform  add  -label Receive_Ports_-_RX_Data_Path_interface  -comment  Receive_Ports_-_RX_Data_Path_interface
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXDATA_OUT
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXRECCLK_OUT
@@ -99,9 +94,6 @@
   waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:GTXTXRESET_IN
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:TXRESETDONE_OUT
-  waveform  add  -label Transmit_Ports_-_TX_PRBS_Generator  -comment  Transmit_Ports_-_TX_PRBS_Generator
-  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:TXENPRBSTST_IN
-  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:TXPRBSFORCEERR_IN
 
   console submit -using simulator -wait no "run 61 us"
 

@@ -82,20 +82,15 @@ generic
 );
 port 
 (
-    ------------------------ Loopback and Powerdown Ports ----------------------
-    LOOPBACK_IN                             : in   std_logic_vector(2 downto 0);
     ----------------------- Receive Ports - 8b10b Decoder ----------------------
     RXCHARISK_OUT                           : out  std_logic_vector(1 downto 0);
     RXDISPERR_OUT                           : out  std_logic_vector(1 downto 0);
     RXNOTINTABLE_OUT                        : out  std_logic_vector(1 downto 0);
     --------------- Receive Ports - Comma Detection and Alignment --------------
+    RXBYTEISALIGNED_OUT                     : out  std_logic;
     RXCOMMADET_OUT                          : out  std_logic;
     RXENMCOMMAALIGN_IN                      : in   std_logic;
     RXENPCOMMAALIGN_IN                      : in   std_logic;
-    ----------------------- Receive Ports - PRBS Detection ---------------------
-    PRBSCNTRESET_IN                         : in   std_logic;
-    RXENPRBSTST_IN                          : in   std_logic_vector(2 downto 0);
-    RXPRBSERR_OUT                           : out  std_logic;
     ------------------- Receive Ports - RX Data Path interface -----------------
     RXDATA_OUT                              : out  std_logic_vector(15 downto 0);
     RXRECCLK_OUT                            : out  std_logic;
@@ -125,10 +120,7 @@ port
     MGTREFCLKTX_IN                          : in   std_logic_vector(1 downto 0);
     PLLTXRESET_IN                           : in   std_logic;
     TXPLLLKDET_OUT                          : out  std_logic;
-    TXRESETDONE_OUT                         : out  std_logic;
-    --------------------- Transmit Ports - TX PRBS Generator -------------------
-    TXENPRBSTST_IN                          : in   std_logic_vector(2 downto 0);
-    TXPRBSFORCEERR_IN                       : in   std_logic
+    TXRESETDONE_OUT                         : out  std_logic
 
 
 );
@@ -414,7 +406,7 @@ begin
      port map
      (
                       ------------------------ Loopback and Powerdown Ports ----------------------
-        LOOPBACK                        =>      LOOPBACK_IN,
+        LOOPBACK                        =>      tied_to_ground_vec_i(2 downto 0),
         RXPOWERDOWN                     =>      "00",
         TXPOWERDOWN                     =>      "00",
         -------------- Receive Ports - 64b66b and 64b67b Gearbox Ports -------------
@@ -445,7 +437,7 @@ begin
         ------------------- Receive Ports - Clock Correction Ports -----------------
         RXCLKCORCNT                     =>      open,
         --------------- Receive Ports - Comma Detection and Alignment --------------
-        RXBYTEISALIGNED                 =>      open,
+        RXBYTEISALIGNED                 =>      RXBYTEISALIGNED_OUT,
         RXBYTEREALIGN                   =>      open,
         RXCOMMADET                      =>      RXCOMMADET_OUT,
         RXCOMMADETUSE                   =>      tied_to_vcc_i,
@@ -453,9 +445,9 @@ begin
         RXENPCOMMAALIGN                 =>      RXENPCOMMAALIGN_IN,
         RXSLIDE                         =>      tied_to_ground_i,
         ----------------------- Receive Ports - PRBS Detection ---------------------
-        PRBSCNTRESET                    =>      PRBSCNTRESET_IN,
-        RXENPRBSTST                     =>      RXENPRBSTST_IN,
-        RXPRBSERR                       =>      RXPRBSERR_OUT,
+        PRBSCNTRESET                    =>      tied_to_ground_i,
+        RXENPRBSTST                     =>      tied_to_ground_vec_i(2 downto 0),
+        RXPRBSERR                       =>      open,
         ------------------- Receive Ports - RX Data Path interface -----------------
         RXDATA                          =>      rxdata_i,
         RXRECCLK                        =>      RXRECCLK_OUT,
@@ -602,8 +594,8 @@ begin
         TXRATEDONE                      =>      open,
         TXRESETDONE                     =>      TXRESETDONE_OUT,
         --------------------- Transmit Ports - TX PRBS Generator -------------------
-        TXENPRBSTST                     =>      TXENPRBSTST_IN,
-        TXPRBSFORCEERR                  =>      TXPRBSFORCEERR_IN,
+        TXENPRBSTST                     =>      tied_to_ground_vec_i(2 downto 0),
+        TXPRBSFORCEERR                  =>      tied_to_ground_i,
         -------------------- Transmit Ports - TX Polarity Control ------------------
         TXPOLARITY                      =>      tied_to_ground_i,
         ----------------- Transmit Ports - TX Ports for PCI Express ----------------

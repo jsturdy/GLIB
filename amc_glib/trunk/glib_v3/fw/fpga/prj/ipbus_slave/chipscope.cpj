@@ -1,39 +1,39 @@
 #ChipScope Pro Analyzer Project File, Version 3.0
-#Fri May 16 10:30:07 CEST 2014
+#Tue May 20 15:20:50 CEST 2014
 deviceChain.deviceName0=XC6VLX130T
 deviceChain.iRLength0=10
 deviceChain.name0=MyDevice0
 deviceIds=8424a093
-mdiAreaHeight=0.6992551210428305
-mdiAreaHeightLast=0.6992551210428305
+mdiAreaHeight=0.6886051080550099
+mdiAreaHeightLast=0.737721021611002
 mdiCount=2
 mdiDevice0=0
 mdiDevice1=0
-mdiType0=0
-mdiType1=1
+mdiType0=1
+mdiType1=0
 mdiUnit0=0
 mdiUnit1=0
-navigatorHeight=0.17970204841713222
-navigatorHeightLast=0.17970204841713222
-navigatorWidth=0.1797520661157025
-navigatorWidthLast=0.1797520661157025
+navigatorHeight=0.18958742632612965
+navigatorHeightLast=0.18958742632612965
+navigatorWidth=0.17926003126628454
+navigatorWidthLast=0.17926003126628454
 signalDisplayPath=0
 unit.0.-1.coretype=SYSTEM MONITOR
 unit.0.-1.port.-1.buscount=0
 unit.0.-1.port.-1.channelcount=0
 unit.0.-1.portcount=0
 unit.0.-1.username=
-unit.0.0.0.HEIGHT0=0.5240642
+unit.0.0.0.HEIGHT0=0.56160456
 unit.0.0.0.TriggerRow0=1
 unit.0.0.0.TriggerRow1=1
 unit.0.0.0.TriggerRow2=1
 unit.0.0.0.WIDTH0=1.0
 unit.0.0.0.X0=0.0
 unit.0.0.0.Y0=0.0
-unit.0.0.1.HEIGHT1=0.42914438
+unit.0.0.1.HEIGHT1=0.4598854
 unit.0.0.1.WIDTH1=1.0
 unit.0.0.1.X1=0.0
-unit.0.0.1.Y1=0.526738
+unit.0.0.1.Y1=0.56446993
 unit.0.0.MFBitsA0=1
 unit.0.0.MFBitsA1=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 unit.0.0.MFBitsA2=XXXXXXXXXXXXXXXX
@@ -83,10 +83,18 @@ unit.0.0.MFEventType4=3
 unit.0.0.MFEventType5=3
 unit.0.0.MFEventType6=3
 unit.0.0.MFEventType7=3
-unit.0.0.RunMode=REPETITIVE RUN
+unit.0.0.RunMode=SINGLE RUN
 unit.0.0.SQCondition=All Data
 unit.0.0.SQContiguous0=0
 unit.0.0.SequencerOn=0
+unit.0.0.SignalExport.triggerPort<0>.name=ipb_tx_en
+unit.0.0.SignalExport.triggerPort<1>.name=ipb_tx_data
+unit.0.0.SignalExport.triggerPort<2>.name=tx_data
+unit.0.0.SignalExport.triggerPort<3>.name=tx_kchar
+unit.0.0.SignalExport.triggerPort<4>.name=rx_data
+unit.0.0.SignalExport.triggerPort<5>.name=rx_kchar
+unit.0.0.SignalExport.triggerPort<6>.name=ipb_rx_en
+unit.0.0.SignalExport.triggerPort<7>.name=ipb_rx_data
 unit.0.0.TCActive=0
 unit.0.0.TCAdvanced0=0
 unit.0.0.TCCondition0_0=M0
@@ -100,6 +108,7 @@ unit.0.0.TCOutputEnable0=0
 unit.0.0.TCOutputHigh0=1
 unit.0.0.TCOutputMode0=0
 unit.0.0.browser_tree_state<Data\ Port>=1
+unit.0.0.browser_tree_state<Trigger\ Ports>=1
 unit.0.0.coretype=ILA
 unit.0.0.eventCount0=1
 unit.0.0.eventCount1=1
@@ -733,7 +742,7 @@ unit.0.0.port.-1.s.99.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.-1.s.99.name=DataPort[99]
 unit.0.0.port.-1.s.99.orderindex=-1
 unit.0.0.port.-1.s.99.visible=0
-unit.0.0.port.0.b.0.alias=
+unit.0.0.port.0.b.0.alias=ipb_tx_en
 unit.0.0.port.0.b.0.channellist=0
 unit.0.0.port.0.b.0.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.0.b.0.name=TriggerPort0
@@ -753,7 +762,7 @@ unit.0.0.port.0.s.0.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.0.s.0.name=TriggerPort0[0]
 unit.0.0.port.0.s.0.orderindex=-1
 unit.0.0.port.0.s.0.visible=1
-unit.0.0.port.1.b.0.alias=
+unit.0.0.port.1.b.0.alias=ipb_tx_data
 unit.0.0.port.1.b.0.channellist=0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
 unit.0.0.port.1.b.0.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.1.b.0.name=TriggerPort1
@@ -928,7 +937,7 @@ unit.0.0.port.1.s.9.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.1.s.9.name=TriggerPort1[9]
 unit.0.0.port.1.s.9.orderindex=-1
 unit.0.0.port.1.s.9.visible=1
-unit.0.0.port.2.b.0.alias=
+unit.0.0.port.2.b.0.alias=tx_data
 unit.0.0.port.2.b.0.channellist=0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 unit.0.0.port.2.b.0.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.2.b.0.name=TriggerPort2
@@ -1023,7 +1032,7 @@ unit.0.0.port.2.s.9.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.2.s.9.name=TriggerPort2[9]
 unit.0.0.port.2.s.9.orderindex=-1
 unit.0.0.port.2.s.9.visible=1
-unit.0.0.port.3.b.0.alias=
+unit.0.0.port.3.b.0.alias=tx_kchar
 unit.0.0.port.3.b.0.channellist=0 1
 unit.0.0.port.3.b.0.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.3.b.0.name=TriggerPort3
@@ -1048,7 +1057,7 @@ unit.0.0.port.3.s.1.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.3.s.1.name=TriggerPort3[1]
 unit.0.0.port.3.s.1.orderindex=-1
 unit.0.0.port.3.s.1.visible=1
-unit.0.0.port.4.b.0.alias=
+unit.0.0.port.4.b.0.alias=rx_data
 unit.0.0.port.4.b.0.channellist=0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 unit.0.0.port.4.b.0.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.4.b.0.name=TriggerPort4
@@ -1143,7 +1152,7 @@ unit.0.0.port.4.s.9.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.4.s.9.name=TriggerPort4[9]
 unit.0.0.port.4.s.9.orderindex=-1
 unit.0.0.port.4.s.9.visible=1
-unit.0.0.port.5.b.0.alias=
+unit.0.0.port.5.b.0.alias=rx_kchar
 unit.0.0.port.5.b.0.channellist=0 1
 unit.0.0.port.5.b.0.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.5.b.0.name=TriggerPort5
@@ -1168,7 +1177,7 @@ unit.0.0.port.5.s.1.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.5.s.1.name=TriggerPort5[1]
 unit.0.0.port.5.s.1.orderindex=-1
 unit.0.0.port.5.s.1.visible=1
-unit.0.0.port.6.b.0.alias=
+unit.0.0.port.6.b.0.alias=ipb_rx_en
 unit.0.0.port.6.b.0.channellist=0
 unit.0.0.port.6.b.0.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.6.b.0.name=TriggerPort6
@@ -1188,7 +1197,7 @@ unit.0.0.port.6.s.0.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.6.s.0.name=TriggerPort6[0]
 unit.0.0.port.6.s.0.orderindex=-1
 unit.0.0.port.6.s.0.visible=1
-unit.0.0.port.7.b.0.alias=
+unit.0.0.port.7.b.0.alias=ipb_rx_data
 unit.0.0.port.7.b.0.channellist=0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
 unit.0.0.port.7.b.0.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.0.port.7.b.0.name=TriggerPort7

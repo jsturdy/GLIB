@@ -11,7 +11,10 @@ port(
     
     ipb_vfat2_en_o      : out std_logic;
     ipb_vfat2_data_o    : out std_logic_vector(31 downto 0);
-    
+  
+    ipb_opto_en_o       : out std_logic;
+    ipb_opto_data_o     : out std_logic_vector(31 downto 0);
+  
     rx_kchar_i          : in std_logic_vector(1 downto 0);
     rx_data_i           : in std_logic_vector(15 downto 0)
 );
@@ -27,6 +30,9 @@ begin
     
         -- Incomming data
         variable data : std_logic_vector(31 downto 0) := (others => '0');
+        
+        -- Output slave
+        variable slave : integer range 0 to 1 := 0;
     
     begin
     
@@ -37,8 +43,10 @@ begin
             
                 -- Reset the strobe
                 ipb_vfat2_en_o <= '0';
+                ipb_opto_en_o <= '0';
                 
                 state := 0;
+                slave := 0;
                 
             else
             
@@ -53,8 +61,20 @@ begin
                         -- VFAT2 data packet
                         if (rx_data_i = def_gtx_vfat2_request & x"BC") then
                         
+                            -- Select slave
+                            slave := 0;
+                        
                             -- Go to state 1
                             state := 1;
+                        
+                        -- OptoHybrid data packet
+                        elsif (rx_data_i = def_gtx_optohybrid_request & x"BC") then
+                        
+                            -- Select slave
+                            slave := 1;
+                        
+                            -- Go to state 1
+                            state := 1; 
                             
                         end if;
                         
@@ -62,8 +82,9 @@ begin
                     
                     -- Reset the strobes
                     ipb_vfat2_en_o <= '0';
+                    ipb_opto_en_o <= '0';
                     
-                -- VFAT 1
+                -- Data 1
                 elsif (state = 1) then
                 
                     -- Save the data
@@ -72,17 +93,29 @@ begin
                     -- Next state
                     state := 2;
                     
-                -- VFAT 2
+                -- Data 2
                 elsif (state = 2) then
                 
                     -- Save the data
                     data(15 downto 0) := rx_data_i; 
                     
-                    -- Set the ipbus data
-                    ipb_vfat2_data_o <= data;
+                    if (slave = 0) then
                     
-                    -- Storbe
-                    ipb_vfat2_en_o <= '1';
+                        -- Set the ipbus data
+                        ipb_vfat2_data_o <= data;
+                    
+                        -- Storbe
+                        ipb_vfat2_en_o <= '1';
+                        
+                    elsif (slave = 1) then
+
+                        -- Set the ipbus data
+                        ipb_opto_data_o <= data;
+                    
+                        -- Storbe
+                        ipb_opto_en_o <= '1';
+                    
+                    end if;
                     
                     -- Reset state
                     state := 0;
@@ -91,6 +124,7 @@ begin
                 else
                 
                     ipb_vfat2_en_o <= '0';
+                    ipb_opto_en_o <= '0';
                 
                     state := 0;
 

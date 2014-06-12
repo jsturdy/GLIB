@@ -19,13 +19,15 @@ package user_package is
 
 
     --=== ipb slaves =============--
-    constant number_of_ipb_slaves       : positive := 1;
+    constant number_of_ipb_slaves       : positive := 2;
 
     constant ipbus_vfat2_slave_nb       : integer := 0;
+    constant ipbus_optohybrid_slave_nb  : integer := 1;
     
     --=== Package types ==========--
     constant def_gtx_idle               : std_logic_vector(7 downto 0) := x"08";  
     constant def_gtx_vfat2_request      : std_logic_vector(7 downto 0) := x"04";  
+    constant def_gtx_optohybrid_request : std_logic_vector(7 downto 0) := x"13";  
     
 end user_package;
    

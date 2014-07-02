@@ -207,18 +207,29 @@ architecture user_logic_arch of user_logic is
     -- Clocks
     signal gtx_clk              : std_logic;
     
-    -- IPBus VFAT2 signals
-    signal ipb_vfat2_tx_en      : std_logic := '0';
-    signal ipb_vfat2_tx_data    : std_logic_vector(31 downto 0);
-    signal ipb_vfat2_rx_en      : std_logic := '0';
-    signal ipb_vfat2_rx_data    : std_logic_vector(31 downto 0);  
+    -- IPBus OptoHybrid start
+    signal ipb_opto_start_tx_en : std_logic := '0';
     
      -- IPBus OptoHybrid signals
     signal ipb_opto_tx_en       : std_logic := '0';
     signal ipb_opto_tx_data     : std_logic_vector(31 downto 0);
     signal ipb_opto_rx_en       : std_logic := '0';
-    signal ipb_opto_rx_data     : std_logic_vector(31 downto 0);      
-       
+    signal ipb_opto_rx_data     : std_logic_vector(31 downto 0);    
+    
+    -- IPBus VFAT2 signals
+    signal ipb_vfat2_tx_en      : std_logic := '0';
+    signal ipb_vfat2_tx_data    : std_logic_vector(31 downto 0);
+    signal ipb_vfat2_rx_en      : std_logic := '0';
+    signal ipb_vfat2_rx_data    : std_logic_vector(31 downto 0);    
+    
+    -- IPBus Trackung signals
+    signal ipb_tracking_rx_en   : std_logic := '0';
+    signal ipb_tracking_rx_data : std_logic_vector(191 downto 0);    
+    
+    -- IPBus Trackung signals
+    signal custom_en            : std_logic := '0';
+    signal custom_data          : std_logic_vector(47 downto 0);   
+    
     -- TX signals
     signal tx_kchar             : std_logic_vector(1 downto 0);
     signal tx_data              : std_logic_vector(15 downto 0);
@@ -228,7 +239,10 @@ architecture user_logic_arch of user_logic is
     signal rx_data              : std_logic_vector(15 downto 0);
 
     -- Chip Scope
-    signal cs_control           : std_logic_vector(35 downto 0);
+    signal cs_control_0         : std_logic_vector(35 downto 0);
+    signal cs_control_1         : std_logic_vector(35 downto 0);
+    signal cs_async_out         : std_logic_vector(47 downto 0);
+    signal cs_sync_out          : std_logic_vector(0 downto 0);
     signal cs_trigger_0         : std_logic_vector(0 downto 0);
     signal cs_trigger_1         : std_logic_vector(31 downto 0);
     signal cs_trigger_2         : std_logic_vector(15 downto 0);
@@ -239,59 +253,76 @@ architecture user_logic_arch of user_logic is
     signal cs_trigger_7         : std_logic_vector(31 downto 0);
 
 begin 
- 
-    -- ChipScope
-    chipscope_icon_inst : entity work.chipscope_icon
-    port map(
-        CONTROL0 => cs_control
-    );    
     
-
-    chipscope_ila_inst : entity work.chipscope_ila
-    port map(
-        CONTROL => cs_control,
-        CLK => gtx_clk,
-        TRIG0 => cs_trigger_0,
-        TRIG1 => cs_trigger_1,
-        TRIG2 => cs_trigger_2,
-        TRIG3 => cs_trigger_3,
-        TRIG4 => cs_trigger_4,
-        TRIG5 => cs_trigger_5,
-        TRIG6 => cs_trigger_6,
-        TRIG7 => cs_trigger_7
-    );    
+    ------------------------
+    -- Constant signals
+    ------------------------
     
-    cs_trigger_0(0) <= ipb_vfat2_tx_en;
-    cs_trigger_1 <= ipb_vfat2_tx_data;
-    cs_trigger_2 <= tx_data;
-    cs_trigger_3 <= tx_kchar;
-    cs_trigger_4 <= rx_data;
-    cs_trigger_5 <= rx_kchar;
-    cs_trigger_6(0) <= ipb_vfat2_rx_en;
-    cs_trigger_7 <= ipb_vfat2_rx_data;
-    
-    --
     ip_addr_o <= x"c0a80073";  -- 192.168.0.115
     mac_addr_o <= x"080030F100a" & amc_slot_i;  -- 08:00:30:F1:00:0[A0:AF] 
     user_v6_led_o(1) <= '1';
     user_v6_led_o(2) <= '0';   
+    
+    ------------------------
+    -- ChipScope
+    ------------------------
+    chipscope_icon_inst : entity work.chipscope_icon
+    port map(
+        CONTROL0    => cs_control_0,
+        CONTROL1    => cs_control_1
+    );    
+    
+    chipscope_vio_inst : entity work.chipscope_vio
+    port map(
+        CONTROL     => cs_control_1,
+        CLK         => gtx_clk,
+        ASYNC_OUT   => cs_async_out,
+        SYNC_OUT    => cs_sync_out
+    );
 
-    -- VFAT2 IPBus slave     
-    ipb_vfat2_inst : entity work.ipb_vfat2
+    custom_en <= cs_sync_out(0);
+    custom_data <= cs_async_out;
+
+    chipscope_ila_inst : entity work.chipscope_ila
+    port map(
+        CONTROL => cs_control_0,
+        CLK     => gtx_clk,
+        TRIG0   => cs_trigger_0,
+        TRIG1   => cs_trigger_1,
+        TRIG2   => cs_trigger_2,
+        TRIG3   => cs_trigger_3,
+        TRIG4   => cs_trigger_4,
+        TRIG5   => cs_trigger_5,
+        TRIG6   => cs_trigger_6,
+        TRIG7   => cs_trigger_7
+    );    
+    
+    cs_trigger_0(0) <= ipb_vfat2_tx_en or ipb_opto_start_tx_en or ipb_opto_tx_en or custom_en;
+    cs_trigger_1 <= ipb_vfat2_tx_data when ipb_vfat2_tx_en = '1' else ipb_opto_tx_data when ipb_opto_tx_en = '1' else custom_data(31 downto 0) when custom_en = '1' else (others => '0');
+    cs_trigger_2 <= tx_data;
+    cs_trigger_3 <= tx_kchar;
+    cs_trigger_4 <= rx_data;
+    cs_trigger_5 <= rx_kchar;
+    cs_trigger_6(0) <= ipb_vfat2_rx_en or ipb_opto_rx_en;
+    cs_trigger_7 <= ipb_vfat2_rx_data when ipb_vfat2_rx_en = '1' else ipb_opto_rx_data when ipb_opto_rx_en = '1' else (others => '0');
+
+    ------------------------
+    -- IPBus slaves
+    ------------------------
+    
+    -- OptoHybrid Start IPBus slave     
+    ipb_optohybrid_start_wrapper_inst : entity work.ipb_optohybrid_start_wrapper
     port map(
         ipb_clk_i   => ipb_clk_i,
         gtx_clk_i   => gtx_clk,
         reset_i     => reset_i,
-        ipb_mosi_i  => ipb_mosi_i(ipbus_vfat2_slave_nb),
-        ipb_miso_o  => ipb_miso_o(ipbus_vfat2_slave_nb),
-        tx_en_o     => ipb_vfat2_tx_en,
-        tx_data_o   => ipb_vfat2_tx_data,
-        rx_en_i     => ipb_vfat2_rx_en,
-        rx_data_i   => ipb_vfat2_rx_data
+        ipb_mosi_i  => ipb_mosi_i(ipbus_optohybrid_start_nb),
+        ipb_miso_o  => ipb_miso_o(ipbus_optohybrid_start_nb),
+        tx_en_o     => ipb_opto_start_tx_en
     );    
     
-    -- VFAT2 IPBus slave     
-    ipb_optohybrid_inst : entity work.ipb_optohybrid
+    -- OptoHybrid IPBus slave     
+    ipb_optohybrid_wrapper_inst : entity work.ipb_optohybrid_wrapper
     port map(
         ipb_clk_i   => ipb_clk_i,
         gtx_clk_i   => gtx_clk,
@@ -302,20 +333,53 @@ begin
         tx_data_o   => ipb_opto_tx_data,
         rx_en_i     => ipb_opto_rx_en,
         rx_data_i   => ipb_opto_rx_data
-    );       
+    );   
+    
+    -- VFAT2 IPBus slave     
+    ipb_vfat2_wrapper_inst : entity work.ipb_vfat2_wrapper
+    port map(
+        ipb_clk_i   => ipb_clk_i,
+        gtx_clk_i   => gtx_clk,
+        reset_i     => reset_i,
+        ipb_mosi_i  => ipb_mosi_i(ipbus_vfat2_slave_nb),
+        ipb_miso_o  => ipb_miso_o(ipbus_vfat2_slave_nb),
+        tx_en_o     => ipb_vfat2_tx_en,
+        tx_data_o   => ipb_vfat2_tx_data,
+        rx_en_i     => ipb_vfat2_rx_en,
+        rx_data_i   => ipb_vfat2_rx_data
+    );     
+    
+    -- Tracking Data slave     
+    ipb_tracking_wrapper_inst : entity work.ipb_tracking_wrapper
+    port map(   
+        ipb_clk_i   => ipb_clk_i,
+        gtx_clk_i   => gtx_clk,
+        reset_i     => reset_i,
+        ipb_mosi_i  => ipb_mosi_i(ipbus_tracking_slave_nb),
+        ipb_miso_o  => ipb_miso_o(ipbus_tracking_slave_nb),
+        rx_en_i     => ipb_tracking_rx_en,
+        rx_data_i   => ipb_tracking_rx_data
+    );        
     
 --    ipb_vfat2_rx_en <= ipb_vfat2_tx_en;
 --    ipb_vfat2_rx_data <= ipb_vfat2_tx_data;
+
+    ------------------------
+    -- TX & RX Muxes
+    ------------------------
 
 	-- GTX TX mux  
     gtx_tx_mux_inst : entity work.gtx_tx_mux
     port map(
         gtx_clk_i           => gtx_clk,
         reset_i             => reset_i,
-        ipb_vfat2_en_i      => ipb_vfat2_tx_en,
-        ipb_vfat2_data_i    => ipb_vfat2_tx_data,
+        ipb_opto_start_en_i => ipb_opto_start_tx_en,
         ipb_opto_en_i       => ipb_opto_tx_en,
         ipb_opto_data_i     => ipb_opto_tx_data,
+        ipb_vfat2_en_i      => ipb_vfat2_tx_en,
+        ipb_vfat2_data_i    => ipb_vfat2_tx_data,
+        custom_en_i         => custom_en,
+        custom_data_i       => custom_data,
         tx_kchar_o          => tx_kchar,
         tx_data_o           => tx_data
     );    
@@ -329,15 +393,21 @@ begin
         ipb_vfat2_data_o    => ipb_vfat2_rx_data,
         ipb_opto_en_o       => ipb_opto_rx_en,
         ipb_opto_data_o     => ipb_opto_rx_data,
+        ipb_tracking_en_o   => ipb_tracking_rx_en,
+        ipb_tracking_data_o => ipb_tracking_rx_data,
         rx_kchar_i          => rx_kchar,
         rx_data_i           => rx_data
     );   
     
  --   rx_kchar <= tx_kchar;    
  --   rx_data <= tx_data;
+
+    ------------------------
+    -- Optocal Link
+    ------------------------
     
     -- High speed RX
-    gtx_wrapper_01_inst : entity work.gtx_wrapper
+    gtx_wrapper_inst : entity work.gtx_wrapper
     port map(
         gtx_clk_i       => gtx_clk,
         reset_i         => reset_i,
@@ -346,27 +416,15 @@ begin
         rx_data_o       => rx_data,
         rx_n_i          => sfp_rx_n(1),
         rx_p_i          => sfp_rx_p(1),
-        tx_kchar_i      => "00",
-        tx_data_i       => x"0000",
+        tx_kchar_i      => tx_kchar,
+        tx_data_i       => tx_data,
         tx_n_o          => sfp_tx_n(1),
         tx_p_o          => sfp_tx_p(1)
     );
     
-    -- High speed TX
-    gtx_wrapper_04_inst : entity work.gtx_wrapper
-    port map(
-        gtx_clk_i       => gtx_clk,
-        reset_i         => reset_i,
-        rx_error_o      => open,
-        rx_kchar_o      => open,
-        rx_data_o       => open,
-        rx_n_i          => sfp_rx_n(4),
-        rx_p_i          => sfp_rx_p(4),
-        tx_kchar_i      => tx_kchar,
-        tx_data_i       => tx_data,
-        tx_n_o          => sfp_tx_n(4),
-        tx_p_o          => sfp_tx_p(4)
-    );    
+    ------------------------
+    -- Clocking
+    ------------------------
     
     -- GTX Clock at 160MHz
     gtx_clocking_inst : entity work.gtx_clocking

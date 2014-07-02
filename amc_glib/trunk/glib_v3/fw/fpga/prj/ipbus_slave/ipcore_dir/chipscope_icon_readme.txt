@@ -1,5 +1,5 @@
 The following files were generated for 'chipscope_icon' in directory
-C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\ipcore_dir\
+C:\Users\tlenzi\Desktop\GLIB_NEW\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\ipcore_dir\
 
 XCO file generator:
    Generate an XCO file for compatibility with legacy flows.
@@ -22,6 +22,11 @@ IP Symbol Generator:
    Generate an IP symbol based on the current project options'.
 
    * chipscope_icon.asy
+
+SYM file generator:
+   Generate a SYM file for compatibility with legacy flows
+
+   * chipscope_icon.sym
 
 Generate ISE subproject:
    Create an ISE subproject for use when including this core in ISE designs

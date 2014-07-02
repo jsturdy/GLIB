@@ -1,13 +1,13 @@
 --------------------------------------------------------------------------------
--- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --------------------------------------------------------------------------------
 --   ____  ____
 --  /   /\/   /
 -- /___/  \  /    Vendor: Xilinx
--- \   \   \/     Version: P.20131013
+-- \   \   \/     Version: P.58f
 --  \   \         Application: netgen
 --  /   /         Filename: v6_emac_v2_3_sgmii.vhd
--- /___/   /\     Timestamp: Fri May 09 09:00:50 2014
+-- /___/   /\     Timestamp: Mon May 20 14:15:44 2013
 -- \   \  /  \ 
 --  \___\/\___\
 --             
@@ -17,7 +17,7 @@
 -- Output file	: ./tmp/_cg/v6_emac_v2_3_sgmii.vhd
 -- # of Entities	: 1
 -- Design Name	: v6_emac_v2_3_sgmii
--- Xilinx	: C:\Xilinx\14.7\ISE_DS\ISE\
+-- Xilinx	: C:\CAD\Xilinx\14.5\ISE_DS\ISE\
 --             
 -- Purpose:    
 --     This VHDL netlist is a verification model and uses simulation 

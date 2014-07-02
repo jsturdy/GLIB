@@ -234,69 +234,69 @@ end glib_top;
 architecture glib_top_arch of glib_top is                    	
 
 
-    --##########################################--
-    --##############    SIGNAL    ##############--
-    --############## DECLARATIONS ##############--                              
-    --##########################################--
+--##########################################--
+--##############    SIGNAL    ##############--
+--############## DECLARATIONS ##############--                              
+--##########################################--
 
 
-    signal user_reset                      : std_logic;
-    ---------------------------------------
-    signal user_clk125_2  		            : std_logic;
-    signal user_clk125_2_bufg              : std_logic;
-    signal user_clk200_bufg						: std_logic;
-    signal user_pri_clk					      : std_logic;
-    ---------------------------------------
-    signal sec_clk                         : std_logic;
-    signal user_ipb_clk					      : std_logic;
-    signal sys_pcie_mgt_refclk             : std_logic;
-    signal user_sys_pcie_dma_clk           : std_logic;
-    ---------------------------------------
-    signal cdce_out0_gtxe1                 : std_logic; 
-    signal cdce_out3_gtxe1                 : std_logic;   
-    ---------------------------------------
-    signal user_cdce_sel					      : std_logic;
-    signal user_cdce_sync				      : std_logic;
-    ---------------------------------------
-    signal user_mac_addr 			         : std_logic_vector(47 downto 0);
-    signal user_ip_addr	   		         : std_logic_vector(31 downto 0);
-    ---------------------------------------
-    signal user_mac_syncacqstatus		      : std_logic_vector(0 to 3);
-    signal user_mac_serdes_locked		      : std_logic_vector(0 to 3);
-    ---------------------------------------
-    signal sys_eth_amc_p1_tx_p	            : std_logic;
-    signal sys_eth_amc_p1_tx_n		         : std_logic;
-    signal sys_eth_amc_p1_rx_p             : std_logic;
-    signal sys_eth_amc_p1_rx_n		         : std_logic;
-    ---------------------------------------
-    signal user_slv_to_sys_pcie		      : R_slv_to_ezdma2;									
-    signal user_slv_from_sys_pcie          : R_slv_from_ezdma2;         						
-    signal user_dma_to_sys_pcie		      : R_userDma_to_ezdma2_array   (1 to 7); 		
-    signal user_dma_from_sys_pcie          : R_userDma_from_ezdma2_array (1 to 7); 		
-    signal user_int_to_sys_pcie     	      : R_int_to_ezdma2;									
-    signal user_int_from_sys_pcie	         : R_int_from_ezdma2;         																					 						
-    signal user_cfg_from_sys_pcie          : R_cfg_from_ezdma2;									
-    ---------------------------------------
-    signal sys_pcie_amc_tx_p               : std_logic_vector(0 to 3);
-    signal sys_pcie_amc_tx_n               : std_logic_vector(0 to 3);
-    signal sys_pcie_amc_rx_p               : std_logic_vector(0 to 3);
-    signal sys_pcie_amc_rx_n               : std_logic_vector(0 to 3);
-    ---------------------------------------
-    signal user_sram_control			      : userSramControlR_array(1 to 2);
-    signal user_sram_addr				      : array_2x21bit;
-    signal user_sram_wdata				      : array_2x36bit;
-    signal user_sram_rdata				      : array_2x36bit;
-    ---------------------------------------
-    signal user_wb_miso					      : wb_miso_bus_array(0 to number_of_wb_slaves-1);
-    signal user_wb_mosi					      : wb_mosi_bus_array(0 to number_of_wb_slaves-1);
-    ---------------------------------------
-    signal user_ipb_miso					      : ipb_rbus_array	(0 to number_of_ipb_slaves-1);
-    signal user_ipb_mosi					      : ipb_wbus_array	(0 to number_of_ipb_slaves-1);
-        
-    signal amc_slot								: std_logic_vector(3 downto 0);	
+signal user_reset                      : std_logic;
+---------------------------------------
+signal user_clk125_2  		            : std_logic;
+signal user_clk125_2_bufg              : std_logic;
+signal user_clk200_bufg						: std_logic;
+signal user_pri_clk					      : std_logic;
+---------------------------------------
+signal sec_clk                         : std_logic;
+signal user_ipb_clk					      : std_logic;
+signal sys_pcie_mgt_refclk             : std_logic;
+signal user_sys_pcie_dma_clk           : std_logic;
+---------------------------------------
+signal cdce_out0_gtxe1                 : std_logic; 
+signal cdce_out3_gtxe1                 : std_logic;   
+---------------------------------------
+signal user_cdce_sel					      : std_logic;
+signal user_cdce_sync				      : std_logic;
+---------------------------------------
+signal user_mac_addr 			         : std_logic_vector(47 downto 0);
+signal user_ip_addr	   		         : std_logic_vector(31 downto 0);
+---------------------------------------
+signal user_mac_syncacqstatus		      : std_logic_vector(0 to 3);
+signal user_mac_serdes_locked		      : std_logic_vector(0 to 3);
+---------------------------------------
+signal sys_eth_amc_p1_tx_p	            : std_logic;
+signal sys_eth_amc_p1_tx_n		         : std_logic;
+signal sys_eth_amc_p1_rx_p             : std_logic;
+signal sys_eth_amc_p1_rx_n		         : std_logic;
+---------------------------------------
+signal user_slv_to_sys_pcie		      : R_slv_to_ezdma2;									
+signal user_slv_from_sys_pcie          : R_slv_from_ezdma2;         						
+signal user_dma_to_sys_pcie		      : R_userDma_to_ezdma2_array   (1 to 7); 		
+signal user_dma_from_sys_pcie          : R_userDma_from_ezdma2_array (1 to 7); 		
+signal user_int_to_sys_pcie     	      : R_int_to_ezdma2;									
+signal user_int_from_sys_pcie	         : R_int_from_ezdma2;         																					 						
+signal user_cfg_from_sys_pcie          : R_cfg_from_ezdma2;									
+---------------------------------------
+signal sys_pcie_amc_tx_p               : std_logic_vector(0 to 3);
+signal sys_pcie_amc_tx_n               : std_logic_vector(0 to 3);
+signal sys_pcie_amc_rx_p               : std_logic_vector(0 to 3);
+signal sys_pcie_amc_rx_n               : std_logic_vector(0 to 3);
+---------------------------------------
+signal user_sram_control			      : userSramControlR_array(1 to 2);
+signal user_sram_addr				      : array_2x21bit;
+signal user_sram_wdata				      : array_2x36bit;
+signal user_sram_rdata				      : array_2x36bit;
+---------------------------------------
+signal user_wb_miso					      : wb_miso_bus_array(0 to number_of_wb_slaves-1);
+signal user_wb_mosi					      : wb_mosi_bus_array(0 to number_of_wb_slaves-1);
+---------------------------------------
+signal user_ipb_miso					      : ipb_rbus_array	(0 to number_of_ipb_slaves-1);
+signal user_ipb_mosi					      : ipb_wbus_array	(0 to number_of_ipb_slaves-1);
+	
+signal amc_slot								: std_logic_vector(3 downto 0);	
 
-    signal user_cdce_sync_done					: std_logic;
-        
+signal user_cdce_sync_done					: std_logic;
+	
 --@@@@@@@@@@@@@@@@@@@@@@--   
 --@@@@@@@@@@@@@@@@@@@@@@--   
 --@@@@@@@@@@@@@@@@@@@@@@--

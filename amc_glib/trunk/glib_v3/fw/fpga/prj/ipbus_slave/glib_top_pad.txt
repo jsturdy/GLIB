@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Jun 12 11:54:01 2014
+Tue Jul 01 15:42:22 2014
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -328,8 +328,8 @@ Pinout by Pin Number:
 |AH34      |                     |IOBS     |IO_L4N_VREF_12            |UNUSED   |           |12            |          |         |           |         |         |          |           |                |
 |AJ1       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AJ2       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
-|AJ3       |sfp_rx_p<4>          |IPAD     |MGTRXP3_112               |         |           |              |          |         |           |         |         |          |NO         |                |
-|AJ4       |sfp_rx_n<4>          |IPAD     |MGTRXN3_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AJ3       |                     |IPAD     |MGTRXP3_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|AJ4       |                     |IPAD     |MGTRXN3_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
 |AJ5       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AJ6       |                     |         |MGTAVCC_S                 |         |           |              |          |         |           |         |         |          |           |                |
 |AJ7       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
@@ -360,8 +360,8 @@ Pinout by Pin Number:
 |AJ32      |                     |IOBS     |IO_L12N_VRP_12            |UNUSED   |           |12            |          |         |           |         |         |          |           |                |
 |AJ33      |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AJ34      |amc_port_tx_p<5>     |IOB      |IO_L4P_12                 |OUTPUT   |LVCMOS25*  |12            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|AK1       |sfp_tx_p<4>          |OPAD     |MGTTXP3_112               |         |           |              |          |         |           |         |         |          |NO         |                |
-|AK2       |sfp_tx_n<4>          |OPAD     |MGTTXN3_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AK1       |                     |OPAD     |MGTTXP3_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|AK2       |                     |OPAD     |MGTTXN3_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
 |AK3       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AK4       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AK5       |                     |IPAD     |MGTREFCLK0N_112           |UNUSED   |           |              |          |         |           |         |         |          |           |                |

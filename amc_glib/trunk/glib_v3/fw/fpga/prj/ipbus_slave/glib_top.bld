@@ -12,14 +12,16 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo -sd
 ../../src/system/cdce/cdce_phase_mon_v2/pll -sd ../../src/system/pll -nt
 timestamp -uc
-C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syste
-m_clk.ucf -uc
-C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syste
-m.ucf -uc src/gtx.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
+C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/s
+ystem.ucf -uc
+C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/s
+ystem_clk.ucf -uc src/gtx.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
 
 Reading NGO file
-"C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/gli
-b_top.ngc" ...
+"C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave
+/glib_top.ngc" ...
+Loading design module "ipcore_dir/tracking_data_fifo.ngc"...
+Loading design module "ipcore_dir/chipscope_vio.ngc"...
 Loading design module "ipcore_dir/chipscope_ila.ngc"...
 Loading design module "ipcore_dir/chipscope_icon.ngc"...
 Loading design module
@@ -28,9 +30,13 @@ Loading design module
 "../../src/system/ethernet/ipcore_dir/sgmii/v6_emac_v2_3_sgmii.ngc"...
 Loading design module
 "../../src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ngc"...
+INFO:NgdBuild:1317 - Using core chipscope_vio_v1 requires a ChipScopePro
+   license.  The following blocks are instances of core chipscope_vio_v1:
+	/glib_top/glib_top
+	/glib_top/usr/chipscope_vio_inst
+
 INFO:NgdBuild:1317 - Using core chipscope_ila_v1 requires a ChipScopePro
    license.  The following blocks are instances of core chipscope_ila_v1:
-	/glib_top/glib_top
 	/glib_top/usr/chipscope_ila_inst
 
 -----------------------------------------------
@@ -47,11 +53,11 @@ Gathering constraint information from source properties...
 Done.
 
 Annotating constraints to design from ucf file
-"C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syst
-em_clk.ucf" ...
+"C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/
+system.ucf" ...
 Annotating constraints to design from ucf file
-"C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syst
-em.ucf" ...
+"C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/
+system_clk.ucf" ...
 Annotating constraints to design from ucf file "src/gtx.ucf" ...
 WARNING:NgdBuild - The value of SIM_DEVICE on instance
    'system/amc_p0_en.amc_p0_eth/clkbuf' of type BUFR has been changed from
@@ -128,6 +134,21 @@ INFO:ConstraintSystem:178 - TNM 'xpoint1_clk1_n', used in period specification
 Done...
 
 Checking expanded design ...
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
+   inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1" of type "FIFO36E1".  This
+   attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
+   inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1" of type "FIFO36E1".  This
+   attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
+   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
+   inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1" of type "FIFO36E1".  This
+   attribute will be ignored.
+WARNING:NgdBuild:443 - SFF primitive
+   'usr/chipscope_vio_inst/U0/I_VIO/reset_f_edge/I_H2L.U_DOUT' has unconnected
+   output pin
 WARNING:NgdBuild:452 - logical net 'amc_port_tx_out_17_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'amc_port_tx_out_18_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'amc_port_tx_out_19_OBUF' has no driver
@@ -146,8 +167,10 @@ WARNING:NgdBuild:452 - logical net 'amc_port_rx_de_19_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'amc_port_rx_de_20_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'sfp_tx_p_2_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'sfp_tx_p_3_OBUF' has no driver
+WARNING:NgdBuild:452 - logical net 'sfp_tx_p_4_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'sfp_tx_n_2_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'sfp_tx_n_3_OBUF' has no driver
+WARNING:NgdBuild:452 - logical net 'sfp_tx_n_4_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_tx_p_1_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_tx_p_2_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_tx_p_3_OBUF' has no driver
@@ -652,132 +675,13 @@ WARNING:NgdBuild:452 - logical net 'N805' has no driver
 WARNING:NgdBuild:452 - logical net 'N806' has no driver
 WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<31>' has no driver
 WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<30>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<29>' has no driver
 WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<28>' has no driver
 WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<27>' has no driver
 WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<26>' has no driver
 WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<25>' has no driver
 WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<24>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<23>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<22>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<21>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<20>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<19>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<18>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<17>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<16>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<15>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<14>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<13>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<12>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<11>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<10>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<9>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<8>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<7>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<6>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<5>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<4>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<3>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<2>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<1>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<0>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<31>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<30>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<29>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<28>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<27>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<26>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<25>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<24>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<23>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<22>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<21>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<20>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<19>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<18>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<17>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<16>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<15>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<14>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<13>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<12>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<11>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<10>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<9>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<8>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<7>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<6>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<5>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<4>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<3>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<2>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<1>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_rx_data<0>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<31>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<30>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<29>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<28>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<27>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<26>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<25>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<24>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<23>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<22>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<21>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<20>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<19>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<18>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<17>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<16>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<15>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<14>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<13>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<12>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<11>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<10>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<9>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<8>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<7>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<6>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<5>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<4>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<3>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<2>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<1>' has no
-   driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_optohybrid_inst/rx_data<0>' has no
-   driver
+WARNING:NgdBuild:452 - logical net 'usr/ipb_vfat2_tx_data<31>' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/ipb_vfat2_tx_data<30>' has no driver
 WARNING:NgdBuild:452 - logical net 'system/user_cdce_sync_done_o' has no driver
 WARNING:NgdBuild:452 - logical net 'system/ipb_to_slaves[4]_ipb_strobe' has no
    driver
@@ -857,6 +761,8 @@ WARNING:NgdBuild:452 - logical net 'system/regs_eeprom<15><3>' has no driver
 WARNING:NgdBuild:452 - logical net 'system/regs_eeprom<15><2>' has no driver
 WARNING:NgdBuild:452 - logical net 'system/regs_eeprom<15><1>' has no driver
 WARNING:NgdBuild:452 - logical net 'system/regs_eeprom<15><0>' has no driver
+WARNING:NgdBuild:452 - logical net 'system/sram2_if/BIST_SEED_I<1>' has no
+   driver
 WARNING:NgdBuild:452 - logical net 'system/sram2_if/BIST_TEST_O_errCounter<20>'
    has no driver
 WARNING:NgdBuild:452 - logical net 'system/sram2_if/BIST_TEST_O_errCounter<19>'
@@ -885,6 +791,8 @@ WARNING:NgdBuild:452 - logical net 'system/sram2_if/BIST_TEST_O_errCounter<8>'
    has no driver
 WARNING:NgdBuild:452 - logical net 'system/sram2_if/BIST_TEST_O_startErrInj' has
    no driver
+WARNING:NgdBuild:452 - logical net 'system/sram1_if/BIST_SEED_I<0>' has no
+   driver
 WARNING:NgdBuild:452 - logical net 'system/sram1_if/BIST_TEST_O_errCounter<20>'
    has no driver
 WARNING:NgdBuild:452 - logical net 'system/sram1_if/BIST_TEST_O_errCounter<19>'
@@ -1767,8 +1675,6 @@ WARNING:NgdBuild:452 - logical net
    'system/amc_p0_en.amc_p0_ipb_ctrl/trans/cfg_vector_out<0>' has no driver
 WARNING:NgdBuild:452 - logical net 'system/rst/onehz' has no driver
 WARNING:NgdBuild:452 - logical net 'system/mst.i2c_m/scl_i<0>' has no driver
-WARNING:NgdBuild:452 - logical net 'system/mst.i2c_m/scl_o<1>' has no driver
-WARNING:NgdBuild:452 - logical net 'system/mst.i2c_m/sda_o<1>' has no driver
 WARNING:NgdBuild:452 - logical net 'system/mst.i2c_m/completed' has no driver
 
 Partition Implementation Status
@@ -1780,12 +1686,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 1138
+  Number of warnings: 1057
 
-Total memory usage is 299600 kilobytes
+Total memory usage is 308676 kilobytes
 
 Writing NGD file "glib_top.ngd" ...
-Total REAL time to NGDBUILD completion:  25 sec
-Total CPU time to NGDBUILD completion:   23 sec
+Total REAL time to NGDBUILD completion:  24 sec
+Total CPU time to NGDBUILD completion:   24 sec
 
 Writing NGDBUILD log file "glib_top.bld"...

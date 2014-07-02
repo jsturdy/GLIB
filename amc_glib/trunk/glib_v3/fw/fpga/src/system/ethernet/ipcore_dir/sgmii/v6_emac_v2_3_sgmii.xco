@@ -1,7 +1,7 @@
 ##############################################################
 #
-# Xilinx Core Generator version 14.7
-# Date: Fri May 09 07:00:11 2014
+# Xilinx Core Generator version 14.5
+# Date: Mon May 20 13:15:12 2013
 #
 ##############################################################
 #
@@ -32,7 +32,7 @@ SET package = ff1156
 SET removerpms = false
 SET simulationfiles = Behavioral
 SET speedgrade = -1
-SET verilogsim = false
+SET verilogsim = true
 SET vhdlsim = true
 # END Project Options
 # BEGIN Select
@@ -89,7 +89,7 @@ CSET unicast_pause_mac_address_5=EE
 CSET unicast_pause_mac_address_6=FF
 # END Parameters
 # BEGIN Extra information
-MISC pkg_timestamp=2013-10-13T18:46:09Z
+MISC pkg_timestamp=2013-03-27T03:45:13Z
 # END Extra information
 GENERATE
-# CRC: cca89ddf
+# CRC: eb2a4247

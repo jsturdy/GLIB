@@ -1,7 +1,7 @@
 ##############################################################
 #
-# Xilinx Core Generator version 14.7
-# Date: Tue May 13 08:28:43 2014
+# Xilinx Core Generator version 13.2
+# Date: Wed Dec 19 22:54:07 2012
 #
 ##############################################################
 #
@@ -12,7 +12,7 @@
 #
 ##############################################################
 #
-#  Generated from component: xilinx.com:ip:clk_wiz:3.6
+#  Generated from component: xilinx.com:ip:clk_wiz:3.2
 #
 ##############################################################
 #
@@ -36,7 +36,7 @@ SET verilogsim = false
 SET vhdlsim = true
 # END Project Options
 # BEGIN Select
-SELECT Clocking_Wizard xilinx.com:ip:clk_wiz:3.6
+SELECT Clocking_Wizard xilinx.com:ip:clk_wiz:3.2
 # END Select
 # BEGIN Parameters
 CSET calc_done=DONE
@@ -239,8 +239,6 @@ CSET secondary_in_freq=100.000
 CSET secondary_in_jitter=0.010
 CSET secondary_port=CLK_IN2
 CSET secondary_source=Single_ended_clock_capable_pin
-CSET ss_mod_freq=250
-CSET ss_mode=CENTER_HIGH
 CSET status_port=STATUS
 CSET summary_strings=empty
 CSET use_clk_valid=false
@@ -259,11 +257,10 @@ CSET use_phase_alignment=true
 CSET use_power_down=false
 CSET use_reset=true
 CSET use_spread_spectrum=false
-CSET use_spread_spectrum_1=false
 CSET use_status=false
 # END Parameters
 # BEGIN Extra information
-MISC pkg_timestamp=2012-05-10T12:44:55Z
+MISC pkg_timestamp=2011-03-09T16:42:33.000Z
 # END Extra information
 GENERATE
-# CRC:  9284a5a
+# CRC: b189b356

@@ -13,9 +13,9 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 ../../src/system/cdce/cdce_phase_mon_v2/pll -sd ../../src/system/pll -nt
 timestamp -uc
 C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/s
-ystem.ucf -uc
+ystem_clk.ucf -uc
 C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/s
-ystem_clk.ucf -uc src/gtx.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
+ystem.ucf -uc src/gtx.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
 
 Reading NGO file
 "C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave
@@ -54,10 +54,10 @@ Done.
 
 Annotating constraints to design from ucf file
 "C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/
-system.ucf" ...
+system_clk.ucf" ...
 Annotating constraints to design from ucf file
 "C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/
-system_clk.ucf" ...
+system.ucf" ...
 Annotating constraints to design from ucf file "src/gtx.ucf" ...
 WARNING:NgdBuild - The value of SIM_DEVICE on instance
    'system/amc_p0_en.amc_p0_eth/clkbuf' of type BUFR has been changed from
@@ -1688,7 +1688,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 1057
 
-Total memory usage is 308676 kilobytes
+Total memory usage is 310660 kilobytes
 
 Writing NGD file "glib_top.ngd" ...
 Total REAL time to NGDBUILD completion:  24 sec

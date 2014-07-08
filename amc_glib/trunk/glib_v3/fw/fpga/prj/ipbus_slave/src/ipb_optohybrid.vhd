@@ -32,15 +32,16 @@ end ipb_optohybrid;
 architecture rtl of ipb_optohybrid is
 
     -- IPBus error signals
-	signal ipb_error_tx : std_logic := '0';
-	signal ipb_error_rx : std_logic := '0';
+	signal ipb_error_tx     : std_logic := '0';
+	signal ipb_error_rx     : std_logic := '0';
+	signal ipb_error_delay  : std_logic := '0';
     
     -- IPBus acknowledgment signals
-	signal ipb_ack      : std_logic := '0';
+	signal ipb_ack          : std_logic_vector(127 downto 0) := (others => '0');
     
     -- IPBus return data
-	signal ipb_data     : std_logic_vector(31 downto 0) := (others => '0');  
-
+	signal ipb_data         : std_logic_vector(31 downto 0) := (others => '0');  
+    
 begin	
 
     process(ipb_clk_i)
@@ -71,12 +72,16 @@ begin
                 -- IPBus signals
                 ipb_error_tx <= '0';
                 ipb_error_rx <= '0';
-                ipb_ack <= '0';
+                ipb_error_delay <= '0';
+                ipb_ack <= (others => '0');
                 
                 last_ipb_strobe := '0';
                 last_gtx_strobe := '0';
                 
             else
+            
+                -- Shift the acknowledgments
+                ipb_ack(127 downto 1) <= ipb_ack(126 downto 0);
             
                 ------------------
                 -- IPBus -> GTX --
@@ -85,13 +90,27 @@ begin
                 -- Strobe awaiting
                 if (last_ipb_strobe = '0' and ipb_mosi_i.ipb_strobe = '1') then
 
+                    if (ipb_mosi_i.ipb_write = '1') then
 
-                    -- Unused - Read/Write - Chip select
-                    tx_rd_chip_select := "00" & (not ipb_mosi_i.ipb_write) & "00000";
+                        -- Unused - Read/Write - Chip select
+                        tx_rd_chip_select := "00" & '0' & "00000";
+                        
+                        -- Data
+                        tx_data := ipb_mosi_i.ipb_wdata(7 downto 0); 
+                        
+                    else
+
+                        -- Unused - Read/Write - Chip select
+                        tx_rd_chip_select := "00" & '1' & "00000";
+                        
+                        -- Data
+                        tx_data := "00000000";
+
+                    end if;
+                    
                     -- Register select                        
                     tx_register_select := ipb_mosi_i.ipb_addr(7 downto 0);
-                    -- Data
-                    tx_data := ipb_mosi_i.ipb_wdata(7 downto 0); 
+                    
                     -- CRC
                     tx_crc := ("0001" & def_gtx_optohybrid_request) xor tx_rd_chip_select xor tx_register_select xor tx_data;
                     
@@ -103,6 +122,7 @@ begin
 
                 else
                     
+                    -- Reset the strobe
                     tx_en_o <= '0';
                     
                 end if;   
@@ -116,6 +136,7 @@ begin
 
                 else
                 
+                    -- Reset the error flag
                     ipb_error_tx <= '0';
                 
                 end if;
@@ -149,15 +170,15 @@ begin
                         ipb_error_rx <= '0';
 
                         -- Set IPBus acknowledgment
-                        ipb_ack <= '1';
+                       ipb_ack(0) <= '1';
                         
                     else
                     
                         -- Set IPBus error
                         ipb_error_rx <= '1';
-
+                        
                         -- Reset IPBus acknowledgment
-                        ipb_ack <= '0';
+                       ipb_ack(0) <= '0';
                                     
                     end if;
                     
@@ -165,12 +186,12 @@ begin
                 
                     -- Set IPBus error
                     ipb_error_rx <= '0';
-
+                    
                     -- Reset IPBus acknowledgment
-                    ipb_ack <= '0';                        
+                   ipb_ack(0) <= '0';
                 
                 end if;
-                
+                 
                 last_ipb_strobe := ipb_mosi_i.ipb_strobe;
                 last_gtx_strobe := rx_en_i;
                 
@@ -180,8 +201,8 @@ begin
         
     end process;
     
-    ipb_miso_o.ipb_err <= ipb_mosi_i.ipb_strobe and (ipb_error_tx or ipb_error_rx);
-    ipb_miso_o.ipb_ack <= ipb_mosi_i.ipb_strobe and ipb_ack;    
+    ipb_miso_o.ipb_err <= ipb_mosi_i.ipb_strobe and (ipb_error_tx or ipb_error_rx or ipb_error_delay);
+    ipb_miso_o.ipb_ack <= ipb_mosi_i.ipb_strobe and ipb_ack(127);    
     ipb_miso_o.ipb_rdata <= ipb_data;
                             
 end rtl;

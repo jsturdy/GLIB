@@ -362,7 +362,7 @@ begin
     );        
     
 --    ipb_vfat2_rx_en <= ipb_vfat2_tx_en;
---    ipb_vfat2_rx_data <= ipb_vfat2_tx_data;
+--    ipb_vfat2_rx_data <= ipb_vfat2_tx_data xor ("00010000" & x"000000");
 
     ------------------------
     -- TX & RX Muxes
@@ -399,8 +399,8 @@ begin
         rx_data_i           => rx_data
     );   
     
- --   rx_kchar <= tx_kchar;    
- --   rx_data <= tx_data;
+--   rx_kchar <= tx_kchar;    
+--   rx_data <= tx_data;
 
     ------------------------
     -- Optocal Link

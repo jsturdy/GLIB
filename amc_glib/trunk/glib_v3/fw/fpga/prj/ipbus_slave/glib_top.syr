@@ -3743,18 +3743,18 @@ Unit <ipb_optohybrid_start> synthesized.
 
 Synthesizing Unit <xclock_en>.
     Related source file is "C:\Users\tlenzi\Desktop\GLIB_NEW\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\xclock_en.vhd".
-    Found 3-bit register for signal <cnt_in>.
+    Found 2-bit register for signal <cnt_in>.
     Found 1-bit register for signal <en_b_o>.
-    Found 3-bit register for signal <cnt_out>.
+    Found 2-bit register for signal <cnt_out>.
     Found 1-bit register for signal <failed_o>.
-    Found 3-bit adder for signal <cnt_in[2]_GND_514_o_add_1_OUT> created at line 48.
-    Found 3-bit adder for signal <cnt_out[2]_GND_514_o_add_7_OUT> created at line 93.
-    Found 3-bit comparator equal for signal <cnt_out[2]_cnt_in[2]_equal_1_o> created at line 42
+    Found 2-bit adder for signal <cnt_in[1]_GND_514_o_add_2_OUT> created at line 51.
+    Found 2-bit adder for signal <cnt_out[1]_GND_514_o_add_10_OUT> created at line 100.
+    Found 2-bit comparator equal for signal <cnt_out[1]_cnt_in[1]_equal_1_o> created at line 42
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred   8 D-type flip-flop(s).
+	inferred   6 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred   1 Multiplexer(s).
+	inferred   3 Multiplexer(s).
 Unit <xclock_en> synthesized.
 
 Synthesizing Unit <ipb_optohybrid_wrapper>.
@@ -3769,35 +3769,36 @@ Synthesizing Unit <ipb_optohybrid>.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_wdata<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <ipb_error_rx>.
-    Found 1-bit register for signal <ipb_ack>.
+    Found 1-bit register for signal <ipb_error_delay>.
+    Found 128-bit register for signal <ipb_ack>.
     Found 1-bit register for signal <last_ipb_strobe>.
     Found 1-bit register for signal <last_gtx_strobe>.
     Found 32-bit register for signal <tx_data_o>.
     Found 1-bit register for signal <tx_en_o>.
     Found 32-bit register for signal <ipb_data>.
     Found 1-bit register for signal <ipb_error_tx>.
-    Found 8-bit comparator equal for signal <rx_data_i[7]_GND_516_o_equal_8_o> created at line 140
+    Found 8-bit comparator equal for signal <rx_data_i[7]_GND_516_o_equal_10_o> created at line 161
     Summary:
-	inferred  70 D-type flip-flop(s).
+	inferred 198 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred   2 Multiplexer(s).
+	inferred   3 Multiplexer(s).
 Unit <ipb_optohybrid> synthesized.
 
 Synthesizing Unit <xclock>.
     Related source file is "C:\Users\tlenzi\Desktop\GLIB_NEW\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\xclock.vhd".
-    Found 3-bit register for signal <cnt_in>.
+    Found 2-bit register for signal <cnt_in>.
     Found 32-bit register for signal <data_b_o>.
     Found 1-bit register for signal <en_b_o>.
-    Found 3-bit register for signal <cnt_out>.
+    Found 2-bit register for signal <cnt_out>.
     Found 1-bit register for signal <failed_o>.
-    Found 3-bit adder for signal <cnt_in[2]_GND_517_o_add_1_OUT> created at line 50.
-    Found 3-bit adder for signal <cnt_out[2]_GND_517_o_add_11_OUT> created at line 98.
-    Found 3-bit comparator equal for signal <cnt_out[2]_cnt_in[2]_equal_1_o> created at line 44
+    Found 2-bit adder for signal <cnt_in[1]_GND_517_o_add_2_OUT> created at line 53.
+    Found 2-bit adder for signal <cnt_out[1]_GND_517_o_add_14_OUT> created at line 105.
+    Found 2-bit comparator equal for signal <cnt_out[1]_cnt_in[1]_equal_1_o> created at line 44
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred  40 D-type flip-flop(s).
+	inferred  38 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred   1 Multiplexer(s).
+	inferred   3 Multiplexer(s).
 Unit <xclock> synthesized.
 
 Synthesizing Unit <ipb_vfat2_wrapper>.
@@ -3812,18 +3813,18 @@ Synthesizing Unit <ipb_vfat2>.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr<31:13>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_wdata<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <ipb_error_rx>.
-    Found 1-bit register for signal <ipb_ack>.
+    Found 128-bit register for signal <ipb_ack>.
     Found 1-bit register for signal <last_ipb_strobe>.
     Found 1-bit register for signal <last_gtx_strobe>.
     Found 32-bit register for signal <tx_data_o>.
     Found 1-bit register for signal <tx_en_o>.
     Found 32-bit register for signal <ipb_data>.
     Found 1-bit register for signal <ipb_error_tx>.
-    Found 8-bit comparator equal for signal <rx_data_i[7]_GND_519_o_equal_8_o> created at line 139
+    Found 8-bit comparator equal for signal <rx_data_i[7]_GND_519_o_equal_9_o> created at line 157
     Summary:
-	inferred  70 D-type flip-flop(s).
+	inferred 197 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred   2 Multiplexer(s).
+	inferred   3 Multiplexer(s).
 Unit <ipb_vfat2> synthesized.
 
 Synthesizing Unit <ipb_tracking_wrapper>.
@@ -3971,13 +3972,13 @@ Macro Statistics
  13-bit adder                                          : 6
  16-bit adder                                          : 8
  17-bit subtractor                                     : 2
- 2-bit adder                                           : 9
+ 2-bit adder                                           : 19
  20-bit subtractor                                     : 1
  21-bit adder                                          : 4
  21-bit subtractor                                     : 1
  24-bit adder                                          : 2
  28-bit adder                                          : 5
- 3-bit adder                                           : 13
+ 3-bit adder                                           : 3
  3-bit subtractor                                      : 1
  31-bit adder                                          : 2
  31-bit subtractor                                     : 1
@@ -3994,22 +3995,22 @@ Macro Statistics
  8-bit subtractor                                      : 2
  9-bit adder                                           : 8
  9-bit subtractor                                      : 1
-# Registers                                            : 1475
- 1-bit register                                        : 898
+# Registers                                            : 1476
+ 1-bit register                                        : 897
  10-bit register                                       : 13
  11-bit register                                       : 4
  112-bit register                                      : 2
  12-bit register                                       : 8
- 128-bit register                                      : 16
+ 128-bit register                                      : 18
  13-bit register                                       : 46
  16-bit register                                       : 87
  17-bit register                                       : 2
  192-bit register                                      : 2
- 2-bit register                                        : 30
+ 2-bit register                                        : 40
  21-bit register                                       : 17
  24-bit register                                       : 6
  28-bit register                                       : 5
- 3-bit register                                        : 35
+ 3-bit register                                        : 25
  31-bit register                                       : 3
  32-bit register                                       : 71
  336-bit register                                      : 2
@@ -4031,9 +4032,9 @@ Macro Statistics
  13-bit comparator equal                               : 2
  16-bit comparator equal                               : 34
  16-bit comparator greater                             : 2
+ 2-bit comparator equal                                : 5
  2-bit comparator greater                              : 2
  21-bit comparator greater                             : 2
- 3-bit comparator equal                                : 5
  36-bit comparator equal                               : 2
  4-bit comparator greater                              : 4
  6-bit comparator equal                                : 2
@@ -4041,7 +4042,7 @@ Macro Statistics
  8-bit comparator equal                                : 10
  8-bit comparator greater                              : 4
  8-bit comparator not equal                            : 14
-# Multiplexers                                         : 2683
+# Multiplexers                                         : 2695
  1-bit 16-to-1 multiplexer                             : 12
  1-bit 2-to-1 multiplexer                              : 1777
  1-bit 3-to-1 multiplexer                              : 18
@@ -4057,7 +4058,7 @@ Macro Statistics
  13-bit 2-to-1 multiplexer                             : 60
  16-bit 2-to-1 multiplexer                             : 83
  16-bit 7-to-1 multiplexer                             : 1
- 2-bit 2-to-1 multiplexer                              : 37
+ 2-bit 2-to-1 multiplexer                              : 47
  2-bit 3-to-1 multiplexer                              : 2
  2-bit 4-to-1 multiplexer                              : 1
  20-bit 2-to-1 multiplexer                             : 2
@@ -4086,7 +4087,7 @@ Macro Statistics
  6-bit 2-to-1 multiplexer                              : 30
  7-bit 2-to-1 multiplexer                              : 37
  8-bit 16-to-1 multiplexer                             : 2
- 8-bit 2-to-1 multiplexer                              : 177
+ 8-bit 2-to-1 multiplexer                              : 179
  8-bit 4-to-1 multiplexer                              : 2
  9-bit 2-to-1 multiplexer                              : 24
 # Tristates                                            : 32
@@ -4160,8 +4161,8 @@ INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFF
 INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
 INFO:Xst:2261 - The FF/Latch <tx_data_o_24> in Unit <ipb_optohybrid_inst> is equivalent to the following 6 FFs/Latches, which will be removed : <tx_data_o_25> <tx_data_o_26> <tx_data_o_27> <tx_data_o_28> <tx_data_o_30> <tx_data_o_31> 
 INFO:Xst:2261 - The FF/Latch <ipb_data_16> in Unit <ipb_optohybrid_inst> is equivalent to the following 12 FFs/Latches, which will be removed : <ipb_data_17> <ipb_data_18> <ipb_data_19> <ipb_data_20> <ipb_data_21> <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
-INFO:Xst:2261 - The FF/Latch <tx_data_o_30> in Unit <ipb_vfat2_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_o_31> 
 INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_vfat2_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
+INFO:Xst:2261 - The FF/Latch <tx_data_o_30> in Unit <ipb_vfat2_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_o_31> 
 INFO:Xst:2261 - The FF/Latch <testModeFsm_process.state> in Unit <sramInterfaceIoControl> is equivalent to the following FF/Latch, which will be removed : <bistModeEnable_from_fsm> 
 INFO:Xst:2261 - The FF/Latch <ERRORCOUNTER_O_6> in Unit <bist> is equivalent to the following FF/Latch, which will be removed : <main_process.errorCounter_6> 
 INFO:Xst:2261 - The FF/Latch <ERRORCOUNTER_O_7> in Unit <bist> is equivalent to the following FF/Latch, which will be removed : <main_process.errorCounter_7> 
@@ -4264,7 +4265,6 @@ INFO:Xst:2261 - The FF/Latch <arp_end_addr_1> in Unit <ARP> is equivalent to the
 INFO:Xst:2261 - The FF/Latch <ip_pkt.msk_data_0> in Unit <rx_packet_parser> is equivalent to the following 6 FFs/Latches, which will be removed : <ip_pkt.msk_data_1> <ip_pkt.msk_data_2> <ip_pkt.msk_data_3> <ip_pkt.msk_data_4> <ip_pkt.msk_data_5> <ip_pkt.msk_data_7> 
 INFO:Xst:2261 - The FF/Latch <status_end_addr_1> in Unit <status> is equivalent to the following 8 FFs/Latches, which will be removed : <status_end_addr_2> <status_end_addr_4> <status_end_addr_7> <status_end_addr_8> <status_end_addr_9> <status_end_addr_10> <status_end_addr_11> <status_end_addr_12> 
 INFO:Xst:2261 - The FF/Latch <status_end_addr_0> in Unit <status> is equivalent to the following 3 FFs/Latches, which will be removed : <status_end_addr_3> <status_end_addr_5> <status_end_addr_6> 
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_22> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_21> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_20> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_19> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
@@ -4286,6 +4286,7 @@ WARNING:Xst:1710 - FF/Latch <arp_end_addr_1> (without init value) has a constant
 WARNING:Xst:1710 - FF/Latch <addr_to_set_0> (without init value) has a constant value of 0 in block <ARP>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rarp_end_addr_1> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_39> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_38> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <status_end_addr_1> (without init value) has a constant value of 0 in block <status>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_pkt.msk_data_0> (without init value) has a constant value of 1 in block <rx_packet_parser>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <arp_end_addr_1> (without init value) has a constant value of 0 in block <ARP>. This FF/Latch will be trimmed during the optimization process.
@@ -4308,7 +4309,7 @@ WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_26> (without init value) has
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_25> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_24> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_23> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_15> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_22> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_14> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_13> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_12> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
@@ -4330,7 +4331,7 @@ WARNING:Xst:1710 - FF/Latch <data_b_o_25> (without init value) has a constant va
 WARNING:Xst:1710 - FF/Latch <data_b_o_24> (without init value) has a constant value of 0 in block <xclock_tx>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <tx_data_o_24> (without init value) has a constant value of 0 in block <ipb_optohybrid_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <ipb_data_16> has a constant value of 0 in block <ipb_optohybrid_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_38> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ipb_error_delay> has a constant value of 0 in block <ipb_optohybrid_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_37> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_36> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_35> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
@@ -4353,6 +4354,7 @@ WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_19> (without init value) has
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_18> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_17> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_16> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_15> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <address_block.addr_int_11> of sequential type is unconnected in block <payload>.
 WARNING:Xst:2677 - Node <address_block.addr_int_12> of sequential type is unconnected in block <payload>.
 WARNING:Xst:2677 - Node <addra_11> of sequential type is unconnected in block <rx_ram_mux>.
@@ -4720,12 +4722,11 @@ Macro Statistics
  12-bit up counter                                     : 4
  16-bit up counter                                     : 6
  17-bit down counter                                   : 2
- 2-bit up counter                                      : 5
+ 2-bit up counter                                      : 15
  21-bit down counter                                   : 1
  21-bit up counter                                     : 4
  24-bit up counter                                     : 2
  28-bit up counter                                     : 5
- 3-bit up counter                                      : 10
  32-bit up counter                                     : 2
  4-bit down counter                                    : 1
  4-bit up counter                                      : 13
@@ -4733,17 +4734,17 @@ Macro Statistics
  6-bit up counter                                      : 3
  8-bit down counter                                    : 2
  8-bit up counter                                      : 4
-# Registers                                            : 11536
- Flip-Flops                                            : 11536
+# Registers                                            : 11791
+ Flip-Flops                                            : 11791
 # Comparators                                          : 87
  10-bit comparator equal                               : 2
  10-bit comparator greater                             : 1
  13-bit comparator equal                               : 2
  16-bit comparator equal                               : 34
  16-bit comparator greater                             : 2
+ 2-bit comparator equal                                : 5
  2-bit comparator greater                              : 2
  21-bit comparator greater                             : 2
- 3-bit comparator equal                                : 5
  36-bit comparator equal                               : 2
  4-bit comparator greater                              : 4
  6-bit comparator equal                                : 2
@@ -4751,9 +4752,9 @@ Macro Statistics
  8-bit comparator equal                                : 10
  8-bit comparator greater                              : 4
  8-bit comparator not equal                            : 14
-# Multiplexers                                         : 3483
+# Multiplexers                                         : 3490
  1-bit 16-to-1 multiplexer                             : 20
- 1-bit 2-to-1 multiplexer                              : 2344
+ 1-bit 2-to-1 multiplexer                              : 2349
  1-bit 3-to-1 multiplexer                              : 18
  1-bit 32-to-1 multiplexer                             : 32
  1-bit 4-to-1 multiplexer                              : 272
@@ -4794,7 +4795,7 @@ Macro Statistics
  6-bit 2-to-1 multiplexer                              : 28
  7-bit 2-to-1 multiplexer                              : 37
  8-bit 16-to-1 multiplexer                             : 1
- 8-bit 2-to-1 multiplexer                              : 161
+ 8-bit 2-to-1 multiplexer                              : 163
  8-bit 4-to-1 multiplexer                              : 2
  9-bit 2-to-1 multiplexer                              : 20
 # FSMs                                                 : 28
@@ -4827,6 +4828,7 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_19> has a 
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_18> has a constant value of 0 in block <ipb_optohybrid>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_17> has a constant value of 0 in block <ipb_optohybrid>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_16> has a constant value of 0 in block <ipb_optohybrid>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_error_delay> has a constant value of 0 in block <ipb_optohybrid>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_22> has a constant value of 0 in block <ipb_vfat2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_23> has a constant value of 0 in block <ipb_vfat2>. This FF/Latch will be trimmed during the optimization process.
@@ -6733,7 +6735,7 @@ Mapping all equations...
 WARNING:Xst:1710 - FF/Latch <history_block.async_payload_3> (without init value) has a constant value of 1 in block <status_buffer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <history_block.async_payload_3> (without init value) has a constant value of 1 in block <status_buffer>. This FF/Latch will be trimmed during the optimization process.
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block glib_top, actual ratio is 2.
+Found area constraint ratio of 100 (+ 5) on block glib_top, actual ratio is 3.
 
 Final Macro Processing ...
 
@@ -6750,6 +6752,14 @@ Processing Unit <gtx0_double_reset_i> :
 INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <testdone_f_0> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
 INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <testdone_f_0> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
 Unit <gtx0_double_reset_i> processed.
+
+Processing Unit <ipb_optohybrid_inst> :
+INFO:Xst:741 - HDL ADVISOR - A 127-bit shift register was found for signal <ipb_ack_127> and currently occupies 127 logic cells (63 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <ipb_optohybrid_inst> processed.
+
+Processing Unit <ipb_vfat2_inst> :
+INFO:Xst:741 - HDL ADVISOR - A 127-bit shift register was found for signal <ipb_ack_127> and currently occupies 127 logic cells (63 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <ipb_vfat2_inst> processed.
 
 Processing Unit <rst> :
 	Found 2-bit shift register for signal <nuke_d2>.
@@ -6768,8 +6778,8 @@ Unit <u2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 10567
- Flip-Flops                                            : 10567
+# Registers                                            : 10811
+ Flip-Flops                                            : 10811
 # Shift Registers                                      : 4
  2-bit shift register                                  : 3
  5-bit shift register                                  : 1
@@ -6795,15 +6805,15 @@ Top Level Output File Name         : glib_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 14352
+# BELS                             : 14353
 #      GND                         : 107
 #      INV                         : 278
 #      LUT1                        : 432
-#      LUT2                        : 2423
-#      LUT3                        : 2075
-#      LUT4                        : 1830
-#      LUT5                        : 1564
-#      LUT6                        : 3217
+#      LUT2                        : 2425
+#      LUT3                        : 2063
+#      LUT4                        : 1840
+#      LUT5                        : 1571
+#      LUT6                        : 3211
 #      MUXCY                       : 1108
 #      MUXCY_L                     : 150
 #      MUXF5                       : 2
@@ -6812,15 +6822,15 @@ Primitive and Black Box Usage:
 #      MUXF8                       : 20
 #      VCC                         : 92
 #      XORCY                       : 950
-# FlipFlops/Latches                : 11904
-#      FD                          : 2476
+# FlipFlops/Latches                : 12148
+#      FD                          : 2474
 #      FDC                         : 1138
 #      FDCE                        : 1102
 #      FDE                         : 3513
 #      FDP                         : 317
 #      FDPE                        : 47
-#      FDR                         : 815
-#      FDRE                        : 2285
+#      FDR                         : 1071
+#      FDRE                        : 2275
 #      FDS                         : 82
 #      FDSE                        : 117
 #      LDC                         : 10
@@ -6864,18 +6874,18 @@ Selected Device : 6vlx130tff1156-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           11904  out of  160000     7%  
- Number of Slice LUTs:                12129  out of  80000    15%  
-    Number used as Logic:             11819  out of  80000    14%  
+ Number of Slice Registers:           12148  out of  160000     7%  
+ Number of Slice LUTs:                12130  out of  80000    15%  
+    Number used as Logic:             11820  out of  80000    14%  
     Number used as Memory:              310  out of  27840     1%  
        Number used as RAM:               96
        Number used as SRL:              214
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  16699
-   Number with an unused Flip Flop:    4795  out of  16699    28%  
-   Number with an unused LUT:          4570  out of  16699    27%  
-   Number of fully used LUT-FF pairs:  7334  out of  16699    43%  
+ Number of LUT Flip Flop pairs used:  16938
+   Number with an unused Flip Flop:    4790  out of  16938    28%  
+   Number with an unused LUT:          4808  out of  16938    28%  
+   Number of fully used LUT-FF pairs:  7340  out of  16938    43%  
    Number of unique control sets:       701
 
 IO Utilization: 
@@ -6911,8 +6921,8 @@ Clock Information:
 ------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
 Clock Signal                                                                                                | Clock buffer(FF name)                                             | Load  |
 ------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
-clk125_2_p                                                                                                  | MMCM_ADV:CLKOUT1                                                  | 3707  |
-cdce_out1_p                                                                                                 | IBUF+IBUFDS_GTXE1+BUFG                                            | 1261  |
+clk125_2_p                                                                                                  | MMCM_ADV:CLKOUT1                                                  | 3956  |
+cdce_out1_p                                                                                                 | IBUF+IBUFDS_GTXE1+BUFG                                            | 1256  |
 usr/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                              | BUFG                                                              | 405   |
 usr/chipscope_icon_inst/CONTROL0<13>(usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
 usr/chipscope_icon_inst/U0/iUPDATE_OUT                                                                      | NONE(usr/chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD)               | 1     |
@@ -6949,7 +6959,7 @@ usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER
 usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 72    |
 usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 72    |
 usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)| 72    |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 12    |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)| 12    |
 system/amc_p0_en.amc_p0_eth/N0(system/amc_p0_en.amc_p0_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                 | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                                                                                                              | 1     |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/N1(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                         | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                             | 1     |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/n0017<0>(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                   | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                             | 1     |
@@ -6975,10 +6985,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk125_2_p'
-  Clock period: 3.185ns (frequency: 313.961MHz)
-  Total number of paths / destination ports: 3065121 / 9017
+  Clock period: 3.196ns (frequency: 312.911MHz)
+  Total number of paths / destination ports: 3065882 / 9512
 -------------------------------------------------------------------------
-Delay:               3.185ns (Levels of Logic = 5)
+Delay:               3.196ns (Levels of Logic = 5)
   Source:            system/rst/rst_fabric_o (FF)
   Destination:       system/sram2_if/sramInterface/DATA_O_0 (FF)
   Source Clock:      clk125_2_p rising
@@ -6988,7 +6998,7 @@ Delay:               3.185ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q           990   0.375   0.693  rst_fabric_o (rst_fabric_o)
+     FDPE:C->Q          1234   0.375   0.704  rst_fabric_o (rst_fabric_o)
      end scope: 'system/rst:rst_fabric_o'
      begin scope: 'system/sram2_if:RESET_I'
      begin scope: 'system/sram2_if/sramInterfaceIoControl:IPBUS_RESET_I'
@@ -6998,13 +7008,13 @@ Delay:               3.185ns (Levels of Logic = 5)
      LUT6:I0->O           36   0.068   0.552  _n01471 (_n0147)
      FDRE:R                    0.434          DATA_O_0
     ----------------------------------------
-    Total                      3.185ns (0.945ns logic, 2.240ns route)
-                                       (29.7% logic, 70.3% route)
+    Total                      3.196ns (0.945ns logic, 2.251ns route)
+                                       (29.6% logic, 70.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'cdce_out1_p'
   Clock period: 2.923ns (frequency: 342.138MHz)
-  Total number of paths / destination ports: 6306 / 2060
+  Total number of paths / destination ports: 6197 / 2050
 -------------------------------------------------------------------------
 Delay:               2.923ns (Levels of Logic = 6)
   Source:            usr/ipb_optohybrid_wrapper_inst/xclock_tx/en_b_o (FF)
@@ -7738,7 +7748,7 @@ Clock to Setup on destination clock system/gbt_phase_monitoring/ttclk_pll/CLK_OU
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                    |    2.204|         |         |         |
+clk125_2_p                                    |    2.215|         |         |         |
 system/gbt_phase_monitoring/ttclk_pll/CLK_OUT1|    3.597|         |         |         |
 usr/wb_miso_o[0]_wb_err                       |    0.871|         |         |         |
 ----------------------------------------------+---------+---------+---------+---------+
@@ -7748,7 +7758,7 @@ Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][0]_AND_773_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.975|         |
+clk125_2_p     |         |         |    1.986|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][1]_AND_771_o
@@ -7756,7 +7766,7 @@ Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][1]_AND_771_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.975|         |
+clk125_2_p     |         |         |    1.986|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][2]_AND_769_o
@@ -7764,7 +7774,7 @@ Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][2]_AND_769_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.975|         |
+clk125_2_p     |         |         |    1.986|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][3]_AND_767_o
@@ -7772,7 +7782,7 @@ Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][3]_AND_767_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.975|         |
+clk125_2_p     |         |         |    1.986|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o
@@ -7780,7 +7790,7 @@ Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[0]_AND
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.975|         |
+clk125_2_p     |         |         |    1.986|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o
@@ -7788,7 +7798,7 @@ Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[1]_AND
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.975|         |
+clk125_2_p     |         |         |    1.986|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o
@@ -7796,7 +7806,7 @@ Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[2]_AND
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.975|         |
+clk125_2_p     |         |         |    1.986|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o
@@ -7804,7 +7814,7 @@ Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[3]_AND
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.975|         |
+clk125_2_p     |         |         |    1.986|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT
@@ -7821,7 +7831,7 @@ Clock to Setup on destination clock system/spi/reset_i_cpol_i_AND_934_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.975|         |
+clk125_2_p     |         |         |    1.986|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock usr/chipscope_icon_inst/CONTROL0<13>
@@ -7863,14 +7873,14 @@ xpoint1_clk1_p |    2.931|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 112.00 secs
-Total CPU time to Xst completion: 112.02 secs
+Total REAL time to Xst completion: 109.00 secs
+Total CPU time to Xst completion: 108.92 secs
  
 --> 
 
 Total memory usage is 469508 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 1727 (   0 filtered)
-Number of infos    :  539 (   0 filtered)
+Number of warnings : 1729 (   0 filtered)
+Number of infos    :  541 (   0 filtered)
 

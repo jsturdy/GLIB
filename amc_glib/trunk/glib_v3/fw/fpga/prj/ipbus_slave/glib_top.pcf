@@ -1,8 +1,20 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Jul 01 15:40:46 2014
+// Written by: Map P.20131013 on Tue Jul 08 10:19:27 2014
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "system/gbt_phase_monitoring/ttclk_pll/clkf_buf" LOCATE = SITE
+        "BUFHCE_X1Y35" LEVEL 1;
+COMP "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce_bufg" LOCATE = SITE
+        "BUFGCTRL_X0Y23" LEVEL 1;
+COMP "system/gbt_phase_monitoring/ttclk_pll/clkout1_buf" LOCATE = SITE
+        "BUFHCE_X1Y34" LEVEL 1;
+COMP "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i" LOCATE = SITE
+        "GTXE1_X0Y0" LEVEL 1;
+COMP "system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst" LOCATE = SITE
+        "MMCM_ADV_X0Y5" LEVEL 1;
+COMP "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce_bufg" LOCATE = SITE
+        "BUFGCTRL_X0Y0" LEVEL 1;
 COMP "sfp_rxlos<1>" LOCATE = SITE "AC19" LEVEL 1;
 COMP "sfp_rxlos<2>" LOCATE = SITE "AF20" LEVEL 1;
 COMP "sfp_rxlos<3>" LOCATE = SITE "AJ20" LEVEL 1;
@@ -241,18 +253,6 @@ COMP "amc_port_tx_in<18>" LOCATE = SITE "AA25" LEVEL 1;
 COMP "amc_port_tx_in<19>" LOCATE = SITE "AB28" LEVEL 1;
 COMP "xpoint1_clk1_n" LOCATE = SITE "H9" LEVEL 1;
 COMP "xpoint1_clk1_p" LOCATE = SITE "J9" LEVEL 1;
-COMP "system/gbt_phase_monitoring/ttclk_pll/clkf_buf" LOCATE = SITE
-        "BUFHCE_X1Y35" LEVEL 1;
-COMP "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce_bufg" LOCATE = SITE
-        "BUFGCTRL_X0Y23" LEVEL 1;
-COMP "system/gbt_phase_monitoring/ttclk_pll/clkout1_buf" LOCATE = SITE
-        "BUFHCE_X1Y34" LEVEL 1;
-COMP "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i" LOCATE = SITE
-        "GTXE1_X0Y0" LEVEL 1;
-COMP "system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst" LOCATE = SITE
-        "MMCM_ADV_X0Y5" LEVEL 1;
-COMP "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce_bufg" LOCATE = SITE
-        "BUFGCTRL_X0Y0" LEVEL 1;
 COMP "cdce_sync_OBUF" LOCATE = SITE "SLICE_X31Y36" LEVEL 1;
 COMP "system/gbt_phase_monitoring/sfp_cdce_pm/debug_test_d_clk_o" LOCATE =
         SITE "SLICE_X56Y100" LEVEL 1;
@@ -504,11 +504,137 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/ipb_optohybrid_start_wrapper_inst/ipb_optohybrid_start_inst/ipb_ack"
         BEL
         "usr/ipb_optohybrid_start_wrapper_inst/ipb_optohybrid_start_inst/last_ipb_strobe"
-        BEL "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/cnt_in_2" BEL
-        "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/cnt_in_1" BEL
+        BEL "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/cnt_in_1" BEL
         "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/cnt_in_0" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_en_o" BEL
-        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_127" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_126" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_125" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_124" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_123" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_122" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_121" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_120" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_119" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_118" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_117" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_116" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_115" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_114" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_113" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_112" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_111" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_110" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_109" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_108" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_107" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_106" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_105" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_104" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_103" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_102" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_101" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_100" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_99" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_98" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_97" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_96" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_95" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_94" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_93" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_92" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_91" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_90" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_89" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_88" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_87" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_86" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_85" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_84" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_83" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_82" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_81" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_80" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_79" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_78" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_77" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_76" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_75" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_74" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_73" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_72" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_71" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_70" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_69" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_68" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_67" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_66" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_65" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_64" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_63" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_62" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_61" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_60" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_59" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_58" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_57" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_56" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_55" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_54" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_53" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_52" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_51" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_50" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_49" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_48" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_47" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_46" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_45" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_44" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_43" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_42" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_41" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_40" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_39" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_38" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_37" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_36" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_35" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_34" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_33" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_32" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_31" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_30" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_29" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_28" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_27" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_26" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_25" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_24" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_23" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_22" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_21" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_20" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_19" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_18" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_17" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_16" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_15" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_14" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_13" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_12" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_11" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_10" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_9" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_8" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_7" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_6" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_5" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_4" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_3" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_2" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_1" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_0" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_data_o_29" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_data_o_23" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_data_o_22" BEL
@@ -535,7 +661,6 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_data_o_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_data_o_0" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_error_rx" BEL
-        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_error_tx" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_26" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_25" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_24" BEL
@@ -555,13 +680,13 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_2" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_0" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_error_tx" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/last_gtx_strobe"
         BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/last_ipb_strobe"
-        BEL "usr/ipb_optohybrid_wrapper_inst/xclock_tx/failed_o" BEL
-        "usr/ipb_optohybrid_wrapper_inst/xclock_tx/cnt_in_2" BEL
-        "usr/ipb_optohybrid_wrapper_inst/xclock_tx/cnt_in_1" BEL
+        BEL "usr/ipb_optohybrid_wrapper_inst/xclock_tx/cnt_in_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/cnt_in_0" BEL
+        "usr/ipb_optohybrid_wrapper_inst/xclock_tx/failed_o" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_29" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_23" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_22" BEL
@@ -587,14 +712,12 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_2" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_0" BEL
-        "usr/ipb_optohybrid_wrapper_inst/xclock_rx/cnt_out_2" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/cnt_out_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/cnt_out_0" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/en_b_o" BEL
-        "usr/ipb_vfat2_wrapper_inst/xclock_tx/failed_o" BEL
-        "usr/ipb_vfat2_wrapper_inst/xclock_tx/cnt_in_2" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/cnt_in_1" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/cnt_in_0" BEL
+        "usr/ipb_vfat2_wrapper_inst/xclock_tx/failed_o" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_29" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_28" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_27" BEL
@@ -625,12 +748,138 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_2" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_1" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_0" BEL
-        "usr/ipb_vfat2_wrapper_inst/xclock_rx/cnt_out_2" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_rx/cnt_out_1" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_rx/cnt_out_0" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_rx/en_b_o" BEL
         "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/tx_en_o" BEL
-        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_127" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_126" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_125" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_124" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_123" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_122" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_121" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_120" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_119" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_118" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_117" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_116" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_115" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_114" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_113" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_112" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_111" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_110" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_109" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_108" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_107" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_106" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_105" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_104" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_103" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_102" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_101" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_100" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_99" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_98" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_97" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_96" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_95" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_94" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_93" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_92" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_91" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_90" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_89" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_88" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_87" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_86" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_85" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_84" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_83" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_82" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_81" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_80" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_79" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_78" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_77" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_76" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_75" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_74" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_73" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_72" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_71" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_70" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_69" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_68" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_67" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_66" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_65" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_64" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_63" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_62" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_61" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_60" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_59" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_58" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_57" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_56" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_55" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_54" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_53" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_52" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_51" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_50" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_49" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_48" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_47" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_46" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_45" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_44" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_43" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_42" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_41" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_40" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_39" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_38" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_37" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_36" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_35" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_34" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_33" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_32" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_31" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_30" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_29" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_28" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_27" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_26" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_25" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_24" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_23" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_22" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_21" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_20" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_19" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_18" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_17" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_16" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_15" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_14" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_13" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_12" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_11" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_10" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_9" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_8" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_7" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_6" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_5" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_4" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_3" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_2" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_1" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_0" BEL
         "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/tx_data_o_29" BEL
         "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/tx_data_o_28" BEL
         "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/tx_data_o_27" BEL
@@ -3035,11 +3284,137 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/ipb_optohybrid_start_wrapper_inst/ipb_optohybrid_start_inst/ipb_ack"
         BEL
         "usr/ipb_optohybrid_start_wrapper_inst/ipb_optohybrid_start_inst/last_ipb_strobe"
-        BEL "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/cnt_in_2" BEL
-        "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/cnt_in_1" BEL
+        BEL "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/cnt_in_1" BEL
         "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/cnt_in_0" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_en_o" BEL
-        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_127" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_126" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_125" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_124" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_123" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_122" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_121" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_120" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_119" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_118" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_117" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_116" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_115" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_114" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_113" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_112" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_111" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_110" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_109" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_108" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_107" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_106" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_105" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_104" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_103" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_102" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_101" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_100" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_99" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_98" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_97" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_96" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_95" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_94" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_93" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_92" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_91" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_90" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_89" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_88" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_87" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_86" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_85" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_84" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_83" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_82" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_81" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_80" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_79" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_78" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_77" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_76" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_75" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_74" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_73" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_72" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_71" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_70" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_69" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_68" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_67" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_66" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_65" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_64" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_63" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_62" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_61" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_60" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_59" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_58" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_57" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_56" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_55" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_54" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_53" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_52" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_51" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_50" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_49" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_48" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_47" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_46" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_45" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_44" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_43" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_42" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_41" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_40" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_39" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_38" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_37" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_36" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_35" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_34" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_33" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_32" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_31" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_30" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_29" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_28" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_27" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_26" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_25" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_24" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_23" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_22" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_21" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_20" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_19" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_18" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_17" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_16" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_15" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_14" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_13" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_12" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_11" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_10" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_9" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_8" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_7" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_6" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_5" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_4" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_3" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_2" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_1" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_ack_0" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_data_o_29" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_data_o_23" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_data_o_22" BEL
@@ -3066,7 +3441,6 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_data_o_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/tx_data_o_0" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_error_rx" BEL
-        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_error_tx" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_26" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_25" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_24" BEL
@@ -3086,13 +3460,13 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_2" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_data_0" BEL
+        "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/ipb_error_tx" BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/last_gtx_strobe"
         BEL
         "usr/ipb_optohybrid_wrapper_inst/ipb_optohybrid_inst/last_ipb_strobe"
-        BEL "usr/ipb_optohybrid_wrapper_inst/xclock_tx/failed_o" BEL
-        "usr/ipb_optohybrid_wrapper_inst/xclock_tx/cnt_in_2" BEL
-        "usr/ipb_optohybrid_wrapper_inst/xclock_tx/cnt_in_1" BEL
+        BEL "usr/ipb_optohybrid_wrapper_inst/xclock_tx/cnt_in_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/cnt_in_0" BEL
+        "usr/ipb_optohybrid_wrapper_inst/xclock_tx/failed_o" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_29" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_23" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_22" BEL
@@ -3118,14 +3492,12 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_2" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/data_b_o_0" BEL
-        "usr/ipb_optohybrid_wrapper_inst/xclock_rx/cnt_out_2" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/cnt_out_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/cnt_out_0" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/en_b_o" BEL
-        "usr/ipb_vfat2_wrapper_inst/xclock_tx/failed_o" BEL
-        "usr/ipb_vfat2_wrapper_inst/xclock_tx/cnt_in_2" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/cnt_in_1" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/cnt_in_0" BEL
+        "usr/ipb_vfat2_wrapper_inst/xclock_tx/failed_o" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_29" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_28" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_27" BEL
@@ -3156,12 +3528,138 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_2" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_1" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/data_b_o_0" BEL
-        "usr/ipb_vfat2_wrapper_inst/xclock_rx/cnt_out_2" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_rx/cnt_out_1" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_rx/cnt_out_0" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_rx/en_b_o" BEL
         "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/tx_en_o" BEL
-        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_127" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_126" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_125" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_124" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_123" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_122" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_121" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_120" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_119" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_118" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_117" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_116" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_115" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_114" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_113" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_112" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_111" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_110" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_109" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_108" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_107" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_106" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_105" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_104" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_103" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_102" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_101" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_100" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_99" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_98" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_97" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_96" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_95" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_94" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_93" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_92" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_91" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_90" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_89" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_88" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_87" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_86" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_85" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_84" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_83" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_82" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_81" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_80" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_79" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_78" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_77" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_76" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_75" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_74" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_73" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_72" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_71" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_70" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_69" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_68" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_67" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_66" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_65" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_64" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_63" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_62" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_61" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_60" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_59" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_58" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_57" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_56" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_55" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_54" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_53" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_52" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_51" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_50" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_49" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_48" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_47" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_46" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_45" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_44" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_43" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_42" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_41" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_40" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_39" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_38" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_37" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_36" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_35" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_34" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_33" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_32" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_31" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_30" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_29" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_28" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_27" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_26" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_25" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_24" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_23" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_22" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_21" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_20" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_19" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_18" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_17" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_16" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_15" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_14" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_13" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_12" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_11" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_10" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_9" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_8" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_7" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_6" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_5" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_4" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_3" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_2" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_1" BEL
+        "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/ipb_ack_0" BEL
         "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/tx_data_o_29" BEL
         "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/tx_data_o_28" BEL
         "usr/ipb_vfat2_wrapper_inst/ipb_vfat2_inst/tx_data_o_27" BEL
@@ -5621,15 +6119,12 @@ PIN
         "usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/RAMB36_EXP"
         PINNAME CLKBWRCLKL;
 TIMEGRP gtx_clk = BEL
-        "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/cnt_out_2" BEL
         "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/cnt_out_1" BEL
         "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/cnt_out_0" BEL
         "usr/ipb_optohybrid_start_wrapper_inst/xclock_tx/en_b_o" BEL
-        "usr/ipb_optohybrid_wrapper_inst/xclock_tx/cnt_out_2" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/cnt_out_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/cnt_out_0" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_tx/en_b_o" BEL
-        "usr/ipb_optohybrid_wrapper_inst/xclock_rx/cnt_in_2" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/cnt_in_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/cnt_in_0" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/data_b_o_31" BEL
@@ -5664,11 +6159,9 @@ TIMEGRP gtx_clk = BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/data_b_o_2" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/data_b_o_1" BEL
         "usr/ipb_optohybrid_wrapper_inst/xclock_rx/data_b_o_0" BEL
-        "usr/ipb_vfat2_wrapper_inst/xclock_tx/cnt_out_2" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/cnt_out_1" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/cnt_out_0" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_tx/en_b_o" BEL
-        "usr/ipb_vfat2_wrapper_inst/xclock_rx/cnt_in_2" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_rx/cnt_in_1" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_rx/cnt_in_0" BEL
         "usr/ipb_vfat2_wrapper_inst/xclock_rx/data_b_o_31" BEL

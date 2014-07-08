@@ -15,8 +15,8 @@ end xclock_en;
 architecture behavioral of xclock_en is
 
     -- Strobes count
-    signal cnt_in   : integer range 0 to 7 := 0;
-    signal cnt_out  : integer range 0 to 7 := 0;
+    signal cnt_in   : integer range 0 to 3 := 0;
+    signal cnt_out  : integer range 0 to 3 := 0;
     
 begin
 
@@ -45,7 +45,11 @@ begin
                         failed_o <= '0';
                         
                         -- increment the strobe counter
-                        cnt_in <= cnt_in + 1;
+                        if (cnt_in = 3) then
+                            cnt_in <= 0;
+                        else
+                            cnt_in <= cnt_in + 1;
+                        end if;
                         
                     -- Otherwhise
                     else
@@ -89,8 +93,12 @@ begin
                     -- If so, set an output strobe
                     en_b_o <= '1';
                     
-                    -- Increment the output strobe counter
-                    cnt_out <= cnt_out + 1;
+                    -- increment the strobe counter
+                    if (cnt_out = 3) then
+                        cnt_out <= 0;
+                    else
+                        cnt_out <= cnt_out + 1;
+                    end if;
                 
                 -- Otherwhise
                 else

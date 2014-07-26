@@ -72,6 +72,27 @@
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx0_frame_check:start_of_packet_detected_r}
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx0_frame_check:RX_DATA}
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx0_frame_check:ERROR_COUNT}
+  gui_sg_addsignal -group high_speed_Group {{FRAME_CHECK_MODULE}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx1_frame_check:begin_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx1_frame_check:track_data_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx1_frame_check:data_error_detected_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx1_frame_check:start_of_packet_detected_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx1_frame_check:RX_DATA}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx1_frame_check:ERROR_COUNT}
+  gui_sg_addsignal -group high_speed_Group {{FRAME_CHECK_MODULE}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx2_frame_check:begin_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx2_frame_check:track_data_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx2_frame_check:data_error_detected_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx2_frame_check:start_of_packet_detected_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx2_frame_check:RX_DATA}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx2_frame_check:ERROR_COUNT}
+  gui_sg_addsignal -group high_speed_Group {{FRAME_CHECK_MODULE}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx3_frame_check:begin_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx3_frame_check:track_data_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx3_frame_check:data_error_detected_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx3_frame_check:start_of_packet_detected_r}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx3_frame_check:RX_DATA}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:gtx3_frame_check:ERROR_COUNT}
   gui_sg_addsignal -group high_speed_Group {{GTX0_HIGH_SPEED}} -divider
   gui_sg_addsignal -group high_speed_Group {{Receive Ports - 8b10b Decoder}} -divider
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXCHARISK_OUT}
@@ -109,6 +130,120 @@
   gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX PLL Ports}} -divider
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:GTXTXRESET_IN}
   gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx0_high_speed_i:TXRESETDONE_OUT}
+
+  gui_sg_addsignal -group high_speed_Group {{GTX1_HIGH_SPEED}} -divider
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - 8b10b Decoder}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXCHARISK_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXDISPERR_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXNOTINTABLE_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - Comma Detection and Alignment}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXBYTEISALIGNED_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXCOMMADET_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXENMCOMMAALIGN_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXENPCOMMAALIGN_IN}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX Data Path interface}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXDATA_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXRECCLK_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXUSRCLK2_IN}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXN_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXP_IN}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX Loss-of-sync State Machine}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXLOSSOFSYNC_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX PLL Ports}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:GTXRXRESET_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:MGTREFCLKRX_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:PLLRXRESET_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXPLLLKDET_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXRESETDONE_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - 8b10b Encoder Control Ports}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXCHARISK_IN}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX Data Path interface}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXDATA_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXOUTCLK_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXUSRCLK2_IN}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX Driver and OOB signaling}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXN_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXP_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX PLL Ports}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:GTXTXRESET_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXRESETDONE_OUT}
+
+  gui_sg_addsignal -group high_speed_Group {{GTX2_HIGH_SPEED}} -divider
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - 8b10b Decoder}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXCHARISK_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXDISPERR_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXNOTINTABLE_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - Comma Detection and Alignment}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXBYTEISALIGNED_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXCOMMADET_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXENMCOMMAALIGN_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXENPCOMMAALIGN_IN}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX Data Path interface}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXDATA_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXRECCLK_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXUSRCLK2_IN}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXN_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXP_IN}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX Loss-of-sync State Machine}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXLOSSOFSYNC_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX PLL Ports}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:GTXRXRESET_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:MGTREFCLKRX_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:PLLRXRESET_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXPLLLKDET_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXRESETDONE_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - 8b10b Encoder Control Ports}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXCHARISK_IN}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX Data Path interface}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXDATA_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXOUTCLK_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXUSRCLK2_IN}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX Driver and OOB signaling}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXN_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXP_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX PLL Ports}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:GTXTXRESET_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXRESETDONE_OUT}
+
+  gui_sg_addsignal -group high_speed_Group {{GTX3_HIGH_SPEED}} -divider
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - 8b10b Decoder}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXCHARISK_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXDISPERR_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXNOTINTABLE_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - Comma Detection and Alignment}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXBYTEISALIGNED_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXCOMMADET_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXENMCOMMAALIGN_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXENPCOMMAALIGN_IN}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX Data Path interface}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXDATA_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXRECCLK_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXUSRCLK2_IN}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXN_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXP_IN}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX Loss-of-sync State Machine}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXLOSSOFSYNC_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Receive Ports - RX PLL Ports}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:GTXRXRESET_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:MGTREFCLKRX_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:PLLRXRESET_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXPLLLKDET_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXRESETDONE_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - 8b10b Encoder Control Ports}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXCHARISK_IN}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX Data Path interface}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXDATA_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXOUTCLK_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXUSRCLK2_IN}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX Driver and OOB signaling}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXN_OUT}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXP_OUT}
+  gui_sg_addsignal -group high_speed_Group {{Transmit Ports - TX PLL Ports}} -divider
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:GTXTXRESET_IN}
+  gui_sg_addsignal -group high_speed_Group {:high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXRESETDONE_OUT}
 
 
   gui_zoom -window Wave.1 -full

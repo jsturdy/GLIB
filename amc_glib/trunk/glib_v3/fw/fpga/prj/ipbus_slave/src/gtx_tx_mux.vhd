@@ -6,22 +6,15 @@ use work.user_package.all;
 
 entity gtx_tx_mux is
 port(
-    gtx_clk_i           : in std_logic;
-    reset_i             : in std_logic;
+    gtx_clk_i       : in std_logic;
+    reset_i         : in std_logic;
     
-    ipb_opto_start_en_i : in std_logic;    
+    vfat2_en_o      : out std_logic;
+    vfat2_ack_i     : in std_logic;
+    vfat2_data_i    : in std_logic_vector(31 downto 0);  
     
-    ipb_opto_en_i       : in std_logic;
-    ipb_opto_data_i     : in std_logic_vector(31 downto 0);  
-    
-    ipb_vfat2_en_i      : in std_logic;
-    ipb_vfat2_data_i    : in std_logic_vector(31 downto 0);  
-    
-    custom_en_i         : in std_logic;
-    custom_data_i       : in std_logic_vector(47 downto 0);
-    
-    tx_kchar_o          : out std_logic_vector(1 downto 0);
-    tx_data_o           : out std_logic_vector(15 downto 0)
+    tx_kchar_o      : out std_logic_vector(1 downto 0);
+    tx_data_o       : out std_logic_vector(15 downto 0)
 );
 end gtx_tx_mux;
 
@@ -32,7 +25,6 @@ begin
         
         -- State for sending
         variable state          : integer range 0 to 7 := 0;
-        variable sent_commas    : integer range 0 to 31 := 0;
         
         -- Data
         variable data           : std_logic_vector(31 downto 0) := (others => '0');
@@ -47,11 +39,14 @@ begin
             -- Reset
             if (reset_i = '1') then
             
-                -- TX signals
-                tx_data_o <= x"0" & def_gtx_idle & x"BC"; -- Idle state
+                vfat2_en_o <= '0';
+            
                 tx_kchar_o <= "00";
                 
+                tx_data_o <= def_gtx_idle & x"BC";
+                
                 state := 0;
+                
                 kchar_count := 0;
                 
             else
@@ -59,141 +54,88 @@ begin
                 -- Ready to send state
                 if (state = 0) then
                 
-                    -- Check for OptoHybrid start strobe
-                    if (ipb_opto_start_en_i = '1') then
-                   
-                        -- State 1 for next IPBus VFAT2 data
-                        state := 3;
-                        
-                        -- Reset kchar counter
-                        kchar_count := 0;
-                        
-                        -- Reset number of sent commas
-                        sent_commas := 0;
+                    -- Request data
+                    vfat2_en_o <= '1';
+                    
+                    -- Data is ready
+                    if (vfat2_ack_i = '1') then
                 
-                    -- Check for OptoHybrid IPBus strobes
-                    elsif (ipb_opto_en_i = '1') then
-                       
                         -- Get data
-                        data(31 downto 0) := ipb_opto_data_i;
-                        
-                        -- Set GTX data
-                        tx_data_o <= x"1" & def_gtx_optohybrid_request & x"BC"; -- VFAT2 code
-                        
-                        -- Set KChar
-                        tx_kchar_o <= "01";
-                        
-                        -- State 1 for next IPBus VFAT2 data
+                        data(31 downto 0) := vfat2_data_i;
+                    
+                        -- Change state
                         state := 1;
                         
-                        -- Reset kchar counter
-                        kchar_count := 0;
-                
-                    -- Check for VFAT2 IPBus strobes
-                    elsif (ipb_vfat2_en_i = '1') then
-                       
-                        -- Get data
-                        data(31 downto 0) := ipb_vfat2_data_i;
-                        
-                        -- Set GTX data
-                        tx_data_o <= x"1" & def_gtx_vfat2_request & x"BC"; -- VFAT2 code
-                        
-                        -- Set KChar
+                    end if;
+                    
+                    -- Determine if kchar must be sent
+                    if (kchar_count = 1023) then
+                    
+                        -- Set kchar
                         tx_kchar_o <= "01";
                         
-                        -- State 1 for next IPBus VFAT2 data
-                        state := 1;
+                        tx_data_o <= def_gtx_idle & x"BC"; -- Idle code
                         
-                        -- Reset kchar counter
                         kchar_count := 0;
-                        
-                    elsif (custom_en_i = '1') then
-                        tx_data_o <= custom_data_i(47 downto 32);
-                        tx_kchar_o <= "01";
-                        state := 7;
                         
                     else
+                   
+                        -- Clear kchar
+                        tx_kchar_o <= "00";
                     
-                        -- Set GTX data
+                        tx_data_o <= def_gtx_idle & x"BC"; -- Idle code
                         
-                        -- Determine if kchar must be sent
-                        if (kchar_count = 1023) then
-                        
-                            -- Set kchar
-                            tx_kchar_o <= "01";
-                            
-                            tx_data_o <= x"0" & def_gtx_idle & x"BC"; -- Idle code
-                            
-                            kchar_count := 0;
-                            
-                        else
-                       
-                            -- Clear kchar
-                            tx_kchar_o <= "00";
-                        
-                            tx_data_o <= x"0" & def_gtx_idle & x"BC"; -- Idle code
-                            
-                            kchar_count := kchar_count + 1;
-                            
-                        end if;
+                        kchar_count := kchar_count + 1;
                         
                     end if;
                 
-                -- Data 1
+                -- VFAT2 data 1
                 elsif (state = 1) then
                 
-                    -- Set TX datac
-                    tx_data_o <= data(31 downto 16);
+                    vfat2_en_o <= '0';
+                
+                    -- Set TX data
+                    tx_kchar_o <= "01";
                     
-                    tx_kchar_o <= "00";
+                    tx_data_o <= def_gtx_vfat2_request & x"BC";
                     
                     -- Next state
                     state := 2;
                     
-                -- Data 2
+               -- VFAT2 data 2
                 elsif (state = 2) then
                 
                     -- Set TX data
-                    tx_data_o <= data(15 downto 0);
-                    
                     tx_kchar_o <= "00";
+                    
+                    tx_data_o <= data(31 downto 16);
                     
                     -- Next state
-                    state := 0;   
-
-                -- Constant commas
+                    state := 3;
+                    
+                -- VFAT2 data 3
                 elsif (state = 3) then
-                    
-                    sent_commas := sent_commas + 1;
-                    
-                    tx_data_o <= x"0" & def_gtx_idle & x"BC"; -- Idle code
-                    
-                    tx_kchar_o <= "01";
-                    
-                    if (sent_commas = 31) then
-                        state := 0;
-                        sent_commas := 0;
-                    end if;
-                    
-                    
-                elsif (state = 7) then
-                    tx_data_o <= custom_data_i(31 downto 16);
+                
+                    -- Set TX data
                     tx_kchar_o <= "00";
-                    state := 6;
-                elsif (state = 6) then
-                    tx_data_o <= custom_data_i(15 downto 0);
-                    tx_kchar_o <= "00";
+                    
+                    tx_data_o <= data(15 downto 0);
+                    
+                    -- Next state
                     state := 0;
                     
                 -- Out of FSM
                 else
                 
-                    -- Set GTX data
-                    tx_data_o <= x"0" & def_gtx_idle & x"BC"; -- Idle code
-                    
+                    vfat2_en_o <= '0';
+            
                     tx_kchar_o <= "00";
-                
+                    
+                    tx_data_o <= def_gtx_idle & x"BC";
+                    
                     state := 0;
+                    
+                    kchar_count := 0;
                     
                 end if;
                 

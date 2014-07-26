@@ -12,15 +12,16 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo -sd
 ../../src/system/cdce/cdce_phase_mon_v2/pll -sd ../../src/system/pll -nt
 timestamp -uc
-C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/s
-ystem_clk.ucf -uc
-C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/s
-ystem.ucf -uc src/gtx.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
+C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syste
+m_clk.ucf -uc
+C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syste
+m.ucf -uc src/gtx.ucf -uc src/planahead.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc
+glib_top.ngd
 
 Reading NGO file
-"C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave
-/glib_top.ngc" ...
-Loading design module "ipcore_dir/tracking_data_fifo.ngc"...
+"C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/gli
+b_top.ngc" ...
+Loading design module "ipcore_dir/buffer_fifo.ngc"...
 Loading design module "ipcore_dir/chipscope_vio.ngc"...
 Loading design module "ipcore_dir/chipscope_ila.ngc"...
 Loading design module "ipcore_dir/chipscope_icon.ngc"...
@@ -53,12 +54,13 @@ Gathering constraint information from source properties...
 Done.
 
 Annotating constraints to design from ucf file
-"C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/
-system_clk.ucf" ...
+"C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syst
+em_clk.ucf" ...
 Annotating constraints to design from ucf file
-"C:/Users/tlenzi/Desktop/GLIB_NEW/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/
-system.ucf" ...
+"C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syst
+em.ucf" ...
 Annotating constraints to design from ucf file "src/gtx.ucf" ...
+Annotating constraints to design from ucf file "src/planahead.ucf" ...
 WARNING:NgdBuild - The value of SIM_DEVICE on instance
    'system/amc_p0_en.amc_p0_eth/clkbuf' of type BUFR has been changed from
    'VIRTEX4' to 'VIRTEX6' to correct post-ngdbuild and timing simulation for
@@ -134,18 +136,6 @@ INFO:ConstraintSystem:178 - TNM 'xpoint1_clk1_n', used in period specification
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
-   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[3].gnll_fifo.
-   inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1" of type "FIFO36E1".  This
-   attribute will be ignored.
-WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
-   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[2].gnll_fifo.
-   inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1" of type "FIFO36E1".  This
-   attribute will be ignored.
-WARNING:NgdBuild:486 - Attribute "SIM_DEVICE" is not allowed on symbol
-   "U0/xst_fifo_generator/gconvfifo.rf/gbiv5.bi/v6_fifo.fblk/gextw[1].gnll_fifo.
-   inst_extd/gonep.inst_prim/gf36e1_inst.sngfifo36e1" of type "FIFO36E1".  This
-   attribute will be ignored.
 WARNING:NgdBuild:443 - SFF primitive
    'usr/chipscope_vio_inst/U0/I_VIO/reset_f_edge/I_H2L.U_DOUT' has unconnected
    output pin
@@ -165,12 +155,6 @@ WARNING:NgdBuild:452 - logical net 'amc_port_rx_de_17_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'amc_port_rx_de_18_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'amc_port_rx_de_19_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'amc_port_rx_de_20_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'sfp_tx_p_2_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'sfp_tx_p_3_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'sfp_tx_p_4_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'sfp_tx_n_2_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'sfp_tx_n_3_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'sfp_tx_n_4_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_tx_p_1_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_tx_p_2_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_tx_p_3_OBUF' has no driver
@@ -599,6 +583,10 @@ WARNING:NgdBuild:452 - logical net 'fmc2_tx_p_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc2_tx_n_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'user_wb_mosi[0]_wb_stb' has no driver
 WARNING:NgdBuild:452 - logical net 'user_wb_mosi[0]_wb_cyc' has no driver
+WARNING:NgdBuild:452 - logical net 'user_ipb_mosi[0]_ipb_strobe' has no driver
+WARNING:NgdBuild:452 - logical net 'user_ipb_mosi[1]_ipb_strobe' has no driver
+WARNING:NgdBuild:452 - logical net 'user_ipb_mosi[3]_ipb_strobe' has no driver
+WARNING:NgdBuild:452 - logical net 'user_ipb_mosi[4]_ipb_strobe' has no driver
 WARNING:NgdBuild:452 - logical net 'N731' has no driver
 WARNING:NgdBuild:452 - logical net 'N732' has no driver
 WARNING:NgdBuild:452 - logical net 'N733' has no driver
@@ -673,15 +661,6 @@ WARNING:NgdBuild:452 - logical net 'N801' has no driver
 WARNING:NgdBuild:452 - logical net 'N802' has no driver
 WARNING:NgdBuild:452 - logical net 'N805' has no driver
 WARNING:NgdBuild:452 - logical net 'N806' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<31>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<30>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<28>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<27>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<26>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<25>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_opto_tx_data<24>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_vfat2_tx_data<31>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/ipb_vfat2_tx_data<30>' has no driver
 WARNING:NgdBuild:452 - logical net 'system/user_cdce_sync_done_o' has no driver
 WARNING:NgdBuild:452 - logical net 'system/ipb_to_slaves[4]_ipb_strobe' has no
    driver
@@ -1686,12 +1665,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 1057
+  Number of warnings: 1043
 
-Total memory usage is 310660 kilobytes
+Total memory usage is 311184 kilobytes
 
 Writing NGD file "glib_top.ngd" ...
-Total REAL time to NGDBUILD completion:  24 sec
-Total CPU time to NGDBUILD completion:   24 sec
+Total REAL time to NGDBUILD completion:  27 sec
+Total CPU time to NGDBUILD completion:   25 sec
 
 Writing NGDBUILD log file "glib_top.bld"...

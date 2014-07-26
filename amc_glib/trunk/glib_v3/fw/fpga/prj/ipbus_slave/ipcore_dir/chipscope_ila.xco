@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Thu May 15 10:03:30 2014
+# Date: Fri Jul 25 09:59:23 2014
 #
 ##############################################################
 #
@@ -30,7 +30,7 @@ SET foundationsym = false
 SET implementationfiletype = Ngc
 SET package = ff1156
 SET removerpms = false
-SET simulationfiles = Behavioral
+SET simulationfiles = Structural
 SET speedgrade = -1
 SET verilogsim = false
 SET vhdlsim = true
@@ -113,29 +113,29 @@ CSET match_units_7=1
 CSET match_units_8=1
 CSET match_units_9=1
 CSET max_sequence_levels=1
-CSET number_of_trigger_ports=8
+CSET number_of_trigger_ports=14
 CSET sample_data_depth=1024
 CSET sample_on=Rising
 CSET trigger_port_width_1=1
-CSET trigger_port_width_10=8
-CSET trigger_port_width_11=8
-CSET trigger_port_width_12=8
-CSET trigger_port_width_13=8
-CSET trigger_port_width_14=8
+CSET trigger_port_width_10=32
+CSET trigger_port_width_11=32
+CSET trigger_port_width_12=1
+CSET trigger_port_width_13=1
+CSET trigger_port_width_14=32
 CSET trigger_port_width_15=8
 CSET trigger_port_width_16=8
-CSET trigger_port_width_2=32
-CSET trigger_port_width_3=16
-CSET trigger_port_width_4=2
+CSET trigger_port_width_2=1
+CSET trigger_port_width_3=1
+CSET trigger_port_width_4=32
 CSET trigger_port_width_5=16
 CSET trigger_port_width_6=2
-CSET trigger_port_width_7=1
-CSET trigger_port_width_8=32
-CSET trigger_port_width_9=8
+CSET trigger_port_width_7=16
+CSET trigger_port_width_8=2
+CSET trigger_port_width_9=1
 CSET use_rpms=false
 # END Parameters
 # BEGIN Extra information
 MISC pkg_timestamp=2013-10-13T14:13:15Z
 # END Extra information
 GENERATE
-# CRC: 5efd471b
+# CRC: 1e314f1d

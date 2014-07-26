@@ -57,6 +57,27 @@
   wavefrom  add  -siganls  :high_speed_top_i:gtx0_frame_check:start_of_packet_detected_r
   waveform  add  -signals  :high_speed_top_i:gtx0_frame_check:RX_DATA
   waveform  add  -signals  :high_speed_top_i:gtx0_frame_check:ERROR_COUNT
+  waveform  add  -label FRAME_CHECK_MODULE -comment gtx1_frame_check
+  waveform  add  -signals  :high_speed_top_i:gtx1_frame_check:begin_r
+  waveform  add  -signals  :high_speed_top_i:gtx1_frame_check:track_data_r
+  waveform  add  -siganls  :high_speed_top_i:gtx1_frame_check:data_error_detected_r
+  wavefrom  add  -siganls  :high_speed_top_i:gtx1_frame_check:start_of_packet_detected_r
+  waveform  add  -signals  :high_speed_top_i:gtx1_frame_check:RX_DATA
+  waveform  add  -signals  :high_speed_top_i:gtx1_frame_check:ERROR_COUNT
+  waveform  add  -label FRAME_CHECK_MODULE -comment gtx2_frame_check
+  waveform  add  -signals  :high_speed_top_i:gtx2_frame_check:begin_r
+  waveform  add  -signals  :high_speed_top_i:gtx2_frame_check:track_data_r
+  waveform  add  -siganls  :high_speed_top_i:gtx2_frame_check:data_error_detected_r
+  wavefrom  add  -siganls  :high_speed_top_i:gtx2_frame_check:start_of_packet_detected_r
+  waveform  add  -signals  :high_speed_top_i:gtx2_frame_check:RX_DATA
+  waveform  add  -signals  :high_speed_top_i:gtx2_frame_check:ERROR_COUNT
+  waveform  add  -label FRAME_CHECK_MODULE -comment gtx3_frame_check
+  waveform  add  -signals  :high_speed_top_i:gtx3_frame_check:begin_r
+  waveform  add  -signals  :high_speed_top_i:gtx3_frame_check:track_data_r
+  waveform  add  -siganls  :high_speed_top_i:gtx3_frame_check:data_error_detected_r
+  wavefrom  add  -siganls  :high_speed_top_i:gtx3_frame_check:start_of_packet_detected_r
+  waveform  add  -signals  :high_speed_top_i:gtx3_frame_check:RX_DATA
+  waveform  add  -signals  :high_speed_top_i:gtx3_frame_check:ERROR_COUNT
   waveform  add  -label GTX0_HIGH_SPEED -comment GTX0_HIGH_SPEED
   waveform  add  -label Receive_Ports_-_8b10b_Decoder  -comment  Receive_Ports_-_8b10b_Decoder
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:RXCHARISK_OUT
@@ -94,6 +115,120 @@
   waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:GTXTXRESET_IN
   waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx0_high_speed_i:TXRESETDONE_OUT
+
+  waveform  add  -label GTX1_HIGH_SPEED -comment GTX1_HIGH_SPEED
+  waveform  add  -label Receive_Ports_-_8b10b_Decoder  -comment  Receive_Ports_-_8b10b_Decoder
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXCHARISK_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXDISPERR_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXNOTINTABLE_OUT
+  waveform  add  -label Receive_Ports_-_Comma_Detection_and_Alignment  -comment  Receive_Ports_-_Comma_Detection_and_Alignment
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXBYTEISALIGNED_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXCOMMADET_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXENMCOMMAALIGN_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXENPCOMMAALIGN_IN
+  waveform  add  -label Receive_Ports_-_RX_Data_Path_interface  -comment  Receive_Ports_-_RX_Data_Path_interface
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXDATA_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXRECCLK_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXUSRCLK2_IN
+  waveform  add  -label Receive_Ports_-_RX_Driver,OOB_signalling,Coupling_and_Eq.,CDR  -comment  Receive_Ports_-_RX_Driver,OOB_signalling,Coupling_and_Eq.,CDR
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXN_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXP_IN
+  waveform  add  -label Receive_Ports_-_RX_Loss-of-sync_State_Machine  -comment  Receive_Ports_-_RX_Loss-of-sync_State_Machine
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXLOSSOFSYNC_OUT
+  waveform  add  -label Receive_Ports_-_RX_PLL_Ports  -comment  Receive_Ports_-_RX_PLL_Ports
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:GTXRXRESET_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:MGTREFCLKRX_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:PLLRXRESET_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXPLLLKDET_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:RXRESETDONE_OUT
+  waveform  add  -label Transmit_Ports_-_8b10b_Encoder_Control_Ports  -comment  Transmit_Ports_-_8b10b_Encoder_Control_Ports
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXCHARISK_IN
+  waveform  add  -label Transmit_Ports_-_TX_Data_Path_interface  -comment  Transmit_Ports_-_TX_Data_Path_interface
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXDATA_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXOUTCLK_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXUSRCLK2_IN
+  waveform  add  -label Transmit_Ports_-_TX_Driver_and_OOB_signaling  -comment  Transmit_Ports_-_TX_Driver_and_OOB_signaling
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXN_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXP_OUT
+  waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:GTXTXRESET_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx1_high_speed_i:TXRESETDONE_OUT
+
+  waveform  add  -label GTX2_HIGH_SPEED -comment GTX2_HIGH_SPEED
+  waveform  add  -label Receive_Ports_-_8b10b_Decoder  -comment  Receive_Ports_-_8b10b_Decoder
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXCHARISK_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXDISPERR_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXNOTINTABLE_OUT
+  waveform  add  -label Receive_Ports_-_Comma_Detection_and_Alignment  -comment  Receive_Ports_-_Comma_Detection_and_Alignment
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXBYTEISALIGNED_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXCOMMADET_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXENMCOMMAALIGN_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXENPCOMMAALIGN_IN
+  waveform  add  -label Receive_Ports_-_RX_Data_Path_interface  -comment  Receive_Ports_-_RX_Data_Path_interface
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXDATA_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXRECCLK_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXUSRCLK2_IN
+  waveform  add  -label Receive_Ports_-_RX_Driver,OOB_signalling,Coupling_and_Eq.,CDR  -comment  Receive_Ports_-_RX_Driver,OOB_signalling,Coupling_and_Eq.,CDR
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXN_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXP_IN
+  waveform  add  -label Receive_Ports_-_RX_Loss-of-sync_State_Machine  -comment  Receive_Ports_-_RX_Loss-of-sync_State_Machine
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXLOSSOFSYNC_OUT
+  waveform  add  -label Receive_Ports_-_RX_PLL_Ports  -comment  Receive_Ports_-_RX_PLL_Ports
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:GTXRXRESET_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:MGTREFCLKRX_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:PLLRXRESET_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXPLLLKDET_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:RXRESETDONE_OUT
+  waveform  add  -label Transmit_Ports_-_8b10b_Encoder_Control_Ports  -comment  Transmit_Ports_-_8b10b_Encoder_Control_Ports
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXCHARISK_IN
+  waveform  add  -label Transmit_Ports_-_TX_Data_Path_interface  -comment  Transmit_Ports_-_TX_Data_Path_interface
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXDATA_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXOUTCLK_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXUSRCLK2_IN
+  waveform  add  -label Transmit_Ports_-_TX_Driver_and_OOB_signaling  -comment  Transmit_Ports_-_TX_Driver_and_OOB_signaling
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXN_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXP_OUT
+  waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:GTXTXRESET_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx2_high_speed_i:TXRESETDONE_OUT
+
+  waveform  add  -label GTX3_HIGH_SPEED -comment GTX3_HIGH_SPEED
+  waveform  add  -label Receive_Ports_-_8b10b_Decoder  -comment  Receive_Ports_-_8b10b_Decoder
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXCHARISK_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXDISPERR_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXNOTINTABLE_OUT
+  waveform  add  -label Receive_Ports_-_Comma_Detection_and_Alignment  -comment  Receive_Ports_-_Comma_Detection_and_Alignment
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXBYTEISALIGNED_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXCOMMADET_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXENMCOMMAALIGN_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXENPCOMMAALIGN_IN
+  waveform  add  -label Receive_Ports_-_RX_Data_Path_interface  -comment  Receive_Ports_-_RX_Data_Path_interface
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXDATA_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXRECCLK_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXUSRCLK2_IN
+  waveform  add  -label Receive_Ports_-_RX_Driver,OOB_signalling,Coupling_and_Eq.,CDR  -comment  Receive_Ports_-_RX_Driver,OOB_signalling,Coupling_and_Eq.,CDR
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXN_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXP_IN
+  waveform  add  -label Receive_Ports_-_RX_Loss-of-sync_State_Machine  -comment  Receive_Ports_-_RX_Loss-of-sync_State_Machine
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXLOSSOFSYNC_OUT
+  waveform  add  -label Receive_Ports_-_RX_PLL_Ports  -comment  Receive_Ports_-_RX_PLL_Ports
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:GTXRXRESET_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:MGTREFCLKRX_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:PLLRXRESET_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXPLLLKDET_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:RXRESETDONE_OUT
+  waveform  add  -label Transmit_Ports_-_8b10b_Encoder_Control_Ports  -comment  Transmit_Ports_-_8b10b_Encoder_Control_Ports
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXCHARISK_IN
+  waveform  add  -label Transmit_Ports_-_TX_Data_Path_interface  -comment  Transmit_Ports_-_TX_Data_Path_interface
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXDATA_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXOUTCLK_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXUSRCLK2_IN
+  waveform  add  -label Transmit_Ports_-_TX_Driver_and_OOB_signaling  -comment  Transmit_Ports_-_TX_Driver_and_OOB_signaling
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXN_OUT
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXP_OUT
+  waveform  add  -label Transmit_Ports_-_TX_PLL_Ports  -comment  Transmit_Ports_-_TX_PLL_Ports
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:GTXTXRESET_IN
+  waveform  add  -signals  :high_speed_top_i:high_speed_i:gtx3_high_speed_i:TXRESETDONE_OUT
 
   console submit -using simulator -wait no "run 61 us"
 

@@ -55,6 +55,24 @@ wave add /DEMO_TB/high_speed_top_i/gtx0_frame_check/data_error_detected_r
 wave add /DEMO_TB/high_speed_top_i/gtx0_frame_check/start_of_packet_detected_r
 wave add /DEMO_TB/high_speed_top_i/gtx0_frame_check/RX_DATA
 wave add /DEMO_TB/high_speed_top_i/gtx0_frame_check/ERROR_COUNT
+wave add /DEMO_TB/high_speed_top_i/gtx1_frame_check/begin_r
+wave add /DEMO_TB/high_speed_top_i/gtx1_frame_check/track_data_r
+wave add /DEMO_TB/high_speed_top_i/gtx1_frame_check/data_error_detected_r
+wave add /DEMO_TB/high_speed_top_i/gtx1_frame_check/start_of_packet_detected_r
+wave add /DEMO_TB/high_speed_top_i/gtx1_frame_check/RX_DATA
+wave add /DEMO_TB/high_speed_top_i/gtx1_frame_check/ERROR_COUNT
+wave add /DEMO_TB/high_speed_top_i/gtx2_frame_check/begin_r
+wave add /DEMO_TB/high_speed_top_i/gtx2_frame_check/track_data_r
+wave add /DEMO_TB/high_speed_top_i/gtx2_frame_check/data_error_detected_r
+wave add /DEMO_TB/high_speed_top_i/gtx2_frame_check/start_of_packet_detected_r
+wave add /DEMO_TB/high_speed_top_i/gtx2_frame_check/RX_DATA
+wave add /DEMO_TB/high_speed_top_i/gtx2_frame_check/ERROR_COUNT
+wave add /DEMO_TB/high_speed_top_i/gtx3_frame_check/begin_r
+wave add /DEMO_TB/high_speed_top_i/gtx3_frame_check/track_data_r
+wave add /DEMO_TB/high_speed_top_i/gtx3_frame_check/data_error_detected_r
+wave add /DEMO_TB/high_speed_top_i/gtx3_frame_check/start_of_packet_detected_r
+wave add /DEMO_TB/high_speed_top_i/gtx3_frame_check/RX_DATA
+wave add /DEMO_TB/high_speed_top_i/gtx3_frame_check/ERROR_COUNT
 divider add "Receive Ports - 8b10b Decoder"
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXCHARISK_OUT
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/RXDISPERR_OUT
@@ -91,6 +109,117 @@ wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/TXP_OUT
 divider add "Transmit Ports - TX PLL Ports"
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/GTXTXRESET_IN
 wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx0_high_speed_i/TXRESETDONE_OUT
+
+divider add "Receive Ports - 8b10b Decoder"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXCHARISK_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXDISPERR_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXNOTINTABLE_OUT
+divider add "Receive Ports - Comma Detection and Alignment"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXBYTEISALIGNED_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXCOMMADET_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXENMCOMMAALIGN_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXENPCOMMAALIGN_IN
+divider add "Receive Ports - RX Data Path interface"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXDATA_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXRECCLK_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXUSRCLK2_IN
+divider add "Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXN_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXP_IN
+divider add "Receive Ports - RX Loss-of-sync State Machine"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXLOSSOFSYNC_OUT
+divider add "Receive Ports - RX PLL Ports"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/GTXRXRESET_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/MGTREFCLKRX_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/PLLRXRESET_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXPLLLKDET_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/RXRESETDONE_OUT
+divider add "Transmit Ports - 8b10b Encoder Control Ports"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/TXCHARISK_IN
+divider add "Transmit Ports - TX Data Path interface"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/TXDATA_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/TXOUTCLK_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/TXUSRCLK2_IN
+divider add "Transmit Ports - TX Driver and OOB signaling"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/TXN_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/TXP_OUT
+divider add "Transmit Ports - TX PLL Ports"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/GTXTXRESET_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx1_high_speed_i/TXRESETDONE_OUT
+
+divider add "Receive Ports - 8b10b Decoder"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXCHARISK_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXDISPERR_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXNOTINTABLE_OUT
+divider add "Receive Ports - Comma Detection and Alignment"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXBYTEISALIGNED_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXCOMMADET_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXENMCOMMAALIGN_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXENPCOMMAALIGN_IN
+divider add "Receive Ports - RX Data Path interface"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXDATA_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXRECCLK_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXUSRCLK2_IN
+divider add "Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXN_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXP_IN
+divider add "Receive Ports - RX Loss-of-sync State Machine"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXLOSSOFSYNC_OUT
+divider add "Receive Ports - RX PLL Ports"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/GTXRXRESET_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/MGTREFCLKRX_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/PLLRXRESET_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXPLLLKDET_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/RXRESETDONE_OUT
+divider add "Transmit Ports - 8b10b Encoder Control Ports"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/TXCHARISK_IN
+divider add "Transmit Ports - TX Data Path interface"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/TXDATA_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/TXOUTCLK_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/TXUSRCLK2_IN
+divider add "Transmit Ports - TX Driver and OOB signaling"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/TXN_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/TXP_OUT
+divider add "Transmit Ports - TX PLL Ports"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/GTXTXRESET_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx2_high_speed_i/TXRESETDONE_OUT
+
+divider add "Receive Ports - 8b10b Decoder"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXCHARISK_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXDISPERR_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXNOTINTABLE_OUT
+divider add "Receive Ports - Comma Detection and Alignment"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXBYTEISALIGNED_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXCOMMADET_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXENMCOMMAALIGN_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXENPCOMMAALIGN_IN
+divider add "Receive Ports - RX Data Path interface"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXDATA_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXRECCLK_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXUSRCLK2_IN
+divider add "Receive Ports - RX Driver,OOB signalling,Coupling and Eq.,CDR"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXN_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXP_IN
+divider add "Receive Ports - RX Loss-of-sync State Machine"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXLOSSOFSYNC_OUT
+divider add "Receive Ports - RX PLL Ports"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/GTXRXRESET_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/MGTREFCLKRX_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/PLLRXRESET_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXPLLLKDET_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/RXRESETDONE_OUT
+divider add "Transmit Ports - 8b10b Encoder Control Ports"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/TXCHARISK_IN
+divider add "Transmit Ports - TX Data Path interface"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/TXDATA_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/TXOUTCLK_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/TXUSRCLK2_IN
+divider add "Transmit Ports - TX Driver and OOB signaling"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/TXN_OUT
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/TXP_OUT
+divider add "Transmit Ports - TX PLL Ports"
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/GTXTXRESET_IN
+wave add /DEMO_TB/high_speed_top_i/high_speed_i/gtx3_high_speed_i/TXRESETDONE_OUT
 
 run 61 us
 quit

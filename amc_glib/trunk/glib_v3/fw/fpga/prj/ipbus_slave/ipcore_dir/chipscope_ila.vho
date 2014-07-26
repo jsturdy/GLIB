@@ -8,7 +8,7 @@
 -- \   \   \/     Version    : 14.7
 --  \   \         Application: Xilinx CORE Generator
 --  /   /         Filename   : chipscope_ila.vho
--- /___/   /\     Timestamp  : Thu May 15 12:05:54 Central Europe Daylight Time 2014
+-- /___/   /\     Timestamp  : Fri Jul 25 12:01:44 Central Europe Daylight Time 2014
 -- \   \  /  \
 --  \___\/\___\
 --
@@ -23,13 +23,19 @@ component chipscope_ila
     CONTROL : INOUT STD_LOGIC_VECTOR(35 DOWNTO 0);
     CLK : IN STD_LOGIC;
     TRIG0 : IN STD_LOGIC_VECTOR(0 TO 0);
-    TRIG1 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    TRIG2 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    TRIG3 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    TRIG1 : IN STD_LOGIC_VECTOR(0 TO 0);
+    TRIG2 : IN STD_LOGIC_VECTOR(0 TO 0);
+    TRIG3 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     TRIG4 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     TRIG5 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    TRIG6 : IN STD_LOGIC_VECTOR(0 TO 0);
-    TRIG7 : IN STD_LOGIC_VECTOR(31 DOWNTO 0));
+    TRIG6 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    TRIG7 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    TRIG8 : IN STD_LOGIC_VECTOR(0 TO 0);
+    TRIG9 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    TRIG10 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    TRIG11 : IN STD_LOGIC_VECTOR(0 TO 0);
+    TRIG12 : IN STD_LOGIC_VECTOR(0 TO 0);
+    TRIG13 : IN STD_LOGIC_VECTOR(31 DOWNTO 0));
 
 end component;
 
@@ -49,6 +55,12 @@ your_instance_name : chipscope_ila
     TRIG4 => TRIG4,
     TRIG5 => TRIG5,
     TRIG6 => TRIG6,
-    TRIG7 => TRIG7);
+    TRIG7 => TRIG7,
+    TRIG8 => TRIG8,
+    TRIG9 => TRIG9,
+    TRIG10 => TRIG10,
+    TRIG11 => TRIG11,
+    TRIG12 => TRIG12,
+    TRIG13 => TRIG13);
 
 -- INST_TAG_END ------ End INSTANTIATION Template ------------

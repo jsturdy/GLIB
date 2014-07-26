@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Jul 08 10:21:06 2014
+Fri Jul 25 15:17:06 2014
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -328,8 +328,8 @@ Pinout by Pin Number:
 |AH34      |                     |IOBS     |IO_L4N_VREF_12            |UNUSED   |           |12            |          |         |           |         |         |          |           |                |
 |AJ1       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AJ2       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
-|AJ3       |                     |IPAD     |MGTRXP3_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
-|AJ4       |                     |IPAD     |MGTRXN3_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|AJ3       |sfp_rx_p<1>          |IPAD     |MGTRXP3_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AJ4       |sfp_rx_n<1>          |IPAD     |MGTRXN3_112               |         |           |              |          |         |           |         |         |          |NO         |                |
 |AJ5       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AJ6       |                     |         |MGTAVCC_S                 |         |           |              |          |         |           |         |         |          |           |                |
 |AJ7       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
@@ -360,8 +360,8 @@ Pinout by Pin Number:
 |AJ32      |                     |IOBS     |IO_L12N_VRP_12            |UNUSED   |           |12            |          |         |           |         |         |          |           |                |
 |AJ33      |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AJ34      |amc_port_tx_p<5>     |IOB      |IO_L4P_12                 |OUTPUT   |LVCMOS25*  |12            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|AK1       |                     |OPAD     |MGTTXP3_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
-|AK2       |                     |OPAD     |MGTTXN3_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|AK1       |sfp_tx_p<1>          |OPAD     |MGTTXP3_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AK2       |sfp_tx_n<1>          |OPAD     |MGTTXN3_112               |         |           |              |          |         |           |         |         |          |NO         |                |
 |AK3       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AK4       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AK5       |                     |IPAD     |MGTREFCLK0N_112           |UNUSED   |           |              |          |         |           |         |         |          |           |                |
@@ -396,8 +396,8 @@ Pinout by Pin Number:
 |AK34      |amc_port_tx_n<10>    |IOB      |IO_L6N_12                 |OUTPUT   |LVCMOS25*  |12            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |AL1       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AL2       |                     |         |MGTAVTT_S                 |         |           |              |          |         |           |         |         |          |           |                |
-|AL3       |                     |IPAD     |MGTRXP2_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
-|AL4       |                     |IPAD     |MGTRXN2_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|AL3       |sfp_rx_p<2>          |IPAD     |MGTRXP2_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AL4       |sfp_rx_n<2>          |IPAD     |MGTRXN2_112               |         |           |              |          |         |           |         |         |          |NO         |                |
 |AL5       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AL6       |                     |         |MGTAVCC_S                 |         |           |              |          |         |           |         |         |          |           |                |
 |AL7       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
@@ -428,12 +428,12 @@ Pinout by Pin Number:
 |AL32      |                     |         |VCCO_12                   |         |           |12            |          |         |           |         |2.50     |          |           |                |
 |AL33      |                     |IOBS     |IO_L16N_12                |UNUSED   |           |12            |          |         |           |         |         |          |           |                |
 |AL34      |amc_port_tx_n<11>    |IOB      |IO_L6P_12                 |OUTPUT   |LVCMOS25*  |12            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|AM1       |                     |OPAD     |MGTTXP2_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
-|AM2       |                     |OPAD     |MGTTXN2_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|AM1       |sfp_tx_p<2>          |OPAD     |MGTTXP2_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AM2       |sfp_tx_n<2>          |OPAD     |MGTTXN2_112               |         |           |              |          |         |           |         |         |          |NO         |                |
 |AM3       |                     |         |MGTAVTT_S                 |         |           |              |          |         |           |         |         |          |           |                |
 |AM4       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
-|AM5       |                     |IPAD     |MGTRXP1_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
-|AM6       |                     |IPAD     |MGTRXN1_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|AM5       |sfp_rx_p<3>          |IPAD     |MGTRXP1_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AM6       |sfp_rx_n<3>          |IPAD     |MGTRXN1_112               |         |           |              |          |         |           |         |         |          |NO         |                |
 |AM7       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AM8       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AM9       |                     |         |VCCO_34                   |         |           |34            |          |         |           |         |2.50     |          |           |                |
@@ -464,8 +464,8 @@ Pinout by Pin Number:
 |AM34      |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AN1       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AN2       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
-|AN3       |                     |OPAD     |MGTTXP1_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
-|AN4       |                     |OPAD     |MGTTXN1_112               |UNUSED   |           |              |          |         |           |         |         |          |           |                |
+|AN3       |sfp_tx_p<3>          |OPAD     |MGTTXP1_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AN4       |sfp_tx_n<3>          |OPAD     |MGTTXN1_112               |         |           |              |          |         |           |         |         |          |NO         |                |
 |AN5       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AN6       |                     |         |MGTAVCC_S                 |         |           |              |          |         |           |         |         |          |           |                |
 |AN7       |                     |         |MGTRREF_115               |         |           |              |          |         |           |         |         |          |           |                |
@@ -496,12 +496,12 @@ Pinout by Pin Number:
 |AN32      |                     |IOBM     |IO_L17P_12                |UNUSED   |           |12            |          |         |           |         |         |          |           |                |
 |AN33      |amc_port_tx_n<7>     |IOB      |IO_L8P_SRCC_12            |OUTPUT   |LVCMOS25*  |12            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |AN34      |amc_port_tx_n<6>     |IOB      |IO_L8N_SRCC_12            |OUTPUT   |LVCMOS25*  |12            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|AP1       |sfp_tx_p<1>          |OPAD     |MGTTXP0_112               |         |           |              |          |         |           |         |         |          |NO         |                |
-|AP2       |sfp_tx_n<1>          |OPAD     |MGTTXN0_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AP1       |sfp_tx_p<4>          |OPAD     |MGTTXP0_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AP2       |sfp_tx_n<4>          |OPAD     |MGTTXN0_112               |         |           |              |          |         |           |         |         |          |NO         |                |
 |AP3       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AP4       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
-|AP5       |sfp_rx_p<1>          |IPAD     |MGTRXP0_112               |         |           |              |          |         |           |         |         |          |NO         |                |
-|AP6       |sfp_rx_n<1>          |IPAD     |MGTRXN0_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AP5       |sfp_rx_p<4>          |IPAD     |MGTRXP0_112               |         |           |              |          |         |           |         |         |          |NO         |                |
+|AP6       |sfp_rx_n<4>          |IPAD     |MGTRXN0_112               |         |           |              |          |         |           |         |         |          |NO         |                |
 |AP7       |                     |         |MGTAVTTRCAL_115           |         |           |              |          |         |           |         |         |          |           |                |
 |AP8       |                     |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |AP9       |sram2_addr<18>       |IOB      |IO_L17N_A18_34            |OUTPUT   |LVCMOS25*  |34            |24        |FAST     |           |         |         |LOCATED   |NO         |NONE            |

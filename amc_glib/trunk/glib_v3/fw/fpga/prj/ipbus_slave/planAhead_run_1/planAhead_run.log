@@ -5,14 +5,13 @@
 
 INFO: [Common 17-78] Attempting to get a license: PlanAhead
 INFO: [Common 17-290] Got license for PlanAhead
-INFO: [Common 17-86] Your PlanAhead license expires in -206 day(s)
+INFO: [Common 17-86] Your PlanAhead license expires in -209 day(s)
 INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
 Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
 Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
 start_gui
 source C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/pa.fromNetlist.tcl
 # create_project -name ipbus_slave -dir "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/planAhead_run_1" -part xc6vlx130tff1156-1
-create_project: Time (s): elapsed = 00:00:11 . Memory (MB): peak = 406.688 ; gain = 63.844
 # set_property design_mode GateLvl [get_property srcset [current_run -impl]]
 # set_property edif_top_file "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/glib_top.ngc" [ get_property srcset [ current_run ] ]
 # add_files -norecurse { {C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave} {ipcore_dir} {../../src/system/cdce/cdce_phase_mon_v2/dpram} {../../src/system/ethernet/ipcore_dir/basex} {../../src/system/ethernet/ipcore_dir/sgmii} {../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ezdma2_ctrl_dpram} {../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ipbus_ctrl_dpram} {../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo} {../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo} {../../src/system/cdce/cdce_phase_mon_v2/pll} {../../src/system/pll} }
@@ -403,21 +402,6 @@ WARNING:NetListWriters:305 - Port bus ipb_from_slaves[1]_ipb_rdata has a
 WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
    ipb_from_slaves[1]_ipb_rdata on block ipbus_user_fabric using the data
    ipb_from_slaves[1]_ipb_rdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_from_slaves[2]_ipb_rdata has a
-   mismatched property name ipb_from_slaves on block ipbus_user_fabric.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_from_slaves[2]_ipb_rdata on block ipbus_user_fabric using the data
-   ipb_from_slaves[2]_ipb_rdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_from_slaves[3]_ipb_rdata has a
-   mismatched property name ipb_from_slaves on block ipbus_user_fabric.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_from_slaves[3]_ipb_rdata on block ipbus_user_fabric using the data
-   ipb_from_slaves[3]_ipb_rdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_from_slaves[4]_ipb_rdata has a
-   mismatched property name ipb_from_slaves on block ipbus_user_fabric.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_from_slaves[4]_ipb_rdata on block ipbus_user_fabric using the data
-   ipb_from_slaves[4]_ipb_rdata<31:0>.
 WARNING:NetListWriters:305 - Port bus ipb_to_slaves[0]_ipb_addr has a mismatched
    property name ipb_to_slaves on block ipbus_user_fabric.
 WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
@@ -438,38 +422,6 @@ WARNING:NetListWriters:305 - Port bus ipb_to_slaves[1]_ipb_wdata has a
 WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
    ipb_to_slaves[1]_ipb_wdata on block ipbus_user_fabric using the data
    ipb_to_slaves[1]_ipb_wdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_to_slaves[2]_ipb_addr has a mismatched
-   property name ipb_to_slaves on block ipbus_user_fabric.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_to_slaves[2]_ipb_addr on block ipbus_user_fabric using the data
-   ipb_to_slaves[2]_ipb_addr<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_to_slaves[2]_ipb_wdata has a
-   mismatched property name ipb_to_slaves on block ipbus_user_fabric.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_to_slaves[2]_ipb_wdata on block ipbus_user_fabric using the data
-   ipb_to_slaves[2]_ipb_wdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_to_slaves[3]_ipb_addr has a mismatched
-   property name ipb_to_slaves on block ipbus_user_fabric.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_to_slaves[3]_ipb_addr on block ipbus_user_fabric using the data
-   ipb_to_slaves[3]_ipb_addr<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_to_slaves[3]_ipb_wdata has a
-   mismatched property name ipb_to_slaves on block ipbus_user_fabric.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_to_slaves[3]_ipb_wdata on block ipbus_user_fabric using the data
-   ipb_to_slaves[3]_ipb_wdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_to_slaves[4]_ipb_addr has a mismatched
-   property name ipb_to_slaves on block ipbus_user_fabric.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_to_slaves[4]_ipb_addr on block ipbus_user_fabric using the data
-   ipb_to_slaves[4]_ipb_addr<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_to_slaves[4]_ipb_wdata has a
-   mismatched property name ipb_to_slaves on block ipbus_user_fabric.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_to_slaves[4]_ipb_wdata on block ipbus_user_fabric using the data
-   ipb_to_slaves[4]_ipb_wdata<31:0>.
-WARNING:NetListWriters:306 - Signal bus n0241<6 : 0> on block ipbus_user_fabric
-   is not reconstructed, because there are some missing bus signals.
 WARNING:NetListWriters:305 - Port bus wb_from_slaves[0]_wb_dat has a mismatched
    property name wb_from_slaves on block ipbus_to_wb_bridge.
 WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
@@ -683,21 +635,6 @@ WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[1]_ipb_rdata has a
 WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
    user_ipb_miso_i[1]_ipb_rdata on block system_core using the data
    user_ipb_miso_i[1]_ipb_rdata<31:0>.
-WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[2]_ipb_rdata has a
-   mismatched property name user_ipb_miso_i on block system_core.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   user_ipb_miso_i[2]_ipb_rdata on block system_core using the data
-   user_ipb_miso_i[2]_ipb_rdata<31:0>.
-WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[3]_ipb_rdata has a
-   mismatched property name user_ipb_miso_i on block system_core.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   user_ipb_miso_i[3]_ipb_rdata on block system_core using the data
-   user_ipb_miso_i[3]_ipb_rdata<31:0>.
-WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[4]_ipb_rdata has a
-   mismatched property name user_ipb_miso_i on block system_core.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   user_ipb_miso_i[4]_ipb_rdata on block system_core using the data
-   user_ipb_miso_i[4]_ipb_rdata<31:0>.
 WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_rdaddr has a
    mismatched property name user_sys_pcie_dma_o on block system_core.
 WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
@@ -1013,36 +950,6 @@ WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[1]_ipb_wdata has a
 WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
    user_ipb_mosi_o[1]_ipb_wdata on block system_core using the data
    user_ipb_mosi_o[1]_ipb_wdata<31:0>.
-WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[2]_ipb_addr has a
-   mismatched property name user_ipb_mosi_o on block system_core.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   user_ipb_mosi_o[2]_ipb_addr on block system_core using the data
-   user_ipb_mosi_o[2]_ipb_addr<31:0>.
-WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[2]_ipb_wdata has a
-   mismatched property name user_ipb_mosi_o on block system_core.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   user_ipb_mosi_o[2]_ipb_wdata on block system_core using the data
-   user_ipb_mosi_o[2]_ipb_wdata<31:0>.
-WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[3]_ipb_addr has a
-   mismatched property name user_ipb_mosi_o on block system_core.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   user_ipb_mosi_o[3]_ipb_addr on block system_core using the data
-   user_ipb_mosi_o[3]_ipb_addr<31:0>.
-WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[3]_ipb_wdata has a
-   mismatched property name user_ipb_mosi_o on block system_core.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   user_ipb_mosi_o[3]_ipb_wdata on block system_core using the data
-   user_ipb_mosi_o[3]_ipb_wdata<31:0>.
-WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[4]_ipb_addr has a
-   mismatched property name user_ipb_mosi_o on block system_core.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   user_ipb_mosi_o[4]_ipb_addr on block system_core using the data
-   user_ipb_mosi_o[4]_ipb_addr<31:0>.
-WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[4]_ipb_wdata has a
-   mismatched property name user_ipb_mosi_o on block system_core.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   user_ipb_mosi_o[4]_ipb_wdata on block system_core using the data
-   user_ipb_mosi_o[4]_ipb_wdata<31:0>.
 WARNING:NetListWriters:306 - Signal bus reg_status_sram[17 : 0] on block
    system_core is not reconstructed, because there are some missing bus signals.
 WARNING:NetListWriters:306 - Signal bus mac_rx_data[7 : 0] on block system_core
@@ -1390,36 +1297,6 @@ WARNING:NetListWriters:305 - Port bus ipb_mosi_i[1]_ipb_wdata has a mismatched
 WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
    ipb_mosi_i[1]_ipb_wdata on block user_logic using the data
    ipb_mosi_i[1]_ipb_wdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_mosi_i[2]_ipb_addr has a mismatched
-   property name ipb_mosi_i on block user_logic.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_mosi_i[2]_ipb_addr on block user_logic using the data
-   ipb_mosi_i[2]_ipb_addr<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_mosi_i[2]_ipb_wdata has a mismatched
-   property name ipb_mosi_i on block user_logic.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_mosi_i[2]_ipb_wdata on block user_logic using the data
-   ipb_mosi_i[2]_ipb_wdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_mosi_i[3]_ipb_addr has a mismatched
-   property name ipb_mosi_i on block user_logic.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_mosi_i[3]_ipb_addr on block user_logic using the data
-   ipb_mosi_i[3]_ipb_addr<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_mosi_i[3]_ipb_wdata has a mismatched
-   property name ipb_mosi_i on block user_logic.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_mosi_i[3]_ipb_wdata on block user_logic using the data
-   ipb_mosi_i[3]_ipb_wdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_mosi_i[4]_ipb_addr has a mismatched
-   property name ipb_mosi_i on block user_logic.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_mosi_i[4]_ipb_addr on block user_logic using the data
-   ipb_mosi_i[4]_ipb_addr<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_mosi_i[4]_ipb_wdata has a mismatched
-   property name ipb_mosi_i on block user_logic.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_mosi_i[4]_ipb_wdata on block user_logic using the data
-   ipb_mosi_i[4]_ipb_wdata<31:0>.
 WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_rddata has a
    mismatched property name user_sys_pcie_dma_o on block user_logic.
 WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
@@ -1610,28 +1487,9 @@ WARNING:NetListWriters:305 - Port bus ipb_miso_o[1]_ipb_rdata has a mismatched
 WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
    ipb_miso_o[1]_ipb_rdata on block user_logic using the data
    ipb_miso_o[1]_ipb_rdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_miso_o[2]_ipb_rdata has a mismatched
-   property name ipb_miso_o on block user_logic.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_miso_o[2]_ipb_rdata on block user_logic using the data
-   ipb_miso_o[2]_ipb_rdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_miso_o[3]_ipb_rdata has a mismatched
-   property name ipb_miso_o on block user_logic.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_miso_o[3]_ipb_rdata on block user_logic using the data
-   ipb_miso_o[3]_ipb_rdata<31:0>.
-WARNING:NetListWriters:305 - Port bus ipb_miso_o[4]_ipb_rdata has a mismatched
-   property name ipb_miso_o on block user_logic.
-WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
-   ipb_miso_o[4]_ipb_rdata on block user_logic using the data
-   ipb_miso_o[4]_ipb_rdata<31:0>.
-WARNING:NetListWriters:306 - Signal bus rx_kchar<7 : 0> on block user_logic is
-   not reconstructed, because there are some missing bus signals.
-WARNING:NetListWriters:306 - Signal bus rx_data<63 : 0> on block user_logic is
-   not reconstructed, because there are some missing bus signals.
   finished :Prep
 Writing EDIF netlist file glib_top.edif ...
-ngc2edif: Total memory usage is 134980 kilobytes
+ngc2edif: Total memory usage is 135876 kilobytes
 
 Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/glib_top_ngc_zx.edif]
 Finished Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/glib_top_ngc_zx.edif]
@@ -1645,7 +1503,7 @@ Processing design ...
    Preping design's macros ...
   finished :Prep
 Writing EDIF netlist file v6_emac_v2_3_basex.edif ...
-ngc2edif: Total memory usage is 78468 kilobytes
+ngc2edif: Total memory usage is 78212 kilobytes
 
 Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/ethernet/ipcore_dir/basex/v6_emac_v2_3_basex.ngc' for (cell view 'v6_emac_v2_3_basex', library 'glib_top_lib', file 'glib_top.ngc')
 Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/v6_emac_v2_3_basex_ngc_zx.edif]
@@ -1660,7 +1518,7 @@ Processing design ...
    Preping design's macros ...
   finished :Prep
 Writing EDIF netlist file v6_emac_v2_3_sgmii.edif ...
-ngc2edif: Total memory usage is 78148 kilobytes
+ngc2edif: Total memory usage is 77892 kilobytes
 
 Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/ethernet/ipcore_dir/sgmii/v6_emac_v2_3_sgmii.ngc' for (cell view 'v6_emac_v2_3_sgmii', library 'glib_top_lib', file 'glib_top.ngc')
 Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/v6_emac_v2_3_sgmii_ngc_zx.edif]
@@ -1689,7 +1547,7 @@ Processing design ...
    Preping design's macros ...
   finished :Prep
 Writing EDIF netlist file buffer_fifo.edif ...
-ngc2edif: Total memory usage is 77764 kilobytes
+ngc2edif: Total memory usage is 77956 kilobytes
 
 Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ngc' for (cell view 'buffer_fifo', library 'glib_top_lib', file 'glib_top.ngc')
 Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/buffer_fifo_ngc_zx.edif]
@@ -1704,7 +1562,7 @@ Processing design ...
    Preping design's macros ...
   finished :Prep
 Writing EDIF netlist file chipscope_vio.edif ...
-ngc2edif: Total memory usage is 78468 kilobytes
+ngc2edif: Total memory usage is 79300 kilobytes
 
 Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_vio.ngc' for (cell view 'chipscope_vio', library 'glib_top_lib', file 'glib_top.ngc')
 Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/chipscope_vio_ngc_zx.edif]
@@ -1725,7 +1583,7 @@ WARNING:NetListWriters:306 - Signal bus
    not reconstructed, because there are some missing bus signals.
   finished :Prep
 Writing EDIF netlist file chipscope_ila.edif ...
-ngc2edif: Total memory usage is 82244 kilobytes
+ngc2edif: Total memory usage is 82756 kilobytes
 
 Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_ila.ngc' for (cell view 'chipscope_ila', library 'glib_top_lib', file 'glib_top.ngc')
 Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/chipscope_ila_ngc_zx.edif]
@@ -1743,7 +1601,7 @@ WARNING:NetListWriters:306 - Signal bus U0/U_ICON/iCORE_ID_SEL<15 : 0> on block
    signals.
   finished :Prep
 Writing EDIF netlist file chipscope_icon.edif ...
-ngc2edif: Total memory usage is 78340 kilobytes
+ngc2edif: Total memory usage is 77444 kilobytes
 
 Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_icon.ngc' for (cell view 'chipscope_icon', library 'glib_top_lib', file 'glib_top.ngc')
 Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/chipscope_icon_ngc_zx.edif]
@@ -1794,158 +1652,19 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 20 instances
   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 8 instances
 
-Phase 0 | Netlist Checksum: c19028d6
-link_design: Time (s): elapsed = 00:01:36 . Memory (MB): peak = 747.980 ; gain = 337.031
+Phase 0 | Netlist Checksum: a9f6722f
+link_design: Time (s): elapsed = 00:01:14 . Memory (MB): peak = 761.609 ; gain = 379.090
 INFO: [Power 33-160] Power Analysis is not supported for 6-series devices.
-startgroup
-create_pblock pblock_gtx_wrapper_inst
-resize_pblock pblock_gtx_wrapper_inst -add SLICE_X96Y0:SLICE_X105Y37
-add_cells_to_pblock pblock_gtx_wrapper_inst [get_cells [list usr/gtx_wrapper_inst]] -clear_locs
-endgroup
-delete_pblock [get_pblocks  pblock_gtx_wrapper_inst]
-startgroup
-create_pblock pblock_gtx_rx_mux_inst
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X92Y20:SLICE_X105Y39
-add_cells_to_pblock pblock_gtx_rx_mux_inst [get_cells [list usr/gtx_rx_mux_inst]] -clear_locs
-endgroup
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y20:SLICE_X105Y39 -remove SLICE_X92Y20:SLICE_X105Y39 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y20:SLICE_X105Y26 -remove SLICE_X102Y20:SLICE_X105Y39 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y20:SLICE_X105Y23 -remove SLICE_X102Y20:SLICE_X105Y26 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y20:SLICE_X105Y22 -remove SLICE_X102Y20:SLICE_X105Y23 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X104Y20:SLICE_X105Y22 -remove SLICE_X102Y20:SLICE_X105Y22 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y20:SLICE_X105Y22 -remove SLICE_X104Y20:SLICE_X105Y22 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -from SLICE_X102Y20:SLICE_X105Y22 -to SLICE_X102Y2:SLICE_X105Y4 -locs keep_all
-startgroup
-create_pblock pblock_gtx_tx_mux_inst
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y5:SLICE_X105Y7
-add_cells_to_pblock pblock_gtx_tx_mux_inst [get_cells [list usr/gtx_tx_mux_inst]] -clear_locs
-endgroup
-INFO: [Power 33-160] Power Analysis is not supported for 6-series devices.
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y3:SLICE_X105Y4 -remove SLICE_X102Y2:SLICE_X105Y4 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -from SLICE_X102Y5:SLICE_X105Y7 -to SLICE_X100Y5:SLICE_X103Y7 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -from SLICE_X100Y5:SLICE_X103Y7 -to SLICE_X102Y5:SLICE_X105Y7 -locs keep_all
 startgroup
 create_pblock pblock_ipb_vfat2_inst
-resize_pblock pblock_ipb_vfat2_inst -add SLICE_X98Y3:SLICE_X101Y8
+resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X88Y1:SLICE_X99Y10 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1}
 add_cells_to_pblock pblock_ipb_vfat2_inst [get_cells [list usr/ipb_vfat2_inst]] -clear_locs
 endgroup
-resize_pblock pblock_ipb_vfat2_inst -add SLICE_X98Y3:SLICE_X101Y7 -remove SLICE_X98Y3:SLICE_X101Y8 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add SLICE_X90Y3:SLICE_X101Y7 -remove SLICE_X98Y3:SLICE_X101Y7 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -from SLICE_X90Y3:SLICE_X101Y7 -to SLICE_X86Y3:SLICE_X97Y7 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -from SLICE_X86Y3:SLICE_X97Y7 -to SLICE_X90Y3:SLICE_X101Y7 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add SLICE_X92Y3:SLICE_X101Y7 -remove SLICE_X90Y3:SLICE_X101Y7 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -from SLICE_X92Y3:SLICE_X101Y7 -to SLICE_X90Y4:SLICE_X99Y8 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -from SLICE_X90Y4:SLICE_X99Y8 -to SLICE_X92Y5:SLICE_X101Y9 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y5:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove SLICE_X92Y5:SLICE_X101Y9 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y1:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove {SLICE_X92Y5:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y5:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove {SLICE_X92Y1:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y5:SLICE_X95Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove {SLICE_X92Y5:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y5:SLICE_X97Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove {SLICE_X92Y5:SLICE_X95Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y5:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove {SLICE_X92Y5:SLICE_X97Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y5:SLICE_X105Y7 -remove SLICE_X102Y5:SLICE_X105Y7 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -from SLICE_X92Y5:SLICE_X101Y9 -to SLICE_X92Y0:SLICE_X101Y4 -from RAMB18_X5Y2:RAMB18_X5Y3 -to RAMB18_X5Y0:RAMB18_X5Y1 -from RAMB36_X5Y1:RAMB36_X5Y1 -to RAMB36_X5Y0:RAMB36_X5Y0 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y0:SLICE_X101Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -remove {SLICE_X92Y0:SLICE_X101Y4 RAMB18_X5Y0:RAMB18_X5Y1 RAMB36_X5Y0:RAMB36_X5Y0} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y0:SLICE_X101Y4 RAMB18_X5Y0:RAMB18_X5Y1 RAMB36_X5Y0:RAMB36_X5Y0} -remove {SLICE_X92Y0:SLICE_X101Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y2:SLICE_X105Y4 -remove SLICE_X102Y3:SLICE_X105Y4 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -from SLICE_X102Y2:SLICE_X105Y4 -to SLICE_X102Y0:SLICE_X105Y2 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y5:SLICE_X105Y6 -remove SLICE_X102Y5:SLICE_X105Y7 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y5:SLICE_X105Y7 -remove SLICE_X102Y5:SLICE_X105Y6 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y0:SLICE_X105Y1 -remove SLICE_X102Y0:SLICE_X105Y2 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y2:SLICE_X105Y5 -remove SLICE_X102Y5:SLICE_X105Y7 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y2:SLICE_X105Y4 -remove SLICE_X102Y2:SLICE_X105Y5 -locs keep_all
+resize_pblock pblock_ipb_vfat2_inst -from SLICE_X88Y1:SLICE_X99Y10 -to SLICE_X88Y0:SLICE_X99Y9 -from RAMB18_X5Y2:RAMB18_X5Y3 -to RAMB18_X5Y0:RAMB18_X5Y3 -from RAMB36_X5Y1:RAMB36_X5Y1 -to RAMB36_X5Y0:RAMB36_X5Y1 -locs keep_all
+resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X88Y0:SLICE_X99Y9 DSP48_X5Y0:DSP48_X5Y3 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -remove {SLICE_X88Y0:SLICE_X99Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -locs keep_all
+resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X88Y0:SLICE_X99Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -remove {SLICE_X88Y0:SLICE_X99Y9 DSP48_X5Y0:DSP48_X5Y3 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -locs keep_all
 save_constraints
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y0:SLICE_X101Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -remove {SLICE_X92Y0:SLICE_X101Y4 RAMB18_X5Y0:RAMB18_X5Y1 RAMB36_X5Y0:RAMB36_X5Y0} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y0:SLICE_X99Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -remove {SLICE_X92Y0:SLICE_X101Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -from SLICE_X102Y2:SLICE_X105Y4 -to SLICE_X100Y7:SLICE_X103Y9 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X100Y7:SLICE_X105Y9 -remove SLICE_X100Y7:SLICE_X103Y9 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X100Y5:SLICE_X105Y9 -remove SLICE_X100Y7:SLICE_X105Y9 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X100Y0:SLICE_X105Y4 -remove SLICE_X102Y0:SLICE_X105Y1 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add {SLICE_X100Y0:SLICE_X105Y4 RAMB18_X6Y0:RAMB18_X6Y1 RAMB36_X6Y0:RAMB36_X6Y0} -remove SLICE_X100Y0:SLICE_X105Y4 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add {SLICE_X100Y5:SLICE_X105Y9 RAMB18_X6Y2:RAMB18_X6Y3 RAMB36_X6Y1:RAMB36_X6Y1} -remove SLICE_X100Y5:SLICE_X105Y9 -locs keep_all
-save_constraints
-startgroup
-create_pblock pblock_chipscope_ila_inst
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X92Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3}
-add_cells_to_pblock pblock_chipscope_ila_inst [get_cells [list usr/chipscope_ila_inst]] -clear_locs
-endgroup
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X90Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3} -remove {SLICE_X92Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X92Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3} -remove {SLICE_X90Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X92Y10:SLICE_X105Y29 RAMB18_X5Y4:RAMB18_X6Y11 RAMB36_X5Y2:RAMB36_X6Y5} -remove {SLICE_X92Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X88Y10:SLICE_X105Y29 DSP48_X5Y4:DSP48_X5Y11 RAMB18_X5Y4:RAMB18_X6Y11 RAMB36_X5Y2:RAMB36_X6Y5} -remove {SLICE_X92Y10:SLICE_X105Y29 RAMB18_X5Y4:RAMB18_X6Y11 RAMB36_X5Y2:RAMB36_X6Y5} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -from SLICE_X88Y10:SLICE_X105Y29 -to SLICE_X68Y0:SLICE_X91Y19 -from DSP48_X5Y4:DSP48_X5Y11 -to DSP48_X3Y0:DSP48_X5Y7 -from RAMB18_X5Y4:RAMB18_X6Y11 -to RAMB18_X4Y0:RAMB18_X4Y7 -from RAMB36_X5Y2:RAMB36_X6Y5 -to RAMB36_X4Y0:RAMB36_X4Y3 -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X68Y0:SLICE_X91Y19 DSP48_X3Y0:DSP48_X5Y7 RAMB18_X3Y0:RAMB18_X4Y7 RAMB36_X3Y0:RAMB36_X4Y3} -remove {SLICE_X68Y0:SLICE_X91Y19 DSP48_X3Y0:DSP48_X5Y7 RAMB18_X4Y0:RAMB18_X4Y7 RAMB36_X4Y0:RAMB36_X4Y3} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X68Y0:SLICE_X91Y9 DSP48_X3Y0:DSP48_X5Y3 RAMB18_X3Y0:RAMB18_X4Y3 RAMB36_X3Y0:RAMB36_X4Y1} -remove {SLICE_X68Y0:SLICE_X91Y19 DSP48_X3Y0:DSP48_X5Y7 RAMB18_X3Y0:RAMB18_X4Y7 RAMB36_X3Y0:RAMB36_X4Y3} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X68Y0:SLICE_X91Y14 DSP48_X3Y0:DSP48_X5Y5 RAMB18_X3Y0:RAMB18_X4Y5 RAMB36_X3Y0:RAMB36_X4Y2} -remove {SLICE_X68Y0:SLICE_X91Y9 DSP48_X3Y0:DSP48_X5Y3 RAMB18_X3Y0:RAMB18_X4Y3 RAMB36_X3Y0:RAMB36_X4Y1} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X76Y0:SLICE_X91Y14 DSP48_X4Y0:DSP48_X5Y5 RAMB18_X4Y0:RAMB18_X4Y5 RAMB36_X4Y0:RAMB36_X4Y2} -remove {SLICE_X68Y0:SLICE_X91Y14 DSP48_X3Y0:DSP48_X5Y5 RAMB18_X3Y0:RAMB18_X4Y5 RAMB36_X3Y0:RAMB36_X4Y2} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X68Y0:SLICE_X91Y14 DSP48_X3Y0:DSP48_X5Y5 RAMB18_X3Y0:RAMB18_X4Y5 RAMB36_X3Y0:RAMB36_X4Y2} -remove {SLICE_X76Y0:SLICE_X91Y14 DSP48_X4Y0:DSP48_X5Y5 RAMB18_X4Y0:RAMB18_X4Y5 RAMB36_X4Y0:RAMB36_X4Y2} -locs keep_all
-refresh_design
-Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/glib_top_ngc_zx.edif]
-Finished Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/glib_top_ngc_zx.edif]
-Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/ethernet/ipcore_dir/basex/v6_emac_v2_3_basex.ngc' for (cell view 'v6_emac_v2_3_basex', library 'glib_top_lib', file 'glib_top.ngc')
-Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/v6_emac_v2_3_basex_ngc_zx.edif]
-Finished Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/v6_emac_v2_3_basex_ngc_zx.edif]
-Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/ethernet/ipcore_dir/sgmii/v6_emac_v2_3_sgmii.ngc' for (cell view 'v6_emac_v2_3_sgmii', library 'glib_top_lib', file 'glib_top.ngc')
-Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/v6_emac_v2_3_sgmii_ngc_zx.edif]
-Finished Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/v6_emac_v2_3_sgmii_ngc_zx.edif]
-Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ngc' for (cell view 'ttclk_distributed_dpram', library 'glib_top_lib', file 'glib_top.ngc')
-Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/ttclk_distributed_dpram_ngc_zx.edif]
-Finished Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/ttclk_distributed_dpram_ngc_zx.edif]
-Release 14.7 - ngc2edif P.20131013 (nt64)
-Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
-Reading design buffer_fifo.ngc ...
-WARNING:NetListWriters:298 - No output is written to buffer_fifo.xncf, ignored.
-Processing design ...
-   Preping design's networks ...
-   Preping design's macros ...
-  finished :Prep
-Writing EDIF netlist file buffer_fifo.edif ...
-ngc2edif: Total memory usage is 78468 kilobytes
-
-Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ngc' for (cell view 'buffer_fifo', library 'glib_top_lib', file 'glib_top.ngc')
-Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/buffer_fifo_ngc_zx.edif]
-Finished Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/buffer_fifo_ngc_zx.edif]
-Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_vio.ngc' for (cell view 'chipscope_vio', library 'glib_top_lib', file 'glib_top.ngc')
-Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/chipscope_vio_ngc_zx.edif]
-Finished Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/chipscope_vio_ngc_zx.edif]
-Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_ila.ngc' for (cell view 'chipscope_ila', library 'glib_top_lib', file 'glib_top.ngc')
-Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/chipscope_ila_ngc_zx.edif]
-Finished Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/chipscope_ila_ngc_zx.edif]
-Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_icon.ngc' for (cell view 'chipscope_icon', library 'glib_top_lib', file 'glib_top.ngc')
-Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/chipscope_icon_ngc_zx.edif]
-Finished Parsing EDIF File [./planAhead_run_1/ipbus_slave.data/cache/chipscope_icon_ngc_zx.edif]
-INFO: [Netlist 29-17] Analyzing 102 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ncf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ncf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ncf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ncf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_icon.ncf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_icon.ncf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_ila.ncf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_ila.ncf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_vio.ncf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_vio.ncf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/ethernet/ipcore_dir/basex/v6_emac_v2_3_basex.ncf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/ethernet/ipcore_dir/basex/v6_emac_v2_3_basex.ncf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/planahead.ucf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/planahead.ucf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system.ucf]
-INFO: [Designutils 20-22] PART constraint ignored, using PlanAhead selected device [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system.ucf:6]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system.ucf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system_clk.ucf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system_clk.ucf]
-Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/gtx.ucf]
-Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/gtx.ucf]
-refresh_design: Time (s): elapsed = 00:00:21 . Memory (MB): peak = 909.379 ; gain = 0.000
 exit
 ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
-INFO: [Common 17-206] Exiting PlanAhead at Fri Jul 25 16:55:06 2014...
+INFO: [Common 17-206] Exiting PlanAhead at Mon Jul 28 15:33:17 2014...
 INFO: [Common 17-83] Releasing license: PlanAhead

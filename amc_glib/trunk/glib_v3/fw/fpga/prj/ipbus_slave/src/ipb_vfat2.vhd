@@ -157,13 +157,28 @@ begin
 
                 if (state = 0) then
                 
-                    rd_en <= '1';
                     
-                    ipb_ack <= '0';
+                    if (ipb_mosi_i.ipb_strobe = '1') then
                     
-                    ipb_error <= '0';
+                        rd_en <= '1';
+                        
+                        ipb_ack <= '0';
+                        
+                        ipb_error <= '0';
+                        
+                        state := 1;
+                     
+                    else
                     
-                    state := 1;
+                        rd_en <= '0';
+                        
+                        ipb_ack <= '0';
+                        
+                        ipb_error <= '0';
+                        
+                        state := 0;
+                    
+                    end if;
                     
                 elsif (state = 1) then
                 

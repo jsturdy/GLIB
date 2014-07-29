@@ -1,91 +1,19 @@
 #-----------------------------------------------------------
 # PlanAhead v14.7 (64-bit)
 # Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
-# Start of session at: Fri Jul 25 13:35:23 2014
-# Process ID: 824
+# Start of session at: Mon Jul 28 15:30:28 2014
+# Process ID: 3140
 # Log file: C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/planAhead_run_1/planAhead.log
 # Journal file: C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/planAhead_run_1/planAhead.jou
 #-----------------------------------------------------------
 start_gui
 source C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/pa.fromNetlist.tcl
 startgroup
-create_pblock pblock_gtx_wrapper_inst
-resize_pblock pblock_gtx_wrapper_inst -add SLICE_X96Y0:SLICE_X105Y37
-add_cells_to_pblock pblock_gtx_wrapper_inst [get_cells [list usr/gtx_wrapper_inst]] -clear_locs
-endgroup
-delete_pblock [get_pblocks  pblock_gtx_wrapper_inst]
-startgroup
-create_pblock pblock_gtx_rx_mux_inst
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X92Y20:SLICE_X105Y39
-add_cells_to_pblock pblock_gtx_rx_mux_inst [get_cells [list usr/gtx_rx_mux_inst]] -clear_locs
-endgroup
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y20:SLICE_X105Y39 -remove SLICE_X92Y20:SLICE_X105Y39 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y20:SLICE_X105Y26 -remove SLICE_X102Y20:SLICE_X105Y39 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y20:SLICE_X105Y23 -remove SLICE_X102Y20:SLICE_X105Y26 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y20:SLICE_X105Y22 -remove SLICE_X102Y20:SLICE_X105Y23 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X104Y20:SLICE_X105Y22 -remove SLICE_X102Y20:SLICE_X105Y22 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y20:SLICE_X105Y22 -remove SLICE_X104Y20:SLICE_X105Y22 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -from SLICE_X102Y20:SLICE_X105Y22 -to SLICE_X102Y2:SLICE_X105Y4 -locs keep_all
-startgroup
-create_pblock pblock_gtx_tx_mux_inst
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y5:SLICE_X105Y7
-add_cells_to_pblock pblock_gtx_tx_mux_inst [get_cells [list usr/gtx_tx_mux_inst]] -clear_locs
-endgroup
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y3:SLICE_X105Y4 -remove SLICE_X102Y2:SLICE_X105Y4 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -from SLICE_X102Y5:SLICE_X105Y7 -to SLICE_X100Y5:SLICE_X103Y7 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -from SLICE_X100Y5:SLICE_X103Y7 -to SLICE_X102Y5:SLICE_X105Y7 -locs keep_all
-startgroup
 create_pblock pblock_ipb_vfat2_inst
-resize_pblock pblock_ipb_vfat2_inst -add SLICE_X98Y3:SLICE_X101Y8
+resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X88Y1:SLICE_X99Y10 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1}
 add_cells_to_pblock pblock_ipb_vfat2_inst [get_cells [list usr/ipb_vfat2_inst]] -clear_locs
 endgroup
-resize_pblock pblock_ipb_vfat2_inst -add SLICE_X98Y3:SLICE_X101Y7 -remove SLICE_X98Y3:SLICE_X101Y8 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add SLICE_X90Y3:SLICE_X101Y7 -remove SLICE_X98Y3:SLICE_X101Y7 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -from SLICE_X90Y3:SLICE_X101Y7 -to SLICE_X86Y3:SLICE_X97Y7 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -from SLICE_X86Y3:SLICE_X97Y7 -to SLICE_X90Y3:SLICE_X101Y7 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add SLICE_X92Y3:SLICE_X101Y7 -remove SLICE_X90Y3:SLICE_X101Y7 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -from SLICE_X92Y3:SLICE_X101Y7 -to SLICE_X90Y4:SLICE_X99Y8 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -from SLICE_X90Y4:SLICE_X99Y8 -to SLICE_X92Y5:SLICE_X101Y9 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y5:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove SLICE_X92Y5:SLICE_X101Y9 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y1:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove {SLICE_X92Y5:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y5:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove {SLICE_X92Y1:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y5:SLICE_X95Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove {SLICE_X92Y5:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y5:SLICE_X97Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove {SLICE_X92Y5:SLICE_X95Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y5:SLICE_X101Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -remove {SLICE_X92Y5:SLICE_X97Y9 RAMB18_X5Y2:RAMB18_X5Y3 RAMB36_X5Y1:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y5:SLICE_X105Y7 -remove SLICE_X102Y5:SLICE_X105Y7 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -from SLICE_X92Y5:SLICE_X101Y9 -to SLICE_X92Y0:SLICE_X101Y4 -from RAMB18_X5Y2:RAMB18_X5Y3 -to RAMB18_X5Y0:RAMB18_X5Y1 -from RAMB36_X5Y1:RAMB36_X5Y1 -to RAMB36_X5Y0:RAMB36_X5Y0 -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y0:SLICE_X101Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -remove {SLICE_X92Y0:SLICE_X101Y4 RAMB18_X5Y0:RAMB18_X5Y1 RAMB36_X5Y0:RAMB36_X5Y0} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y0:SLICE_X101Y4 RAMB18_X5Y0:RAMB18_X5Y1 RAMB36_X5Y0:RAMB36_X5Y0} -remove {SLICE_X92Y0:SLICE_X101Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y2:SLICE_X105Y4 -remove SLICE_X102Y3:SLICE_X105Y4 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -from SLICE_X102Y2:SLICE_X105Y4 -to SLICE_X102Y0:SLICE_X105Y2 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y5:SLICE_X105Y6 -remove SLICE_X102Y5:SLICE_X105Y7 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y5:SLICE_X105Y7 -remove SLICE_X102Y5:SLICE_X105Y6 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X102Y0:SLICE_X105Y1 -remove SLICE_X102Y0:SLICE_X105Y2 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y2:SLICE_X105Y5 -remove SLICE_X102Y5:SLICE_X105Y7 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X102Y2:SLICE_X105Y4 -remove SLICE_X102Y2:SLICE_X105Y5 -locs keep_all
+resize_pblock pblock_ipb_vfat2_inst -from SLICE_X88Y1:SLICE_X99Y10 -to SLICE_X88Y0:SLICE_X99Y9 -from RAMB18_X5Y2:RAMB18_X5Y3 -to RAMB18_X5Y0:RAMB18_X5Y3 -from RAMB36_X5Y1:RAMB36_X5Y1 -to RAMB36_X5Y0:RAMB36_X5Y1 -locs keep_all
+resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X88Y0:SLICE_X99Y9 DSP48_X5Y0:DSP48_X5Y3 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -remove {SLICE_X88Y0:SLICE_X99Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -locs keep_all
+resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X88Y0:SLICE_X99Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -remove {SLICE_X88Y0:SLICE_X99Y9 DSP48_X5Y0:DSP48_X5Y3 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -locs keep_all
 save_constraints
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y0:SLICE_X101Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -remove {SLICE_X92Y0:SLICE_X101Y4 RAMB18_X5Y0:RAMB18_X5Y1 RAMB36_X5Y0:RAMB36_X5Y0} -locs keep_all
-resize_pblock pblock_ipb_vfat2_inst -add {SLICE_X92Y0:SLICE_X99Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -remove {SLICE_X92Y0:SLICE_X101Y9 RAMB18_X5Y0:RAMB18_X5Y3 RAMB36_X5Y0:RAMB36_X5Y1} -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -from SLICE_X102Y2:SLICE_X105Y4 -to SLICE_X100Y7:SLICE_X103Y9 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X100Y7:SLICE_X105Y9 -remove SLICE_X100Y7:SLICE_X103Y9 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add SLICE_X100Y5:SLICE_X105Y9 -remove SLICE_X100Y7:SLICE_X105Y9 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add SLICE_X100Y0:SLICE_X105Y4 -remove SLICE_X102Y0:SLICE_X105Y1 -locs keep_all
-resize_pblock pblock_gtx_rx_mux_inst -add {SLICE_X100Y0:SLICE_X105Y4 RAMB18_X6Y0:RAMB18_X6Y1 RAMB36_X6Y0:RAMB36_X6Y0} -remove SLICE_X100Y0:SLICE_X105Y4 -locs keep_all
-resize_pblock pblock_gtx_tx_mux_inst -add {SLICE_X100Y5:SLICE_X105Y9 RAMB18_X6Y2:RAMB18_X6Y3 RAMB36_X6Y1:RAMB36_X6Y1} -remove SLICE_X100Y5:SLICE_X105Y9 -locs keep_all
-save_constraints
-startgroup
-create_pblock pblock_chipscope_ila_inst
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X92Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3}
-add_cells_to_pblock pblock_chipscope_ila_inst [get_cells [list usr/chipscope_ila_inst]] -clear_locs
-endgroup
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X90Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3} -remove {SLICE_X92Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X92Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3} -remove {SLICE_X90Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X92Y10:SLICE_X105Y29 RAMB18_X5Y4:RAMB18_X6Y11 RAMB36_X5Y2:RAMB36_X6Y5} -remove {SLICE_X92Y10:SLICE_X105Y19 RAMB18_X5Y4:RAMB18_X6Y7 RAMB36_X5Y2:RAMB36_X6Y3} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X88Y10:SLICE_X105Y29 DSP48_X5Y4:DSP48_X5Y11 RAMB18_X5Y4:RAMB18_X6Y11 RAMB36_X5Y2:RAMB36_X6Y5} -remove {SLICE_X92Y10:SLICE_X105Y29 RAMB18_X5Y4:RAMB18_X6Y11 RAMB36_X5Y2:RAMB36_X6Y5} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -from SLICE_X88Y10:SLICE_X105Y29 -to SLICE_X68Y0:SLICE_X91Y19 -from DSP48_X5Y4:DSP48_X5Y11 -to DSP48_X3Y0:DSP48_X5Y7 -from RAMB18_X5Y4:RAMB18_X6Y11 -to RAMB18_X4Y0:RAMB18_X4Y7 -from RAMB36_X5Y2:RAMB36_X6Y5 -to RAMB36_X4Y0:RAMB36_X4Y3 -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X68Y0:SLICE_X91Y19 DSP48_X3Y0:DSP48_X5Y7 RAMB18_X3Y0:RAMB18_X4Y7 RAMB36_X3Y0:RAMB36_X4Y3} -remove {SLICE_X68Y0:SLICE_X91Y19 DSP48_X3Y0:DSP48_X5Y7 RAMB18_X4Y0:RAMB18_X4Y7 RAMB36_X4Y0:RAMB36_X4Y3} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X68Y0:SLICE_X91Y9 DSP48_X3Y0:DSP48_X5Y3 RAMB18_X3Y0:RAMB18_X4Y3 RAMB36_X3Y0:RAMB36_X4Y1} -remove {SLICE_X68Y0:SLICE_X91Y19 DSP48_X3Y0:DSP48_X5Y7 RAMB18_X3Y0:RAMB18_X4Y7 RAMB36_X3Y0:RAMB36_X4Y3} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X68Y0:SLICE_X91Y14 DSP48_X3Y0:DSP48_X5Y5 RAMB18_X3Y0:RAMB18_X4Y5 RAMB36_X3Y0:RAMB36_X4Y2} -remove {SLICE_X68Y0:SLICE_X91Y9 DSP48_X3Y0:DSP48_X5Y3 RAMB18_X3Y0:RAMB18_X4Y3 RAMB36_X3Y0:RAMB36_X4Y1} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X76Y0:SLICE_X91Y14 DSP48_X4Y0:DSP48_X5Y5 RAMB18_X4Y0:RAMB18_X4Y5 RAMB36_X4Y0:RAMB36_X4Y2} -remove {SLICE_X68Y0:SLICE_X91Y14 DSP48_X3Y0:DSP48_X5Y5 RAMB18_X3Y0:RAMB18_X4Y5 RAMB36_X3Y0:RAMB36_X4Y2} -locs keep_all
-resize_pblock pblock_chipscope_ila_inst -add {SLICE_X68Y0:SLICE_X91Y14 DSP48_X3Y0:DSP48_X5Y5 RAMB18_X3Y0:RAMB18_X4Y5 RAMB36_X3Y0:RAMB36_X4Y2} -remove {SLICE_X76Y0:SLICE_X91Y14 DSP48_X4Y0:DSP48_X5Y5 RAMB18_X4Y0:RAMB18_X4Y5 RAMB36_X4Y0:RAMB36_X4Y2} -locs keep_all
-refresh_design

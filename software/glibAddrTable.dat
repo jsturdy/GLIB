@@ -3,9 +3,37 @@
 *------------------------------------------------------------------------------------------
 * RegName           	RegAddr     RegMask      R     W     Description
 *------------------------------------------------------------------------------------------
+
+
+vfat2_response          40030000    ffffffff     1     1
+
 vfat2_ctrl0             40010500    ffffffff     1     1
 vfat2_ctrl1             40010501    ffffffff     1     1
-vfat2_ctrl2             40010502    ffffffff     1     1
+vfat2_impreampin        40010502    ffffffff     1     1
+vfat2_impreampfeed      40010503    ffffffff     1     1
+vfat2_impreampout       40010504    ffffffff     1     1
+vfat2_ishaper           40010505    ffffffff     1     1
+vfat2_ishaperfeed       40010506    ffffffff     1     1
+vfat2_icomp             40010507    ffffffff     1     1
+vfat2_chipid0           40010508    ffffffff     1     0
+vfat2_chipid1           40010509    ffffffff     1     0
+vfat2_upsetreg          4001050A    ffffffff     1     0
+vfat2_hitcounter0       4001050B    ffffffff     1     0
+vfat2_hitcounter1       4001050C    ffffffff     1     0
+vfat2_hitcounter2       4001050D    ffffffff     1     0
+vfat2_extregpointer     4001050E    ffffffff     1     1
+vfat2_extregdata        4001050F    ffffffff     1     1
+vfat2_lat               40010510    ffffffff     1     1
+vfat2_channel1          40010511    ffffffff     1     1
+vfat2_channel2          40010512    ffffffff     1     1
+vfat2_channel10         40010520    ffffffff     1     1
+vfat2_vcal              40010591    ffffffff     1     1
+vfat2_vthreshold1       40010592    ffffffff     1     1
+vfat2_vthreshold2       40010593    ffffffff     1     1
+vfat2_calphase          40010594    ffffffff     1     1
+vfat2_ctrl2             40010595    ffffffff     1     1
+vfat2_ctrl3             40010596    ffffffff     1     1
+vfat2_spare             40010597    ffffffff     1     1
 
 
 

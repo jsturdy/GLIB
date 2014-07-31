@@ -19,17 +19,22 @@ package user_package is
 
 
     --=== ipb slaves =============--
-    constant number_of_ipb_slaves       : positive := 2;
+    constant number_of_ipb_slaves       : positive := 6;
 
-    constant ipbus_vfat2_request_nb     : integer := 0;
-    constant ipbus_vfat2_response_nb    : integer := 1;
+    constant ipbus_vfat2_request_0      : integer := 0;
+    constant ipbus_vfat2_request_1      : integer := 1;
+    constant ipbus_vfat2_request_2      : integer := 2;
+    
+    constant ipbus_vfat2_response_0     : integer := 3;
+    constant ipbus_vfat2_response_1     : integer := 4;
+    constant ipbus_vfat2_response_2     : integer := 5;
   
     
     --=== Package types ==========--
-    constant def_gtx_idle               : std_logic_vector(7 downto 0) := x"08";  
-    constant def_gtx_vfat2_request      : std_logic_vector(7 downto 0) := x"04";  
-    constant def_gtx_optohybrid_request : std_logic_vector(7 downto 0) := x"03";  
-    constant def_gtx_tracking_data      : std_logic_vector(7 downto 0) := x"00";  
+    constant def_gtx_idle               : std_logic_vector(7 downto 0) := x"00";  
+    constant def_gtx_vfat2              : std_logic_vector(7 downto 0) := x"01";  
+    constant def_gtx_trigger            : std_logic_vector(7 downto 0) := x"02";  
+    constant def_gtx_tracking           : std_logic_vector(7 downto 0) := x"03";  
     
 end user_package;
    

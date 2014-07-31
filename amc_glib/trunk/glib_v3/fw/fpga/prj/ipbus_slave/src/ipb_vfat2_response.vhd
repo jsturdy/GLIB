@@ -113,7 +113,7 @@ begin
                         data_byte := data_out(15 downto 8);
                         
                         -- CRC
-                        crc_byte := def_gtx_vfat2_request xor chip_byte xor register_byte xor data_byte;       
+                        crc_byte := def_gtx_vfat2 xor chip_byte xor register_byte xor data_byte;       
                         
                         -- Check CRC
                         if (crc_byte = data_out(7 downto 0)) then

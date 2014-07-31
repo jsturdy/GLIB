@@ -97,7 +97,7 @@ begin
                     -- Set TX data
                     tx_kchar_o <= "01";
                     
-                    tx_data_o <= def_gtx_vfat2_request & x"BC";
+                    tx_data_o <= def_gtx_vfat2 & x"BC";
                     
                     -- Next state
                     state := 2;

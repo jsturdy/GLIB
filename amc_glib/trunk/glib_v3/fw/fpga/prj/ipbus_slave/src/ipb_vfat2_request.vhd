@@ -88,7 +88,7 @@ begin
                     register_byte := ipb_mosi_i.ipb_addr(7 downto 0);
                     
                     -- CRC
-                    crc_byte := def_gtx_vfat2_request xor chip_byte xor register_byte xor data_byte;
+                    crc_byte := def_gtx_vfat2 xor chip_byte xor register_byte xor data_byte;
                     
                     -- Set TX
                     data_in <= chip_byte & register_byte & data_byte & crc_byte;
@@ -99,7 +99,7 @@ begin
                     -- IPBus
                     ipb_ack <= not ipb_ack and ipb_mosi_i.ipb_strobe;
                     
-                    ipb_data <= x"00" & chip_byte & register_byte & data_byte;
+                    ipb_data <= "0000000" & chip_byte(5) & "000" & chip_byte(4 downto 0) & register_byte & data_byte;
                     
                 else
                     

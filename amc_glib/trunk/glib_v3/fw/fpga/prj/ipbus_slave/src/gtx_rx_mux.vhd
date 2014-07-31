@@ -51,7 +51,7 @@ begin
                     if (rx_kchar_i = "01") then
                     
                         -- VFAT2 data packet
-                        if (rx_data_i(15 downto 8) = def_gtx_vfat2_request) then
+                        if (rx_data_i = def_gtx_vfat2 & x"BC") then
                         
                             -- Select slave
                             state := 1;

@@ -310,7 +310,7 @@ begin
         TRIG13  => cs_trigger_13
     );    
     
-    cs_trigger_0(0) <= ipb_mosi_i(ipbus_vfat2_request_nb).ipb_strobe;
+    cs_trigger_0(0) <= ipb_mosi_i(ipbus_vfat2_request_0).ipb_strobe;
     cs_trigger_1(0) <= vfat2_tx_en;
     cs_trigger_2(0) <= vfat2_tx_ack;
     cs_trigger_3 <= vfat2_tx_data;
@@ -403,8 +403,8 @@ begin
         ipb_clk_i       => ipb_clk_i,
         fabric_clk_i    => fabric_clk,    
         reset_i         => reset_i,
-        ipb_mosi_i      => ipb_mosi_i(ipbus_vfat2_request_nb),
-        ipb_miso_o      => ipb_miso_o(ipbus_vfat2_request_nb),
+        ipb_mosi_i      => ipb_mosi_i(ipbus_vfat2_request_0),
+        ipb_miso_o      => ipb_miso_o(ipbus_vfat2_request_0),
         tx_en_i         => vfat2_tx_en,
         tx_ack_o        => vfat2_tx_ack,
         tx_data_o       => vfat2_tx_data
@@ -416,25 +416,10 @@ begin
         ipb_clk_i       => ipb_clk_i,
         fabric_clk_i    => fabric_clk,    
         reset_i         => reset_i,
-        ipb_mosi_i      => ipb_mosi_i(ipbus_vfat2_response_nb),
-        ipb_miso_o      => ipb_miso_o(ipbus_vfat2_response_nb),
+        ipb_mosi_i      => ipb_mosi_i(ipbus_vfat2_response_0),
+        ipb_miso_o      => ipb_miso_o(ipbus_vfat2_response_0),
         rx_en_i         => vfat2_rx_en,
         rx_data_i       => vfat2_rx_data
     );    
-    
---    -- VFAT2   
---    ipb_vfat2_inst : entity work.ipb_vfat2
---    port map(
---        ipb_clk_i       => ipb_clk_i,
---        fabric_clk_i    => fabric_clk,    
---        reset_i         => reset_i,
---        ipb_mosi_i      => ipb_mosi_i(ipbus_vfat2_request_nb),
---        ipb_miso_o      => ipb_miso_o(ipbus_vfat2_request_nb),
---        tx_en_i         => vfat2_tx_en,
---        tx_ack_o        => vfat2_tx_ack,
---        tx_data_o       => vfat2_tx_data,
---        rx_en_i         => vfat2_rx_en,
---        rx_data_i       => vfat2_rx_data
---    );         
     
 end user_logic_arch;

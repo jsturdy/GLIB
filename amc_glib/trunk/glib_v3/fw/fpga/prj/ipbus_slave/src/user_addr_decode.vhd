@@ -18,8 +18,12 @@ package body user_addr_decode is
 		variable sel : integer;
 	begin
 		--              addr, "00------------------------------" is reserved (system ipbus fabric)
-		if    std_match(addr, "0100000000000001000-------------") then sel := ipbus_vfat2_request_nb;
-		elsif std_match(addr, "01000000000000110000000000000000") then sel := ipbus_vfat2_response_nb;
+		if    std_match(addr, "010000000000000100000-----------") then sel := ipbus_vfat2_request_0;
+		elsif std_match(addr, "010000000000000100001-----------") then sel := ipbus_vfat2_request_0;
+		elsif std_match(addr, "01000000000000010001------------") then sel := ipbus_vfat2_request_0;
+		elsif std_match(addr, "01000000000000100000000000000---") then sel := ipbus_vfat2_response_0;
+		elsif std_match(addr, "01000000000000100000000000001---") then sel := ipbus_vfat2_response_0;
+		elsif std_match(addr, "0100000000000010000000000001----") then sel := ipbus_vfat2_response_0;
 		--elsif std_match(addr, "010000000000001000000000--------") then sel := ipbus_optohybrid_slave_nb;
 --		 elsif std_match(addr, "01000000000000000000000100000000") then sel := user_ipb_timer; -- xx
 		--              addr, "1-------------------------------" is reserved (wishbone fabric)

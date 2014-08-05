@@ -18,23 +18,34 @@ class colors:
     ENDC = '\033[0m'
 
 def emptyBuffer():
-    for i in range(0, 16):
+    for i in range(0, 20):
         try:
-            glib.read("vfat2_response")
-        except ChipsException, e:
+            glib.read("vfat2_0_response")
+        except:
             pass
 
-def testRead(register, exp):
+        try:
+            glib.read("vfat2_8_response")
+        except:
+            pass
+
+        try:
+            glib.read("vfat2_16_response")
+        except:
+            pass
+
+
+def testRead(vfat2, register, exp):
     global nOK, nBadHeader, nErrorOnRead, nTimedOut, nMismatch, nOthers
 
     #print "Reading VFAT2 register : ", register
 
     try:
 
-        glib.read(register)
+        controlChar = glib.read("vfat2_" + str(vfat2) + "_" + register)
         time.sleep(0.01)
-        controlChar = glib.read("vfat2_response")
-        time.sleep(0.01)
+        # controlChar = glib.read("vfat2_" + str(vfat2) + "_response")
+        # time.sleep(0.01)
 
         if (controlChar == exp):
 
@@ -66,19 +77,20 @@ def testRead(register, exp):
 
         pass
 
-def testWrite(register, value):
+def testWrite(vfat2, register, value):
     global nOK, nBadHeader, nErrorOnRead, nTimedOut, nMismatch, nOthers
 
     #print "Writting VFAT2 register : ", register
 
     try:
 
-        glib.write(register, value)
+        glib.write("vfat2_" + str(vfat2) + "_" + register, value)
         time.sleep(0.01)
-        controlChar = glib.read("vfat2_response")
-        time.sleep(0.01)
+        # controlChar = glib.read("vfat2_" + str(vfat2) + "_response")
+        # time.sleep(0.01)
 
-        print colors.GREEN, "-> OK : ", hex(controlChar), colors.ENDC
+        # print colors.GREEN, "-> OK ", hex(controlChar), colors.ENDC
+        print colors.GREEN, "-> OK", colors.ENDC
 
         nOK += 1
 
@@ -133,25 +145,50 @@ if __name__ == "__main__":
     print "Opening GLIB with IP", ipaddr
     print "Processing... press Ctrl+C to terminate and get statistics"
 
+    # print hex(glib.read('testing'))
+
     # Empty buffer
-    emptyBuffer()
+    # emptyBuffer()
 
     while True:
+
+        # testRead(9, "chipid0", 0x3090854)
+        # testRead(9, "chipid1", 0x30909fe)
+        # time.sleep(0.1)
+
+        # raw_input()
+
         # res = testRead("opto_reg1", 0x100)
         # res = testWrite("opto_reg1", 0xa)
         # res = testRead("vfat2_impreampin", 0x30402ef)
         # res = testRead("vfat2_channel10", 0x30420cd)
         # res = testRead("vfat2_ctrl0", 0x5040000)
 
-        val = random.randint(0, 255)
-        res = 0x3059500 + val
+        val0 = random.randint(0, 255)
+        val2 = random.randint(0, 255)
+        res0 = 0x3090000 + val0
+        res2 = 0x3099500 + val2
 
-        testWrite("vfat2_ctrl2", val);
-        testRead("vfat2_ctrl2", res);
+        print "Random: ", hex(val0), hex(val2)
+        testWrite(9, "ctrl0", val0)
+        testWrite(9, "ctrl2", val2)
+        testRead(9, "ctrl0", res0)
+        testRead(9, "ctrl2", res2)
+        # raw_input()
 
-        # testRead("vfat2_chipid0", 0x30408cf)
-        # testRead("vfat2_chipid1", 0x30409f0)
+        # raw_input()
+        # testRead(10, "ctrl2", 0x30909fe)
+
+        # testRead(13, "chipid0", 0x30d0854)
+
+        # testRead(9, "ctrl2", res2)
+
+        # testRead(9, "chipid0", 0x3090854)
+        # testRead(13, "chipid0", 0x30d0854)
+        # testRead(9, "chipid1", 0x30909f0)
         # testRead("vfat2_ctrl0", 0x304005c)
+
+        # print "----------------"
 
 
 

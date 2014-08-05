@@ -34,16 +34,16 @@ TYPE_ID_RMW_BITS       = 0x4  # Read-Modify-Write Bits transaction code
 TYPE_ID_RMW_SUM        = 0x5  # Read-Modify-Write Sum transaction code
 TYPE_ID_RSVD_ADDR_INFO = 0xE  # Reserved Address Info Request transaction code
 
-# Request transaction element (i.e. controller-to-target) minimum body size 
+# Request transaction element (i.e. controller-to-target) minimum body size
 _minimumRequestBodySize = { TYPE_ID_READ           : 1,  # Read
-                            TYPE_ID_WRITE          : 1,  # Write 
+                            TYPE_ID_WRITE          : 1,  # Write
                             TYPE_ID_RMW_BITS       : 3,  # Read-Modify-Write Bits
                             TYPE_ID_RMW_SUM        : 2,  # Read-Modify-Write Sum
                             TYPE_ID_NON_INCR_READ  : 1,  # Non-incrementing Read
                             TYPE_ID_NON_INCR_WRITE : 1,  # Non-incrementing Write
                             TYPE_ID_RSVD_ADDR_INFO : 0 } # Reserved Address Info request
 
-# Response transaction element (i.e. target-to-controller) minimum body size     
+# Response transaction element (i.e. target-to-controller) minimum body size
 _minimumResponseBodySize = { TYPE_ID_READ           : 0,  # Read
                              TYPE_ID_WRITE          : 0,  # Write
                              TYPE_ID_RMW_BITS       : 1,  # Read-Modify-Write Bits
@@ -55,7 +55,7 @@ _minimumResponseBodySize = { TYPE_ID_READ           : 0,  # Read
 
 def makeHeader(version, transactionId, words, typeId, infoCode):
         '''Returns a 32-bit IPbus transaction element header as created from individual header components.'''
-        
+
         rawHeaderU32 =  ((version & 0xf) << 28)  | \
                         ((transactionId & 0xfff) << 16) | \
                         ((words & 0xff) << 8) | \
@@ -63,7 +63,7 @@ def makeHeader(version, transactionId, words, typeId, infoCode):
                         (infoCode & 0xf)
 
         return rawHeaderU32
-             
+
 
 def getExpectedBodySize(rawHeaderU32):
     '''Calculates the expected body size of an IPbus TransactionElement from the raw 32-bit header word'''
@@ -73,15 +73,15 @@ def getExpectedBodySize(rawHeaderU32):
 
     # Test if it's a known request/response typeId (doesn't matter which bodySize map we use)
     if typeId in _minimumResponseBodySize:
-        
+
         # response from target to controller
-        if getInfoCode(rawHeaderU32) == INFO_CODE_RESPONSE: 
+        if getInfoCode(rawHeaderU32) == INFO_CODE_RESPONSE:
             if typeId == TYPE_ID_READ or typeId == TYPE_ID_NON_INCR_READ:
                 result = getWords(rawHeaderU32) + _minimumResponseBodySize[typeId]
             else: result = _minimumResponseBodySize[typeId]
-        
+
         # request from controller to target
-        else: 
+        else:
             if typeId == TYPE_ID_WRITE or typeId == TYPE_ID_NON_INCR_WRITE:
                 result = getWords(rawHeaderU32) + _minimumRequestBodySize[typeId]
             else: result = _minimumRequestBodySize[typeId]
@@ -90,14 +90,14 @@ def getExpectedBodySize(rawHeaderU32):
     else:
         raise ChipsException("Cannot determine the expected body size from the given IPbus header '0x" + uInt32HexStr(rawHeaderU32) +
                              "', as it is of unknown transaction type '" + hex(typeId) + "'!")
-    
-    return result  
+
+    return result
 
 
 def getVersion(rawHeaderU32):
     '''Returns the IPbus Version number contained within a raw IPbus Header'''
     return (rawHeaderU32 >> 28) & 0xf
-    
+
 
 def getWords(rawHeaderU32):
     '''Returns the value stored in the Words field of a raw IPbus Header'''
@@ -108,11 +108,11 @@ def updateWords(rawHeaderU32, newWords):
     '''Returns the raw IPbus header but with the words field updated to the value specified'''
     return (rawHeaderU32 & 0xffff00ff | ((newWords & 0xff) << 8))
 
-    
+
 def getTransactionId(rawHeaderU32):
     '''Returns the Transaction ID number contained within a raw IPbus Header'''
     return (rawHeaderU32 >> 16) & 0xfff
-    
+
 
 def getTypeId(rawHeaderU32):
     '''Returns the Type ID Code contained within a raw IPbus Header'''

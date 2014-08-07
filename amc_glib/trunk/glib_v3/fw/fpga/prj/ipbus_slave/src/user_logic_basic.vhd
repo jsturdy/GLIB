@@ -326,7 +326,7 @@ begin
     
     cs_trigger_0(0) <= ipb_mosi_i(ipbus_vfat2_1).ipb_strobe;
     cs_trigger_1(0) <= vfat2_tx_en_1;
-    cs_trigger_2(0) <= vfat2_tx_ack_1;
+    cs_trigger_2(0) <= '0'; --vfat2_tx_ack_1;
     cs_trigger_3 <= vfat2_tx_data_1;
     cs_trigger_4 <= tx_data_1;
     cs_trigger_5 <= tx_kchar_1;
@@ -420,8 +420,7 @@ begin
     port map(
         gtx_clk_i       => fabric_clk,
         reset_i         => reset_i,
-        vfat2_en_o      => vfat2_tx_en_0,
-        vfat2_ack_i     => vfat2_tx_ack_0,
+        vfat2_en_i      => vfat2_tx_en_0,
         vfat2_data_i    => vfat2_tx_data_0,
         tx_kchar_o      => tx_kchar_0,
         tx_data_o       => tx_data_0
@@ -431,8 +430,7 @@ begin
     port map(
         gtx_clk_i       => fabric_clk,
         reset_i         => reset_i,
-        vfat2_en_o      => vfat2_tx_en_1,
-        vfat2_ack_i     => vfat2_tx_ack_1,
+        vfat2_en_i      => vfat2_tx_en_1,
         vfat2_data_i    => vfat2_tx_data_1,
         tx_kchar_o      => tx_kchar_1,
         tx_data_o       => tx_data_1
@@ -442,8 +440,7 @@ begin
     port map(
         gtx_clk_i       => fabric_clk,
         reset_i         => reset_i,
-        vfat2_en_o      => vfat2_tx_en_2,
-        vfat2_ack_i     => vfat2_tx_ack_2,
+        vfat2_en_i      => vfat2_tx_en_2,
         vfat2_data_i    => vfat2_tx_data_2,
         tx_kchar_o      => tx_kchar_2,
         tx_data_o       => tx_data_2
@@ -460,8 +457,7 @@ begin
         reset_i         => reset_i,
         ipb_mosi_i      => ipb_mosi_i(ipbus_vfat2_0),
         ipb_miso_o      => ipb_miso_o(ipbus_vfat2_0),
-        tx_en_i         => vfat2_tx_en_0,
-        tx_ack_o        => vfat2_tx_ack_0,
+        tx_en_o         => vfat2_tx_en_0,
         tx_data_o       => vfat2_tx_data_0,
         rx_en_i         => vfat2_rx_en_0,
         rx_data_i       => vfat2_rx_data_0
@@ -474,8 +470,7 @@ begin
         reset_i         => reset_i,
         ipb_mosi_i      => ipb_mosi_i(ipbus_vfat2_1),
         ipb_miso_o      => ipb_miso_o(ipbus_vfat2_1),
-        tx_en_i         => vfat2_tx_en_1,
-        tx_ack_o        => vfat2_tx_ack_1,
+        tx_en_o         => vfat2_tx_en_1,
         tx_data_o       => vfat2_tx_data_1,
         rx_en_i         => vfat2_rx_en_1,
         rx_data_i       => vfat2_rx_data_1
@@ -488,8 +483,7 @@ begin
         reset_i         => reset_i,
         ipb_mosi_i      => ipb_mosi_i(ipbus_vfat2_2),
         ipb_miso_o      => ipb_miso_o(ipbus_vfat2_2),
-        tx_en_i         => vfat2_tx_en_2,
-        tx_ack_o        => vfat2_tx_ack_2,
+        tx_en_o         => vfat2_tx_en_2,
         tx_data_o       => vfat2_tx_data_2,
         rx_en_i         => vfat2_rx_en_2,
         rx_data_i       => vfat2_rx_data_2

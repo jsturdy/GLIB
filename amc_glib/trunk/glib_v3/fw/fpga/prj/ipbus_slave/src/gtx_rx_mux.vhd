@@ -49,7 +49,7 @@ begin
                 -- Wait for kchar
                 if (state = 0) then
                 
-                    -- Detect Idle package
+                    -- Detect data package
                     if (rx_kchar_i = "01") then
                     
                         -- VFAT2 data packet

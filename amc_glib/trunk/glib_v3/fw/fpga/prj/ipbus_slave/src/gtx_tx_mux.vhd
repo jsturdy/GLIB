@@ -9,8 +9,7 @@ port(
     gtx_clk_i       : in std_logic;
     reset_i         : in std_logic;
     
-    vfat2_en_o      : out std_logic;
-    vfat2_ack_i     : in std_logic;
+    vfat2_en_i      : in std_logic;
     vfat2_data_i    : in std_logic_vector(31 downto 0);  
     
     tx_kchar_o      : out std_logic_vector(1 downto 0);
@@ -42,8 +41,6 @@ begin
             -- Reset
             if (reset_i = '1') then
             
-                vfat2_en_o <= '0';
-            
                 tx_kchar_o <= "00";
                 
                 tx_data_o <= def_gtx_idle & x"BC";
@@ -59,13 +56,10 @@ begin
                 -- Ready to send state
                 if (state = 0) then
                 
-                    -- Data is ready
-                    if (vfat2_ack_i = '1') then
-                        
-                        -- Reset strobe
-                        vfat2_en_o <= '0';
+                    -- VFAT2 Data is ready
+                    if (vfat2_en_i = '1') then
                 
-                        -- Get data
+                        -- Get the data
                         data := vfat2_data_i;
                     
                         -- Set selected the core
@@ -73,11 +67,6 @@ begin
                     
                         -- Change state
                         state := 1;
-                        
-                    else
-                        
-                        -- Request data
-                        vfat2_en_o <= '1';
                         
                     end if;
                     
@@ -105,11 +94,13 @@ begin
                 -- Data 1
                 elsif (state = 1) then
                 
-                    -- Set TX data
+                    -- Set TX kchar
                     tx_kchar_o <= "01";
                     
+                    -- Send data header according to slave
                     if (selected_core = 1) then
                     
+                        -- Set the TX data
                         tx_data_o <= def_gtx_vfat2 & x"BC"; -- VFAT2 IIC code
                     
                         -- Next state
@@ -126,9 +117,10 @@ begin
                -- Data 2
                 elsif (state = 2) then
                 
-                    -- Set TX data
+                    -- Set TX kchar
                     tx_kchar_o <= "00";
                     
+                    -- Set the TX data
                     tx_data_o <= data(31 downto 16);
                     
                     -- Next state
@@ -137,9 +129,10 @@ begin
                 -- Data 3
                 elsif (state = 3) then
                 
-                    -- Set TX data
+                    -- Set TX kchar
                     tx_kchar_o <= "00";
                     
+                    -- Set the TX data
                     tx_data_o <= data(15 downto 0);
                     
                     -- Reset state
@@ -147,8 +140,6 @@ begin
                     
                 -- Out of FSM
                 else
-                
-                    vfat2_en_o <= '0';
             
                     tx_kchar_o <= "00";
                     

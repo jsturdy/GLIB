@@ -1,0 +1,808 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="amc_port_rx_p">
+			<Port Id="0" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+			<Port Id="5" Dir="IN"/>
+			<Port Id="6" Dir="IN"/>
+			<Port Id="7" Dir="IN"/>
+			<Port Id="8" Dir="IN"/>
+			<Port Id="9" Dir="IN"/>
+			<Port Id="10" Dir="IN"/>
+			<Port Id="11" Dir="IN"/>
+			<Port Id="12" Dir="IN"/>
+			<Port Id="13" Dir="IN"/>
+			<Port Id="14" Dir="IN"/>
+			<Port Id="15" Dir="IN"/>
+		</Bus>
+		<Bus Id="amc_port_rx_n">
+			<Port Id="0" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+			<Port Id="5" Dir="IN"/>
+			<Port Id="6" Dir="IN"/>
+			<Port Id="7" Dir="IN"/>
+			<Port Id="8" Dir="IN"/>
+			<Port Id="9" Dir="IN"/>
+			<Port Id="10" Dir="IN"/>
+			<Port Id="11" Dir="IN"/>
+			<Port Id="12" Dir="IN"/>
+			<Port Id="13" Dir="IN"/>
+			<Port Id="14" Dir="IN"/>
+			<Port Id="15" Dir="IN"/>
+		</Bus>
+		<Bus Id="amc_port_tx_in">
+			<Port Id="17" Dir="IN"/>
+			<Port Id="18" Dir="IN"/>
+			<Port Id="19" Dir="IN"/>
+			<Port Id="20" Dir="IN"/>
+		</Bus>
+		<Bus Id="amc_port_rx_in">
+			<Port Id="17" Dir="IN"/>
+			<Port Id="18" Dir="IN"/>
+			<Port Id="19" Dir="IN"/>
+			<Port Id="20" Dir="IN"/>
+		</Bus>
+		<Bus Id="sfp_rx_p">
+			<Port Id="1" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+		</Bus>
+		<Bus Id="sfp_rx_n">
+			<Port Id="1" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+		</Bus>
+		<Bus Id="sfp_mod_abs">
+			<Port Id="1" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+		</Bus>
+		<Bus Id="sfp_rxlos">
+			<Port Id="1" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+		</Bus>
+		<Bus Id="sfp_txfault">
+			<Port Id="1" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+		</Bus>
+		<Bus Id="fmc1_rx_p">
+			<Port Id="1" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+		</Bus>
+		<Bus Id="fmc1_rx_n">
+			<Port Id="1" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+		</Bus>
+		<Bus Id="sn">
+			<Port Id="7" Dir="IN"/>
+			<Port Id="6" Dir="IN"/>
+			<Port Id="5" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="0" Dir="IN"/>
+		</Bus>
+		<Bus Id="v6_cpld">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="amc_port_tx_p">
+			<Port Id="0" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="8" Dir="OUT"/>
+			<Port Id="9" Dir="OUT"/>
+			<Port Id="10" Dir="OUT"/>
+			<Port Id="11" Dir="OUT"/>
+			<Port Id="12" Dir="OUT"/>
+			<Port Id="13" Dir="OUT"/>
+			<Port Id="14" Dir="OUT"/>
+			<Port Id="15" Dir="OUT"/>
+		</Bus>
+		<Bus Id="amc_port_tx_n">
+			<Port Id="0" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="8" Dir="OUT"/>
+			<Port Id="9" Dir="OUT"/>
+			<Port Id="10" Dir="OUT"/>
+			<Port Id="11" Dir="OUT"/>
+			<Port Id="12" Dir="OUT"/>
+			<Port Id="13" Dir="OUT"/>
+			<Port Id="14" Dir="OUT"/>
+			<Port Id="15" Dir="OUT"/>
+		</Bus>
+		<Bus Id="amc_port_tx_out">
+			<Port Id="17" Dir="OUT"/>
+			<Port Id="18" Dir="OUT"/>
+			<Port Id="19" Dir="OUT"/>
+			<Port Id="20" Dir="OUT"/>
+		</Bus>
+		<Bus Id="amc_port_tx_de">
+			<Port Id="17" Dir="OUT"/>
+			<Port Id="18" Dir="OUT"/>
+			<Port Id="19" Dir="OUT"/>
+			<Port Id="20" Dir="OUT"/>
+		</Bus>
+		<Bus Id="amc_port_rx_out">
+			<Port Id="17" Dir="OUT"/>
+			<Port Id="18" Dir="OUT"/>
+			<Port Id="19" Dir="OUT"/>
+			<Port Id="20" Dir="OUT"/>
+		</Bus>
+		<Bus Id="amc_port_rx_de">
+			<Port Id="17" Dir="OUT"/>
+			<Port Id="18" Dir="OUT"/>
+			<Port Id="19" Dir="OUT"/>
+			<Port Id="20" Dir="OUT"/>
+		</Bus>
+		<Bus Id="sfp_tx_p">
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+		</Bus>
+		<Bus Id="sfp_tx_n">
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+		</Bus>
+		<Bus Id="fmc1_tx_p">
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+		</Bus>
+		<Bus Id="fmc1_tx_n">
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+		</Bus>
+		<Bus Id="fmc1_la_p">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+			<Port Id="22" Dir="INOUT"/>
+			<Port Id="23" Dir="INOUT"/>
+			<Port Id="24" Dir="INOUT"/>
+			<Port Id="25" Dir="INOUT"/>
+			<Port Id="26" Dir="INOUT"/>
+			<Port Id="27" Dir="INOUT"/>
+			<Port Id="28" Dir="INOUT"/>
+			<Port Id="29" Dir="INOUT"/>
+			<Port Id="30" Dir="INOUT"/>
+			<Port Id="31" Dir="INOUT"/>
+			<Port Id="32" Dir="INOUT"/>
+			<Port Id="33" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc1_la_n">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+			<Port Id="22" Dir="INOUT"/>
+			<Port Id="23" Dir="INOUT"/>
+			<Port Id="24" Dir="INOUT"/>
+			<Port Id="25" Dir="INOUT"/>
+			<Port Id="26" Dir="INOUT"/>
+			<Port Id="27" Dir="INOUT"/>
+			<Port Id="28" Dir="INOUT"/>
+			<Port Id="29" Dir="INOUT"/>
+			<Port Id="30" Dir="INOUT"/>
+			<Port Id="31" Dir="INOUT"/>
+			<Port Id="32" Dir="INOUT"/>
+			<Port Id="33" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc1_ha_p">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+			<Port Id="22" Dir="INOUT"/>
+			<Port Id="23" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc1_ha_n">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+			<Port Id="22" Dir="INOUT"/>
+			<Port Id="23" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc1_hb_p">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc1_hb_n">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc1_clk_c2m_p">
+			<Port Id="0" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+		</Bus>
+		<Bus Id="fmc1_clk_c2m_n">
+			<Port Id="0" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+		</Bus>
+		<Bus Id="fmc2_la_p">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+			<Port Id="22" Dir="INOUT"/>
+			<Port Id="23" Dir="INOUT"/>
+			<Port Id="24" Dir="INOUT"/>
+			<Port Id="25" Dir="INOUT"/>
+			<Port Id="26" Dir="INOUT"/>
+			<Port Id="27" Dir="INOUT"/>
+			<Port Id="28" Dir="INOUT"/>
+			<Port Id="29" Dir="INOUT"/>
+			<Port Id="30" Dir="INOUT"/>
+			<Port Id="31" Dir="INOUT"/>
+			<Port Id="32" Dir="INOUT"/>
+			<Port Id="33" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc2_la_n">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+			<Port Id="22" Dir="INOUT"/>
+			<Port Id="23" Dir="INOUT"/>
+			<Port Id="24" Dir="INOUT"/>
+			<Port Id="25" Dir="INOUT"/>
+			<Port Id="26" Dir="INOUT"/>
+			<Port Id="27" Dir="INOUT"/>
+			<Port Id="28" Dir="INOUT"/>
+			<Port Id="29" Dir="INOUT"/>
+			<Port Id="30" Dir="INOUT"/>
+			<Port Id="31" Dir="INOUT"/>
+			<Port Id="32" Dir="INOUT"/>
+			<Port Id="33" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc2_ha_p">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+			<Port Id="22" Dir="INOUT"/>
+			<Port Id="23" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc2_ha_n">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+			<Port Id="22" Dir="INOUT"/>
+			<Port Id="23" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc2_hb_p">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc2_hb_n">
+			<Port Id="0" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="fmc2_clk_c2m_p">
+			<Port Id="0" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+		</Bus>
+		<Bus Id="fmc2_clk_c2m_n">
+			<Port Id="0" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+		</Bus>
+		<Bus Id="sram1_addr">
+			<Port Id="20" Dir="OUT"/>
+			<Port Id="19" Dir="OUT"/>
+			<Port Id="18" Dir="OUT"/>
+			<Port Id="17" Dir="OUT"/>
+			<Port Id="16" Dir="OUT"/>
+			<Port Id="15" Dir="OUT"/>
+			<Port Id="14" Dir="OUT"/>
+			<Port Id="13" Dir="OUT"/>
+			<Port Id="12" Dir="OUT"/>
+			<Port Id="11" Dir="OUT"/>
+			<Port Id="10" Dir="OUT"/>
+			<Port Id="9" Dir="OUT"/>
+			<Port Id="8" Dir="OUT"/>
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="sram1_data">
+			<Port Id="35" Dir="INOUT"/>
+			<Port Id="34" Dir="INOUT"/>
+			<Port Id="33" Dir="INOUT"/>
+			<Port Id="32" Dir="INOUT"/>
+			<Port Id="31" Dir="INOUT"/>
+			<Port Id="30" Dir="INOUT"/>
+			<Port Id="29" Dir="INOUT"/>
+			<Port Id="28" Dir="INOUT"/>
+			<Port Id="27" Dir="INOUT"/>
+			<Port Id="26" Dir="INOUT"/>
+			<Port Id="25" Dir="INOUT"/>
+			<Port Id="24" Dir="INOUT"/>
+			<Port Id="23" Dir="INOUT"/>
+			<Port Id="22" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="0" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="sram2_addr">
+			<Port Id="20" Dir="OUT"/>
+			<Port Id="19" Dir="OUT"/>
+			<Port Id="18" Dir="OUT"/>
+			<Port Id="17" Dir="OUT"/>
+			<Port Id="16" Dir="OUT"/>
+			<Port Id="15" Dir="OUT"/>
+			<Port Id="14" Dir="OUT"/>
+			<Port Id="13" Dir="OUT"/>
+			<Port Id="12" Dir="OUT"/>
+			<Port Id="11" Dir="OUT"/>
+			<Port Id="10" Dir="OUT"/>
+			<Port Id="9" Dir="OUT"/>
+			<Port Id="8" Dir="OUT"/>
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="sram2_data">
+			<Port Id="35" Dir="INOUT"/>
+			<Port Id="34" Dir="INOUT"/>
+			<Port Id="33" Dir="INOUT"/>
+			<Port Id="32" Dir="INOUT"/>
+			<Port Id="31" Dir="INOUT"/>
+			<Port Id="30" Dir="INOUT"/>
+			<Port Id="29" Dir="INOUT"/>
+			<Port Id="28" Dir="INOUT"/>
+			<Port Id="27" Dir="INOUT"/>
+			<Port Id="26" Dir="INOUT"/>
+			<Port Id="25" Dir="INOUT"/>
+			<Port Id="24" Dir="INOUT"/>
+			<Port Id="23" Dir="INOUT"/>
+			<Port Id="22" Dir="INOUT"/>
+			<Port Id="21" Dir="INOUT"/>
+			<Port Id="20" Dir="INOUT"/>
+			<Port Id="19" Dir="INOUT"/>
+			<Port Id="18" Dir="INOUT"/>
+			<Port Id="17" Dir="INOUT"/>
+			<Port Id="16" Dir="INOUT"/>
+			<Port Id="15" Dir="INOUT"/>
+			<Port Id="14" Dir="INOUT"/>
+			<Port Id="13" Dir="INOUT"/>
+			<Port Id="12" Dir="INOUT"/>
+			<Port Id="11" Dir="INOUT"/>
+			<Port Id="10" Dir="INOUT"/>
+			<Port Id="9" Dir="INOUT"/>
+			<Port Id="8" Dir="INOUT"/>
+			<Port Id="7" Dir="INOUT"/>
+			<Port Id="6" Dir="INOUT"/>
+			<Port Id="5" Dir="INOUT"/>
+			<Port Id="4" Dir="INOUT"/>
+			<Port Id="3" Dir="INOUT"/>
+			<Port Id="2" Dir="INOUT"/>
+			<Port Id="1" Dir="INOUT"/>
+			<Port Id="0" Dir="INOUT"/>
+		</Bus>
+		<Bus Id="v6_led">
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+		</Bus>
+		<Port Id="fpga_sda" Dir="INOUT"/>
+		<Port Id="fpga_scl" Dir="INOUT"/>
+		<Port Id="sram2_cen_l" Dir="OUT"/>
+		<Port Id="cdce_spi_miso" Dir="IN"/>
+		<Port Id="fpga_rs0" Dir="OUT"/>
+		<Port Id="fpga_rs1" Dir="OUT"/>
+		<Port Id="sram1_we_l" Dir="OUT"/>
+		<Port Id="sram2_ce1_l" Dir="OUT"/>
+		<Port Id="sram2_ce2" Dir="OUT"/>
+		<Port Id="cdce_pll_lock" Dir="IN"/>
+		<Port Id="sram2_we_l" Dir="OUT"/>
+		<Port Id="cdce_out0_n" Dir="IN"/>
+		<Port Id="cdce_out0_p" Dir="IN"/>
+		<Port Id="gbe_int_n" Dir="IN"/>
+		<Port Id="cdce_out1_n" Dir="IN"/>
+		<Port Id="cdce_out1_p" Dir="IN"/>
+		<Port Id="sram2_clk" Dir="OUT"/>
+		<Port Id="fmc2_tx_n" Dir="OUT"/>
+		<Port Id="fmc2_tx_p" Dir="OUT"/>
+		<Port Id="cdce_out2_n" Dir="IN"/>
+		<Port Id="cdce_out2_p" Dir="IN"/>
+		<Port Id="sram2_bwa" Dir="OUT"/>
+		<Port Id="sram2_bwb" Dir="OUT"/>
+		<Port Id="sram2_bwc" Dir="OUT"/>
+		<Port Id="sram2_bwd" Dir="OUT"/>
+		<Port Id="cdce_out3_n" Dir="IN"/>
+		<Port Id="cdce_out3_p" Dir="IN"/>
+		<Port Id="cdce_spi_mosi" Dir="OUT"/>
+		<Port Id="fmc1_clk3_bidir_n" Dir="IN"/>
+		<Port Id="fmc1_clk3_bidir_p" Dir="IN"/>
+		<Port Id="cdce_out4_n" Dir="IN"/>
+		<Port Id="cdce_out4_p" Dir="IN"/>
+		<Port Id="fmc1_clk2_bidir_n" Dir="IN"/>
+		<Port Id="fmc1_clk2_bidir_p" Dir="IN"/>
+		<Port Id="sram2_adv_ld_l" Dir="OUT"/>
+		<Port Id="fpga_clkout" Dir="OUT"/>
+		<Port Id="fpga_a21" Dir="OUT"/>
+		<Port Id="fpga_a22" Dir="OUT"/>
+		<Port Id="fmc2_clk0_m2c_xpoint2_n" Dir="IN"/>
+		<Port Id="fmc2_clk0_m2c_xpoint2_p" Dir="IN"/>
+		<Port Id="sram1_clk" Dir="OUT"/>
+		<Port Id="sram1_bwa" Dir="OUT"/>
+		<Port Id="sram1_bwb" Dir="OUT"/>
+		<Port Id="sram1_bwc" Dir="OUT"/>
+		<Port Id="sram1_bwd" Dir="OUT"/>
+		<Port Id="sram1_adv_ld_l" Dir="OUT"/>
+		<Port Id="ics874003_fsel" Dir="OUT"/>
+		<Port Id="ics874003_oe" Dir="OUT"/>
+		<Port Id="ics874003_mr" Dir="OUT"/>
+		<Port Id="cdce_spi_clk" Dir="OUT"/>
+		<Port Id="cdce_ref_sel" Dir="OUT"/>
+		<Port Id="fmc2_clk1_m2c_n" Dir="IN"/>
+		<Port Id="fmc2_clk1_m2c_p" Dir="IN"/>
+		<Port Id="gbe_sda_mdio" Dir="INOUT"/>
+		<Port Id="fmc1_clk0_m2c_xpoint2_n" Dir="IN"/>
+		<Port Id="fmc1_clk0_m2c_xpoint2_p" Dir="IN"/>
+		<Port Id="sram1_mode" Dir="OUT"/>
+		<Port Id="xpoint2_s10" Dir="OUT"/>
+		<Port Id="xpoint2_s11" Dir="OUT"/>
+		<Port Id="tclkb_dr_en" Dir="OUT"/>
+		<Port Id="sram2_mode" Dir="OUT"/>
+		<Port Id="gbe_rx_n" Dir="IN"/>
+		<Port Id="gbe_rx_p" Dir="IN"/>
+		<Port Id="gbe_reset_n" Dir="OUT"/>
+		<Port Id="fmc1_gbtclk0_m2c_n" Dir="IN"/>
+		<Port Id="fmc1_gbtclk0_m2c_p" Dir="IN"/>
+		<Port Id="clk125_1_n" Dir="IN"/>
+		<Port Id="clk125_1_p" Dir="IN"/>
+		<Port Id="clk125_2_n" Dir="IN"/>
+		<Port Id="fpga_power_on_reset_b" Dir="IN"/>
+		<Port Id="clk125_2_p" Dir="IN"/>
+		<Port Id="sram1_cen_l" Dir="OUT"/>
+		<Port Id="fpga_reset_b" Dir="IN"/>
+		<Port Id="sram1_oe_l" Dir="OUT"/>
+		<Port Id="xpoint1_clk1_n" Dir="IN"/>
+		<Port Id="xpoint1_clk1_p" Dir="IN"/>
+		<Port Id="sram1_ce1_l" Dir="OUT"/>
+		<Port Id="xpoint1_s10" Dir="OUT"/>
+		<Port Id="xpoint1_s11" Dir="OUT"/>
+		<Port Id="xpoint1_s20" Dir="OUT"/>
+		<Port Id="xpoint1_s21" Dir="OUT"/>
+		<Port Id="xpoint1_s30" Dir="OUT"/>
+		<Port Id="xpoint1_s31" Dir="OUT"/>
+		<Port Id="xpoint1_s40" Dir="OUT"/>
+		<Port Id="xpoint1_s41" Dir="OUT"/>
+		<Port Id="fmc1_present_l" Dir="IN"/>
+		<Port Id="sram2_oe_l" Dir="OUT"/>
+		<Port Id="xpoint1_clk3_n" Dir="IN"/>
+		<Port Id="cdce_pwr_down" Dir="OUT"/>
+		<Port Id="xpoint1_clk3_p" Dir="IN"/>
+		<Port Id="fmc2_rx_n" Dir="IN"/>
+		<Port Id="fmc2_rx_p" Dir="IN"/>
+		<Port Id="pcie_clk_n" Dir="IN"/>
+		<Port Id="pcie_clk_p" Dir="IN"/>
+		<Port Id="cdce_sync" Dir="OUT"/>
+		<Port Id="fmc1_clk1_m2c_n" Dir="IN"/>
+		<Port Id="fmc1_clk1_m2c_p" Dir="IN"/>
+		<Port Id="cdce_spi_le" Dir="OUT"/>
+		<Port Id="cdce_sec_ref_n" Dir="OUT"/>
+		<Port Id="cdce_sec_ref_p" Dir="OUT"/>
+		<Port Id="fmc2_present_l" Dir="IN"/>
+		<Port Id="gbe_scl_mdc" Dir="INOUT"/>
+		<Port Id="gbe_tx_n" Dir="OUT"/>
+		<Port Id="fmc1_gbtclk1_m2c_n" Dir="IN"/>
+		<Port Id="gbe_tx_p" Dir="OUT"/>
+		<Port Id="fmc1_gbtclk1_m2c_p" Dir="IN"/>
+		<Port Id="amc_tclkb" Dir="OUT"/>
+		<DiffPair Pos="amc_port_rx_p[0]" Neg="amc_port_rx_n[0]"/>
+		<DiffPair Pos="sfp_rx_p[1]" Neg="sfp_rx_n[1]"/>
+		<DiffPair Pos="sfp_rx_p[2]" Neg="sfp_rx_n[2]"/>
+		<DiffPair Pos="sfp_rx_p[3]" Neg="sfp_rx_n[3]"/>
+		<DiffPair Pos="sfp_rx_p[4]" Neg="sfp_rx_n[4]"/>
+		<DiffPair Pos="amc_port_tx_p[0]" Neg="amc_port_tx_n[0]"/>
+		<DiffPair Pos="sfp_tx_p[1]" Neg="sfp_tx_n[1]"/>
+		<DiffPair Pos="sfp_tx_p[2]" Neg="sfp_tx_n[2]"/>
+		<DiffPair Pos="sfp_tx_p[3]" Neg="sfp_tx_n[3]"/>
+		<DiffPair Pos="sfp_tx_p[4]" Neg="sfp_tx_n[4]"/>
+		<DiffPair Pos="cdce_out1_p" Neg="cdce_out1_n"/>
+		<DiffPair Pos="gbe_rx_p" Neg="gbe_rx_n"/>
+		<DiffPair Pos="clk125_2_p" Neg="clk125_2_n"/>
+		<DiffPair Pos="xpoint1_clk1_p" Neg="xpoint1_clk1_n"/>
+		<DiffPair Pos="cdce_sec_ref_p" Neg="cdce_sec_ref_n"/>
+		<DiffPair Pos="gbe_tx_p" Neg="gbe_tx_n"/>
+	</Ifc>
+</Interface>
+

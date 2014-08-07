@@ -19,8 +19,7 @@ port(
 	ipb_miso_o      : out ipb_rbus;
     
     -- Data to the GTX
-    tx_en_i         : in std_logic;
-    tx_ack_o        : out std_logic;
+    tx_en_o         : out std_logic;
     tx_data_o       : out std_logic_vector(31 downto 0);
     
     -- Data from the GTX
@@ -42,19 +41,44 @@ architecture rtl of ipb_vfat2 is
 	signal ipb_data     : std_logic_vector(31 downto 0) := (others => '0'); 
 
     -- FIFO signals
-    signal wr_en        : std_logic := '0';
-    signal data_in      : std_logic_vector(31 downto 0) := (others => '0');
+    signal tx_en        : std_logic := '0';
+    signal tx_data      : std_logic_vector(31 downto 0) := (others => '0');
     
-    signal rd_en        : std_logic := '0';
-    signal rd_valid     : std_logic := '0';
-    signal data_out     : std_logic_vector(31 downto 0) := (others => '0');
+    signal rx_en        : std_logic := '0';
+    signal rx_data      : std_logic_vector(31 downto 0) := (others => '0');
     
 begin
 
     ----------------------------------
-    -- IPBus -> GTX                 --
+    -- Clock bridges                --
     ----------------------------------
     
+    clock_bridge_tx_inst : entity work.clock_bridge
+    port map(
+        reset_i     => reset_i,
+        m_clk_i     => ipb_clk_i,
+        m_en_i      => tx_en,
+        m_data_i    => tx_data,        
+        s_clk_i     => fabric_clk_i,
+        s_en_o      => tx_en_o,
+        s_data_o    => tx_data_o
+    );    
+
+    clock_bridge_rx_inst : entity work.clock_bridge
+    port map(
+        reset_i     => reset_i,
+        m_clk_i     => fabric_clk_i,
+        m_en_i      => rx_en_i,
+        m_data_i    => rx_data_i,        
+        s_clk_i     => ipb_clk_i,
+        s_en_o      => rx_en,
+        s_data_o    => rx_data
+    );   
+
+    ----------------------------------
+    -- IPBus -> GTX                 --
+    ----------------------------------
+
     process(ipb_clk_i)
     
         variable chip_byte          : std_logic_vector(7 downto 0) := (others => '0');
@@ -71,15 +95,16 @@ begin
             -- Reset
             if (reset_i = '1') then
                 
-                wr_en <= '0';
+                tx_en <= '0';
                 
                 last_ipb_strobe := '0';
                 
             else 
                 
-                -- Strobe awaiting
+                -- Incoming data from IPBus controller
                 if (last_ipb_strobe = '0' and ipb_mosi_i.ipb_strobe = '1') then
                    
+                    -- Write operation
                     if (ipb_mosi_i.ipb_write = '1') then
 
                         -- Unused - Read/Write - Chip select
@@ -87,7 +112,8 @@ begin
                         
                         -- Data
                         data_byte := ipb_mosi_i.ipb_wdata(7 downto 0); 
-                        
+                    
+                    -- Read operation
                     else
 
                         -- Unused - Read/Write - Chip select
@@ -104,15 +130,16 @@ begin
                     -- CRC
                     crc_byte := def_gtx_vfat2 xor chip_byte xor register_byte xor data_byte;
                     
-                    -- Set TX
-                    data_in <= chip_byte & register_byte & data_byte & crc_byte;
+                    -- Set TX data
+                    tx_data <= chip_byte & register_byte & data_byte & crc_byte;
                     
-                    -- Strobe
-                    wr_en <= '1';
+                    -- Set TX strobe
+                    tx_en <= '1';
 
                 else
                     
-                    wr_en <= '0';
+                    -- Reset TX strobe
+                    tx_en <= '0';
                     
                 end if;  
                 
@@ -123,9 +150,10 @@ begin
         end if;
         
     end process;
-   ----------------------------------
-    -- GTX -> IPBus                 --
+    
     ----------------------------------
+    -- GTX -> IPBus                 --
+    ---------------------------------- 
 
     process(ipb_clk_i)
         
@@ -141,38 +169,35 @@ begin
             -- Reset
             if (reset_i = '1') then
             
-                rd_en <= '0';
-            
                 ipb_error <= '0';
                 
                 ipb_ack <= '0';
                 
             else 
             
-                if (rd_valid = '1') then
-                
-                    rd_en <= '0';
+                -- Response from OptoHybrid
+                if (rx_en = '1') then
                     
                     -- Unused - Read/Write - Chip select
-                    chip_byte := data_out(31 downto 24);
+                    chip_byte := rx_data(31 downto 24);
                     
                     -- Register select                        
-                    register_byte := data_out(23 downto 16);
+                    register_byte := rx_data(23 downto 16);
                     
                     -- Data
-                    data_byte := data_out(15 downto 8);
+                    data_byte := rx_data(15 downto 8);
                     
                     -- CRC
                     crc_byte := def_gtx_vfat2 xor chip_byte xor register_byte xor data_byte;       
                     
                     -- Check CRC
-                    if (crc_byte = data_out(7 downto 0)) then
+                    if (crc_byte = rx_data(7 downto 0)) then
                     
                         -- Set data bus
-                        ipb_data <= "00000" & data_out(31) & data_out(30) & data_out(29) -- Unused - Error - Valid - Read/Write_n
-                                    & "000" & data_out(28 downto 24)                       -- Chip select
-                                    & data_out(23 downto 16)                               -- Register select
-                                    & data_out(15 downto 8);                               -- Data
+                        ipb_data <= "00000" & chip_byte(7) & chip_byte(6) & chip_byte(5)    -- Unused - Error - Valid - Read/Write_n
+                                    & "000" & chip_byte(4 downto 0)                         -- Chip select
+                                    & register_byte                                         -- Register select
+                                    & data_byte;                                            -- Data
                                     
                         -- Reset IPBus error
                         ipb_error <= '0';
@@ -192,8 +217,6 @@ begin
                         
                 else
                     
-                    rd_en <= '1';
-                    
                     ipb_ack <= '0';
                 
                     ipb_error <= '0';
@@ -205,38 +228,6 @@ begin
         end if;
         
     end process;	
-    
-    ----------------------------------
-    -- Buffers                      --
-    ----------------------------------
-
-    tx_buffer : entity work.buffer_fifo
-    port map(
-        rst     => reset_i,
-        wr_clk  => ipb_clk_i,
-        rd_clk  => fabric_clk_i,
-        din     => data_in,
-        wr_en   => wr_en,
-        rd_en   => tx_en_i,
-        dout    => tx_data_o,
-        full    => open,
-        empty   => open,
-        valid   => tx_ack_o
-    );    
-    
-    rx_buffer : entity work.buffer_fifo
-    port map(
-        rst     => reset_i,
-        wr_clk  => fabric_clk_i,
-        rd_clk  => ipb_clk_i,
-        din     => rx_data_i,
-        wr_en   => rx_en_i,
-        rd_en   => rd_en,
-        dout    => data_out,
-        full    => open,
-        empty   => open,
-        valid   => rd_valid
-    );
     
     ----------------------------------
     -- IPBus signals                --

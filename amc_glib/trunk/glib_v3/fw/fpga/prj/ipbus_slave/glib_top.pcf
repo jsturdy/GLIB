@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Aug 07 10:48:28 2014
+// Written by: Map P.20131013 on Mon Aug 18 10:14:45 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -272,99 +272,139 @@ COMP "system/gbt_phase_monitoring/fmc1_cdce_pm/debug_test_d_clk_cdce_o" LOCATE
         = SITE "SLICE_X58Y101" LEVEL 1;
 COMP "system/gbt_phase_monitoring/fmc1_cdce_pm/debug_test_xor_mclk_o" LOCATE =
         SITE "SLICE_X59Y100" LEVEL 1;
+COMPGRP pblock_ipb_vfat2_2_inst.SLICE = COMP "usr/ipb_vfat2_2_inst/rx_data<7>"
+        COMP "usr/ipb_vfat2_2_inst/rx_data<31>" COMP
+        "usr/ipb_vfat2_2_inst/ipb_ack" COMP "usr/vfat2_tx_en_2" COMP
+        "usr/ipb_vfat2_2_inst/tx_data<27>" COMP
+        "usr/ipb_vfat2_2_inst/tx_data<15>" COMP
+        "user_ipb_miso[2]_ipb_rdata<7>" COMP
+        "usr/ipb_vfat2_2_inst/rx_data<23>" COMP
+        "usr/ipb_vfat2_2_inst/clock_bridge_tx_inst/cnt_out<1>" COMP
+        "user_ipb_miso[2]_ipb_rdata<26>" COMP "usr/ipb_vfat2_2_inst/tx_en"
+        COMP "usr/ipb_vfat2_2_inst/tx_data<23>" COMP
+        "user_ipb_miso[2]_ipb_rdata<15>" COMP
+        "usr/ipb_vfat2_2_inst/rx_data<11>" COMP
+        "usr/ipb_vfat2_2_inst/clock_bridge_rx_inst/cnt_in<1>" COMP
+        "usr/ipb_vfat2_2_inst/rx_en" COMP "user_ipb_miso[2]_ipb_rdata<19>"
+        COMP "usr/vfat2_tx_data_2<23>" COMP "usr/ipb_vfat2_2_inst/tx_data<19>"
+        COMP "usr/ipb_vfat2_2_inst/tx_data<11>" COMP
+        "usr/ipb_vfat2_2_inst/rx_data<27>" COMP
+        "usr/ipb_vfat2_2_inst/clock_bridge_rx_inst/cnt_out<1>" COMP
+        "usr/ipb_vfat2_2_inst/clock_bridge_tx_inst/cnt_in<1>" COMP
+        "usr/vfat2_tx_data_2<27>" COMP "usr/vfat2_tx_data_2<19>" COMP
+        "usr/vfat2_tx_data_2<11>";
+COMPGRP "pblock_ipb_vfat2_2_inst.SLICE" LOCATE = SITE
+        "SLICE_X98Y23:SLICE_X101Y29" LEVEL 4;
 COMPGRP pblock_ipb_vfat2_1_inst.SLICE = COMP
-        "usr/ipb_vfat2_1_inst/last_ipb_strobe" COMP
-        "usr/ipb_vfat2_1_inst/ipb_ack" COMP "user_ipb_miso[1]_ipb_rdata<26>"
-        COMP "usr/ipb_vfat2_1_inst/rx_data<19>" COMP "usr/vfat2_tx_data_1<3>"
+        "usr/ipb_vfat2_1_inst/rx_data<27>" COMP "usr/ipb_vfat2_1_inst/rx_en"
         COMP "usr/ipb_vfat2_1_inst/tx_en" COMP
-        "usr/ipb_test_inst/last_ipb_strobe" COMP
-        "user_ipb_miso[1]_ipb_rdata<15>" COMP "user_ipb_miso[1]_ipb_rdata<11>"
-        COMP "usr/ipb_vfat2_1_inst/tx_data<23>" COMP
-        "usr/ipb_vfat2_1_inst/clock_bridge_rx_inst/cnt_out<1>" COMP
-        "usr/ipb_vfat2_1_inst/clock_bridge_tx_inst/cnt_in<1>" COMP
+        "user_ipb_miso[1]_ipb_rdata<26>" COMP "user_ipb_miso[1]_ipb_rdata<15>"
+        COMP "usr/ipb_test_inst/last_ipb_strobe" COMP "usr/vfat2_tx_data_1<3>"
+        COMP "usr/ipb_vfat2_1_inst/rx_data<23>" COMP
         "usr/ipb_vfat2_1_inst/rx_data<3>" COMP
-        "usr/ipb_vfat2_1_inst/rx_data<27>" COMP
-        "usr/ipb_vfat2_1_inst/rx_data<23>" COMP
-        "usr/ipb_vfat2_1_inst/tx_data<15>" COMP
-        "usr/ipb_vfat2_1_inst/tx_data<11>" COMP "usr/ipb_vfat2_1_inst/rx_en"
-        COMP "usr/vfat2_tx_en_1" COMP "usr/ipb_vfat2_1_inst/rx_data<11>" COMP
-        "usr/ipb_vfat2_1_inst/tx_data<19>" COMP
-        "user_ipb_miso[1]_ipb_rdata<3>" COMP "usr/vfat2_tx_data_1<15>" COMP
-        "usr/vfat2_tx_data_1<27>" COMP
-        "usr/ipb_vfat2_1_inst/clock_bridge_rx_inst/cnt_in<1>" COMP
-        "usr/ipb_vfat2_1_inst/tx_data<29>" COMP "usr/vfat2_tx_data_1<29>" COMP
+        "usr/ipb_vfat2_1_inst/clock_bridge_rx_inst/cnt_out<1>" COMP
+        "usr/ipb_vfat2_1_inst/ipb_ack" COMP "user_ipb_miso[1]_ipb_rdata<3>"
+        COMP "usr/vfat2_tx_data_1<23>" COMP "usr/ipb_vfat2_1_inst/tx_data<15>"
+        COMP "usr/ipb_vfat2_1_inst/rx_data<7>" COMP "usr/vfat2_tx_en_1" COMP
         "usr/ipb_vfat2_1_inst/clock_bridge_tx_inst/cnt_out<1>" COMP
-        "usr/vfat2_tx_data_1<11>";
+        "user_ipb_miso[1]_ipb_rdata<11>" COMP "usr/vfat2_tx_data_1<11>" COMP
+        "usr/vfat2_tx_data_1<27>" COMP "usr/ipb_vfat2_1_inst/rx_data<19>" COMP
+        "usr/ipb_vfat2_1_inst/clock_bridge_rx_inst/cnt_in<1>" COMP
+        "usr/ipb_vfat2_1_inst/clock_bridge_tx_inst/cnt_in<1>" COMP
+        "usr/ipb_vfat2_1_inst/rx_data<31>" COMP
+        "usr/ipb_vfat2_1_inst/tx_data<23>" COMP
+        "usr/ipb_vfat2_1_inst/tx_data<11>" COMP
+        "usr/ipb_vfat2_1_inst/tx_data<19>";
 COMPGRP "pblock_ipb_vfat2_1_inst.SLICE" LOCATE = SITE
-        "SLICE_X92Y10:SLICE_X99Y19" LEVEL 4;
+        "SLICE_X98Y13:SLICE_X101Y19" LEVEL 4;
 COMPGRP pblock_ipb_vfat2_0_inst.SLICE = COMP "usr/ipb_vfat2_0_inst/tx_en" COMP
-        "usr/ipb_vfat2_0_inst/last_ipb_strobe" COMP
-        "user_ipb_miso[0]_ipb_rdata<26>" COMP "user_ipb_miso[0]_ipb_rdata<3>"
-        COMP "user_ipb_miso[0]_ipb_rdata<15>" COMP
         "usr/ipb_vfat2_0_inst/clock_bridge_tx_inst/cnt_in<1>" COMP
-        "usr/ipb_vfat2_0_inst/GND_558_o_rx_data[15]_xor_9_OUT<1>" COMP
-        "usr/ipb_vfat2_0_inst/ipb_error" COMP "usr/vfat2_tx_data_0<15>" COMP
-        "usr/ipb_vfat2_0_inst/tx_data<27>" COMP
-        "user_ipb_miso[0]_ipb_rdata<11>" COMP
+        "usr/ipb_vfat2_0_inst/ipb_ack" COMP "user_ipb_miso[0]_ipb_rdata<26>"
+        COMP "user_ipb_miso[0]_ipb_rdata<19>" COMP
+        "user_ipb_miso[0]_ipb_rdata<7>" COMP
+        "usr/ipb_vfat2_0_inst/rx_data<11>" COMP
         "usr/ipb_vfat2_0_inst/clock_bridge_tx_inst/cnt_out<1>" COMP
-        "usr/ipb_vfat2_0_inst/rx_data[7]_GND_558_o_equal_11_o8" COMP
-        "usr/ipb_vfat2_0_inst/ipb_ack" COMP "usr/ipb_vfat2_0_inst/tx_data<23>"
-        COMP "usr/ipb_vfat2_0_inst/tx_data<15>" COMP
+        "usr/vfat2_tx_en_0" COMP "usr/vfat2_tx_data_0<23>" COMP
+        "usr/ipb_vfat2_0_inst/tx_data<15>" COMP
+        "user_ipb_miso[0]_ipb_rdata<15>" COMP
         "usr/ipb_vfat2_0_inst/clock_bridge_rx_inst/cnt_out<1>" COMP
         "usr/ipb_vfat2_0_inst/clock_bridge_rx_inst/cnt_in<1>" COMP
-        "usr/ipb_vfat2_0_inst/rx_data<27>" COMP
-        "usr/ipb_vfat2_0_inst/tx_data<19>" COMP "usr/vfat2_tx_data_0<19>" COMP
-        "usr/ipb_vfat2_0_inst/tx_data<11>" COMP "usr/ipb_vfat2_0_inst/rx_en"
-        COMP "usr/vfat2_tx_en_0" COMP "usr/ipb_vfat2_0_inst/rx_data<31>" COMP
-        "usr/ipb_vfat2_0_inst/rx_data<23>" COMP "usr/vfat2_tx_data_0<11>" COMP
-        "usr/vfat2_tx_data_0<27>" COMP "usr/ipb_vfat2_0_inst/rx_data<3>" COMP
-        "usr/ipb_vfat2_0_inst/rx_data<7>" COMP "usr/vfat2_tx_data_0<29>" COMP
-        "usr/ipb_vfat2_0_inst/tx_data<29>";
+        "usr/ipb_vfat2_0_inst/rx_data<3>" COMP
+        "usr/ipb_vfat2_0_inst/rx_data<23>" COMP "usr/vfat2_tx_data_0<27>" COMP
+        "usr/ipb_vfat2_0_inst/tx_data<19>" COMP "usr/vfat2_tx_data_0<11>" COMP
+        "usr/ipb_vfat2_0_inst/rx_en" COMP "usr/ipb_vfat2_0_inst/rx_data<27>"
+        COMP "usr/ipb_vfat2_0_inst/tx_data<23>" COMP
+        "usr/ipb_vfat2_0_inst/rx_data<31>" COMP "usr/vfat2_tx_data_0<19>" COMP
+        "usr/ipb_vfat2_0_inst/tx_data<11>";
 COMPGRP "pblock_ipb_vfat2_0_inst.SLICE" LOCATE = SITE
-        "SLICE_X92Y0:SLICE_X99Y9" LEVEL 4;
-COMPGRP pblock_gtx_tx_mux_1_inst.SLICE = COMP
-        "usr/gtx_tx_mux_1_inst/state_FSM_FFd2" COMP "usr/tx_data_1<11>" COMP
-        "usr/gtx_tx_mux_1_inst/data<27>" COMP "usr/gtx_tx_mux_1_inst/data<11>"
-        COMP "usr/gtx_tx_mux_1_inst/data<3>" COMP
+        "SLICE_X98Y3:SLICE_X101Y9" LEVEL 4;
+COMPGRP pblock_gtx_tx_mux_2_inst.SLICE = COMP "usr/tx_data_2<14>" COMP
+        "usr/gtx_tx_mux_2_inst/data<27>" COMP "usr/gtx_tx_mux_2_inst/data<11>"
+        COMP "usr/gtx_tx_mux_2_inst/kchar_count<5>" COMP
+        "usr/gtx_tx_mux_2_inst/state_FSM_FFd1" COMP "usr/tx_data_2<11>" COMP
+        "usr/gtx_tx_mux_2_inst/kchar_count<8>" COMP
+        "usr/gtx_tx_mux_2_inst/kchar_count<2>" COMP
+        "usr/gtx_tx_mux_2_inst/data<23>" COMP "usr/gtx_tx_mux_2_inst/data<19>"
+        COMP "usr/gtx_tx_mux_2_inst/state_FSM_FFd2" COMP "usr/tx_data_2<7>"
+        COMP "usr/tx_data_2<3>";
+COMPGRP "pblock_gtx_tx_mux_2_inst.SLICE" LOCATE = SITE
+        "SLICE_X102Y25:SLICE_X105Y29" LEVEL 4;
+COMPGRP pblock_gtx_tx_mux_1_inst.SLICE = COMP "usr/tx_data_1<7>" COMP
+        "usr/gtx_tx_mux_1_inst/data<11>" COMP "usr/gtx_tx_mux_1_inst/data<3>"
+        COMP "usr/gtx_tx_mux_1_inst/kchar_count<5>" COMP "usr/tx_data_1<11>"
+        COMP "usr/tx_data_1<3>" COMP "usr/tx_kchar_1<0>" COMP
         "usr/gtx_tx_mux_1_inst/kchar_count<8>" COMP
         "usr/gtx_tx_mux_1_inst/state_FSM_FFd1" COMP
-        "usr/gtx_tx_mux_1_inst/data<15>" COMP "usr/tx_kchar_1<0>" COMP
-        "usr/gtx_tx_mux_1_inst/kchar_count<7>" COMP "usr/tx_data_1<7>" COMP
-        "usr/tx_data_1<14>" COMP "usr/gtx_tx_mux_1_inst/kchar_count<5>" COMP
-        "usr/tx_data_1<3>" COMP "usr/gtx_tx_mux_1_inst/kchar_count<2>" COMP
-        "usr/gtx_tx_mux_1_inst/data<29>";
+        "usr/gtx_tx_mux_1_inst/state_FSM_FFd2" COMP
+        "usr/gtx_tx_mux_1_inst/kchar_count<2>" COMP
+        "usr/gtx_tx_mux_1_inst/data<15>" COMP
+        "usr/gtx_tx_mux_1_inst/data<19>";
 COMPGRP "pblock_gtx_tx_mux_1_inst.SLICE" LOCATE = SITE
-        "SLICE_X100Y15:SLICE_X105Y19" LEVEL 4;
+        "SLICE_X102Y15:SLICE_X105Y19" LEVEL 4;
 COMPGRP pblock_gtx_tx_mux_0_inst.SLICE = COMP "usr/tx_data_0<14>" COMP
-        "usr/tx_data_0<7>" COMP "usr/gtx_tx_mux_0_inst/data<7>" COMP
-        "usr/gtx_tx_mux_0_inst/data<19>" COMP "usr/gtx_tx_mux_0_inst/data<23>"
-        COMP "usr/tx_data_0<3>" COMP "usr/gtx_tx_mux_0_inst/state_FSM_FFd1"
-        COMP "usr/tx_kchar_0<0>" COMP "usr/gtx_tx_mux_0_inst/data<27>" COMP
-        "usr/gtx_tx_mux_0_inst/state_FSM_FFd2" COMP
-        "usr/gtx_tx_mux_0_inst/kchar_count<7>" COMP "usr/tx_data_0<11>" COMP
-        "usr/gtx_tx_mux_0_inst/kchar_count<2>" COMP
+        "usr/gtx_tx_mux_0_inst/data<27>" COMP "usr/gtx_tx_mux_0_inst/data<23>"
+        COMP "usr/gtx_tx_mux_0_inst/data<3>" COMP
+        "usr/gtx_tx_mux_0_inst/state_FSM_FFd1" COMP
+        "usr/gtx_tx_mux_0_inst/data<11>" COMP "usr/tx_data_0<7>" COMP
+        "usr/tx_data_0<3>" COMP "usr/gtx_tx_mux_0_inst/state_FSM_FFd2" COMP
+        "usr/tx_data_0<11>" COMP "usr/gtx_tx_mux_0_inst/kchar_count<8>" COMP
+        "usr/tx_kchar_0<0>" COMP "usr/gtx_tx_mux_0_inst/kchar_count<7>" COMP
         "usr/gtx_tx_mux_0_inst/kchar_count<5>";
 COMPGRP "pblock_gtx_tx_mux_0_inst.SLICE" LOCATE = SITE
-        "SLICE_X100Y5:SLICE_X105Y9" LEVEL 4;
-COMPGRP pblock_gtx_rx_mux_1_inst.SLICE = COMP
+        "SLICE_X102Y5:SLICE_X105Y9" LEVEL 4;
+COMPGRP pblock_gtx_rx_mux_2_inst.SLICE = COMP "usr/gtx_rx_mux_2_inst/data<27>"
+        COMP "usr/gtx_rx_mux_2_inst/data<31>" COMP "usr/vfat2_rx_data_2<15>"
+        COMP "usr/vfat2_rx_data_2<11>" COMP "usr/vfat2_rx_data_2<3>" COMP
+        "usr/gtx_rx_mux_2_inst/state_FSM_FFd2" COMP "usr/vfat2_rx_data_2<19>"
+        COMP "usr/gtx_rx_mux_2_inst/selected_core<0>" COMP
+        "usr/vfat2_rx_data_2<23>" COMP "usr/vfat2_rx_en_2" COMP
+        "usr/gtx_rx_mux_2_inst/state_FSM_FFd1" COMP
+        "usr/gtx_rx_mux_2_inst/data<23>" COMP
+        "usr/gtx_rx_mux_2_inst/data<19>";
+COMPGRP "pblock_gtx_rx_mux_2_inst.SLICE" LOCATE = SITE
+        "SLICE_X102Y20:SLICE_X105Y24" LEVEL 4;
+COMPGRP pblock_gtx_rx_mux_1_inst.SLICE = COMP "usr/gtx_rx_mux_1_inst/data<23>"
+        COMP "usr/vfat2_rx_data_1<15>" COMP "usr/vfat2_rx_data_1<11>" COMP
+        "usr/vfat2_rx_data_1<3>" COMP "usr/vfat2_rx_en_1" COMP
+        "usr/gtx_rx_mux_1_inst/state_FSM_FFd2" COMP
+        "usr/gtx_rx_mux_1_inst/data<31>" COMP "usr/vfat2_rx_data_1<31>" COMP
+        "usr/gtx_rx_mux_1_inst/selected_core<0>" COMP
+        "usr/gtx_rx_mux_1_inst/data<19>" COMP "usr/vfat2_rx_data_1<27>" COMP
         "usr/gtx_rx_mux_1_inst/state_FSM_FFd1" COMP
-        "usr/gtx_rx_mux_1_inst/selected_core<0>" COMP "usr/vfat2_rx_data_1<3>"
-        COMP "usr/vfat2_rx_data_1<19>" COMP "usr/vfat2_rx_en_1" COMP
-        "usr/vfat2_rx_data_1<11>" COMP "usr/gtx_rx_mux_1_inst/data<19>" COMP
-        "usr/gtx_rx_mux_1_inst/data<23>" COMP "usr/gtx_rx_mux_1_inst/data<31>"
-        COMP "usr/gtx_rx_mux_1_inst/data<27>" COMP "usr/vfat2_rx_data_1<15>";
+        "usr/gtx_rx_mux_1_inst/data<27>";
 COMPGRP "pblock_gtx_rx_mux_1_inst.SLICE" LOCATE = SITE
-        "SLICE_X100Y10:SLICE_X105Y14" LEVEL 4;
-COMPGRP pblock_gtx_rx_mux_0_inst.SLICE = COMP "usr/gtx_rx_mux_0_inst/data<19>"
-        COMP "usr/vfat2_rx_data_0<23>" COMP "usr/gtx_rx_mux_0_inst/data<23>"
-        COMP "usr/vfat2_rx_data_0<27>" COMP "usr/vfat2_rx_data_0<7>" COMP
-        "usr/vfat2_rx_en_0" COMP "usr/vfat2_rx_data_0<31>" COMP
-        "usr/vfat2_rx_data_0<3>" COMP "usr/gtx_rx_mux_0_inst/data<27>" COMP
-        "usr/gtx_rx_mux_0_inst/data<31>" COMP
+        "SLICE_X102Y10:SLICE_X105Y14" LEVEL 4;
+COMPGRP pblock_gtx_rx_mux_0_inst.SLICE = COMP
         "usr/gtx_rx_mux_0_inst/state_FSM_FFd1" COMP
-        "usr/gtx_rx_mux_0_inst/selected_core<0>";
+        "usr/gtx_rx_mux_0_inst/selected_core<0>" COMP
+        "usr/gtx_rx_mux_0_inst/data<27>" COMP "usr/gtx_rx_mux_0_inst/data<31>"
+        COMP "usr/vfat2_rx_data_0<15>" COMP "usr/vfat2_rx_data_0<11>" COMP
+        "usr/vfat2_rx_data_0<3>" COMP "usr/gtx_rx_mux_0_inst/state_FSM_FFd2"
+        COMP "usr/vfat2_rx_data_0<19>" COMP "usr/vfat2_rx_data_0<23>" COMP
+        "usr/vfat2_rx_en_0" COMP "usr/gtx_rx_mux_0_inst/data<23>" COMP
+        "usr/gtx_rx_mux_0_inst/data<19>";
 COMPGRP "pblock_gtx_rx_mux_0_inst.SLICE" LOCATE = SITE
-        "SLICE_X100Y0:SLICE_X105Y4" LEVEL 4;
+        "SLICE_X102Y0:SLICE_X105Y4" LEVEL 4;
 PIN usr/gtx_wrapper_inst/high_speed_gtx3_inst/gtxe1_i_pins<132> = BEL
         "usr/gtx_wrapper_inst/high_speed_gtx3_inst/gtxe1_i" PINNAME RXUSRCLK2;
 PIN usr/gtx_wrapper_inst/high_speed_gtx3_inst/gtxe1_i_pins<268> = BEL
@@ -4317,6 +4357,10 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/timer_17" BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/timer_18" BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/timer_19" BEL
+        "system/phy_en.phy_ipb_ctrl/trans/sm/timer_20" BEL
+        "system/phy_en.phy_ipb_ctrl/trans/sm/timer_21" BEL
+        "system/phy_en.phy_ipb_ctrl/trans/sm/timer_22" BEL
+        "system/phy_en.phy_ipb_ctrl/trans/sm/timer_23" BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/words_todo_0" BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/words_todo_1" BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/words_todo_2" BEL
@@ -4721,6 +4765,10 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_17" BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_18" BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_19" BEL
+        "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_20" BEL
+        "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_21" BEL
+        "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_22" BEL
+        "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_23" BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/words_todo_0" BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/words_todo_1" BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/words_todo_2" BEL
@@ -7553,6 +7601,10 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/timer_17" BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/timer_18" BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/timer_19" BEL
+        "system/phy_en.phy_ipb_ctrl/trans/sm/timer_20" BEL
+        "system/phy_en.phy_ipb_ctrl/trans/sm/timer_21" BEL
+        "system/phy_en.phy_ipb_ctrl/trans/sm/timer_22" BEL
+        "system/phy_en.phy_ipb_ctrl/trans/sm/timer_23" BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/words_todo_0" BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/words_todo_1" BEL
         "system/phy_en.phy_ipb_ctrl/trans/sm/words_todo_2" BEL
@@ -7957,6 +8009,10 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_17" BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_18" BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_19" BEL
+        "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_20" BEL
+        "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_21" BEL
+        "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_22" BEL
+        "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/timer_23" BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/words_todo_0" BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/words_todo_1" BEL
         "system/amc_p0_en.amc_p0_ipb_ctrl/trans/sm/words_todo_2" BEL

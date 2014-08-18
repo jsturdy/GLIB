@@ -1,15 +1,20 @@
-
-# PlanAhead Generated physical constraints 
-
-INST "usr/gtx_rx_mux_0_inst" AREA_GROUP = "pblock_gtx_rx_mux_0_inst";
-AREA_GROUP "pblock_gtx_rx_mux_0_inst" RANGE=SLICE_X100Y0:SLICE_X105Y4;
-INST "usr/gtx_tx_mux_0_inst" AREA_GROUP = "pblock_gtx_tx_mux_0_inst";
-AREA_GROUP "pblock_gtx_tx_mux_0_inst" RANGE=SLICE_X100Y5:SLICE_X105Y9;
+INST "usr/gtx_rx_mux_2_inst" AREA_GROUP = "pblock_gtx_rx_mux_2_inst";
+AREA_GROUP "pblock_gtx_rx_mux_2_inst" RANGE=SLICE_X102Y20:SLICE_X105Y24;
 INST "usr/gtx_rx_mux_1_inst" AREA_GROUP = "pblock_gtx_rx_mux_1_inst";
-AREA_GROUP "pblock_gtx_rx_mux_1_inst" RANGE=SLICE_X100Y10:SLICE_X105Y14;
+AREA_GROUP "pblock_gtx_rx_mux_1_inst" RANGE=SLICE_X102Y10:SLICE_X105Y14;
+INST "usr/gtx_rx_mux_0_inst" AREA_GROUP = "pblock_gtx_rx_mux_0_inst";
+AREA_GROUP "pblock_gtx_rx_mux_0_inst" RANGE=SLICE_X102Y0:SLICE_X105Y4;
+
+INST "usr/gtx_tx_mux_2_inst" AREA_GROUP = "pblock_gtx_tx_mux_2_inst";
+AREA_GROUP "pblock_gtx_tx_mux_2_inst" RANGE=SLICE_X102Y25:SLICE_X105Y29;
 INST "usr/gtx_tx_mux_1_inst" AREA_GROUP = "pblock_gtx_tx_mux_1_inst";
-AREA_GROUP "pblock_gtx_tx_mux_1_inst" RANGE=SLICE_X100Y15:SLICE_X105Y19;
-INST "usr/ipb_vfat2_0_inst" AREA_GROUP = "pblock_ipb_vfat2_0_inst";
-AREA_GROUP "pblock_ipb_vfat2_0_inst" RANGE=SLICE_X92Y0:SLICE_X99Y9;
+AREA_GROUP "pblock_gtx_tx_mux_1_inst" RANGE=SLICE_X102Y15:SLICE_X105Y19;
+INST "usr/gtx_tx_mux_0_inst" AREA_GROUP = "pblock_gtx_tx_mux_0_inst";
+AREA_GROUP "pblock_gtx_tx_mux_0_inst" RANGE=SLICE_X102Y5:SLICE_X105Y9;
+
+INST "usr/ipb_vfat2_2_inst" AREA_GROUP = "pblock_ipb_vfat2_2_inst";
+AREA_GROUP "pblock_ipb_vfat2_2_inst" RANGE=SLICE_X98Y23:SLICE_X101Y29;
 INST "usr/ipb_vfat2_1_inst" AREA_GROUP = "pblock_ipb_vfat2_1_inst";
-AREA_GROUP "pblock_ipb_vfat2_1_inst" RANGE=SLICE_X92Y10:SLICE_X99Y19;
+AREA_GROUP "pblock_ipb_vfat2_1_inst" RANGE=SLICE_X98Y13:SLICE_X101Y19;
+INST "usr/ipb_vfat2_0_inst" AREA_GROUP = "pblock_ipb_vfat2_0_inst";
+AREA_GROUP "pblock_ipb_vfat2_0_inst" RANGE=SLICE_X98Y3:SLICE_X101Y9;

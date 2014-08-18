@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: glib_top.prj
 
@@ -2148,7 +2148,7 @@ Synthesizing Unit <transactor_sm>.
     Found 32-bit register for signal <addr>.
     Found 8-bit register for signal <words_todo>.
     Found 8-bit register for signal <words_done>.
-    Found 20-bit register for signal <timer>.
+    Found 24-bit register for signal <timer>.
     Found 1-bit register for signal <rmw_write>.
     Found 32-bit register for signal <rmw_coeff>.
     Found 32-bit register for signal <rmw_result>.
@@ -2171,13 +2171,13 @@ Synthesizing Unit <transactor_sm>.
     -----------------------------------------------------------------------
     Found 32-bit adder for signal <addr[31]_GND_214_o_add_22_OUT> created at line 1241.
     Found 8-bit adder for signal <words_done[7]_GND_214_o_add_33_OUT> created at line 1241.
-    Found 20-bit adder for signal <timer[19]_GND_214_o_add_38_OUT> created at line 1241.
+    Found 24-bit adder for signal <timer[23]_GND_214_o_add_38_OUT> created at line 1241.
     Found 32-bit adder for signal <rmw_input[31]_rx_data[31]_add_44_OUT> created at line 166.
     Found 8-bit subtractor for signal <GND_214_o_GND_214_o_sub_29_OUT<7:0>> created at line 1308.
     Found 4-bit 4-to-1 multiplexer for signal <_n0265> created at line 61.
     Summary:
 	inferred   5 Adder/Subtractor(s).
-	inferred 202 D-type flip-flop(s).
+	inferred 206 D-type flip-flop(s).
 	inferred   9 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <transactor_sm> synthesized.
@@ -3852,11 +3852,10 @@ Macro Statistics
  16-bit adder                                          : 8
  17-bit subtractor                                     : 2
  2-bit adder                                           : 21
- 20-bit adder                                          : 2
  20-bit subtractor                                     : 1
  21-bit adder                                          : 4
  21-bit subtractor                                     : 1
- 24-bit adder                                          : 2
+ 24-bit adder                                          : 4
  28-bit adder                                          : 5
  3-bit adder                                           : 3
  3-bit subtractor                                      : 1
@@ -3886,9 +3885,8 @@ Macro Statistics
  16-bit register                                       : 89
  17-bit register                                       : 2
  2-bit register                                        : 49
- 20-bit register                                       : 2
  21-bit register                                       : 17
- 24-bit register                                       : 6
+ 24-bit register                                       : 8
  28-bit register                                       : 5
  3-bit register                                        : 25
  31-bit register                                       : 3
@@ -4606,10 +4604,9 @@ Macro Statistics
  16-bit up counter                                     : 6
  17-bit down counter                                   : 2
  2-bit up counter                                      : 17
- 20-bit up counter                                     : 2
  21-bit down counter                                   : 1
  21-bit up counter                                     : 4
- 24-bit up counter                                     : 2
+ 24-bit up counter                                     : 4
  28-bit up counter                                     : 5
  32-bit up counter                                     : 2
  4-bit down counter                                    : 1
@@ -6610,8 +6607,8 @@ Unit <u2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 11552
- Flip-Flops                                            : 11552
+# Registers                                            : 11560
+ Flip-Flops                                            : 11560
 # Shift Registers                                      : 4
  2-bit shift register                                  : 3
  5-bit shift register                                  : 1
@@ -6637,24 +6634,24 @@ Top Level Output File Name         : glib_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 14156
+# BELS                             : 14182
 #      GND                         : 124
 #      INV                         : 284
-#      LUT1                        : 460
+#      LUT1                        : 468
 #      LUT2                        : 2428
 #      LUT3                        : 2036
-#      LUT4                        : 1631
-#      LUT5                        : 1645
-#      LUT6                        : 2995
-#      MUXCY                       : 1134
+#      LUT4                        : 1633
+#      LUT5                        : 1643
+#      LUT6                        : 2997
+#      MUXCY                       : 1142
 #      MUXCY_L                     : 206
 #      MUXF5                       : 2
 #      MUXF6                       : 1
 #      MUXF7                       : 108
 #      MUXF8                       : 20
 #      VCC                         : 106
-#      XORCY                       : 976
-# FlipFlops/Latches                : 13160
+#      XORCY                       : 984
+# FlipFlops/Latches                : 13168
 #      FD                          : 2622
 #      FDC                         : 1137
 #      FDCE                        : 1102
@@ -6662,7 +6659,7 @@ Primitive and Black Box Usage:
 #      FDP                         : 457
 #      FDPE                        : 47
 #      FDR                         : 1843
-#      FDRE                        : 2318
+#      FDRE                        : 2326
 #      FDS                         : 94
 #      FDSE                        : 117
 #      LDC                         : 10
@@ -6705,18 +6702,18 @@ Selected Device : 6vlx130tff1156-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           13160  out of  160000     8%  
- Number of Slice LUTs:                11909  out of  80000    14%  
-    Number used as Logic:             11479  out of  80000    14%  
+ Number of Slice Registers:           13168  out of  160000     8%  
+ Number of Slice LUTs:                11919  out of  80000    14%  
+    Number used as Logic:             11489  out of  80000    14%  
     Number used as Memory:              430  out of  27840     1%  
        Number used as RAM:               96
        Number used as SRL:              334
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  17931
-   Number with an unused Flip Flop:    4771  out of  17931    26%  
-   Number with an unused LUT:          6022  out of  17931    33%  
-   Number of fully used LUT-FF pairs:  7138  out of  17931    39%  
+ Number of LUT Flip Flop pairs used:  17941
+   Number with an unused Flip Flop:    4773  out of  17941    26%  
+   Number with an unused LUT:          6022  out of  17941    33%  
+   Number of fully used LUT-FF pairs:  7146  out of  17941    39%  
    Number of unique control sets:       723
 
 IO Utilization: 
@@ -6751,7 +6748,7 @@ Clock Information:
 ------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
 Clock Signal                                                                                                | Clock buffer(FF name)                                             | Load  |
 ------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
-clk125_2_p                                                                                                  | MMCM_ADV:CLKOUT1                                                  | 4818  |
+clk125_2_p                                                                                                  | MMCM_ADV:CLKOUT1                                                  | 4826  |
 usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                      | BUFG                                                              | 1467  |
 usr/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                              | BUFG                                                              | 462   |
 usr/chipscope_icon_inst/CONTROL0<13>(usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
@@ -6793,7 +6790,7 @@ usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER
 usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)| 72    |
 usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)| 72    |
 usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36)| 72    |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 20    |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 20    |
 system/amc_p0_en.amc_p0_eth/N0(system/amc_p0_en.amc_p0_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                 | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                                                                                                              | 1     |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/N1(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                         | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                             | 1     |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/n0017<0>(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                   | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                             | 1     |
@@ -6820,7 +6817,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk125_2_p'
   Clock period: 3.186ns (frequency: 313.879MHz)
-  Total number of paths / destination ports: 2806497 / 11250
+  Total number of paths / destination ports: 2826317 / 11274
 -------------------------------------------------------------------------
 Delay:               3.186ns (Levels of Logic = 5)
   Source:            system/rst/rst_fabric_o (FF)
@@ -7706,12 +7703,12 @@ xpoint1_clk1_p |    2.931|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 127.00 secs
-Total CPU time to Xst completion: 126.69 secs
+Total REAL time to Xst completion: 108.00 secs
+Total CPU time to Xst completion: 108.23 secs
  
 --> 
 
-Total memory usage is 466288 kilobytes
+Total memory usage is 466160 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 1733 (   0 filtered)

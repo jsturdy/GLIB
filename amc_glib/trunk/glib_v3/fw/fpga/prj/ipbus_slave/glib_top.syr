@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: glib_top.prj
 
@@ -337,6 +337,9 @@ Parsing architecture <ttclk_distributed_dpram_a> of entity <ttclk_distributed_dp
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_package_basic.vhd" into library work
 Parsing package <user_package>.
 Parsing package body <user_package>.
+Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\clock_bridge.vhd" into library work
+Parsing entity <clock_bridge>.
+Parsing architecture <behavioral> of entity <clock_bridge>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\ipbus_2_0_v1\firmware\ipbus_core\hdl\udp_if_flat.vhd" into library work
 Parsing entity <UDP_if>.
 Parsing architecture <flat> of entity <udp_if>.
@@ -416,9 +419,15 @@ WARNING:HDLCompiler:701 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\f
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_addr_decode.vhd" into library work
 Parsing package <user_addr_decode>.
 Parsing package body <user_addr_decode>.
-Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\clock_bridge.vhd" into library work
-Parsing entity <clock_bridge>.
-Parsing architecture <behavioral> of entity <clock_bridge>.
+Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_vfat2.vhd" into library work
+Parsing entity <ipb_vfat2>.
+Parsing architecture <rtl> of entity <ipb_vfat2>.
+Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx_tx_mux.vhd" into library work
+Parsing entity <gtx_tx_mux>.
+Parsing architecture <Behavioral> of entity <gtx_tx_mux>.
+Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx_rx_mux.vhd" into library work
+Parsing entity <gtx_rx_mux>.
+Parsing architecture <Behavioral> of entity <gtx_rx_mux>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\ipcore_dir\high_speed_gtx.vhd" into library work
 Parsing entity <high_speed_gtx>.
 Parsing architecture <RTL> of entity <high_speed_gtx>.
@@ -503,18 +512,12 @@ Parsing architecture <structural> of entity <cdce_synchronizer>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\src\system\cdce\cdce_phase_mon_v2\cdce_phase_mon_v2_wrapper.vhd" into library work
 Parsing entity <cdce_phase_mon_v2_wrapper>.
 Parsing architecture <structural> of entity <cdce_phase_mon_v2_wrapper>.
-Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_vfat2.vhd" into library work
-Parsing entity <ipb_vfat2>.
-Parsing architecture <rtl> of entity <ipb_vfat2>.
+Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\link_tracking.vhd" into library work
+Parsing entity <link_tracking>.
+Parsing architecture <Behavioral> of entity <link_tracking>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_test.vhd" into library work
 Parsing entity <ipb_test>.
 Parsing architecture <rtl> of entity <ipb_test>.
-Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx_tx_mux.vhd" into library work
-Parsing entity <gtx_tx_mux>.
-Parsing architecture <Behavioral> of entity <gtx_tx_mux>.
-Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx_rx_mux.vhd" into library work
-Parsing entity <gtx_rx_mux>.
-Parsing architecture <Behavioral> of entity <gtx_rx_mux>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" into library work
 Parsing entity <gtx_wrapper>.
 Parsing architecture <Behavioral> of entity <gtx_wrapper>.
@@ -751,9 +754,21 @@ WARNING:HDLCompiler:634 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\f
 WARNING:HDLCompiler:634 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\src\system\sys\system_core.vhd" Line 278: Net <reg_status_sram[31]> does not have a driver.
 
 Elaborating entity <user_logic> (architecture <user_logic_arch>) from library <work>.
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 211: Using initial value "0000" for rx_error since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 233: Using initial value "00" for tx_kchar_3 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 239: Using initial value "0000000000000000" for tx_data_3 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 213: Using initial value "0000" for rx_error since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 225: Using initial value "0" for cs_trigger_0 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 226: Using initial value "0" for cs_trigger_1 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 227: Using initial value "0" for cs_trigger_2 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 228: Using initial value "00000000000000000000000000000000" for cs_trigger_3 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 229: Using initial value "0000000000000000" for cs_trigger_4 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 230: Using initial value "00" for cs_trigger_5 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 231: Using initial value "0000000000000000" for cs_trigger_6 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 232: Using initial value "00" for cs_trigger_7 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 233: Using initial value "0" for cs_trigger_8 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 234: Using initial value "00000000000000000000000000000000" for cs_trigger_9 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 235: Using initial value "00000000000000000000000000000000" for cs_trigger_10 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 236: Using initial value "0" for cs_trigger_11 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 237: Using initial value "0" for cs_trigger_12 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 238: Using initial value "00000000000000000000000000000000" for cs_trigger_13 since it is never assigned
 
 Elaborating entity <chipscope_icon> (architecture <chipscope_icon_a>) from library <work>.
 
@@ -767,12 +782,8 @@ Elaborating entity <high_speed_gtx> (architecture <RTL>) with generics from libr
 WARNING:HDLCompiler:1127 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\ipcore_dir\high_speed_gtx.vhd" Line 420: Assignment to rxcharisk_float_i ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\ipcore_dir\high_speed_gtx.vhd" Line 423: Assignment to rxdisperr_float_i ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\ipcore_dir\high_speed_gtx.vhd" Line 425: Assignment to rxnotintable_float_i ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 366: Assignment to rx_error_0 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 367: Assignment to rx_error_1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 368: Assignment to rx_error_2 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 369: Assignment to rx_error_3 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 374: Assignment to rx_kchar_3 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 379: Assignment to rx_data_3 ignored, since the identifier is never used
+
+Elaborating entity <link_tracking> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <gtx_rx_mux> (architecture <Behavioral>) from library <work>.
 
@@ -783,6 +794,8 @@ Elaborating entity <ipb_vfat2> (architecture <rtl>) from library <work>.
 Elaborating entity <clock_bridge> (architecture <behavioral>) from library <work>.
 
 Elaborating entity <ipb_test> (architecture <rtl>) with generics from library <work>.
+WARNING:HDLCompiler:634 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 216: Net <tx_kchar[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 217: Net <tx_data[63]> does not have a driver.
 WARNING:HDLCompiler:634 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\src\system\sys\glib_top.vhd" Line 298: Net <user_cdce_sync_done> does not have a driver.
 
 =========================================================================
@@ -3606,9 +3619,9 @@ WARNING:Xst:647 - Input <wb_mosi_i[0]_wb_we> is never used. This port will be pr
 WARNING:Xst:647 - Input <wb_mosi_i[0]_wb_cyc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <user_clk125_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <user_clk200_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 299: Output port <ASYNC_OUT> of the instance <chipscope_vio_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 299: Output port <SYNC_OUT> of the instance <chipscope_vio_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 346: Output port <rx_error_o> of the instance <gtx_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 257: Output port <ASYNC_OUT> of the instance <chipscope_vio_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 257: Output port <SYNC_OUT> of the instance <chipscope_vio_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 304: Output port <rx_error_o> of the instance <gtx_wrapper_inst> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <amc_port_tx_p> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <amc_port_tx_n> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <sys_pcie_amc_rx_p> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -3654,6 +3667,8 @@ WARNING:Xst:653 - Signal <user_sram_addr_o<2>> is used but never assigned. This 
 WARNING:Xst:653 - Signal <user_sram_wdata_o<1>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <user_sram_wdata_o<2>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <wb_miso_o[0]_wb_dat> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:2935 - Signal 'tx_kchar<7:6>', unconnected in block 'user_logic', is tied to its initial value (00).
+WARNING:Xst:2935 - Signal 'tx_data<63:48>', unconnected in block 'user_logic', is tied to its initial value (0000000000000000).
 WARNING:Xst:653 - Signal <cdce_out0_gtxe1_o> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <cdce_out3_gtxe1_o> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <sys_eth_amc_p1_rx_p> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -3682,41 +3697,41 @@ Unit <user_logic> synthesized.
 
 Synthesizing Unit <gtx_wrapper>.
     Related source file is "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd".
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 70: Output port <RXLOSSOFSYNC_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 70: Output port <RXBYTEISALIGNED_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 70: Output port <RXCOMMADET_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 70: Output port <RXRECCLK_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 70: Output port <RXPLLLKDET_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 70: Output port <RXRESETDONE_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 70: Output port <TXPLLLKDET_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 70: Output port <TXRESETDONE_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 108: Output port <RXLOSSOFSYNC_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 108: Output port <RXBYTEISALIGNED_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 108: Output port <RXCOMMADET_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 108: Output port <RXRECCLK_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 108: Output port <RXPLLLKDET_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 108: Output port <RXRESETDONE_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 108: Output port <TXOUTCLK_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 108: Output port <TXPLLLKDET_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 108: Output port <TXRESETDONE_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 146: Output port <RXLOSSOFSYNC_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 146: Output port <RXBYTEISALIGNED_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 146: Output port <RXCOMMADET_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 146: Output port <RXRECCLK_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 146: Output port <RXPLLLKDET_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 146: Output port <RXRESETDONE_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 146: Output port <TXOUTCLK_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 146: Output port <TXPLLLKDET_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 146: Output port <TXRESETDONE_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 184: Output port <RXLOSSOFSYNC_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 184: Output port <RXBYTEISALIGNED_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 184: Output port <RXCOMMADET_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 184: Output port <RXRECCLK_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 184: Output port <RXPLLLKDET_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 184: Output port <RXRESETDONE_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 184: Output port <TXOUTCLK_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 184: Output port <TXPLLLKDET_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 184: Output port <TXRESETDONE_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 69: Output port <RXLOSSOFSYNC_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 69: Output port <RXBYTEISALIGNED_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 69: Output port <RXCOMMADET_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 69: Output port <RXRECCLK_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 69: Output port <RXPLLLKDET_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 69: Output port <RXRESETDONE_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 69: Output port <TXPLLLKDET_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 69: Output port <TXRESETDONE_OUT> of the instance <high_speed_gtx0_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 107: Output port <RXLOSSOFSYNC_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 107: Output port <RXBYTEISALIGNED_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 107: Output port <RXCOMMADET_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 107: Output port <RXRECCLK_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 107: Output port <RXPLLLKDET_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 107: Output port <RXRESETDONE_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 107: Output port <TXOUTCLK_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 107: Output port <TXPLLLKDET_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 107: Output port <TXRESETDONE_OUT> of the instance <high_speed_gtx1_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 145: Output port <RXLOSSOFSYNC_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 145: Output port <RXBYTEISALIGNED_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 145: Output port <RXCOMMADET_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 145: Output port <RXRECCLK_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 145: Output port <RXPLLLKDET_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 145: Output port <RXRESETDONE_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 145: Output port <TXOUTCLK_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 145: Output port <TXPLLLKDET_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 145: Output port <TXRESETDONE_OUT> of the instance <high_speed_gtx2_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 183: Output port <RXLOSSOFSYNC_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 183: Output port <RXBYTEISALIGNED_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 183: Output port <RXCOMMADET_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 183: Output port <RXRECCLK_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 183: Output port <RXPLLLKDET_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 183: Output port <RXRESETDONE_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 183: Output port <TXOUTCLK_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 183: Output port <TXPLLLKDET_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" line 183: Output port <TXRESETDONE_OUT> of the instance <high_speed_gtx3_inst> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <gtx_wrapper> synthesized.
@@ -3729,6 +3744,13 @@ Synthesizing Unit <high_speed_gtx>.
     Summary:
 	no macro.
 Unit <high_speed_gtx> synthesized.
+
+Synthesizing Unit <link_tracking>.
+    Related source file is "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\link_tracking.vhd".
+WARNING:Xst:647 - Input <rx_error_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <link_tracking> synthesized.
 
 Synthesizing Unit <gtx_rx_mux>.
     Related source file is "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx_rx_mux.vhd".
@@ -3779,7 +3801,7 @@ Synthesizing Unit <gtx_tx_mux>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 10-bit adder for signal <kchar_count[9]_GND_557_o_add_5_OUT> created at line 90.
+    Found 10-bit adder for signal <kchar_count[9]_GND_728_o_add_5_OUT> created at line 90.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  62 D-type flip-flop(s).
@@ -3797,7 +3819,7 @@ WARNING:Xst:647 - Input <ipb_mosi_i_ipb_wdata<31:8>> is never used. This port wi
     Found 1-bit register for signal <ipb_ack>.
     Found 32-bit register for signal <ipb_data>.
     Found 1-bit register for signal <tx_en>.
-    Found 8-bit comparator equal for signal <rx_data[7]_GND_558_o_equal_11_o> created at line 194
+    Found 8-bit comparator equal for signal <rx_data[7]_GND_729_o_equal_11_o> created at line 194
     Summary:
 	inferred  68 D-type flip-flop(s).
 	inferred   1 Comparator(s).
@@ -3810,8 +3832,8 @@ Synthesizing Unit <clock_bridge>.
     Found 1-bit register for signal <s_en_o>.
     Found 2-bit register for signal <cnt_out>.
     Found 2-bit register for signal <cnt_in>.
-    Found 2-bit adder for signal <cnt_in[1]_GND_559_o_add_2_OUT> created at line 52.
-    Found 2-bit adder for signal <cnt_out[1]_GND_559_o_add_14_OUT> created at line 97.
+    Found 2-bit adder for signal <cnt_in[1]_GND_730_o_add_2_OUT> created at line 52.
+    Found 2-bit adder for signal <cnt_out[1]_GND_730_o_add_14_OUT> created at line 97.
     Found 2-bit comparator equal for signal <cnt_out[1]_cnt_in[1]_equal_1_o> created at line 43
     Summary:
 	inferred   2 Adder/Subtractor(s).
@@ -4036,12 +4058,12 @@ INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFF
 INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
 INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
 INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
-INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_vfat2_0_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
-INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_vfat2_0_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
-INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_vfat2_1_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
-INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_vfat2_1_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
-INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_vfat2_2_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
-INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_vfat2_2_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
+INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_vfat2_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
+INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_vfat2_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
+INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_vfat2_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
+INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_vfat2_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
+INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_vfat2_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
+INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_vfat2_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
 INFO:Xst:2261 - The FF/Latch <testModeFsm_process.state> in Unit <sramInterfaceIoControl> is equivalent to the following FF/Latch, which will be removed : <bistModeEnable_from_fsm> 
 INFO:Xst:2261 - The FF/Latch <ERRORCOUNTER_O_6> in Unit <bist> is equivalent to the following FF/Latch, which will be removed : <main_process.errorCounter_6> 
 INFO:Xst:2261 - The FF/Latch <ERRORCOUNTER_O_7> in Unit <bist> is equivalent to the following FF/Latch, which will be removed : <main_process.errorCounter_7> 
@@ -4195,30 +4217,30 @@ WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_22> (without init value) has
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_21> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_20> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_0> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_tx_mux_2_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_2_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_2_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_tx_mux_1_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_1_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_1_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_tx_mux_0_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_0_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_0_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_rx_mux_2_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_rx_mux_1_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_rx_mux_0_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vfat2_2_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2_2_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vfat2_1_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2_1_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_rx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vfat2_0_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2_0_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_rx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_rx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_32> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_31> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_30> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
@@ -4690,6 +4712,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_rx_mux>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_22> has a constant value of 0 in block <ipb_vfat2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_23> has a constant value of 0 in block <ipb_vfat2>. This FF/Latch will be trimmed during the optimization process.
@@ -4700,7 +4723,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_30> has a 
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_31> has a constant value of 0 in block <ipb_vfat2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vfat2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_31> has a constant value of 0 in block <ipb_vfat2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_rx_mux>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <selected_core_1> has a constant value of 0 in block <gtx_tx_mux>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_22> (without init value) has a constant value of 0 in block <udp_rarp_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_block.data_buffer_23> (without init value) has a constant value of 0 in block <udp_rarp_block>. This FF/Latch will be trimmed during the optimization process.
@@ -4804,9 +4826,9 @@ INFO:Xst:2261 - The FF/Latch <rarp_end_addr_0> in Unit <udp_rarp_block> is equiv
 INFO:Xst:2261 - The FF/Latch <arp_end_addr_0> in Unit <udp_build_arp> is equivalent to the following 2 FFs/Latches, which will be removed : <arp_end_addr_3> <arp_end_addr_5> 
 INFO:Xst:2261 - The FF/Latch <status_end_addr_0> in Unit <udp_build_status> is equivalent to the following 3 FFs/Latches, which will be removed : <status_end_addr_3> <status_end_addr_5> <status_end_addr_6> 
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <usr/gtx_rx_mux_0_inst/FSM_22> on signal <state[1:2]> with sequential encoding.
-Optimizing FSM <usr/gtx_rx_mux_1_inst/FSM_22> on signal <state[1:2]> with sequential encoding.
-Optimizing FSM <usr/gtx_rx_mux_2_inst/FSM_22> on signal <state[1:2]> with sequential encoding.
+Optimizing FSM <usr/link_tracking_0_inst/gtx_rx_mux_inst/FSM_22> on signal <state[1:2]> with sequential encoding.
+Optimizing FSM <usr/link_tracking_1_inst/gtx_rx_mux_inst/FSM_22> on signal <state[1:2]> with sequential encoding.
+Optimizing FSM <usr/link_tracking_2_inst/gtx_rx_mux_inst/FSM_22> on signal <state[1:2]> with sequential encoding.
 -------------------
  State | Encoding
 -------------------
@@ -4815,9 +4837,9 @@ Optimizing FSM <usr/gtx_rx_mux_2_inst/FSM_22> on signal <state[1:2]> with sequen
  010   | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <usr/gtx_tx_mux_0_inst/FSM_23> on signal <state[1:2]> with gray encoding.
-Optimizing FSM <usr/gtx_tx_mux_1_inst/FSM_23> on signal <state[1:2]> with gray encoding.
-Optimizing FSM <usr/gtx_tx_mux_2_inst/FSM_23> on signal <state[1:2]> with gray encoding.
+Optimizing FSM <usr/link_tracking_0_inst/gtx_tx_mux_inst/FSM_23> on signal <state[1:2]> with gray encoding.
+Optimizing FSM <usr/link_tracking_1_inst/gtx_tx_mux_inst/FSM_23> on signal <state[1:2]> with gray encoding.
+Optimizing FSM <usr/link_tracking_2_inst/gtx_tx_mux_inst/FSM_23> on signal <state[1:2]> with gray encoding.
 -------------------
  State | Encoding
 -------------------
@@ -5571,6 +5593,8 @@ Optimizing unit <user_logic> ...
 
 Optimizing unit <high_speed_gtx> ...
 
+Optimizing unit <link_tracking> ...
+
 Optimizing unit <glib_sram_interface_wrapper> ...
 
 Optimizing unit <reset_sync> ...
@@ -5595,15 +5619,15 @@ Optimizing unit <glib_pll> ...
 
 Optimizing unit <gtx_wrapper> ...
 
+Optimizing unit <gtx_rx_mux> ...
+
 Optimizing unit <ipb_vfat2> ...
 
 Optimizing unit <clock_bridge> ...
 
-Optimizing unit <ipb_test> ...
-
-Optimizing unit <gtx_rx_mux> ...
-
 Optimizing unit <gtx_tx_mux> ...
+
+Optimizing unit <ipb_test> ...
 
 Optimizing unit <system_core> ...
 
@@ -5774,16 +5798,16 @@ Optimizing unit <sys_heartbeat> ...
 Optimizing unit <i2c_eeprom_read> ...
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_2_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_2_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_1_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_1_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_0_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_0_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <startErrInj_rr> of sequential type is unconnected in block <bist>.
 WARNING:Xst:2677 - Node <startErrInj_r> of sequential type is unconnected in block <bist>.
 WARNING:Xst:2677 - Node <ERRORCOUNTER_O_8> of sequential type is unconnected in block <bist>.
@@ -6634,8 +6658,8 @@ Top Level Output File Name         : glib_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 14182
-#      GND                         : 124
+# BELS                             : 14181
+#      GND                         : 123
 #      INV                         : 284
 #      LUT1                        : 468
 #      LUT2                        : 2428
@@ -6748,8 +6772,8 @@ Clock Information:
 ------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
 Clock Signal                                                                                                | Clock buffer(FF name)                                             | Load  |
 ------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
-clk125_2_p                                                                                                  | MMCM_ADV:CLKOUT1                                                  | 4826  |
 usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                      | BUFG                                                              | 1467  |
+clk125_2_p                                                                                                  | MMCM_ADV:CLKOUT1                                                  | 4826  |
 usr/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                              | BUFG                                                              | 462   |
 usr/chipscope_icon_inst/CONTROL0<13>(usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
 usr/chipscope_icon_inst/U0/iUPDATE_OUT                                                                      | NONE(usr/chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD)               | 1     |
@@ -6815,6 +6839,30 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT'
+  Clock period: 3.379ns (frequency: 295.946MHz)
+  Total number of paths / destination ports: 3628 / 1961
+-------------------------------------------------------------------------
+Delay:               3.379ns (Levels of Logic = 3)
+  Source:            usr/link_tracking_2_inst/gtx_tx_mux_inst/kchar_count_2 (FF)
+  Destination:       usr/link_tracking_2_inst/gtx_tx_mux_inst/kchar_count_0 (FF)
+  Source Clock:      usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT rising
+  Destination Clock: usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT rising
+
+  Data Path: usr/link_tracking_2_inst/gtx_tx_mux_inst/kchar_count_2 to usr/link_tracking_2_inst/gtx_tx_mux_inst/kchar_count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.375   0.608  kchar_count_2 (kchar_count_2)
+     LUT3:I0->O            3   0.068   0.789  Madd_kchar_count[9]_GND_728_o_add_5_OUT_xor<3>111 (Madd_kchar_count[9]_GND_728_o_add_5_OUT_xor<3>11)
+     LUT6:I1->O            4   0.068   0.511  Madd_kchar_count[9]_GND_728_o_add_5_OUT_xor<8>111 (Madd_kchar_count[9]_GND_728_o_add_5_OUT_xor<8>11)
+     LUT6:I4->O           10   0.068   0.458  Reset_OR_DriverANDClockEnable1 (Reset_OR_DriverANDClockEnable)
+     FDRE:R                    0.434          kchar_count_0
+    ----------------------------------------
+    Total                      3.379ns (1.013ns logic, 2.366ns route)
+                                       (30.0% logic, 70.0% route)
+
+=========================================================================
 Timing constraint: Default period analysis for Clock 'clk125_2_p'
   Clock period: 3.186ns (frequency: 313.879MHz)
   Total number of paths / destination ports: 2826317 / 11274
@@ -6841,30 +6889,6 @@ Delay:               3.186ns (Levels of Logic = 5)
     ----------------------------------------
     Total                      3.186ns (0.945ns logic, 2.241ns route)
                                        (29.7% logic, 70.3% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT'
-  Clock period: 3.379ns (frequency: 295.946MHz)
-  Total number of paths / destination ports: 3679 / 2012
--------------------------------------------------------------------------
-Delay:               3.379ns (Levels of Logic = 3)
-  Source:            usr/gtx_tx_mux_2_inst/kchar_count_2 (FF)
-  Destination:       usr/gtx_tx_mux_2_inst/kchar_count_0 (FF)
-  Source Clock:      usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT rising
-  Destination Clock: usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT rising
-
-  Data Path: usr/gtx_tx_mux_2_inst/kchar_count_2 to usr/gtx_tx_mux_2_inst/kchar_count_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDRE:C->Q             5   0.375   0.608  kchar_count_2 (kchar_count_2)
-     LUT3:I0->O            3   0.068   0.789  Madd_kchar_count[9]_GND_557_o_add_5_OUT_xor<3>111 (Madd_kchar_count[9]_GND_557_o_add_5_OUT_xor<3>11)
-     LUT6:I1->O            4   0.068   0.511  Madd_kchar_count[9]_GND_557_o_add_5_OUT_xor<8>111 (Madd_kchar_count[9]_GND_557_o_add_5_OUT_xor<8>11)
-     LUT6:I4->O           10   0.068   0.458  Reset_OR_DriverANDClockEnable1 (Reset_OR_DriverANDClockEnable)
-     FDRE:R                    0.434          kchar_count_0
-    ----------------------------------------
-    Total                      3.379ns (1.013ns logic, 2.366ns route)
-                                       (30.0% logic, 70.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'usr/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
@@ -7538,7 +7562,7 @@ Clock to Setup on destination clock clk125_2_p
                                                                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                                |   11.329|         |         |         |
+clk125_2_p                                                                                                |   11.323|         |         |         |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    3.385|         |         |         |
 system/gbt_phase_monitoring/ttclk_pll/CLK_OUT1                                                            |    2.078|         |         |         |
 system/i2c_s/reset_regs_i[6][0]_AND_773_o                                                                 |         |    2.188|         |         |
@@ -7559,7 +7583,7 @@ Clock to Setup on destination clock system/amc_p0_en.amc_p0_eth/basex/v6_gtxwiza
                                                                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                                |   10.273|         |         |         |
+clk125_2_p                                                                                                |   10.267|         |         |         |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    4.810|         |         |         |
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
@@ -7642,7 +7666,7 @@ Clock to Setup on destination clock system/phy_en.phy_eth/sgmii/v6_gtxwizard_top
                                                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                          |   10.273|         |         |         |
+clk125_2_p                                                                                          |   10.267|         |         |         |
 system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    4.810|         |         |         |
 ----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
@@ -7686,7 +7710,7 @@ Clock to Setup on destination clock usr/gtx_wrapper_inst/high_speed_gtx0_inst/TX
                                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                    |    5.279|         |         |         |
+clk125_2_p                                                    |    2.390|         |         |         |
 usr/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    3.406|         |         |         |
 usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT        |    3.379|         |         |         |
 --------------------------------------------------------------+---------+---------+---------+---------+
@@ -7703,14 +7727,14 @@ xpoint1_clk1_p |    2.931|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 108.00 secs
-Total CPU time to Xst completion: 108.23 secs
+Total REAL time to Xst completion: 109.00 secs
+Total CPU time to Xst completion: 109.65 secs
  
 --> 
 
-Total memory usage is 466160 kilobytes
+Total memory usage is 469208 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 1733 (   0 filtered)
+Number of warnings : 1744 (   0 filtered)
 Number of infos    :  551 (   0 filtered)
 

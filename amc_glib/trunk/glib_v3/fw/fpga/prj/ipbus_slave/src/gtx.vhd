@@ -23,7 +23,6 @@ port(
     rx_p_i          : in std_logic_vector(3 downto 0);
     tx_n_o          : out std_logic_vector(3 downto 0);
     tx_p_o          : out std_logic_vector(3 downto 0);
-    
 
     gtp_refclk_n_i  : in std_logic;
     gtp_refclk_p_i  : in std_logic

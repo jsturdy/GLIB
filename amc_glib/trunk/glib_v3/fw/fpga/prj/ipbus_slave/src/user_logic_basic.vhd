@@ -204,59 +204,17 @@ end user_logic;
 							
 architecture user_logic_arch of user_logic is                    	
 
+    -- Global signals
+
     signal fabric_clk       : std_logic := '0';
     
     -- GTX signals
     
     signal rx_error         : std_logic_vector(3 downto 0) := (others => '0');
-    signal rx_error_0       : std_logic := '0';
-    signal rx_error_1       : std_logic := '0';
-    signal rx_error_2       : std_logic := '0';
-    signal rx_error_3       : std_logic := '0';
-    
     signal rx_kchar         : std_logic_vector(7 downto 0) := (others => '0');
-    signal rx_kchar_0       : std_logic_vector(1 downto 0) := (others => '0');
-    signal rx_kchar_1       : std_logic_vector(1 downto 0) := (others => '0');
-    signal rx_kchar_2       : std_logic_vector(1 downto 0) := (others => '0');
-    signal rx_kchar_3       : std_logic_vector(1 downto 0) := (others => '0');
-    
     signal rx_data          : std_logic_vector(63 downto 0) := (others => '0');
-    signal rx_data_0        : std_logic_vector(15 downto 0) := (others => '0');
-    signal rx_data_1        : std_logic_vector(15 downto 0) := (others => '0');
-    signal rx_data_2        : std_logic_vector(15 downto 0) := (others => '0');
-    signal rx_data_3        : std_logic_vector(15 downto 0) := (others => '0');
-    
     signal tx_kchar         : std_logic_vector(7 downto 0) := (others => '0');
-    signal tx_kchar_0       : std_logic_vector(1 downto 0) := (others => '0');
-    signal tx_kchar_1       : std_logic_vector(1 downto 0) := (others => '0');
-    signal tx_kchar_2       : std_logic_vector(1 downto 0) := (others => '0');
-    signal tx_kchar_3       : std_logic_vector(1 downto 0) := (others => '0');
-    
     signal tx_data          : std_logic_vector(63 downto 0) := (others => '0');
-    signal tx_data_0        : std_logic_vector(15 downto 0) := (others => '0');
-    signal tx_data_1        : std_logic_vector(15 downto 0) := (others => '0');
-    signal tx_data_2        : std_logic_vector(15 downto 0) := (others => '0');
-    signal tx_data_3        : std_logic_vector(15 downto 0) := (others => '0');
-         
-    -- VFAT2 signals
-    
-    signal vfat2_tx_en_0    : std_logic := '0';
-    signal vfat2_tx_ack_0   : std_logic := '0';
-    signal vfat2_tx_data_0  : std_logic_vector(31 downto 0) := (others => '0');
-    signal vfat2_rx_en_0    : std_logic := '0';
-    signal vfat2_rx_data_0  : std_logic_vector(31 downto 0) := (others => '0');
-    
-    signal vfat2_tx_en_1    : std_logic := '0';
-    signal vfat2_tx_ack_1   : std_logic := '0';
-    signal vfat2_tx_data_1  : std_logic_vector(31 downto 0) := (others => '0');
-    signal vfat2_rx_en_1    : std_logic := '0';
-    signal vfat2_rx_data_1  : std_logic_vector(31 downto 0) := (others => '0');
-    
-    signal vfat2_tx_en_2    : std_logic := '0';
-    signal vfat2_tx_ack_2   : std_logic := '0';
-    signal vfat2_tx_data_2  : std_logic_vector(31 downto 0) := (others => '0');
-    signal vfat2_rx_en_2    : std_logic := '0';
-    signal vfat2_rx_data_2  : std_logic_vector(31 downto 0) := (others => '0');
 
     -- ChipScope
     
@@ -324,20 +282,20 @@ begin
         TRIG13  => cs_trigger_13
     );    
     
-    cs_trigger_0(0) <= ipb_mosi_i(ipbus_vfat2_1).ipb_strobe;
-    cs_trigger_1(0) <= vfat2_tx_en_1;
-    cs_trigger_2(0) <= '0'; --vfat2_tx_ack_1;
-    cs_trigger_3 <= vfat2_tx_data_1;
-    cs_trigger_4 <= tx_data_1;
-    cs_trigger_5 <= tx_kchar_1;
-    cs_trigger_6 <= rx_data_1;
-    cs_trigger_7 <= rx_kchar_1;
-    cs_trigger_8(0) <= vfat2_rx_en_1;
-    cs_trigger_9 <= vfat2_rx_data_1;
-    cs_trigger_10 <= (others => '0');
-    cs_trigger_11 <= (others => '0');
-    cs_trigger_12 <= (others => '0');
-    cs_trigger_13 <= (others => '0');
+--    cs_trigger_0(0) <= ipb_mosi_i(ipbus_vfat2_1).ipb_strobe;
+--    cs_trigger_1(0) <= vfat2_tx_en_1;
+--    cs_trigger_2(0) <= '0'; --vfat2_tx_ack_1;
+--    cs_trigger_3 <= vfat2_tx_data_1;
+--    cs_trigger_4 <= tx_data_1;
+--    cs_trigger_5 <= tx_kchar_1;
+--    cs_trigger_6 <= rx_data_1;
+--    cs_trigger_7 <= rx_kchar_1;
+--    cs_trigger_8(0) <= vfat2_rx_en_1;
+--    cs_trigger_9 <= vfat2_rx_data_1;
+--    cs_trigger_10 <= (others => '0');
+--    cs_trigger_11 <= (others => '0');
+--    cs_trigger_12 <= (others => '0');
+--    cs_trigger_13 <= (others => '0');
 
     ----------------------------------
     -- GTX                          --
@@ -360,135 +318,52 @@ begin
         gtp_refclk_p_i  => cdce_out1_p
     );   
     
-    tx_kchar <= tx_kchar_3 & tx_kchar_2 & tx_kchar_1 & tx_kchar_0;
-    tx_data <= tx_data_3 & tx_data_2 & tx_data_1 & tx_data_0;
-    
-    rx_error_0 <= rx_error(0);
-    rx_error_1 <= rx_error(1);
-    rx_error_2 <= rx_error(2);
-    rx_error_3 <= rx_error(3);
-    
-    rx_kchar_0 <= rx_kchar(1 downto 0);
-    rx_kchar_1 <= rx_kchar(3 downto 2);
-    rx_kchar_2 <= rx_kchar(5 downto 4);
-    rx_kchar_3 <= rx_kchar(7 downto 6);
-    
-    rx_data_0 <= rx_data(15 downto 0);
-    rx_data_1 <= rx_data(31 downto 16);
-    rx_data_2 <= rx_data(47 downto 32);
-    rx_data_3 <= rx_data(63 downto 48);
-    
     ----------------------------------
-    -- GTX RX                       --
+    -- Link handles                 --
     ----------------------------------
-    
-    gtx_rx_mux_0_inst : entity work.gtx_rx_mux
+
+    link_tracking_0_inst : entity work.link_tracking
     port map(
-        gtx_clk_i       => fabric_clk,
-        reset_i         => reset_i,
-        vfat2_en_o      => vfat2_rx_en_0,
-        vfat2_data_o    => vfat2_rx_data_0,
-        rx_kchar_i      => rx_kchar_0,
-        rx_data_i       => rx_data_0
-    );   
-    
-    gtx_rx_mux_1_inst : entity work.gtx_rx_mux
-    port map(
-        gtx_clk_i       => fabric_clk,
-        reset_i         => reset_i,
-        vfat2_en_o      => vfat2_rx_en_1,
-        vfat2_data_o    => vfat2_rx_data_1,
-        rx_kchar_i      => rx_kchar_1,
-        rx_data_i       => rx_data_1
-    );   
-    
-    gtx_rx_mux_2_inst : entity work.gtx_rx_mux
-    port map(
-        gtx_clk_i       => fabric_clk,
-        reset_i         => reset_i,
-        vfat2_en_o      => vfat2_rx_en_2,
-        vfat2_data_o    => vfat2_rx_data_2,
-        rx_kchar_i      => rx_kchar_2,
-        rx_data_i       => rx_data_2
-    );   
-    
-    ----------------------------------
-    -- GTX TX                       --
-    ----------------------------------
-    
-    gtx_tx_mux_0_inst : entity work.gtx_tx_mux
-    port map(
-        gtx_clk_i       => fabric_clk,
-        reset_i         => reset_i,
-        vfat2_en_i      => vfat2_tx_en_0,
-        vfat2_data_i    => vfat2_tx_data_0,
-        tx_kchar_o      => tx_kchar_0,
-        tx_data_o       => tx_data_0
-    );  
-    
-    gtx_tx_mux_1_inst : entity work.gtx_tx_mux
-    port map(
-        gtx_clk_i       => fabric_clk,
-        reset_i         => reset_i,
-        vfat2_en_i      => vfat2_tx_en_1,
-        vfat2_data_i    => vfat2_tx_data_1,
-        tx_kchar_o      => tx_kchar_1,
-        tx_data_o       => tx_data_1
-    );  
-    
-    gtx_tx_mux_2_inst : entity work.gtx_tx_mux
-    port map(
-        gtx_clk_i       => fabric_clk,
-        reset_i         => reset_i,
-        vfat2_en_i      => vfat2_tx_en_2,
-        vfat2_data_i    => vfat2_tx_data_2,
-        tx_kchar_o      => tx_kchar_2,
-        tx_data_o       => tx_data_2
-    );  
-    
-    ----------------------------------
-    -- VFAT2 cores                  --
-    ----------------------------------
-    
-    ipb_vfat2_0_inst : entity work.ipb_vfat2
-    port map(
+        fabric_clk_i    => fabric_clk,
         ipb_clk_i       => ipb_clk_i,
-        fabric_clk_i    => fabric_clk,    
         reset_i         => reset_i,
-        ipb_mosi_i      => ipb_mosi_i(ipbus_vfat2_0),
-        ipb_miso_o      => ipb_miso_o(ipbus_vfat2_0),
-        tx_en_o         => vfat2_tx_en_0,
-        tx_data_o       => vfat2_tx_data_0,
-        rx_en_i         => vfat2_rx_en_0,
-        rx_data_i       => vfat2_rx_data_0
+        rx_error_i      => rx_error(0),
+        rx_kchar_i      => rx_kchar(1 downto 0),
+        rx_data_i       => rx_data(15 downto 0),
+        tx_kchar_o      => tx_kchar(1 downto 0),
+        tx_data_o       => tx_data(15 downto 0),
+        ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_0),
+        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_0)
     );
-    
-    ipb_vfat2_1_inst : entity work.ipb_vfat2
+
+    link_tracking_1_inst : entity work.link_tracking
     port map(
+        fabric_clk_i    => fabric_clk,
         ipb_clk_i       => ipb_clk_i,
-        fabric_clk_i    => fabric_clk,    
         reset_i         => reset_i,
-        ipb_mosi_i      => ipb_mosi_i(ipbus_vfat2_1),
-        ipb_miso_o      => ipb_miso_o(ipbus_vfat2_1),
-        tx_en_o         => vfat2_tx_en_1,
-        tx_data_o       => vfat2_tx_data_1,
-        rx_en_i         => vfat2_rx_en_1,
-        rx_data_i       => vfat2_rx_data_1
+        rx_error_i      => rx_error(0),
+        rx_kchar_i      => rx_kchar(3 downto 2),
+        rx_data_i       => rx_data(31 downto 16),
+        tx_kchar_o      => tx_kchar(3 downto 2),
+        tx_data_o       => tx_data(31 downto 16),
+        ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_1),
+        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_1)
     );
-    
-    ipb_vfat2_2_inst : entity work.ipb_vfat2
+
+    link_tracking_2_inst : entity work.link_tracking
     port map(
+        fabric_clk_i    => fabric_clk,
         ipb_clk_i       => ipb_clk_i,
-        fabric_clk_i    => fabric_clk,    
         reset_i         => reset_i,
-        ipb_mosi_i      => ipb_mosi_i(ipbus_vfat2_2),
-        ipb_miso_o      => ipb_miso_o(ipbus_vfat2_2),
-        tx_en_o         => vfat2_tx_en_2,
-        tx_data_o       => vfat2_tx_data_2,
-        rx_en_i         => vfat2_rx_en_2,
-        rx_data_i       => vfat2_rx_data_2
+        rx_error_i      => rx_error(0),
+        rx_kchar_i      => rx_kchar(5 downto 4),
+        rx_data_i       => rx_data(47 downto 32),
+        tx_kchar_o      => tx_kchar(5 downto 4),
+        tx_data_o       => tx_data(47 downto 32),
+        ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_2),
+        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_2)
     );
-    
+
     ----------------------------------
     -- IPBus tests module           --
     ----------------------------------

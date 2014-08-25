@@ -27,12 +27,15 @@ package user_package is
     
     constant ipbus_test                 : integer := 3;
   
-    
+   
     --=== Package types ==========--
     constant def_gtx_idle               : std_logic_vector(7 downto 0) := x"00";  
     constant def_gtx_vfat2              : std_logic_vector(7 downto 0) := x"01";  
-    constant def_gtx_trigger            : std_logic_vector(7 downto 0) := x"02";  
-    constant def_gtx_tracking           : std_logic_vector(7 downto 0) := x"03";  
+    constant def_gtx_tracking           : std_logic_vector(7 downto 0) := x"02";  
+    constant def_gtx_lv1a               : std_logic_vector(7 downto 0) := x"03";  
+    constant def_gtx_calpulse           : std_logic_vector(7 downto 0) := x"04";  
+    constant def_gtx_resync             : std_logic_vector(7 downto 0) := x"05";  
+    constant def_gtx_bc0                : std_logic_vector(7 downto 0) := x"06";  
     
 end user_package;
    

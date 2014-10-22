@@ -1,3 +1,15 @@
+--
+-- This entity handles one tracking link including : tracking data, vfat2 i2c request, fast signals (for one of the three links), 
+-- ADC requests (for one of the three links), ... 
+-- Each link is composed of a TX muxer which forwards the requests to the OptoHybrid and a RX muxer which transfers the responses
+-- to the correct modules.
+--
+--
+-- Ways to improve: the error signals are not used at the moment
+--
+-- Modifications needed for V2: -
+--
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -25,7 +37,7 @@ port(
 	ipb_tracking_i  : in ipb_wbus;
 	ipb_tracking_o  : out ipb_rbus;
     
-    priorities_i    : in std_logic_vector(6 downto 0)
+    fast_signals_i  : in std_logic_vector(6 downto 0)
 );
 end link_tracking;
 
@@ -64,7 +76,7 @@ begin
         vfat2_data_i    => vfat2_tx_data,
         tx_kchar_o      => tx_kchar_o,
         tx_data_o       => tx_data_o,
-        priorities_i    => priorities_i
+        fast_signals_i  => fast_signals_i
     );  
     
     ipb_vfat2_inst : entity work.ipb_vfat2

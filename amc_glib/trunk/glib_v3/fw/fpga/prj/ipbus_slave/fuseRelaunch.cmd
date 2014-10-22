@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipbus_test_isim_beh.exe" -prj "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipbus_test_beh.prj" "work.ipbus_test" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/test_xclock_strobes_isim_beh.exe" -prj "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/test_xclock_strobes_beh.prj" "work.test_xclock_strobes" 

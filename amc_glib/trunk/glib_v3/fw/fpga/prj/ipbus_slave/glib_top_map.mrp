@@ -9,23 +9,23 @@ Target Device  : xc6vlx130t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Tue Oct 21 09:49:56 2014
+Mapped Date    : Wed Oct 22 13:35:13 2014
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  516
+Number of warnings:  517
 Slice Logic Utilization:
-  Number of Slice Registers:                13,074 out of 160,000    8%
-    Number used as Flip Flops:              13,062
+  Number of Slice Registers:                13,096 out of 160,000    8%
+    Number used as Flip Flops:              13,084
     Number used as Latches:                     12
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                     10,427 out of  80,000   13%
-    Number used as logic:                    8,864 out of  80,000   11%
-      Number using O6 output only:           5,617
-      Number using O5 output only:             436
-      Number using O5 and O6:                2,811
+  Number of Slice LUTs:                      9,975 out of  80,000   12%
+    Number used as logic:                    8,850 out of  80,000   11%
+      Number using O6 output only:           5,598
+      Number using O5 output only:             437
+      Number using O5 and O6:                2,815
       Number used as ROM:                        0
     Number used as Memory:                     302 out of  27,840    1%
       Number used as Dual Port RAM:              0
@@ -37,20 +37,20 @@ Slice Logic Utilization:
         Number using O6 output only:           177
         Number using O5 output only:             1
         Number using O5 and O6:                 76
-    Number used exclusively as route-thrus:  1,261
-      Number with same-slice register load:  1,230
-      Number with same-slice carry load:        31
+    Number used exclusively as route-thrus:    823
+      Number with same-slice register load:    793
+      Number with same-slice carry load:        30
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,103 out of  20,000   20%
-  Number of LUT Flip Flop pairs used:       13,277
-    Number with an unused Flip Flop:         3,017 out of  13,277   22%
-    Number with an unused LUT:               2,850 out of  13,277   21%
-    Number of fully used LUT-FF pairs:       7,410 out of  13,277   55%
-    Number of unique control sets:             577
+  Number of occupied Slices:                 4,536 out of  20,000   22%
+  Number of LUT Flip Flop pairs used:       13,874
+    Number with an unused Flip Flop:         3,141 out of  13,874   22%
+    Number with an unused LUT:               3,899 out of  13,874   28%
+    Number of fully used LUT-FF pairs:       6,834 out of  13,874   49%
+    Number of unique control sets:             557
     Number of slice register sites lost
-      to control set restrictions:           1,878 out of 160,000    1%
+      to control set restrictions:           1,768 out of 160,000    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -61,8 +61,8 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       247 out of     600   41%
-    Number of LOCed IOBs:                      227 out of     247   91%
+  Number of bonded IOBs:                       246 out of     600   41%
+    Number of LOCed IOBs:                      226 out of     246   91%
     IOB Flip Flops:                              2
     IOB Master Pads:                             1
     IOB Slave Pads:                              1
@@ -109,9 +109,9 @@ Specific Feature Utilization:
   Number of RPM macros:           23
 Average Fanout of Non-Clock Nets:                3.43
 
-Peak Memory Usage:  927 MB
-Total REAL time to MAP completion:  4 mins 5 secs 
-Total CPU time to MAP completion (all processors):   4 mins 17 secs 
+Peak Memory Usage:  932 MB
+Total REAL time to MAP completion:  3 mins 57 secs 
+Total CPU time to MAP completion (all processors):   4 mins 12 secs 
 
 Table of Contents
 -----------------
@@ -867,6 +867,8 @@ WARNING:MapLib:701 - Signal sram2_bwc connected to top level port sram2_bwc has
    been removed.
 WARNING:MapLib:701 - Signal sram2_bwd connected to top level port sram2_bwd has
    been removed.
+WARNING:MapLib:701 - Signal fpga_clkout connected to top level port fpga_clkout
+   has been removed.
 WARNING:Pack:2515 - The LUT-1 inverter
    "system/sram1_if/sramInterface/control_process.dataToSram_inv1_INV_0" failed
    to join the OLOGIC comp matched to output buffer
@@ -1291,32 +1293,6 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net usr/cs_control_0<13> is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[97].UPDATE_CELL/out_temp> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<36>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<40>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<37>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<41>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<38>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<42>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<39>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<43>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<44>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<45>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<46>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<47>> is incomplete. The signal does not
-   drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[48].SYNC_OUT_CELL/out_temp> is
    incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<32>> is incomplete. The signal does not
@@ -1327,13 +1303,31 @@ WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE
    drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<35>> is incomplete. The signal does not
    drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<24>> is incomplete. The signal does not
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<36>> is incomplete. The signal does not
    drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<25>> is incomplete. The signal does not
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<37>> is incomplete. The signal does not
    drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<26>> is incomplete. The signal does not
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<38>> is incomplete. The signal does not
    drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<27>> is incomplete. The signal does not
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<39>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<40>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<41>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<42>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<43>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[97].UPDATE_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<44>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<45>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<46>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<47>> is incomplete. The signal does not
    drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<28>> is incomplete. The signal does not
    drive any load pins in the design.
@@ -1343,37 +1337,13 @@ WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE
    drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<31>> is incomplete. The signal does not
    drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<16>> is incomplete. The signal does not
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<24>> is incomplete. The signal does not
    drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<20>> is incomplete. The signal does not
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<25>> is incomplete. The signal does not
    drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<17>> is incomplete. The signal does not
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<26>> is incomplete. The signal does not
    drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<21>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<18>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<22>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<19>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<23>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<8>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<12>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<9>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<13>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<10>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<14>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<11>> is incomplete. The signal does not
-   drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<15>> is incomplete. The signal does not
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<27>> is incomplete. The signal does not
    drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<4>> is incomplete. The signal does not
    drive any load pins in the design.
@@ -1391,31 +1361,72 @@ WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE
    drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<3>> is incomplete. The signal does not
    drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<12>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<13>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<14>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<15>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<20>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<21>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<22>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<23>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<16>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<17>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<18>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<19>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<8>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<9>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<10>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<11>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/reset_f_edge/iDOUT<1>> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
    MC_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
    MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/reset_f_edge/iDOUT<1>> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
@@ -1424,16 +1435,7 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 
 Section 3 - Informational
@@ -1442,11 +1444,11 @@ INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    supports the use of up to 2 processors. Based on the the user options and
    machine load, Map will use 2 processors during this run.
 INFO:Security:56 - Part 'xc6vlx130t' is not a WebPack part.
-INFO:LIT:243 - Logical network user_ipb_miso[0]_ipb_err has no load.
-INFO:LIT:395 - The above info message is repeated 1081 more times for the
+INFO:LIT:243 - Logical network user_ipb_miso[0]_ipb_rdata<21> has no load.
+INFO:LIT:395 - The above info message is repeated 1057 more times for the
    following (max. 5 shown):
-   user_ipb_miso[1]_ipb_err,
-   user_ipb_miso[2]_ipb_err,
+   user_ipb_miso[1]_ipb_rdata<21>,
+   user_ipb_miso[2]_ipb_rdata<21>,
    user_ipb_miso[6]_ipb_err,
    user_ipb_miso[7]_ipb_err,
    user_ipb_miso[7]_ipb_rdata<12>
@@ -1458,16 +1460,16 @@ INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
    1.050 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 247 IOs, 227 are locked
+INFO:Place:834 - Only a subset of IOs are locked. Out of 246 IOs, 226 are locked
    and 20 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-1585 block(s) removed
+1587 block(s) removed
  681 block(s) optimized away
-1850 signal(s) removed
+1852 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -8586,14 +8588,14 @@ The signal "fmc2_clk_c2m_p_0_OBUF" is unused and has been removed.
 The signal "fmc2_clk_c2m_p_1_OBUF" is unused and has been removed.
 The signal "fmc2_clk_c2m_n_0_OBUF" is unused and has been removed.
 The signal "fmc2_clk_c2m_n_1_OBUF" is unused and has been removed.
-The signal "user_ipb_miso[0]_ipb_err" is unused and has been removed.
+The signal "user_ipb_miso[0]_ipb_rdata<21>" is unused and has been removed.
  Unused block "usr/link_tracking_0_inst/ipb_vfat2_inst/XST_GND" (ZERO) removed.
-The signal "user_ipb_miso[1]_ipb_err" is unused and has been removed.
+The signal "user_ipb_miso[1]_ipb_rdata<21>" is unused and has been removed.
  Unused block "usr/link_tracking_1_inst/ipb_vfat2_inst/XST_GND" (ZERO) removed.
-The signal "user_ipb_miso[2]_ipb_err" is unused and has been removed.
+The signal "user_ipb_miso[2]_ipb_rdata<21>" is unused and has been removed.
  Unused block "usr/link_tracking_2_inst/ipb_vfat2_inst/XST_GND" (ZERO) removed.
 The signal "user_ipb_miso[6]_ipb_err" is unused and has been removed.
- Unused block "usr/ipb_priority_inst/XST_GND" (ZERO) removed.
+ Unused block "usr/ipb_fast_signals_inst/XST_GND" (ZERO) removed.
 The signal "user_ipb_miso[7]_ipb_err" is unused and has been removed.
  Unused block "usr/ipb_test_inst/XST_GND" (ZERO) removed.
 The signal "user_ipb_miso[7]_ipb_rdata<12>" is unused and has been removed.
@@ -8607,6 +8609,7 @@ The signal "sram2_bwa_OBUF" is unused and has been removed.
 The signal "sram2_bwb_OBUF" is unused and has been removed.
 The signal "sram2_bwc_OBUF" is unused and has been removed.
 The signal "sram2_bwd_OBUF" is unused and has been removed.
+The signal "fpga_clkout_OBUF" is unused and has been removed.
 The signal "fmc2_tx_p_OBUF" is unused and has been removed.
 The signal "fmc2_tx_n_OBUF" is unused and has been removed.
 The signal "amc_port_tx_out<17>" is unused and has been removed.
@@ -8695,6 +8698,8 @@ The signal "sram2_bwc" is unused and has been removed.
  Unused block "sram2_bwc_OBUF" (BUF) removed.
 The signal "sram2_bwd" is unused and has been removed.
  Unused block "sram2_bwd_OBUF" (BUF) removed.
+The signal "fpga_clkout" is unused and has been removed.
+ Unused block "fpga_clkout_OBUF" (BUF) removed.
 Unused block "amc_port_rx_de<17>" (PAD) removed.
 Unused block "amc_port_rx_de<18>" (PAD) removed.
 Unused block "amc_port_rx_de<19>" (PAD) removed.
@@ -8730,6 +8735,7 @@ Unused block "fmc2_clk_c2m_p<0>" (PAD) removed.
 Unused block "fmc2_clk_c2m_p<1>" (PAD) removed.
 Unused block "fmc2_tx_n" (PAD) removed.
 Unused block "fmc2_tx_p" (PAD) removed.
+Unused block "fpga_clkout" (PAD) removed.
 Unused block "sram1_bwa" (PAD) removed.
 Unused block "sram1_bwb" (PAD) removed.
 Unused block "sram1_bwc" (PAD) removed.
@@ -10939,7 +10945,6 @@ Section 6 - IOB Properties
 | fmc2_present_l                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | fpga_a21                           | IOB              | OUTPUT    | LVCMOS25             |       | 24       | FAST |              |          |          |
 | fpga_a22                           | IOB              | OUTPUT    | LVCMOS25             |       | 24       | FAST |              |          |          |
-| fpga_clkout                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | fpga_power_on_reset_b              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | fpga_reset_b                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | fpga_rs0                           | IOB              | OUTPUT    | LVCMOS25             |       | 24       | FAST |              |          |          |
@@ -11227,99 +11232,99 @@ Area Group "pblock_gtx_rx_mux_0_inst"
   No COMPRESSION specified for Area Group "pblock_gtx_rx_mux_0_inst"
   RANGE: SLICE_X102Y0:SLICE_X105Y4
   Slice Logic Utilization:
-    Number of Slice Registers:              44 out of    160   27%
+    Number of Slice Registers:              52 out of    160   32%
     Number of Slice LUTs:                   24 out of     80   30%
       Number used as logic:                 24
   Slice Logic Distribution:
-    Number of occupied Slices:              11 out of     20   55%
-    Number of LUT Flip Flop pairs used:     38
-      Number with an unused Flip Flop:       2 out of     38    5%
-      Number with an unused LUT:             6 out of     38   15%
-      Number of fully used LUT-FF pairs:    30 out of     38   78%
+    Number of occupied Slices:              13 out of     20   65%
+    Number of LUT Flip Flop pairs used:     44
+      Number with an unused Flip Flop:       4 out of     44    9%
+      Number with an unused LUT:             8 out of     44   18%
+      Number of fully used LUT-FF pairs:    32 out of     44   72%
 
 Area Group "pblock_gtx_rx_mux_1_inst"
   No COMPRESSION specified for Area Group "pblock_gtx_rx_mux_1_inst"
   RANGE: SLICE_X102Y10:SLICE_X105Y14
   Slice Logic Utilization:
-    Number of Slice Registers:              44 out of    160   27%
+    Number of Slice Registers:              52 out of    160   32%
     Number of Slice LUTs:                   24 out of     80   30%
       Number used as logic:                 24
   Slice Logic Distribution:
-    Number of occupied Slices:              12 out of     20   60%
-    Number of LUT Flip Flop pairs used:     41
-      Number with an unused Flip Flop:       5 out of     41   12%
-      Number with an unused LUT:             9 out of     41   21%
-      Number of fully used LUT-FF pairs:    27 out of     41   65%
+    Number of occupied Slices:              15 out of     20   75%
+    Number of LUT Flip Flop pairs used:     48
+      Number with an unused Flip Flop:       4 out of     48    8%
+      Number with an unused LUT:            16 out of     48   33%
+      Number of fully used LUT-FF pairs:    28 out of     48   58%
 
 Area Group "pblock_gtx_rx_mux_2_inst"
   No COMPRESSION specified for Area Group "pblock_gtx_rx_mux_2_inst"
   RANGE: SLICE_X102Y20:SLICE_X105Y24
   Slice Logic Utilization:
-    Number of Slice Registers:              44 out of    160   27%
+    Number of Slice Registers:              52 out of    160   32%
     Number of Slice LUTs:                   24 out of     80   30%
       Number used as logic:                 24
   Slice Logic Distribution:
-    Number of occupied Slices:              11 out of     20   55%
-    Number of LUT Flip Flop pairs used:     37
-      Number with an unused Flip Flop:       5 out of     37   13%
-      Number with an unused LUT:             1 out of     37    2%
-      Number of fully used LUT-FF pairs:    31 out of     37   83%
+    Number of occupied Slices:              13 out of     20   65%
+    Number of LUT Flip Flop pairs used:     43
+      Number with an unused Flip Flop:       3 out of     43    6%
+      Number with an unused LUT:             7 out of     43   16%
+      Number of fully used LUT-FF pairs:    33 out of     43   76%
 
 Area Group "pblock_gtx_tx_mux_0_inst"
   No COMPRESSION specified for Area Group "pblock_gtx_tx_mux_0_inst"
   RANGE: SLICE_X102Y5:SLICE_X105Y9
   Slice Logic Utilization:
-    Number of Slice Registers:              60 out of    160   37%
+    Number of Slice Registers:              59 out of    160   36%
     Number of Slice LUTs:                   28 out of     80   35%
       Number used as logic:                 28
   Slice Logic Distribution:
     Number of occupied Slices:              13 out of     20   65%
     Number of LUT Flip Flop pairs used:     44
-      Number with an unused Flip Flop:       2 out of     44    4%
+      Number with an unused Flip Flop:       3 out of     44    6%
       Number with an unused LUT:             2 out of     44    4%
-      Number of fully used LUT-FF pairs:    40 out of     44   90%
+      Number of fully used LUT-FF pairs:    39 out of     44   88%
 
 Area Group "pblock_gtx_tx_mux_1_inst"
   No COMPRESSION specified for Area Group "pblock_gtx_tx_mux_1_inst"
   RANGE: SLICE_X102Y15:SLICE_X105Y19
   Slice Logic Utilization:
-    Number of Slice Registers:              60 out of    160   37%
-    Number of Slice LUTs:                   35 out of     80   43%
-      Number used as logic:                 35
+    Number of Slice Registers:              59 out of    160   36%
+    Number of Slice LUTs:                   36 out of     80   45%
+      Number used as logic:                 36
   Slice Logic Distribution:
-    Number of occupied Slices:              16 out of     20   80%
-    Number of LUT Flip Flop pairs used:     51
-      Number with an unused Flip Flop:       7 out of     51   13%
-      Number with an unused LUT:             2 out of     51    3%
-      Number of fully used LUT-FF pairs:    42 out of     51   82%
+    Number of occupied Slices:              14 out of     20   70%
+    Number of LUT Flip Flop pairs used:     50
+      Number with an unused Flip Flop:       8 out of     50   16%
+      Number with an unused LUT:             2 out of     50    4%
+      Number of fully used LUT-FF pairs:    40 out of     50   80%
 
 Area Group "pblock_gtx_tx_mux_2_inst"
   No COMPRESSION specified for Area Group "pblock_gtx_tx_mux_2_inst"
   RANGE: SLICE_X102Y25:SLICE_X105Y29
   Slice Logic Utilization:
-    Number of Slice Registers:              60 out of    160   37%
+    Number of Slice Registers:              59 out of    160   36%
     Number of Slice LUTs:                   28 out of     80   35%
       Number used as logic:                 28
   Slice Logic Distribution:
-    Number of occupied Slices:              14 out of     20   70%
-    Number of LUT Flip Flop pairs used:     44
-      Number with an unused Flip Flop:       2 out of     44    4%
-      Number with an unused LUT:             2 out of     44    4%
-      Number of fully used LUT-FF pairs:    40 out of     44   90%
+    Number of occupied Slices:              13 out of     20   65%
+    Number of LUT Flip Flop pairs used:     43
+      Number with an unused Flip Flop:       2 out of     43    4%
+      Number with an unused LUT:             1 out of     43    2%
+      Number of fully used LUT-FF pairs:    40 out of     43   93%
 
-Area Group "pblock_ipb_priority_inst"
-  No COMPRESSION specified for Area Group "pblock_ipb_priority_inst"
+Area Group "pblock_ipb_fast_signals_inst"
+  No COMPRESSION specified for Area Group "pblock_ipb_fast_signals_inst"
   RANGE: SLICE_X92Y15:SLICE_X95Y19
   Slice Logic Utilization:
-    Number of Slice Registers:              45 out of    160   28%
-    Number of Slice LUTs:                   48 out of     80   60%
-      Number used as logic:                 48
+    Number of Slice Registers:              31 out of    160   19%
+    Number of Slice LUTs:                   14 out of     80   17%
+      Number used as logic:                 14
   Slice Logic Distribution:
-    Number of occupied Slices:              19 out of     20   95%
-    Number of LUT Flip Flop pairs used:     48
-      Number with an unused Flip Flop:       6 out of     48   12%
-      Number with an unused LUT:             0 out of     48    0%
-      Number of fully used LUT-FF pairs:    42 out of     48   87%
+    Number of occupied Slices:               7 out of     20   35%
+    Number of LUT Flip Flop pairs used:     21
+      Number with an unused Flip Flop:       0 out of     21    0%
+      Number with an unused LUT:             0 out of     21    0%
+      Number of fully used LUT-FF pairs:    21 out of     21  100%
 
 Area Group "pblock_ipb_tracking_0_inst"
   No COMPRESSION specified for Area Group "pblock_ipb_tracking_0_inst"
@@ -11332,10 +11337,10 @@ Area Group "pblock_ipb_tracking_0_inst"
       Number used as logic:                 29
   Slice Logic Distribution:
     Number of occupied Slices:              19 out of     50   38%
-    Number of LUT Flip Flop pairs used:     60
-      Number with an unused Flip Flop:      14 out of     60   23%
-      Number with an unused LUT:            18 out of     60   30%
-      Number of fully used LUT-FF pairs:    28 out of     60   46%
+    Number of LUT Flip Flop pairs used:     59
+      Number with an unused Flip Flop:      13 out of     59   22%
+      Number with an unused LUT:            18 out of     59   30%
+      Number of fully used LUT-FF pairs:    28 out of     59   47%
   Number of RAMB36E1/FIFO36E1s:              1 out of      1  100%
     Number using RAMB36E1 only:              1
     Number using FIFO36E1 only:              0
@@ -11350,11 +11355,11 @@ Area Group "pblock_ipb_tracking_1_inst"
     Number of Slice LUTs:                   28 out of    200   14%
       Number used as logic:                 28
   Slice Logic Distribution:
-    Number of occupied Slices:              19 out of     50   38%
-    Number of LUT Flip Flop pairs used:     59
-      Number with an unused Flip Flop:      13 out of     59   22%
-      Number with an unused LUT:            18 out of     59   30%
-      Number of fully used LUT-FF pairs:    28 out of     59   47%
+    Number of occupied Slices:              18 out of     50   36%
+    Number of LUT Flip Flop pairs used:     58
+      Number with an unused Flip Flop:      13 out of     58   22%
+      Number with an unused LUT:            18 out of     58   31%
+      Number of fully used LUT-FF pairs:    27 out of     58   46%
   Number of RAMB36E1/FIFO36E1s:              1 out of      1  100%
     Number using RAMB36E1 only:              1
     Number using FIFO36E1 only:              0
@@ -11366,14 +11371,14 @@ Area Group "pblock_ipb_tracking_2_inst"
   RANGE: SLICE_X92Y20:SLICE_X101Y24
   Slice Logic Utilization:
     Number of Slice Registers:              64 out of    400   16%
-    Number of Slice LUTs:                   42 out of    200   21%
-      Number used as logic:                 42
+    Number of Slice LUTs:                   37 out of    200   18%
+      Number used as logic:                 37
   Slice Logic Distribution:
     Number of occupied Slices:              19 out of     50   38%
-    Number of LUT Flip Flop pairs used:     63
-      Number with an unused Flip Flop:      19 out of     63   30%
-      Number with an unused LUT:             5 out of     63    7%
-      Number of fully used LUT-FF pairs:    39 out of     63   61%
+    Number of LUT Flip Flop pairs used:     58
+      Number with an unused Flip Flop:      16 out of     58   27%
+      Number with an unused LUT:             6 out of     58   10%
+      Number of fully used LUT-FF pairs:    36 out of     58   62%
   Number of RAMB36E1/FIFO36E1s:              1 out of      1  100%
     Number using RAMB36E1 only:              1
     Number using FIFO36E1 only:              0
@@ -11382,43 +11387,43 @@ Area Group "pblock_ipb_vfat2_0_inst"
   No COMPRESSION specified for Area Group "pblock_ipb_vfat2_0_inst"
   RANGE: SLICE_X96Y5:SLICE_X101Y9
   Slice Logic Utilization:
-    Number of Slice Registers:             121 out of    240   50%
-    Number of Slice LUTs:                   23 out of    120   19%
-      Number used as logic:                 23
+    Number of Slice Registers:             126 out of    240   52%
+    Number of Slice LUTs:                   28 out of    120   23%
+      Number used as logic:                 28
   Slice Logic Distribution:
-    Number of occupied Slices:              24 out of     30   80%
-    Number of LUT Flip Flop pairs used:     75
-      Number with an unused Flip Flop:       2 out of     75    2%
-      Number with an unused LUT:            14 out of     75   18%
-      Number of fully used LUT-FF pairs:    59 out of     75   78%
+    Number of occupied Slices:              25 out of     30   83%
+    Number of LUT Flip Flop pairs used:     86
+      Number with an unused Flip Flop:       6 out of     86    6%
+      Number with an unused LUT:            24 out of     86   27%
+      Number of fully used LUT-FF pairs:    56 out of     86   65%
 
 Area Group "pblock_ipb_vfat2_1_inst"
   No COMPRESSION specified for Area Group "pblock_ipb_vfat2_1_inst"
   RANGE: SLICE_X96Y15:SLICE_X101Y19
   Slice Logic Utilization:
-    Number of Slice Registers:             121 out of    240   50%
-    Number of Slice LUTs:                   24 out of    120   20%
-      Number used as logic:                 24
+    Number of Slice Registers:             126 out of    240   52%
+    Number of Slice LUTs:                   29 out of    120   24%
+      Number used as logic:                 29
   Slice Logic Distribution:
-    Number of occupied Slices:              25 out of     30   83%
-    Number of LUT Flip Flop pairs used:     81
-      Number with an unused Flip Flop:       3 out of     81    3%
-      Number with an unused LUT:            23 out of     81   28%
-      Number of fully used LUT-FF pairs:    55 out of     81   67%
+    Number of occupied Slices:              26 out of     30   86%
+    Number of LUT Flip Flop pairs used:     91
+      Number with an unused Flip Flop:       7 out of     91    7%
+      Number with an unused LUT:            28 out of     91   30%
+      Number of fully used LUT-FF pairs:    56 out of     91   61%
 
 Area Group "pblock_ipb_vfat2_2_inst"
   No COMPRESSION specified for Area Group "pblock_ipb_vfat2_2_inst"
   RANGE: SLICE_X96Y25:SLICE_X101Y29
   Slice Logic Utilization:
-    Number of Slice Registers:             121 out of    240   50%
-    Number of Slice LUTs:                   23 out of    120   19%
-      Number used as logic:                 23
+    Number of Slice Registers:             126 out of    240   52%
+    Number of Slice LUTs:                   28 out of    120   23%
+      Number used as logic:                 28
   Slice Logic Distribution:
-    Number of occupied Slices:              23 out of     30   76%
-    Number of LUT Flip Flop pairs used:     74
-      Number with an unused Flip Flop:       2 out of     74    2%
-      Number with an unused LUT:            11 out of     74   14%
-      Number of fully used LUT-FF pairs:    61 out of     74   82%
+    Number of occupied Slices:              26 out of     30   86%
+    Number of LUT Flip Flop pairs used:     87
+      Number with an unused Flip Flop:       7 out of     87    8%
+      Number with an unused LUT:            25 out of     87   28%
+      Number of fully used LUT-FF pairs:    55 out of     87   63%
 
 
 Section 10 - Timing Report

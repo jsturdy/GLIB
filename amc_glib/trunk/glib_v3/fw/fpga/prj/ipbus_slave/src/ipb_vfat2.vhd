@@ -1,3 +1,13 @@
+--
+-- This entity handles the VFAT2 I2C requests and forwards them to the OptoHybrid by formatting them. It also receives the answer
+-- and sends it back to the user. The module performs the clock-domain bridging (ipbus <-> gtx).
+--
+--
+-- Ways to improve: -
+--
+-- Modifications needed for V2: -
+--
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -53,7 +63,8 @@ begin
     -- Clock bridges                --
     ----------------------------------
     
-    clock_bridge_tx_inst : entity work.clock_bridge
+    -- To OH
+    clock_bridge_tx_inst : entity work.clock_bridge_data
     port map(
         reset_i     => reset_i,
         m_clk_i     => ipb_clk_i,
@@ -64,7 +75,8 @@ begin
         s_data_o    => tx_data_o
     );    
 
-    clock_bridge_rx_inst : entity work.clock_bridge
+    -- From OH
+    clock_bridge_rx_inst : entity work.clock_bridge_data
     port map(
         reset_i     => reset_i,
         m_clk_i     => gtx_clk_i,
@@ -191,7 +203,7 @@ begin
                     crc_byte := def_gtx_vfat2 xor chip_byte xor register_byte xor data_byte;       
                     
                     -- Check CRC
-                    --if (crc_byte = rx_data(7 downto 0)) then
+                    if (crc_byte = rx_data(7 downto 0)) then
                     
                         -- Set data bus
                         ipb_data <= "00000" & chip_byte(7) & chip_byte(6) & chip_byte(5)    -- Unused - Error - Valid - Read/Write_n
@@ -205,15 +217,15 @@ begin
                         -- Set IPBus acknowledgment
                         ipb_ack <= '1';
                         
-                    --else
+                    else
                     
                         -- Set IPBus error
-                    --    ipb_error <= '1';
+                        ipb_error <= '1';
 
                         -- Reset IPBus acknowledgment
-                    --    ipb_ack <= '0';
+                        ipb_ack <= '0';
                                     
-                    --end if;    
+                    end if;    
                         
                 else
                     

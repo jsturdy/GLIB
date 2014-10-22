@@ -1,3 +1,13 @@
+--
+-- This entity handles the GTX on the GLIB and simplifies the access to the signals. 
+-- It also gets the clock from the GTX that is then used to run the rest of the code in order to be in sync with it.
+--
+--
+-- Ways to improve: the error signals are not used at the moment
+--
+-- Modifications needed for V2: go to GBT and not GTX
+--
+
 library ieee;
 use ieee.std_logic_1164.all;
 

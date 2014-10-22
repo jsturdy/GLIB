@@ -1,3 +1,14 @@
+--
+-- This module is used to test the increase in latency of IPBus. By default IPBus only waits for 255 clock cycles (ipb_clk_i clock) 
+-- before sending a timeout. In our application, we increased the timeout to 2^24 clock cycles (this allows to perform 
+-- the communication with the VFAT2s in one operation). The module also returns the "version" of the user firmware.
+--
+--
+-- Ways to improve: -
+--
+-- Modifications needed for V2: none
+--
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -70,6 +81,6 @@ begin
   
     ipb_miso_o.ipb_err <= '0';
     ipb_miso_o.ipb_ack <= ipb_ack(SIZE - 1);
-    ipb_miso_o.ipb_rdata <= x"20141020";
+    ipb_miso_o.ipb_rdata <= x"20141022";
                             
 end rtl;

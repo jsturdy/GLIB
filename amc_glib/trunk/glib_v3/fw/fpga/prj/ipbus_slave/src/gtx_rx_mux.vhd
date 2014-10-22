@@ -1,3 +1,12 @@
+--
+-- This entity dispatches the incoming data to the different modules.
+--
+--
+-- Ways to improve: must add tracking handling -> data sizes of 16 entries
+--
+-- Modifications needed for V2: -
+--
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -46,10 +55,10 @@ begin
                 
             else
             
-                -- Wait for kchar
+                -- Wait for header data package
                 if (state = 0) then
                 
-                    -- Detect data package
+                    -- Detect header data package
                     if (rx_kchar_i = "01") then
                     
                         -- VFAT2 data packet
@@ -58,7 +67,7 @@ begin
                             -- Set selected the core
                             selected_core := 1;
                             
-                            -- Select slave
+                            -- Go to "receive data" state
                             state := 1;
                             
                         end if;  
@@ -67,7 +76,7 @@ begin
                     
                     vfat2_en_o <= '0';
                    
-                -- Data 1
+                -- Get the first data packet
                 elsif (state = 1) then
                 
                     if (rx_kchar_i = "00") then
@@ -83,7 +92,7 @@ begin
                         
                     end if;
                     
-                -- Data 2
+                -- Get the second data packet
                 elsif (state = 2) then
                 
                     if (rx_kchar_i = "00") then
@@ -97,7 +106,7 @@ begin
                             -- Set the ipbus data
                             vfat2_data_o <= data(31 downto 0);
                         
-                            -- Storbe
+                            -- Strobe
                             vfat2_en_o <= '1';
                         
                         end if;

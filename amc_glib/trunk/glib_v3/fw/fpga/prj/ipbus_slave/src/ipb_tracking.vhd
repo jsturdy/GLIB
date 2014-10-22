@@ -1,3 +1,12 @@
+--
+-- This module stores the received tracking data in a FIFO and lets IPBus read it 
+--
+--
+-- Ways to improve: must be connected to the RX module
+--
+-- Modifications needed for V2: not needed in V2, or maybe to spy on the data. Data must go through AMC13
+--
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -83,14 +92,17 @@ begin
                 
             else 
             
+                -- Incomming IPBus request
                 if (last_ipb_strobe = '0' and ipb_mosi_i.ipb_strobe = '1') then
                 
+                    -- if the FIFO is empty, send back error
                     if (empty = '1') then
                         
                         ipb_error <= '1';
                         
                         rd_en <= '0';
-                        
+                    
+                    -- Otherwhise, ask data to the FIFO
                     else
                     
                         ipb_error <= '0';
@@ -105,7 +117,7 @@ begin
                     
                 end if;
                 
-                -- Incomming IPBus request
+                -- When the fifo replies with data, acknowledge IPBus.
                 if (rd_valid = '1') then
                 
                     ipb_data <= rd_data;

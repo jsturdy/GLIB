@@ -216,9 +216,9 @@ architecture user_logic_arch of user_logic is
     signal tx_kchar         : std_logic_vector(7 downto 0) := (others => '0');
     signal tx_data          : std_logic_vector(63 downto 0) := (others => '0');
 
-    -- Priority pulses
+    -- Fast priority pulses
     
-    signal priorities       : std_logic_vector(6 downto 0) := (others => '0');
+    signal fast_signals     : std_logic_vector(6 downto 0) := (others => '0');
     
     -- ChipScope
     
@@ -245,10 +245,8 @@ begin
     
     ip_addr_o <= x"c0a80073";  -- 192.168.0.115
     mac_addr_o <= x"080030F100a" & amc_slot_i;  -- 08:00:30:F1:00:0[A0:AF] 
-    user_v6_led_o(1) <= user_cdce_locked_i;
-    user_v6_led_o(2) <= user_cdce_locked_i;   
-    
-    fpga_clkout_o <= gtx_clk;
+    user_v6_led_o(1) <= '0';
+    user_v6_led_o(2) <= '0';   
     
     ----------------------------------
     -- ChipScope                    --
@@ -342,7 +340,7 @@ begin
         ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_0),
         ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_0),
         ipb_tracking_o  => ipb_miso_o(ipbus_tracking_0),
-        priorities_i    => (others => '0')
+        fast_signals_i    => (others => '0')
     );
 
     link_tracking_1_inst : entity work.link_tracking
@@ -359,7 +357,7 @@ begin
         ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_1),
         ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_1),
         ipb_tracking_o  => ipb_miso_o(ipbus_tracking_1),
-        priorities_i    => priorities
+        fast_signals_i    => fast_signals
     );
 
     link_tracking_2_inst : entity work.link_tracking
@@ -376,21 +374,21 @@ begin
         ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_2),
         ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_2),
         ipb_tracking_o  => ipb_miso_o(ipbus_tracking_2),
-        priorities_i    => (others => '0')
+        fast_signals_i    => (others => '0')
     );
     
     ----------------------------------
-    -- IPBus trigger signals        --
+    -- IPBus fast signals           --
     ----------------------------------
     
-    ipb_priority_inst : entity work.ipb_priority
+    ipb_fast_signals_inst : entity work.ipb_fast_signals
     port map(
         ipb_clk_i       => ipb_clk_i, 
         gtx_clk_i       => gtx_clk,
         reset_i         => reset_i,
         ipb_mosi_i      => ipb_mosi_i(ipbus_fast_signals),
         ipb_miso_o      => ipb_miso_o(ipbus_fast_signals),
-        priorities_o    => priorities
+        fast_signals_o  => fast_signals
     );
 
     ----------------------------------

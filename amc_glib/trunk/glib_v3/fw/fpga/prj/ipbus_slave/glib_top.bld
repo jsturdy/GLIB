@@ -11,11 +11,12 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo -sd
 ../../src/system/cdce/cdce_phase_mon_v2/pll -sd ../../src/system/pll -nt
-timestamp -uc src/gtx.ucf -uc src/planahead.ucf -uc
+timestamp -uc
 C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syste
 m_clk.ucf -uc
 C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syste
-m.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
+m.ucf -uc src/planahead.ucf -uc src/gtx.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc
+glib_top.ngd
 
 Reading NGO file
 "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/gli
@@ -52,14 +53,14 @@ Xilinx software updates or new releases.
 Gathering constraint information from source properties...
 Done.
 
-Annotating constraints to design from ucf file "src/gtx.ucf" ...
-Annotating constraints to design from ucf file "src/planahead.ucf" ...
 Annotating constraints to design from ucf file
 "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syst
 em_clk.ucf" ...
 Annotating constraints to design from ucf file
 "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/syst
 em.ucf" ...
+Annotating constraints to design from ucf file "src/planahead.ucf" ...
+Annotating constraints to design from ucf file "src/gtx.ucf" ...
 WARNING:NgdBuild - The value of SIM_DEVICE on instance
    'system/amc_p0_en.amc_p0_eth/clkbuf' of type BUFR has been changed from
    'VIRTEX4' to 'VIRTEX6' to correct post-ngdbuild and timing simulation for
@@ -519,6 +520,7 @@ WARNING:NgdBuild:452 - logical net 'sram2_bwa_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'sram2_bwb_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'sram2_bwc_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'sram2_bwd_OBUF' has no driver
+WARNING:NgdBuild:452 - logical net 'fpga_clkout_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'user_sram_rdata<1><35>' has no driver
 WARNING:NgdBuild:452 - logical net 'user_sram_rdata<1><34>' has no driver
 WARNING:NgdBuild:452 - logical net 'user_sram_rdata<1><33>' has no driver
@@ -675,54 +677,6 @@ WARNING:NgdBuild:452 - logical net 'N801' has no driver
 WARNING:NgdBuild:452 - logical net 'N802' has no driver
 WARNING:NgdBuild:452 - logical net 'N805' has no driver
 WARNING:NgdBuild:452 - logical net 'N806' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/vfat2_rx_data<7>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/vfat2_rx_data<6>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/vfat2_rx_data<5>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/vfat2_rx_data<4>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/vfat2_rx_data<3>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/vfat2_rx_data<2>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/vfat2_rx_data<1>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/vfat2_rx_data<0>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/vfat2_rx_data<7>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/vfat2_rx_data<6>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/vfat2_rx_data<5>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/vfat2_rx_data<4>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/vfat2_rx_data<3>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/vfat2_rx_data<2>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/vfat2_rx_data<1>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/vfat2_rx_data<0>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/vfat2_rx_data<7>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/vfat2_rx_data<6>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/vfat2_rx_data<5>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/vfat2_rx_data<4>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/vfat2_rx_data<3>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/vfat2_rx_data<2>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/vfat2_rx_data<1>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/vfat2_rx_data<0>'
-   has no driver
 WARNING:NgdBuild:452 - logical net 'system/user_cdce_sync_done_o' has no driver
 WARNING:NgdBuild:452 - logical net 'system/ipb_to_slaves[4]_ipb_strobe' has no
    driver
@@ -1727,9 +1681,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 1082
+  Number of warnings: 1059
 
-Total memory usage is 318960 kilobytes
+Total memory usage is 322652 kilobytes
 
 Writing NGD file "glib_top.ngd" ...
 Total REAL time to NGDBUILD completion:  26 sec

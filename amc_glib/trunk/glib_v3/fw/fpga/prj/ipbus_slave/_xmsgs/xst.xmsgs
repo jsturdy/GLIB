@@ -200,10 +200,10 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\ipcore_dir\high_speed_gtx.vhd" Line 425: Assignment to <arg fmt="%s" index="1">rxnotintable_float_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\link_tracking.vhd" Line 44: Using initial value <arg fmt="%s" index="1">&apos;0&apos;</arg> for <arg fmt="%s" index="2">tracking_rx_en</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\link_tracking.vhd" Line 56: Using initial value <arg fmt="%s" index="1">&apos;0&apos;</arg> for <arg fmt="%s" index="2">tracking_rx_en</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\link_tracking.vhd" Line 45: Using initial value <arg fmt="%s" index="1">&quot;0000000000000000&quot;</arg> for <arg fmt="%s" index="2">tracking_rx_data</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\link_tracking.vhd" Line 57: Using initial value <arg fmt="%s" index="1">&quot;0000000000000000&quot;</arg> for <arg fmt="%s" index="2">tracking_rx_data</arg> since it is never assigned
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 216: Net &lt;<arg fmt="%s" index="1">tx_kchar[7]</arg>&gt; does not have a driver.
@@ -1733,6 +1733,9 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">user_sys_pcie_int_i_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">user_cdce_locked_i</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">user_cdce_sync_done_i</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
@@ -1757,13 +1760,13 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">user_clk200_i</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd</arg>&quot; line <arg fmt="%s" index="2">263</arg>: Output port &lt;<arg fmt="%s" index="3">ASYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">chipscope_vio_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd</arg>&quot; line <arg fmt="%s" index="2">261</arg>: Output port &lt;<arg fmt="%s" index="3">ASYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">chipscope_vio_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd</arg>&quot; line <arg fmt="%s" index="2">263</arg>: Output port &lt;<arg fmt="%s" index="3">SYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">chipscope_vio_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd</arg>&quot; line <arg fmt="%s" index="2">261</arg>: Output port &lt;<arg fmt="%s" index="3">SYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">chipscope_vio_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd</arg>&quot; line <arg fmt="%s" index="2">310</arg>: Output port &lt;<arg fmt="%s" index="3">rx_error_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx_wrapper_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd</arg>&quot; line <arg fmt="%s" index="2">308</arg>: Output port &lt;<arg fmt="%s" index="3">rx_error_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gtx_wrapper_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">amc_port_tx_p</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -1973,109 +1976,109 @@
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">wb_miso_o[0]_wb_err</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">69</arg>: Output port &lt;<arg fmt="%s" index="3">RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">79</arg>: Output port &lt;<arg fmt="%s" index="3">RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">69</arg>: Output port &lt;<arg fmt="%s" index="3">RXBYTEISALIGNED_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">79</arg>: Output port &lt;<arg fmt="%s" index="3">RXBYTEISALIGNED_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">69</arg>: Output port &lt;<arg fmt="%s" index="3">RXCOMMADET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">79</arg>: Output port &lt;<arg fmt="%s" index="3">RXCOMMADET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">69</arg>: Output port &lt;<arg fmt="%s" index="3">RXRECCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">79</arg>: Output port &lt;<arg fmt="%s" index="3">RXRECCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">69</arg>: Output port &lt;<arg fmt="%s" index="3">RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">79</arg>: Output port &lt;<arg fmt="%s" index="3">RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">69</arg>: Output port &lt;<arg fmt="%s" index="3">RXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">79</arg>: Output port &lt;<arg fmt="%s" index="3">RXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">69</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">79</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">69</arg>: Output port &lt;<arg fmt="%s" index="3">TXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">79</arg>: Output port &lt;<arg fmt="%s" index="3">TXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx0_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">107</arg>: Output port &lt;<arg fmt="%s" index="3">RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">117</arg>: Output port &lt;<arg fmt="%s" index="3">RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">107</arg>: Output port &lt;<arg fmt="%s" index="3">RXBYTEISALIGNED_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">117</arg>: Output port &lt;<arg fmt="%s" index="3">RXBYTEISALIGNED_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">107</arg>: Output port &lt;<arg fmt="%s" index="3">RXCOMMADET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">117</arg>: Output port &lt;<arg fmt="%s" index="3">RXCOMMADET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">107</arg>: Output port &lt;<arg fmt="%s" index="3">RXRECCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">117</arg>: Output port &lt;<arg fmt="%s" index="3">RXRECCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">107</arg>: Output port &lt;<arg fmt="%s" index="3">RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">117</arg>: Output port &lt;<arg fmt="%s" index="3">RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">107</arg>: Output port &lt;<arg fmt="%s" index="3">RXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">117</arg>: Output port &lt;<arg fmt="%s" index="3">RXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">107</arg>: Output port &lt;<arg fmt="%s" index="3">TXOUTCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">117</arg>: Output port &lt;<arg fmt="%s" index="3">TXOUTCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">107</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">117</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">107</arg>: Output port &lt;<arg fmt="%s" index="3">TXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">117</arg>: Output port &lt;<arg fmt="%s" index="3">TXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx1_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">145</arg>: Output port &lt;<arg fmt="%s" index="3">RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">155</arg>: Output port &lt;<arg fmt="%s" index="3">RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">145</arg>: Output port &lt;<arg fmt="%s" index="3">RXBYTEISALIGNED_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">155</arg>: Output port &lt;<arg fmt="%s" index="3">RXBYTEISALIGNED_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">145</arg>: Output port &lt;<arg fmt="%s" index="3">RXCOMMADET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">155</arg>: Output port &lt;<arg fmt="%s" index="3">RXCOMMADET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">145</arg>: Output port &lt;<arg fmt="%s" index="3">RXRECCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">155</arg>: Output port &lt;<arg fmt="%s" index="3">RXRECCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">145</arg>: Output port &lt;<arg fmt="%s" index="3">RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">155</arg>: Output port &lt;<arg fmt="%s" index="3">RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">145</arg>: Output port &lt;<arg fmt="%s" index="3">RXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">155</arg>: Output port &lt;<arg fmt="%s" index="3">RXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">145</arg>: Output port &lt;<arg fmt="%s" index="3">TXOUTCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">155</arg>: Output port &lt;<arg fmt="%s" index="3">TXOUTCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">145</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">155</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">145</arg>: Output port &lt;<arg fmt="%s" index="3">TXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">155</arg>: Output port &lt;<arg fmt="%s" index="3">TXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx2_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">183</arg>: Output port &lt;<arg fmt="%s" index="3">RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">193</arg>: Output port &lt;<arg fmt="%s" index="3">RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">183</arg>: Output port &lt;<arg fmt="%s" index="3">RXBYTEISALIGNED_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">193</arg>: Output port &lt;<arg fmt="%s" index="3">RXBYTEISALIGNED_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">183</arg>: Output port &lt;<arg fmt="%s" index="3">RXCOMMADET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">193</arg>: Output port &lt;<arg fmt="%s" index="3">RXCOMMADET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">183</arg>: Output port &lt;<arg fmt="%s" index="3">RXRECCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">193</arg>: Output port &lt;<arg fmt="%s" index="3">RXRECCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">183</arg>: Output port &lt;<arg fmt="%s" index="3">RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">193</arg>: Output port &lt;<arg fmt="%s" index="3">RXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">183</arg>: Output port &lt;<arg fmt="%s" index="3">RXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">193</arg>: Output port &lt;<arg fmt="%s" index="3">RXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">183</arg>: Output port &lt;<arg fmt="%s" index="3">TXOUTCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">193</arg>: Output port &lt;<arg fmt="%s" index="3">TXOUTCLK_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">183</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">193</arg>: Output port &lt;<arg fmt="%s" index="3">TXPLLLKDET_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">183</arg>: Output port &lt;<arg fmt="%s" index="3">TXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd</arg>&quot; line <arg fmt="%s" index="2">193</arg>: Output port &lt;<arg fmt="%s" index="3">TXRESETDONE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">high_speed_gtx3_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">rx_error_i</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -2087,9 +2090,6 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ipb_mosi_i_ipb_wdata&lt;31:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">ipb_error</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">0</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">ipb_vfat2</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ipb_mosi_i_ipb_addr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
@@ -2099,7 +2099,7 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ipb_mosi_i_ipb_write</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_tracking.vhd</arg>&quot; line <arg fmt="%s" index="2">51</arg>: Output port &lt;<arg fmt="%s" index="3">full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">tracking_buffer_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_tracking.vhd</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">tracking_buffer_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ipb_mosi_i_ipb_addr&lt;31:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -2567,6 +2567,9 @@
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">status_end_addr_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">status</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;status_end_addr_3&gt; &lt;status_end_addr_5&gt; &lt;status_end_addr_6&gt; </arg>
 </msg>
 
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -2634,12 +2637,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_35</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_34</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_33</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">status_end_addr_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">status</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -2714,13 +2711,34 @@
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_20</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">selected_core_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_tx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_tx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_tx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">tx_data_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ipb_vfat2_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ipb_data_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ipb_vfat2_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">s_data_o_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">clock_bridge_tx_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">s_data_o_30</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">clock_bridge_tx_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">selected_core_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_rx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_tx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -2744,9 +2762,6 @@
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">selected_core_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_rx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">selected_core_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_tx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_tx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -2768,28 +2783,10 @@
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">selected_core_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_rx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">selected_core_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_tx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_34</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_tx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_tx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">tx_data_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ipb_vfat2_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ipb_data_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ipb_vfat2_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">s_data_o_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">clock_bridge_tx_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">s_data_o_30</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">clock_bridge_tx_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">selected_core_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_rx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_33</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_32</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -2859,156 +2856,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RARP_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">address_block.addr_int_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">payload</arg>&gt;.
@@ -3279,9 +3126,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">tx_data_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ipb_vfat2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">selected_core_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_tx_mux</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_block.data_buffer_22</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">udp_rarp_block</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -4643,150 +4487,6 @@ one of the following:
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">data_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">gtx_tx_mux_inst</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">vfat2_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gtx_rx_mux_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">s_data_o_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clock_bridge_rx_inst</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">startErrInj_rr</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bist</arg>&gt;.

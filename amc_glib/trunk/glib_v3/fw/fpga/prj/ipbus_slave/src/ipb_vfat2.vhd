@@ -11,7 +11,7 @@ port(
 
     -- Clocks and reset
 	ipb_clk_i       : in std_logic;
-	fabric_clk_i    : in std_logic;
+	gtx_clk_i       : in std_logic;
 	reset_i         : in std_logic;
     
     -- IPBus data
@@ -59,7 +59,7 @@ begin
         m_clk_i     => ipb_clk_i,
         m_en_i      => tx_en,
         m_data_i    => tx_data,        
-        s_clk_i     => fabric_clk_i,
+        s_clk_i     => gtx_clk_i,
         s_en_o      => tx_en_o,
         s_data_o    => tx_data_o
     );    
@@ -67,7 +67,7 @@ begin
     clock_bridge_rx_inst : entity work.clock_bridge
     port map(
         reset_i     => reset_i,
-        m_clk_i     => fabric_clk_i,
+        m_clk_i     => gtx_clk_i,
         m_en_i      => rx_en_i,
         m_data_i    => rx_data_i,        
         s_clk_i     => ipb_clk_i,
@@ -191,7 +191,7 @@ begin
                     crc_byte := def_gtx_vfat2 xor chip_byte xor register_byte xor data_byte;       
                     
                     -- Check CRC
-                    if (crc_byte = rx_data(7 downto 0)) then
+                    --if (crc_byte = rx_data(7 downto 0)) then
                     
                         -- Set data bus
                         ipb_data <= "00000" & chip_byte(7) & chip_byte(6) & chip_byte(5)    -- Unused - Error - Valid - Read/Write_n
@@ -205,15 +205,15 @@ begin
                         -- Set IPBus acknowledgment
                         ipb_ack <= '1';
                         
-                    else
+                    --else
                     
                         -- Set IPBus error
-                        ipb_error <= '1';
+                    --    ipb_error <= '1';
 
                         -- Reset IPBus acknowledgment
-                        ipb_ack <= '0';
+                    --    ipb_ack <= '0';
                                     
-                    end if;    
+                    --end if;    
                         
                 else
                     

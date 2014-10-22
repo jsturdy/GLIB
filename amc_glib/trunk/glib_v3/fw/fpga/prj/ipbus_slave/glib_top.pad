@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Aug 25 11:46:04 2014
+Tue Oct 21 10:00:40 2014
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -184,7 +184,7 @@ AD26|cdce_sec_ref_n|IOBS|IO_L0N_12|OUTPUT|LVDS_25|12||||||UNLOCATED|NO|NONE|
 AD27|amc_port_tx_p<10>|IOB|IO_L1N_12|OUTPUT|LVCMOS25*|12|12|SLOW||||UNLOCATED|NO|NONE|
 AD28|||GND||||||||||||
 AD29||IOBM|IO_L11P_SRCC_13|UNUSED||13|||||||||
-AD30||IOBM|IO_L9P_MRCC_13|UNUSED||13|||||||||
+AD30|fpga_clkout|IOB|IO_L9P_MRCC_13|OUTPUT|LVCMOS25*|13|12|SLOW||||LOCATED|NO|NONE|
 AD31||IOBS|IO_L5N_13|UNUSED||13|||||||||
 AD32||IOBM|IO_L14P_13|UNUSED||13|||||||||
 AD33|||VCCO_13|||13|||||2.50||||

@@ -8,7 +8,7 @@ use work.user_package.all;
 
 entity link_tracking is
 port(
-    fabric_clk_i    : in std_logic;
+    gtx_clk_i       : in std_logic;
     ipb_clk_i       : in std_logic;
     reset_i         : in std_logic;
     
@@ -20,7 +20,12 @@ port(
     tx_data_o       : out std_logic_vector(15 downto 0);
    
 	ipb_vfat2_i     : in ipb_wbus;
-	ipb_vfat2_o     : out ipb_rbus
+	ipb_vfat2_o     : out ipb_rbus;
+    
+	ipb_tracking_i  : in ipb_wbus;
+	ipb_tracking_o  : out ipb_rbus;
+    
+    priorities_i    : in std_logic_vector(6 downto 0)
 );
 end link_tracking;
 
@@ -34,11 +39,16 @@ architecture Behavioral of link_tracking is
     signal vfat2_rx_en      : std_logic := '0';
     signal vfat2_rx_data    : std_logic_vector(31 downto 0) := (others => '0');
     
+    -- Tracking signals
+    
+    signal tracking_rx_en   : std_logic := '0';
+    signal tracking_rx_data : std_logic_vector(15 downto 0) := (others => '0');
+    
 begin
 
     gtx_rx_mux_inst : entity work.gtx_rx_mux
     port map(
-        gtx_clk_i       => fabric_clk_i,
+        gtx_clk_i       => gtx_clk_i,
         reset_i         => reset_i,
         vfat2_en_o      => vfat2_rx_en,
         vfat2_data_o    => vfat2_rx_data,
@@ -48,18 +58,19 @@ begin
     
     gtx_tx_mux_inst : entity work.gtx_tx_mux
     port map(
-        gtx_clk_i       => fabric_clk_i,
+        gtx_clk_i       => gtx_clk_i,
         reset_i         => reset_i,
         vfat2_en_i      => vfat2_tx_en,
         vfat2_data_i    => vfat2_tx_data,
         tx_kchar_o      => tx_kchar_o,
-        tx_data_o       => tx_data_o
+        tx_data_o       => tx_data_o,
+        priorities_i    => priorities_i
     );  
     
     ipb_vfat2_inst : entity work.ipb_vfat2
     port map(
         ipb_clk_i       => ipb_clk_i,
-        fabric_clk_i    => fabric_clk_i,    
+        gtx_clk_i       => gtx_clk_i,    
         reset_i         => reset_i,
         ipb_mosi_i      => ipb_vfat2_i,
         ipb_miso_o      => ipb_vfat2_o,
@@ -67,6 +78,17 @@ begin
         tx_data_o       => vfat2_tx_data,
         rx_en_i         => vfat2_rx_en,
         rx_data_i       => vfat2_rx_data
+    );
+    
+    ipb_tracking_inst : entity work.ipb_tracking
+    port map(
+        ipb_clk_i   => ipb_clk_i,
+        gtx_clk_i   => gtx_clk_i,
+        reset_i     => reset_i,
+        ipb_mosi_i  => ipb_tracking_i,
+        ipb_miso_o  => ipb_tracking_o,
+        rx_en_i     => tracking_rx_en,
+        rx_data_i   => tracking_rx_data
     );
 
 end Behavioral;

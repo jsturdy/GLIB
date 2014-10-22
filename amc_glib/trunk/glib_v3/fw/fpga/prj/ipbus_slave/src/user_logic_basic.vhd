@@ -206,7 +206,7 @@ architecture user_logic_arch of user_logic is
 
     -- Global signals
 
-    signal fabric_clk       : std_logic := '0';
+    signal gtx_clk          : std_logic := '0';
     
     -- GTX signals
     
@@ -216,6 +216,10 @@ architecture user_logic_arch of user_logic is
     signal tx_kchar         : std_logic_vector(7 downto 0) := (others => '0');
     signal tx_data          : std_logic_vector(63 downto 0) := (others => '0');
 
+    -- Priority pulses
+    
+    signal priorities       : std_logic_vector(6 downto 0) := (others => '0');
+    
     -- ChipScope
     
     signal cs_control_0     : std_logic_vector(35 downto 0) := (others => '0');
@@ -241,8 +245,10 @@ begin
     
     ip_addr_o <= x"c0a80073";  -- 192.168.0.115
     mac_addr_o <= x"080030F100a" & amc_slot_i;  -- 08:00:30:F1:00:0[A0:AF] 
-    user_v6_led_o(1) <= '1';
-    user_v6_led_o(2) <= '1';   
+    user_v6_led_o(1) <= user_cdce_locked_i;
+    user_v6_led_o(2) <= user_cdce_locked_i;   
+    
+    fpga_clkout_o <= gtx_clk;
     
     ----------------------------------
     -- ChipScope                    --
@@ -257,7 +263,7 @@ begin
     chipscope_vio_inst : entity work.chipscope_vio
     port map(
         CONTROL     => cs_control_1,
-        CLK         => fabric_clk,
+        CLK         => gtx_clk,
         ASYNC_OUT   => cs_async_out,
         SYNC_OUT    => cs_sync_out
     );
@@ -265,7 +271,7 @@ begin
     chipscope_ila_inst : entity work.chipscope_ila
     port map(
         CONTROL => cs_control_0,
-        CLK     => fabric_clk,
+        CLK     => gtx_clk,
         TRIG0   => cs_trigger_0,
         TRIG1   => cs_trigger_1,
         TRIG2   => cs_trigger_2,
@@ -282,20 +288,20 @@ begin
         TRIG13  => cs_trigger_13
     );    
     
---    cs_trigger_0(0) <= ipb_mosi_i(ipbus_vfat2_1).ipb_strobe;
---    cs_trigger_1(0) <= vfat2_tx_en_1;
---    cs_trigger_2(0) <= '0'; --vfat2_tx_ack_1;
---    cs_trigger_3 <= vfat2_tx_data_1;
---    cs_trigger_4 <= tx_data_1;
---    cs_trigger_5 <= tx_kchar_1;
---    cs_trigger_6 <= rx_data_1;
---    cs_trigger_7 <= rx_kchar_1;
---    cs_trigger_8(0) <= vfat2_rx_en_1;
---    cs_trigger_9 <= vfat2_rx_data_1;
---    cs_trigger_10 <= (others => '0');
---    cs_trigger_11 <= (others => '0');
---    cs_trigger_12 <= (others => '0');
---    cs_trigger_13 <= (others => '0');
+    cs_trigger_0 <= (others => '0');
+    cs_trigger_1 <= (others => '0');
+    cs_trigger_2 <= (others => '0');
+    cs_trigger_3 <= (others => '0');
+    cs_trigger_4 <= tx_data(31 downto 16);
+    cs_trigger_5 <= tx_kchar(3 downto 2);
+    cs_trigger_6 <= rx_data(31 downto 16);
+    cs_trigger_7 <= rx_kchar(3 downto 2);
+    cs_trigger_8 <= (others => '0');
+    cs_trigger_9 <= (others => '0');
+    cs_trigger_10 <= (others => '0');
+    cs_trigger_11 <= (others => '0');
+    cs_trigger_12 <= (others => '0');
+    cs_trigger_13 <= (others => '0');
 
     ----------------------------------
     -- GTX                          --
@@ -303,7 +309,7 @@ begin
     
     gtx_wrapper_inst : entity work.gtx_wrapper
     port map(
-        fabric_clk_o    => fabric_clk,
+        gtx_clk_o       => gtx_clk,
         reset_i         => reset_i,
         rx_error_o      => open,
         rx_kchar_o      => rx_kchar,
@@ -324,7 +330,7 @@ begin
 
     link_tracking_0_inst : entity work.link_tracking
     port map(
-        fabric_clk_i    => fabric_clk,
+        gtx_clk_i       => gtx_clk,
         ipb_clk_i       => ipb_clk_i,
         reset_i         => reset_i,
         rx_error_i      => rx_error(0),
@@ -333,12 +339,15 @@ begin
         tx_kchar_o      => tx_kchar(1 downto 0),
         tx_data_o       => tx_data(15 downto 0),
         ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_0),
-        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_0)
+        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_0),
+        ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_0),
+        ipb_tracking_o  => ipb_miso_o(ipbus_tracking_0),
+        priorities_i    => (others => '0')
     );
 
     link_tracking_1_inst : entity work.link_tracking
     port map(
-        fabric_clk_i    => fabric_clk,
+        gtx_clk_i       => gtx_clk,
         ipb_clk_i       => ipb_clk_i,
         reset_i         => reset_i,
         rx_error_i      => rx_error(0),
@@ -347,12 +356,15 @@ begin
         tx_kchar_o      => tx_kchar(3 downto 2),
         tx_data_o       => tx_data(31 downto 16),
         ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_1),
-        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_1)
+        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_1),
+        ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_1),
+        ipb_tracking_o  => ipb_miso_o(ipbus_tracking_1),
+        priorities_i    => priorities
     );
 
     link_tracking_2_inst : entity work.link_tracking
     port map(
-        fabric_clk_i    => fabric_clk,
+        gtx_clk_i       => gtx_clk,
         ipb_clk_i       => ipb_clk_i,
         reset_i         => reset_i,
         rx_error_i      => rx_error(0),
@@ -361,7 +373,24 @@ begin
         tx_kchar_o      => tx_kchar(5 downto 4),
         tx_data_o       => tx_data(47 downto 32),
         ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_2),
-        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_2)
+        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_2),
+        ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_2),
+        ipb_tracking_o  => ipb_miso_o(ipbus_tracking_2),
+        priorities_i    => (others => '0')
+    );
+    
+    ----------------------------------
+    -- IPBus trigger signals        --
+    ----------------------------------
+    
+    ipb_priority_inst : entity work.ipb_priority
+    port map(
+        ipb_clk_i       => ipb_clk_i, 
+        gtx_clk_i       => gtx_clk,
+        reset_i         => reset_i,
+        ipb_mosi_i      => ipb_mosi_i(ipbus_fast_signals),
+        ipb_miso_o      => ipb_miso_o(ipbus_fast_signals),
+        priorities_o    => priorities
     );
 
     ----------------------------------

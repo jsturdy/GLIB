@@ -9,7 +9,7 @@ library work;
 
 entity gtx_wrapper is
 port(
-    fabric_clk_o    : out std_logic;
+    gtx_clk_o       : out std_logic;
     reset_i         : in std_logic;
     
     rx_error_o      : out std_logic_vector(3 downto 0);
@@ -64,7 +64,7 @@ begin
         O   =>      gtx0_tx_out_clk2
     );
     
-    fabric_clk_o <= gtx0_tx_out_clk2;
+    gtx_clk_o <= gtx0_tx_out_clk2;
 
     high_speed_gtx0_inst : entity work.high_speed_gtx
     generic map(

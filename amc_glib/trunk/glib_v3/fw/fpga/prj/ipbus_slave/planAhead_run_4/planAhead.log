@@ -1,0 +1,1953 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue Oct 21 09:46:48 2014
+# Process ID: 3936
+# Log file: C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/planAhead_run_4/planAhead.log
+# Journal file: C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -294 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/pa.fromNetlist.tcl
+# create_project -name ipbus_slave -dir "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/planAhead_run_4" -part xc6vlx130tff1156-1
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/glib_top.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave} {ipcore_dir} {../../src/system/cdce/cdce_phase_mon_v2/dpram} {../../src/system/ethernet/ipcore_dir/basex} {../../src/system/ethernet/ipcore_dir/sgmii} {../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ezdma2_ctrl_dpram} {../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ipbus_ctrl_dpram} {../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo} {../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo} {../../src/system/cdce/cdce_phase_mon_v2/pll} {../../src/system/pll} }
+# add_files [list {ipcore_dir/buffer_fifo.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/chipscope_icon.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/chipscope_ila.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/chipscope_vio.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/tracking_data_fifo.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {../../src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {../../src/system/ethernet/ipcore_dir/basex/v6_emac_v2_3_basex.ncf}] -fileset [get_property constrset [current_run]]
+# set_property target_constrs_file "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/planahead.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/planahead.ucf' to fileset 'constrs_1'
+# add_files [list {C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system.ucf}] -fileset [get_property constrset [current_run]]
+# add_files [list {C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system_clk.ucf}] -fileset [get_property constrset [current_run]]
+# add_files [list {C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/gtx.ucf}] -fileset [get_property constrset [current_run]]
+# add_files [list {C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/planahead.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6vlx130tff1156-1
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design glib_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to glib_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus reply[31]_GND_441_o_mux_139_OUT[31 : 0]
+   on block i2c_ctrl is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   main_process.state[2]_X_82_o_wide_mux_27_OUT[29 : 0] on block
+   icap_interface_fsm is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:305 - Port bus ipb_m_out[0]_ipb_addr has a mismatched
+   property name ipb_m_out on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_out[0]_ipb_addr on block ipbus_master_arb using the data
+   ipb_m_out[0]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_m_out[0]_ipb_wdata has a mismatched
+   property name ipb_m_out on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_out[0]_ipb_wdata on block ipbus_master_arb using the data
+   ipb_m_out[0]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_m_out[1]_ipb_addr has a mismatched
+   property name ipb_m_out on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_out[1]_ipb_addr on block ipbus_master_arb using the data
+   ipb_m_out[1]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_m_out[1]_ipb_wdata has a mismatched
+   property name ipb_m_out on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_out[1]_ipb_wdata on block ipbus_master_arb using the data
+   ipb_m_out[1]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_m_out[2]_ipb_addr has a mismatched
+   property name ipb_m_out on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_out[2]_ipb_addr on block ipbus_master_arb using the data
+   ipb_m_out[2]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_m_out[2]_ipb_wdata has a mismatched
+   property name ipb_m_out on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_out[2]_ipb_wdata on block ipbus_master_arb using the data
+   ipb_m_out[2]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_m_out[3]_ipb_addr has a mismatched
+   property name ipb_m_out on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_out[3]_ipb_addr on block ipbus_master_arb using the data
+   ipb_m_out[3]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_m_out[3]_ipb_wdata has a mismatched
+   property name ipb_m_out on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_out[3]_ipb_wdata on block ipbus_master_arb using the data
+   ipb_m_out[3]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_m_in[0]_ipb_rdata has a mismatched
+   property name ipb_m_in on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_in[0]_ipb_rdata on block ipbus_master_arb using the data
+   ipb_m_in[0]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_m_in[1]_ipb_rdata has a mismatched
+   property name ipb_m_in on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_in[1]_ipb_rdata on block ipbus_master_arb using the data
+   ipb_m_in[1]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_m_in[2]_ipb_rdata has a mismatched
+   property name ipb_m_in on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_in[2]_ipb_rdata on block ipbus_master_arb using the data
+   ipb_m_in[2]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_m_in[3]_ipb_rdata has a mismatched
+   property name ipb_m_in on block ipbus_master_arb.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_m_in[3]_ipb_rdata on block ipbus_master_arb using the data
+   ipb_m_in[3]_ipb_rdata<31:0>.
+WARNING:NetListWriters:306 - Signal bus Result<15 : 0> on block
+   transactor_if_NO1 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus hdr<31 : 4> on block transactor_sm_NO1
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus udp_build_data.pay_len[12 : 0] on block
+   udp_tx_mux_NO1 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus header<100 : 0> on block
+   udp_status_buffer_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus history_block.event_data<7 : 0> on block
+   udp_status_buffer_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus history_block.async_payload<4 : 0> on
+   block udp_status_buffer_NO1 is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus async_data<4 : 0> on block
+   udp_status_buffer_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus history<127 : 0> on block
+   udp_status_buffer_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   history_block.async_payload[4]_async_data[4]_mux_20_OUT<4 : 0> on block
+   udp_status_buffer_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus history[127]_history[119]_mux_22_OUT<7 :
+   0> on block udp_status_buffer_NO1 is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus GND_189_o_GND_189_o_mux_29_OUT<4 : 0> on
+   block udp_status_buffer_NO1 is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Madd_next_addr.addr_int[6]_GND_188_o_add_20_OUT_cy<4 : 0> on block
+   udp_build_status_NO1 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ping.pkt_data[19 : 11] on block
+   udp_packet_parser_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus ipbus_pkt.pkt_data[22 : 0] on block
+   udp_packet_parser_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus littleendian.reliable_data[31 : 5] on
+   block udp_packet_parser_NO1 is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus bigendian.unreliable_data[29 : 12] on
+   block udp_packet_parser_NO1 is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus status_request.pkt_data[46 : 0] on block
+   udp_packet_parser_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus resend.pkt_data[13 : 1] on block
+   udp_packet_parser_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus arp.pkt_mask[41]_PWR_84_o_mux_3_OUT[41 :
+   0] on block udp_packet_parser_NO1 is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ipbus_pkt.pkt_mask[37]_PWR_84_o_mux_47_OUT[37 : 2] on block
+   udp_packet_parser_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ipbus_pkt.pkt_data[23]_GND_193_o_mux_49_OUT[23 : 8] on block
+   udp_packet_parser_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ipbus_mask.pkt_mask[44]_PWR_84_o_mux_53_OUT[44 : 4] on block
+   udp_packet_parser_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   bigendian.unreliable_data[31]_GND_193_o_mux_64_OUT[29 : 12] on block
+   udp_packet_parser_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   status_request.pkt_data[47]_GND_193_o_mux_83_OUT[46 : 20] on block
+   udp_packet_parser_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   resend.pkt_data[15]_GND_193_o_mux_92_OUT[13 : 9] on block
+   udp_packet_parser_NO1 is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus GND_184_o_GND_184_o_select_10_OUT<5 : 3>
+   on block udp_build_arp_NO1 is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Result<15 : 0> on block transactor_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus hdr<31 : 4> on block transactor_sm is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus udp_build_data.pay_len[12 : 0] on block
+   udp_tx_mux is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus header<100 : 0> on block
+   udp_status_buffer is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus history_block.event_data<7 : 0> on block
+   udp_status_buffer is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus history_block.async_payload<4 : 0> on
+   block udp_status_buffer is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus async_data<4 : 0> on block
+   udp_status_buffer is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus history<127 : 0> on block
+   udp_status_buffer is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   history_block.async_payload[4]_async_data[4]_mux_20_OUT<4 : 0> on block
+   udp_status_buffer is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus history[127]_history[119]_mux_22_OUT<7 :
+   0> on block udp_status_buffer is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus GND_189_o_GND_189_o_mux_29_OUT<4 : 0> on
+   block udp_status_buffer is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Madd_next_addr.addr_int[6]_GND_188_o_add_20_OUT_cy<4 : 0> on block
+   udp_build_status is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ping.pkt_data[19 : 11] on block
+   udp_packet_parser is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus ipbus_pkt.pkt_data[22 : 0] on block
+   udp_packet_parser is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus littleendian.reliable_data[31 : 5] on
+   block udp_packet_parser is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus bigendian.unreliable_data[29 : 12] on
+   block udp_packet_parser is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus status_request.pkt_data[46 : 0] on block
+   udp_packet_parser is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus resend.pkt_data[13 : 1] on block
+   udp_packet_parser is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus arp.pkt_mask[41]_PWR_84_o_mux_3_OUT[41 :
+   0] on block udp_packet_parser is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ipbus_pkt.pkt_mask[37]_PWR_84_o_mux_47_OUT[37 : 2] on block udp_packet_parser
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   ipbus_pkt.pkt_data[23]_GND_193_o_mux_49_OUT[23 : 8] on block
+   udp_packet_parser is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   ipbus_mask.pkt_mask[44]_PWR_84_o_mux_53_OUT[44 : 4] on block
+   udp_packet_parser is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   bigendian.unreliable_data[31]_GND_193_o_mux_64_OUT[29 : 12] on block
+   udp_packet_parser is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   status_request.pkt_data[47]_GND_193_o_mux_83_OUT[46 : 20] on block
+   udp_packet_parser is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   resend.pkt_data[15]_GND_193_o_mux_92_OUT[13 : 9] on block udp_packet_parser
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus GND_184_o_GND_184_o_select_10_OUT<5 : 3>
+   on block udp_build_arp is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[0]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[0]_ipb_rdata on block ipbus_sys_fabric using the data
+   ipb_from_slaves[0]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[1]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[1]_ipb_rdata on block ipbus_sys_fabric using the data
+   ipb_from_slaves[1]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[2]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[2]_ipb_rdata on block ipbus_sys_fabric using the data
+   ipb_from_slaves[2]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[3]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[3]_ipb_rdata on block ipbus_sys_fabric using the data
+   ipb_from_slaves[3]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[4]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[4]_ipb_rdata on block ipbus_sys_fabric using the data
+   ipb_from_slaves[4]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[5]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[5]_ipb_rdata on block ipbus_sys_fabric using the data
+   ipb_from_slaves[5]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[6]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[6]_ipb_rdata on block ipbus_sys_fabric using the data
+   ipb_from_slaves[6]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[7]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[7]_ipb_rdata on block ipbus_sys_fabric using the data
+   ipb_from_slaves[7]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[0]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[0]_ipb_addr on block ipbus_sys_fabric using the data
+   ipb_to_slaves[0]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[0]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[0]_ipb_wdata on block ipbus_sys_fabric using the data
+   ipb_to_slaves[0]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[1]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[1]_ipb_addr on block ipbus_sys_fabric using the data
+   ipb_to_slaves[1]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[1]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[1]_ipb_wdata on block ipbus_sys_fabric using the data
+   ipb_to_slaves[1]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[2]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[2]_ipb_addr on block ipbus_sys_fabric using the data
+   ipb_to_slaves[2]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[2]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[2]_ipb_wdata on block ipbus_sys_fabric using the data
+   ipb_to_slaves[2]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[3]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[3]_ipb_addr on block ipbus_sys_fabric using the data
+   ipb_to_slaves[3]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[3]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[3]_ipb_wdata on block ipbus_sys_fabric using the data
+   ipb_to_slaves[3]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[4]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[4]_ipb_addr on block ipbus_sys_fabric using the data
+   ipb_to_slaves[4]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[4]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[4]_ipb_wdata on block ipbus_sys_fabric using the data
+   ipb_to_slaves[4]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[5]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[5]_ipb_addr on block ipbus_sys_fabric using the data
+   ipb_to_slaves[5]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[5]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[5]_ipb_wdata on block ipbus_sys_fabric using the data
+   ipb_to_slaves[5]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[6]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[6]_ipb_addr on block ipbus_sys_fabric using the data
+   ipb_to_slaves[6]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[6]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[6]_ipb_wdata on block ipbus_sys_fabric using the data
+   ipb_to_slaves[6]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[7]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[7]_ipb_addr on block ipbus_sys_fabric using the data
+   ipb_to_slaves[7]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[7]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_sys_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[7]_ipb_wdata on block ipbus_sys_fabric using the data
+   ipb_to_slaves[7]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[0]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[0]_ipb_rdata on block ipbus_user_fabric using the data
+   ipb_from_slaves[0]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[1]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[1]_ipb_rdata on block ipbus_user_fabric using the data
+   ipb_from_slaves[1]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[2]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[2]_ipb_rdata on block ipbus_user_fabric using the data
+   ipb_from_slaves[2]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[3]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[3]_ipb_rdata on block ipbus_user_fabric using the data
+   ipb_from_slaves[3]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[4]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[4]_ipb_rdata on block ipbus_user_fabric using the data
+   ipb_from_slaves[4]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[5]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[5]_ipb_rdata on block ipbus_user_fabric using the data
+   ipb_from_slaves[5]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[6]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[6]_ipb_rdata on block ipbus_user_fabric using the data
+   ipb_from_slaves[6]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_from_slaves[7]_ipb_rdata has a
+   mismatched property name ipb_from_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_from_slaves[7]_ipb_rdata on block ipbus_user_fabric using the data
+   ipb_from_slaves[7]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[0]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[0]_ipb_addr on block ipbus_user_fabric using the data
+   ipb_to_slaves[0]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[0]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[0]_ipb_wdata on block ipbus_user_fabric using the data
+   ipb_to_slaves[0]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[1]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[1]_ipb_addr on block ipbus_user_fabric using the data
+   ipb_to_slaves[1]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[1]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[1]_ipb_wdata on block ipbus_user_fabric using the data
+   ipb_to_slaves[1]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[2]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[2]_ipb_addr on block ipbus_user_fabric using the data
+   ipb_to_slaves[2]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[2]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[2]_ipb_wdata on block ipbus_user_fabric using the data
+   ipb_to_slaves[2]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[3]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[3]_ipb_addr on block ipbus_user_fabric using the data
+   ipb_to_slaves[3]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[3]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[3]_ipb_wdata on block ipbus_user_fabric using the data
+   ipb_to_slaves[3]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[4]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[4]_ipb_addr on block ipbus_user_fabric using the data
+   ipb_to_slaves[4]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[4]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[4]_ipb_wdata on block ipbus_user_fabric using the data
+   ipb_to_slaves[4]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[5]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[5]_ipb_addr on block ipbus_user_fabric using the data
+   ipb_to_slaves[5]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[5]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[5]_ipb_wdata on block ipbus_user_fabric using the data
+   ipb_to_slaves[5]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[6]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[6]_ipb_addr on block ipbus_user_fabric using the data
+   ipb_to_slaves[6]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[6]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[6]_ipb_wdata on block ipbus_user_fabric using the data
+   ipb_to_slaves[6]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[7]_ipb_addr has a mismatched
+   property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[7]_ipb_addr on block ipbus_user_fabric using the data
+   ipb_to_slaves[7]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_to_slaves[7]_ipb_wdata has a
+   mismatched property name ipb_to_slaves on block ipbus_user_fabric.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_to_slaves[7]_ipb_wdata on block ipbus_user_fabric using the data
+   ipb_to_slaves[7]_ipb_wdata<31:0>.
+WARNING:NetListWriters:306 - Signal bus n0282<6 : 0> on block ipbus_user_fabric
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:305 - Port bus wb_from_slaves[0]_wb_dat has a mismatched
+   property name wb_from_slaves on block ipbus_to_wb_bridge.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   wb_from_slaves[0]_wb_dat on block ipbus_to_wb_bridge using the data
+   wb_from_slaves[0]_wb_dat<31:0>.
+WARNING:NetListWriters:305 - Port bus wb_to_slaves[0]_wb_adr has a mismatched
+   property name wb_to_slaves on block ipbus_to_wb_bridge.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   wb_to_slaves[0]_wb_adr on block ipbus_to_wb_bridge using the data
+   wb_to_slaves[0]_wb_adr<31:0>.
+WARNING:NetListWriters:305 - Port bus wb_to_slaves[0]_wb_dat has a mismatched
+   property name wb_to_slaves on block ipbus_to_wb_bridge.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   wb_to_slaves[0]_wb_dat on block ipbus_to_wb_bridge using the data
+   wb_to_slaves[0]_wb_dat<31:0>.
+WARNING:NetListWriters:305 - Port bus wb_to_slaves[0]_wb_sel has a mismatched
+   property name wb_to_slaves on block ipbus_to_wb_bridge.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   wb_to_slaves[0]_wb_sel on block ipbus_to_wb_bridge using the data
+   wb_to_slaves[0]_wb_sel<3:0>.
+WARNING:NetListWriters:306 - Signal bus sel_wb_slave<31 : 6> on block
+   ipbus_to_wb_bridge is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_rddata has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_rddata on block system_core using the data
+   user_sys_pcie_dma_i[1]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_regin has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_regin on block system_core using the data
+   user_sys_pcie_dma_i[1]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_param has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_param on block system_core using the data
+   user_sys_pcie_dma_i[1]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_control has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_control on block system_core using the data
+   user_sys_pcie_dma_i[1]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_fifocnt on block system_core using the data
+   user_sys_pcie_dma_i[1]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_rddata has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_rddata on block system_core using the data
+   user_sys_pcie_dma_i[2]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_regin has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_regin on block system_core using the data
+   user_sys_pcie_dma_i[2]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_param has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_param on block system_core using the data
+   user_sys_pcie_dma_i[2]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_control has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_control on block system_core using the data
+   user_sys_pcie_dma_i[2]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_fifocnt on block system_core using the data
+   user_sys_pcie_dma_i[2]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_rddata has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_rddata on block system_core using the data
+   user_sys_pcie_dma_i[3]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_regin has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_regin on block system_core using the data
+   user_sys_pcie_dma_i[3]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_param has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_param on block system_core using the data
+   user_sys_pcie_dma_i[3]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_control has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_control on block system_core using the data
+   user_sys_pcie_dma_i[3]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_fifocnt on block system_core using the data
+   user_sys_pcie_dma_i[3]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_rddata has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_rddata on block system_core using the data
+   user_sys_pcie_dma_i[4]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_regin has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_regin on block system_core using the data
+   user_sys_pcie_dma_i[4]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_param has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_param on block system_core using the data
+   user_sys_pcie_dma_i[4]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_control has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_control on block system_core using the data
+   user_sys_pcie_dma_i[4]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_fifocnt on block system_core using the data
+   user_sys_pcie_dma_i[4]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_rddata has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_rddata on block system_core using the data
+   user_sys_pcie_dma_i[5]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_regin has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_regin on block system_core using the data
+   user_sys_pcie_dma_i[5]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_param has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_param on block system_core using the data
+   user_sys_pcie_dma_i[5]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_control has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_control on block system_core using the data
+   user_sys_pcie_dma_i[5]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_fifocnt on block system_core using the data
+   user_sys_pcie_dma_i[5]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_rddata has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_rddata on block system_core using the data
+   user_sys_pcie_dma_i[6]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_regin has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_regin on block system_core using the data
+   user_sys_pcie_dma_i[6]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_param has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_param on block system_core using the data
+   user_sys_pcie_dma_i[6]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_control has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_control on block system_core using the data
+   user_sys_pcie_dma_i[6]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_fifocnt on block system_core using the data
+   user_sys_pcie_dma_i[6]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_rddata has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_rddata on block system_core using the data
+   user_sys_pcie_dma_i[7]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_regin has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_regin on block system_core using the data
+   user_sys_pcie_dma_i[7]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_param has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_param on block system_core using the data
+   user_sys_pcie_dma_i[7]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_control has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_control on block system_core using the data
+   user_sys_pcie_dma_i[7]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_fifocnt on block system_core using the data
+   user_sys_pcie_dma_i[7]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_wb_miso_i[0]_wb_dat has a mismatched
+   property name user_wb_miso_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_wb_miso_i[0]_wb_dat on block system_core using the data
+   user_wb_miso_i[0]_wb_dat<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[0]_ipb_rdata has a
+   mismatched property name user_ipb_miso_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_miso_i[0]_ipb_rdata on block system_core using the data
+   user_ipb_miso_i[0]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[1]_ipb_rdata has a
+   mismatched property name user_ipb_miso_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_miso_i[1]_ipb_rdata on block system_core using the data
+   user_ipb_miso_i[1]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[2]_ipb_rdata has a
+   mismatched property name user_ipb_miso_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_miso_i[2]_ipb_rdata on block system_core using the data
+   user_ipb_miso_i[2]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[3]_ipb_rdata has a
+   mismatched property name user_ipb_miso_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_miso_i[3]_ipb_rdata on block system_core using the data
+   user_ipb_miso_i[3]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[4]_ipb_rdata has a
+   mismatched property name user_ipb_miso_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_miso_i[4]_ipb_rdata on block system_core using the data
+   user_ipb_miso_i[4]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[5]_ipb_rdata has a
+   mismatched property name user_ipb_miso_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_miso_i[5]_ipb_rdata on block system_core using the data
+   user_ipb_miso_i[5]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[6]_ipb_rdata has a
+   mismatched property name user_ipb_miso_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_miso_i[6]_ipb_rdata on block system_core using the data
+   user_ipb_miso_i[6]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_miso_i[7]_ipb_rdata has a
+   mismatched property name user_ipb_miso_i on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_miso_i[7]_ipb_rdata on block system_core using the data
+   user_ipb_miso_i[7]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_rdaddr on block system_core using the data
+   user_sys_pcie_dma_o[1]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_rdchannel on block system_core using the data
+   user_sys_pcie_dma_o[1]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_wraddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_wraddr on block system_core using the data
+   user_sys_pcie_dma_o[1]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_wrchannel on block system_core using the data
+   user_sys_pcie_dma_o[1]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_wrdata has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_wrdata on block system_core using the data
+   user_sys_pcie_dma_o[1]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_wrbytevalid on block system_core using the data
+   user_sys_pcie_dma_o[1]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_regout has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_regout on block system_core using the data
+   user_sys_pcie_dma_o[1]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_status has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_status on block system_core using the data
+   user_sys_pcie_dma_o[1]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_rdaddr on block system_core using the data
+   user_sys_pcie_dma_o[2]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_rdchannel on block system_core using the data
+   user_sys_pcie_dma_o[2]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_wraddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_wraddr on block system_core using the data
+   user_sys_pcie_dma_o[2]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_wrchannel on block system_core using the data
+   user_sys_pcie_dma_o[2]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_wrdata has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_wrdata on block system_core using the data
+   user_sys_pcie_dma_o[2]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_wrbytevalid on block system_core using the data
+   user_sys_pcie_dma_o[2]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_regout has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_regout on block system_core using the data
+   user_sys_pcie_dma_o[2]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_status has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_status on block system_core using the data
+   user_sys_pcie_dma_o[2]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_rdaddr on block system_core using the data
+   user_sys_pcie_dma_o[3]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_rdchannel on block system_core using the data
+   user_sys_pcie_dma_o[3]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_wraddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_wraddr on block system_core using the data
+   user_sys_pcie_dma_o[3]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_wrchannel on block system_core using the data
+   user_sys_pcie_dma_o[3]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_wrdata has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_wrdata on block system_core using the data
+   user_sys_pcie_dma_o[3]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_wrbytevalid on block system_core using the data
+   user_sys_pcie_dma_o[3]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_regout has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_regout on block system_core using the data
+   user_sys_pcie_dma_o[3]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_status has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_status on block system_core using the data
+   user_sys_pcie_dma_o[3]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_rdaddr on block system_core using the data
+   user_sys_pcie_dma_o[4]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_rdchannel on block system_core using the data
+   user_sys_pcie_dma_o[4]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_wraddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_wraddr on block system_core using the data
+   user_sys_pcie_dma_o[4]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_wrchannel on block system_core using the data
+   user_sys_pcie_dma_o[4]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_wrdata has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_wrdata on block system_core using the data
+   user_sys_pcie_dma_o[4]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_wrbytevalid on block system_core using the data
+   user_sys_pcie_dma_o[4]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_regout has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_regout on block system_core using the data
+   user_sys_pcie_dma_o[4]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_status has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_status on block system_core using the data
+   user_sys_pcie_dma_o[4]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_rdaddr on block system_core using the data
+   user_sys_pcie_dma_o[5]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_rdchannel on block system_core using the data
+   user_sys_pcie_dma_o[5]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_wraddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_wraddr on block system_core using the data
+   user_sys_pcie_dma_o[5]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_wrchannel on block system_core using the data
+   user_sys_pcie_dma_o[5]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_wrdata has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_wrdata on block system_core using the data
+   user_sys_pcie_dma_o[5]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_wrbytevalid on block system_core using the data
+   user_sys_pcie_dma_o[5]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_regout has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_regout on block system_core using the data
+   user_sys_pcie_dma_o[5]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_status has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_status on block system_core using the data
+   user_sys_pcie_dma_o[5]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_rdaddr on block system_core using the data
+   user_sys_pcie_dma_o[6]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_rdchannel on block system_core using the data
+   user_sys_pcie_dma_o[6]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_wraddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_wraddr on block system_core using the data
+   user_sys_pcie_dma_o[6]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_wrchannel on block system_core using the data
+   user_sys_pcie_dma_o[6]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_wrdata has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_wrdata on block system_core using the data
+   user_sys_pcie_dma_o[6]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_wrbytevalid on block system_core using the data
+   user_sys_pcie_dma_o[6]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_regout has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_regout on block system_core using the data
+   user_sys_pcie_dma_o[6]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_status has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_status on block system_core using the data
+   user_sys_pcie_dma_o[6]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_rdaddr on block system_core using the data
+   user_sys_pcie_dma_o[7]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_rdchannel on block system_core using the data
+   user_sys_pcie_dma_o[7]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_wraddr has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_wraddr on block system_core using the data
+   user_sys_pcie_dma_o[7]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_wrchannel on block system_core using the data
+   user_sys_pcie_dma_o[7]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_wrdata has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_wrdata on block system_core using the data
+   user_sys_pcie_dma_o[7]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_wrbytevalid on block system_core using the data
+   user_sys_pcie_dma_o[7]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_regout has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_regout on block system_core using the data
+   user_sys_pcie_dma_o[7]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_status has a
+   mismatched property name user_sys_pcie_dma_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_status on block system_core using the data
+   user_sys_pcie_dma_o[7]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_wb_mosi_o[0]_wb_adr has a mismatched
+   property name user_wb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_wb_mosi_o[0]_wb_adr on block system_core using the data
+   user_wb_mosi_o[0]_wb_adr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_wb_mosi_o[0]_wb_dat has a mismatched
+   property name user_wb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_wb_mosi_o[0]_wb_dat on block system_core using the data
+   user_wb_mosi_o[0]_wb_dat<31:0>.
+WARNING:NetListWriters:305 - Port bus user_wb_mosi_o[0]_wb_sel has a mismatched
+   property name user_wb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_wb_mosi_o[0]_wb_sel on block system_core using the data
+   user_wb_mosi_o[0]_wb_sel<3:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[0]_ipb_addr has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[0]_ipb_addr on block system_core using the data
+   user_ipb_mosi_o[0]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[0]_ipb_wdata has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[0]_ipb_wdata on block system_core using the data
+   user_ipb_mosi_o[0]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[1]_ipb_addr has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[1]_ipb_addr on block system_core using the data
+   user_ipb_mosi_o[1]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[1]_ipb_wdata has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[1]_ipb_wdata on block system_core using the data
+   user_ipb_mosi_o[1]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[2]_ipb_addr has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[2]_ipb_addr on block system_core using the data
+   user_ipb_mosi_o[2]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[2]_ipb_wdata has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[2]_ipb_wdata on block system_core using the data
+   user_ipb_mosi_o[2]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[3]_ipb_addr has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[3]_ipb_addr on block system_core using the data
+   user_ipb_mosi_o[3]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[3]_ipb_wdata has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[3]_ipb_wdata on block system_core using the data
+   user_ipb_mosi_o[3]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[4]_ipb_addr has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[4]_ipb_addr on block system_core using the data
+   user_ipb_mosi_o[4]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[4]_ipb_wdata has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[4]_ipb_wdata on block system_core using the data
+   user_ipb_mosi_o[4]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[5]_ipb_addr has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[5]_ipb_addr on block system_core using the data
+   user_ipb_mosi_o[5]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[5]_ipb_wdata has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[5]_ipb_wdata on block system_core using the data
+   user_ipb_mosi_o[5]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[6]_ipb_addr has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[6]_ipb_addr on block system_core using the data
+   user_ipb_mosi_o[6]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[6]_ipb_wdata has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[6]_ipb_wdata on block system_core using the data
+   user_ipb_mosi_o[6]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[7]_ipb_addr has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[7]_ipb_addr on block system_core using the data
+   user_ipb_mosi_o[7]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_ipb_mosi_o[7]_ipb_wdata has a
+   mismatched property name user_ipb_mosi_o on block system_core.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_ipb_mosi_o[7]_ipb_wdata on block system_core using the data
+   user_ipb_mosi_o[7]_ipb_wdata<31:0>.
+WARNING:NetListWriters:306 - Signal bus reg_status_sram[17 : 0] on block
+   system_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus mac_rx_data[7 : 0] on block system_core
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus mac_clk[2 : 0] on block system_core is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus mac_tx_ready[2 : 0] on block system_core
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus mac_rx_valid[2 : 0] on block system_core
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus mac_rx_last[2 : 0] on block system_core
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus mac_rx_error[2 : 0] on block system_core
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus mac_tx_data[7 : 0] on block system_core
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus mac_tx_valid[2 : 0] on block system_core
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus mac_tx_last[2 : 0] on block system_core
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus mac_tx_error[2 : 0] on block system_core
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ipb_req[2 : 0] on block system_core is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus regs_from_ipbus[31 : 0] on block
+   system_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus rst_macclk[2 : 0] on block system_core
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ipb_grant[2 : 0] on block system_core is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ipb_data<26 : 0> on block ipb_vfat2_NO2
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ipb_data<26 : 0> on block ipb_vfat2_NO1
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ipb_data<26 : 0> on block ipb_vfat2 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_rdaddr on block user_logic using the data
+   user_sys_pcie_dma_i[1]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_rdchannel on block user_logic using the data
+   user_sys_pcie_dma_i[1]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_wraddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_wraddr on block user_logic using the data
+   user_sys_pcie_dma_i[1]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_wrchannel on block user_logic using the data
+   user_sys_pcie_dma_i[1]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_wrdata has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_wrdata on block user_logic using the data
+   user_sys_pcie_dma_i[1]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_wrbytevalid on block user_logic using the data
+   user_sys_pcie_dma_i[1]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_regout has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_regout on block user_logic using the data
+   user_sys_pcie_dma_i[1]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[1]_status has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[1]_status on block user_logic using the data
+   user_sys_pcie_dma_i[1]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_rdaddr on block user_logic using the data
+   user_sys_pcie_dma_i[2]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_rdchannel on block user_logic using the data
+   user_sys_pcie_dma_i[2]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_wraddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_wraddr on block user_logic using the data
+   user_sys_pcie_dma_i[2]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_wrchannel on block user_logic using the data
+   user_sys_pcie_dma_i[2]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_wrdata has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_wrdata on block user_logic using the data
+   user_sys_pcie_dma_i[2]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_wrbytevalid on block user_logic using the data
+   user_sys_pcie_dma_i[2]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_regout has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_regout on block user_logic using the data
+   user_sys_pcie_dma_i[2]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[2]_status has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[2]_status on block user_logic using the data
+   user_sys_pcie_dma_i[2]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_rdaddr on block user_logic using the data
+   user_sys_pcie_dma_i[3]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_rdchannel on block user_logic using the data
+   user_sys_pcie_dma_i[3]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_wraddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_wraddr on block user_logic using the data
+   user_sys_pcie_dma_i[3]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_wrchannel on block user_logic using the data
+   user_sys_pcie_dma_i[3]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_wrdata has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_wrdata on block user_logic using the data
+   user_sys_pcie_dma_i[3]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_wrbytevalid on block user_logic using the data
+   user_sys_pcie_dma_i[3]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_regout has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_regout on block user_logic using the data
+   user_sys_pcie_dma_i[3]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[3]_status has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[3]_status on block user_logic using the data
+   user_sys_pcie_dma_i[3]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_rdaddr on block user_logic using the data
+   user_sys_pcie_dma_i[4]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_rdchannel on block user_logic using the data
+   user_sys_pcie_dma_i[4]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_wraddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_wraddr on block user_logic using the data
+   user_sys_pcie_dma_i[4]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_wrchannel on block user_logic using the data
+   user_sys_pcie_dma_i[4]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_wrdata has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_wrdata on block user_logic using the data
+   user_sys_pcie_dma_i[4]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_wrbytevalid on block user_logic using the data
+   user_sys_pcie_dma_i[4]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_regout has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_regout on block user_logic using the data
+   user_sys_pcie_dma_i[4]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[4]_status has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[4]_status on block user_logic using the data
+   user_sys_pcie_dma_i[4]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_rdaddr on block user_logic using the data
+   user_sys_pcie_dma_i[5]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_rdchannel on block user_logic using the data
+   user_sys_pcie_dma_i[5]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_wraddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_wraddr on block user_logic using the data
+   user_sys_pcie_dma_i[5]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_wrchannel on block user_logic using the data
+   user_sys_pcie_dma_i[5]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_wrdata has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_wrdata on block user_logic using the data
+   user_sys_pcie_dma_i[5]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_wrbytevalid on block user_logic using the data
+   user_sys_pcie_dma_i[5]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_regout has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_regout on block user_logic using the data
+   user_sys_pcie_dma_i[5]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[5]_status has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[5]_status on block user_logic using the data
+   user_sys_pcie_dma_i[5]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_rdaddr on block user_logic using the data
+   user_sys_pcie_dma_i[6]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_rdchannel on block user_logic using the data
+   user_sys_pcie_dma_i[6]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_wraddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_wraddr on block user_logic using the data
+   user_sys_pcie_dma_i[6]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_wrchannel on block user_logic using the data
+   user_sys_pcie_dma_i[6]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_wrdata has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_wrdata on block user_logic using the data
+   user_sys_pcie_dma_i[6]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_wrbytevalid on block user_logic using the data
+   user_sys_pcie_dma_i[6]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_regout has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_regout on block user_logic using the data
+   user_sys_pcie_dma_i[6]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[6]_status has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[6]_status on block user_logic using the data
+   user_sys_pcie_dma_i[6]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_rdaddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_rdaddr on block user_logic using the data
+   user_sys_pcie_dma_i[7]_rdaddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_rdchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_rdchannel on block user_logic using the data
+   user_sys_pcie_dma_i[7]_rdchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_wraddr has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_wraddr on block user_logic using the data
+   user_sys_pcie_dma_i[7]_wraddr<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_wrchannel has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_wrchannel on block user_logic using the data
+   user_sys_pcie_dma_i[7]_wrchannel<15:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_wrdata has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_wrdata on block user_logic using the data
+   user_sys_pcie_dma_i[7]_wrdata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_wrbytevalid has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_wrbytevalid on block user_logic using the data
+   user_sys_pcie_dma_i[7]_wrbytevalid<7:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_regout has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_regout on block user_logic using the data
+   user_sys_pcie_dma_i[7]_regout<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_i[7]_status has a
+   mismatched property name user_sys_pcie_dma_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_i[7]_status on block user_logic using the data
+   user_sys_pcie_dma_i[7]_status<3:0>.
+WARNING:NetListWriters:305 - Port bus wb_mosi_i[0]_wb_adr has a mismatched
+   property name wb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   wb_mosi_i[0]_wb_adr on block user_logic using the data
+   wb_mosi_i[0]_wb_adr<31:0>.
+WARNING:NetListWriters:305 - Port bus wb_mosi_i[0]_wb_dat has a mismatched
+   property name wb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   wb_mosi_i[0]_wb_dat on block user_logic using the data
+   wb_mosi_i[0]_wb_dat<31:0>.
+WARNING:NetListWriters:305 - Port bus wb_mosi_i[0]_wb_sel has a mismatched
+   property name wb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   wb_mosi_i[0]_wb_sel on block user_logic using the data
+   wb_mosi_i[0]_wb_sel<3:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[0]_ipb_addr has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[0]_ipb_addr on block user_logic using the data
+   ipb_mosi_i[0]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[0]_ipb_wdata has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[0]_ipb_wdata on block user_logic using the data
+   ipb_mosi_i[0]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[1]_ipb_addr has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[1]_ipb_addr on block user_logic using the data
+   ipb_mosi_i[1]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[1]_ipb_wdata has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[1]_ipb_wdata on block user_logic using the data
+   ipb_mosi_i[1]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[2]_ipb_addr has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[2]_ipb_addr on block user_logic using the data
+   ipb_mosi_i[2]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[2]_ipb_wdata has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[2]_ipb_wdata on block user_logic using the data
+   ipb_mosi_i[2]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[3]_ipb_addr has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[3]_ipb_addr on block user_logic using the data
+   ipb_mosi_i[3]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[3]_ipb_wdata has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[3]_ipb_wdata on block user_logic using the data
+   ipb_mosi_i[3]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[4]_ipb_addr has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[4]_ipb_addr on block user_logic using the data
+   ipb_mosi_i[4]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[4]_ipb_wdata has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[4]_ipb_wdata on block user_logic using the data
+   ipb_mosi_i[4]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[5]_ipb_addr has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[5]_ipb_addr on block user_logic using the data
+   ipb_mosi_i[5]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[5]_ipb_wdata has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[5]_ipb_wdata on block user_logic using the data
+   ipb_mosi_i[5]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[6]_ipb_addr has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[6]_ipb_addr on block user_logic using the data
+   ipb_mosi_i[6]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[6]_ipb_wdata has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[6]_ipb_wdata on block user_logic using the data
+   ipb_mosi_i[6]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[7]_ipb_addr has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[7]_ipb_addr on block user_logic using the data
+   ipb_mosi_i[7]_ipb_addr<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_mosi_i[7]_ipb_wdata has a mismatched
+   property name ipb_mosi_i on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_mosi_i[7]_ipb_wdata on block user_logic using the data
+   ipb_mosi_i[7]_ipb_wdata<31:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_rddata has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_rddata on block user_logic using the data
+   user_sys_pcie_dma_o[1]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_regin has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_regin on block user_logic using the data
+   user_sys_pcie_dma_o[1]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_param has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_param on block user_logic using the data
+   user_sys_pcie_dma_o[1]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_control has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_control on block user_logic using the data
+   user_sys_pcie_dma_o[1]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[1]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[1]_fifocnt on block user_logic using the data
+   user_sys_pcie_dma_o[1]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_rddata has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_rddata on block user_logic using the data
+   user_sys_pcie_dma_o[2]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_regin has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_regin on block user_logic using the data
+   user_sys_pcie_dma_o[2]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_param has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_param on block user_logic using the data
+   user_sys_pcie_dma_o[2]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_control has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_control on block user_logic using the data
+   user_sys_pcie_dma_o[2]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[2]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[2]_fifocnt on block user_logic using the data
+   user_sys_pcie_dma_o[2]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_rddata has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_rddata on block user_logic using the data
+   user_sys_pcie_dma_o[3]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_regin has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_regin on block user_logic using the data
+   user_sys_pcie_dma_o[3]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_param has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_param on block user_logic using the data
+   user_sys_pcie_dma_o[3]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_control has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_control on block user_logic using the data
+   user_sys_pcie_dma_o[3]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[3]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[3]_fifocnt on block user_logic using the data
+   user_sys_pcie_dma_o[3]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_rddata has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_rddata on block user_logic using the data
+   user_sys_pcie_dma_o[4]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_regin has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_regin on block user_logic using the data
+   user_sys_pcie_dma_o[4]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_param has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_param on block user_logic using the data
+   user_sys_pcie_dma_o[4]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_control has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_control on block user_logic using the data
+   user_sys_pcie_dma_o[4]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[4]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[4]_fifocnt on block user_logic using the data
+   user_sys_pcie_dma_o[4]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_rddata has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_rddata on block user_logic using the data
+   user_sys_pcie_dma_o[5]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_regin has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_regin on block user_logic using the data
+   user_sys_pcie_dma_o[5]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_param has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_param on block user_logic using the data
+   user_sys_pcie_dma_o[5]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_control has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_control on block user_logic using the data
+   user_sys_pcie_dma_o[5]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[5]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[5]_fifocnt on block user_logic using the data
+   user_sys_pcie_dma_o[5]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_rddata has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_rddata on block user_logic using the data
+   user_sys_pcie_dma_o[6]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_regin has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_regin on block user_logic using the data
+   user_sys_pcie_dma_o[6]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_param has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_param on block user_logic using the data
+   user_sys_pcie_dma_o[6]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_control has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_control on block user_logic using the data
+   user_sys_pcie_dma_o[6]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[6]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[6]_fifocnt on block user_logic using the data
+   user_sys_pcie_dma_o[6]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_rddata has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_rddata on block user_logic using the data
+   user_sys_pcie_dma_o[7]_rddata<63:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_regin has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_regin on block user_logic using the data
+   user_sys_pcie_dma_o[7]_regin<127:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_param has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_param on block user_logic using the data
+   user_sys_pcie_dma_o[7]_param<23:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_control has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_control on block user_logic using the data
+   user_sys_pcie_dma_o[7]_control<5:0>.
+WARNING:NetListWriters:305 - Port bus user_sys_pcie_dma_o[7]_fifocnt has a
+   mismatched property name user_sys_pcie_dma_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   user_sys_pcie_dma_o[7]_fifocnt on block user_logic using the data
+   user_sys_pcie_dma_o[7]_fifocnt<12:0>.
+WARNING:NetListWriters:305 - Port bus wb_miso_o[0]_wb_dat has a mismatched
+   property name wb_miso_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   wb_miso_o[0]_wb_dat on block user_logic using the data
+   wb_miso_o[0]_wb_dat<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_miso_o[0]_ipb_rdata has a mismatched
+   property name ipb_miso_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_miso_o[0]_ipb_rdata on block user_logic using the data
+   ipb_miso_o[0]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_miso_o[1]_ipb_rdata has a mismatched
+   property name ipb_miso_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_miso_o[1]_ipb_rdata on block user_logic using the data
+   ipb_miso_o[1]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_miso_o[2]_ipb_rdata has a mismatched
+   property name ipb_miso_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_miso_o[2]_ipb_rdata on block user_logic using the data
+   ipb_miso_o[2]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_miso_o[3]_ipb_rdata has a mismatched
+   property name ipb_miso_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_miso_o[3]_ipb_rdata on block user_logic using the data
+   ipb_miso_o[3]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_miso_o[4]_ipb_rdata has a mismatched
+   property name ipb_miso_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_miso_o[4]_ipb_rdata on block user_logic using the data
+   ipb_miso_o[4]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_miso_o[5]_ipb_rdata has a mismatched
+   property name ipb_miso_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_miso_o[5]_ipb_rdata on block user_logic using the data
+   ipb_miso_o[5]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_miso_o[6]_ipb_rdata has a mismatched
+   property name ipb_miso_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_miso_o[6]_ipb_rdata on block user_logic using the data
+   ipb_miso_o[6]_ipb_rdata<31:0>.
+WARNING:NetListWriters:305 - Port bus ipb_miso_o[7]_ipb_rdata has a mismatched
+   property name ipb_miso_o on block user_logic.
+WARNING:NetListWriters:303 - Unable to preserve the ordering for port bus
+   ipb_miso_o[7]_ipb_rdata on block user_logic using the data
+   ipb_miso_o[7]_ipb_rdata<31:0>.
+  finished :Prep
+Writing EDIF netlist file glib_top.edif ...
+ngc2edif: Total memory usage is 137188 kilobytes
+
+Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/glib_top_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/glib_top_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design v6_emac_v2_3_basex.ngc ...
+WARNING:NetListWriters:298 - No output is written to v6_emac_v2_3_basex.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file v6_emac_v2_3_basex.edif ...
+ngc2edif: Total memory usage is 75492 kilobytes
+
+Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/ethernet/ipcore_dir/basex/v6_emac_v2_3_basex.ngc' for (cell view 'v6_emac_v2_3_basex', library 'glib_top_lib', file 'glib_top.ngc')
+Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/v6_emac_v2_3_basex_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/v6_emac_v2_3_basex_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design v6_emac_v2_3_sgmii.ngc ...
+WARNING:NetListWriters:298 - No output is written to v6_emac_v2_3_sgmii.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file v6_emac_v2_3_sgmii.edif ...
+ngc2edif: Total memory usage is 75492 kilobytes
+
+Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/ethernet/ipcore_dir/sgmii/v6_emac_v2_3_sgmii.ngc' for (cell view 'v6_emac_v2_3_sgmii', library 'glib_top_lib', file 'glib_top.ngc')
+Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/v6_emac_v2_3_sgmii_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/v6_emac_v2_3_sgmii_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ttclk_distributed_dpram.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   ttclk_distributed_dpram.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ttclk_distributed_dpram.edif ...
+ngc2edif: Total memory usage is 74468 kilobytes
+
+Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ngc' for (cell view 'ttclk_distributed_dpram', library 'glib_top_lib', file 'glib_top.ngc')
+Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/ttclk_distributed_dpram_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/ttclk_distributed_dpram_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design buffer_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to buffer_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file buffer_fifo.edif ...
+ngc2edif: Total memory usage is 75492 kilobytes
+
+Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ngc' for (cell view 'buffer_fifo', library 'glib_top_lib', file 'glib_top.ngc')
+Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/buffer_fifo_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/buffer_fifo_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design chipscope_vio.ngc ...
+WARNING:NetListWriters:298 - No output is written to chipscope_vio.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file chipscope_vio.edif ...
+ngc2edif: Total memory usage is 76196 kilobytes
+
+Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_vio.ngc' for (cell view 'chipscope_vio', library 'glib_top_lib', file 'glib_top.ngc')
+Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/chipscope_vio_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/chipscope_vio_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design chipscope_ila.ngc ...
+WARNING:NetListWriters:298 - No output is written to chipscope_ila.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/iDOUT_dly<2 : 0> on block chipscope_ila is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/iDOUT_dly<4 : 0> on block chipscope_ila is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file chipscope_ila.edif ...
+ngc2edif: Total memory usage is 79268 kilobytes
+
+Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_ila.ngc' for (cell view 'chipscope_ila', library 'glib_top_lib', file 'glib_top.ngc')
+Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/chipscope_ila_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/chipscope_ila_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design chipscope_icon.ngc ...
+WARNING:NetListWriters:298 - No output is written to chipscope_icon.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus U0/U_ICON/iCORE_ID_SEL<15 : 0> on block
+   chipscope_icon is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file chipscope_icon.edif ...
+ngc2edif: Total memory usage is 74916 kilobytes
+
+Reading core file 'C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_icon.ngc' for (cell view 'chipscope_icon', library 'glib_top_lib', file 'glib_top.ngc')
+Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/chipscope_icon_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_4/ipbus_slave.data/cache/chipscope_icon_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 102 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx130t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx130t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/virtex6/ClockPlacerRules.xml
+Loading clock capable ios from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/virtex6/ClockCapableIOBs.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx130t/ff1156/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/virtex6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/virtex6/drc.xml
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ncf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ncf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ncf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ncf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ncf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/buffer_fifo.ncf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_icon.ncf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_icon.ncf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_ila.ncf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_ila.ncf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_vio.ncf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/ipcore_dir/chipscope_vio.ncf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ncf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/ethernet/ipcore_dir/basex/v6_emac_v2_3_basex.ncf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/ethernet/ipcore_dir/basex/v6_emac_v2_3_basex.ncf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/planahead.ucf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/planahead.ucf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system.ucf]
+INFO: [Designutils 20-22] PART constraint ignored, using PlanAhead selected device [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system.ucf:6]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system.ucf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system_clk.ucf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/system/sys/system_clk.ucf]
+Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/gtx.ucf]
+Finished Parsing UCF File [C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/src/gtx.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 102 instances were transformed.
+  IOBUF => IOBUF (OBUFT, IBUF): 74 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 20 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 8 instances
+
+Phase 0 | Netlist Checksum: fafa9e0c
+link_design: Time (s): elapsed = 00:01:22 . Memory (MB): peak = 756.457 ; gain = 358.727
+resize_pblock pblock_ipb_priority_inst -from SLICE_X94Y15:SLICE_X97Y19 -to SLICE_X92Y15:SLICE_X95Y19 -locs keep_all
+resize_pblock pblock_ipb_vfat2_1_inst -add SLICE_X96Y15:SLICE_X101Y19 -remove SLICE_X98Y15:SLICE_X101Y19 -locs keep_all
+resize_pblock pblock_ipb_vfat2_2_inst -from SLICE_X98Y25:SLICE_X101Y29 -to SLICE_X96Y25:SLICE_X99Y29 -locs keep_all
+resize_pblock pblock_ipb_vfat2_2_inst -add SLICE_X96Y25:SLICE_X101Y29 -remove SLICE_X96Y25:SLICE_X99Y29 -locs keep_all
+resize_pblock pblock_ipb_vfat2_0_inst -add SLICE_X96Y5:SLICE_X101Y9 -remove SLICE_X98Y5:SLICE_X101Y9 -locs keep_all
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave\planAhead_pid3936.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue Oct 21 10:17:06 2014...
+INFO: [Common 17-83] Releasing license: PlanAhead

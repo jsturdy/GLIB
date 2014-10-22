@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<ChipScope Version="1" Minor="3">
+	<Core Id="chipscope_ila_inst" Type="chipscope_ila_v1" ParentInst="usr">
+		<CoreStatus isImpl="1" isFromHDL="1"/>
+		<CoreParams Id="DebugCoreParams">
+			<Option Id="EnableStorageQualification">1</Option>
+			<Option Id="MaxSequenceLevels">1</Option>
+			<Option Id="SampleDataDepth">1024</Option>
+			<Option Id="SampleOn">0</Option>
+			<Option Id="UseRpms">0</Option>
+		</CoreParams>
+		<Port Type="CLK" Index="0" Width="1">
+			<PortParams Id="DebugPortParams">
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="0" Width="1">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="1" Width="1">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="2" Width="1">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="3" Width="32">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="4" Width="16">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="5" Width="2">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="6" Width="16">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="7" Width="2">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="8" Width="1">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="9" Width="32">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="10" Width="32">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="11" Width="1">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="12" Width="1">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+		<Port Type="TRIG" Index="13" Width="32">
+			<PortParams Id="DebugPortParams">
+				<Option Id="CounterWidth">0</Option>
+				<Option Id="ExcludeFromDataStorage">0</Option>
+				<Option Id="MatchType">1</Option>
+				<Option Id="MatchUnits">1</Option>
+			</PortParams>
+		</Port>
+	</Core>
+	<Core Id="chipscope_vio_inst" Type="chipscope_vio_v1" ParentInst="usr">
+		<CoreStatus isImpl="1" isFromHDL="1"/>
+		<CoreParams Id="DebugCoreParams">
+		</CoreParams>
+		<Port Type="CLK" Index="0" Width="1">
+			<PortParams Id="DebugPortParams">
+			</PortParams>
+		</Port>
+		<Port Type="ASYNC_OUT" Index="0" Width="48">
+			<PortParams Id="DebugPortParams">
+			</PortParams>
+		</Port>
+		<Port Type="SYNC_OUT" Index="0" Width="1">
+			<PortParams Id="DebugPortParams">
+			</PortParams>
+		</Port>
+	</Core>
+	<Core Id="chipscope_icon_inst" Type="chipscope_icon_v1" ParentInst="usr">
+		<CoreStatus isImpl="1" isFromHDL="0"/>
+		<CoreParams Id="DebugCoreParams">
+			<Option Id="UserScanChain">0</Option>
+		</CoreParams>
+	</Core>
+	<UnassignedNets>
+	</UnassignedNets>
+</ChipScope>
+

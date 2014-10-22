@@ -13,8 +13,24 @@ INST "usr/link_tracking_0_inst/gtx_tx_mux_inst" AREA_GROUP = "pblock_gtx_tx_mux_
 AREA_GROUP "pblock_gtx_tx_mux_0_inst" RANGE=SLICE_X102Y5:SLICE_X105Y9;
 
 INST "usr/link_tracking_2_inst/ipb_vfat2_inst" AREA_GROUP = "pblock_ipb_vfat2_2_inst";
-AREA_GROUP "pblock_ipb_vfat2_2_inst" RANGE=SLICE_X98Y23:SLICE_X101Y29;
+AREA_GROUP "pblock_ipb_vfat2_2_inst" RANGE=SLICE_X96Y25:SLICE_X101Y29;
 INST "usr/link_tracking_1_inst/ipb_vfat2_inst" AREA_GROUP = "pblock_ipb_vfat2_1_inst";
-AREA_GROUP "pblock_ipb_vfat2_1_inst" RANGE=SLICE_X98Y13:SLICE_X101Y19;
+AREA_GROUP "pblock_ipb_vfat2_1_inst" RANGE=SLICE_X96Y15:SLICE_X101Y19;
 INST "usr/link_tracking_0_inst/ipb_vfat2_inst" AREA_GROUP = "pblock_ipb_vfat2_0_inst";
-AREA_GROUP "pblock_ipb_vfat2_0_inst" RANGE=SLICE_X98Y3:SLICE_X101Y9;
+AREA_GROUP "pblock_ipb_vfat2_0_inst" RANGE=SLICE_X96Y5:SLICE_X101Y9;
+
+
+INST "usr/ipb_priority_inst" AREA_GROUP = "pblock_ipb_priority_inst";
+AREA_GROUP "pblock_ipb_priority_inst" RANGE=SLICE_X92Y15:SLICE_X95Y19;
+INST "usr/link_tracking_0_inst/ipb_tracking_inst" AREA_GROUP = "pblock_ipb_tracking_0_inst";
+AREA_GROUP "pblock_ipb_tracking_0_inst" RANGE=SLICE_X92Y0:SLICE_X101Y4;
+AREA_GROUP "pblock_ipb_tracking_0_inst" RANGE=RAMB18_X5Y0:RAMB18_X5Y1;
+AREA_GROUP "pblock_ipb_tracking_0_inst" RANGE=RAMB36_X5Y0:RAMB36_X5Y0;
+INST "usr/link_tracking_1_inst/ipb_tracking_inst" AREA_GROUP = "pblock_ipb_tracking_1_inst";
+AREA_GROUP "pblock_ipb_tracking_1_inst" RANGE=SLICE_X92Y10:SLICE_X101Y14;
+AREA_GROUP "pblock_ipb_tracking_1_inst" RANGE=RAMB18_X5Y4:RAMB18_X5Y5;
+AREA_GROUP "pblock_ipb_tracking_1_inst" RANGE=RAMB36_X5Y2:RAMB36_X5Y2;
+INST "usr/link_tracking_2_inst/ipb_tracking_inst" AREA_GROUP = "pblock_ipb_tracking_2_inst";
+AREA_GROUP "pblock_ipb_tracking_2_inst" RANGE=SLICE_X92Y20:SLICE_X101Y24;
+AREA_GROUP "pblock_ipb_tracking_2_inst" RANGE=RAMB18_X5Y8:RAMB18_X5Y9;
+AREA_GROUP "pblock_ipb_tracking_2_inst" RANGE=RAMB36_X5Y4:RAMB36_X5Y4;

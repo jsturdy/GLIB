@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue Oct 21 09:35:57 2014
+# Process ID: 656
+# Log file: C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/planAhead_run_3/planAhead.log
+# Journal file: C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/pa.fromNetlist.tcl
+startgroup
+create_pblock pblock_ipb_priority_inst
+resize_pblock pblock_ipb_priority_inst -add SLICE_X96Y13:SLICE_X97Y19
+add_cells_to_pblock pblock_ipb_priority_inst [get_cells [list usr/ipb_priority_inst]] -clear_locs
+endgroup
+resize_pblock pblock_ipb_vfat2_1_inst -add SLICE_X98Y15:SLICE_X101Y19 -remove SLICE_X98Y13:SLICE_X101Y19 -locs keep_all
+resize_pblock pblock_ipb_vfat2_2_inst -add SLICE_X98Y25:SLICE_X101Y29 -remove SLICE_X98Y23:SLICE_X101Y29 -locs keep_all
+resize_pblock pblock_ipb_vfat2_0_inst -add SLICE_X98Y5:SLICE_X101Y9 -remove SLICE_X98Y3:SLICE_X101Y9 -locs keep_all
+resize_pblock pblock_ipb_priority_inst -add SLICE_X96Y15:SLICE_X97Y19 -remove SLICE_X96Y13:SLICE_X97Y19 -locs keep_all
+resize_pblock pblock_ipb_priority_inst -add SLICE_X94Y15:SLICE_X97Y19 -remove SLICE_X96Y15:SLICE_X97Y19 -locs keep_all
+save_constraints
+startgroup
+create_pblock pblock_ipb_tracking_0_inst
+resize_pblock pblock_ipb_tracking_0_inst -add {SLICE_X92Y0:SLICE_X101Y4 RAMB18_X5Y0:RAMB18_X5Y1 RAMB36_X5Y0:RAMB36_X5Y0}
+add_cells_to_pblock pblock_ipb_tracking_0_inst [get_cells [list usr/link_tracking_0_inst/ipb_tracking_inst]] -clear_locs
+endgroup
+startgroup
+create_pblock pblock_ipb_tracking_1_inst
+resize_pblock pblock_ipb_tracking_1_inst -add {SLICE_X92Y10:SLICE_X101Y14 RAMB18_X5Y4:RAMB18_X5Y5 RAMB36_X5Y2:RAMB36_X5Y2}
+add_cells_to_pblock pblock_ipb_tracking_1_inst [get_cells [list usr/link_tracking_1_inst/ipb_tracking_inst]] -clear_locs
+endgroup
+startgroup
+create_pblock pblock_ipb_tracking_2_inst
+resize_pblock pblock_ipb_tracking_2_inst -add {SLICE_X92Y20:SLICE_X101Y24 RAMB18_X5Y8:RAMB18_X5Y9 RAMB36_X5Y4:RAMB36_X5Y4}
+add_cells_to_pblock pblock_ipb_tracking_2_inst [get_cells [list usr/link_tracking_2_inst/ipb_tracking_inst]] -clear_locs
+endgroup
+save_constraints

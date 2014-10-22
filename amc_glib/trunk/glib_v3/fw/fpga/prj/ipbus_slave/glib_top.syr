@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.56 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.58 secs
  
 --> Reading design: glib_top.prj
 
@@ -117,6 +117,9 @@ Parsing architecture <chipscope_ila_a> of entity <chipscope_ila>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\ipcore_dir\chipscope_vio.vhd" into library work
 Parsing entity <chipscope_vio>.
 Parsing architecture <chipscope_vio_a> of entity <chipscope_vio>.
+Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\ipcore_dir\buffer_fifo.vhd" into library work
+Parsing entity <buffer_fifo>.
+Parsing architecture <buffer_fifo_a> of entity <buffer_fifo>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\src\system\pcie\sys_pcie\pcie_core\pcie_bram_v6.vhd" into library work
 Parsing entity <pcie_bram_v6>.
 Parsing architecture <v6_pcie> of entity <pcie_bram_v6>.
@@ -422,12 +425,18 @@ Parsing package body <user_addr_decode>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_vfat2.vhd" into library work
 Parsing entity <ipb_vfat2>.
 Parsing architecture <rtl> of entity <ipb_vfat2>.
+Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_tracking.vhd" into library work
+Parsing entity <ipb_tracking>.
+Parsing architecture <rtl> of entity <ipb_tracking>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx_tx_mux.vhd" into library work
 Parsing entity <gtx_tx_mux>.
 Parsing architecture <Behavioral> of entity <gtx_tx_mux>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx_rx_mux.vhd" into library work
 Parsing entity <gtx_rx_mux>.
 Parsing architecture <Behavioral> of entity <gtx_rx_mux>.
+Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\clock_bridge_simple.vhd" into library work
+Parsing entity <clock_bridge_simple>.
+Parsing architecture <behavioral> of entity <clock_bridge_simple>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\ipcore_dir\high_speed_gtx.vhd" into library work
 Parsing entity <high_speed_gtx>.
 Parsing architecture <RTL> of entity <high_speed_gtx>.
@@ -518,6 +527,9 @@ Parsing architecture <Behavioral> of entity <link_tracking>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_test.vhd" into library work
 Parsing entity <ipb_test>.
 Parsing architecture <rtl> of entity <ipb_test>.
+Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_priority.vhd" into library work
+Parsing entity <ipb_priority>.
+Parsing architecture <rtl> of entity <ipb_priority>.
 Parsing VHDL file "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\gtx.vhd" into library work
 Parsing entity <gtx_wrapper>.
 Parsing architecture <Behavioral> of entity <gtx_wrapper>.
@@ -755,20 +767,6 @@ WARNING:HDLCompiler:634 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\f
 
 Elaborating entity <user_logic> (architecture <user_logic_arch>) from library <work>.
 WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 213: Using initial value "0000" for rx_error since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 225: Using initial value "0" for cs_trigger_0 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 226: Using initial value "0" for cs_trigger_1 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 227: Using initial value "0" for cs_trigger_2 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 228: Using initial value "00000000000000000000000000000000" for cs_trigger_3 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 229: Using initial value "0000000000000000" for cs_trigger_4 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 230: Using initial value "00" for cs_trigger_5 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 231: Using initial value "0000000000000000" for cs_trigger_6 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 232: Using initial value "00" for cs_trigger_7 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 233: Using initial value "0" for cs_trigger_8 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 234: Using initial value "00000000000000000000000000000000" for cs_trigger_9 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 235: Using initial value "00000000000000000000000000000000" for cs_trigger_10 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 236: Using initial value "0" for cs_trigger_11 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 237: Using initial value "0" for cs_trigger_12 since it is never assigned
-WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 238: Using initial value "00000000000000000000000000000000" for cs_trigger_13 since it is never assigned
 
 Elaborating entity <chipscope_icon> (architecture <chipscope_icon_a>) from library <work>.
 
@@ -784,6 +782,8 @@ WARNING:HDLCompiler:1127 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\
 WARNING:HDLCompiler:1127 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\ipcore_dir\high_speed_gtx.vhd" Line 425: Assignment to rxnotintable_float_i ignored, since the identifier is never used
 
 Elaborating entity <link_tracking> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\link_tracking.vhd" Line 44: Using initial value '0' for tracking_rx_en since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\link_tracking.vhd" Line 45: Using initial value "0000000000000000" for tracking_rx_data since it is never assigned
 
 Elaborating entity <gtx_rx_mux> (architecture <Behavioral>) from library <work>.
 
@@ -792,6 +792,14 @@ Elaborating entity <gtx_tx_mux> (architecture <Behavioral>) from library <work>.
 Elaborating entity <ipb_vfat2> (architecture <rtl>) from library <work>.
 
 Elaborating entity <clock_bridge> (architecture <behavioral>) from library <work>.
+
+Elaborating entity <ipb_tracking> (architecture <rtl>) from library <work>.
+
+Elaborating entity <buffer_fifo> (architecture <buffer_fifo_a>) from library <work>.
+
+Elaborating entity <ipb_priority> (architecture <rtl>) from library <work>.
+
+Elaborating entity <clock_bridge_simple> (architecture <behavioral>) from library <work>.
 
 Elaborating entity <ipb_test> (architecture <rtl>) with generics from library <work>.
 WARNING:HDLCompiler:634 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" Line 216: Net <tx_kchar[7]> does not have a driver.
@@ -2306,13 +2314,17 @@ Unit <ipbus_sys_fabric> synthesized.
 
 Synthesizing Unit <ipbus_user_fabric>.
     Related source file is "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\src\system\ipbus\ipbus_glib\ipbus_user_fabric.vhd".
-        NSLV = 4
+        NSLV = 8
         STROBE_GAP = false
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[0]_ipb_rdata>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[1]_ipb_rdata>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[2]_ipb_rdata>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[3]_ipb_rdata>.
-    Set property "KEEP = TRUE" for signal <_n0203>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[4]_ipb_rdata>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[5]_ipb_rdata>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[6]_ipb_rdata>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[7]_ipb_rdata>.
+    Set property "KEEP = TRUE" for signal <_n0282>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[0]_ipb_ack>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[0]_ipb_err>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[1]_ipb_ack>.
@@ -2321,10 +2333,18 @@ Synthesizing Unit <ipbus_user_fabric>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[2]_ipb_err>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[3]_ipb_ack>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[3]_ipb_err>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[4]_ipb_ack>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[4]_ipb_err>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[5]_ipb_ack>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[5]_ipb_err>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[6]_ipb_ack>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[6]_ipb_err>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[7]_ipb_ack>.
+    Set property "KEEP = TRUE" for signal <ipb_from_slaves[7]_ipb_err>.
 WARNING:Xst:647 - Input <ipb_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
-	inferred  11 Multiplexer(s).
+	inferred  23 Multiplexer(s).
 Unit <ipbus_user_fabric> synthesized.
 
 Synthesizing Unit <ipbus_to_wb_bridge>.
@@ -2448,8 +2468,8 @@ WARNING:Xst:647 - Input <regs_i<27>> is never used. This port will be preserved 
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 32-bit 32-to-1 multiplexer for signal <sel[4]_regs[31][31]_wide_mux_106_OUT> created at line 142.
-    Found 7-bit comparator equal for signal <n0132> created at line 149
+    Found 32-bit 32-to-1 multiplexer for signal <sel[4]_regs[31][31]_wide_mux_106_OUT> created at line 143.
+    Found 7-bit comparator equal for signal <n0132> created at line 150
     Summary:
 	inferred 608 D-type flip-flop(s).
 	inferred   1 Comparator(s).
@@ -3610,7 +3630,6 @@ WARNING:Xst:647 - Input <user_sys_pcie_dma_i[6]_wr> is never used. This port wil
 WARNING:Xst:647 - Input <user_sys_pcie_dma_i[7]_rd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <user_sys_pcie_dma_i[7]_wr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <user_sys_pcie_int_i_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <user_cdce_locked_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <user_cdce_sync_done_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_mosi_i[0]_wb_rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_mosi_i[0]_wb_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -3619,9 +3638,9 @@ WARNING:Xst:647 - Input <wb_mosi_i[0]_wb_we> is never used. This port will be pr
 WARNING:Xst:647 - Input <wb_mosi_i[0]_wb_cyc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <user_clk125_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <user_clk200_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 257: Output port <ASYNC_OUT> of the instance <chipscope_vio_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 257: Output port <SYNC_OUT> of the instance <chipscope_vio_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 304: Output port <rx_error_o> of the instance <gtx_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 263: Output port <ASYNC_OUT> of the instance <chipscope_vio_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 263: Output port <SYNC_OUT> of the instance <chipscope_vio_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\user_logic_basic.vhd" line 310: Output port <rx_error_o> of the instance <gtx_wrapper_inst> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <amc_port_tx_p> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <amc_port_tx_n> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <sys_pcie_amc_rx_p> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -3790,8 +3809,8 @@ Synthesizing Unit <gtx_tx_mux>.
     Found finite state machine <FSM_23> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
-    | Transitions        | 6                                              |
-    | Inputs             | 2                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 3                                              |
     | Outputs            | 4                                              |
     | Clock              | gtx_clk_i (rising_edge)                        |
     | Reset              | reset_i (positive)                             |
@@ -3801,11 +3820,11 @@ Synthesizing Unit <gtx_tx_mux>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 10-bit adder for signal <kchar_count[9]_GND_728_o_add_5_OUT> created at line 90.
+    Found 10-bit adder for signal <kchar_count[9]_GND_558_o_add_13_OUT> created at line 123.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  62 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
+	inferred   9 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <gtx_tx_mux> synthesized.
 
@@ -3815,15 +3834,13 @@ WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr<31:13>> is never used. This port wi
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_wdata<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <last_ipb_strobe>.
     Found 32-bit register for signal <tx_data>.
-    Found 1-bit register for signal <ipb_error>.
     Found 1-bit register for signal <ipb_ack>.
     Found 32-bit register for signal <ipb_data>.
     Found 1-bit register for signal <tx_en>.
-    Found 8-bit comparator equal for signal <rx_data[7]_GND_729_o_equal_11_o> created at line 194
+    WARNING:Xst:2404 -  FFs/Latches <ipb_error<0:0>> (without init value) have a constant value of 0 in block <ipb_vfat2>.
     Summary:
-	inferred  68 D-type flip-flop(s).
-	inferred   1 Comparator(s).
-	inferred   3 Multiplexer(s).
+	inferred  67 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
 Unit <ipb_vfat2> synthesized.
 
 Synthesizing Unit <clock_bridge>.
@@ -3832,8 +3849,8 @@ Synthesizing Unit <clock_bridge>.
     Found 1-bit register for signal <s_en_o>.
     Found 2-bit register for signal <cnt_out>.
     Found 2-bit register for signal <cnt_in>.
-    Found 2-bit adder for signal <cnt_in[1]_GND_730_o_add_2_OUT> created at line 52.
-    Found 2-bit adder for signal <cnt_out[1]_GND_730_o_add_14_OUT> created at line 97.
+    Found 2-bit adder for signal <cnt_in[1]_GND_560_o_add_2_OUT> created at line 52.
+    Found 2-bit adder for signal <cnt_out[1]_GND_560_o_add_14_OUT> created at line 97.
     Found 2-bit comparator equal for signal <cnt_out[1]_cnt_in[1]_equal_1_o> created at line 43
     Summary:
 	inferred   2 Adder/Subtractor(s).
@@ -3841,6 +3858,49 @@ Synthesizing Unit <clock_bridge>.
 	inferred   1 Comparator(s).
 	inferred   2 Multiplexer(s).
 Unit <clock_bridge> synthesized.
+
+Synthesizing Unit <ipb_tracking>.
+    Related source file is "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_tracking.vhd".
+WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ipb_mosi_i_ipb_wdata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ipb_mosi_i_ipb_write> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_tracking.vhd" line 51: Output port <full> of the instance <tracking_buffer_inst> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <last_ipb_strobe>.
+    Found 1-bit register for signal <ipb_error>.
+    Found 1-bit register for signal <rd_en>.
+    Found 32-bit register for signal <ipb_data>.
+    Found 1-bit register for signal <ipb_ack>.
+    Summary:
+	inferred  36 D-type flip-flop(s).
+Unit <ipb_tracking> synthesized.
+
+Synthesizing Unit <ipb_priority>.
+    Related source file is "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_priority.vhd".
+WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr<31:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ipb_mosi_i_ipb_wdata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ipb_mosi_i_ipb_write> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <last_ipb_strobe>.
+    Found 1-bit register for signal <ipb_ack>.
+    Found 7-bit register for signal <priority_signals>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ipb_priority> synthesized.
+
+Synthesizing Unit <clock_bridge_simple>.
+    Related source file is "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\clock_bridge_simple.vhd".
+    Found 1-bit register for signal <s_en_o>.
+    Found 2-bit register for signal <cnt_out>.
+    Found 2-bit register for signal <cnt_in>.
+    Found 2-bit adder for signal <cnt_in[1]_GND_598_o_add_2_OUT> created at line 50.
+    Found 2-bit adder for signal <cnt_out[1]_GND_598_o_add_10_OUT> created at line 92.
+    Found 2-bit comparator equal for signal <cnt_out[1]_cnt_in[1]_equal_1_o> created at line 41
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <clock_bridge_simple> synthesized.
 
 Synthesizing Unit <ipb_test>.
     Related source file is "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_test.vhd".
@@ -3863,7 +3923,7 @@ Macro Statistics
  4096x8-bit dual-port RAM                              : 2
  8192x32-bit dual-port RAM                             : 2
  8192x8-bit dual-port RAM                              : 8
-# Adders/Subtractors                                   : 133
+# Adders/Subtractors                                   : 147
  1-bit adder                                           : 6
  10-bit adder                                          : 3
  10-bit subtractor                                     : 7
@@ -3873,7 +3933,7 @@ Macro Statistics
  13-bit adder                                          : 6
  16-bit adder                                          : 8
  17-bit subtractor                                     : 2
- 2-bit adder                                           : 21
+ 2-bit adder                                           : 35
  20-bit subtractor                                     : 1
  21-bit adder                                          : 4
  21-bit subtractor                                     : 1
@@ -3895,8 +3955,8 @@ Macro Statistics
  8-bit adder                                           : 5
  8-bit subtractor                                      : 2
  9-bit adder                                           : 8
-# Registers                                            : 1481
- 1-bit register                                        : 885
+# Registers                                            : 1517
+ 1-bit register                                        : 903
  10-bit register                                       : 15
  1024-bit register                                     : 1
  11-bit register                                       : 4
@@ -3906,13 +3966,13 @@ Macro Statistics
  13-bit register                                       : 46
  16-bit register                                       : 89
  17-bit register                                       : 2
- 2-bit register                                        : 49
+ 2-bit register                                        : 63
  21-bit register                                       : 17
  24-bit register                                       : 8
  28-bit register                                       : 5
  3-bit register                                        : 25
  31-bit register                                       : 3
- 32-bit register                                       : 81
+ 32-bit register                                       : 84
  336-bit register                                      : 2
  34-bit register                                       : 2
  36-bit register                                       : 14
@@ -3923,28 +3983,28 @@ Macro Statistics
  48-bit register                                       : 7
  5-bit register                                        : 9
  6-bit register                                        : 24
- 7-bit register                                        : 12
+ 7-bit register                                        : 13
  8-bit register                                        : 88
  9-bit register                                        : 16
-# Comparators                                          : 89
+# Comparators                                          : 93
  10-bit comparator equal                               : 2
  10-bit comparator greater                             : 1
  13-bit comparator equal                               : 2
  16-bit comparator equal                               : 34
  16-bit comparator greater                             : 2
- 2-bit comparator equal                                : 6
+ 2-bit comparator equal                                : 13
  2-bit comparator greater                              : 2
  21-bit comparator greater                             : 2
  36-bit comparator equal                               : 2
  4-bit comparator greater                              : 4
  6-bit comparator equal                                : 2
  7-bit comparator equal                                : 1
- 8-bit comparator equal                                : 11
+ 8-bit comparator equal                                : 8
  8-bit comparator greater                              : 4
  8-bit comparator not equal                            : 14
-# Multiplexers                                         : 2597
+# Multiplexers                                         : 2639
  1-bit 16-to-1 multiplexer                             : 12
- 1-bit 2-to-1 multiplexer                              : 1699
+ 1-bit 2-to-1 multiplexer                              : 1697
  1-bit 3-to-1 multiplexer                              : 18
  1-bit 4-to-1 multiplexer                              : 6
  1-bit 7-to-1 multiplexer                              : 2
@@ -3956,8 +4016,8 @@ Macro Statistics
  128-bit 2-to-1 multiplexer                            : 12
  128-bit 4-to-1 multiplexer                            : 2
  13-bit 2-to-1 multiplexer                             : 60
- 16-bit 2-to-1 multiplexer                             : 81
- 2-bit 2-to-1 multiplexer                              : 47
+ 16-bit 2-to-1 multiplexer                             : 99
+ 2-bit 2-to-1 multiplexer                              : 64
  2-bit 3-to-1 multiplexer                              : 2
  2-bit 4-to-1 multiplexer                              : 1
  20-bit 2-to-1 multiplexer                             : 2
@@ -3970,7 +4030,7 @@ Macro Statistics
  3-bit 7-to-1 multiplexer                              : 2
  3-bit 8-to-1 multiplexer                              : 2
  31-bit 2-to-1 multiplexer                             : 21
- 32-bit 2-to-1 multiplexer                             : 68
+ 32-bit 2-to-1 multiplexer                             : 72
  32-bit 32-to-1 multiplexer                            : 1
  32-bit 4-to-1 multiplexer                             : 2
  34-bit 2-to-1 multiplexer                             : 2
@@ -3984,7 +4044,7 @@ Macro Statistics
  48-bit 2-to-1 multiplexer                             : 10
  5-bit 2-to-1 multiplexer                              : 21
  6-bit 2-to-1 multiplexer                              : 30
- 7-bit 2-to-1 multiplexer                              : 37
+ 7-bit 2-to-1 multiplexer                              : 42
  8-bit 16-to-1 multiplexer                             : 2
  8-bit 2-to-1 multiplexer                              : 180
  8-bit 4-to-1 multiplexer                              : 2
@@ -3992,11 +4052,11 @@ Macro Statistics
 # Tristates                                            : 32
  1-bit tristate buffer                                 : 32
 # FSMs                                                 : 32
-# Xors                                                 : 106
+# Xors                                                 : 103
  1-bit xor2                                            : 96
  16-bit xor2                                           : 2
  16-bit xor4                                           : 2
- 8-bit xor4                                            : 6
+ 8-bit xor4                                            : 3
 
 =========================================================================
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -4043,12 +4103,14 @@ WARNING:Xst:638 - in unit v6_emac_v2_3_sgmii_block Conflict on KEEP property on 
 Reading core <ipcore_dir/chipscope_vio.ngc>.
 Reading core <ipcore_dir/chipscope_ila.ngc>.
 Reading core <ipcore_dir/chipscope_icon.ngc>.
+Reading core <ipcore_dir/buffer_fifo.ngc>.
 Reading core <../../src/system/ethernet/ipcore_dir/basex/v6_emac_v2_3_basex.ngc>.
 Reading core <../../src/system/ethernet/ipcore_dir/sgmii/v6_emac_v2_3_sgmii.ngc>.
 Reading core <../../src/system/cdce/cdce_phase_mon_v2/dpram/ttclk_distributed_dpram.ngc>.
 Loading core <chipscope_vio> for timing and area information for instance <chipscope_vio_inst>.
 Loading core <chipscope_ila> for timing and area information for instance <chipscope_ila_inst>.
 Loading core <chipscope_icon> for timing and area information for instance <chipscope_icon_inst>.
+Loading core <buffer_fifo> for timing and area information for instance <tracking_buffer_inst>.
 Loading core <v6_emac_v2_3_basex> for timing and area information for instance <v6emac_core>.
 Loading core <v6_emac_v2_3_sgmii> for timing and area information for instance <v6emac_core>.
 Loading core <ttclk_distributed_dpram> for timing and area information for instance <ctrl_dpram>.
@@ -4266,6 +4328,54 @@ WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_11> (without init value) has
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_10> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_9> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_8> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <vfat2_data_o_0> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_1> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_2> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_3> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_4> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_5> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_6> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_7> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <s_data_o_0> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_1> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_2> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_3> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_4> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_5> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_6> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_7> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_0> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_1> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_2> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_3> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_4> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_5> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_6> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_7> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <s_data_o_0> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_1> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_2> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_3> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_4> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_5> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_6> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_7> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_0> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_1> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_2> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_3> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_4> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_5> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_6> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_7> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <s_data_o_0> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_1> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_2> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_3> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_4> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_5> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_6> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_7> of sequential type is unconnected in block <clock_bridge_rx_inst>.
 WARNING:Xst:2677 - Node <address_block.addr_int_11> of sequential type is unconnected in block <payload>.
 WARNING:Xst:2677 - Node <address_block.addr_int_12> of sequential type is unconnected in block <payload>.
 WARNING:Xst:2677 - Node <addra_11> of sequential type is unconnected in block <rx_ram_mux>.
@@ -4324,6 +4434,11 @@ Synthesizing (advanced) Unit <clock_bridge>.
 The following registers are absorbed into counter <cnt_out>: 1 register on signal <cnt_out>.
 The following registers are absorbed into counter <cnt_in>: 1 register on signal <cnt_in>.
 Unit <clock_bridge> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clock_bridge_simple>.
+The following registers are absorbed into counter <cnt_out>: 1 register on signal <cnt_out>.
+The following registers are absorbed into counter <cnt_in>: 1 register on signal <cnt_in>.
+Unit <clock_bridge_simple> synthesized (advanced).
 
 Synthesizing (advanced) Unit <clock_div>.
 The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
@@ -4618,14 +4733,14 @@ Macro Statistics
  7-bit adder                                           : 2
  8-bit adder                                           : 5
  9-bit adder                                           : 8
-# Counters                                             : 75
+# Counters                                             : 89
  1-bit up counter                                      : 4
  10-bit down counter                                   : 2
  11-bit down counter                                   : 2
  12-bit up counter                                     : 4
  16-bit up counter                                     : 6
  17-bit down counter                                   : 2
- 2-bit up counter                                      : 17
+ 2-bit up counter                                      : 31
  21-bit down counter                                   : 1
  21-bit up counter                                     : 4
  24-bit up counter                                     : 4
@@ -4637,27 +4752,27 @@ Macro Statistics
  6-bit up counter                                      : 3
  8-bit down counter                                    : 2
  8-bit up counter                                      : 2
-# Registers                                            : 12491
- Flip-Flops                                            : 12491
-# Comparators                                          : 89
+# Registers                                            : 12612
+ Flip-Flops                                            : 12612
+# Comparators                                          : 93
  10-bit comparator equal                               : 2
  10-bit comparator greater                             : 1
  13-bit comparator equal                               : 2
  16-bit comparator equal                               : 34
  16-bit comparator greater                             : 2
- 2-bit comparator equal                                : 6
+ 2-bit comparator equal                                : 13
  2-bit comparator greater                              : 2
  21-bit comparator greater                             : 2
  36-bit comparator equal                               : 2
  4-bit comparator greater                              : 4
  6-bit comparator equal                                : 2
  7-bit comparator equal                                : 1
- 8-bit comparator equal                                : 11
+ 8-bit comparator equal                                : 8
  8-bit comparator greater                              : 4
  8-bit comparator not equal                            : 14
-# Multiplexers                                         : 3277
+# Multiplexers                                         : 3305
  1-bit 16-to-1 multiplexer                             : 20
- 1-bit 2-to-1 multiplexer                              : 2156
+ 1-bit 2-to-1 multiplexer                              : 2154
  1-bit 3-to-1 multiplexer                              : 18
  1-bit 32-to-1 multiplexer                             : 32
  1-bit 4-to-1 multiplexer                              : 272
@@ -4668,8 +4783,8 @@ Macro Statistics
  12-bit 2-to-1 multiplexer                             : 11
  128-bit 2-to-1 multiplexer                            : 12
  13-bit 2-to-1 multiplexer                             : 54
- 16-bit 2-to-1 multiplexer                             : 77
- 2-bit 2-to-1 multiplexer                              : 32
+ 16-bit 2-to-1 multiplexer                             : 95
+ 2-bit 2-to-1 multiplexer                              : 35
  2-bit 3-to-1 multiplexer                              : 2
  2-bit 4-to-1 multiplexer                              : 1
  20-bit 2-to-1 multiplexer                             : 2
@@ -4682,7 +4797,7 @@ Macro Statistics
  3-bit 7-to-1 multiplexer                              : 2
  3-bit 8-to-1 multiplexer                              : 2
  31-bit 2-to-1 multiplexer                             : 21
- 32-bit 2-to-1 multiplexer                             : 62
+ 32-bit 2-to-1 multiplexer                             : 66
  32-bit 4-to-1 multiplexer                             : 2
  34-bit 2-to-1 multiplexer                             : 2
  36-bit 2-to-1 multiplexer                             : 20
@@ -4695,17 +4810,17 @@ Macro Statistics
  48-bit 2-to-1 multiplexer                             : 7
  5-bit 2-to-1 multiplexer                              : 21
  6-bit 2-to-1 multiplexer                              : 28
- 7-bit 2-to-1 multiplexer                              : 37
+ 7-bit 2-to-1 multiplexer                              : 42
  8-bit 16-to-1 multiplexer                             : 1
  8-bit 2-to-1 multiplexer                              : 164
  8-bit 4-to-1 multiplexer                              : 2
  9-bit 2-to-1 multiplexer                              : 20
 # FSMs                                                 : 32
-# Xors                                                 : 106
+# Xors                                                 : 103
  1-bit xor2                                            : 96
  16-bit xor2                                           : 2
  16-bit xor4                                           : 2
- 8-bit xor4                                            : 6
+ 8-bit xor4                                            : 3
 
 =========================================================================
 
@@ -5625,7 +5740,13 @@ Optimizing unit <ipb_vfat2> ...
 
 Optimizing unit <clock_bridge> ...
 
+Optimizing unit <ipb_tracking> ...
+
 Optimizing unit <gtx_tx_mux> ...
+
+Optimizing unit <ipb_priority> ...
+
+Optimizing unit <clock_bridge_simple> ...
 
 Optimizing unit <ipb_test> ...
 
@@ -5644,7 +5765,6 @@ Optimizing unit <ip_mac_select> ...
 Optimizing unit <ipbus_to_wb_bridge> ...
 
 Optimizing unit <ipbus_user_fabric> ...
-WARNING:Xst:638 - in unit ipbus_user_fabric Conflict on KEEP property on signal n0203<5> and n0203<6> n0203<6> signal will be lost.
 
 Optimizing unit <eth_v6_basex> ...
 
@@ -5808,6 +5928,54 @@ WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant va
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <vfat2_data_o_0> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_1> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_2> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_3> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_4> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_5> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_6> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_7> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <s_data_o_0> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_1> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_2> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_3> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_4> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_5> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_6> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_7> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_0> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_1> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_2> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_3> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_4> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_5> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_6> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_7> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <s_data_o_0> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_1> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_2> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_3> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_4> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_5> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_6> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_7> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_0> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_1> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_2> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_3> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_4> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_5> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_6> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <vfat2_data_o_7> of sequential type is unconnected in block <gtx_rx_mux_inst>.
+WARNING:Xst:2677 - Node <s_data_o_0> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_1> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_2> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_3> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_4> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_5> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_6> of sequential type is unconnected in block <clock_bridge_rx_inst>.
+WARNING:Xst:2677 - Node <s_data_o_7> of sequential type is unconnected in block <clock_bridge_rx_inst>.
 WARNING:Xst:2677 - Node <startErrInj_rr> of sequential type is unconnected in block <bist>.
 WARNING:Xst:2677 - Node <startErrInj_r> of sequential type is unconnected in block <bist>.
 WARNING:Xst:2677 - Node <ERRORCOUNTER_O_8> of sequential type is unconnected in block <bist>.
@@ -6593,6 +6761,81 @@ WARNING:Xst:1710 - FF/Latch <history_block.async_payload_3> (without init value)
 WARNING:Xst:1710 - FF/Latch <history_block.async_payload_3> (without init value) has a constant value of 1 in block <status_buffer>. This FF/Latch will be trimmed during the optimization process.
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block glib_top, actual ratio is 3.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <tracking_buffer_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/curr_fwft_state_FSM_FFd2> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <tracking_buffer_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
 
 Final Macro Processing ...
 
@@ -6631,8 +6874,8 @@ Unit <u2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 11560
- Flip-Flops                                            : 11560
+# Registers                                            : 11661
+ Flip-Flops                                            : 11661
 # Shift Registers                                      : 4
  2-bit shift register                                  : 3
  5-bit shift register                                  : 1
@@ -6658,40 +6901,40 @@ Top Level Output File Name         : glib_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 14181
-#      GND                         : 123
-#      INV                         : 284
+# BELS                             : 14641
+#      GND                         : 132
+#      INV                         : 307
 #      LUT1                        : 468
-#      LUT2                        : 2428
-#      LUT3                        : 2036
-#      LUT4                        : 1633
-#      LUT5                        : 1643
-#      LUT6                        : 2997
-#      MUXCY                       : 1142
+#      LUT2                        : 2542
+#      LUT3                        : 2080
+#      LUT4                        : 1715
+#      LUT5                        : 1701
+#      LUT6                        : 3054
+#      MUXCY                       : 1202
 #      MUXCY_L                     : 206
 #      MUXF5                       : 2
 #      MUXF6                       : 1
-#      MUXF7                       : 108
+#      MUXF7                       : 113
 #      MUXF8                       : 20
-#      VCC                         : 106
+#      VCC                         : 114
 #      XORCY                       : 984
-# FlipFlops/Latches                : 13168
-#      FD                          : 2622
-#      FDC                         : 1137
-#      FDCE                        : 1102
-#      FDE                         : 3411
-#      FDP                         : 457
-#      FDPE                        : 47
-#      FDR                         : 1843
-#      FDRE                        : 2326
+# FlipFlops/Latches                : 13695
+#      FD                          : 2587
+#      FDC                         : 1374
+#      FDCE                        : 1227
+#      FDE                         : 3507
+#      FDP                         : 502
+#      FDPE                        : 54
+#      FDR                         : 1867
+#      FDRE                        : 2354
 #      FDS                         : 94
 #      FDSE                        : 117
 #      LDC                         : 10
 #      ODDR                        : 2
-# RAMS                             : 67
+# RAMS                             : 70
 #      RAM32M                      : 20
 #      RAM32X1D                    : 8
-#      RAMB36E1                    : 39
+#      RAMB36E1                    : 42
 # Shift Registers                  : 334
 #      SRL16                       : 175
 #      SRL16E                      : 1
@@ -6726,27 +6969,27 @@ Selected Device : 6vlx130tff1156-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           13168  out of  160000     8%  
- Number of Slice LUTs:                11919  out of  80000    14%  
-    Number used as Logic:             11489  out of  80000    14%  
+ Number of Slice Registers:           13695  out of  160000     8%  
+ Number of Slice LUTs:                12297  out of  80000    15%  
+    Number used as Logic:             11867  out of  80000    14%  
     Number used as Memory:              430  out of  27840     1%  
        Number used as RAM:               96
        Number used as SRL:              334
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  17941
-   Number with an unused Flip Flop:    4773  out of  17941    26%  
-   Number with an unused LUT:          6022  out of  17941    33%  
-   Number of fully used LUT-FF pairs:  7146  out of  17941    39%  
-   Number of unique control sets:       723
+ Number of LUT Flip Flop pairs used:  18646
+   Number with an unused Flip Flop:    4951  out of  18646    26%  
+   Number with an unused LUT:          6349  out of  18646    34%  
+   Number of fully used LUT-FF pairs:  7346  out of  18646    39%  
+   Number of unique control sets:       791
 
 IO Utilization: 
  Number of IOs:                         698
  Number of bonded IOBs:                 610  out of    600   101% (*) 
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:               39  out of    264    14%  
-    Number using Block RAM only:         39
+ Number of Block RAM/FIFO:               42  out of    264    15%  
+    Number using Block RAM only:         42
  Number of BUFG/BUFGCTRLs:               13  out of     32    40%  
 
 WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
@@ -6772,8 +7015,8 @@ Clock Information:
 ------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
 Clock Signal                                                                                                | Clock buffer(FF name)                                             | Load  |
 ------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
-usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                      | BUFG                                                              | 1467  |
-clk125_2_p                                                                                                  | MMCM_ADV:CLKOUT1                                                  | 4826  |
+usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                      | BUFG                                                              | 1668  |
+clk125_2_p                                                                                                  | MMCM_ADV:CLKOUT1                                                  | 5158  |
 usr/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                              | BUFG                                                              | 462   |
 usr/chipscope_icon_inst/CONTROL0<13>(usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
 usr/chipscope_icon_inst/U0/iUPDATE_OUT                                                                      | NONE(usr/chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD)               | 1     |
@@ -6801,29 +7044,32 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Control Signal                                                                                                                                                                                                                                                                                                                                                                        | Buffer(FF name)                                                                                                                                                                                                                                                                                                                                       | Load  |
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N11(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 124   |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N11(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 124   |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N11(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)| 124   |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/N11(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)| 124   |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/N11(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36)| 124   |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 72    |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 72    |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)| 72    |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)| 72    |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36)| 72    |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 20    |
-system/amc_p0_en.amc_p0_eth/N0(system/amc_p0_en.amc_p0_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                 | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                                                                                                              | 1     |
-system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/N1(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                         | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                             | 1     |
-system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/n0017<0>(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                   | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                             | 1     |
-system/amc_p0_en.amc_p0_eth/hostbus_out_hostmiimrdy(system/amc_p0_en.amc_p0_eth/XST_GND:G)                                                                                                                                                                                                                                                                                            | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                                                                                                              | 1     |
-system/phy_en.phy_eth/N0(system/phy_en.phy_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                             | NONE(system/phy_en.phy_eth/clkbuf)                                                                                                                                                                                                                                                                                                                    | 1     |
-system/phy_en.phy_eth/hostbus_out_hostmiimrdy(system/phy_en.phy_eth/XST_GND:G)                                                                                                                                                                                                                                                                                                        | NONE(system/phy_en.phy_eth/clkbuf)                                                                                                                                                                                                                                                                                                                    | 1     |
-system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/N1(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                                     | NONE(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                                   | 1     |
-system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/n0017<0>(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                               | NONE(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                                   | 1     |
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                                                                                                                                        | Buffer(FF name)                                                                                                                                                                                                                                                                                                                                       | Load  |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N11(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_VCC:P)                                | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 124   |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N11(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_VCC:P)                                | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 124   |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N11(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_VCC:P)                                | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)| 124   |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/N11(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/XST_VCC:P)                                | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)| 124   |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/N11(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/XST_VCC:P)                                | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36)| 124   |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_GND:G)                                 | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 72    |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_GND:G)                                 | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 72    |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_GND:G)                                 | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)| 72    |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/XST_GND:G)                                 | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)| 72    |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/XST_GND:G)                                 | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36)| 72    |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                                                        | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36)| 20    |
+usr/link_tracking_0_inst/ipb_tracking_inst/tracking_buffer_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_tracking_0_inst/ipb_tracking_inst/tracking_buffer_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(usr/link_tracking_0_inst/ipb_tracking_inst/tracking_buffer_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)                                                                                          | 4     |
+usr/link_tracking_1_inst/ipb_tracking_inst/tracking_buffer_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_buffer_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_buffer_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)                                                                                          | 4     |
+usr/link_tracking_2_inst/ipb_tracking_inst/tracking_buffer_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_tracking_2_inst/ipb_tracking_inst/tracking_buffer_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(usr/link_tracking_2_inst/ipb_tracking_inst/tracking_buffer_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)                                                                                          | 4     |
+system/amc_p0_en.amc_p0_eth/N0(system/amc_p0_en.amc_p0_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                 | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                                                                                                              | 1     |
+system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/N1(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                         | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                             | 1     |
+system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/n0017<0>(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                                                   | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                             | 1     |
+system/amc_p0_en.amc_p0_eth/hostbus_out_hostmiimrdy(system/amc_p0_en.amc_p0_eth/XST_GND:G)                                                                                                                                                                                                                                                                                                                            | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                                                                                                              | 1     |
+system/phy_en.phy_eth/N0(system/phy_en.phy_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                             | NONE(system/phy_en.phy_eth/clkbuf)                                                                                                                                                                                                                                                                                                                    | 1     |
+system/phy_en.phy_eth/hostbus_out_hostmiimrdy(system/phy_en.phy_eth/XST_GND:G)                                                                                                                                                                                                                                                                                                                                        | NONE(system/phy_en.phy_eth/clkbuf)                                                                                                                                                                                                                                                                                                                    | 1     |
+system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/N1(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                                     | NONE(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                                   | 1     |
+system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/n0017<0>(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                                                               | NONE(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                                   | 1     |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -6832,7 +7078,7 @@ Speed Grade: -1
    Minimum period: 6.140ns (Maximum Frequency: 162.866MHz)
    Minimum input arrival time before clock: 3.911ns
    Maximum output required time after clock: 5.137ns
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 0.419ns
 
 Timing Details:
 ---------------
@@ -6840,34 +7086,39 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT'
-  Clock period: 3.379ns (frequency: 295.946MHz)
-  Total number of paths / destination ports: 3628 / 1961
+  Clock period: 3.725ns (frequency: 268.456MHz)
+  Total number of paths / destination ports: 5077 / 2460
 -------------------------------------------------------------------------
-Delay:               3.379ns (Levels of Logic = 3)
-  Source:            usr/link_tracking_2_inst/gtx_tx_mux_inst/kchar_count_2 (FF)
-  Destination:       usr/link_tracking_2_inst/gtx_tx_mux_inst/kchar_count_0 (FF)
+Delay:               3.725ns (Levels of Logic = 6)
+  Source:            usr/ipb_priority_inst/clock_bridge_calpulse_inst/s_en_o (FF)
+  Destination:       usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_0 (FF)
   Source Clock:      usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT rising
   Destination Clock: usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT rising
 
-  Data Path: usr/link_tracking_2_inst/gtx_tx_mux_inst/kchar_count_2 to usr/link_tracking_2_inst/gtx_tx_mux_inst/kchar_count_0
+  Data Path: usr/ipb_priority_inst/clock_bridge_calpulse_inst/s_en_o to usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             5   0.375   0.608  kchar_count_2 (kchar_count_2)
-     LUT3:I0->O            3   0.068   0.789  Madd_kchar_count[9]_GND_728_o_add_5_OUT_xor<3>111 (Madd_kchar_count[9]_GND_728_o_add_5_OUT_xor<3>11)
-     LUT6:I1->O            4   0.068   0.511  Madd_kchar_count[9]_GND_728_o_add_5_OUT_xor<8>111 (Madd_kchar_count[9]_GND_728_o_add_5_OUT_xor<8>11)
-     LUT6:I4->O           10   0.068   0.458  Reset_OR_DriverANDClockEnable1 (Reset_OR_DriverANDClockEnable)
+     FDR:C->Q              5   0.375   0.518  s_en_o (s_en_o)
+     end scope: 'usr/ipb_priority_inst/clock_bridge_calpulse_inst:s_en_o'
+     end scope: 'usr/ipb_priority_inst:priorities_o<1>'
+     begin scope: 'usr/link_tracking_1_inst:priorities_i<1>'
+     begin scope: 'usr/link_tracking_1_inst/gtx_tx_mux_inst:priorities_i<1>'
+     LUT2:I0->O            1   0.068   0.417  n0000<6>_SW0 (N6)
+     LUT6:I5->O           21   0.068   0.547  n0000<6> (n0000)
+     LUT3:I2->O           11   0.068   0.704  Reset_OR_DriverANDClockEnable11 (Reset_OR_DriverANDClockEnable1)
+     LUT5:I1->O           10   0.068   0.458  Reset_OR_DriverANDClockEnable1 (Reset_OR_DriverANDClockEnable)
      FDRE:R                    0.434          kchar_count_0
     ----------------------------------------
-    Total                      3.379ns (1.013ns logic, 2.366ns route)
-                                       (30.0% logic, 70.0% route)
+    Total                      3.725ns (1.081ns logic, 2.644ns route)
+                                       (29.0% logic, 71.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk125_2_p'
-  Clock period: 3.186ns (frequency: 313.879MHz)
-  Total number of paths / destination ports: 2826317 / 11274
+  Clock period: 3.189ns (frequency: 313.547MHz)
+  Total number of paths / destination ports: 11628172 / 11981
 -------------------------------------------------------------------------
-Delay:               3.186ns (Levels of Logic = 5)
+Delay:               3.189ns (Levels of Logic = 5)
   Source:            system/rst/rst_fabric_o (FF)
   Destination:       system/sram2_if/sramInterface/DATA_O_0 (FF)
   Source Clock:      clk125_2_p rising
@@ -6877,7 +7128,7 @@ Delay:               3.186ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q          1009   0.375   0.694  rst_fabric_o (rst_fabric_o)
+     FDPE:C->Q          1086   0.375   0.698  rst_fabric_o (rst_fabric_o)
      end scope: 'system/rst:rst_fabric_o'
      begin scope: 'system/sram2_if:RESET_I'
      begin scope: 'system/sram2_if/sramInterfaceIoControl:IPBUS_RESET_I'
@@ -6887,8 +7138,8 @@ Delay:               3.186ns (Levels of Logic = 5)
      LUT6:I0->O           36   0.068   0.552  _n01471 (_n0147)
      FDRE:R                    0.434          DATA_O_0
     ----------------------------------------
-    Total                      3.186ns (0.945ns logic, 2.241ns route)
-                                       (29.7% logic, 70.3% route)
+    Total                      3.189ns (0.945ns logic, 2.244ns route)
+                                       (29.6% logic, 70.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'usr/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
@@ -7031,27 +7282,27 @@ Delay:               4.810ns (Levels of Logic = 18)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'xpoint1_clk1_p'
-  Clock period: 2.931ns (frequency: 341.180MHz)
+  Clock period: 2.794ns (frequency: 357.910MHz)
   Total number of paths / destination ports: 721 / 26
 -------------------------------------------------------------------------
-Delay:               2.931ns (Levels of Logic = 3)
-  Source:            system/cdce_synch/cdce_control.timer_13 (FF)
+Delay:               2.794ns (Levels of Logic = 3)
+  Source:            system/cdce_synch/cdce_control.timer_1 (FF)
   Destination:       system/cdce_synch/cdce_control.timer_18 (FF)
   Source Clock:      xpoint1_clk1_p rising
   Destination Clock: xpoint1_clk1_p rising
 
-  Data Path: system/cdce_synch/cdce_control.timer_13 to system/cdce_synch/cdce_control.timer_18
+  Data Path: system/cdce_synch/cdce_control.timer_1 to system/cdce_synch/cdce_control.timer_18
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.375   0.792  cdce_control.timer_13 (cdce_control.timer_13)
-     LUT6:I0->O            1   0.068   0.775  GND_464_o_cdce_control.timer[19]_equal_5_o<19>3 (GND_464_o_cdce_control.timer[19]_equal_5_o<19>2)
-     LUT5:I0->O           22   0.068   0.774  GND_464_o_cdce_control.timer[19]_equal_5_o<19>4 (GND_464_o_cdce_control.timer[19]_equal_5_o)
+     FDC:C->Q              3   0.375   0.792  cdce_control.timer_1 (cdce_control.timer_1)
+     LUT6:I0->O            1   0.068   0.638  GND_464_o_cdce_control.timer[19]_equal_5_o<19>1 (GND_464_o_cdce_control.timer[19]_equal_5_o<19>)
+     LUT5:I1->O           22   0.068   0.774  GND_464_o_cdce_control.timer[19]_equal_5_o<19>4 (GND_464_o_cdce_control.timer[19]_equal_5_o)
      LUT5:I1->O            1   0.068   0.000  Mmux_cdce_control.state[1]_cdce_control.timer[19]_wide_mux_13_OUT101 (cdce_control.state[1]_cdce_control.timer[19]_wide_mux_13_OUT<18>)
      FDC:D                     0.011          cdce_control.timer_18
     ----------------------------------------
-    Total                      2.931ns (0.590ns logic, 2.341ns route)
-                                       (20.1% logic, 79.9% route)
+    Total                      2.794ns (0.590ns logic, 2.204ns route)
+                                       (21.1% logic, 78.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'system/gbt_phase_monitoring/ttclk_pll/CLK_OUT1'
@@ -7072,8 +7323,8 @@ Delay:               3.597ns (Levels of Logic = 5)
      LUT6:I1->O            1   0.068   0.581  threshold_lower[7]_monitoring_stats[15]_LessThan_8_o2 (threshold_lower[7]_monitoring_stats[15]_LessThan_8_o1)
      LUT3:I0->O            1   0.068   0.417  threshold_lower[7]_monitoring_stats[15]_LessThan_8_o11 (threshold_lower[7]_monitoring_stats[15]_LessThan_8_o11)
      LUT5:I4->O            2   0.068   0.497  threshold_lower[7]_monitoring_stats[15]_LessThan_8_o12 (threshold_lower[7]_monitoring_stats[15]_LessThan_8_o2)
-     LUT6:I4->O            1   0.068   0.581  Mmux_GND_500_o_monitoring_stats[15]_MUX_2560_o11 (Mmux_GND_500_o_monitoring_stats[15]_MUX_2560_o1)
-     LUT6:I3->O            1   0.068   0.000  Mmux_GND_500_o_monitoring_stats[15]_MUX_2560_o13 (GND_500_o_monitoring_stats[15]_MUX_2560_o)
+     LUT6:I4->O            1   0.068   0.581  Mmux_GND_500_o_monitoring_stats[15]_MUX_2564_o11 (Mmux_GND_500_o_monitoring_stats[15]_MUX_2564_o1)
+     LUT6:I3->O            1   0.068   0.000  Mmux_GND_500_o_monitoring_stats[15]_MUX_2564_o13 (GND_500_o_monitoring_stats[15]_MUX_2564_o)
      FDC:D                     0.011          phase_ok
     ----------------------------------------
     Total                      3.597ns (0.726ns logic, 2.871ns route)
@@ -7553,6 +7804,26 @@ Offset:              1.592ns (Levels of Logic = 1)
                                        (27.8% logic, 72.2% route)
 
 =========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               0.419ns (Levels of Logic = 3)
+  Source:            cdce_pll_lock (PAD)
+  Destination:       v6_led<1> (PAD)
+
+  Data Path: cdce_pll_lock to v6_led<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.003   0.413  cdce_pll_lock_IBUF (cdce_pll_lock_IBUF)
+     begin scope: 'usr:user_cdce_locked_i'
+     end scope: 'usr:user_v6_led_o<1>'
+     OBUF:I->O                 0.003          v6_led_1_OBUF (v6_led<1>)
+    ----------------------------------------
+    Total                      0.419ns (0.006ns logic, 0.413ns route)
+                                       (1.4% logic, 98.6% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
@@ -7562,7 +7833,7 @@ Clock to Setup on destination clock clk125_2_p
                                                                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                                |   11.323|         |         |         |
+clk125_2_p                                                                                                |   12.247|         |         |         |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    3.385|         |         |         |
 system/gbt_phase_monitoring/ttclk_pll/CLK_OUT1                                                            |    2.078|         |         |         |
 system/i2c_s/reset_regs_i[6][0]_AND_773_o                                                                 |         |    2.188|         |         |
@@ -7575,7 +7846,7 @@ system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o                              
 system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o                                                        |         |    1.759|         |         |
 system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT      |    3.385|         |         |         |
 system/spi/reset_i_cpol_i_AND_934_o                                                                       |         |    1.124|         |         |
-usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                    |    5.718|         |         |         |
+usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                    |    1.915|         |         |         |
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT
@@ -7583,7 +7854,7 @@ Clock to Setup on destination clock system/amc_p0_en.amc_p0_eth/basex/v6_gtxwiza
                                                                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                                |   10.267|         |         |         |
+clk125_2_p                                                                                                |   11.191|         |         |         |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    4.810|         |         |         |
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
@@ -7592,7 +7863,7 @@ Clock to Setup on destination clock system/gbt_phase_monitoring/ttclk_pll/CLK_OU
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                    |    2.205|         |         |         |
+clk125_2_p                                    |    2.209|         |         |         |
 system/gbt_phase_monitoring/ttclk_pll/CLK_OUT1|    3.597|         |         |         |
 usr/wb_miso_o[0]_wb_err                       |    0.871|         |         |         |
 ----------------------------------------------+---------+---------+---------+---------+
@@ -7602,7 +7873,7 @@ Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][0]_AND_773_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.976|         |
+clk125_2_p     |         |         |    1.980|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][1]_AND_771_o
@@ -7610,7 +7881,7 @@ Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][1]_AND_771_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.976|         |
+clk125_2_p     |         |         |    1.980|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][2]_AND_769_o
@@ -7618,7 +7889,7 @@ Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][2]_AND_769_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.976|         |
+clk125_2_p     |         |         |    1.980|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][3]_AND_767_o
@@ -7626,7 +7897,7 @@ Clock to Setup on destination clock system/i2c_s/reset_regs_i[6][3]_AND_767_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.976|         |
+clk125_2_p     |         |         |    1.980|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o
@@ -7634,7 +7905,7 @@ Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[0]_AND
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.976|         |
+clk125_2_p     |         |         |    1.980|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o
@@ -7642,7 +7913,7 @@ Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[1]_AND
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.976|         |
+clk125_2_p     |         |         |    1.980|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o
@@ -7650,7 +7921,7 @@ Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[2]_AND
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.976|         |
+clk125_2_p     |         |         |    1.980|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o
@@ -7658,7 +7929,7 @@ Clock to Setup on destination clock system/ip_mac/reset_i_user_mac_addr_i[3]_AND
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.976|         |
+clk125_2_p     |         |         |    1.980|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT
@@ -7666,7 +7937,7 @@ Clock to Setup on destination clock system/phy_en.phy_eth/sgmii/v6_gtxwizard_top
                                                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                          |   10.267|         |         |         |
+clk125_2_p                                                                                          |   11.191|         |         |         |
 system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    4.810|         |         |         |
 ----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
@@ -7675,7 +7946,7 @@ Clock to Setup on destination clock system/spi/reset_i_cpol_i_AND_934_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk125_2_p     |         |         |    1.976|         |
+clk125_2_p     |         |         |    1.980|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock usr/chipscope_icon_inst/CONTROL0<13>
@@ -7710,9 +7981,9 @@ Clock to Setup on destination clock usr/gtx_wrapper_inst/high_speed_gtx0_inst/TX
                                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                    |    2.390|         |         |         |
+clk125_2_p                                                    |    2.391|         |         |         |
 usr/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    3.406|         |         |         |
-usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT        |    3.379|         |         |         |
+usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT        |    3.725|         |         |         |
 --------------------------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock xpoint1_clk1_p
@@ -7721,20 +7992,20 @@ Clock to Setup on destination clock xpoint1_clk1_p
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 clk125_2_p     |    2.514|         |         |         |
-xpoint1_clk1_p |    2.931|         |         |         |
+xpoint1_clk1_p |    2.794|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 109.00 secs
-Total CPU time to Xst completion: 109.65 secs
+Total REAL time to Xst completion: 126.00 secs
+Total CPU time to Xst completion: 125.69 secs
  
 --> 
 
-Total memory usage is 469208 kilobytes
+Total memory usage is 471024 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 1744 (   0 filtered)
-Number of infos    :  551 (   0 filtered)
+Number of warnings : 1833 (   0 filtered)
+Number of infos    :  627 (   0 filtered)
 

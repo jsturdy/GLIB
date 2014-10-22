@@ -19,23 +19,32 @@ package user_package is
 
 
     --=== ipb slaves =============--
-    constant number_of_ipb_slaves       : positive := 4;
+    constant number_of_ipb_slaves       : positive := 8;
 
     constant ipbus_vfat2_0              : integer := 0;
     constant ipbus_vfat2_1              : integer := 1;
     constant ipbus_vfat2_2              : integer := 2;
     
-    constant ipbus_test                 : integer := 3;
+    constant ipbus_tracking_0           : integer := 3;
+    constant ipbus_tracking_1           : integer := 4;
+    constant ipbus_tracking_2           : integer := 5;
+    
+    constant ipbus_fast_signals         : integer := 6;
+    
+    constant ipbus_test                 : integer := 7;
   
    
-    --=== Package types ==========--
-    constant def_gtx_idle               : std_logic_vector(7 downto 0) := x"00";  
+    --=== Package types ==========--  
+    constant def_gtx_idle               : std_logic_vector(7 downto 0) := x"00"; 
     constant def_gtx_vfat2              : std_logic_vector(7 downto 0) := x"01";  
     constant def_gtx_tracking           : std_logic_vector(7 downto 0) := x"02";  
     constant def_gtx_lv1a               : std_logic_vector(7 downto 0) := x"03";  
     constant def_gtx_calpulse           : std_logic_vector(7 downto 0) := x"04";  
     constant def_gtx_resync             : std_logic_vector(7 downto 0) := x"05";  
-    constant def_gtx_bc0                : std_logic_vector(7 downto 0) := x"06";  
+    constant def_gtx_bc0                : std_logic_vector(7 downto 0) := x"06";   
+    constant def_gtx_oh_res             : std_logic_vector(7 downto 0) := x"07";  
+    constant def_gtx_v_hres             : std_logic_vector(7 downto 0) := x"08";  
+    constant def_gtx_v_bres             : std_logic_vector(7 downto 0) := x"09"; 
     
 end user_package;
    

@@ -21,7 +21,11 @@ package body user_addr_decode is
 		if    std_match(addr, "010000000000000100000-----------") then sel := ipbus_vfat2_0;
 		elsif std_match(addr, "010000000000000100001-----------") then sel := ipbus_vfat2_1;
 		elsif std_match(addr, "01000000000000010001------------") then sel := ipbus_vfat2_2;
-		elsif std_match(addr, "01000000000000110000000000000000") then sel := ipbus_test;
+		elsif std_match(addr, "01000000000000100000000000000000") then sel := ipbus_tracking_0;
+		elsif std_match(addr, "01000000000000100000000000000001") then sel := ipbus_tracking_1;
+		elsif std_match(addr, "01000000000000100000000000000010") then sel := ipbus_tracking_2;
+		elsif std_match(addr, "01000000000000110000000000000---") then sel := ipbus_fast_signals;
+		elsif std_match(addr, "01000000000001000000000000000000") then sel := ipbus_test;
 --		 elsif std_match(addr, "01000000000000000000000100000000") then sel := user_ipb_timer; -- xx
 		--              addr, "1-------------------------------" is reserved (wishbone fabric)
 		else	

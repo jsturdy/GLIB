@@ -21,7 +21,6 @@ glib_top.ngd
 Reading NGO file
 "C:/Users/tlenzi/Desktop/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/ipbus_slave/gli
 b_top.ngc" ...
-Loading design module "ipcore_dir/buffer_fifo.ngc"...
 Loading design module "ipcore_dir/chipscope_vio.ngc"...
 Loading design module "ipcore_dir/chipscope_ila.ngc"...
 Loading design module "ipcore_dir/chipscope_icon.ngc"...
@@ -677,6 +676,30 @@ WARNING:NgdBuild:452 - logical net 'N801' has no driver
 WARNING:NgdBuild:452 - logical net 'N802' has no driver
 WARNING:NgdBuild:452 - logical net 'N805' has no driver
 WARNING:NgdBuild:452 - logical net 'N806' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/vfat2_tx_data<31>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/vfat2_tx_data<30>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/regs_tx_data<31>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/regs_tx_data<30>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/vfat2_tx_data<31>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/vfat2_tx_data<30>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/regs_tx_data<31>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/regs_tx_data<30>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/vfat2_tx_data<31>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/vfat2_tx_data<30>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/regs_tx_data<31>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/regs_tx_data<30>'
+   has no driver
 WARNING:NgdBuild:452 - logical net 'system/user_cdce_sync_done_o' has no driver
 WARNING:NgdBuild:452 - logical net 'system/ipb_to_slaves[4]_ipb_strobe' has no
    driver
@@ -1681,9 +1704,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 1059
+  Number of warnings: 1071
 
-Total memory usage is 322652 kilobytes
+Total memory usage is 323804 kilobytes
 
 Writing NGD file "glib_top.ngd" ...
 Total REAL time to NGDBUILD completion:  26 sec

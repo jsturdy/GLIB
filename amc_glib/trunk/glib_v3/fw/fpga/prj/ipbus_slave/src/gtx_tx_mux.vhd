@@ -23,6 +23,9 @@ port(
     vfat2_en_i      : in std_logic;
     vfat2_data_i    : in std_logic_vector(31 downto 0);  
     
+    regs_en_i       : in std_logic;
+    regs_data_i     : in std_logic_vector(31 downto 0);  
+    
     tx_kchar_o      : out std_logic_vector(1 downto 0);
     tx_data_o       : out std_logic_vector(15 downto 0);
    
@@ -107,6 +110,21 @@ begin
                             
                             -- Set the TX data
                             tx_data_o <= def_gtx_vfat2 & x"BC"; 
+                        
+                            -- Change state to send the data
+                            state := 1;
+                            
+                        -- OH Regs core's data is ready
+                        elsif (regs_en_i = '1') then
+                    
+                            -- Get the data
+                            data := regs_data_i;
+                        
+                            -- Set TX kchar
+                            tx_kchar_o <= "01";
+                            
+                            -- Set the TX data
+                            tx_data_o <= def_gtx_oh_regs & x"BC"; 
                         
                             -- Change state to send the data
                             state := 1;

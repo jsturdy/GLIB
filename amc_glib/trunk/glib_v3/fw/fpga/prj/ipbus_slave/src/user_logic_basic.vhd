@@ -338,9 +338,11 @@ begin
         tx_data_o       => tx_data(15 downto 0),
         ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_0),
         ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_0),
+        ipb_ohregs_i    => ipb_mosi_i(ipbus_oh_registers_0),
+        ipb_ohregs_o    => ipb_miso_o(ipbus_oh_registers_0),
         ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_0),
         ipb_tracking_o  => ipb_miso_o(ipbus_tracking_0),
-        fast_signals_i    => (others => '0')
+        fast_signals_i  => (others => '0')
     );
 
     link_tracking_1_inst : entity work.link_tracking
@@ -355,9 +357,11 @@ begin
         tx_data_o       => tx_data(31 downto 16),
         ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_1),
         ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_1),
+        ipb_ohregs_i    => ipb_mosi_i(ipbus_oh_registers_1),
+        ipb_ohregs_o    => ipb_miso_o(ipbus_oh_registers_1),
         ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_1),
         ipb_tracking_o  => ipb_miso_o(ipbus_tracking_1),
-        fast_signals_i    => fast_signals
+        fast_signals_i  => fast_signals
     );
 
     link_tracking_2_inst : entity work.link_tracking
@@ -372,9 +376,11 @@ begin
         tx_data_o       => tx_data(47 downto 32),
         ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_2),
         ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_2),
+        ipb_ohregs_i    => ipb_mosi_i(ipbus_oh_registers_2),
+        ipb_ohregs_o    => ipb_miso_o(ipbus_oh_registers_2),
         ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_2),
         ipb_tracking_o  => ipb_miso_o(ipbus_tracking_2),
-        fast_signals_i    => (others => '0')
+        fast_signals_i  => (others => '0')
     );
     
     ----------------------------------

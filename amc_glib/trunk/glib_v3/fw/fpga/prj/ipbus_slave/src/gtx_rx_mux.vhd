@@ -20,6 +20,9 @@ port(
     
     vfat2_en_o      : out std_logic;
     vfat2_data_o    : out std_logic_vector(31 downto 0);
+    
+    regs_en_o       : out std_logic;
+    regs_data_o     : out std_logic_vector(31 downto 0);
   
     rx_kchar_i      : in std_logic_vector(1 downto 0);
     rx_data_i       : in std_logic_vector(15 downto 0)
@@ -49,6 +52,8 @@ begin
                 
                 vfat2_en_o <= '0';
                 
+                regs_en_o <= '0';
+                
                 selected_core := 0;
                 
                 state := 0;
@@ -69,12 +74,23 @@ begin
                             
                             -- Go to "receive data" state
                             state := 1;
+                        
+                        --OH Regs data packet
+                        elsif (rx_data_i = def_gtx_oh_regs & x"BC") then
+                        
+                            -- Set selected the core
+                            selected_core := 2;
+                            
+                            -- Go to "receive data" state
+                            state := 1;
                             
                         end if;  
                         
                     end if;
                     
                     vfat2_en_o <= '0';
+                    
+                    regs_en_o <= '0';
                    
                 -- Get the first data packet
                 elsif (state = 1) then
@@ -109,6 +125,14 @@ begin
                             -- Strobe
                             vfat2_en_o <= '1';
                         
+                        elsif (selected_core = 2) then
+                        
+                            -- Set the ipbus data
+                            regs_data_o <= data(31 downto 0);
+                        
+                            -- Strobe
+                            regs_en_o <= '1';
+                        
                         end if;
                     
                     end if;
@@ -119,6 +143,8 @@ begin
                 else
                 
                     vfat2_en_o <= '0';
+                    
+                    regs_en_o <= '0';
                 
                     selected_core := 0;
                 

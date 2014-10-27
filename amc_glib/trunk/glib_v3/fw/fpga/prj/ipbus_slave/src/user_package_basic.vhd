@@ -19,7 +19,7 @@ package user_package is
 
 
     --=== ipb slaves =============--
-    constant number_of_ipb_slaves       : positive := 8;
+    constant number_of_ipb_slaves       : positive := 11;
 
     constant ipbus_vfat2_0              : integer := 0;
     constant ipbus_vfat2_1              : integer := 1;
@@ -31,7 +31,11 @@ package user_package is
     
     constant ipbus_fast_signals         : integer := 6;
     
-    constant ipbus_test                 : integer := 7;
+    constant ipbus_oh_registers_0       : integer := 7;
+    constant ipbus_oh_registers_1       : integer := 8;
+    constant ipbus_oh_registers_2       : integer := 9;
+    
+    constant ipbus_test                 : integer := 10;
   
    
     --=== Package types ==========--  
@@ -45,6 +49,7 @@ package user_package is
     constant def_gtx_oh_res             : std_logic_vector(7 downto 0) := x"07";  
     constant def_gtx_v_hres             : std_logic_vector(7 downto 0) := x"08";  
     constant def_gtx_v_bres             : std_logic_vector(7 downto 0) := x"09"; 
+    constant def_gtx_oh_regs            : std_logic_vector(7 downto 0) := x"0A";  
     
 end user_package;
    

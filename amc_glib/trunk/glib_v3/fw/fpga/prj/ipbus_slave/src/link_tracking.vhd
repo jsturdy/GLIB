@@ -34,6 +34,9 @@ port(
 	ipb_vfat2_i     : in ipb_wbus;
 	ipb_vfat2_o     : out ipb_rbus;
     
+	ipb_ohregs_i    : in ipb_wbus;
+	ipb_ohregs_o    : out ipb_rbus;
+    
 	ipb_tracking_i  : in ipb_wbus;
 	ipb_tracking_o  : out ipb_rbus;
     
@@ -50,6 +53,14 @@ architecture Behavioral of link_tracking is
     signal vfat2_tx_data    : std_logic_vector(31 downto 0) := (others => '0');
     signal vfat2_rx_en      : std_logic := '0';
     signal vfat2_rx_data    : std_logic_vector(31 downto 0) := (others => '0');
+         
+    -- OH Regs signals
+    
+    signal regs_tx_en       : std_logic := '0';
+    signal regs_tx_ack      : std_logic := '0';
+    signal regs_tx_data     : std_logic_vector(31 downto 0) := (others => '0');
+    signal regs_rx_en       : std_logic := '0';
+    signal regs_rx_data     : std_logic_vector(31 downto 0) := (others => '0');
     
     -- Tracking signals
     
@@ -62,8 +73,13 @@ begin
     port map(
         gtx_clk_i       => gtx_clk_i,
         reset_i         => reset_i,
+        
         vfat2_en_o      => vfat2_rx_en,
         vfat2_data_o    => vfat2_rx_data,
+        
+        regs_en_o       => regs_rx_en,
+        regs_data_o     => regs_rx_data,
+        
         rx_kchar_i      => rx_kchar_i,
         rx_data_i       => rx_data_i
     );   
@@ -72,10 +88,16 @@ begin
     port map(
         gtx_clk_i       => gtx_clk_i,
         reset_i         => reset_i,
+        
         vfat2_en_i      => vfat2_tx_en,
         vfat2_data_i    => vfat2_tx_data,
+        
+        regs_en_i       => regs_tx_en,
+        regs_data_i     => regs_tx_data,
+        
         tx_kchar_o      => tx_kchar_o,
         tx_data_o       => tx_data_o,
+        
         fast_signals_i  => fast_signals_i
     );  
     
@@ -92,15 +114,37 @@ begin
         rx_data_i       => vfat2_rx_data
     );
     
-    ipb_tracking_inst : entity work.ipb_tracking
+    ipb_ohregs_inst : entity work.ipb_ohregs
+    port map(
+        ipb_clk_i       => ipb_clk_i,
+        gtx_clk_i       => gtx_clk_i,    
+        reset_i         => reset_i,
+        ipb_mosi_i      => ipb_ohregs_i,
+        ipb_miso_o      => ipb_ohregs_o,
+        tx_en_o         => regs_tx_en,
+        tx_data_o       => regs_tx_data,
+        rx_en_i         => regs_rx_en,
+        rx_data_i       => regs_rx_data
+    );
+    
+--    ipb_tracking_inst : entity work.ipb_tracking
+--    port map(
+--        ipb_clk_i   => ipb_clk_i,
+--        gtx_clk_i   => gtx_clk_i,
+--        reset_i     => reset_i,
+--        ipb_mosi_i  => ipb_tracking_i,
+--        ipb_miso_o  => ipb_tracking_o,
+--        rx_en_i     => tracking_rx_en,
+--        rx_data_i   => tracking_rx_data
+--    );
+    
+    ipb_tracking_inst : entity work.ipb_tracking_tmp
     port map(
         ipb_clk_i   => ipb_clk_i,
         gtx_clk_i   => gtx_clk_i,
         reset_i     => reset_i,
         ipb_mosi_i  => ipb_tracking_i,
-        ipb_miso_o  => ipb_tracking_o,
-        rx_en_i     => tracking_rx_en,
-        rx_data_i   => tracking_rx_data
+        ipb_miso_o  => ipb_tracking_o
     );
 
 end Behavioral;

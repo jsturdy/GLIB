@@ -344,7 +344,16 @@ user_wb_regs            80000000    ffffffff     1     1
 
 ***********
 
-testing                 40040000    ffffffff     1     0
+tracking00              40020000    ffffffff     1     0
+tracking01              40020001    ffffffff     1     0
+tracking02              40020002    ffffffff     1     0
+tracking03              40020003    ffffffff     1     0
+tracking04              40020004    ffffffff     1     0
+tracking05              40020005    ffffffff     1     0
+tracking06              40020006    ffffffff     1     0
+
+tracking1               40020001    ffffffff     1     0
+tracking2               40020002    ffffffff     1     0
 
 lv1a                    40030000    ffffffff     1     0
 calpulse                40030001    ffffffff     1     0
@@ -353,6 +362,12 @@ bc0                     40030003    ffffffff     1     0
 oh_reset                40030004    ffffffff     1     0
 vfat2_hreset            40030005    ffffffff     1     0
 vfat2_breset            40030006    ffffffff     1     0
+
+testing                 40040000    ffffffff     1     0
+
+opto0                   40050000    ffffffff     1     1
+opto1                   40050001    ffffffff     1     1
+opto2                   40050002    ffffffff     1     1
 
 ***********
 

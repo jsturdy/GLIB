@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: glib_top.prj
@@ -2326,7 +2326,7 @@ Synthesizing Unit <ipbus_user_fabric>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[8]_ipb_rdata>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[9]_ipb_rdata>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[10]_ipb_rdata>.
-    Set property "KEEP = TRUE" for signal <_n0324>.
+    Set property "KEEP = TRUE" for signal <_n0332>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[0]_ipb_ack>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[0]_ipb_err>.
     Set property "KEEP = TRUE" for signal <ipb_from_slaves[1]_ipb_ack>.
@@ -3830,8 +3830,8 @@ Synthesizing Unit <gtx_tx_mux>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 10-bit adder for signal <kchar_count[9]_GND_558_o_add_10_OUT> created at line 148.
-    Found 16-bit 4-to-1 multiplexer for signal <GND_558_o_GND_558_o_mux_29_OUT> created at line 100.
+    Found 10-bit adder for signal <kchar_count[9]_GND_558_o_add_10_OUT> created at line 150.
+    Found 16-bit 4-to-1 multiplexer for signal <GND_558_o_GND_558_o_mux_29_OUT> created at line 102.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  60 D-type flip-flop(s).
@@ -3868,7 +3868,7 @@ Unit <clock_bridge_data> synthesized.
 
 Synthesizing Unit <ipb_ohregs>.
     Related source file is "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_ohregs.vhd".
-WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr<31:13>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_wdata<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <last_ipb_strobe>.
     Found 32-bit register for signal <tx_data>.
@@ -3876,7 +3876,7 @@ WARNING:Xst:647 - Input <ipb_mosi_i_ipb_wdata<31:8>> is never used. This port wi
     Found 1-bit register for signal <ipb_ack>.
     Found 32-bit register for signal <ipb_data>.
     Found 1-bit register for signal <tx_en>.
-    Found 8-bit comparator equal for signal <rx_data[7]_GND_561_o_equal_11_o> created at line 206
+    Found 8-bit comparator equal for signal <rx_data[7]_GND_561_o_equal_12_o> created at line 206
     Summary:
 	inferred  68 D-type flip-flop(s).
 	inferred   1 Comparator(s).
@@ -3885,25 +3885,23 @@ Unit <ipb_ohregs> synthesized.
 
 Synthesizing Unit <ipb_tracking_tmp>.
     Related source file is "C:\Users\tlenzi\Desktop\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\ipbus_slave\src\ipb_tracking_tmp.vhd".
-WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_wdata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <gtx_clk_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_write> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <last_ipb_strobe>.
-    Found 3-bit register for signal <counter>.
     Found 12-bit register for signal <bc>.
     Found 8-bit register for signal <ec>.
     Found 12-bit register for signal <chipId>.
-    Found 32-bit register for signal <ipb_data>.
     Found 128-bit register for signal <data>.
+    Found 32-bit register for signal <ipb_data>.
     Found 1-bit register for signal <ipb_ack>.
-    Found 12-bit adder for signal <bc[11]_GND_562_o_add_6_OUT> created at line 1241.
-    Found 8-bit adder for signal <ec[7]_GND_562_o_add_7_OUT> created at line 1241.
-    Found 12-bit adder for signal <chipId[11]_GND_562_o_add_8_OUT> created at line 1241.
-    Found 3-bit adder for signal <counter[2]_GND_562_o_add_40_OUT> created at line 126.
+    Found 12-bit adder for signal <bc[11]_GND_562_o_add_1_OUT> created at line 1241.
+    Found 8-bit adder for signal <ec[7]_GND_562_o_add_2_OUT> created at line 1241.
+    Found 12-bit adder for signal <chipId[11]_GND_562_o_add_3_OUT> created at line 1241.
     Summary:
-	inferred   4 Adder/Subtractor(s).
-	inferred 197 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred 194 D-type flip-flop(s).
 	inferred   6 Multiplexer(s).
 Unit <ipb_tracking_tmp> synthesized.
 
@@ -3951,7 +3949,7 @@ Macro Statistics
  4096x8-bit dual-port RAM                              : 2
  8192x32-bit dual-port RAM                             : 2
  8192x8-bit dual-port RAM                              : 8
-# Adders/Subtractors                                   : 133
+# Adders/Subtractors                                   : 130
  1-bit adder                                           : 6
  10-bit adder                                          : 3
  10-bit subtractor                                     : 7
@@ -3967,7 +3965,7 @@ Macro Statistics
  21-bit subtractor                                     : 1
  24-bit adder                                          : 4
  28-bit adder                                          : 5
- 3-bit adder                                           : 6
+ 3-bit adder                                           : 3
  3-bit subtractor                                      : 1
  31-bit adder                                          : 2
  31-bit subtractor                                     : 1
@@ -3983,7 +3981,7 @@ Macro Statistics
  8-bit adder                                           : 8
  8-bit subtractor                                      : 2
  9-bit adder                                           : 8
-# Registers                                            : 1556
+# Registers                                            : 1553
  1-bit register                                        : 938
  10-bit register                                       : 15
  1024-bit register                                     : 1
@@ -3998,7 +3996,7 @@ Macro Statistics
  21-bit register                                       : 17
  24-bit register                                       : 8
  28-bit register                                       : 5
- 3-bit register                                        : 28
+ 3-bit register                                        : 25
  31-bit register                                       : 3
  32-bit register                                       : 99
  336-bit register                                      : 2
@@ -4052,13 +4050,13 @@ Macro Statistics
  20-bit 3-to-1 multiplexer                             : 1
  21-bit 2-to-1 multiplexer                             : 10
  24-bit 2-to-1 multiplexer                             : 4
- 3-bit 2-to-1 multiplexer                              : 74
+ 3-bit 2-to-1 multiplexer                              : 71
  3-bit 3-to-1 multiplexer                              : 1
  3-bit 4-to-1 multiplexer                              : 1
  3-bit 7-to-1 multiplexer                              : 2
  3-bit 8-to-1 multiplexer                              : 2
  31-bit 2-to-1 multiplexer                             : 21
- 32-bit 2-to-1 multiplexer                             : 93
+ 32-bit 2-to-1 multiplexer                             : 96
  32-bit 32-to-1 multiplexer                            : 1
  32-bit 4-to-1 multiplexer                             : 2
  34-bit 2-to-1 multiplexer                             : 2
@@ -4149,15 +4147,15 @@ INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFF
 INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_vfat2_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
 INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_vfat2_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
 INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_ohregs_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
-INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_ohregs_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
+INFO:Xst:2261 - The FF/Latch <tx_data_24> in Unit <ipb_ohregs_inst> is equivalent to the following 6 FFs/Latches, which will be removed : <tx_data_25> <tx_data_26> <tx_data_27> <tx_data_28> <tx_data_30> <tx_data_31> 
 INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_vfat2_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
 INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_vfat2_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
 INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_ohregs_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
-INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_ohregs_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
+INFO:Xst:2261 - The FF/Latch <tx_data_24> in Unit <ipb_ohregs_inst> is equivalent to the following 6 FFs/Latches, which will be removed : <tx_data_25> <tx_data_26> <tx_data_27> <tx_data_28> <tx_data_30> <tx_data_31> 
 INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_vfat2_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
 INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_vfat2_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
 INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_ohregs_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
-INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_ohregs_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
+INFO:Xst:2261 - The FF/Latch <tx_data_24> in Unit <ipb_ohregs_inst> is equivalent to the following 6 FFs/Latches, which will be removed : <tx_data_25> <tx_data_26> <tx_data_27> <tx_data_28> <tx_data_30> <tx_data_31> 
 INFO:Xst:2261 - The FF/Latch <testModeFsm_process.state> in Unit <sramInterfaceIoControl> is equivalent to the following FF/Latch, which will be removed : <bistModeEnable_from_fsm> 
 INFO:Xst:2261 - The FF/Latch <ERRORCOUNTER_O_6> in Unit <bist> is equivalent to the following FF/Latch, which will be removed : <main_process.errorCounter_6> 
 INFO:Xst:2261 - The FF/Latch <ERRORCOUNTER_O_7> in Unit <bist> is equivalent to the following FF/Latch, which will be removed : <main_process.errorCounter_7> 
@@ -4260,10 +4258,6 @@ INFO:Xst:2261 - The FF/Latch <arp_end_addr_1> in Unit <ARP> is equivalent to the
 INFO:Xst:2261 - The FF/Latch <ip_pkt.msk_data_0> in Unit <rx_packet_parser> is equivalent to the following 6 FFs/Latches, which will be removed : <ip_pkt.msk_data_1> <ip_pkt.msk_data_2> <ip_pkt.msk_data_3> <ip_pkt.msk_data_4> <ip_pkt.msk_data_5> <ip_pkt.msk_data_7> 
 INFO:Xst:2261 - The FF/Latch <status_end_addr_1> in Unit <status> is equivalent to the following 8 FFs/Latches, which will be removed : <status_end_addr_2> <status_end_addr_4> <status_end_addr_7> <status_end_addr_8> <status_end_addr_9> <status_end_addr_10> <status_end_addr_11> <status_end_addr_12> 
 INFO:Xst:2261 - The FF/Latch <status_end_addr_0> in Unit <status> is equivalent to the following 3 FFs/Latches, which will be removed : <status_end_addr_3> <status_end_addr_5> <status_end_addr_6> 
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_19> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_18> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_17> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_16> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_15> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_14> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_13> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
@@ -4285,6 +4279,13 @@ WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_36> (without init value) has
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_35> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_34> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_33> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_32> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_31> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_30> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_29> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_28> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_27> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_26> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <status_end_addr_1> (without init value) has a constant value of 0 in block <status>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_pkt.msk_data_0> (without init value) has a constant value of 1 in block <rx_packet_parser>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <arp_end_addr_1> (without init value) has a constant value of 0 in block <ARP>. This FF/Latch will be trimmed during the optimization process.
@@ -4310,38 +4311,39 @@ WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_23> (without init value) has
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_22> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_21> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_20> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_0> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_ohregs_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_19> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_18> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_17> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_16> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_data_24> has a constant value of 0 in block <ipb_ohregs_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_ohregs_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_28> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_27> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_26> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_25> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_24> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_ohregs_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_data_24> has a constant value of 0 in block <ipb_ohregs_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_ohregs_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_28> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_27> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_26> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_25> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_24> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_ohregs_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_ohregs_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_32> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_31> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_30> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_29> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_28> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_27> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_26> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_25> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_24> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_23> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
@@ -4360,6 +4362,17 @@ WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_11> (without init value) has
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_10> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_9> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_8> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_0> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_data_24> has a constant value of 0 in block <ipb_ohregs_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_ohregs_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_28> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_27> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_26> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_25> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_24> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vfat2_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <address_block.addr_int_11> of sequential type is unconnected in block <payload>.
 WARNING:Xst:2677 - Node <address_block.addr_int_12> of sequential type is unconnected in block <payload>.
 WARNING:Xst:2677 - Node <addra_11> of sequential type is unconnected in block <rx_ram_mux>.
@@ -4454,9 +4467,8 @@ The following registers are absorbed into counter <main_process.i>: 1 register o
 Unit <icap_interface_fsm> synthesized (advanced).
 
 Synthesizing (advanced) Unit <ipb_tracking_tmp>.
-The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
-The following registers are absorbed into counter <ec>: 1 register on signal <ec>.
 The following registers are absorbed into accumulator <bc>: 1 register on signal <bc>.
+The following registers are absorbed into counter <ec>: 1 register on signal <ec>.
 The following registers are absorbed into accumulator <chipId>: 1 register on signal <chipId>.
 Unit <ipb_tracking_tmp> synthesized (advanced).
 
@@ -4714,7 +4726,7 @@ Macro Statistics
  7-bit adder                                           : 2
  8-bit adder                                           : 5
  9-bit adder                                           : 8
-# Counters                                             : 69
+# Counters                                             : 66
  1-bit up counter                                      : 4
  10-bit down counter                                   : 2
  11-bit down counter                                   : 2
@@ -4726,7 +4738,6 @@ Macro Statistics
  21-bit up counter                                     : 4
  24-bit up counter                                     : 4
  28-bit up counter                                     : 5
- 3-bit up counter                                      : 3
  32-bit up counter                                     : 2
  4-bit down counter                                    : 1
  4-bit up counter                                      : 13
@@ -4753,7 +4764,7 @@ Macro Statistics
  8-bit comparator equal                                : 14
  8-bit comparator greater                              : 4
  8-bit comparator not equal                            : 14
-# Multiplexers                                         : 3472
+# Multiplexers                                         : 3475
  1-bit 16-to-1 multiplexer                             : 20
  1-bit 2-to-1 multiplexer                              : 2279
  1-bit 3-to-1 multiplexer                              : 18
@@ -4781,7 +4792,7 @@ Macro Statistics
  3-bit 7-to-1 multiplexer                              : 2
  3-bit 8-to-1 multiplexer                              : 2
  31-bit 2-to-1 multiplexer                             : 21
- 32-bit 2-to-1 multiplexer                             : 84
+ 32-bit 2-to-1 multiplexer                             : 87
  32-bit 4-to-1 multiplexer                             : 2
  34-bit 2-to-1 multiplexer                             : 2
  36-bit 2-to-1 multiplexer                             : 20
@@ -4829,6 +4840,11 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_28> has a 
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_29> has a constant value of 0 in block <ipb_ohregs>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_30> has a constant value of 0 in block <ipb_ohregs>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ipb_data_31> has a constant value of 0 in block <ipb_ohregs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_24> has a constant value of 0 in block <ipb_ohregs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_25> has a constant value of 0 in block <ipb_ohregs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_26> has a constant value of 0 in block <ipb_ohregs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_27> has a constant value of 0 in block <ipb_ohregs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_28> has a constant value of 0 in block <ipb_ohregs>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_ohregs>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_31> has a constant value of 0 in block <ipb_ohregs>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_22> (without init value) has a constant value of 0 in block <udp_rarp_block>. This FF/Latch will be trimmed during the optimization process.
@@ -5915,20 +5931,35 @@ WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx
 WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_28> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_27> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_26> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_25> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_24> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_28> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_24> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_25> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_26> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_27> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_28> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <data_30> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_31> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_data_o_31> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <s_data_o_30> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_24> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_25> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_26> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s_data_o_27> (without init value) has a constant value of 0 in block <clock_bridge_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <startErrInj_rr> of sequential type is unconnected in block <bist>.
 WARNING:Xst:2677 - Node <startErrInj_r> of sequential type is unconnected in block <bist>.
 WARNING:Xst:2677 - Node <ERRORCOUNTER_O_8> of sequential type is unconnected in block <bist>.
@@ -6514,30 +6545,30 @@ WARNING:Xst:1293 - FF/Latch <presc.timer_29> has a constant value of 0 in block 
 WARNING:Xst:1293 - FF/Latch <presc.timer_30> has a constant value of 0 in block <eep.i2c_eep>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <master_transactions.sbitcnt_3> has a constant value of 0 in block <eep.i2c_eep>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <master_transactions.rbitcnt_3> has a constant value of 0 in block <eep.i2c_eep>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <chipId_2> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <ec_1> <bc_2> 
+INFO:Xst:2261 - The FF/Latch <chipId_2> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <bc_2> <ec_1> 
 INFO:Xst:2261 - The FF/Latch <chipId_3> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_2> 
 INFO:Xst:2261 - The FF/Latch <chipId_4> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_3> 
 INFO:Xst:2261 - The FF/Latch <chipId_5> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_4> 
 INFO:Xst:2261 - The FF/Latch <chipId_6> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_5> 
 INFO:Xst:2261 - The FF/Latch <chipId_7> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_6> 
 INFO:Xst:2261 - The FF/Latch <chipId_8> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_7> 
-INFO:Xst:2261 - The FF/Latch <chipId_1> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <ec_0> <bc_1> 
-INFO:Xst:2261 - The FF/Latch <chipId_2> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <ec_1> <bc_2> 
+INFO:Xst:2261 - The FF/Latch <chipId_1> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <bc_1> <ec_0> 
+INFO:Xst:2261 - The FF/Latch <chipId_2> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <bc_2> <ec_1> 
 INFO:Xst:2261 - The FF/Latch <chipId_3> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_2> 
 INFO:Xst:2261 - The FF/Latch <chipId_4> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_3> 
 INFO:Xst:2261 - The FF/Latch <chipId_5> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_4> 
 INFO:Xst:2261 - The FF/Latch <chipId_6> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_5> 
 INFO:Xst:2261 - The FF/Latch <chipId_7> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_6> 
 INFO:Xst:2261 - The FF/Latch <chipId_8> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_7> 
-INFO:Xst:2261 - The FF/Latch <chipId_1> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <ec_0> <bc_1> 
-INFO:Xst:2261 - The FF/Latch <chipId_2> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <ec_1> <bc_2> 
+INFO:Xst:2261 - The FF/Latch <chipId_1> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <bc_1> <ec_0> 
+INFO:Xst:2261 - The FF/Latch <chipId_2> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <bc_2> <ec_1> 
 INFO:Xst:2261 - The FF/Latch <chipId_3> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_2> 
 INFO:Xst:2261 - The FF/Latch <chipId_4> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_3> 
 INFO:Xst:2261 - The FF/Latch <chipId_5> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_4> 
 INFO:Xst:2261 - The FF/Latch <chipId_6> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_5> 
 INFO:Xst:2261 - The FF/Latch <chipId_7> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_6> 
 INFO:Xst:2261 - The FF/Latch <chipId_8> in Unit <ipb_tracking_inst> is equivalent to the following FF/Latch, which will be removed : <ec_7> 
-INFO:Xst:2261 - The FF/Latch <chipId_1> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <ec_0> <bc_1> 
+INFO:Xst:2261 - The FF/Latch <chipId_1> in Unit <ipb_tracking_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <bc_1> <ec_0> 
 INFO:Xst:2261 - The FF/Latch <last_ipb_strobe> in Unit <ipb_test_inst> is equivalent to the following FF/Latch, which will be removed : <ipb_ack_0> 
 INFO:Xst:2261 - The FF/Latch <cs_rrr> in Unit <bist> is equivalent to the following FF/Latch, which will be removed : <main_process.addressEnable> 
 INFO:Xst:2261 - The FF/Latch <main_process.errorCounter_1> in Unit <bist> is equivalent to the following FF/Latch, which will be removed : <ERRORCOUNTER_O_1> 
@@ -6776,8 +6807,8 @@ Unit <u2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 12610
- Flip-Flops                                            : 12610
+# Registers                                            : 12571
+ Flip-Flops                                            : 12571
 # Shift Registers                                      : 4
  2-bit shift register                                  : 3
  5-bit shift register                                  : 1
@@ -6803,32 +6834,32 @@ Top Level Output File Name         : glib_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 14861
+# BELS                             : 14876
 #      GND                         : 129
-#      INV                         : 290
+#      INV                         : 287
 #      LUT1                        : 468
-#      LUT2                        : 2483
-#      LUT3                        : 2262
-#      LUT4                        : 1688
-#      LUT5                        : 1739
-#      LUT6                        : 3225
+#      LUT2                        : 2532
+#      LUT3                        : 2224
+#      LUT4                        : 1671
+#      LUT5                        : 1737
+#      LUT6                        : 3252
 #      MUXCY                       : 1142
 #      MUXCY_L                     : 206
 #      MUXF5                       : 2
 #      MUXF6                       : 1
-#      MUXF7                       : 114
+#      MUXF7                       : 113
 #      MUXF8                       : 20
 #      VCC                         : 108
 #      XORCY                       : 984
-# FlipFlops/Latches                : 14218
+# FlipFlops/Latches                : 14179
 #      FD                          : 2581
 #      FDC                         : 1137
 #      FDCE                        : 1101
-#      FDE                         : 4383
+#      FDE                         : 4353
 #      FDP                         : 457
 #      FDPE                        : 48
 #      FDR                         : 1905
-#      FDRE                        : 2383
+#      FDRE                        : 2374
 #      FDS                         : 94
 #      FDSE                        : 117
 #      LDC                         : 10
@@ -6871,19 +6902,19 @@ Selected Device : 6vlx130tff1156-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           14218  out of  160000     8%  
- Number of Slice LUTs:                12585  out of  80000    15%  
-    Number used as Logic:             12155  out of  80000    15%  
+ Number of Slice Registers:           14179  out of  160000     8%  
+ Number of Slice LUTs:                12601  out of  80000    15%  
+    Number used as Logic:             12171  out of  80000    15%  
     Number used as Memory:              430  out of  27840     1%  
        Number used as RAM:               96
        Number used as SRL:              334
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  19325
-   Number with an unused Flip Flop:    5107  out of  19325    26%  
-   Number with an unused LUT:          6740  out of  19325    34%  
-   Number of fully used LUT-FF pairs:  7478  out of  19325    38%  
-   Number of unique control sets:       769
+ Number of LUT Flip Flop pairs used:  19308
+   Number with an unused Flip Flop:    5129  out of  19308    26%  
+   Number with an unused LUT:          6707  out of  19308    34%  
+   Number of fully used LUT-FF pairs:  7472  out of  19308    38%  
+   Number of unique control sets:       766
 
 IO Utilization: 
  Number of IOs:                         698
@@ -6918,7 +6949,7 @@ Clock Information:
 Clock Signal                                                                                                | Clock buffer(FF name)                                             | Load  |
 ------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-------+
 usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                      | BUFG                                                              | 1679  |
-clk125_2_p                                                                                                  | MMCM_ADV:CLKOUT1                                                  | 5664  |
+clk125_2_p                                                                                                  | MMCM_ADV:CLKOUT1                                                  | 5625  |
 usr/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                              | BUFG                                                              | 462   |
 usr/chipscope_icon_inst/CONTROL0<13>(usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
 usr/chipscope_icon_inst/U0/iUPDATE_OUT                                                                      | NONE(usr/chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD)               | 1     |
@@ -6959,7 +6990,7 @@ usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER
 usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)| 72    |
 usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)| 72    |
 usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/N0(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36)| 72    |
-usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)| 20    |
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 20    |
 system/amc_p0_en.amc_p0_eth/N0(system/amc_p0_en.amc_p0_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                 | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                                                                                                              | 1     |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/N1(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                         | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                             | 1     |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/n0017<0>(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                   | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                             | 1     |
@@ -7013,10 +7044,10 @@ Delay:               3.680ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk125_2_p'
-  Clock period: 3.268ns (frequency: 306.038MHz)
-  Total number of paths / destination ports: 26576240 / 12928
+  Clock period: 3.267ns (frequency: 306.075MHz)
+  Total number of paths / destination ports: 29984945 / 12841
 -------------------------------------------------------------------------
-Delay:               3.268ns (Levels of Logic = 5)
+Delay:               3.267ns (Levels of Logic = 5)
   Source:            system/rst/rst_fabric_o (FF)
   Destination:       system/sram2_if/sramInterface/DATA_O_0 (FF)
   Source Clock:      clk125_2_p rising
@@ -7026,7 +7057,7 @@ Delay:               3.268ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q          1183   0.375   0.776  rst_fabric_o (rst_fabric_o)
+     FDPE:C->Q          1174   0.375   0.776  rst_fabric_o (rst_fabric_o)
      end scope: 'system/rst:rst_fabric_o'
      begin scope: 'system/sram2_if:RESET_I'
      begin scope: 'system/sram2_if/sramInterfaceIoControl:IPBUS_RESET_I'
@@ -7036,7 +7067,7 @@ Delay:               3.268ns (Levels of Logic = 5)
      LUT6:I0->O           36   0.068   0.552  _n01471 (_n0147)
      FDRE:R                    0.434          DATA_O_0
     ----------------------------------------
-    Total                      3.268ns (0.945ns logic, 2.323ns route)
+    Total                      3.267ns (0.945ns logic, 2.322ns route)
                                        (28.9% logic, 71.1% route)
 
 =========================================================================
@@ -7184,17 +7215,17 @@ Timing constraint: Default period analysis for Clock 'xpoint1_clk1_p'
   Total number of paths / destination ports: 721 / 26
 -------------------------------------------------------------------------
 Delay:               2.931ns (Levels of Logic = 3)
-  Source:            system/cdce_synch/cdce_control.timer_13 (FF)
+  Source:            system/cdce_synch/cdce_control.timer_1 (FF)
   Destination:       system/cdce_synch/cdce_control.timer_18 (FF)
   Source Clock:      xpoint1_clk1_p rising
   Destination Clock: xpoint1_clk1_p rising
 
-  Data Path: system/cdce_synch/cdce_control.timer_13 to system/cdce_synch/cdce_control.timer_18
+  Data Path: system/cdce_synch/cdce_control.timer_1 to system/cdce_synch/cdce_control.timer_18
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.375   0.792  cdce_control.timer_13 (cdce_control.timer_13)
-     LUT6:I0->O            1   0.068   0.775  GND_464_o_cdce_control.timer[19]_equal_5_o<19>3 (GND_464_o_cdce_control.timer[19]_equal_5_o<19>2)
+     FDC:C->Q              3   0.375   0.792  cdce_control.timer_1 (cdce_control.timer_1)
+     LUT6:I0->O            1   0.068   0.775  GND_464_o_cdce_control.timer[19]_equal_5_o<19>1 (GND_464_o_cdce_control.timer[19]_equal_5_o<19>)
      LUT5:I0->O           22   0.068   0.774  GND_464_o_cdce_control.timer[19]_equal_5_o<19>4 (GND_464_o_cdce_control.timer[19]_equal_5_o)
      LUT5:I1->O            1   0.068   0.000  Mmux_cdce_control.state[1]_cdce_control.timer[19]_wide_mux_13_OUT101 (cdce_control.state[1]_cdce_control.timer[19]_wide_mux_13_OUT<18>)
      FDC:D                     0.011          cdce_control.timer_18
@@ -7711,7 +7742,7 @@ Clock to Setup on destination clock clk125_2_p
                                                                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                                |   12.439|         |         |         |
+clk125_2_p                                                                                                |   12.717|         |         |         |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    3.385|         |         |         |
 system/gbt_phase_monitoring/ttclk_pll/CLK_OUT1                                                            |    2.078|         |         |         |
 system/i2c_s/reset_regs_i[6][0]_AND_773_o                                                                 |         |    2.188|         |         |
@@ -7732,7 +7763,7 @@ Clock to Setup on destination clock system/amc_p0_en.amc_p0_eth/basex/v6_gtxwiza
                                                                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                                |   11.383|         |         |         |
+clk125_2_p                                                                                                |   11.661|         |         |         |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    4.736|         |         |         |
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
@@ -7741,7 +7772,7 @@ Clock to Setup on destination clock system/gbt_phase_monitoring/ttclk_pll/CLK_OU
                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                    |    2.213|         |         |         |
+clk125_2_p                                    |    2.212|         |         |         |
 system/gbt_phase_monitoring/ttclk_pll/CLK_OUT1|    3.597|         |         |         |
 usr/wb_miso_o[0]_wb_err                       |    0.871|         |         |         |
 ----------------------------------------------+---------+---------+---------+---------+
@@ -7815,7 +7846,7 @@ Clock to Setup on destination clock system/phy_en.phy_eth/sgmii/v6_gtxwizard_top
                                                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                          |   11.383|         |         |         |
+clk125_2_p                                                                                          |   11.661|         |         |         |
 system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    4.736|         |         |         |
 ----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
@@ -7876,14 +7907,14 @@ xpoint1_clk1_p |    2.931|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 112.00 secs
-Total CPU time to Xst completion: 111.90 secs
+Total REAL time to Xst completion: 117.00 secs
+Total CPU time to Xst completion: 116.72 secs
  
 --> 
 
-Total memory usage is 478108 kilobytes
+Total memory usage is 472604 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 1755 (   0 filtered)
+Number of warnings : 1790 (   0 filtered)
 Number of infos    :  581 (   0 filtered)
 

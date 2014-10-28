@@ -119,8 +119,8 @@ begin
                     -- Write operation
                     if (ipb_mosi_i.ipb_write = '1') then
 
-                        -- Unused - Read/Write - Chip select
-                        chip_byte := "00" & '0' & ipb_mosi_i.ipb_addr(12 downto 8);
+                        -- Unused - Read/Write - Unused
+                        chip_byte := "00" & '0' & "00000";
                         
                         -- Data
                         data_byte := ipb_mosi_i.ipb_wdata(7 downto 0); 
@@ -129,10 +129,10 @@ begin
                     else
 
                         -- Unused - Read/Write - Chip select
-                        chip_byte := "00" & '1' & ipb_mosi_i.ipb_addr(12 downto 8);
+                        chip_byte := "00" & '1' & "00000";
                         
                         -- Data
-                        data_byte := "00000000";
+                        data_byte := (others => '0');
 
                     end if;
                    

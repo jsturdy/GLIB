@@ -59,8 +59,6 @@ begin
         variable ec                 : unsigned(7 downto 0) := (others => '0');
         variable chipId             : unsigned(11 downto 0) := (others => '0');
         variable data               : unsigned(127 downto 0) := (127 => '1', others => '0');
-        
-        variable counter            : integer range 0 to 7 := 0;
        
     begin
     
@@ -73,8 +71,6 @@ begin
                 
                 last_ipb_strobe := '0';
                 
-                counter := 0;
-                
                 bc := (others => '0');
                 
                 ec := (others => '0');
@@ -86,45 +82,40 @@ begin
                 -- Incomming IPBus request
                 if (last_ipb_strobe = '0' and ipb_mosi_i.ipb_strobe = '1') then
                 
-                    if (counter = 0) then
+                    if (ipb_mosi_i.ipb_addr(3 downto 0) = "0000") then
                     
-                        ipb_data <= "1010" & std_logic_vector(bc) & "1100" & std_logic_vector(ec) & "1111";
-                        
-                    elsif (counter = 1) then
-                    
-                        ipb_data <= "1110" & std_logic_vector(chipId) & std_logic_vector(data(127 downto 112));
-                    
-                    elsif (counter = 2) then
-                    
-                        ipb_data <= std_logic_vector(data(111 downto 80));
-                    
-                    elsif (counter = 3) then
-                    
-                        ipb_data <= std_logic_vector(data(79 downto 48));
-                    
-                    elsif (counter = 4) then
-                    
-                        ipb_data <= std_logic_vector(data(47 downto 16));
-                    
-                    elsif (counter = 5) then
-                    
-                        ipb_data <= std_logic_vector(data(15 downto 0)) & x"AAAA";
-                        
                         bc := bc + 10;
                         ec := ec + 1;
                         chipId := chipId + 2;
                         data := data ror 1;
-                    
-                    end if;
-                    
-                    if (counter = 5) then
-                    
-                        counter := 0;
                         
-                    else
-                    
-                        counter := counter + 1;
+                        ipb_data <= (others => '0');
                         
+                    elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0001") then
+                    
+                        ipb_data <= "1010" & std_logic_vector(bc) & "1100" & std_logic_vector(ec) & "1111";
+                        
+                    elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0010") then
+                    
+                        ipb_data <= "1110" & std_logic_vector(chipId) & std_logic_vector(data(127 downto 112));
+                        
+                    elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0011") then
+                    
+                        ipb_data <= std_logic_vector(data(111 downto 80));
+                        
+                    elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0100") then
+                    
+                        ipb_data <= std_logic_vector(data(79 downto 48));
+                        
+                    elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0101") then
+                    
+                        ipb_data <= std_logic_vector(data(47 downto 16));
+                        
+                    elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0110") then
+                    
+                        ipb_data <= std_logic_vector(data(15 downto 0)) & x"AAAA";
+                        
+                    
                     end if;
                    
                     ipb_ack <= '1';

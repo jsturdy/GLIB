@@ -17,6 +17,7 @@ use work.user_package.all;
 
 entity gtx_tx_mux is
 port(
+
     gtx_clk_i       : in std_logic;
     reset_i         : in std_logic;
     
@@ -24,12 +25,13 @@ port(
     vfat2_data_i    : in std_logic_vector(31 downto 0);  
     
     regs_en_i       : in std_logic;
-    regs_data_i     : in std_logic_vector(31 downto 0);  
+    regs_data_i     : in std_logic_vector(31 downto 0);
+   
+    fast_signals_i  : in std_logic_vector(6 downto 0);
     
     tx_kchar_o      : out std_logic_vector(1 downto 0);
-    tx_data_o       : out std_logic_vector(15 downto 0);
-   
-    fast_signals_i  : in std_logic_vector(6 downto 0)
+    tx_data_o       : out std_logic_vector(15 downto 0)
+    
 );
 end gtx_tx_mux;
 

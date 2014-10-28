@@ -15,6 +15,7 @@ use work.user_package.all;
 
 entity gtx_rx_mux is
 port(
+
     gtx_clk_i       : in std_logic;
     reset_i         : in std_logic;
     
@@ -26,6 +27,7 @@ port(
   
     rx_kchar_i      : in std_logic_vector(1 downto 0);
     rx_data_i       : in std_logic_vector(15 downto 0)
+    
 );
 end gtx_rx_mux;
 
@@ -120,7 +122,7 @@ begin
                         if (selected_core = 1) then
                         
                             -- Set the ipbus data
-                            vfat2_data_o <= data(31 downto 0);
+                            vfat2_data_o <= data;
                         
                             -- Strobe
                             vfat2_en_o <= '1';
@@ -128,7 +130,7 @@ begin
                         elsif (selected_core = 2) then
                         
                             -- Set the ipbus data
-                            regs_data_o <= data(31 downto 0);
+                            regs_data_o <= data;
                         
                             -- Strobe
                             regs_en_o <= '1';

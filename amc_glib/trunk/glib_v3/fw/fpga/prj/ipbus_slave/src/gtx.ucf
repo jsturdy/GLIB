@@ -697,6 +697,9 @@ TIMESPEC TS_gtx_clk = PERIOD "gtx_clk" 6.25 ns;
 NET "usr/gtx_wrapper_inst/gtx0_tx_out_clk" TNM_NET = "gtx0_tx_out_clk";
 TIMESPEC TS_gtx0_tx_out_clk = PERIOD "gtx0_tx_out_clk" 6.25 ns;
 
+NET "usr/gtx_clk" TNM_NET = "usr_gtx_clk";
+TIMESPEC TS_usr_gtx_clk = PERIOD "usr_gtx_clk" 6.25 ns;
+
 # MGT QUAD 113 - REFCLK0
 NET "cdce_out1_n" LOC = AD5;
 NET "cdce_out1_p" LOC = AD6;

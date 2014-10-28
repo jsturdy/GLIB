@@ -81,6 +81,6 @@ begin
   
     ipb_miso_o.ipb_err <= '0';
     ipb_miso_o.ipb_ack <= ipb_ack(SIZE - 1);
-    ipb_miso_o.ipb_rdata <= x"20141022";
+    ipb_miso_o.ipb_rdata <= x"20141028";
                             
 end rtl;

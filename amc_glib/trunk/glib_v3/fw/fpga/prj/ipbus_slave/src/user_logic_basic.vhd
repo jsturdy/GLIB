@@ -252,54 +252,54 @@ begin
     -- ChipScope                    --
     ---------------------------------- 
     
-    chipscope_icon_inst : entity work.chipscope_icon
-    port map(
-        CONTROL0    => cs_control_0,
-        CONTROL1    => cs_control_1
-    );    
-    
-    chipscope_vio_inst : entity work.chipscope_vio
-    port map(
-        CONTROL     => cs_control_1,
-        CLK         => gtx_clk,
-        ASYNC_OUT   => cs_async_out,
-        SYNC_OUT    => cs_sync_out
-    );
-
-    chipscope_ila_inst : entity work.chipscope_ila
-    port map(
-        CONTROL => cs_control_0,
-        CLK     => gtx_clk,
-        TRIG0   => cs_trigger_0,
-        TRIG1   => cs_trigger_1,
-        TRIG2   => cs_trigger_2,
-        TRIG3   => cs_trigger_3,
-        TRIG4   => cs_trigger_4,
-        TRIG5   => cs_trigger_5,
-        TRIG6   => cs_trigger_6,
-        TRIG7   => cs_trigger_7,
-        TRIG8   => cs_trigger_8,
-        TRIG9   => cs_trigger_9,
-        TRIG10  => cs_trigger_10,
-        TRIG11  => cs_trigger_11,
-        TRIG12  => cs_trigger_12,
-        TRIG13  => cs_trigger_13
-    );    
-    
-    cs_trigger_0 <= (others => '0');
-    cs_trigger_1 <= (others => '0');
-    cs_trigger_2 <= (others => '0');
-    cs_trigger_3 <= (others => '0');
-    cs_trigger_4 <= tx_data(31 downto 16);
-    cs_trigger_5 <= tx_kchar(3 downto 2);
-    cs_trigger_6 <= rx_data(31 downto 16);
-    cs_trigger_7 <= rx_kchar(3 downto 2);
-    cs_trigger_8 <= (others => '0');
-    cs_trigger_9 <= (others => '0');
-    cs_trigger_10 <= (others => '0');
-    cs_trigger_11 <= (others => '0');
-    cs_trigger_12 <= (others => '0');
-    cs_trigger_13 <= (others => '0');
+--    chipscope_icon_inst : entity work.chipscope_icon
+--    port map(
+--        CONTROL0    => cs_control_0,
+--        CONTROL1    => cs_control_1
+--    );    
+--    
+--    chipscope_vio_inst : entity work.chipscope_vio
+--    port map(
+--        CONTROL     => cs_control_1,
+--        CLK         => gtx_clk,
+--        ASYNC_OUT   => cs_async_out,
+--        SYNC_OUT    => cs_sync_out
+--    );
+--
+--    chipscope_ila_inst : entity work.chipscope_ila
+--    port map(
+--        CONTROL => cs_control_0,
+--        CLK     => gtx_clk,
+--        TRIG0   => cs_trigger_0,
+--        TRIG1   => cs_trigger_1,
+--        TRIG2   => cs_trigger_2,
+--        TRIG3   => cs_trigger_3,
+--        TRIG4   => cs_trigger_4,
+--        TRIG5   => cs_trigger_5,
+--        TRIG6   => cs_trigger_6,
+--        TRIG7   => cs_trigger_7,
+--        TRIG8   => cs_trigger_8,
+--        TRIG9   => cs_trigger_9,
+--        TRIG10  => cs_trigger_10,
+--        TRIG11  => cs_trigger_11,
+--        TRIG12  => cs_trigger_12,
+--        TRIG13  => cs_trigger_13
+--    );    
+--    
+--    cs_trigger_0 <= (others => '0');
+--    cs_trigger_1 <= (others => '0');
+--    cs_trigger_2 <= (others => '0');
+--    cs_trigger_3 <= (others => '0');
+--    cs_trigger_4 <= tx_data(31 downto 16);
+--    cs_trigger_5 <= tx_kchar(3 downto 2);
+--    cs_trigger_6 <= rx_data(31 downto 16);
+--    cs_trigger_7 <= rx_kchar(3 downto 2);
+--    cs_trigger_8 <= (others => '0');
+--    cs_trigger_9 <= (others => '0');
+--    cs_trigger_10 <= (others => '0');
+--    cs_trigger_11 <= (others => '0');
+--    cs_trigger_12 <= (others => '0');
+--    cs_trigger_13 <= (others => '0');
 
     ----------------------------------
     -- GTX                          --
@@ -326,24 +326,24 @@ begin
     -- Link handles                 --
     ----------------------------------
 
-    link_tracking_0_inst : entity work.link_tracking
-    port map(
-        gtx_clk_i       => gtx_clk,
-        ipb_clk_i       => ipb_clk_i,
-        reset_i         => reset_i,
-        rx_error_i      => rx_error(0),
-        rx_kchar_i      => rx_kchar(1 downto 0),
-        rx_data_i       => rx_data(15 downto 0),
-        tx_kchar_o      => tx_kchar(1 downto 0),
-        tx_data_o       => tx_data(15 downto 0),
-        ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_0),
-        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_0),
-        ipb_ohregs_i    => ipb_mosi_i(ipbus_oh_registers_0),
-        ipb_ohregs_o    => ipb_miso_o(ipbus_oh_registers_0),
-        ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_0),
-        ipb_tracking_o  => ipb_miso_o(ipbus_tracking_0),
-        fast_signals_i  => (others => '0')
-    );
+--    link_tracking_0_inst : entity work.link_tracking
+--    port map(
+--        gtx_clk_i       => gtx_clk,
+--        ipb_clk_i       => ipb_clk_i,
+--        reset_i         => reset_i,
+--        rx_error_i      => rx_error(0),
+--        rx_kchar_i      => rx_kchar(1 downto 0),
+--        rx_data_i       => rx_data(15 downto 0),
+--        tx_kchar_o      => tx_kchar(1 downto 0),
+--        tx_data_o       => tx_data(15 downto 0),
+--        ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_0),
+--        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_0),
+--        ipb_ohregs_i    => ipb_mosi_i(ipbus_oh_registers_0),
+--        ipb_ohregs_o    => ipb_miso_o(ipbus_oh_registers_0),
+--        ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_0),
+--        ipb_tracking_o  => ipb_miso_o(ipbus_tracking_0),
+--        fast_signals_i  => (others => '0')
+--    );
 
     link_tracking_1_inst : entity work.link_tracking
     port map(
@@ -364,24 +364,24 @@ begin
         fast_signals_i  => fast_signals
     );
 
-    link_tracking_2_inst : entity work.link_tracking
-    port map(
-        gtx_clk_i       => gtx_clk,
-        ipb_clk_i       => ipb_clk_i,
-        reset_i         => reset_i,
-        rx_error_i      => rx_error(0),
-        rx_kchar_i      => rx_kchar(5 downto 4),
-        rx_data_i       => rx_data(47 downto 32),
-        tx_kchar_o      => tx_kchar(5 downto 4),
-        tx_data_o       => tx_data(47 downto 32),
-        ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_2),
-        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_2),
-        ipb_ohregs_i    => ipb_mosi_i(ipbus_oh_registers_2),
-        ipb_ohregs_o    => ipb_miso_o(ipbus_oh_registers_2),
-        ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_2),
-        ipb_tracking_o  => ipb_miso_o(ipbus_tracking_2),
-        fast_signals_i  => (others => '0')
-    );
+--    link_tracking_2_inst : entity work.link_tracking
+--    port map(
+--        gtx_clk_i       => gtx_clk,
+--        ipb_clk_i       => ipb_clk_i,
+--        reset_i         => reset_i,
+--        rx_error_i      => rx_error(0),
+--        rx_kchar_i      => rx_kchar(5 downto 4),
+--        rx_data_i       => rx_data(47 downto 32),
+--        tx_kchar_o      => tx_kchar(5 downto 4),
+--        tx_data_o       => tx_data(47 downto 32),
+--        ipb_vfat2_i     => ipb_mosi_i(ipbus_vfat2_2),
+--        ipb_vfat2_o     => ipb_miso_o(ipbus_vfat2_2),
+--        ipb_ohregs_i    => ipb_mosi_i(ipbus_oh_registers_2),
+--        ipb_ohregs_o    => ipb_miso_o(ipbus_oh_registers_2),
+--        ipb_tracking_i  => ipb_mosi_i(ipbus_tracking_2),
+--        ipb_tracking_o  => ipb_miso_o(ipbus_tracking_2),
+--        fast_signals_i  => (others => '0')
+--    );
     
     ----------------------------------
     -- IPBus fast signals           --

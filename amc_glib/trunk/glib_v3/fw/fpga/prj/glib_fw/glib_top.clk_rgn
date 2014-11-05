@@ -1,0 +1,919 @@
+Release 14.7 - reportgen P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Nov 05 15:51:16 2014
+
+
+
+######################################################################################
+# GLOBAL CLOCK NET DISTRIBUTION UCF REPORT:
+#
+# Number of Global Clock Regions : 10
+# Number of Global Clock Networks: 21
+#
+# Clock Region Assignment: SUCCESSFUL
+
+# Location of Clock Components
+INST "system/clkbuf_pllout2" LOC = "BUFGCTRL_X0Y5" ;
+INST "system/clkbuf_pllout5" LOC = "BUFGCTRL_X0Y6" ;
+INST "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce_bufg" LOC = "BUFGCTRL_X0Y23" ;
+INST "system/clkbuf_clk125_2" LOC = "BUFGCTRL_X0Y31" ;
+INST "system/clkbuf_xp1_clk1" LOC = "BUFGCTRL_X0Y1" ;
+INST "system/sram1_if/sramInterfaceIoControl/clk_bufgmux" LOC = "BUFGCTRL_X0Y3" ;
+INST "system/sram2_if/sramInterfaceIoControl/clk_bufgmux" LOC = "BUFGCTRL_X0Y4" ;
+INST "usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<251>_BUFG" LOC = "BUFGCTRL_X0Y26" ;
+INST "usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<252>_BUFG" LOC = "BUFGCTRL_X0Y27" ;
+INST "usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<253>_BUFG" LOC = "BUFGCTRL_X0Y28" ;
+INST "usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<254>_BUFG" LOC = "BUFGCTRL_X0Y29" ;
+INST "usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<255>_BUFG" LOC = "BUFGCTRL_X0Y30" ;
+INST "system/cdce_synch/bufg_mux" LOC = "BUFGCTRL_X0Y2" ;
+INST "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce_bufg" LOC = "BUFGCTRL_X0Y0" ;
+INST "xpoint1_clk1_p" LOC = "J9" ;
+INST "system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/bufr_clk_ds" LOC = "BUFR_X2Y6" ;
+INST "system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds" LOC = "BUFR_X2Y7" ;
+INST "system/phy_en.phy_eth/clkbuf" LOC = "BUFR_X2Y5" ;
+INST "system/amc_p0_en.amc_p0_eth/clkbuf" LOC = "BUFR_X2Y4" ;
+INST "system/mgtbuf_clk125_2" LOC = "IBUFDS_GTXE1_X0Y7" ;
+INST "system/gbt_phase_monitoring/ttclk_pll/clkout1_buf" LOC = "BUFHCE_X1Y34" ;
+INST "system/gbt_phase_monitoring/ttclk_pll/clkf_buf" LOC = "BUFHCE_X1Y35" ;
+INST "system/pll/mmcm_adv_inst" LOC = "MMCM_ADV_X0Y0" ;
+INST "system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst" LOC = "MMCM_ADV_X0Y5" ;
+INST "system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/gtxe1_i" LOC = "GTXE1_X0Y10" ;
+INST "system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/gtxe1_i" LOC = "GTXE1_X0Y9" ;
+
+# system/cdce_synch/clk_from_bufg_mux driven by BUFGCTRL_X0Y2
+NET "system/cdce_synch/clk_from_bufg_mux" TNM_NET = "TN_system/cdce_synch/clk_from_bufg_mux" ;
+TIMEGRP "TN_system/cdce_synch/clk_from_bufg_mux" AREA_GROUP = "CLKAG_system/cdce_synch/clk_from_bufg_mux" ;
+AREA_GROUP "CLKAG_system/cdce_synch/clk_from_bufg_mux" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce driven by BUFGCTRL_X0Y23
+NET "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" TNM_NET = "TN_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" ;
+TIMEGRP "TN_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" AREA_GROUP = "CLKAG_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" ;
+AREA_GROUP "CLKAG_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2  ;
+
+# system/gbt_phase_monitoring/sfp_ttclk_x6_cdce driven by BUFGCTRL_X0Y0
+NET "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" TNM_NET = "TN_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" ;
+TIMEGRP "TN_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" AREA_GROUP = "CLKAG_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" ;
+AREA_GROUP "CLKAG_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" RANGE =   CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2  ;
+
+# system/gbt_phase_monitoring/ttclk_x6 driven by BUFHCE_X1Y34
+NET "system/gbt_phase_monitoring/ttclk_x6" TNM_NET = "TN_system/gbt_phase_monitoring/ttclk_x6" ;
+TIMEGRP "TN_system/gbt_phase_monitoring/ttclk_x6" AREA_GROUP = "CLKAG_system/gbt_phase_monitoring/ttclk_x6" ;
+AREA_GROUP "CLKAG_system/gbt_phase_monitoring/ttclk_x6" RANGE =   CLOCKREGION_X1Y2  ;
+
+# system/glib_pll_clkout_31_25_b driven by MMCM_ADV_X0Y0
+NET "system/glib_pll_clkout_31_25_b" TNM_NET = "TN_system/glib_pll_clkout_31_25_b" ;
+TIMEGRP "TN_system/glib_pll_clkout_31_25_b" AREA_GROUP = "CLKAG_system/glib_pll_clkout_31_25_b" ;
+AREA_GROUP "CLKAG_system/glib_pll_clkout_31_25_b" RANGE =   CLOCKREGION_X0Y0  ;
+
+# system/glib_pll_clkout_31_25_c driven by MMCM_ADV_X0Y0
+NET "system/glib_pll_clkout_31_25_c" TNM_NET = "TN_system/glib_pll_clkout_31_25_c" ;
+TIMEGRP "TN_system/glib_pll_clkout_31_25_c" AREA_GROUP = "CLKAG_system/glib_pll_clkout_31_25_c" ;
+AREA_GROUP "CLKAG_system/glib_pll_clkout_31_25_c" RANGE =   CLOCKREGION_X0Y0  ;
+
+# system/ipb_inv_clk driven by BUFGCTRL_X0Y6
+NET "system/ipb_inv_clk" TNM_NET = "TN_system/ipb_inv_clk" ;
+TIMEGRP "TN_system/ipb_inv_clk" AREA_GROUP = "CLKAG_system/ipb_inv_clk" ;
+AREA_GROUP "CLKAG_system/ipb_inv_clk" RANGE =   CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# system/sram_w[1]_clk driven by BUFGCTRL_X0Y3
+NET "system/sram_w[1]_clk" TNM_NET = "TN_system/sram_w[1]_clk" ;
+TIMEGRP "TN_system/sram_w[1]_clk" AREA_GROUP = "CLKAG_system/sram_w[1]_clk" ;
+AREA_GROUP "CLKAG_system/sram_w[1]_clk" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# system/sram_w[2]_clk driven by BUFGCTRL_X0Y4
+NET "system/sram_w[2]_clk" TNM_NET = "TN_system/sram_w[2]_clk" ;
+TIMEGRP "TN_system/sram_w[2]_clk" AREA_GROUP = "CLKAG_system/sram_w[2]_clk" ;
+AREA_GROUP "CLKAG_system/sram_w[2]_clk" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# system/xpoint1_clk1 driven by BUFGCTRL_X0Y1
+NET "system/xpoint1_clk1" TNM_NET = "TN_system/xpoint1_clk1" ;
+TIMEGRP "TN_system/xpoint1_clk1" AREA_GROUP = "CLKAG_system/xpoint1_clk1" ;
+AREA_GROUP "CLKAG_system/xpoint1_clk1" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# user_clk125_2_bufg driven by BUFGCTRL_X0Y31
+NET "user_clk125_2_bufg" TNM_NET = "TN_user_clk125_2_bufg" ;
+TIMEGRP "TN_user_clk125_2_bufg" AREA_GROUP = "CLKAG_user_clk125_2_bufg" ;
+AREA_GROUP "CLKAG_user_clk125_2_bufg" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# user_ipb_clk driven by BUFGCTRL_X0Y5
+NET "user_ipb_clk" TNM_NET = "TN_user_ipb_clk" ;
+TIMEGRP "TN_user_ipb_clk" AREA_GROUP = "CLKAG_user_ipb_clk" ;
+AREA_GROUP "CLKAG_user_ipb_clk" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<251>_BUFG driven by BUFGCTRL_X0Y26
+NET "usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<251>_BUFG" TNM_NET = "TN_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<251>_BUFG" ;
+TIMEGRP "TN_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<251>_BUFG" AREA_GROUP = "CLKAG_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<251>_BUFG" ;
+AREA_GROUP "CLKAG_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<251>_BUFG" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<252>_BUFG driven by BUFGCTRL_X0Y27
+NET "usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<252>_BUFG" TNM_NET = "TN_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<252>_BUFG" ;
+TIMEGRP "TN_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<252>_BUFG" AREA_GROUP = "CLKAG_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<252>_BUFG" ;
+AREA_GROUP "CLKAG_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<252>_BUFG" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<253>_BUFG driven by BUFGCTRL_X0Y28
+NET "usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<253>_BUFG" TNM_NET = "TN_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<253>_BUFG" ;
+TIMEGRP "TN_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<253>_BUFG" AREA_GROUP = "CLKAG_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<253>_BUFG" ;
+AREA_GROUP "CLKAG_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<253>_BUFG" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<254>_BUFG driven by BUFGCTRL_X0Y29
+NET "usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<254>_BUFG" TNM_NET = "TN_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<254>_BUFG" ;
+TIMEGRP "TN_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<254>_BUFG" AREA_GROUP = "CLKAG_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<254>_BUFG" ;
+AREA_GROUP "CLKAG_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<254>_BUFG" RANGE =   CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<255>_BUFG driven by BUFGCTRL_X0Y30
+NET "usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<255>_BUFG" TNM_NET = "TN_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<255>_BUFG" ;
+TIMEGRP "TN_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<255>_BUFG" AREA_GROUP = "CLKAG_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<255>_BUFG" ;
+AREA_GROUP "CLKAG_usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<255>_BUFG" RANGE =   CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# NOTE: 
+# This report is provided to help reproduce successful clock-region 
+# assignments. The report provides range constraints for all global 
+# clock networks, in a format that is directly usable in ucf files. 
+#
+#END of Global Clock Net Distribution UCF Constraints
+######################################################################################
+
+
+######################################################################################
+GLOBAL CLOCK NET LOADS DISTRIBUTION REPORT:
+
+Number of Global Clock Regions : 10
+Number of Global Clock Networks: 21
+
+Clock Region Assignment: SUCCESSFUL
+
+Clock-Region: <CLOCKREGION_X0Y0> 
+ key resource utilizations (used/available): global-clocks - 6/12 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     72 |      2 |      0 |     80 |     80 |     80 |     48 |      0 |      0 |      0 |      2 |   5440 |  17920 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/cdce_synch/clk_from_bufg_mux
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |system/glib_pll_clkout_31_25_b
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |system/glib_pll_clkout_31_25_c
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    112 |system/sram_w[1]_clk
+      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |user_clk125_2_bufg
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |    827 |user_ipb_clk
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |    948 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 20
+List of local clocks in this region:
+   system/spi/reset_i_cpol_i_AND_934_o driven by SLICE_X39Y34 
+   system/i2c_s/reset_regs_i[6][0]_AND_773_o driven by SLICE_X40Y39 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<112> driven by SLICE_X30Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<120> driven by SLICE_X31Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<113> driven by SLICE_X30Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<121> driven by SLICE_X31Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<114> driven by SLICE_X30Y31 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<122> driven by SLICE_X31Y31 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<130> driven by SLICE_X14Y62 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<115> driven by SLICE_X30Y31 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<123> driven by SLICE_X31Y31 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<116> driven by SLICE_X28Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<124> driven by SLICE_X29Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<117> driven by SLICE_X28Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<125> driven by SLICE_X29Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<141> driven by SLICE_X16Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<118> driven by SLICE_X28Y32 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<126> driven by SLICE_X28Y31 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<119> driven by SLICE_X28Y32 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<127> driven by SLICE_X28Y31 
+
+
+Clock-Region: <CLOCKREGION_X1Y0> 
+ key resource utilizations (used/available): global-clocks - 3/12 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     96 |      0 |      4 |     40 |     40 |     40 |     48 |      0 |      0 |      0 |      1 |   5760 |  16000 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |     37 |system/sram_w[1]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      2 |user_clk125_2_bufg
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    393 |user_ipb_clk
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      2 |    432 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 3
+List of local clocks in this region:
+   MMCM_PHASE_CALIBRATION_ML_LUT2_12_ML_NEW_CLK driven by SLICE_X63Y29 
+   system/pll/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y0 
+   system/pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X63Y23 
+
+
+Clock-Region: <CLOCKREGION_X0Y1> 
+ key resource utilizations (used/available): global-clocks - 5/12 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     72 |      2 |      0 |     80 |     80 |     80 |     48 |      0 |      0 |      0 |      2 |   5440 |  17920 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     23 |system/cdce_synch/clk_from_bufg_mux
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    172 |system/sram_w[1]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    161 |system/sram_w[2]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     33 |user_clk125_2_bufg
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1426 |user_ipb_clk
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1815 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 71
+List of local clocks in this region:
+   system/i2c_s/reset_regs_i[6][1]_AND_771_o driven by SLICE_X53Y42 
+   system/i2c_s/reset_regs_i[6][2]_AND_769_o driven by SLICE_X52Y41 
+   system/i2c_s/reset_regs_i[6][3]_AND_767_o driven by SLICE_X48Y40 
+   system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o driven by SLICE_X43Y44 
+   system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o driven by SLICE_X48Y46 
+   system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o driven by SLICE_X53Y44 
+   system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o driven by SLICE_X52Y46 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<112> driven by SLICE_X30Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<120> driven by SLICE_X31Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<200> driven by SLICE_X28Y84 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<113> driven by SLICE_X30Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<121> driven by SLICE_X31Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<201> driven by SLICE_X28Y84 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<114> driven by SLICE_X30Y31 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<122> driven by SLICE_X31Y31 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<130> driven by SLICE_X14Y62 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<202> driven by SLICE_X28Y85 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<210> driven by SLICE_X60Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<115> driven by SLICE_X30Y31 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<123> driven by SLICE_X31Y31 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<131> driven by SLICE_X14Y62 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<203> driven by SLICE_X28Y85 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<211> driven by SLICE_X60Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<116> driven by SLICE_X28Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<124> driven by SLICE_X29Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<132> driven by SLICE_X15Y62 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<140> driven by SLICE_X16Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<204> driven by SLICE_X30Y85 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<212> driven by SLICE_X58Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<220> driven by SLICE_X56Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<117> driven by SLICE_X28Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<125> driven by SLICE_X29Y30 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<133> driven by SLICE_X15Y62 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<141> driven by SLICE_X16Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<205> driven by SLICE_X30Y85 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<213> driven by SLICE_X58Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<221> driven by SLICE_X56Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<118> driven by SLICE_X28Y32 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<126> driven by SLICE_X28Y31 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<134> driven by SLICE_X15Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<142> driven by SLICE_X17Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<206> driven by SLICE_X26Y87 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<214> driven by SLICE_X59Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<222> driven by SLICE_X58Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<119> driven by SLICE_X28Y32 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<127> driven by SLICE_X28Y31 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<135> driven by SLICE_X15Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<143> driven by SLICE_X17Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<207> driven by SLICE_X26Y87 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<215> driven by SLICE_X59Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<223> driven by SLICE_X58Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<128> driven by SLICE_X16Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<136> driven by SLICE_X17Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<208> driven by SLICE_X56Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<216> driven by SLICE_X56Y103 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<129> driven by SLICE_X16Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<137> driven by SLICE_X17Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<209> driven by SLICE_X56Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<217> driven by SLICE_X56Y103 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<138> driven by SLICE_X18Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<218> driven by SLICE_X57Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<139> driven by SLICE_X18Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<219> driven by SLICE_X57Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<192> driven by SLICE_X28Y88 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<193> driven by SLICE_X28Y88 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<194> driven by SLICE_X30Y89 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<195> driven by SLICE_X30Y89 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<196> driven by SLICE_X32Y90 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<197> driven by SLICE_X32Y90 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<198> driven by SLICE_X31Y85 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<199> driven by SLICE_X31Y85 
+
+
+Clock-Region: <CLOCKREGION_X1Y1> 
+ key resource utilizations (used/available): global-clocks - 4/12 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     84 |      0 |      4 |     40 |     40 |     40 |     48 |      0 |      0 |      1 |      1 |   5600 |  15040 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    116 |system/sram_w[1]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     21 |system/sram_w[2]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |user_clk125_2_bufg
+     19 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     48 |    601 |user_ipb_clk
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     19 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     48 |    739 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 2
+List of regional clocks in this region:
+   system/mac_clk<2> driven by BUFR_X2Y5 
+   system/mac_clk<0> driven by BUFR_X2Y4 
+
+Number of local clocks in this region: 0
+
+
+Clock-Region: <CLOCKREGION_X0Y2> 
+ key resource utilizations (used/available): global-clocks - 7/12 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     72 |      2 |      0 |     80 |     80 |     80 |     48 |     16 |      0 |      0 |      2 |   5440 |  14080 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/gbt_phase_monitoring/ttclk_pll/clkfbout_buf
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |system/glib_pll_clkout_31_25_a
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |system/glib_pll_clkout_31_25_d_inv
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    144 |system/sram_w[2]_clk
+      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/xpoint1_clk1
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |user_clk125_2_bufg
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |   1265 |user_ipb_clk
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      2 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |     12 |   1409 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 97
+List of local clocks in this region:
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<96> driven by SLICE_X10Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<100> driven by SLICE_X12Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<97> driven by SLICE_X10Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<101> driven by SLICE_X12Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<102> driven by SLICE_X14Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<110> driven by SLICE_X21Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<98> driven by SLICE_X10Y104 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<99> driven by SLICE_X10Y104 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<103> driven by SLICE_X14Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<111> driven by SLICE_X21Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<104> driven by SLICE_X18Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<200> driven by SLICE_X28Y84 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<105> driven by SLICE_X18Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<201> driven by SLICE_X28Y84 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<106> driven by SLICE_X19Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<130> driven by SLICE_X14Y62 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<202> driven by SLICE_X28Y85 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<210> driven by SLICE_X60Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<107> driven by SLICE_X19Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<131> driven by SLICE_X14Y62 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<203> driven by SLICE_X28Y85 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<211> driven by SLICE_X60Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<108> driven by SLICE_X20Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<132> driven by SLICE_X15Y62 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<140> driven by SLICE_X16Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<204> driven by SLICE_X30Y85 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<212> driven by SLICE_X58Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<220> driven by SLICE_X56Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<109> driven by SLICE_X20Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<133> driven by SLICE_X15Y62 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<141> driven by SLICE_X16Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<205> driven by SLICE_X30Y85 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<213> driven by SLICE_X58Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<221> driven by SLICE_X56Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<134> driven by SLICE_X15Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<142> driven by SLICE_X17Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<150> driven by SLICE_X10Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<206> driven by SLICE_X26Y87 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<214> driven by SLICE_X59Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<222> driven by SLICE_X58Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<230> driven by SLICE_X57Y125 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<135> driven by SLICE_X15Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<143> driven by SLICE_X17Y63 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<151> driven by SLICE_X10Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<207> driven by SLICE_X26Y87 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<215> driven by SLICE_X59Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<223> driven by SLICE_X58Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<231> driven by SLICE_X57Y125 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<128> driven by SLICE_X16Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<136> driven by SLICE_X17Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<144> driven by SLICE_X6Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<152> driven by SLICE_X15Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<208> driven by SLICE_X56Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<216> driven by SLICE_X56Y103 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<224> driven by SLICE_X56Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<232> driven by SLICE_X56Y126 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<129> driven by SLICE_X16Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<137> driven by SLICE_X17Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<145> driven by SLICE_X6Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<153> driven by SLICE_X15Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<209> driven by SLICE_X56Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<217> driven by SLICE_X56Y103 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<225> driven by SLICE_X56Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<233> driven by SLICE_X56Y126 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<138> driven by SLICE_X18Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<146> driven by SLICE_X12Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<154> driven by SLICE_X14Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<218> driven by SLICE_X57Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<226> driven by SLICE_X56Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<234> driven by SLICE_X56Y128 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<139> driven by SLICE_X18Y65 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<147> driven by SLICE_X12Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<155> driven by SLICE_X14Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<219> driven by SLICE_X57Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<227> driven by SLICE_X56Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<235> driven by SLICE_X56Y128 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<148> driven by SLICE_X16Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<156> driven by SLICE_X22Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<228> driven by SLICE_X57Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<236> driven by SLICE_X57Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<149> driven by SLICE_X16Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<157> driven by SLICE_X22Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<229> driven by SLICE_X57Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<237> driven by SLICE_X57Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<158> driven by SLICE_X18Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<238> driven by SLICE_X56Y131 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<159> driven by SLICE_X18Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<239> driven by SLICE_X56Y131 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<192> driven by SLICE_X28Y88 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<193> driven by SLICE_X28Y88 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<194> driven by SLICE_X30Y89 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<195> driven by SLICE_X30Y89 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<196> driven by SLICE_X32Y90 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<197> driven by SLICE_X32Y90 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<198> driven by SLICE_X31Y85 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<199> driven by SLICE_X31Y85 
+   system/gbt_phase_monitoring/ttclk_pll/clkfbout driven by MMCM_ADV_X0Y5 
+
+
+Clock-Region: <CLOCKREGION_X1Y2> 
+ key resource utilizations (used/available): global-clocks - 6/12 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     84 |      0 |      4 |     40 |     40 |     40 |     48 |      0 |      2 |      0 |      1 |   5760 |  16000 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      3 |      1 |system/gbt_phase_monitoring/sfp_ttclk_x6_cdce
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     72 |    106 |system/gbt_phase_monitoring/ttclk_x6
+      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |    111 |system/sram_w[2]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      3 |     31 |user_clk125_2_bufg
+      7 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    776 |user_ipb_clk
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      7 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     78 |   1026 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 4
+List of regional clocks in this region:
+   system/mac_clk<2> driven by BUFR_X2Y5 
+   system/mac_clk<0> driven by BUFR_X2Y4 
+   system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/clk_ds_i driven by BUFR_X2Y6 
+   system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/clk_ds_i driven by BUFR_X2Y7 
+
+Number of local clocks in this region: 21
+List of local clocks in this region:
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<210> driven by SLICE_X60Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<211> driven by SLICE_X60Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<212> driven by SLICE_X58Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<220> driven by SLICE_X56Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<213> driven by SLICE_X58Y98 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<221> driven by SLICE_X56Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<214> driven by SLICE_X59Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<222> driven by SLICE_X58Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<215> driven by SLICE_X59Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<223> driven by SLICE_X58Y99 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<208> driven by SLICE_X56Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<216> driven by SLICE_X56Y103 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<232> driven by SLICE_X56Y126 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<209> driven by SLICE_X56Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<217> driven by SLICE_X56Y103 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<218> driven by SLICE_X57Y101 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<219> driven by SLICE_X57Y101 
+   MMCM_PHASE_CALIBRATION_ML_LUT2_4_ML_NEW_CLK driven by SLICE_X60Y108 
+   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y5 
+   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X60Y108 
+   user_clk125_2 driven by IBUFDS_GTXE1_X0Y7 
+
+
+Clock-Region: <CLOCKREGION_X0Y3> 
+ key resource utilizations (used/available): global-clocks - 1/12 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     72 |      2 |      0 |     80 |     80 |     80 |     48 |     16 |      0 |      0 |      2 |   5440 |  14080 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |   1264 |user_ipb_clk
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |   1264 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 81
+List of local clocks in this region:
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<80> driven by SLICE_X18Y170 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<81> driven by SLICE_X18Y170 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<82> driven by SLICE_X20Y169 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<90> driven by SLICE_X18Y169 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<83> driven by SLICE_X20Y169 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<91> driven by SLICE_X18Y169 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<84> driven by SLICE_X20Y168 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<92> driven by SLICE_X18Y167 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<85> driven by SLICE_X20Y168 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<93> driven by SLICE_X18Y167 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<0> driven by SLICE_X54Y160 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<1> driven by SLICE_X54Y160 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<2> driven by SLICE_X56Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<3> driven by SLICE_X56Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<4> driven by SLICE_X56Y157 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<86> driven by SLICE_X22Y166 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<5> driven by SLICE_X56Y157 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<94> driven by SLICE_X23Y166 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<6> driven by SLICE_X57Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<7> driven by SLICE_X57Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<8> driven by SLICE_X57Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<9> driven by SLICE_X57Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<87> driven by SLICE_X22Y166 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<95> driven by SLICE_X23Y166 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<88> driven by SLICE_X22Y167 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<89> driven by SLICE_X22Y167 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<106> driven by SLICE_X19Y102 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<10> driven by SLICE_X56Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<150> driven by SLICE_X10Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<11> driven by SLICE_X56Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<230> driven by SLICE_X57Y125 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<12> driven by SLICE_X57Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<13> driven by SLICE_X57Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<14> driven by SLICE_X59Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<15> driven by SLICE_X59Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<151> driven by SLICE_X10Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<231> driven by SLICE_X57Y125 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<144> driven by SLICE_X6Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<152> driven by SLICE_X15Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<160> driven by SLICE_X24Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<224> driven by SLICE_X56Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<232> driven by SLICE_X56Y126 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<145> driven by SLICE_X6Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<153> driven by SLICE_X15Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<161> driven by SLICE_X24Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<225> driven by SLICE_X56Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<233> driven by SLICE_X56Y126 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<146> driven by SLICE_X12Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<154> driven by SLICE_X14Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<162> driven by SLICE_X26Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<170> driven by SLICE_X24Y146 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<226> driven by SLICE_X56Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<234> driven by SLICE_X56Y128 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<147> driven by SLICE_X12Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<155> driven by SLICE_X14Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<163> driven by SLICE_X26Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<171> driven by SLICE_X24Y146 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<227> driven by SLICE_X56Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<235> driven by SLICE_X56Y128 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<148> driven by SLICE_X16Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<156> driven by SLICE_X22Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<164> driven by SLICE_X28Y147 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<172> driven by SLICE_X25Y146 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<228> driven by SLICE_X57Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<236> driven by SLICE_X57Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<149> driven by SLICE_X16Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<157> driven by SLICE_X22Y129 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<165> driven by SLICE_X28Y147 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<173> driven by SLICE_X25Y146 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<229> driven by SLICE_X57Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<237> driven by SLICE_X57Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<158> driven by SLICE_X18Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<166> driven by SLICE_X30Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<174> driven by SLICE_X30Y146 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<238> driven by SLICE_X56Y131 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<159> driven by SLICE_X18Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<167> driven by SLICE_X30Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<175> driven by SLICE_X30Y146 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<239> driven by SLICE_X56Y131 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<168> driven by SLICE_X32Y146 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<169> driven by SLICE_X32Y146 
+
+
+Clock-Region: <CLOCKREGION_X1Y3> 
+ key resource utilizations (used/available): global-clocks - 1/12 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     84 |      0 |      4 |     40 |     40 |     40 |     48 |      0 |      0 |      1 |      1 |   5600 |  15040 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      6 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1049 |user_ipb_clk
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      6 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1049 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 1
+List of regional clocks in this region:
+   system/mac_clk<2> driven by BUFR_X2Y5 
+
+Number of local clocks in this region: 53
+List of local clocks in this region:
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<0> driven by SLICE_X54Y160 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<1> driven by SLICE_X54Y160 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<2> driven by SLICE_X56Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<3> driven by SLICE_X56Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<4> driven by SLICE_X56Y157 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<5> driven by SLICE_X56Y157 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<6> driven by SLICE_X57Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<7> driven by SLICE_X57Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<8> driven by SLICE_X57Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<9> driven by SLICE_X57Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<10> driven by SLICE_X56Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<11> driven by SLICE_X56Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<230> driven by SLICE_X57Y125 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<12> driven by SLICE_X57Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<13> driven by SLICE_X57Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<14> driven by SLICE_X59Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<15> driven by SLICE_X59Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<31> driven by SLICE_X81Y171 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<26> driven by SLICE_X80Y170 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<231> driven by SLICE_X57Y125 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<19> driven by SLICE_X82Y171 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<27> driven by SLICE_X80Y170 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<28> driven by SLICE_X80Y169 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<224> driven by SLICE_X56Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<232> driven by SLICE_X56Y126 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<225> driven by SLICE_X56Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<233> driven by SLICE_X56Y126 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<226> driven by SLICE_X56Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<234> driven by SLICE_X56Y128 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<227> driven by SLICE_X56Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<235> driven by SLICE_X56Y128 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<180> driven by SLICE_X88Y143 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<228> driven by SLICE_X57Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<236> driven by SLICE_X57Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<181> driven by SLICE_X88Y143 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<229> driven by SLICE_X57Y130 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<237> driven by SLICE_X57Y127 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<182> driven by SLICE_X88Y142 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<190> driven by SLICE_X84Y140 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<238> driven by SLICE_X56Y131 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<183> driven by SLICE_X88Y142 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<191> driven by SLICE_X84Y140 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<239> driven by SLICE_X56Y131 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<176> driven by SLICE_X83Y144 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<184> driven by SLICE_X82Y139 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<177> driven by SLICE_X83Y144 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<185> driven by SLICE_X82Y139 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<178> driven by SLICE_X83Y145 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<186> driven by SLICE_X83Y139 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<179> driven by SLICE_X83Y145 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<187> driven by SLICE_X83Y139 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<188> driven by SLICE_X80Y141 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<189> driven by SLICE_X80Y141 
+
+
+Clock-Region: <CLOCKREGION_X0Y4> 
+ key resource utilizations (used/available): global-clocks - 5/12 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     72 |      2 |      0 |     80 |     80 |     80 |     48 |      0 |      0 |      0 |      2 |   5440 |  17920 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1630 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<252>_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<253>_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<254>_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<255>_BUFG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1646 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 82
+List of local clocks in this region:
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<64> driven by SLICE_X24Y192 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<72> driven by SLICE_X23Y191 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<80> driven by SLICE_X18Y170 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<65> driven by SLICE_X24Y192 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<73> driven by SLICE_X23Y191 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<81> driven by SLICE_X18Y170 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<66> driven by SLICE_X26Y191 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<74> driven by SLICE_X22Y191 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<82> driven by SLICE_X20Y169 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<90> driven by SLICE_X18Y169 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<67> driven by SLICE_X26Y191 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<75> driven by SLICE_X22Y191 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<83> driven by SLICE_X20Y169 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<91> driven by SLICE_X18Y169 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<68> driven by SLICE_X26Y190 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<76> driven by SLICE_X24Y189 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<84> driven by SLICE_X20Y168 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<92> driven by SLICE_X18Y167 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<69> driven by SLICE_X26Y190 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<77> driven by SLICE_X24Y189 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<85> driven by SLICE_X20Y168 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<93> driven by SLICE_X18Y167 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<0> driven by SLICE_X54Y160 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<1> driven by SLICE_X54Y160 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<2> driven by SLICE_X56Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<3> driven by SLICE_X56Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<78> driven by SLICE_X26Y189 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<4> driven by SLICE_X56Y157 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<86> driven by SLICE_X22Y166 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<5> driven by SLICE_X56Y157 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<94> driven by SLICE_X23Y166 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<6> driven by SLICE_X57Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<7> driven by SLICE_X57Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<8> driven by SLICE_X57Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<9> driven by SLICE_X57Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<79> driven by SLICE_X26Y189 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<87> driven by SLICE_X22Y166 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<95> driven by SLICE_X23Y166 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<88> driven by SLICE_X22Y167 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<89> driven by SLICE_X22Y167 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<10> driven by SLICE_X56Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<11> driven by SLICE_X56Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<12> driven by SLICE_X57Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<13> driven by SLICE_X57Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<14> driven by SLICE_X59Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<15> driven by SLICE_X59Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<32> driven by SLICE_X46Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<40> driven by SLICE_X44Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<33> driven by SLICE_X46Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<41> driven by SLICE_X44Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<34> driven by SLICE_X46Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<42> driven by SLICE_X46Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<35> driven by SLICE_X46Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<43> driven by SLICE_X46Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<36> driven by SLICE_X47Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<44> driven by SLICE_X48Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<37> driven by SLICE_X47Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<45> driven by SLICE_X48Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<38> driven by SLICE_X48Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<46> driven by SLICE_X46Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<70> driven by SLICE_X22Y192 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<160> driven by SLICE_X24Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<240> driven by SLICE_X66Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<39> driven by SLICE_X48Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<47> driven by SLICE_X46Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<71> driven by SLICE_X22Y192 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<161> driven by SLICE_X24Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<241> driven by SLICE_X66Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<162> driven by SLICE_X26Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<170> driven by SLICE_X24Y146 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<163> driven by SLICE_X26Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<171> driven by SLICE_X24Y146 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<164> driven by SLICE_X28Y147 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<244> driven by SLICE_X64Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<165> driven by SLICE_X28Y147 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<166> driven by SLICE_X30Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<246> driven by SLICE_X65Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<167> driven by SLICE_X30Y148 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<247> driven by SLICE_X65Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<248> driven by SLICE_X65Y182 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<169> driven by SLICE_X32Y146 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<249> driven by SLICE_X65Y182 
+
+
+Clock-Region: <CLOCKREGION_X1Y4> 
+ key resource utilizations (used/available): global-clocks - 6/12 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     84 |      0 |      4 |     40 |     40 |     40 |     48 |      0 |      2 |      0 |      1 |   5760 |  16000 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1748 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     32 |usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<251>_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<252>_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<253>_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<254>_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<255>_BUFG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1892 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 88
+List of local clocks in this region:
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<48> driven by SLICE_X105Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<56> driven by SLICE_X102Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<49> driven by SLICE_X105Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<57> driven by SLICE_X102Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<58> driven by SLICE_X103Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<59> driven by SLICE_X103Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<0> driven by SLICE_X54Y160 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<1> driven by SLICE_X54Y160 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<2> driven by SLICE_X56Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<3> driven by SLICE_X56Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<4> driven by SLICE_X56Y157 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<5> driven by SLICE_X56Y157 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<6> driven by SLICE_X57Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<7> driven by SLICE_X57Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<8> driven by SLICE_X57Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<9> driven by SLICE_X57Y153 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<10> driven by SLICE_X56Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<11> driven by SLICE_X56Y156 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<12> driven by SLICE_X57Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<20> driven by SLICE_X85Y171 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<13> driven by SLICE_X57Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<21> driven by SLICE_X85Y171 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<14> driven by SLICE_X59Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<22> driven by SLICE_X84Y172 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<30> driven by SLICE_X81Y171 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<15> driven by SLICE_X59Y152 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<23> driven by SLICE_X84Y172 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<31> driven by SLICE_X81Y171 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<16> driven by SLICE_X80Y172 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<24> driven by SLICE_X80Y171 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<32> driven by SLICE_X46Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<40> driven by SLICE_X44Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<17> driven by SLICE_X80Y172 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<25> driven by SLICE_X80Y171 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<33> driven by SLICE_X46Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<41> driven by SLICE_X44Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<18> driven by SLICE_X82Y171 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<26> driven by SLICE_X80Y170 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<34> driven by SLICE_X46Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<42> driven by SLICE_X46Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<50> driven by SLICE_X103Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<19> driven by SLICE_X82Y171 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<27> driven by SLICE_X80Y170 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<35> driven by SLICE_X46Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<43> driven by SLICE_X46Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<51> driven by SLICE_X103Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<28> driven by SLICE_X80Y169 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<36> driven by SLICE_X47Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<44> driven by SLICE_X48Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<52> driven by SLICE_X99Y187 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<60> driven by SLICE_X102Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<29> driven by SLICE_X80Y169 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<37> driven by SLICE_X47Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<45> driven by SLICE_X48Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<53> driven by SLICE_X99Y187 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<61> driven by SLICE_X102Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<38> driven by SLICE_X48Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<46> driven by SLICE_X46Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<54> driven by SLICE_X104Y190 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<62> driven by SLICE_X101Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<240> driven by SLICE_X66Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<39> driven by SLICE_X48Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<47> driven by SLICE_X46Y186 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<55> driven by SLICE_X104Y190 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<63> driven by SLICE_X101Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<241> driven by SLICE_X66Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<242> driven by SLICE_X67Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<250> driven by SLICE_X57Y167 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<243> driven by SLICE_X67Y185 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<180> driven by SLICE_X88Y143 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<244> driven by SLICE_X64Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<181> driven by SLICE_X88Y143 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<245> driven by SLICE_X64Y184 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<182> driven by SLICE_X88Y142 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<246> driven by SLICE_X65Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<183> driven by SLICE_X88Y142 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<191> driven by SLICE_X84Y140 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<247> driven by SLICE_X65Y183 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<176> driven by SLICE_X83Y144 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<184> driven by SLICE_X82Y139 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<248> driven by SLICE_X65Y182 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<177> driven by SLICE_X83Y144 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<185> driven by SLICE_X82Y139 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<249> driven by SLICE_X65Y182 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<178> driven by SLICE_X83Y145 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<179> driven by SLICE_X83Y145 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<187> driven by SLICE_X83Y139 
+   usr/ipb_glib_registers_inst/register_select[7]_Decoder_2_OUT<189> driven by SLICE_X80Y141 
+
+
+
+# END of Global Clock Net Loads Distribution Report:
+######################################################################################
+
+

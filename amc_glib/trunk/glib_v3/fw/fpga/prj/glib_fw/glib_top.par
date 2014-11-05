@@ -1,0 +1,1833 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+THOMAS-LENZI-PC::  Wed Nov 05 15:47:19 2014
+
+par -w -intstyle ise -ol high -mt 4 glib_top_map.ncd glib_top.ncd glib_top.pcf 
+
+
+Constraints file: glib_top.pcf.
+Loading device for application Rf_Device from file '6vlx130t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "glib_top" is an NCD, version 3.2, device xc6vlx130t, package ff1156, speed -1
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:56 - Part 'xc6vlx130t' is not a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.17 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                26,649 out of 160,000   16%
+    Number used as Flip Flops:              18,446
+    Number used as Latches:                  8,203
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                     19,609 out of  80,000   24%
+    Number used as logic:                   19,088 out of  80,000   23%
+      Number using O6 output only:          16,086
+      Number using O5 output only:             339
+      Number using O5 and O6:                2,663
+      Number used as ROM:                        0
+    Number used as Memory:                      53 out of  27,840    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:           48
+        Number using O6 output only:             0
+        Number using O5 output only:             2
+        Number using O5 and O6:                 46
+      Number used as Shift Register:             5
+        Number using O6 output only:             5
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:    468
+      Number with same-slice register load:    445
+      Number with same-slice carry load:        23
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 8,084 out of  20,000   40%
+  Number of LUT Flip Flop pairs used:       29,663
+    Number with an unused Flip Flop:         5,033 out of  29,663   16%
+    Number with an unused LUT:              10,054 out of  29,663   33%
+    Number of fully used LUT-FF pairs:      14,576 out of  29,663   49%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of 160,000    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       246 out of     600   41%
+    Number of LOCed IOBs:                      226 out of     246   91%
+    IOB Flip Flops:                              2
+    IOB Master Pads:                             1
+    IOB Slave Pads:                              1
+    Number of bonded IPADs:                      6
+      Number of LOCed IPADs:                     6 out of       6  100%
+    Number of bonded OPADs:                      4
+      Number of LOCed OPADs:                     4 out of       4  100%
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                 34 out of     264   12%
+    Number using RAMB36E1 only:                 34
+    Number using FIFO36E1 only:                  0
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     528    0%
+  Number of BUFG/BUFGCTRLs:                     14 out of      32   43%
+    Number used as BUFGs:                       11
+    Number used as BUFGCTRLs:                    3
+  Number of ILOGICE1/ISERDESE1s:                 0 out of     600    0%
+  Number of OLOGICE1/OSERDESE1s:                 4 out of     600    1%
+    Number used as OLOGICE1s:                    4
+    Number used as OSERDESE1s:                   0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             2 out of     120    1%
+    Number of LOCed BUFHCEs:                     2 out of       2  100%
+  Number of BUFIODQSs:                           0 out of      60    0%
+  Number of BUFRs:                               4 out of      30   13%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     480    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE1s:                              2 out of      20   10%
+  Number of IBUFDS_GTXE1s:                       1 out of      10   10%
+  Number of ICAPs:                               1 out of       2   50%
+  Number of IDELAYCTRLs:                         0 out of      15    0%
+  Number of IODELAYE1s:                          0 out of     600    0%
+  Number of MMCM_ADVs:                           2 out of      10   20%
+    Number of LOCed MMCM_ADVs:                   1 out of       2   50%
+  Number of PCIE_2_0s:                           0 out of       2    0%
+  Number of STARTUPs:                            1 out of       1  100%
+  Number of SYSMONs:                             0 out of       1    0%
+  Number of TEMAC_SINGLEs:                       2 out of       4   50%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+PAR will use up to 4 processors
+WARNING:Par:288 - The signal sn<0>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal sn<1>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal sn<2>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal sn<3>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal sn<4>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal sn<5>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal sn<6>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal sn<7>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_n<2>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_n<3>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_p<2>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_p<3>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_n<12>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_n<13>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_n<14>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_n<15>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_p<12>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_p<13>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_p<14>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_p<15>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_in<20>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_in<17>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_in<18>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_rx_in<19>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_tx_in<20>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_tx_in<17>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_tx_in<18>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal amc_port_tx_in<19>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMC_D1_O has no load. 
+   PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD_D1_O has no load. 
+   PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMC_D1_O has no load.
+    PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD_D1_O has no load.
+    PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RAMD_D1_O has no load. 
+   PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RAMD_D1_O has no load. 
+   PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RAMD_D1_O has no load.
+    PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RAMD_D1_O has no load.
+    PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+Starting Multi-threaded Router
+
+INFO:Route:501 - One or more directed routing (DIRT) constraints generated for a specific device have been found. Note that DIRT strings are
+   guaranteed to work only on the same device they were created for. If the DIRT constraints fail, verify that the same connectivity is
+   available in the target device for this implementation. 
+
+Phase  1  : 122068 unrouted;      REAL time: 34 secs 
+
+Phase  2  : 111256 unrouted;      REAL time: 40 secs 
+
+Phase  3  : 40534 unrouted;      REAL time: 1 mins 14 secs 
+
+Phase  4  : 40534 unrouted; (Setup:0, Hold:3407, Component Switching Limit:0)     REAL time: 1 mins 20 secs 
+
+Updating file: glib_top.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:3321, Component Switching Limit:0)     REAL time: 1 mins 55 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:3321, Component Switching Limit:0)     REAL time: 1 mins 55 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:3321, Component Switching Limit:0)     REAL time: 1 mins 55 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:3321, Component Switching Limit:0)     REAL time: 1 mins 55 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 57 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 3 secs 
+Total REAL time to Router completion: 2 mins 3 secs 
+Total CPU time to Router completion (all processors): 3 mins 1 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|   system/mac_clk<2> |  Regional Clk| No   |  836 |  0.452     |  1.344      |
++---------------------+--------------+------+------+------------+-------------+
+|        user_ipb_clk | BUFGCTRL_X0Y5| No   | 3047 |  0.326     |  1.822      |
++---------------------+--------------+------+------+------------+-------------+
+|   system/mac_clk<0> |  Regional Clk| No   |  851 |  0.452     |  1.345      |
++---------------------+--------------+------+------+------------+-------------+
+|system/sram_w[2]_clk |              |      |      |            |             |
+|                     | BUFGCTRL_X0Y4| No   |  114 |  0.143     |  1.709      |
++---------------------+--------------+------+------+------------+-------------+
+|system/sram_w[1]_clk |              |      |      |            |             |
+|                     | BUFGCTRL_X0Y3| No   |  116 |  0.172     |  1.859      |
++---------------------+--------------+------+------+------------+-------------+
+|  user_clk125_2_bufg |BUFGCTRL_X0Y31| No   |   27 |  0.270     |  1.807      |
++---------------------+--------------+------+------+------------+-------------+
+|system/gbt_phase_mon |              |      |      |            |             |
+|itoring/sfp_ttclk_x6 |              |      |      |            |             |
+|               _cdce | BUFGCTRL_X0Y0|Yes   |    1 |  0.000     |  1.574      |
++---------------------+--------------+------+------+------------+-------------+
+|system/cdce_synch/cl |              |      |      |            |             |
+|     k_from_bufg_mux | BUFGCTRL_X0Y2| No   |    8 |  0.132     |  1.781      |
++---------------------+--------------+------+------+------------+-------------+
+|system/phy_en.phy_et |              |      |      |            |             |
+|h/sgmii/v6_gtxwizard |              |      |      |            |             |
+|  _top_inst/clk_ds_i |  Regional Clk| No   |    7 |  0.009     |  1.028      |
++---------------------+--------------+------+------+------------+-------------+
+|system/amc_p0_en.amc |              |      |      |            |             |
+|_p0_eth/basex/v6_gtx |              |      |      |            |             |
+|wizard_top_inst/clk_ |              |      |      |            |             |
+|                ds_i |  Regional Clk| No   |    7 |  0.008     |  1.021      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|          <251>_BUFG |BUFGCTRL_X0Y26| No   |    8 |  0.047     |  1.697      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|          <252>_BUFG |BUFGCTRL_X0Y27| No   |    8 |  0.056     |  1.701      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|          <253>_BUFG |BUFGCTRL_X0Y28| No   |    8 |  0.052     |  1.700      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|          <254>_BUFG |BUFGCTRL_X0Y29| No   |    8 |  0.049     |  1.704      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|          <255>_BUFG |BUFGCTRL_X0Y30| No   |    8 |  0.048     |  1.707      |
++---------------------+--------------+------+------+------------+-------------+
+|  system/ipb_inv_clk | BUFGCTRL_X0Y6| No   |    1 |  0.000     |  1.586      |
++---------------------+--------------+------+------+------------+-------------+
+|system/gbt_phase_mon |              |      |      |            |             |
+|itoring/fmc1_ttclk_x |              |      |      |            |             |
+|              6_cdce |BUFGCTRL_X0Y23|Yes   |    1 |  0.000     |  1.575      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <64> |         Local|      |    9 |  1.027     |  1.400      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <72> |         Local|      |    9 |  0.959     |  1.445      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <80> |         Local|      |    9 |  0.776     |  1.284      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <48> |         Local|      |    9 |  1.376     |  1.746      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <56> |         Local|      |    9 |  1.235     |  1.472      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <49> |         Local|      |    9 |  1.233     |  1.830      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <57> |         Local|      |    9 |  0.867     |  1.348      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <65> |         Local|      |    9 |  1.057     |  1.634      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <73> |         Local|      |    9 |  0.824     |  1.318      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <81> |         Local|      |    9 |  0.498     |  1.156      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <58> |         Local|      |    9 |  0.940     |  1.471      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <66> |         Local|      |    9 |  0.996     |  1.495      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <74> |         Local|      |    9 |  0.817     |  1.455      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <82> |         Local|      |    9 |  0.542     |  1.156      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <90> |         Local|      |    9 |  0.657     |  1.175      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <59> |         Local|      |    9 |  0.869     |  1.348      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <67> |         Local|      |    9 |  0.817     |  1.346      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <75> |         Local|      |    9 |  0.719     |  1.335      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <83> |         Local|      |    9 |  0.860     |  1.384      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <91> |         Local|      |    9 |  0.689     |  1.238      |
++---------------------+--------------+------+------+------------+-------------+
+|system/spi/reset_i_c |              |      |      |            |             |
+|     pol_i_AND_934_o |         Local|      |    2 |  0.000     |  0.352      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <68> |         Local|      |    9 |  0.593     |  1.366      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <76> |         Local|      |    9 |  0.749     |  1.259      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <84> |         Local|      |    9 |  0.822     |  1.306      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <92> |         Local|      |    9 |  0.592     |  1.136      |
++---------------------+--------------+------+------+------------+-------------+
+|system/i2c_s/reset_r |              |      |      |            |             |
+|egs_i[6][0]_AND_773_ |              |      |      |            |             |
+|                   o |         Local|      |    2 |  0.000     |  0.403      |
++---------------------+--------------+------+------+------------+-------------+
+|system/i2c_s/reset_r |              |      |      |            |             |
+|egs_i[6][1]_AND_771_ |              |      |      |            |             |
+|                   o |         Local|      |    2 |  0.000     |  0.365      |
++---------------------+--------------+------+------+------------+-------------+
+|system/i2c_s/reset_r |              |      |      |            |             |
+|egs_i[6][2]_AND_769_ |              |      |      |            |             |
+|                   o |         Local|      |    2 |  0.000     |  0.469      |
++---------------------+--------------+------+------+------------+-------------+
+|system/i2c_s/reset_r |              |      |      |            |             |
+|egs_i[6][3]_AND_767_ |              |      |      |            |             |
+|                   o |         Local|      |    2 |  0.000     |  0.473      |
++---------------------+--------------+------+------+------------+-------------+
+|MMCM_PHASE_CALIBRATI |              |      |      |            |             |
+|ON_ML_LUT2_12_ML_NEW |              |      |      |            |             |
+|                _CLK |         Local|      |    3 |  0.536     |  0.876      |
++---------------------+--------------+------+------+------------+-------------+
+|system/pll/mmcm_adv_ |              |      |      |            |             |
+|      inst_ML_NEW_I1 |         Local|      |    3 |  0.000     |  1.654      |
++---------------------+--------------+------+------+------------+-------------+
+|system/pll/mmcm_adv_ |              |      |      |            |             |
+|     inst_ML_NEW_OUT |         Local|      |    2 |  0.000     |  0.236      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <69> |         Local|      |    9 |  0.596     |  1.087      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <77> |         Local|      |    9 |  0.760     |  1.280      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <85> |         Local|      |    9 |  0.717     |  1.242      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <93> |         Local|      |    9 |  0.585     |  1.263      |
++---------------------+--------------+------+------+------------+-------------+
+|system/ip_mac/reset_ |              |      |      |            |             |
+|i_user_mac_addr_i[0] |              |      |      |            |             |
+|          _AND_115_o |         Local|      |    2 |  0.000     |  0.642      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                 <0> |         Local|      |    9 |  0.706     |  1.260      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                 <1> |         Local|      |    9 |  0.562     |  1.114      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                 <2> |         Local|      |    9 |  1.135     |  1.504      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                 <3> |         Local|      |    9 |  1.560     |  2.050      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <78> |         Local|      |    9 |  0.539     |  1.151      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                 <4> |         Local|      |    9 |  0.599     |  1.281      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <86> |         Local|      |    9 |  0.612     |  1.113      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                 <5> |         Local|      |    9 |  0.511     |  1.181      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <94> |         Local|      |    9 |  0.518     |  1.032      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                 <6> |         Local|      |    9 |  0.649     |  1.325      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                 <7> |         Local|      |    9 |  0.511     |  1.032      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                 <8> |         Local|      |    9 |  0.731     |  1.265      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                 <9> |         Local|      |    9 |  0.624     |  1.150      |
++---------------------+--------------+------+------+------------+-------------+
+|system/gbt_phase_mon |              |      |      |            |             |
+|    itoring/ttclk_x6 |         Local|      |   40 |  0.033     |  0.971      |
++---------------------+--------------+------+------+------------+-------------+
+|system/ip_mac/reset_ |              |      |      |            |             |
+|i_user_mac_addr_i[3] |              |      |      |            |             |
+|          _AND_109_o |         Local|      |    2 |  0.000     |  0.354      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <79> |         Local|      |    9 |  0.960     |  1.545      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <87> |         Local|      |    9 |  0.577     |  1.250      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <95> |         Local|      |    9 |  0.624     |  1.202      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <88> |         Local|      |    9 |  0.550     |  1.118      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <96> |         Local|      |    9 |  0.955     |  1.507      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <100> |         Local|      |    9 |  0.868     |  1.406      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <89> |         Local|      |    9 |  0.574     |  1.247      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <97> |         Local|      |    9 |  0.762     |  1.327      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <101> |         Local|      |    9 |  0.751     |  1.436      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <102> |         Local|      |    9 |  0.985     |  1.490      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <110> |         Local|      |    9 |  0.903     |  1.387      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <98> |         Local|      |    9 |  0.838     |  1.356      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <99> |         Local|      |    9 |  0.833     |  1.394      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <103> |         Local|      |    9 |  0.818     |  1.456      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <111> |         Local|      |    9 |  1.085     |  1.461      |
++---------------------+--------------+------+------+------------+-------------+
+|system/ip_mac/reset_ |              |      |      |            |             |
+|i_user_mac_addr_i[1] |              |      |      |            |             |
+|          _AND_113_o |         Local|      |    2 |  0.000     |  0.229      |
++---------------------+--------------+------+------+------------+-------------+
+|system/ip_mac/reset_ |              |      |      |            |             |
+|i_user_mac_addr_i[2] |              |      |      |            |             |
+|          _AND_111_o |         Local|      |    2 |  0.000     |  0.496      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <104> |         Local|      |    9 |  0.893     |  1.400      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <112> |         Local|      |    9 |  1.328     |  2.009      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <120> |         Local|      |    9 |  1.634     |  2.049      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <200> |         Local|      |    9 |  1.168     |  1.520      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <105> |         Local|      |    9 |  1.012     |  1.513      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <113> |         Local|      |    9 |  1.242     |  1.990      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <121> |         Local|      |    9 |  1.102     |  1.638      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <201> |         Local|      |    9 |  1.167     |  1.659      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <106> |         Local|      |    9 |  1.154     |  1.670      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <114> |         Local|      |    9 |  1.168     |  1.713      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <122> |         Local|      |    9 |  1.222     |  1.872      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <130> |         Local|      |    9 |  0.804     |  1.448      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <202> |         Local|      |    9 |  1.098     |  1.577      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <210> |         Local|      |    9 |  1.288     |  1.953      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <107> |         Local|      |    9 |  0.842     |  1.371      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <115> |         Local|      |    9 |  1.059     |  1.663      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <123> |         Local|      |    9 |  1.386     |  1.916      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <131> |         Local|      |    9 |  0.870     |  1.532      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <203> |         Local|      |    9 |  0.859     |  1.538      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <211> |         Local|      |    9 |  2.065     |  2.872      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <108> |         Local|      |    9 |  0.969     |  1.536      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <116> |         Local|      |    9 |  0.716     |  1.393      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <124> |         Local|      |    9 |  1.240     |  1.894      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <132> |         Local|      |    9 |  0.991     |  1.522      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <140> |         Local|      |    9 |  1.312     |  1.971      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <204> |         Local|      |    9 |  1.135     |  1.659      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <212> |         Local|      |    9 |  1.333     |  2.127      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <220> |         Local|      |    9 |  1.274     |  2.082      |
++---------------------+--------------+------+------+------------+-------------+
+|system/glib_pll_clko |              |      |      |            |             |
+|          ut_31_25_b |         Local|      |    3 |  0.000     |  1.712      |
++---------------------+--------------+------+------+------------+-------------+
+|system/glib_pll_clko |              |      |      |            |             |
+|          ut_31_25_c |         Local|      |    3 |  0.000     |  1.714      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <109> |         Local|      |    9 |  0.918     |  1.439      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <117> |         Local|      |    9 |  1.154     |  1.796      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <125> |         Local|      |    9 |  1.036     |  1.726      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <133> |         Local|      |    9 |  0.870     |  1.513      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <141> |         Local|      |    9 |  1.155     |  1.696      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <205> |         Local|      |    9 |  1.314     |  1.856      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <213> |         Local|      |    9 |  1.146     |  1.813      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <221> |         Local|      |    9 |  1.273     |  2.064      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <10> |         Local|      |    9 |  0.913     |  1.397      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <118> |         Local|      |    9 |  1.435     |  2.042      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <126> |         Local|      |    9 |  1.375     |  1.998      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <134> |         Local|      |    9 |  0.996     |  1.652      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <142> |         Local|      |    9 |  0.826     |  1.451      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <150> |         Local|      |    9 |  0.588     |  1.224      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <206> |         Local|      |    9 |  0.888     |  1.470      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <214> |         Local|      |    9 |  0.983     |  1.836      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <222> |         Local|      |    9 |  1.258     |  1.817      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <11> |         Local|      |    9 |  0.619     |  1.106      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <230> |         Local|      |    9 |  1.379     |  1.762      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <12> |         Local|      |    9 |  0.625     |  1.244      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <20> |         Local|      |    9 |  0.951     |  1.468      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <13> |         Local|      |    9 |  0.891     |  1.424      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <21> |         Local|      |    9 |  0.719     |  1.249      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <14> |         Local|      |    9 |  1.075     |  1.557      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <22> |         Local|      |    9 |  1.066     |  1.686      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <30> |         Local|      |    9 |  1.021     |  1.516      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <15> |         Local|      |    9 |  1.235     |  1.751      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <23> |         Local|      |    9 |  0.547     |  1.216      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <31> |         Local|      |    9 |  0.831     |  1.480      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <16> |         Local|      |    9 |  0.892     |  1.309      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <24> |         Local|      |    9 |  0.924     |  1.526      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <32> |         Local|      |    9 |  0.520     |  1.107      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <40> |         Local|      |    9 |  1.058     |  1.443      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <17> |         Local|      |    9 |  1.153     |  1.701      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <25> |         Local|      |    9 |  1.200     |  1.750      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <33> |         Local|      |    9 |  1.070     |  1.461      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <41> |         Local|      |    9 |  0.981     |  1.481      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <18> |         Local|      |    9 |  1.069     |  1.611      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <26> |         Local|      |    9 |  0.899     |  1.500      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <34> |         Local|      |    9 |  0.617     |  1.133      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <42> |         Local|      |    9 |  1.013     |  1.533      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <50> |         Local|      |    9 |  1.110     |  1.607      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <119> |         Local|      |    9 |  1.685     |  2.203      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <127> |         Local|      |    9 |  1.265     |  1.756      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <135> |         Local|      |    9 |  0.755     |  1.272      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <143> |         Local|      |    9 |  1.181     |  1.673      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <151> |         Local|      |    9 |  0.625     |  1.179      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <207> |         Local|      |    9 |  0.892     |  1.519      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <215> |         Local|      |    9 |  1.663     |  2.533      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <223> |         Local|      |    9 |  1.505     |  2.190      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <231> |         Local|      |    9 |  1.089     |  1.473      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <19> |         Local|      |    9 |  0.698     |  1.227      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <27> |         Local|      |    9 |  0.752     |  1.271      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <35> |         Local|      |    9 |  0.922     |  1.413      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <43> |         Local|      |    9 |  0.869     |  1.262      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <51> |         Local|      |    9 |  0.660     |  1.194      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <28> |         Local|      |    9 |  0.795     |  1.347      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <36> |         Local|      |    9 |  1.024     |  1.551      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <44> |         Local|      |    9 |  1.154     |  1.661      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <52> |         Local|      |    9 |  0.864     |  1.385      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <60> |         Local|      |    9 |  1.045     |  1.555      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <29> |         Local|      |    9 |  0.986     |  1.359      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <37> |         Local|      |    9 |  1.548     |  2.049      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <45> |         Local|      |    9 |  1.497     |  2.017      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <53> |         Local|      |    9 |  0.589     |  1.115      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <61> |         Local|      |    9 |  0.837     |  1.331      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <38> |         Local|      |    9 |  1.446     |  1.822      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <46> |         Local|      |    9 |  0.682     |  1.216      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <54> |         Local|      |    9 |  0.991     |  1.467      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <62> |         Local|      |    9 |  0.822     |  1.322      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <70> |         Local|      |    9 |  0.756     |  1.257      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <128> |         Local|      |    9 |  0.718     |  1.252      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <136> |         Local|      |    9 |  1.271     |  1.749      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <144> |         Local|      |    9 |  0.940     |  1.324      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <152> |         Local|      |    9 |  1.317     |  1.826      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <160> |         Local|      |    9 |  0.553     |  1.044      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <208> |         Local|      |    9 |  1.366     |  1.989      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <216> |         Local|      |    9 |  1.277     |  1.931      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <224> |         Local|      |    9 |  1.169     |  1.549      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <232> |         Local|      |    9 |  1.083     |  1.584      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <240> |         Local|      |    9 |  0.782     |  1.270      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <39> |         Local|      |    9 |  1.353     |  1.741      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <47> |         Local|      |    9 |  1.035     |  1.565      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <55> |         Local|      |    9 |  0.917     |  1.297      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <63> |         Local|      |    9 |  0.905     |  1.281      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|                <71> |         Local|      |    9 |  0.855     |  1.380      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <129> |         Local|      |    9 |  0.913     |  1.591      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <137> |         Local|      |    9 |  0.982     |  1.546      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <145> |         Local|      |    9 |  0.876     |  1.244      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <153> |         Local|      |    9 |  0.649     |  1.206      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <161> |         Local|      |    9 |  0.550     |  1.102      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <209> |         Local|      |    9 |  1.248     |  2.115      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <217> |         Local|      |    9 |  1.526     |  2.313      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <225> |         Local|      |    9 |  0.748     |  1.242      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <233> |         Local|      |    9 |  1.005     |  1.490      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <241> |         Local|      |    9 |  0.551     |  1.201      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <138> |         Local|      |    9 |  0.901     |  1.432      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <146> |         Local|      |    9 |  0.678     |  1.183      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <154> |         Local|      |    9 |  0.691     |  1.321      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <162> |         Local|      |    9 |  0.920     |  1.273      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <170> |         Local|      |    9 |  0.639     |  1.190      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <218> |         Local|      |    9 |  1.035     |  1.916      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <226> |         Local|      |    9 |  0.999     |  1.379      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <234> |         Local|      |    9 |  0.922     |  1.314      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <242> |         Local|      |    9 |  0.617     |  1.261      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <250> |         Local|      |    9 |  1.563     |  2.316      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <139> |         Local|      |    9 |  1.012     |  1.561      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <147> |         Local|      |    9 |  0.717     |  1.108      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <155> |         Local|      |    9 |  0.375     |  1.032      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <163> |         Local|      |    9 |  1.140     |  1.658      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <171> |         Local|      |    9 |  1.192     |  1.726      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <219> |         Local|      |    9 |  1.163     |  2.107      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <227> |         Local|      |    9 |  0.947     |  1.335      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <235> |         Local|      |    9 |  0.732     |  1.137      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <243> |         Local|      |    9 |  0.513     |  1.135      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <148> |         Local|      |    9 |  0.711     |  1.224      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <156> |         Local|      |    9 |  0.580     |  1.246      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <164> |         Local|      |    9 |  0.978     |  1.460      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <172> |         Local|      |    9 |  0.969     |  1.499      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <180> |         Local|      |    9 |  1.009     |  1.643      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <228> |         Local|      |    9 |  0.922     |  1.165      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <236> |         Local|      |    9 |  0.958     |  1.194      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <244> |         Local|      |    9 |  0.854     |  1.379      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <149> |         Local|      |    9 |  0.584     |  1.122      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <157> |         Local|      |    9 |  0.748     |  1.295      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <165> |         Local|      |    9 |  1.029     |  1.396      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <173> |         Local|      |    9 |  0.619     |  1.255      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <181> |         Local|      |    9 |  0.963     |  1.503      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <229> |         Local|      |    9 |  0.855     |  1.223      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <237> |         Local|      |    9 |  0.829     |  1.222      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <245> |         Local|      |    9 |  0.387     |  1.123      |
++---------------------+--------------+------+------+------------+-------------+
+|MMCM_PHASE_CALIBRATI |              |      |      |            |             |
+|ON_ML_LUT2_4_ML_NEW_ |              |      |      |            |             |
+|                 CLK |         Local|      |    1 |  0.000     |  0.478      |
++---------------------+--------------+------+------+------------+-------------+
+|system/gbt_phase_mon |              |      |      |            |             |
+|itoring/ttclk_pll/mm |              |      |      |            |             |
+|cm_adv_inst_ML_NEW_I |              |      |      |            |             |
+|                   1 |         Local|      |    3 |  0.000     |  0.945      |
++---------------------+--------------+------+------+------------+-------------+
+|system/gbt_phase_mon |              |      |      |            |             |
+|itoring/ttclk_pll/mm |              |      |      |            |             |
+|cm_adv_inst_ML_NEW_O |              |      |      |            |             |
+|                  UT |         Local|      |    2 |  0.000     |  0.365      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <158> |         Local|      |    9 |  0.892     |  1.395      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <166> |         Local|      |    9 |  0.625     |  1.280      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <174> |         Local|      |    9 |  1.043     |  1.453      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <182> |         Local|      |    9 |  1.111     |  1.758      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <190> |         Local|      |    9 |  1.254     |  1.907      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <238> |         Local|      |    9 |  0.884     |  1.236      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <246> |         Local|      |    9 |  0.793     |  1.384      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <159> |         Local|      |    9 |  0.903     |  1.293      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <167> |         Local|      |    9 |  0.792     |  1.339      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <175> |         Local|      |    9 |  0.718     |  1.288      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <183> |         Local|      |    9 |  1.284     |  1.860      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <191> |         Local|      |    9 |  0.858     |  1.571      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <239> |         Local|      |    9 |  0.925     |  1.422      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <247> |         Local|      |    9 |  0.881     |  1.602      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <168> |         Local|      |    9 |  1.217     |  1.575      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <176> |         Local|      |    9 |  1.280     |  1.963      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <184> |         Local|      |    9 |  1.415     |  2.037      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <192> |         Local|      |    9 |  1.356     |  1.708      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <248> |         Local|      |    9 |  0.576     |  1.439      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <169> |         Local|      |    9 |  0.817     |  1.201      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <177> |         Local|      |    9 |  0.794     |  1.573      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <185> |         Local|      |    9 |  1.430     |  2.110      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <193> |         Local|      |    9 |  1.527     |  1.886      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <249> |         Local|      |    9 |  0.575     |  1.251      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <178> |         Local|      |    9 |  0.975     |  1.631      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <186> |         Local|      |    9 |  1.072     |  1.647      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <194> |         Local|      |    9 |  1.826     |  2.174      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <179> |         Local|      |    9 |  0.651     |  1.377      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <187> |         Local|      |    9 |  1.172     |  1.898      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <195> |         Local|      |    9 |  1.435     |  2.016      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <188> |         Local|      |    9 |  0.938     |  1.573      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <196> |         Local|      |    9 |  1.036     |  1.556      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <189> |         Local|      |    9 |  1.341     |  1.840      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <197> |         Local|      |    9 |  1.335     |  1.850      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <198> |         Local|      |    9 |  1.994     |  2.508      |
++---------------------+--------------+------+------+------------+-------------+
+|usr/ipb_glib_registe |              |      |      |            |             |
+|rs_inst/register_sel |              |      |      |            |             |
+|ect[7]_Decoder_2_OUT |              |      |      |            |             |
+|               <199> |         Local|      |    9 |  0.964     |  1.508      |
++---------------------+--------------+------+------+------------+-------------+
+|system/gbt_phase_mon |              |      |      |            |             |
+|itoring/ttclk_pll/cl |              |      |      |            |             |
+|               kout0 |         Local|      |    1 |  0.000     |  0.574      |
++---------------------+--------------+------+------+------------+-------------+
+|       user_clk125_2 |         Local|      |    7 |  0.000     |  2.131      |
++---------------------+--------------+------+------+------------+-------------+
+|system/gbt_phase_mon |              |      |      |            |             |
+|itoring/ttclk_pll/cl |              |      |      |            |             |
+|              kfbout |         Local|      |    1 |  0.000     |  0.574      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Number of Timing Constraints that were not applied: 6
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_system_gbt_phase_monitoring_ttclk_pll_ | SETUP       |     0.877ns|     3.289ns|       0|           0
+  clkout0_0 = PERIOD TIMEGRP         "syste | HOLD        |     0.146ns|            |       0|           0
+  m_gbt_phase_monitoring_ttclk_pll_clkout0_ |             |            |            |        |            
+  0" TS_xpoint1_clk1_n /         6 PHASE 2. |             |            |            |        |            
+  08333333 ns HIGH 50%                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_system_phy_en_phy_eth_clk125_out = PER | SETUP       |     1.563ns|     6.437ns|       0|           0
+  IOD TIMEGRP         "system/phy_en.phy_et | HOLD        |     0.008ns|            |       0|           0
+  h/clk125_out" 8 ns HIGH 50%               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_system_amc_p0_en_amc_p0_eth_clk125_out | SETUP       |     1.662ns|     6.338ns|       0|           0
+   = PERIOD TIMEGRP         "system/amc_p0_ | HOLD        |     0.023ns|            |       0|           0
+  en.amc_p0_eth/clk125_out" 8 ns HIGH 50%   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_system_gbt_phase_monitoring_ttclk_pll_ | MINLOWPULSE |     2.166ns|     2.000ns|       0|           0
+  clkout0 = PERIOD TIMEGRP         "system_ |             |            |            |        |            
+  gbt_phase_monitoring_ttclk_pll_clkout0" T |             |            |            |        |            
+  S_xpoint1_clk1_p / 6         PHASE 2.0833 |             |            |            |        |            
+  3333 ns HIGH 50%                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_xpoint1_clk1_p = PERIOD TIMEGRP "xpoin | MINLOWPULSE |    15.000ns|    10.000ns|       0|           0
+  t1_clk1_p" 25 ns HIGH 50%                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_xpoint1_clk1_n = PERIOD TIMEGRP "xpoin | SETUP       |    22.227ns|     2.773ns|       0|           0
+  t1_clk1_n" TS_xpoint1_clk1_p PHASE        | HOLD        |     0.108ns|            |       0|           0
+    12.5 ns HIGH 50%                        | MINLOWPULSE |    15.000ns|    10.000ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_clk125_2_n = PERIOD TIMEGRP "clk125_2_ | SETUP       |     3.950ns|     4.050ns|       0|           0
+  n" TS_clk125_2_p PHASE 4 ns HIGH 50%      | HOLD        |     0.136ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_clk125_2_p = PERIOD TIMEGRP "clk125_2_ | MINLOWPULSE |     4.000ns|     4.000ns|       0|           0
+  p" 8 ns HIGH 50%                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_system_glib_pll_clkout_31_25_a_0 = PER | SETUP       |     4.243ns|    27.757ns|       0|           0
+  IOD TIMEGRP         "system_glib_pll_clko | HOLD        |     0.021ns|            |       0|           0
+  ut_31_25_a_0" TS_clk125_2_n / 0.25 HIGH 5 |             |            |            |        |            
+  0%                                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_system_glib_pll_clkout_31_25_b_0 = PER | SETUP       |    18.325ns|    13.675ns|       0|           0
+  IOD TIMEGRP         "system_glib_pll_clko | HOLD        |     0.062ns|            |       0|           0
+  ut_31_25_b_0" TS_clk125_2_n / 0.25 HIGH 5 |             |            |            |        |            
+  0%                                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_system_glib_pll_clkout_31_25_c_0 = PER | SETUP       |    19.410ns|    12.590ns|       0|           0
+  IOD TIMEGRP         "system_glib_pll_clko | HOLD        |     0.012ns|            |       0|           0
+  ut_31_25_c_0" TS_clk125_2_n / 0.25 HIGH 5 |             |            |            |        |            
+  0%                                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_systemi2c_sregs_6_0_LDC = MAXDELAY  | SETUP       |    27.133ns|     4.867ns|       0|           0
+  TO TIMEGRP         "TO_systemi2c_sregs_6_ | HOLD        |     2.172ns|            |       0|           0
+  0_LDC" TS_system_glib_pll_clkout_31_25_a  |             |            |            |        |            
+          DATAPATHONLY                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_systemi2c_sregs_6_1_LDC = MAXDELAY  | SETUP       |    27.163ns|     4.837ns|       0|           0
+  TO TIMEGRP         "TO_systemi2c_sregs_6_ | HOLD        |     2.106ns|            |       0|           0
+  1_LDC" TS_system_glib_pll_clkout_31_25_a  |             |            |            |        |            
+          DATAPATHONLY                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_systemi2c_sregs_6_2_LDC = MAXDELAY  | SETUP       |    27.275ns|     4.725ns|       0|           0
+  TO TIMEGRP         "TO_systemi2c_sregs_6_ | HOLD        |     2.108ns|            |       0|           0
+  2_LDC" TS_system_glib_pll_clkout_31_25_a  |             |            |            |        |            
+          DATAPATHONLY                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_systemip_macmac_addr_0_LDC = MAXDEL | SETUP       |    27.401ns|     4.599ns|       0|           0
+  AY TO TIMEGRP         "TO_systemip_macmac | HOLD        |     2.069ns|            |       0|           0
+  _addr_0_LDC" TS_system_glib_pll_clkout_31 |             |            |            |        |            
+  _25_a         DATAPATHONLY                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_systemi2c_sregs_6_3_LDC = MAXDELAY  | SETUP       |    27.486ns|     4.514ns|       0|           0
+  TO TIMEGRP         "TO_systemi2c_sregs_6_ | HOLD        |     2.025ns|            |       0|           0
+  3_LDC" TS_system_glib_pll_clkout_31_25_a  |             |            |            |        |            
+          DATAPATHONLY                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_systemip_macmac_addr_1_LDC = MAXDEL | SETUP       |    27.578ns|     4.422ns|       0|           0
+  AY TO TIMEGRP         "TO_systemip_macmac | HOLD        |     1.964ns|            |       0|           0
+  _addr_1_LDC" TS_system_glib_pll_clkout_31 |             |            |            |        |            
+  _25_a         DATAPATHONLY                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_systemip_macmac_addr_3_LDC = MAXDEL | SETUP       |    27.905ns|     4.095ns|       0|           0
+  AY TO TIMEGRP         "TO_systemip_macmac | HOLD        |     1.867ns|            |       0|           0
+  _addr_3_LDC" TS_system_glib_pll_clkout_31 |             |            |            |        |            
+  _25_a         DATAPATHONLY                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_systemip_macmac_addr_2_LDC = MAXDEL | SETUP       |    27.967ns|     4.033ns|       0|           0
+  AY TO TIMEGRP         "TO_systemip_macmac | HOLD        |     1.853ns|            |       0|           0
+  _addr_2_LDC" TS_system_glib_pll_clkout_31 |             |            |            |        |            
+  _25_a         DATAPATHONLY                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_systemspisck_LDC = MAXDELAY TO TIME | SETUP       |    29.638ns|     2.362ns|       0|           0
+  GRP "TO_systemspisck_LDC"         TS_syst | HOLD        |     0.831ns|            |       0|           0
+  em_glib_pll_clkout_31_25_a DATAPATHONLY   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_system_glib_pll_clkout_31_25_a = PERIO | MINPERIOD   |    29.778ns|     2.222ns|       0|           0
+  D TIMEGRP         "system_glib_pll_clkout |             |            |            |        |            
+  _31_25_a" TS_clk125_2_p / 0.25 HIGH 50%   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_system_glib_pll_clkout_31_25_b = PERIO | MINPERIOD   |    30.571ns|     1.429ns|       0|           0
+  D TIMEGRP         "system_glib_pll_clkout |             |            |            |        |            
+  _31_25_b" TS_clk125_2_p / 0.25 HIGH 50%   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_system_glib_pll_clkout_31_25_c = PERIO | MINPERIOD   |    30.571ns|     1.429ns|       0|           0
+  D TIMEGRP         "system_glib_pll_clkout |             |            |            |        |            
+  _31_25_c" TS_clk125_2_p / 0.25 HIGH 50%   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_clk125_2_p
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk125_2_p                  |      8.000ns|      4.000ns|      6.939ns|            0|            0|            0|       970404|
+| TS_clk125_2_n                 |      8.000ns|      4.050ns|      6.939ns|            0|            0|         2456|       967930|
+|  TS_system_glib_pll_clkout_31_|     32.000ns|     12.590ns|          N/A|            0|            0|       137543|            0|
+|  25_c_0                       |             |             |             |             |             |             |             |
+|  TS_system_glib_pll_clkout_31_|     32.000ns|     27.757ns|          N/A|            0|            0|       732084|            0|
+|  25_a_0                       |             |             |             |             |             |             |             |
+|  TS_system_glib_pll_clkout_31_|     32.000ns|     13.675ns|          N/A|            0|            0|        98303|            0|
+|  25_b_0                       |             |             |             |             |             |             |             |
+| TS_system_glib_pll_clkout_31_2|     32.000ns|      1.429ns|          N/A|            0|            0|            0|            0|
+| 5_c                           |             |             |             |             |             |             |             |
+| TS_system_glib_pll_clkout_31_2|     32.000ns|      2.222ns|      4.867ns|            0|            0|            0|           18|
+| 5_a                           |             |             |             |             |             |             |             |
+|  TS_TO_systemip_macmac_addr_3_|     32.000ns|      4.095ns|          N/A|            0|            0|            2|            0|
+|  LDC                          |             |             |             |             |             |             |             |
+|  TS_TO_systemip_macmac_addr_2_|     32.000ns|      4.033ns|          N/A|            0|            0|            2|            0|
+|  LDC                          |             |             |             |             |             |             |             |
+|  TS_TO_systemip_macmac_addr_1_|     32.000ns|      4.422ns|          N/A|            0|            0|            2|            0|
+|  LDC                          |             |             |             |             |             |             |             |
+|  TS_TO_systemip_macmac_addr_0_|     32.000ns|      4.599ns|          N/A|            0|            0|            2|            0|
+|  LDC                          |             |             |             |             |             |             |             |
+|  TS_TO_systemspisck_LDC       |     32.000ns|      2.362ns|          N/A|            0|            0|            2|            0|
+|  TS_TO_systemi2c_sregs_6_1_LDC|     32.000ns|      4.837ns|          N/A|            0|            0|            2|            0|
+|  TS_TO_systemi2c_sregs_6_3_LDC|     32.000ns|      4.514ns|          N/A|            0|            0|            2|            0|
+|  TS_TO_systemi2c_sregs_6_2_LDC|     32.000ns|      4.725ns|          N/A|            0|            0|            2|            0|
+|  TS_TO_systemi2c_sregs_6_0_LDC|     32.000ns|      4.867ns|          N/A|            0|            0|            2|            0|
+| TS_system_glib_pll_clkout_31_2|     32.000ns|      1.429ns|          N/A|            0|            0|            0|            0|
+| 5_b                           |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_xpoint1_clk1_p
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_xpoint1_clk1_p              |     25.000ns|     10.000ns|     19.734ns|            0|            0|            0|         2643|
+| TS_xpoint1_clk1_n             |     25.000ns|     10.000ns|     19.734ns|            0|            0|          721|         1922|
+|  TS_system_gbt_phase_monitorin|      4.167ns|      3.289ns|          N/A|            0|            0|         1922|            0|
+|  g_ttclk_pll_clkout0_0        |             |             |             |             |             |             |             |
+| TS_system_gbt_phase_monitoring|      4.167ns|      2.000ns|          N/A|            0|            0|            0|            0|
+| _ttclk_pll_clkout0            |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 42 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+INFO:ParHelpers:197 - Number of "Exact" mode Directed Routing Constraints: 1
+INFO:ParHelpers:199 - All "EXACT" mode Directed Routing constrained nets successfully routed. The number of constraints
+   found: 1, number successful: 1
+Total REAL time to PAR completion: 2 mins 21 secs 
+Total CPU time to PAR completion (all processors): 3 mins 18 secs 
+
+Peak Memory Usage:  997 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 44
+Number of info messages: 3
+
+Writing design to file glib_top.ncd
+
+
+
+PAR done!

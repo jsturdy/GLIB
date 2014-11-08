@@ -16,10 +16,15 @@ package body user_addr_decode is
 	function user_ipb_addr_sel(signal addr : in std_logic_vector(31 downto 0)) return integer is
 		variable sel : integer;
 	begin
-		if    std_match(addr, "010000000000000000000000--------") then sel := ipb_glib_global_regs;				-- 0x400000XX
-		elsif std_match(addr, "010000010000000000000000--------") then sel := ipb_glib_tracking_link0_regs;		-- 0x410000XX
-		elsif std_match(addr, "010000010000000000000001--------") then sel := ipb_glib_tracking_link1_regs;		-- 0x410001XX
-		elsif std_match(addr, "010000010000000000000010--------") then sel := ipb_glib_tracking_link2_regs;		-- 0x410002XX
+		if    std_match(addr, "010000000000000100000-----------") then sel := ipb_vi2c_0;   -- 0x4001XXYY     0 <= XX <= 7
+		elsif std_match(addr, "010000000000000100001-----------") then sel := ipb_vi2c_1;   -- 0x4001XXYY     8 <= XX <= 15
+		elsif std_match(addr, "01000000000000010001------------") then sel := ipb_vi2c_2;   -- 0x4001XXYY     16 <= XX <= 23
+		elsif std_match(addr, "0100000000000010000000000000----") then sel := ipb_track_0;  -- 0x4002000X  
+		elsif std_match(addr, "0100000000000010000000010000----") then sel := ipb_track_1;  -- 0x4002010X
+		elsif std_match(addr, "0100000000000010000000100000----") then sel := ipb_track_2;  -- 0x4002020X
+		elsif std_match(addr, "0100000000000011000000000-------") then sel := ipb_regs_0;   -- 0x400300XX  
+		elsif std_match(addr, "0100000000000011000000010-------") then sel := ipb_regs_1;   -- 0x400301XX
+		elsif std_match(addr, "0100000000000011000000100-------") then sel := ipb_regs_2;   -- 0x400302XX
 		else
 			sel := 99;
 		end if;

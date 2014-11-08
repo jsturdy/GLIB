@@ -203,12 +203,17 @@ end user_logic;
 
 architecture user_logic_arch of user_logic is
 
-    --================================--
-    -- GLIB registers
-    --================================--
+    -- Global signals
 
-    signal glib_registers_rbus	: registers_rbus;
-    signal glib_registers_wbus	: registers_wbus;
+    signal gtx_clk          : std_logic := '0';
+    
+    -- GTX signals
+    
+    signal rx_error         : std_logic_vector(3 downto 0) := (others => '0');
+    signal rx_kchar         : std_logic_vector(7 downto 0) := (others => '0');
+    signal rx_data          : std_logic_vector(63 downto 0) := (others => '0');
+    signal tx_kchar         : std_logic_vector(7 downto 0) := (others => '0');
+    signal tx_data          : std_logic_vector(63 downto 0) := (others => '0');
 
 begin
 
@@ -218,29 +223,46 @@ begin
     user_v6_led_o(2) <= '0';
 
     --================================--
-    -- GLIB registers
+    -- GTX
     --================================--
-
-	glib_registers_inst : entity work.registers
-	port map(
-	    fabric_clk_i	=> ipb_clk_i,
-	    reset_i         => reset_i,
-	    wbus_i     		=> glib_registers_wbus,
-	    rbus_o     		=> glib_registers_rbus
-	);
-
-	ipb_glib_registers_inst : entity work.ipb_glib_registers
-	port map(
-		ipb_clk_i   	=> ipb_clk_i,
-		reset_i    		=> reset_i,
-		ipb_mosi_i  	=> ipb_mosi_i(ipb_glib_global_regs),
-		ipb_miso_o  	=> ipb_miso_o(ipb_glib_global_regs),
-		reg_rbus_i  	=> glib_registers_rbus,
-		reg_wbus_o  	=> glib_registers_wbus
-	);
+    
+    gtx_wrapper_inst : entity work.gtx_wrapper
+    port map(
+        gtx_clk_o       => gtx_clk,
+        reset_i         => reset_i,
+        rx_error_o      => rx_error,
+        rx_kchar_o      => rx_kchar,
+        rx_data_o       => rx_data,
+        rx_n_i          => sfp_rx_n,
+        rx_p_i          => sfp_rx_p,
+        tx_kchar_i      => tx_kchar,
+        tx_data_i       => tx_data,
+        tx_n_o          => sfp_tx_n,
+        tx_p_o          => sfp_tx_p,
+        gtp_refclk_n_i  => cdce_out1_n,
+        gtp_refclk_p_i  => cdce_out1_p
+    );   
 
     --================================--
     -- Tracking links
     --================================--
+    
+    link_tracking_1_inst : entity work.link_tracking
+    port map(
+        gtx_clk_i   => gtx_clk,
+        ipb_clk_i   => ipb_clk_i,
+        reset_i     => reset_i,
+        rx_error_i  => rx_error(1),
+        rx_kchar_i  => rx_kchar(3 downto 2),
+        rx_data_i   => rx_data(31 downto 16),
+        tx_kchar_o  => tx_kchar(3 downto 2),
+        tx_data_o   => tx_data(31 downto 16),
+        ipb_vi2c_i  => ipb_mosi_i(ipb_vi2c_1),
+        ipb_vi2c_o  => ipb_miso_o(ipb_vi2c_1),
+        ipb_track_i => ipb_mosi_i(ipb_track_1),
+        ipb_track_o => ipb_miso_o(ipb_track_1),
+        ipb_regs_i  => ipb_mosi_i(ipb_regs_1),
+        ipb_regs_o  => ipb_miso_o(ipb_regs_1)
+    );
 
 end user_logic_arch;

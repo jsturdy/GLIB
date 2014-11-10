@@ -17,7 +17,9 @@ port(
 	ipb_miso_o      : out ipb_rbus;
     
     rx_en_i         : in std_logic;
-    rx_data_i       : in std_logic_vector(191 downto 0)
+    rx_data_i       : in std_logic_vector(191 downto 0);
+    
+    occupancy_o     : out std_logic_vector(5 downto 0)
     
 );
 end ipb_tracking;
@@ -36,17 +38,18 @@ begin
     
     tracking_fifo_inst : entity work.tracking_fifo
     port map(
-        rst         => reset_i,
-        wr_clk      => gtx_clk_i,
-        wr_en       => rx_en_i,
-        din         => rx_data_i,
-        rd_clk      => ipb_clk_i,
-        rd_en       => rd_en,
-        valid       => rd_valid,
-        underflow   => rd_underflow,
-        dout        => rd_data,
-        full        => open,
-        empty       => open
+        rst             => reset_i,
+        wr_clk          => gtx_clk_i,
+        wr_en           => rx_en_i,
+        din             => rx_data_i,
+        rd_clk          => ipb_clk_i,
+        rd_en           => rd_en,
+        valid           => rd_valid,
+        underflow       => rd_underflow,
+        dout            => rd_data,
+        rd_data_count   => occupancy_o,
+        full            => open,
+        empty           => open
     ); 
    
     process(ipb_clk_i)

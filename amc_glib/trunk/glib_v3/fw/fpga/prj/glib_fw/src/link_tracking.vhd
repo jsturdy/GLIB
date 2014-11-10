@@ -27,7 +27,10 @@ port(
 	ipb_track_o     : out ipb_rbus;
     
 	ipb_regs_i      : in ipb_wbus;
-	ipb_regs_o      : out ipb_rbus
+	ipb_regs_o      : out ipb_rbus;
+    
+	ipb_info_i      : in ipb_wbus;
+	ipb_info_o      : out ipb_rbus
     
 );
 end link_tracking;
@@ -45,6 +48,7 @@ architecture Behavioral of link_tracking is
     
     signal track_rx_en      : std_logic := '0';
     signal track_rx_data    : std_logic_vector(191 downto 0) := (others => '0');
+    signal track_occupancy  : std_logic_vector(5 downto 0) := (others => '0');
          
     -- Registers signals
     
@@ -52,6 +56,21 @@ architecture Behavioral of link_tracking is
     signal regs_tx_data     : std_logic_vector(47 downto 0) := (others => '0');
     signal regs_rx_en       : std_logic := '0';
     signal regs_rx_data     : std_logic_vector(47 downto 0) := (others => '0');
+    
+    -- Info signals
+
+    signal regs_req_write   : array32(255 downto 0);
+    signal regs_req_tri     : std_logic_vector(255 downto 0);
+    signal regs_req_read    : array32(255 downto 0);
+
+    -- ChipScope signals
+
+    signal tx_data          : std_logic_vector(15 downto 0);
+
+    signal cs_icon0         : std_logic_vector(35 downto 0);
+    signal cs_ila0          : std_logic_vector(31 downto 0);
+    signal cs_ila1          : std_logic_vector(31 downto 0);
+    
     
 begin
 
@@ -68,7 +87,7 @@ begin
         regs_en_i   => regs_tx_en,
         regs_data_i => regs_tx_data,
         tx_kchar_o  => tx_kchar_o,
-        tx_data_o   => tx_data_o  
+        tx_data_o   => tx_data -- tx_data_o  
     );
     
     gtx_rx_mux_inst : entity work.gtx_rx_mux
@@ -84,6 +103,8 @@ begin
         rx_kchar_i      => rx_kchar_i,
         rx_data_i       => rx_data_i
     );
+    
+    tx_data_o <= tx_data;
     
     --================================--
     -- VFAT2 I2C
@@ -114,7 +135,8 @@ begin
         ipb_mosi_i      => ipb_track_i,
         ipb_miso_o      => ipb_track_o,
         rx_en_i         => track_rx_en,
-        rx_data_i       => track_rx_data
+        rx_data_i       => track_rx_data,
+        occupancy_o     => track_occupancy
     );
 
     --================================--
@@ -134,4 +156,33 @@ begin
         rx_data_i       => regs_rx_data
     );
 
+    --================================--
+    -- Info
+    --================================--
+    
+    ipb_info_inst : entity work.ipb_info
+    port map(
+        ipb_clk_i   => ipb_clk_i,
+        reset_i     => reset_i,
+        ipb_mosi_i  => ipb_info_i,
+        ipb_miso_o  => ipb_info_o,
+        wbus_o      => regs_req_write,
+        wbus_t      => regs_req_tri,
+        rbus_i      => regs_req_read
+    );
+    
+    regs_req_read(0) <= x"20141110";
+    regs_req_read(1) <= x"000000" & "00" & track_occupancy;
+
+    --================================--
+    -- ChipScope
+    --================================--
+
+    chipscope_icon_inst : entity work.chipscope_icon port map (CONTROL0 => cs_icon0);
+    
+    chipscope_ila_inst : entity work.chipscope_ila port map (CONTROL => cs_icon0, CLK => gtx_clk_i, TRIG0 => cs_ila0, TRIG1 => cs_ila1);
+
+    cs_ila0 <= tx_data & rx_data_i;
+    cs_ila1 <= track_rx_data(191 downto 168) & "0000000" & track_rx_en;
+    
 end Behavioral;

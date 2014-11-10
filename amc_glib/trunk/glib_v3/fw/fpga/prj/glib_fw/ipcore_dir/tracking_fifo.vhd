@@ -52,7 +52,8 @@ ENTITY tracking_fifo IS
     full : OUT STD_LOGIC;
     empty : OUT STD_LOGIC;
     valid : OUT STD_LOGIC;
-    underflow : OUT STD_LOGIC
+    underflow : OUT STD_LOGIC;
+    rd_data_count : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
   );
 END tracking_fifo;
 
@@ -70,7 +71,8 @@ COMPONENT wrapped_tracking_fifo
     full : OUT STD_LOGIC;
     empty : OUT STD_LOGIC;
     valid : OUT STD_LOGIC;
-    underflow : OUT STD_LOGIC
+    underflow : OUT STD_LOGIC;
+    rd_data_count : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
   );
 END COMPONENT;
 
@@ -159,7 +161,7 @@ END COMPONENT;
       c_has_prog_flags_wach => 0,
       c_has_prog_flags_wdch => 0,
       c_has_prog_flags_wrch => 0,
-      c_has_rd_data_count => 0,
+      c_has_rd_data_count => 1,
       c_has_rd_rst => 0,
       c_has_rst => 1,
       c_has_slave_ce => 0,
@@ -282,7 +284,8 @@ U0 : wrapped_tracking_fifo
     full => full,
     empty => empty,
     valid => valid,
-    underflow => underflow
+    underflow => underflow,
+    rd_data_count => rd_data_count
   );
 -- synthesis translate_on
 

@@ -262,7 +262,9 @@ begin
         ipb_track_i => ipb_mosi_i(ipb_track_1),
         ipb_track_o => ipb_miso_o(ipb_track_1),
         ipb_regs_i  => ipb_mosi_i(ipb_regs_1),
-        ipb_regs_o  => ipb_miso_o(ipb_regs_1)
+        ipb_regs_o  => ipb_miso_o(ipb_regs_1),
+        ipb_info_i  => ipb_mosi_i(ipb_info_1),
+        ipb_info_o  => ipb_miso_o(ipb_info_1)
     );
 
 end user_logic_arch;

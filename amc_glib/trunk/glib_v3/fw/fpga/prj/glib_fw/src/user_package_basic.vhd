@@ -21,7 +21,7 @@ package user_package is
 
 	--=== ipb slaves =============--
     
-	constant number_of_ipb_slaves       : positive := 9;
+	constant number_of_ipb_slaves       : positive := 12;
     
     constant ipb_vi2c_0                 : integer := 0;
     constant ipb_vi2c_1                 : integer := 1;
@@ -34,19 +34,19 @@ package user_package is
     constant ipb_regs_0                 : integer := 6;
     constant ipb_regs_1                 : integer := 7;
     constant ipb_regs_2                 : integer := 8;
+    
+    constant ipb_info_0                 : integer := 9;
+    constant ipb_info_1                 : integer := 10;
+    constant ipb_info_2                 : integer := 11;
 
     --=== Package types ==========--
     
     constant def_gtx_idle               : std_logic_vector(7 downto 0) := x"00";  
     constant def_gtx_vi2c               : std_logic_vector(7 downto 0) := x"01";  
     constant def_gtx_tracks             : std_logic_vector(7 downto 0) := x"02";  
-    constant def_gtx_regs               : std_logic_vector(7 downto 0) := x"03";  
-    
-    constant def_gtx_lv1a               : std_logic_vector(7 downto 0) := x"04";  
-    constant def_gtx_calpulse           : std_logic_vector(7 downto 0) := x"05";  
-    constant def_gtx_resync             : std_logic_vector(7 downto 0) := x"06";  
-    constant def_gtx_bc0                : std_logic_vector(7 downto 0) := x"07"; 
+    constant def_gtx_regs               : std_logic_vector(7 downto 0) := x"03"; 
 
+    type array32 is array(integer range <>) of std_logic_vector(31 downto 0);    
 
 end user_package;
 

@@ -1,0 +1,256 @@
+Release 14.7 - reportgen P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Nov 10 10:08:07 2014
+
+SUMMARY
+-------
+There are 10 clock regions:
+
+Clock Reports by Clock Regions
+------------------------------
+
+Clock Region X0Y0:
+------------------
+Number of global clocks in this region: 6
+List of global clocks in this region:
+   user_ipb_clk driven by BUFGCTRL_X0Y2 
+   system/sram_w[1]_clk driven by BUFGCTRL_X0Y3 
+   user_clk125_2_bufg driven by BUFGCTRL_X0Y31 
+   system/glib_pll_clkout_31_25_b driven by MMCM_ADV_X0Y0 
+   system/glib_pll_clkout_31_25_c driven by MMCM_ADV_X0Y0 
+   system/cdce_synch/clk_from_bufg_mux driven by BUFGCTRL_X0Y29 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 2
+List of local clocks in this region:
+   system/pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X32Y39 
+   system/i2c_s/reset_regs_i[6][0]_AND_773_o driven by SLICE_X42Y39 
+
+Summary of components used in this region:
+
+Number of         IOBM:    30 used out of    40    75%
+Number of         IOBS:    29 used out of    40    72%
+Number of       SLICEL:   188 used out of  1560    12%
+Number of       SLICEM:    49 used out of   680     7%
+
+Clock Region X1Y0:
+------------------
+Number of global clocks in this region: 3
+List of global clocks in this region:
+   user_ipb_clk driven by BUFGCTRL_X0Y2 
+   usr/gtx_clk driven by BUFGCTRL_X0Y1 
+   system/sram_w[1]_clk driven by BUFGCTRL_X0Y3 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 1
+List of local clocks in this region:
+   usr/gtx_wrapper_inst/gtx_clk driven by IBUFDS_GTXE1_X0Y2 
+
+Summary of components used in this region:
+
+Number of        GTXE1:     4 used out of     4   100%
+Number of         IOBM:    17 used out of    20    85%
+Number of         IOBS:    15 used out of    20    75%
+Number of         IPAD:     8 used out of    12    66%
+Number of     OLOGICE1:     3 used out of    40     7%
+Number of         OPAD:     8 used out of     8   100%
+Number of RAMBFIFO36E1:     3 used out of    32     9%
+Number of       SLICEL:   185 used out of  1280    14%
+Number of       SLICEM:   134 used out of   720    18%
+
+Clock Region X0Y1:
+------------------
+Number of global clocks in this region: 5
+List of global clocks in this region:
+   user_ipb_clk driven by BUFGCTRL_X0Y2 
+   system/sram_w[2]_clk driven by BUFGCTRL_X0Y4 
+   system/sram_w[1]_clk driven by BUFGCTRL_X0Y3 
+   user_clk125_2_bufg driven by BUFGCTRL_X0Y31 
+   system/cdce_synch/clk_from_bufg_mux driven by BUFGCTRL_X0Y29 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 10
+List of local clocks in this region:
+   MMCM_PHASE_CALIBRATION_ML_LUT2_12_ML_NEW_CLK driven by SLICE_X20Y49 
+   system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o driven by SLICE_X42Y44 
+   system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o driven by SLICE_X40Y44 
+   system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o driven by SLICE_X46Y41 
+   system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o driven by SLICE_X38Y42 
+   system/pll/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y0 
+   system/spi/reset_i_cpol_i_AND_934_o driven by SLICE_X23Y52 
+   system/i2c_s/reset_regs_i[6][1]_AND_771_o driven by SLICE_X40Y40 
+   system/i2c_s/reset_regs_i[6][2]_AND_769_o driven by SLICE_X41Y41 
+   system/i2c_s/reset_regs_i[6][3]_AND_767_o driven by SLICE_X39Y40 
+
+Summary of components used in this region:
+
+Number of         IOBM:    30 used out of    40    75%
+Number of         IOBS:    30 used out of    40    75%
+Number of       SLICEL:   494 used out of  1560    31%
+Number of       SLICEM:   185 used out of   680    27%
+
+Clock Region X1Y1:
+------------------
+Number of global clocks in this region: 2
+List of global clocks in this region:
+   user_ipb_clk driven by BUFGCTRL_X0Y2 
+   system/sram_w[2]_clk driven by BUFGCTRL_X0Y4 
+
+Number of regional clocks in this region: 2
+List of regional clocks in this region:
+   system/mac_clk<0> driven by BUFR_X2Y4 
+   system/mac_clk<2> driven by BUFR_X2Y5 
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of        GTXE1:     4 used out of     4   100%
+Number of IBUFDS_GTXE1:     1 used out of     2    50%
+Number of         IOBM:    12 used out of    20    60%
+Number of         IOBS:    12 used out of    20    60%
+Number of         IPAD:     2 used out of    12    16%
+Number of RAMBFIFO36E1:    13 used out of    28    46%
+Number of       SLICEL:   566 used out of  1180    47%
+Number of       SLICEM:   312 used out of   700    44%
+
+Clock Region X0Y2:
+------------------
+Number of global clocks in this region: 11
+List of global clocks in this region:
+   user_ipb_clk driven by BUFGCTRL_X0Y2 
+   system/sram_w[2]_clk driven by BUFGCTRL_X0Y4 
+   user_clk125_2_bufg driven by BUFGCTRL_X0Y31 
+   system/glib_pll_clkout_31_25_a driven by MMCM_ADV_X0Y0 
+   system/glib_pll_clkout_31_25_b driven by MMCM_ADV_X0Y0 
+   system/glib_pll_clkout_31_25_c driven by MMCM_ADV_X0Y0 
+   system/glib_pll_clkout_31_25_d_inv driven by MMCM_ADV_X0Y0 
+   system/xpoint1_clk1 driven by BUFGCTRL_X0Y30 
+   system/cdce_synch/clk_from_bufg_mux driven by BUFGCTRL_X0Y29 
+   system/gbt_phase_monitoring/ttclk_pll/clkfbout_buf driven by BUFHCE_X1Y35 
+   system/gbt_phase_monitoring/ttclk_pll/clkout0 driven by MMCM_ADV_X0Y5 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 1
+List of local clocks in this region:
+   system/gbt_phase_monitoring/ttclk_pll/clkfbout driven by MMCM_ADV_X0Y5 
+
+Summary of components used in this region:
+
+Number of         IOBM:    17 used out of    40    42%
+Number of         IOBS:    17 used out of    40    42%
+Number of       SLICEL:   108 used out of  1080    10%
+Number of       SLICEM:    63 used out of   680     9%
+Number of      STARTUP:     1 used out of     1   100%
+
+Clock Region X1Y2:
+------------------
+Number of global clocks in this region: 6
+List of global clocks in this region:
+   user_ipb_clk driven by BUFGCTRL_X0Y2 
+   system/sram_w[2]_clk driven by BUFGCTRL_X0Y4 
+   user_clk125_2_bufg driven by BUFGCTRL_X0Y31 
+   system/gbt_phase_monitoring/ttclk_x6 driven by BUFHCE_X1Y34 
+   system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce driven by BUFGCTRL_X0Y23 
+   system/gbt_phase_monitoring/sfp_ttclk_x6_cdce driven by BUFGCTRL_X0Y0 
+
+Number of regional clocks in this region: 4
+List of regional clocks in this region:
+   system/mac_clk<0> driven by BUFR_X2Y4 
+   system/mac_clk<2> driven by BUFR_X2Y5 
+   system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/clk_ds_i driven by BUFR_X2Y7 
+   system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/clk_ds_i driven by BUFR_X2Y6 
+
+Number of local clocks in this region: 4
+List of local clocks in this region:
+   user_clk125_2 driven by IBUFDS_GTXE1_X0Y7 
+   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y5 
+   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X56Y110 
+   MMCM_PHASE_CALIBRATION_ML_LUT2_4_ML_NEW_CLK driven by SLICE_X57Y111 
+
+Summary of components used in this region:
+
+Number of       BUFHCE:     2 used out of    12    16%
+Number of         BUFR:     2 used out of     2   100%
+Number of        GTXE1:     4 used out of     4   100%
+Number of         IOBM:    17 used out of    20    85%
+Number of         IOBS:    16 used out of    20    80%
+Number of         IPAD:     4 used out of    12    33%
+Number of     OLOGICE1:     1 used out of    40     2%
+Number of         OPAD:     4 used out of     8    50%
+Number of RAMBFIFO36E1:    16 used out of    28    57%
+Number of       SLICEL:   559 used out of  1280    43%
+Number of       SLICEM:   333 used out of   720    46%
+Number of TEMAC_SINGLE:     2 used out of     2   100%
+
+Clock Region X0Y3:
+------------------
+Number of global clocks in this region: 4
+List of global clocks in this region:
+   user_ipb_clk driven by BUFGCTRL_X0Y2 
+   user_clk125_2_bufg driven by BUFGCTRL_X0Y31 
+   system/xpoint1_clk1 driven by BUFGCTRL_X0Y30 
+   system/ipb_inv_clk driven by BUFGCTRL_X0Y5 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of         ICAP:     1 used out of     1   100%
+Number of       SLICEL:     2 used out of  1080     1%
+Number of       SLICEM:     9 used out of   680     1%
+
+Clock Region X1Y3:
+------------------
+Number of global clocks in this region: 1
+List of global clocks in this region:
+   user_ipb_clk driven by BUFGCTRL_X0Y2 
+
+Number of regional clocks in this region: 1
+List of regional clocks in this region:
+   system/mac_clk<2> driven by BUFR_X2Y5 
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of         BUFR:     2 used out of     2   100%
+Number of        GTXE1:     4 used out of     4   100%
+Number of IBUFDS_GTXE1:     1 used out of     2    50%
+Number of         IPAD:     2 used out of    12    16%
+Number of RAMBFIFO36E1:     5 used out of    28    17%
+Number of       SLICEL:   352 used out of  1180    29%
+Number of       SLICEM:   239 used out of   700    34%
+
+Clock Region X0Y4:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of         IOBM:     2 used out of    40     5%
+Number of         IOBS:     2 used out of    40     5%
+
+Clock Region X1Y4:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of        GTXE1:     4 used out of     4   100%
+

@@ -24,6 +24,7 @@ end ipb_tracking;
 
 architecture rtl of ipb_tracking is
 
+    signal ipb_ack      : std_logic := '0';
 	signal ipb_data     : std_logic_vector(31 downto 0) := (others => '0'); 
 
     signal rd_en        : std_logic := '0';
@@ -60,6 +61,8 @@ begin
         
             if (reset_i = '1') then
                 
+                ipb_ack <= '0';
+                
                 rd_en <= '0';
                 
                 last_ipb_strobe := '0';
@@ -70,47 +73,63 @@ begin
                 
                     if (ipb_mosi_i.ipb_addr(3 downto 0) = "0000") then
                     
+                        ipb_ack <= '1';
+                    
                         rd_en <= '1';
                     
                         ipb_data <= (others => '1');
                         
                     elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0001") then
+                    
+                        ipb_ack <= '1';
 
                         rd_en <= '0';
                     
                         ipb_data <= data(31 downto 0);
                         
                     elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0010") then
+                    
+                        ipb_ack <= '1';
 
                         rd_en <= '0';
                     
                         ipb_data <= data(63 downto 32);
                         
                     elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0011") then
+                    
+                        ipb_ack <= '1';
 
                         rd_en <= '0';
                     
                         ipb_data <= data(95 downto 64);
                         
                     elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0100") then
+                    
+                        ipb_ack <= '1';
 
                         rd_en <= '0';
                     
                         ipb_data <= data(127 downto 96);
                         
                     elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0101") then
+                    
+                        ipb_ack <= '1';
 
                         rd_en <= '0';
                     
                         ipb_data <= data(159 downto 128);
                         
                     elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0110") then
+                    
+                        ipb_ack <= '1';
 
                         rd_en <= '0';
                     
                         ipb_data <= data(191 downto 160);
                         
                     else
+                    
+                        ipb_ack <= '0';
                     
                         rd_en <= '0';
                     
@@ -119,6 +138,8 @@ begin
                     end if;
                     
                 else
+                
+                    ipb_ack <= '0';
                 
                     rd_en <= '0';
                     
@@ -130,7 +151,7 @@ begin
                     
                 elsif (rd_underflow = '1') then
                 
-                    data := (others => '0');
+                    data := (others => '1');
                     
                 end if;
                 
@@ -143,7 +164,7 @@ begin
     end process;
     
     ipb_miso_o.ipb_err <= '0';
-    ipb_miso_o.ipb_ack <= ipb_mosi_i.ipb_strobe;
+    ipb_miso_o.ipb_ack <= ipb_mosi_i.ipb_strobe and ipb_ack;
     ipb_miso_o.ipb_rdata <= ipb_data;
                             
 end rtl;

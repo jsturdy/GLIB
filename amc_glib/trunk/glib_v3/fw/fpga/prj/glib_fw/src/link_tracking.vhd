@@ -63,6 +63,20 @@ architecture Behavioral of link_tracking is
     signal regs_req_tri     : std_logic_vector(255 downto 0);
     signal regs_req_read    : array32(255 downto 0);
 
+    -- Counters
+
+    signal rx_error_counter : std_logic_vector(31 downto 0) := (others => '0');
+    signal vi2c_rx_counter  : std_logic_vector(31 downto 0) := (others => '0');
+    signal vi2c_tx_counter  : std_logic_vector(31 downto 0) := (others => '0');
+    signal regs_rx_counter  : std_logic_vector(31 downto 0) := (others => '0');
+    signal regs_tx_counter  : std_logic_vector(31 downto 0) := (others => '0');
+
+    signal rx_error_cnt_res : std_logic := '0';
+    signal vi2c_rx_cnt_res  : std_logic := '0';
+    signal vi2c_tx_cnt_res  : std_logic := '0';
+    signal regs_rx_cnt_res  : std_logic := '0';
+    signal regs_tx_cnt_res  : std_logic := '0';
+
     -- ChipScope signals
 
     signal tx_data          : std_logic_vector(15 downto 0);
@@ -171,8 +185,45 @@ begin
         rbus_i      => regs_req_read
     );
     
-    regs_req_read(0) <= x"20141110";
-    regs_req_read(1) <= x"000000" & "00" & track_occupancy;
+    regs_req_read(10) <= x"20141110";
+    regs_req_read(11) <= x"000000" & "00" & track_occupancy;
+    
+    -- Counters
+    
+    regs_req_read(0) <= rx_error_counter;
+    
+    regs_req_read(1) <= (others => '0');
+    rx_error_cnt_res <= regs_req_tri(1);
+    
+    regs_req_read(2) <= vi2c_rx_counter;
+    
+    regs_req_read(3) <= (others => '0');
+    vi2c_rx_cnt_res <= regs_req_tri(3);
+    
+    regs_req_read(4) <= vi2c_tx_counter;
+    
+    regs_req_read(5) <= (others => '0');
+    vi2c_tx_cnt_res <= regs_req_tri(5);
+    
+    regs_req_read(6) <= regs_rx_counter;
+    
+    regs_req_read(7) <= (others => '0');
+    regs_rx_cnt_res <= regs_req_tri(7);
+    
+    regs_req_read(8) <= regs_tx_counter;
+    
+    regs_req_read(9) <= (others => '0');
+    regs_tx_cnt_res <= regs_req_tri(9);
+
+    --================================--
+    -- Counters
+    --================================--
+
+    rx_error_counter_inst : entity work.counter port map(fabric_clk_i => gtx_clk_i, reset_i => rx_error_cnt_res, en_i => rx_error_i, data_o => rx_error_counter);
+    vi2c_rx_counter_inst : entity work.counter port map(fabric_clk_i => gtx_clk_i, reset_i => vi2c_rx_cnt_res, en_i => vi2c_rx_en, data_o => vi2c_rx_counter);
+    vi2c_tx_counter_inst : entity work.counter port map(fabric_clk_i => gtx_clk_i, reset_i => vi2c_tx_cnt_res, en_i => vi2c_tx_en, data_o => vi2c_tx_counter);
+    regs_rx_counter_inst : entity work.counter port map(fabric_clk_i => gtx_clk_i, reset_i => regs_rx_cnt_res, en_i => regs_rx_en, data_o => regs_rx_counter);
+    regs_tx_counter_inst : entity work.counter port map(fabric_clk_i => gtx_clk_i, reset_i => regs_tx_cnt_res, en_i => regs_tx_en, data_o => regs_tx_counter);
 
     --================================--
     -- ChipScope

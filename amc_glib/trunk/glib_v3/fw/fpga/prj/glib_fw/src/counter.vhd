@@ -15,34 +15,34 @@ port(
 end counter;
 
 architecture Behavioral of counter is
+    
+    signal counter  : unsigned(31 downto 0) := (others => '0');
+    
 begin
 
     process(fabric_clk_i)
-    
-        variable count  : unsigned(31 downto 0) := (others => '0');
-    
     begin
 
         if (rising_edge(fabric_clk_i)) then
         
             if (reset_i = '1') then
             
-                count := (others => '0');
+                counter <= (others => '0');
                 
             else
             
                 if (en_i = '1') then
                 
-                    count := count + 1;
+                    counter <= counter + 1;
                     
                 end if;
-                
-                data_o <= std_logic_vector(count);
                 
             end if;
         
         end if;
     
     end process;
+                
+    data_o <= std_logic_vector(counter);
 
 end Behavioral;

@@ -34,6 +34,8 @@ architecture rtl of ipb_tracking is
     signal rd_valid     : std_logic := '0';
     signal rd_underflow : std_logic := '0';
     
+    signal fifo_empty   : std_logic := '1';
+    
 begin
     
     tracking_fifo_inst : entity work.tracking_fifo
@@ -49,11 +51,11 @@ begin
         dout            => rd_data,
         rd_data_count   => occupancy_o,
         full            => open,
-        empty           => open
+        empty           => fifo_empty
     ); 
    
     process(ipb_clk_i)
-    
+        
         variable data               : std_logic_vector(191 downto 0) := (others => '0');
     
         variable last_ipb_strobe    : std_logic := '0';
@@ -79,8 +81,16 @@ begin
                         ipb_ack <= '1';
                     
                         rd_en <= '1';
+                        
+                        if (fifo_empty = '0') then
                     
-                        ipb_data <= (others => '1');
+                            ipb_data <= (others => '1');
+                            
+                        else
+                        
+                            ipb_data <= (others => '0');
+                            
+                        end if;
                         
                     elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0001") then
                     

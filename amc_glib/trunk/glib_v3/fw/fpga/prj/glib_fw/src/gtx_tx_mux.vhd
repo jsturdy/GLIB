@@ -36,7 +36,7 @@ begin
         variable data_cnt       : integer range 0 to 15 := 0;
     
         -- Last kchar sent
-        variable kchar_count    : integer range 0 to 1023 := 0;
+        variable kchar_count    : integer range 0 to 255 := 0;
 
     begin
     
@@ -60,7 +60,7 @@ begin
                     
                     tx_data_o <= def_gtx_idle & x"BC"; -- Idle code
                     
-                    if (kchar_count = 1023) then
+                    if (kchar_count = 255) then
                     
                         -- Set kchar
                         tx_kchar_o <= "01";

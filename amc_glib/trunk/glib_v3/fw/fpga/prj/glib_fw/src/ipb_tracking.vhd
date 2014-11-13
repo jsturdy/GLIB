@@ -19,7 +19,8 @@ port(
     rx_en_i         : in std_logic;
     rx_data_i       : in std_logic_vector(191 downto 0);
     
-    occupancy_o     : out std_logic_vector(5 downto 0)
+    fifo_reset_i    : in std_logic;
+    fifo_count_o    : out std_logic_vector(5 downto 0)
     
 );
 end ipb_tracking;

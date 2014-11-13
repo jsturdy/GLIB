@@ -98,13 +98,14 @@ if __name__ == "__main__":
         if (time.time() - timeStart > 60):
             break
 
-        testRead("opto10")
-        testRead("opto11")
-        testWrite("opto12", 0x2)
-        # testRead("vfat2_8_chipid0")
-        testRead("opto12")
-        # testRead("vfat2_8_chipid1")
-        testWrite("opto12", 0x0)
+        testRead("vfat2_8_chipid0")
+        testRead("vfat2_8_chipid1")
+        testRead("vfat2_8_chipid0")
+        testRead("vfat2_8_chipid1")
+        testRead("vfat2_8_chipid0")
+        testRead("vfat2_8_chipid1")
+        testRead("vfat2_8_chipid0")
+        testRead("vfat2_8_chipid1")
 
 
     signal_handler(0, 0)

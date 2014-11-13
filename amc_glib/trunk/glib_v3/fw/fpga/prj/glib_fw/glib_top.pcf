@@ -1,8 +1,45 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Nov 12 17:56:31 2014
+// Written by: Map P.20131013 on Thu Nov 13 08:58:05 2014
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "amc_port_rx_in<17>" LOCATE = SITE "AE34" LEVEL 1;
+COMP "amc_port_rx_in<18>" LOCATE = SITE "AD34" LEVEL 1;
+COMP "amc_port_rx_in<19>" LOCATE = SITE "AF33" LEVEL 1;
+COMP "fmc1_present_l" LOCATE = SITE "AN22" LEVEL 1;
+COMP "v6_cpld<0>" LOCATE = SITE "AE32" LEVEL 1;
+COMP "v6_cpld<1>" LOCATE = SITE "AB27" LEVEL 1;
+COMP "v6_cpld<2>" LOCATE = SITE "AC27" LEVEL 1;
+COMP "v6_cpld<3>" LOCATE = SITE "AG33" LEVEL 1;
+COMP "v6_cpld<4>" LOCATE = SITE "AG32" LEVEL 1;
+COMP "v6_cpld<5>" LOCATE = SITE "AA26" LEVEL 1;
+COMP "v6_led<1>" LOCATE = SITE "AF31" LEVEL 1;
+COMP "v6_led<2>" LOCATE = SITE "AB25" LEVEL 1;
+COMP "v6_led<3>" LOCATE = SITE "AC25" LEVEL 1;
+COMP "amc_port_tx_in<20>" LOCATE = SITE "AC28" LEVEL 1;
+COMP "amc_port_tx_in<17>" LOCATE = SITE "AA29" LEVEL 1;
+COMP "amc_port_tx_in<18>" LOCATE = SITE "AA25" LEVEL 1;
+COMP "amc_port_tx_in<19>" LOCATE = SITE "AB28" LEVEL 1;
+COMP "xpoint1_clk1_n" LOCATE = SITE "H9" LEVEL 1;
+COMP "xpoint1_clk1_p" LOCATE = SITE "J9" LEVEL 1;
+COMP "usr/gtx_wrapper_inst/high_speed_gtx1_inst/gtxe1_i" LOCATE = SITE
+        "GTXE1_X0Y1" LEVEL 1;
+COMP "system/gbt_phase_monitoring/ttclk_pll/clkf_buf" LOCATE = SITE
+        "BUFHCE_X1Y35" LEVEL 1;
+COMP "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce_bufg" LOCATE = SITE
+        "BUFGCTRL_X0Y23" LEVEL 1;
+COMP "system/gbt_phase_monitoring/ttclk_pll/clkout1_buf" LOCATE = SITE
+        "BUFHCE_X1Y34" LEVEL 1;
+COMP "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i" LOCATE = SITE
+        "GTXE1_X0Y0" LEVEL 1;
+COMP "system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst" LOCATE = SITE
+        "MMCM_ADV_X0Y5" LEVEL 1;
+COMP "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce_bufg" LOCATE = SITE
+        "BUFGCTRL_X0Y0" LEVEL 1;
+COMP "usr/gtx_wrapper_inst/high_speed_gtx3_inst/gtxe1_i" LOCATE = SITE
+        "GTXE1_X0Y3" LEVEL 1;
+COMP "usr/gtx_wrapper_inst/high_speed_gtx2_inst/gtxe1_i" LOCATE = SITE
+        "GTXE1_X0Y2" LEVEL 1;
 COMP "sfp_rxlos<1>" LOCATE = SITE "AC19" LEVEL 1;
 COMP "sfp_rxlos<2>" LOCATE = SITE "AF20" LEVEL 1;
 COMP "sfp_rxlos<3>" LOCATE = SITE "AJ20" LEVEL 1;
@@ -222,43 +259,6 @@ COMP "cdce_spi_clk" LOCATE = SITE "AC20" LEVEL 1;
 COMP "clk125_2_n" LOCATE = SITE "M5" LEVEL 1;
 COMP "clk125_2_p" LOCATE = SITE "M6" LEVEL 1;
 COMP "amc_port_rx_in<20>" LOCATE = SITE "AB32" LEVEL 1;
-COMP "amc_port_rx_in<17>" LOCATE = SITE "AE34" LEVEL 1;
-COMP "amc_port_rx_in<18>" LOCATE = SITE "AD34" LEVEL 1;
-COMP "amc_port_rx_in<19>" LOCATE = SITE "AF33" LEVEL 1;
-COMP "fmc1_present_l" LOCATE = SITE "AN22" LEVEL 1;
-COMP "v6_cpld<0>" LOCATE = SITE "AE32" LEVEL 1;
-COMP "v6_cpld<1>" LOCATE = SITE "AB27" LEVEL 1;
-COMP "v6_cpld<2>" LOCATE = SITE "AC27" LEVEL 1;
-COMP "v6_cpld<3>" LOCATE = SITE "AG33" LEVEL 1;
-COMP "v6_cpld<4>" LOCATE = SITE "AG32" LEVEL 1;
-COMP "v6_cpld<5>" LOCATE = SITE "AA26" LEVEL 1;
-COMP "v6_led<1>" LOCATE = SITE "AF31" LEVEL 1;
-COMP "v6_led<2>" LOCATE = SITE "AB25" LEVEL 1;
-COMP "v6_led<3>" LOCATE = SITE "AC25" LEVEL 1;
-COMP "amc_port_tx_in<20>" LOCATE = SITE "AC28" LEVEL 1;
-COMP "amc_port_tx_in<17>" LOCATE = SITE "AA29" LEVEL 1;
-COMP "amc_port_tx_in<18>" LOCATE = SITE "AA25" LEVEL 1;
-COMP "amc_port_tx_in<19>" LOCATE = SITE "AB28" LEVEL 1;
-COMP "xpoint1_clk1_n" LOCATE = SITE "H9" LEVEL 1;
-COMP "xpoint1_clk1_p" LOCATE = SITE "J9" LEVEL 1;
-COMP "usr/gtx_wrapper_inst/high_speed_gtx1_inst/gtxe1_i" LOCATE = SITE
-        "GTXE1_X0Y1" LEVEL 1;
-COMP "system/gbt_phase_monitoring/ttclk_pll/clkf_buf" LOCATE = SITE
-        "BUFHCE_X1Y35" LEVEL 1;
-COMP "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce_bufg" LOCATE = SITE
-        "BUFGCTRL_X0Y23" LEVEL 1;
-COMP "system/gbt_phase_monitoring/ttclk_pll/clkout1_buf" LOCATE = SITE
-        "BUFHCE_X1Y34" LEVEL 1;
-COMP "usr/gtx_wrapper_inst/high_speed_gtx0_inst/gtxe1_i" LOCATE = SITE
-        "GTXE1_X0Y0" LEVEL 1;
-COMP "system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst" LOCATE = SITE
-        "MMCM_ADV_X0Y5" LEVEL 1;
-COMP "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce_bufg" LOCATE = SITE
-        "BUFGCTRL_X0Y0" LEVEL 1;
-COMP "usr/gtx_wrapper_inst/high_speed_gtx3_inst/gtxe1_i" LOCATE = SITE
-        "GTXE1_X0Y3" LEVEL 1;
-COMP "usr/gtx_wrapper_inst/high_speed_gtx2_inst/gtxe1_i" LOCATE = SITE
-        "GTXE1_X0Y2" LEVEL 1;
 COMP "cdce_sync_OBUF" LOCATE = SITE "SLICE_X31Y36" LEVEL 1;
 COMP "system/gbt_phase_monitoring/sfp_cdce_pm/debug_test_d_clk_o" LOCATE =
         SITE "SLICE_X56Y100" LEVEL 1;
@@ -5143,12 +5143,12 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/link_tracking_1_inst/ipb_registers_inst/clock_bridge_rx_inst/out_status"
         BEL "usr/link_tracking_1_inst/ipb_registers_inst/tx_en" BEL
         "usr/link_tracking_1_inst/ipb_registers_inst/ipb_ack" BEL
-        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_1" BEL
-        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_3" BEL
-        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_5" BEL
-        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_7" BEL
-        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_9" BEL
         "usr/link_tracking_1_inst/ipb_info_inst/ipb_ack" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_5" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_6" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_7" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_8" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_9" BEL
         "system/clkbuf_pllout2" BEL "system/ip_mac/slv_mac_str_curr" BEL
         "system/ip_mac/slv_ip_str_curr" BEL "system/ip_mac/eep_mac_str_curr"
         BEL "system/ip_mac/eep_ip_str_curr" BEL "system/ip_mac/rarp_select"
@@ -8283,12 +8283,12 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/link_tracking_1_inst/ipb_registers_inst/clock_bridge_rx_inst/out_status"
         BEL "usr/link_tracking_1_inst/ipb_registers_inst/tx_en" BEL
         "usr/link_tracking_1_inst/ipb_registers_inst/ipb_ack" BEL
-        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_1" BEL
-        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_3" BEL
-        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_5" BEL
-        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_7" BEL
-        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_9" BEL
         "usr/link_tracking_1_inst/ipb_info_inst/ipb_ack" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_5" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_6" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_7" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_8" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_9" BEL
         "system/clkbuf_pllout2" BEL "system/ip_mac/slv_mac_str_curr" BEL
         "system/ip_mac/slv_ip_str_curr" BEL "system/ip_mac/eep_mac_str_curr"
         BEL "system/ip_mac/eep_ip_str_curr" BEL "system/ip_mac/rarp_select"

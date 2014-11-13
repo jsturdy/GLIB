@@ -48,7 +48,8 @@ architecture Behavioral of link_tracking is
     
     signal track_rx_en              : std_logic := '0';
     signal track_rx_data            : std_logic_vector(191 downto 0) := (others => '0');
-    signal track_occupancy          : std_logic_vector(5 downto 0) := (others => '0');
+    signal track_fifo_reset         : std_logic := '0';
+    signal track_fifo_count         : std_logic_vector(5 downto 0) := (others => '0');
          
     -- Registers signals
     
@@ -150,7 +151,8 @@ begin
         ipb_miso_o      => ipb_track_o,
         rx_en_i         => track_rx_en,
         rx_data_i       => track_rx_data,
-        occupancy_o     => track_occupancy
+        fifo_reset_i    => track_fifo_reset,
+        fifo_count_o    => track_fifo_count
     );
 
     --================================--
@@ -227,12 +229,14 @@ begin
     
     regs_req_read(10) <= x"20141110";
     
-    -- Tracking fifo occupancy : 11
+    -- Tracking fifo : 12 downto 11
     
-    regs_req_read(11) <= x"000000" & "00" & track_occupancy;
+    regs_req_read(11) <= x"000000" & "00" & track_fifo_count; -- Occupancy
     
-    -- Others : 255 downto 12
+    track_fifo_reset <= regs_req_tri(12); -- Reset
     
+    -- Others : 255 downto 13
+   
     --================================--
     -- ChipScope
     --================================--

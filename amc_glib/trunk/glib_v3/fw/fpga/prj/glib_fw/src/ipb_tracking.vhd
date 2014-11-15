@@ -41,7 +41,7 @@ begin
     
     tracking_fifo_inst : entity work.tracking_fifo
     port map(
-        rst             => reset_i,
+        rst             => (fifo_reset_i or reset_i),
         wr_clk          => gtx_clk_i,
         wr_en           => rx_en_i,
         din             => rx_data_i,

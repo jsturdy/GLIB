@@ -1,8 +1,13 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Nov 15 10:24:41 2014
+// Written by: Map P.20131013 on Sat Nov 15 16:20:09 2014
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "amc_port_rx_p<2>" LOCATE = SITE "AC13" LEVEL 1;
+COMP "amc_port_rx_p<3>" LOCATE = SITE "AP11" LEVEL 1;
+COMP "amc_port_tx_n<0>" LOCATE = SITE "V2" LEVEL 1;
+COMP "amc_port_tx_n<2>" LOCATE = SITE "AH10" LEVEL 1;
+COMP "amc_port_tx_n<3>" LOCATE = SITE "AD11" LEVEL 1;
 COMP "amc_port_tx_p<0>" LOCATE = SITE "V1" LEVEL 1;
 COMP "amc_port_tx_p<2>" LOCATE = SITE "AJ10" LEVEL 1;
 COMP "amc_port_tx_p<3>" LOCATE = SITE "AD12" LEVEL 1;
@@ -254,11 +259,6 @@ COMP "amc_port_rx_n<0>" LOCATE = SITE "W4" LEVEL 1;
 COMP "amc_port_rx_n<2>" LOCATE = SITE "AC12" LEVEL 1;
 COMP "amc_port_rx_n<3>" LOCATE = SITE "AP12" LEVEL 1;
 COMP "amc_port_rx_p<0>" LOCATE = SITE "W3" LEVEL 1;
-COMP "amc_port_rx_p<2>" LOCATE = SITE "AC13" LEVEL 1;
-COMP "amc_port_rx_p<3>" LOCATE = SITE "AP11" LEVEL 1;
-COMP "amc_port_tx_n<0>" LOCATE = SITE "V2" LEVEL 1;
-COMP "amc_port_tx_n<2>" LOCATE = SITE "AH10" LEVEL 1;
-COMP "amc_port_tx_n<3>" LOCATE = SITE "AD11" LEVEL 1;
 COMP "cdce_sync_OBUF" LOCATE = SITE "SLICE_X31Y36" LEVEL 1;
 COMP "system/gbt_phase_monitoring/sfp_cdce_pm/debug_test_d_clk_o" LOCATE =
         SITE "SLICE_X56Y100" LEVEL 1;
@@ -5156,6 +5156,7 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_7" BEL
         "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_8" BEL
         "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_9" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_12" BEL
         "system/clkbuf_pllout2" BEL "system/ip_mac/slv_mac_str_curr" BEL
         "system/ip_mac/slv_ip_str_curr" BEL "system/ip_mac/eep_mac_str_curr"
         BEL "system/ip_mac/eep_ip_str_curr" BEL "system/ip_mac/rarp_select"
@@ -8299,6 +8300,7 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_7" BEL
         "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_8" BEL
         "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_9" BEL
+        "usr/link_tracking_1_inst/ipb_info_inst/wbus_t_12" BEL
         "system/clkbuf_pllout2" BEL "system/ip_mac/slv_mac_str_curr" BEL
         "system/ip_mac/slv_ip_str_curr" BEL "system/ip_mac/eep_mac_str_curr"
         BEL "system/ip_mac/eep_ip_str_curr" BEL "system/ip_mac/rarp_select"
@@ -24679,9 +24681,6 @@ TIMEGRP TO_systemi2c_sregs_6_1_LDC = BEL "system/i2c_s/regs_6_1_LDC";
 TIMEGRP TO_systemi2c_sregs_6_3_LDC = BEL "system/i2c_s/regs_6_3_LDC";
 TIMEGRP TO_systemi2c_sregs_6_2_LDC = BEL "system/i2c_s/regs_6_2_LDC";
 TIMEGRP TO_systemi2c_sregs_6_0_LDC = BEL "system/i2c_s/regs_6_0_LDC";
-TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
-TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
-TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
 TS_clk125_2_p = PERIOD TIMEGRP "clk125_2_p" 8 ns HIGH 50%;
 TS_clk125_2_n = PERIOD TIMEGRP "clk125_2_n" TS_clk125_2_p PHASE 4 ns HIGH 50%;
 TS_system_phy_en_phy_eth_clk125_out = PERIOD TIMEGRP
@@ -24691,6 +24690,9 @@ TS_system_amc_p0_en_amc_p0_eth_clk125_out = PERIOD TIMEGRP
 TS_xpoint1_clk1_p = PERIOD TIMEGRP "xpoint1_clk1_p" 25 ns HIGH 50%;
 TS_xpoint1_clk1_n = PERIOD TIMEGRP "xpoint1_clk1_n" TS_xpoint1_clk1_p PHASE
         12.5 ns HIGH 50%;
+TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
+TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
+TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
 TS_system_glib_pll_clkout_31_25_c = PERIOD TIMEGRP
         "system_glib_pll_clkout_31_25_c" TS_clk125_2_p / 0.25 HIGH 50%;
 TS_system_glib_pll_clkout_31_25_a = PERIOD TIMEGRP

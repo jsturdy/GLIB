@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: glib_top.prj
 
@@ -425,6 +425,7 @@ Parsing architecture <rtl> of entity <ipb_vi2c>.
 Parsing VHDL file "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\ipb_tracking.vhd" into library work
 Parsing entity <ipb_tracking>.
 Parsing architecture <rtl> of entity <ipb_tracking>.
+WARNING:HDLCompiler:946 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\ipb_tracking.vhd" Line 44: Actual for formal port rst is neither a static name nor a globally static expression
 Parsing VHDL file "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\ipb_registers.vhd" into library work
 Parsing entity <ipb_registers>.
 Parsing architecture <rtl> of entity <ipb_registers>.
@@ -4477,7 +4478,6 @@ Synthesizing Unit <ipb_tracking>.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_wdata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_write> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <fifo_reset_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\ipb_tracking.vhd" line 42: Output port <full> of the instance <tracking_fifo_inst> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\ipb_tracking.vhd" line 42: Output port <empty> of the instance <tracking_fifo_inst> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <rd_en>.
@@ -14779,7 +14779,6 @@ WARNING:Xst:2677 - Node <wbus_t_3> of sequential type is unconnected in block <i
 WARNING:Xst:2677 - Node <wbus_t_4> of sequential type is unconnected in block <ipb_info_inst>.
 WARNING:Xst:2677 - Node <wbus_t_10> of sequential type is unconnected in block <ipb_info_inst>.
 WARNING:Xst:2677 - Node <wbus_t_11> of sequential type is unconnected in block <ipb_info_inst>.
-WARNING:Xst:2677 - Node <wbus_t_12> of sequential type is unconnected in block <ipb_info_inst>.
 WARNING:Xst:2677 - Node <wbus_t_13> of sequential type is unconnected in block <ipb_info_inst>.
 WARNING:Xst:2677 - Node <wbus_t_14> of sequential type is unconnected in block <ipb_info_inst>.
 WARNING:Xst:2677 - Node <wbus_t_15> of sequential type is unconnected in block <ipb_info_inst>.
@@ -24055,8 +24054,8 @@ Unit <u2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 11237
- Flip-Flops                                            : 11237
+# Registers                                            : 11238
+ Flip-Flops                                            : 11238
 # Shift Registers                                      : 4
  2-bit shift register                                  : 3
  5-bit shift register                                  : 1
@@ -24082,15 +24081,15 @@ Top Level Output File Name         : glib_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 14769
+# BELS                             : 14771
 #      GND                         : 105
 #      INV                         : 279
 #      LUT1                        : 602
-#      LUT2                        : 2421
+#      LUT2                        : 2422
 #      LUT3                        : 2076
 #      LUT4                        : 1593
 #      LUT5                        : 1695
-#      LUT6                        : 3241
+#      LUT6                        : 3242
 #      MUXCY                       : 1300
 #      MUXCY_L                     : 102
 #      MUXF5                       : 2
@@ -24099,14 +24098,14 @@ Primitive and Black Box Usage:
 #      MUXF8                       : 20
 #      VCC                         : 92
 #      XORCY                       : 1136
-# FlipFlops/Latches                : 12258
+# FlipFlops/Latches                : 12259
 #      FD                          : 2380
 #      FDC                         : 1191
 #      FDCE                        : 1124
 #      FDE                         : 3648
 #      FDP                         : 247
 #      FDPE                        : 50
-#      FDR                         : 811
+#      FDR                         : 812
 #      FDRE                        : 2414
 #      FDS                         : 70
 #      FDSE                        : 311
@@ -24150,18 +24149,18 @@ Selected Device : 6vlx130tff1156-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           12258  out of  160000     7%  
- Number of Slice LUTs:                12142  out of  80000    15%  
-    Number used as Logic:             11907  out of  80000    14%  
+ Number of Slice Registers:           12259  out of  160000     7%  
+ Number of Slice LUTs:                12144  out of  80000    15%  
+    Number used as Logic:             11909  out of  80000    14%  
     Number used as Memory:              235  out of  27840     0%  
        Number used as RAM:               96
        Number used as SRL:              139
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  17046
-   Number with an unused Flip Flop:    4788  out of  17046    28%  
-   Number with an unused LUT:          4904  out of  17046    28%  
-   Number of fully used LUT-FF pairs:  7354  out of  17046    43%  
+ Number of LUT Flip Flop pairs used:  17048
+   Number with an unused Flip Flop:    4789  out of  17048    28%  
+   Number with an unused LUT:          4904  out of  17048    28%  
+   Number of fully used LUT-FF pairs:  7355  out of  17048    43%  
    Number of unique control sets:       637
 
 IO Utilization: 
@@ -24197,7 +24196,7 @@ Clock Information:
 Clock Signal                                                                                                                                          | Clock buffer(FF name)                                                                  | Load  |
 ------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
 usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                                                                | BUFG                                                                                   | 1282  |
-clk125_2_p                                                                                                                                            | MMCM_ADV:CLKOUT1                                                                       | 4208  |
+clk125_2_p                                                                                                                                            | MMCM_ADV:CLKOUT1                                                                       | 4209  |
 usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                                                   | BUFG                                                                                   | 160   |
 usr/link_tracking_1_inst/chipscope_icon_inst/CONTROL0<13>(usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
 usr/link_tracking_1_inst/chipscope_icon_inst/U0/iUPDATE_OUT                                                                                           | NONE(usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD)               | 1     |
@@ -24232,7 +24231,7 @@ usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_
 usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N11(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 124   |
 usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N0(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 72    |
 usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N0(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 72    |
-usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)              | NONE(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram)                                                                                                                   | 12    |
+usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)              | NONE(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram)                                                                                                                   | 12    |
 usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/link_tracking_1_inst/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 8     |
 system/amc_p0_en.amc_p0_eth/N0(system/amc_p0_en.amc_p0_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                           | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                                                                                                                                   | 1     |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/N1(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                                   | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                                                  | 1     |
@@ -24283,10 +24282,10 @@ Delay:               2.996ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk125_2_p'
-  Clock period: 3.184ns (frequency: 314.099MHz)
-  Total number of paths / destination ports: 4820326 / 10058
+  Clock period: 3.183ns (frequency: 314.121MHz)
+  Total number of paths / destination ports: 4822317 / 10060
 -------------------------------------------------------------------------
-Delay:               3.184ns (Levels of Logic = 5)
+Delay:               3.183ns (Levels of Logic = 5)
   Source:            system/rst/rst_fabric_o (FF)
   Destination:       system/sram2_if/sramInterface/DATA_O_0 (FF)
   Source Clock:      clk125_2_p rising
@@ -24296,7 +24295,7 @@ Delay:               3.184ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q           958   0.375   0.692  rst_fabric_o (rst_fabric_o)
+     FDPE:C->Q           953   0.375   0.692  rst_fabric_o (rst_fabric_o)
      end scope: 'system/rst:rst_fabric_o'
      begin scope: 'system/sram2_if:RESET_I'
      begin scope: 'system/sram2_if/sramInterfaceIoControl:IPBUS_RESET_I'
@@ -24306,7 +24305,7 @@ Delay:               3.184ns (Levels of Logic = 5)
      LUT6:I0->O           36   0.068   0.552  _n01471 (_n0147)
      FDRE:R                    0.434          DATA_O_0
     ----------------------------------------
-    Total                      3.184ns (0.945ns logic, 2.239ns route)
+    Total                      3.183ns (0.945ns logic, 2.238ns route)
                                        (29.7% logic, 70.3% route)
 
 =========================================================================
@@ -25120,14 +25119,14 @@ xpoint1_clk1_p |    2.931|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 160.00 secs
-Total CPU time to Xst completion: 159.98 secs
+Total REAL time to Xst completion: 143.00 secs
+Total CPU time to Xst completion: 143.12 secs
  
 --> 
 
-Total memory usage is 508020 kilobytes
+Total memory usage is 512500 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 18653 (   0 filtered)
+Number of warnings : 18652 (   0 filtered)
 Number of infos    :  821 (   0 filtered)
 

@@ -1,0 +1,73 @@
+##===================================================================================================##
+##============================= User Constraints FILE (UCF) information =============================##
+##===================================================================================================##
+##                                                                                         
+## Company:               CERN (PH-ESE-BE)                                                         
+## Engineer:              Manoel Barros Marin (manoel.barros.marin@cern.ch) (m.barros.marin@ieee.org)
+##                                                                                                 
+## Project Name:          GBT-FPGA                                                                
+## UCF File Name:         GLIB - GBT Link reference design timing closure                                        
+##                                                                                                   
+## Target Device:         GLIB (Xilinx Virtex 6)                                                         
+## Tool version:          ISE 14.5                                                                
+##                                                                                                   
+## Version:               1.1                                                                      
+##
+## Description:            
+##
+## Versions history:      DATE         VERSION   AUTHOR              DESCRIPTION
+##
+##                        04/06/2013   1.0       M. Barros Marin     - First .ucf definition           
+##
+##                        23/06/2013   1.1       M. Barros Marin     - Cosmetic modifications 
+## 
+## Additional Comments:   
+##                                                                                                   
+##===================================================================================================##
+##===================================================================================================##
+
+##===================================================================================================##
+##====================================  TIMING CLOSURE  =============================================##
+##===================================================================================================##
+
+##===========##
+## MGT RESET ##
+##===========##
+
+NET "usr/simplified_gbt_core_inst/mgtTxReset_from_gbtBankRst"                           MAXDELAY = 3 ns;
+NET "usr/simplified_gbt_core_inst/mgtRxReset_from_gbtBankRst"                           MAXDELAY = 3 ns;
+
+##====================##                                 
+## MGT DERIVED CLOCKS ##                                   
+##====================##               
+
+## Comment: The net "usr/gbtExmplDsgn/from_gbtBank_1_clks_mgt_clks_tx_wordClk_noBuff<1>" has to be related with the MGT reference clock.
+
+NET "usr/simplified_gbt_core_inst/from_gbtBank_1_clks_mgt_clks_tx_wordClk_noBuff<1>"    TNM_NET = usr/simplified_gbt_core_inst/from_gbtBank_1_clks_mgt_clks_tx_wordClk_noBuff<1>;
+TIMESPEC TS_usr_simplified_gbt_core_inst_from_gbtBank_1_clks_mgt_clks_tx_wordClk_noBuff_1 = PERIOD "usr/simplified_gbt_core_inst/from_gbtBank_1_clks_mgt_clks_tx_wordClk_noBuff<1>" TS_cdce_out0_p HIGH 50%;
+
+NET "usr/simplified_gbt_core_inst/from_gbtBank_1_clks_mgt_clks_rx_wordClk_noBuff<1>"    TNM_NET = usr/simplified_gbt_core_inst/from_gbtBank_1_clks_mgt_clks_rx_wordClk_noBuff<1>;
+TIMESPEC TS_usr_simplified_gbt_core_instn_from_gbtBank_1_clks_mgt_clks_rx_wordClk_noBuff_1 = PERIOD "usr/simplified_gbt_core_inst/from_gbtBank_1_clks_mgt_clks_rx_wordClk_noBuff<1>" 4.1667 ns HIGH 50%;
+
+##========##
+## GBT TX ##
+##========##
+
+## Comment: The period of TX_FRAMECLK is 25ns but "TS_GBTTX_SCRAMBLER_TO_GEARBOX" is set to 20ns, providing 5ns for setup margin.
+
+INST "usr/simplified_gbt_core_inst/gbtBank_1/gbtTx_gen[1].gbtTx/scrambler"              TNM = "GBT_TX_SCRAMBLER";
+INST "usr/simplified_gbt_core_inst/gbtBank_1/gbtTx_gen[1].gbtTx/txGearbox"              TNM = "GBT_TX_GEARBOX";
+TIMESPEC TS_GBTTX_SCRAMBLER_TO_GEARBOX =                                    FROM  "GBT_TX_SCRAMBLER" TO "GBT_TX_GEARBOX" 20 ns DATAPATHONLY;
+
+##========##
+## GBT RX ##
+##========##
+
+## Comment: The period of RX_FRAMECLK is 25ns but "TS_GBTRX_GEARBOX_TO_DESCRAMBLER" is set to 20ns, providing 5ns for setup margin.
+
+INST "usr/simplified_gbt_core_inst/gbtBank_1/gbtRx_gen[1].gbtRx/rxGearbox"              TNM = "GBT_RX_GEARBOX";
+INST "usr/simplified_gbt_core_inst/gbtBank_1/gbtRx_gen[1].gbtRx/descrambler"            TNM = "GBT_RX_DESCRAMBLER";
+TIMESPEC TS_GBTRX_GEARBOX_TO_DESCRAMBLER =                                  FROM  "GBT_RX_GEARBOX" TO "GBT_RX_DESCRAMBLER" 20 ns DATAPATHONLY;
+
+##===================================================================================================##
+##===================================================================================================##

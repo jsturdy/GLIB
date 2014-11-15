@@ -227,7 +227,7 @@ begin
     
     -- Firmware date : 10
     
-    regs_req_read(10) <= x"20141110";
+    regs_req_read(10) <= x"20141115";
     
     -- Tracking fifo : 12 downto 11
     

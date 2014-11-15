@@ -1,11 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Nov 15 16:20:09 2014
+// Written by: Map P.20131013 on Sat Nov 15 17:15:37 2014
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "amc_port_rx_p<2>" LOCATE = SITE "AC13" LEVEL 1;
-COMP "amc_port_rx_p<3>" LOCATE = SITE "AP11" LEVEL 1;
-COMP "amc_port_tx_n<0>" LOCATE = SITE "V2" LEVEL 1;
 COMP "amc_port_tx_n<2>" LOCATE = SITE "AH10" LEVEL 1;
 COMP "amc_port_tx_n<3>" LOCATE = SITE "AD11" LEVEL 1;
 COMP "amc_port_tx_p<0>" LOCATE = SITE "V1" LEVEL 1;
@@ -259,6 +256,9 @@ COMP "amc_port_rx_n<0>" LOCATE = SITE "W4" LEVEL 1;
 COMP "amc_port_rx_n<2>" LOCATE = SITE "AC12" LEVEL 1;
 COMP "amc_port_rx_n<3>" LOCATE = SITE "AP12" LEVEL 1;
 COMP "amc_port_rx_p<0>" LOCATE = SITE "W3" LEVEL 1;
+COMP "amc_port_rx_p<2>" LOCATE = SITE "AC13" LEVEL 1;
+COMP "amc_port_rx_p<3>" LOCATE = SITE "AP11" LEVEL 1;
+COMP "amc_port_tx_n<0>" LOCATE = SITE "V2" LEVEL 1;
 COMP "cdce_sync_OBUF" LOCATE = SITE "SLICE_X31Y36" LEVEL 1;
 COMP "system/gbt_phase_monitoring/sfp_cdce_pm/debug_test_d_clk_o" LOCATE =
         SITE "SLICE_X56Y100" LEVEL 1;

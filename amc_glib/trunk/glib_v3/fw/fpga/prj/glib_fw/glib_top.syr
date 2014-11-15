@@ -1,4 +1,4 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
@@ -1487,10 +1487,10 @@ Unit <udp_rarp_block> synthesized.
 Synthesizing Unit <udp_build_arp>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\ipbus_2_0_v1\firmware\ipbus_core\hdl\udp_build_arp.vhd".
     Register <address> equivalent to <next_addr.addr_int> has been removed
-    Register <arp_we_sig> equivalent to <build_packet.arp_we_i> has been removed
-    Register <send_buf> equivalent to <build_packet.send_buf_int> has been removed
     Register <buf_to_load> equivalent to <build_packet.buf_to_load_int> has been removed
     Register <load_buf> equivalent to <build_packet.load_buf_int> has been removed
+    Register <send_buf> equivalent to <build_packet.send_buf_int> has been removed
+    Register <arp_we_sig> equivalent to <build_packet.arp_we_i> has been removed
     Found 13-bit register for signal <arp_end_addr>.
     Found 1-bit register for signal <arp_send>.
     Found 1-bit register for signal <set_addr>.
@@ -1517,19 +1517,19 @@ Synthesizing Unit <udp_build_payload>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\ipbus_2_0_v1\firmware\ipbus_core\hdl\udp_build_payload.vhd".
     Register <int_valid_payload> equivalent to <do_cksum.int_valid_int> has been removed
     Register <address> equivalent to <address_block.addr_int> has been removed
-    Register <buf_to_load> equivalent to <build_packet.buf_to_load_int> has been removed
+    Register <payload_we_sig> equivalent to <build_packet.payload_we_i> has been removed
+    Register <cksum> equivalent to <do_cksum.cksum_int> has been removed
+    Register <int_data_payload> equivalent to <do_cksum.int_data_int> has been removed
+    Register <send_buf> equivalent to <build_packet.send_buf_int> has been removed
+    Register <clr_sum_payload> equivalent to <do_cksum.clr_sum_int> has been removed
     Register <next_addr> equivalent to <next_addr_block.next_addr_int> has been removed
     Register <do_sum_payload> equivalent to <do_cksum.do_sum_int> has been removed
-    Register <send_pending> equivalent to <send_packet.send_pending_i> has been removed
-    Register <payload_we_sig> equivalent to <build_packet.payload_we_i> has been removed
-    Register <int_data_payload> equivalent to <do_cksum.int_data_int> has been removed
-    Register <load_buf> equivalent to <build_packet.load_buf_int> has been removed
-    Register <cksum> equivalent to <do_cksum.cksum_int> has been removed
-    Register <send_buf> equivalent to <build_packet.send_buf_int> has been removed
     Register <byteswap> equivalent to <byteswap_block.byteswap_int> has been removed
-    Register <low_addr> equivalent to <address_block.low_addr_i> has been removed
-    Register <clr_sum_payload> equivalent to <do_cksum.clr_sum_int> has been removed
     Register <ipbus_in_hdr> equivalent to <do_ipbus_hdr.ipbus_hdr_int> has been removed
+    Register <buf_to_load> equivalent to <build_packet.buf_to_load_int> has been removed
+    Register <low_addr> equivalent to <address_block.low_addr_i> has been removed
+    Register <send_pending> equivalent to <send_packet.send_pending_i> has been removed
+    Register <load_buf> equivalent to <build_packet.load_buf_int> has been removed
     Found 1-bit register for signal <send_packet.send_pending_i>.
     Found 1-bit register for signal <send_packet.last_we>.
     Found 1-bit register for signal <payload_send>.
@@ -1573,14 +1573,14 @@ Unit <udp_build_payload> synthesized.
 
 Synthesizing Unit <udp_build_ping>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\ipbus_2_0_v1\firmware\ipbus_core\hdl\udp_build_ping.vhd".
+    Register <address> equivalent to <next_addr.addr_int> has been removed
+    Register <ping_end_addr> equivalent to <send_packet.end_addr_i> has been removed
+    Register <send_pending> equivalent to <send_packet.send_pending_i> has been removed
+    Register <do_sum_ping> equivalent to <do_cksum.do_sum_int> has been removed
+    Register <low_addr> equivalent to <next_addr.low_addr_i> has been removed
+    Register <ping_send> equivalent to <send_packet.send_i> has been removed
     Register <load_buf> equivalent to <build_packet.load_buf_int> has been removed
     Register <send_buf> equivalent to <build_packet.send_buf_int> has been removed
-    Register <send_pending> equivalent to <send_packet.send_pending_i> has been removed
-    Register <low_addr> equivalent to <next_addr.low_addr_i> has been removed
-    Register <do_sum_ping> equivalent to <do_cksum.do_sum_int> has been removed
-    Register <ping_end_addr> equivalent to <send_packet.end_addr_i> has been removed
-    Register <address> equivalent to <next_addr.addr_int> has been removed
-    Register <ping_send> equivalent to <send_packet.send_i> has been removed
     Register <buf_to_load> equivalent to <build_packet.buf_to_load_int> has been removed
     Found 1-bit register for signal <send_packet.send_i>.
     Found 13-bit register for signal <send_packet.end_addr_i>.
@@ -1628,8 +1628,8 @@ Unit <udp_build_resend> synthesized.
 
 Synthesizing Unit <udp_build_status>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\ipbus_2_0_v1\firmware\ipbus_core\hdl\udp_build_status.vhd".
-    Register <address> equivalent to <next_addr.addr_int> has been removed
     Register <send_buf> equivalent to <load_data.send_buf_int> has been removed
+    Register <address> equivalent to <next_addr.addr_int> has been removed
     Register <load_buf> equivalent to <load_data.load_buf_int> has been removed
     Found 1-bit register for signal <status_send>.
     Found 1-bit register for signal <send_pending>.
@@ -1725,17 +1725,17 @@ Synthesizing Unit <udp_packet_parser>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\ipbus_2_0_v1\firmware\ipbus_core\hdl\udp_packet_parser.vhd".
         IPBUSPORT = "1100001101010001"
         SECONDARYPORT = '0'
-    Register <pkt_drop_arp_sig> equivalent to <arp.pkt_drop> has been removed
-    Register <pkt_broadcast> equivalent to <broadcast.broadcast_int> has been removed
     Register <pkt_drop_ipbus_sig> equivalent to <ipbus_pkt.pkt_drop> has been removed
+    Register <pkt_broadcast> equivalent to <broadcast.broadcast_int> has been removed
     Register <pkt_drop_ip_sig> equivalent to <ip_pkt.pkt_drop> has been removed
-    Register <pkt_drop_reliable_sig> equivalent to <bigendian.pkt_drop_reliable_i> has been removed
+    Register <pkt_drop_arp_sig> equivalent to <arp.pkt_drop> has been removed
     Register <ipbus_status_mask> equivalent to <ipbus_mask.last_mask> has been removed
-    Register <pkt_reliable_drop_sig> equivalent to <littleendian.pkt_drop_reliable_i> has been removed
-    Register <pkt_drop_resend> equivalent to <resend.pkt_drop> has been removed
     Register <pkt_drop_ping_sig> equivalent to <ping.pkt_drop> has been removed
-    Register <pkt_drop_rarp_sig> equivalent to <rarp.pkt_drop> has been removed
     Register <pkt_drop_status> equivalent to <status_request.pkt_drop> has been removed
+    Register <pkt_reliable_drop_sig> equivalent to <littleendian.pkt_drop_reliable_i> has been removed
+    Register <pkt_drop_reliable_sig> equivalent to <bigendian.pkt_drop_reliable_i> has been removed
+    Register <pkt_drop_rarp_sig> equivalent to <rarp.pkt_drop> has been removed
+    Register <pkt_drop_resend> equivalent to <resend.pkt_drop> has been removed
     Found 112-bit register for signal <arp.pkt_data>.
     Found 1-bit register for signal <arp.pkt_drop>.
     Found 38-bit register for signal <rarp.pkt_mask>.
@@ -1821,13 +1821,13 @@ Unit <udp_DualPortRAM> synthesized.
 Synthesizing Unit <udp_buffer_selector_1>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\ipbus_2_0_v1\firmware\ipbus_core\hdl\udp_buffer_selector.vhd".
         BUFWIDTH = 1
-    Register <busy_sig> equivalent to <busy_block.busy_i> has been removed
-    Register <write_sig<0>> equivalent to <write_block.write_i<0>> has been removed
-    Register <send_pending> equivalent to <send_pending_block.send_pending_i> has been removed
-    Register <free_block.free_i> equivalent to <free> has been removed
     Register <clean> equivalent to <clean_block.clean_i> has been removed
-    Register <send_sig<0>> equivalent to <send_block.send_i<0>> has been removed
+    Register <busy_sig> equivalent to <busy_block.busy_i> has been removed
     Register <sending> equivalent to <req_send_block.sending_i> has been removed
+    Register <send_pending> equivalent to <send_pending_block.send_pending_i> has been removed
+    Register <send_sig<0>> equivalent to <send_block.send_i<0>> has been removed
+    Register <free_block.free_i> equivalent to <free> has been removed
+    Register <write_sig<0>> equivalent to <write_block.write_i<0>> has been removed
     Found 2-bit register for signal <free>.
     Found 2-bit register for signal <clean_block.clean_i>.
     Found 2-bit register for signal <send_pending_block.send_pending_i>.
@@ -1879,12 +1879,12 @@ Unit <udp_DualPortRAM_rx> synthesized.
 Synthesizing Unit <udp_buffer_selector_2>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\ipbus_2_0_v1\firmware\ipbus_core\hdl\udp_buffer_selector.vhd".
         BUFWIDTH = 4
-    Register <clean> equivalent to <clean_block.clean_i> has been removed
-    Register <free_block.free_i> equivalent to <free> has been removed
     Register <send_pending> equivalent to <send_pending_block.send_pending_i> has been removed
+    Register <free_block.free_i> equivalent to <free> has been removed
     Register <busy_sig> equivalent to <busy_block.busy_i> has been removed
-    Register <write_sig> equivalent to <write_block.write_i> has been removed
     Register <sending> equivalent to <req_send_block.sending_i> has been removed
+    Register <clean> equivalent to <clean_block.clean_i> has been removed
+    Register <write_sig> equivalent to <write_block.write_i> has been removed
     Register <send_sig> equivalent to <send_block.send_i> has been removed
     Found 16-bit register for signal <free>.
     Found 16-bit register for signal <clean_block.clean_i>.
@@ -1933,38 +1933,38 @@ Unit <udp_rxtransactor_if> synthesized.
 
 Synthesizing Unit <udp_tx_mux>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\ipbus_2_0_v1\firmware\ipbus_core\hdl\udp_tx_mux.vhd".
-    Register <mac_tx_data_sig> equivalent to <send_data.mac_tx_data_int> has been removed
-    Register <udpram_busy_sig> equivalent to <udp_event.udpram_busy_int> has been removed
-    Register <prefetch> equivalent to <state_machine.prefetch_int> has been removed
     Register <rx_event.rxram_busy_int> equivalent to <rxram_busy_sig> has been removed
-    Register <byteswapping> equivalent to <next_addr.byteswapping_int> has been removed
-    Register <int_valid> equivalent to <udp_control_build.int_valid_int> has been removed
-    Register <udp_counting> equivalent to <do_udp_counter.counting> has been removed
-    Register <do_udp_counter.last_udpram_active> equivalent to <udp_event.last_udpram_active> has been removed
-    Register <cksum> equivalent to <udp_control_build.cksum_int> has been removed
-    Register <udpram_end_addr_sig> equivalent to <udp_build_data.udpram_end_addr_int> has been removed
-    Register <udp_len> equivalent to <udp_build_data.udp_len_int> has been removed
-    Register <byteswap_sig> equivalent to <do_ipbus_hdr.byteswap_int> has been removed
-    Register <rxram_active> equivalent to <state_machine.rxram_active_int> has been removed
-    Register <rxram_end_addr_sig> equivalent to <rx_event.rxram_end_addr_int> has been removed
-    Register <ip_cksum> equivalent to <udp_build_data.ip_cksum_int> has been removed
-    Register <addr_to_set> equivalent to <state_machine.addr_to_set_int> has been removed
-    Register <addr_sig> equivalent to <next_addr.addr_int> has been removed
-    Register <udp_counter> equivalent to <do_udp_counter.counter> has been removed
-    Register <send_special> equivalent to <udp_send_data.send_special_int> has been removed
-    Register <udpram_active> equivalent to <state_machine.udpram_active_int> has been removed
-    Register <ipbus_out_hdr> equivalent to <do_ipbus_hdr.ipbus_hdr_int> has been removed
-    Register <udp_short_sig> equivalent to <udp_short_block.short_int> has been removed
-    Register <ip_len> equivalent to <udp_build_data.ip_len_int> has been removed
-    Register <int_data> equivalent to <udp_build_data.int_data_int> has been removed
-    Register <set_addr> equivalent to <state_machine.set_addr_int> has been removed
     Register <special> equivalent to <udp_send_data.special_int> has been removed
-    Register <mac_tx_valid_sig> equivalent to <state_machine.mac_tx_valid_int> has been removed
-    Register <clr_sum> equivalent to <udp_control_build.clr_sum_int> has been removed
-    Register <mac_tx_last_sig> equivalent to <state_machine.mac_tx_last_int> has been removed
-    Register <counting> equivalent to <state_machine.counting_int> has been removed
-    Register <state_machine.next_state> equivalent to <state_machine.state> has been removed
     Register <do_sum> equivalent to <udp_control_build.do_sum_int> has been removed
+    Register <clr_sum> equivalent to <udp_control_build.clr_sum_int> has been removed
+    Register <addr_sig> equivalent to <next_addr.addr_int> has been removed
+    Register <send_special> equivalent to <udp_send_data.send_special_int> has been removed
+    Register <ipbus_out_hdr> equivalent to <do_ipbus_hdr.ipbus_hdr_int> has been removed
+    Register <mac_tx_valid_sig> equivalent to <state_machine.mac_tx_valid_int> has been removed
+    Register <udpram_end_addr_sig> equivalent to <udp_build_data.udpram_end_addr_int> has been removed
+    Register <udpram_busy_sig> equivalent to <udp_event.udpram_busy_int> has been removed
+    Register <ip_cksum> equivalent to <udp_build_data.ip_cksum_int> has been removed
+    Register <set_addr> equivalent to <state_machine.set_addr_int> has been removed
+    Register <int_data> equivalent to <udp_build_data.int_data_int> has been removed
+    Register <udp_short_sig> equivalent to <udp_short_block.short_int> has been removed
+    Register <counting> equivalent to <state_machine.counting_int> has been removed
+    Register <rxram_end_addr_sig> equivalent to <rx_event.rxram_end_addr_int> has been removed
+    Register <byteswapping> equivalent to <next_addr.byteswapping_int> has been removed
+    Register <udp_len> equivalent to <udp_build_data.udp_len_int> has been removed
+    Register <mac_tx_last_sig> equivalent to <state_machine.mac_tx_last_int> has been removed
+    Register <state_machine.next_state> equivalent to <state_machine.state> has been removed
+    Register <byteswap_sig> equivalent to <do_ipbus_hdr.byteswap_int> has been removed
+    Register <int_valid> equivalent to <udp_control_build.int_valid_int> has been removed
+    Register <udp_counter> equivalent to <do_udp_counter.counter> has been removed
+    Register <rxram_active> equivalent to <state_machine.rxram_active_int> has been removed
+    Register <prefetch> equivalent to <state_machine.prefetch_int> has been removed
+    Register <mac_tx_data_sig> equivalent to <send_data.mac_tx_data_int> has been removed
+    Register <udpram_active> equivalent to <state_machine.udpram_active_int> has been removed
+    Register <ip_len> equivalent to <udp_build_data.ip_len_int> has been removed
+    Register <cksum> equivalent to <udp_control_build.cksum_int> has been removed
+    Register <udp_counting> equivalent to <do_udp_counter.counting> has been removed
+    Register <addr_to_set> equivalent to <state_machine.addr_to_set_int> has been removed
+    Register <do_udp_counter.last_udpram_active> equivalent to <udp_event.last_udpram_active> has been removed
     Found 13-bit register for signal <rx_event.rxram_end_addr_int>.
     Found 1-bit register for signal <rx_event.last_rxram_active>.
     Found 1-bit register for signal <rxram_busy_sig>.
@@ -24086,10 +24086,10 @@ Primitive and Black Box Usage:
 #      INV                         : 279
 #      LUT1                        : 602
 #      LUT2                        : 2422
-#      LUT3                        : 2076
-#      LUT4                        : 1593
-#      LUT5                        : 1695
-#      LUT6                        : 3242
+#      LUT3                        : 2071
+#      LUT4                        : 1587
+#      LUT5                        : 1708
+#      LUT6                        : 3240
 #      MUXCY                       : 1300
 #      MUXCY_L                     : 102
 #      MUXF5                       : 2
@@ -24231,7 +24231,7 @@ usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_
 usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N11(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 124   |
 usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N0(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 72    |
 usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N0(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 72    |
-usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)              | NONE(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram)                                                                                                                   | 12    |
+usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)              | NONE(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram)                                                                                                                   | 12    |
 usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/link_tracking_1_inst/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 8     |
 system/amc_p0_en.amc_p0_eth/N0(system/amc_p0_en.amc_p0_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                           | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                                                                                                                                   | 1     |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/N1(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                                   | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                                                  | 1     |
@@ -24283,7 +24283,7 @@ Delay:               2.996ns (Levels of Logic = 3)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk125_2_p'
   Clock period: 3.183ns (frequency: 314.121MHz)
-  Total number of paths / destination ports: 4822317 / 10060
+  Total number of paths / destination ports: 4777261 / 10060
 -------------------------------------------------------------------------
 Delay:               3.183ns (Levels of Logic = 5)
   Source:            system/rst/rst_fabric_o (FF)
@@ -24954,7 +24954,7 @@ Clock to Setup on destination clock clk125_2_p
                                                                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                                |   11.932|         |         |         |
+clk125_2_p                                                                                                |   11.937|         |         |         |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    3.385|         |         |         |
 system/gbt_phase_monitoring/ttclk_pll/CLK_OUT1                                                            |    2.078|         |         |         |
 system/i2c_s/reset_regs_i[6][0]_AND_773_o                                                                 |         |    2.188|         |         |
@@ -24967,7 +24967,7 @@ system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o                              
 system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o                                                        |         |    1.759|         |         |
 system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT      |    3.385|         |         |         |
 system/spi/reset_i_cpol_i_AND_934_o                                                                       |         |    1.124|         |         |
-usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                    |    6.335|         |         |         |
+usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                    |    6.198|         |         |         |
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT
@@ -24975,7 +24975,7 @@ Clock to Setup on destination clock system/amc_p0_en.amc_p0_eth/basex/v6_gtxwiza
                                                                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                                |   10.876|         |         |         |
+clk125_2_p                                                                                                |   10.881|         |         |         |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    4.263|         |         |         |
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
@@ -25058,7 +25058,7 @@ Clock to Setup on destination clock system/phy_en.phy_eth/sgmii/v6_gtxwizard_top
                                                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                          |   10.876|         |         |         |
+clk125_2_p                                                                                          |   10.881|         |         |         |
 system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    4.263|         |         |         |
 ----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
@@ -25119,12 +25119,12 @@ xpoint1_clk1_p |    2.931|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 143.00 secs
-Total CPU time to Xst completion: 143.12 secs
+Total REAL time to Xst completion: 134.00 secs
+Total CPU time to Xst completion: 134.10 secs
  
 --> 
 
-Total memory usage is 512500 kilobytes
+Total memory usage is 350492 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 18652 (   0 filtered)

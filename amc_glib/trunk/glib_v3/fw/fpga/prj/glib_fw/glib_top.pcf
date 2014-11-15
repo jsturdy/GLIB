@@ -1,8 +1,17 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Nov 13 08:58:05 2014
+// Written by: Map P.20131013 on Sat Nov 15 10:24:41 2014
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "amc_port_tx_p<0>" LOCATE = SITE "V1" LEVEL 1;
+COMP "amc_port_tx_p<2>" LOCATE = SITE "AJ10" LEVEL 1;
+COMP "amc_port_tx_p<3>" LOCATE = SITE "AD12" LEVEL 1;
+COMP "cdce_ref_sel" LOCATE = SITE "AG21" LEVEL 1;
+COMP "gbe_reset_n" LOCATE = SITE "AK16" LEVEL 1;
+COMP "cdce_spi_clk" LOCATE = SITE "AC20" LEVEL 1;
+COMP "clk125_2_n" LOCATE = SITE "M5" LEVEL 1;
+COMP "clk125_2_p" LOCATE = SITE "M6" LEVEL 1;
+COMP "amc_port_rx_in<20>" LOCATE = SITE "AB32" LEVEL 1;
 COMP "amc_port_rx_in<17>" LOCATE = SITE "AE34" LEVEL 1;
 COMP "amc_port_rx_in<18>" LOCATE = SITE "AD34" LEVEL 1;
 COMP "amc_port_rx_in<19>" LOCATE = SITE "AF33" LEVEL 1;
@@ -250,15 +259,6 @@ COMP "amc_port_rx_p<3>" LOCATE = SITE "AP11" LEVEL 1;
 COMP "amc_port_tx_n<0>" LOCATE = SITE "V2" LEVEL 1;
 COMP "amc_port_tx_n<2>" LOCATE = SITE "AH10" LEVEL 1;
 COMP "amc_port_tx_n<3>" LOCATE = SITE "AD11" LEVEL 1;
-COMP "amc_port_tx_p<0>" LOCATE = SITE "V1" LEVEL 1;
-COMP "amc_port_tx_p<2>" LOCATE = SITE "AJ10" LEVEL 1;
-COMP "amc_port_tx_p<3>" LOCATE = SITE "AD12" LEVEL 1;
-COMP "cdce_ref_sel" LOCATE = SITE "AG21" LEVEL 1;
-COMP "gbe_reset_n" LOCATE = SITE "AK16" LEVEL 1;
-COMP "cdce_spi_clk" LOCATE = SITE "AC20" LEVEL 1;
-COMP "clk125_2_n" LOCATE = SITE "M5" LEVEL 1;
-COMP "clk125_2_p" LOCATE = SITE "M6" LEVEL 1;
-COMP "amc_port_rx_in<20>" LOCATE = SITE "AB32" LEVEL 1;
 COMP "cdce_sync_OBUF" LOCATE = SITE "SLICE_X31Y36" LEVEL 1;
 COMP "system/gbt_phase_monitoring/sfp_cdce_pm/debug_test_d_clk_o" LOCATE =
         SITE "SLICE_X56Y100" LEVEL 1;
@@ -1159,6 +1159,8 @@ TIMEGRP gtx0_tx_out_clk = BEL "usr/gtx_wrapper_inst/tx_out_clk_bufg" PIN
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_5" BEL
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_6" BEL
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_7" BEL
+        "usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_8" BEL
+        "usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_9" BEL
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/data_cnt_0" BEL
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/data_cnt_1" BEL
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/data_cnt_2" BEL
@@ -3026,6 +3028,8 @@ TIMEGRP usr_gtx_clk = PIN
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_5" BEL
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_6" BEL
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_7" BEL
+        "usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_8" BEL
+        "usr/link_tracking_1_inst/gtx_tx_mux_inst/kchar_count_9" BEL
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/data_cnt_0" BEL
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/data_cnt_1" BEL
         "usr/link_tracking_1_inst/gtx_tx_mux_inst/data_cnt_2" BEL
@@ -4532,8 +4536,7 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/link_tracking_1_inst/ipb_vi2c_inst/clock_bridge_rx_inst/out_status"
         BEL "usr/link_tracking_1_inst/ipb_vi2c_inst/tx_en" BEL
         "usr/link_tracking_1_inst/ipb_vi2c_inst/ipb_ack" BEL
-        "usr/link_tracking_1_inst/ipb_tracking_inst/rd_en" BEL
-        "usr/link_tracking_1_inst/ipb_tracking_inst/ipb_ack" BEL
+        "usr/link_tracking_1_inst/ipb_tracking_inst/last_ipb_strobe" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/data_0" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/data_1" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/data_2" BEL
@@ -4758,6 +4761,10 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/ipb_data_29" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/ipb_data_30" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/ipb_data_31" BEL
+        "usr/link_tracking_1_inst/ipb_tracking_inst/state_FSM_FFd2" BEL
+        "usr/link_tracking_1_inst/ipb_tracking_inst/state_FSM_FFd1" BEL
+        "usr/link_tracking_1_inst/ipb_tracking_inst/rd_en" BEL
+        "usr/link_tracking_1_inst/ipb_tracking_inst/ipb_ack" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i"
         BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i"
@@ -7672,8 +7679,7 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/link_tracking_1_inst/ipb_vi2c_inst/clock_bridge_rx_inst/out_status"
         BEL "usr/link_tracking_1_inst/ipb_vi2c_inst/tx_en" BEL
         "usr/link_tracking_1_inst/ipb_vi2c_inst/ipb_ack" BEL
-        "usr/link_tracking_1_inst/ipb_tracking_inst/rd_en" BEL
-        "usr/link_tracking_1_inst/ipb_tracking_inst/ipb_ack" BEL
+        "usr/link_tracking_1_inst/ipb_tracking_inst/last_ipb_strobe" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/data_0" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/data_1" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/data_2" BEL
@@ -7898,6 +7904,10 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/ipb_data_29" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/ipb_data_30" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/ipb_data_31" BEL
+        "usr/link_tracking_1_inst/ipb_tracking_inst/state_FSM_FFd2" BEL
+        "usr/link_tracking_1_inst/ipb_tracking_inst/state_FSM_FFd1" BEL
+        "usr/link_tracking_1_inst/ipb_tracking_inst/rd_en" BEL
+        "usr/link_tracking_1_inst/ipb_tracking_inst/ipb_ack" BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i"
         BEL
         "usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i"

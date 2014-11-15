@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: glib_top.prj
 
@@ -796,7 +796,7 @@ Elaborating entity <counter> (architecture <Behavioral>) from library <work>.
 Elaborating entity <chipscope_icon> (architecture <chipscope_icon_a>) from library <work>.
 
 Elaborating entity <chipscope_ila> (architecture <chipscope_ila_a>) from library <work>.
-WARNING:HDLCompiler:634 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" Line 64: Net <regs_req_read[255][31]> does not have a driver.
+WARNING:HDLCompiler:634 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" Line 65: Net <regs_req_read[255][31]> does not have a driver.
 WARNING:HDLCompiler:634 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\user_logic_basic.vhd" Line 215: Net <tx_kchar[7]> does not have a driver.
 WARNING:HDLCompiler:634 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\user_logic_basic.vhd" Line 216: Net <tx_data[63]> does not have a driver.
 WARNING:HDLCompiler:634 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\src\system\sys\glib_top.vhd" Line 298: Net <user_cdce_sync_done> does not have a driver.
@@ -2190,7 +2190,7 @@ Synthesizing Unit <transactor_sm>.
     Found 24-bit adder for signal <timer[23]_GND_214_o_add_38_OUT> created at line 1241.
     Found 32-bit adder for signal <rmw_input[31]_rx_data[31]_add_44_OUT> created at line 166.
     Found 8-bit subtractor for signal <GND_214_o_GND_214_o_sub_29_OUT<7:0>> created at line 1308.
-    Found 4-bit 4-to-1 multiplexer for signal <_n0265> created at line 61.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0237> created at line 61.
     Summary:
 	inferred   5 Adder/Subtractor(s).
 	inferred 206 D-type flip-flop(s).
@@ -3829,262 +3829,262 @@ Unit <high_speed_gtx> synthesized.
 
 Synthesizing Unit <link_tracking>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd".
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<255>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<254>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<253>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<252>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<251>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<250>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<249>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<248>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<247>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<246>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<245>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<244>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<243>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<242>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<241>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<240>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<239>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<238>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<237>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<236>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<235>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<234>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<233>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<232>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<231>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<230>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<229>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<228>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<227>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<226>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<225>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<224>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<223>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<222>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<221>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<220>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<219>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<218>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<217>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<216>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<215>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<214>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<213>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<212>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<211>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<210>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<209>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<208>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<207>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<206>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<205>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<204>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<203>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<202>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<201>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<200>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<199>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<198>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<197>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<196>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<195>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<194>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<193>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<192>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<191>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<190>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<189>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<188>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<187>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<186>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<185>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<184>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<183>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<182>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<181>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<180>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<179>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<178>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<177>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<176>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<175>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<174>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<173>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<172>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<171>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<170>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<169>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<168>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<167>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<166>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<165>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<164>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<163>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<162>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<161>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<160>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<159>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<158>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<157>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<156>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<155>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<154>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<153>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<152>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<151>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<150>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<149>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<148>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<147>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<146>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<145>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<144>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<143>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<142>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<141>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<140>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<139>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<138>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<137>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<136>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<135>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<134>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<133>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<132>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<131>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<130>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<129>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<128>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<127>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<126>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<125>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<124>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<123>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<122>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<121>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<120>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<119>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<118>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<117>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<116>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<115>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<114>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<113>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<112>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<111>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<110>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<109>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<108>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<107>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<106>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<105>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<104>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<103>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<102>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<101>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<100>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<99>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<98>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<97>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<96>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<95>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<94>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<93>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<92>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<91>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<90>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<89>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<88>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<87>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<86>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<85>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<84>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<83>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<82>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<81>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<80>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<79>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<78>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<77>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<76>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<75>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<74>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<73>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<72>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<71>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<70>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<69>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<68>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<67>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<66>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<65>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<64>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<63>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<62>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<61>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<60>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<59>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<58>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<57>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<56>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<55>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<54>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<53>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<52>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<51>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<50>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<49>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<48>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<47>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<46>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<45>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<44>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<43>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<42>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<41>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<40>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<39>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<38>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<37>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<36>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<35>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<34>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<33>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<32>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<31>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<30>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<29>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<28>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<27>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<26>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<25>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<24>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<23>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<22>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<21>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<20>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<19>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<18>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<17>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<16>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<15>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<14>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<13>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<12>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<11>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<10>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<9>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<8>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<7>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<6>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<5>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<4>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<3>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<2>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<1>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 177: Output port <wbus_o<0>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<255>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<254>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<253>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<252>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<251>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<250>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<249>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<248>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<247>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<246>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<245>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<244>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<243>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<242>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<241>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<240>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<239>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<238>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<237>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<236>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<235>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<234>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<233>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<232>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<231>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<230>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<229>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<228>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<227>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<226>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<225>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<224>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<223>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<222>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<221>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<220>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<219>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<218>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<217>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<216>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<215>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<214>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<213>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<212>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<211>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<210>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<209>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<208>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<207>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<206>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<205>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<204>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<203>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<202>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<201>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<200>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<199>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<198>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<197>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<196>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<195>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<194>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<193>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<192>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<191>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<190>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<189>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<188>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<187>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<186>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<185>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<184>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<183>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<182>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<181>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<180>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<179>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<178>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<177>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<176>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<175>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<174>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<173>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<172>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<171>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<170>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<169>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<168>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<167>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<166>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<165>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<164>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<163>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<162>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<161>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<160>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<159>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<158>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<157>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<156>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<155>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<154>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<153>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<152>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<151>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<150>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<149>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<148>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<147>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<146>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<145>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<144>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<143>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<142>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<141>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<140>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<139>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<138>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<137>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<136>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<135>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<134>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<133>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<132>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<131>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<130>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<129>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<128>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<127>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<126>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<125>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<124>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<123>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<122>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<121>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<120>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<119>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<118>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<117>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<116>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<115>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<114>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<113>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<112>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<111>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<110>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<109>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<108>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<107>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<106>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<105>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<104>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<103>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<102>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<101>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<100>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<99>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<98>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<97>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<96>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<95>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<94>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<93>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<92>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<91>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<90>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<89>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<88>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<87>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<86>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<85>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<84>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<83>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<82>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<81>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<80>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<79>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<78>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<77>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<76>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<75>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<74>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<73>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<72>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<71>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<70>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<69>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<68>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<67>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<66>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<65>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<64>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<63>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<62>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<61>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<60>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<59>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<58>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<57>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<56>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<55>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<54>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<53>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<52>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<51>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<50>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<49>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<48>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<47>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<46>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<45>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<44>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<43>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<42>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<41>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<40>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<39>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<38>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<37>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<36>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<35>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<34>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<33>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<32>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<31>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<30>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<29>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<28>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<27>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<26>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<25>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<24>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<23>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<22>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<21>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<20>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<19>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<18>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<17>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<16>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<15>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<14>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<13>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<12>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<11>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<10>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<9>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<8>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<7>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<6>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<5>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<4>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<3>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<2>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<1>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" line 179: Output port <wbus_o<0>> of the instance <ipb_info_inst> is unconnected or connected to loadless signal.
 WARNING:Xst:2935 - Signal 'regs_req_read<255>', unconnected in block 'link_tracking', is tied to its initial value (00000000000000000000000000000000).
 WARNING:Xst:2935 - Signal 'regs_req_read<254>', unconnected in block 'link_tracking', is tied to its initial value (00000000000000000000000000000000).
 WARNING:Xst:2935 - Signal 'regs_req_read<253>', unconnected in block 'link_tracking', is tied to its initial value (00000000000000000000000000000000).
@@ -4342,7 +4342,7 @@ Synthesizing Unit <gtx_tx_mux>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\gtx_tx_mux.vhd".
     Found 16-bit register for signal <tx_data_o>.
     Found 2-bit register for signal <state>.
-    Found 8-bit register for signal <kchar_count>.
+    Found 10-bit register for signal <kchar_count>.
     Found 8-bit register for signal <header>.
     Found 48-bit register for signal <data>.
     Found 4-bit register for signal <data_cnt>.
@@ -4361,13 +4361,13 @@ Synthesizing Unit <gtx_tx_mux>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 8-bit adder for signal <kchar_count[7]_GND_554_o_add_2_OUT> created at line 75.
+    Found 10-bit adder for signal <kchar_count[9]_GND_554_o_add_2_OUT> created at line 75.
     Found 7-bit subtractor for signal <GND_554_o_GND_554_o_sub_16_OUT<6:0>> created at line 121.
     Found 4-bit subtractor for signal <GND_554_o_GND_554_o_sub_40_OUT<3:0>> created at line 129.
     Found 16-bit 4-to-1 multiplexer for signal <GND_554_o_GND_554_o_mux_44_OUT> created at line 59.
     Summary:
 	inferred   3 Adder/Subtractor(s).
-	inferred  86 D-type flip-flop(s).
+	inferred  88 D-type flip-flop(s).
 	inferred   7 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <gtx_tx_mux> synthesized.
@@ -4477,15 +4477,33 @@ Synthesizing Unit <ipb_tracking>.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_wdata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ipb_mosi_i_ipb_write> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\ipb_tracking.vhd" line 41: Output port <full> of the instance <tracking_fifo_inst> is unconnected or connected to loadless signal.
+WARNING:Xst:647 - Input <fifo_reset_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\ipb_tracking.vhd" line 42: Output port <full> of the instance <tracking_fifo_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\ipb_tracking.vhd" line 42: Output port <empty> of the instance <tracking_fifo_inst> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <rd_en>.
+    Found 2-bit register for signal <state>.
+    Found 1-bit register for signal <last_ipb_strobe>.
     Found 32-bit register for signal <ipb_data>.
     Found 192-bit register for signal <data>.
     Found 1-bit register for signal <ipb_ack>.
-    Found 32-bit 8-to-1 multiplexer for signal <_n0061> created at line 79.
+    Found finite state machine <FSM_26> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 4                                              |
+    | Clock              | ipb_clk_i (rising_edge)                        |
+    | Reset              | reset_i (positive)                             |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
     Summary:
-	inferred 226 D-type flip-flop(s).
-	inferred   5 Multiplexer(s).
+	inferred 227 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
 Unit <ipb_tracking> synthesized.
 
 Synthesizing Unit <ipb_registers>.
@@ -4504,7 +4522,7 @@ WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr<31:7>> is never used. This port wil
     Found 8-bit register for signal <crc_check>.
     Found 32-bit register for signal <ipb_data>.
     Found 1-bit register for signal <tx_en>.
-    Found finite state machine <FSM_26> for signal <_i000059>.
+    Found finite state machine <FSM_27> for signal <_i000059>.
     -----------------------------------------------------------------------
     | States             | 3                                              |
     | Transitions        | 5                                              |
@@ -4518,7 +4536,7 @@ WARNING:Xst:647 - Input <ipb_mosi_i_ipb_addr<31:7>> is never used. This port wil
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found finite state machine <FSM_27> for signal <state>.
+    Found finite state machine <FSM_28> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 3                                              |
     | Transitions        | 5                                              |
@@ -12771,6 +12789,7 @@ Macro Statistics
  8192x8-bit dual-port RAM                              : 8
 # Adders/Subtractors                                   : 128
  1-bit adder                                           : 6
+ 10-bit adder                                          : 1
  10-bit subtractor                                     : 7
  11-bit subtractor                                     : 2
  12-bit adder                                          : 4
@@ -12798,13 +12817,13 @@ Macro Statistics
  6-bit subtractor                                      : 1
  7-bit adder                                           : 2
  7-bit subtractor                                      : 1
- 8-bit adder                                           : 6
+ 8-bit adder                                           : 5
  8-bit subtractor                                      : 2
  9-bit adder                                           : 8
  9-bit subtractor                                      : 1
-# Registers                                            : 1477
- 1-bit register                                        : 887
- 10-bit register                                       : 12
+# Registers                                            : 1478
+ 1-bit register                                        : 888
+ 10-bit register                                       : 13
  11-bit register                                       : 4
  112-bit register                                      : 2
  12-bit register                                       : 8
@@ -12832,7 +12851,7 @@ Macro Statistics
  5-bit register                                        : 9
  6-bit register                                        : 24
  7-bit register                                        : 12
- 8-bit register                                        : 103
+ 8-bit register                                        : 102
  9-bit register                                        : 16
 # Latches                                              : 8192
  1-bit latch                                           : 8192
@@ -12851,14 +12870,14 @@ Macro Statistics
  8-bit comparator equal                                : 10
  8-bit comparator greater                              : 4
  8-bit comparator not equal                            : 14
-# Multiplexers                                         : 2918
+# Multiplexers                                         : 2919
  1-bit 16-to-1 multiplexer                             : 12
- 1-bit 2-to-1 multiplexer                              : 2008
+ 1-bit 2-to-1 multiplexer                              : 2004
  1-bit 3-to-1 multiplexer                              : 18
  1-bit 4-to-1 multiplexer                              : 6
  1-bit 7-to-1 multiplexer                              : 2
  1-bit 8-to-1 multiplexer                              : 2
- 10-bit 2-to-1 multiplexer                             : 31
+ 10-bit 2-to-1 multiplexer                             : 33
  10-bit 4-to-1 multiplexer                             : 1
  112-bit 2-to-1 multiplexer                            : 2
  12-bit 2-to-1 multiplexer                             : 14
@@ -12880,10 +12899,9 @@ Macro Statistics
  3-bit 7-to-1 multiplexer                              : 2
  3-bit 8-to-1 multiplexer                              : 2
  31-bit 2-to-1 multiplexer                             : 21
- 32-bit 2-to-1 multiplexer                             : 83
+ 32-bit 2-to-1 multiplexer                             : 89
  32-bit 32-to-1 multiplexer                            : 1
  32-bit 4-to-1 multiplexer                             : 2
- 32-bit 8-to-1 multiplexer                             : 1
  34-bit 2-to-1 multiplexer                             : 2
  36-bit 2-to-1 multiplexer                             : 20
  38-bit 2-to-1 multiplexer                             : 4
@@ -12897,12 +12915,12 @@ Macro Statistics
  6-bit 2-to-1 multiplexer                              : 30
  7-bit 2-to-1 multiplexer                              : 45
  8-bit 16-to-1 multiplexer                             : 2
- 8-bit 2-to-1 multiplexer                              : 179
+ 8-bit 2-to-1 multiplexer                              : 177
  8-bit 4-to-1 multiplexer                              : 2
  9-bit 2-to-1 multiplexer                              : 24
 # Tristates                                            : 32
  1-bit tristate buffer                                 : 32
-# FSMs                                                 : 32
+# FSMs                                                 : 33
 # Xors                                                 : 108
  1-bit xor2                                            : 100
  16-bit xor2                                           : 2
@@ -13488,6 +13506,7 @@ Macro Statistics
  8192x8-bit dual-port block RAM                        : 8
 # Adders/Subtractors                                   : 60
  1-bit adder                                           : 2
+ 10-bit adder                                          : 1
  10-bit subtractor                                     : 5
  12-bit subtractor                                     : 2
  13-bit adder                                          : 6
@@ -13506,7 +13525,7 @@ Macro Statistics
  6-bit adder                                           : 4
  7-bit adder                                           : 2
  7-bit subtractor                                      : 1
- 8-bit adder                                           : 6
+ 8-bit adder                                           : 5
  9-bit adder                                           : 8
  9-bit subtractor                                      : 1
 # Counters                                             : 70
@@ -13528,8 +13547,8 @@ Macro Statistics
  6-bit up counter                                      : 3
  8-bit down counter                                    : 2
  8-bit up counter                                      : 2
-# Registers                                            : 12249
- Flip-Flops                                            : 12249
+# Registers                                            : 12252
+ Flip-Flops                                            : 12252
 # Comparators                                          : 82
  10-bit comparator equal                               : 2
  10-bit comparator greater                             : 1
@@ -13545,15 +13564,15 @@ Macro Statistics
  8-bit comparator equal                                : 10
  8-bit comparator greater                              : 4
  8-bit comparator not equal                            : 14
-# Multiplexers                                         : 3752
+# Multiplexers                                         : 3753
  1-bit 16-to-1 multiplexer                             : 20
- 1-bit 2-to-1 multiplexer                              : 2610
+ 1-bit 2-to-1 multiplexer                              : 2606
  1-bit 3-to-1 multiplexer                              : 18
  1-bit 32-to-1 multiplexer                             : 32
  1-bit 4-to-1 multiplexer                              : 272
  1-bit 7-to-1 multiplexer                              : 2
  1-bit 8-to-1 multiplexer                              : 2
- 10-bit 2-to-1 multiplexer                             : 29
+ 10-bit 2-to-1 multiplexer                             : 31
  112-bit 2-to-1 multiplexer                            : 2
  12-bit 2-to-1 multiplexer                             : 11
  128-bit 2-to-1 multiplexer                            : 12
@@ -13573,9 +13592,8 @@ Macro Statistics
  3-bit 7-to-1 multiplexer                              : 2
  3-bit 8-to-1 multiplexer                              : 2
  31-bit 2-to-1 multiplexer                             : 21
- 32-bit 2-to-1 multiplexer                             : 77
+ 32-bit 2-to-1 multiplexer                             : 83
  32-bit 4-to-1 multiplexer                             : 2
- 32-bit 8-to-1 multiplexer                             : 1
  34-bit 2-to-1 multiplexer                             : 2
  36-bit 2-to-1 multiplexer                             : 20
  38-bit 2-to-1 multiplexer                             : 4
@@ -13589,10 +13607,10 @@ Macro Statistics
  6-bit 2-to-1 multiplexer                              : 28
  7-bit 2-to-1 multiplexer                              : 45
  8-bit 16-to-1 multiplexer                             : 1
- 8-bit 2-to-1 multiplexer                              : 163
+ 8-bit 2-to-1 multiplexer                              : 161
  8-bit 4-to-1 multiplexer                              : 2
  9-bit 2-to-1 multiplexer                              : 20
-# FSMs                                                 : 32
+# FSMs                                                 : 33
 # Xors                                                 : 108
  1-bit xor2                                            : 100
  16-bit xor2                                           : 2
@@ -13754,7 +13772,7 @@ Optimizing FSM <usr/link_tracking_1_inst/ipb_vi2c_inst/FSM_25> on signal <state[
  10    | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <usr/link_tracking_1_inst/ipb_registers_inst/FSM_26> on signal <_i000059[1:2]> with user encoding.
+Optimizing FSM <usr/link_tracking_1_inst/ipb_tracking_inst/FSM_26> on signal <state[1:2]> with user encoding.
 -------------------
  State | Encoding
 -------------------
@@ -13763,7 +13781,16 @@ Optimizing FSM <usr/link_tracking_1_inst/ipb_registers_inst/FSM_26> on signal <_
  10    | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <usr/link_tracking_1_inst/ipb_registers_inst/FSM_27> on signal <state[1:2]> with user encoding.
+Optimizing FSM <usr/link_tracking_1_inst/ipb_registers_inst/FSM_27> on signal <_i000059[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <usr/link_tracking_1_inst/ipb_registers_inst/FSM_28> on signal <state[1:2]> with user encoding.
 -------------------
  State | Encoding
 -------------------
@@ -24028,8 +24055,8 @@ Unit <u2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 11232
- Flip-Flops                                            : 11232
+# Registers                                            : 11237
+ Flip-Flops                                            : 11237
 # Shift Registers                                      : 4
  2-bit shift register                                  : 3
  5-bit shift register                                  : 1
@@ -24055,15 +24082,15 @@ Top Level Output File Name         : glib_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 14764
+# BELS                             : 14769
 #      GND                         : 105
 #      INV                         : 279
 #      LUT1                        : 602
-#      LUT2                        : 2424
-#      LUT3                        : 2077
-#      LUT4                        : 1559
-#      LUT5                        : 1693
-#      LUT6                        : 3268
+#      LUT2                        : 2421
+#      LUT3                        : 2076
+#      LUT4                        : 1593
+#      LUT5                        : 1695
+#      LUT6                        : 3241
 #      MUXCY                       : 1300
 #      MUXCY_L                     : 102
 #      MUXF5                       : 2
@@ -24072,15 +24099,15 @@ Primitive and Black Box Usage:
 #      MUXF8                       : 20
 #      VCC                         : 92
 #      XORCY                       : 1136
-# FlipFlops/Latches                : 12253
+# FlipFlops/Latches                : 12258
 #      FD                          : 2380
 #      FDC                         : 1191
 #      FDCE                        : 1124
 #      FDE                         : 3648
 #      FDP                         : 247
 #      FDPE                        : 50
-#      FDR                         : 808
-#      FDRE                        : 2412
+#      FDR                         : 811
+#      FDRE                        : 2414
 #      FDS                         : 70
 #      FDSE                        : 311
 #      LDC                         : 10
@@ -24123,18 +24150,18 @@ Selected Device : 6vlx130tff1156-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           12253  out of  160000     7%  
- Number of Slice LUTs:                12137  out of  80000    15%  
-    Number used as Logic:             11902  out of  80000    14%  
+ Number of Slice Registers:           12258  out of  160000     7%  
+ Number of Slice LUTs:                12142  out of  80000    15%  
+    Number used as Logic:             11907  out of  80000    14%  
     Number used as Memory:              235  out of  27840     0%  
        Number used as RAM:               96
        Number used as SRL:              139
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  17040
-   Number with an unused Flip Flop:    4787  out of  17040    28%  
-   Number with an unused LUT:          4903  out of  17040    28%  
-   Number of fully used LUT-FF pairs:  7350  out of  17040    43%  
+ Number of LUT Flip Flop pairs used:  17046
+   Number with an unused Flip Flop:    4788  out of  17046    28%  
+   Number with an unused LUT:          4904  out of  17046    28%  
+   Number of fully used LUT-FF pairs:  7354  out of  17046    43%  
    Number of unique control sets:       637
 
 IO Utilization: 
@@ -24169,8 +24196,8 @@ Clock Information:
 ------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
 Clock Signal                                                                                                                                          | Clock buffer(FF name)                                                                  | Load  |
 ------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
-usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                                                                | BUFG                                                                                   | 1280  |
-clk125_2_p                                                                                                                                            | MMCM_ADV:CLKOUT1                                                                       | 4205  |
+usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT                                                                                                | BUFG                                                                                   | 1282  |
+clk125_2_p                                                                                                                                            | MMCM_ADV:CLKOUT1                                                                       | 4208  |
 usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                                                   | BUFG                                                                                   | 160   |
 usr/link_tracking_1_inst/chipscope_icon_inst/CONTROL0<13>(usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
 usr/link_tracking_1_inst/chipscope_icon_inst/U0/iUPDATE_OUT                                                                                           | NONE(usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_iDATA_CMD)               | 1     |
@@ -24206,7 +24233,7 @@ usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_
 usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N0(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 72    |
 usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N0(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_GND:G) | NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 72    |
 usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)              | NONE(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram)                                                                                                                   | 12    |
-usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/link_tracking_1_inst/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 8     |
+usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(usr/link_tracking_1_inst/chipscope_ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 8     |
 system/amc_p0_en.amc_p0_eth/N0(system/amc_p0_en.amc_p0_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                           | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                                                                                                                                   | 1     |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/N1(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                                   | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                                                  | 1     |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/n0017<0>(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                                                             | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                                                                                                                                  | 1     |
@@ -24233,7 +24260,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXOUTCLK_OUT'
   Clock period: 2.996ns (frequency: 333.816MHz)
-  Total number of paths / destination ports: 7190 / 2341
+  Total number of paths / destination ports: 7217 / 2345
 -------------------------------------------------------------------------
 Delay:               2.996ns (Levels of Logic = 3)
   Source:            usr/link_tracking_1_inst/gtx_rx_mux_inst/data_cnt_1 (FF)
@@ -24256,8 +24283,8 @@ Delay:               2.996ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk125_2_p'
-  Clock period: 3.184ns (frequency: 314.116MHz)
-  Total number of paths / destination ports: 4877465 / 10052
+  Clock period: 3.184ns (frequency: 314.099MHz)
+  Total number of paths / destination ports: 4820326 / 10058
 -------------------------------------------------------------------------
 Delay:               3.184ns (Levels of Logic = 5)
   Source:            system/rst/rst_fabric_o (FF)
@@ -24269,7 +24296,7 @@ Delay:               3.184ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q           954   0.375   0.692  rst_fabric_o (rst_fabric_o)
+     FDPE:C->Q           958   0.375   0.692  rst_fabric_o (rst_fabric_o)
      end scope: 'system/rst:rst_fabric_o'
      begin scope: 'system/sram2_if:RESET_I'
      begin scope: 'system/sram2_if/sramInterfaceIoControl:IPBUS_RESET_I'
@@ -24928,7 +24955,7 @@ Clock to Setup on destination clock clk125_2_p
                                                                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                                |   12.023|         |         |         |
+clk125_2_p                                                                                                |   11.932|         |         |         |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    3.385|         |         |         |
 system/gbt_phase_monitoring/ttclk_pll/CLK_OUT1                                                            |    2.078|         |         |         |
 system/i2c_s/reset_regs_i[6][0]_AND_773_o                                                                 |         |    2.188|         |         |
@@ -24949,7 +24976,7 @@ Clock to Setup on destination clock system/amc_p0_en.amc_p0_eth/basex/v6_gtxwiza
                                                                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                                |   10.967|         |         |         |
+clk125_2_p                                                                                                |   10.876|         |         |         |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    4.263|         |         |         |
 ----------------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
@@ -25032,7 +25059,7 @@ Clock to Setup on destination clock system/phy_en.phy_eth/sgmii/v6_gtxwizard_top
                                                                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                                                        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
-clk125_2_p                                                                                          |   10.967|         |         |         |
+clk125_2_p                                                                                          |   10.876|         |         |         |
 system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT|    4.263|         |         |         |
 ----------------------------------------------------------------------------------------------------+---------+---------+---------+---------+
 
@@ -25093,14 +25120,14 @@ xpoint1_clk1_p |    2.931|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 144.00 secs
-Total CPU time to Xst completion: 144.57 secs
+Total REAL time to Xst completion: 160.00 secs
+Total CPU time to Xst completion: 159.98 secs
  
 --> 
 
-Total memory usage is 512120 kilobytes
+Total memory usage is 508020 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 18652 (   0 filtered)
-Number of infos    :  820 (   0 filtered)
+Number of warnings : 18653 (   0 filtered)
+Number of infos    :  821 (   0 filtered)
 

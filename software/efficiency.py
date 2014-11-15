@@ -26,6 +26,7 @@ def testRead(register):
     try:
         controlChar = glib.read(register)
         nOK += 1
+        return True
     except ChipsException, e:
         if ('amount of data' in e.value):
             nBadHeader += 1
@@ -35,6 +36,7 @@ def testRead(register):
             nTimedOut += 1
         else:
             nOthers += 1
+        return False
         pass
 
 # Send a write transaction
@@ -44,6 +46,7 @@ def testWrite(register, value):
     try:
         glib.write(register, value)
         nOK += 1
+        return True
     except ChipsException, e:
         if ('amount of data' in e.value):
             nBadHeader += 1
@@ -53,6 +56,7 @@ def testWrite(register, value):
             nTimedOut += 1
         else:
             nOthers += 1
+        return False
         pass
 
 def signal_handler(signal, frame):
@@ -95,17 +99,16 @@ if __name__ == "__main__":
 
     while True:
 
-        if (time.time() - timeStart > 60):
-            break
-
         testRead("vfat2_8_chipid0")
         testRead("vfat2_8_chipid1")
-        testRead("vfat2_8_chipid0")
-        testRead("vfat2_8_chipid1")
-        testRead("vfat2_8_chipid0")
-        testRead("vfat2_8_chipid1")
-        testRead("vfat2_8_chipid0")
-        testRead("vfat2_8_chipid1")
+        testRead("opto_1_0")
+        testRead("opto_1_1")
+        testRead("opto_1_2")
+        testRead("info_1_0")
+        testRead("info_1_2")
+        testRead("info_1_64")
+        testWrite("opto_1_84", 0x432)
+        testRead("opto_1_84")
 
 
     signal_handler(0, 0)

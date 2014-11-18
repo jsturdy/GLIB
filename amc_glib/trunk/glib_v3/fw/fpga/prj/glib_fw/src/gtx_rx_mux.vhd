@@ -14,7 +14,7 @@ port(
     vi2c_data_o     : out std_logic_vector(31 downto 0);
     
     track_en_o      : out std_logic;
-    track_data_o    : out std_logic_vector(191 downto 0);
+    track_data_o    : out std_logic_vector(223 downto 0);
     
     regs_en_o       : out std_logic;
     regs_data_o     : out std_logic_vector(47 downto 0);
@@ -34,7 +34,7 @@ begin
         variable state          : integer range 0 to 3 := 0;
     
         -- Incomming data
-        variable data           : std_logic_vector(191 downto 0) := (others => '0');
+        variable data           : std_logic_vector(223 downto 0) := (others => '0');
         variable data_cnt       : integer range 0 to 15 := 0;
         
         -- Output slave
@@ -85,7 +85,7 @@ begin
                         
                             selected_core := 2;
                             
-                            data_cnt := 12;
+                            data_cnt := 14;
                             
                             state := 1;
                             
@@ -140,7 +140,7 @@ begin
                     elsif (selected_core = 2) then
                     
                         -- Set the data
-                        track_data_o <= data(191 downto 0);
+                        track_data_o <= data(223 downto 0);
                     
                         -- Storbe
                         track_en_o <= '1';

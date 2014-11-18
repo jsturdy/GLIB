@@ -21,7 +21,7 @@ package user_package is
 
 	--=== ipb slaves =============--
     
-	constant number_of_ipb_slaves       : positive := 12;
+	constant number_of_ipb_slaves       : positive := 13;
     
     constant ipb_vi2c_0                 : integer := 0;
     constant ipb_vi2c_1                 : integer := 1;
@@ -38,6 +38,8 @@ package user_package is
     constant ipb_info_0                 : integer := 9;
     constant ipb_info_1                 : integer := 10;
     constant ipb_info_2                 : integer := 11;
+    
+    constant ipb_trigger                : integer := 12;
 
     --=== Package types ==========--
     
@@ -45,6 +47,7 @@ package user_package is
     constant def_gtx_vi2c               : std_logic_vector(7 downto 0) := x"01";  
     constant def_gtx_tracks             : std_logic_vector(7 downto 0) := x"02";  
     constant def_gtx_regs               : std_logic_vector(7 downto 0) := x"03"; 
+    constant def_gtx_trigger            : std_logic_vector(7 downto 0) := x"04"; 
 
     type array32 is array(integer range <>) of std_logic_vector(31 downto 0);    
 

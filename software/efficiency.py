@@ -101,14 +101,15 @@ if __name__ == "__main__":
 
         testRead("vfat2_8_chipid0")
         testRead("vfat2_8_chipid1")
-        testRead("opto_1_0")
-        testRead("opto_1_1")
-        testRead("opto_1_2")
-        testRead("info_1_0")
-        testRead("info_1_2")
-        testRead("info_1_64")
-        testWrite("opto_1_84", 0x432)
-        testRead("opto_1_84")
+
+        # testRead("opto_1_0")
+        # testRead("opto_1_1")
+        # testRead("opto_1_2")
+        # testRead("opto_1_84")
+
+        # testRead("info_1_0")
+        # testRead("info_1_2")
+        # testRead("info_1_64")
 
 
     signal_handler(0, 0)

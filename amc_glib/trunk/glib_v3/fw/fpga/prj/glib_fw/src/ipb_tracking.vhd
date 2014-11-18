@@ -17,7 +17,7 @@ port(
 	ipb_miso_o      : out ipb_rbus;
     
     rx_en_i         : in std_logic;
-    rx_data_i       : in std_logic_vector(191 downto 0);
+    rx_data_i       : in std_logic_vector(223 downto 0);
     
     fifo_reset_i    : in std_logic;
     fifo_count_o    : out std_logic_vector(5 downto 0)
@@ -31,7 +31,7 @@ architecture rtl of ipb_tracking is
 	signal ipb_data     : std_logic_vector(31 downto 0) := (others => '0'); 
 
     signal rd_en        : std_logic := '0';
-    signal rd_data      : std_logic_vector(191 downto 0) := (others => '0');
+    signal rd_data      : std_logic_vector(223 downto 0) := (others => '0');
     signal rd_valid     : std_logic := '0';
     signal rd_underflow : std_logic := '0';
     
@@ -39,7 +39,7 @@ architecture rtl of ipb_tracking is
     
 begin
     
-    tracking_fifo_inst : entity work.tracking_fifo
+    tracking_data_fifo_inst : entity work.tracking_data_fifo
     port map(
         rst             => (fifo_reset_i or reset_i),
         wr_clk          => gtx_clk_i,
@@ -59,7 +59,7 @@ begin
         
         variable state              : integer range 0 to 3 := 0;
         
-        variable data               : std_logic_vector(191 downto 0) := (others => '0');
+        variable data               : std_logic_vector(223 downto 0) := (others => '0');
     
         variable last_ipb_strobe    : std_logic := '0';
        
@@ -124,6 +124,12 @@ begin
                         elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0110") then
                         
                             ipb_data <= data(191 downto 160);
+                            
+                            state := 2;
+                            
+                        elsif (ipb_mosi_i.ipb_addr(3 downto 0) = "0111") then
+                        
+                            ipb_data <= data(223 downto 192);
                             
                             state := 2;
                         

@@ -206,6 +206,9 @@ architecture user_logic_arch of user_logic is
 
     constant FABRIC_CLK_FREQ : integer := 160000000;
 
+    -- External
+    signal ext_trigger  : std_logic := '0';
+
     -- Clocks
     signal fabric_clk   : std_logic := '0';
     signal vfat2_clk    : std_logic := '0';
@@ -338,6 +341,8 @@ begin
     -- T1 handling
     --================================--
     
+    ext_lv1a_inst : entity work.monostable port map(fabric_clk_i => gtx_clk, en_i => fmc2_io_pin.la_p(10), en_o => ext_trigger);
+    
     t1_handler_inst : entity work.t1_handler 
     port map(
         gtp_clk_i   => gtx_clk,
@@ -379,7 +384,7 @@ begin
     
     -- T1 operations 3 downto 0
     
-    t1_lv1a <= request_tri(0); -- 0 _ write _ send LV1A
+    t1_lv1a <= request_tri(0) or ext_trigger; -- 0 _ write _ send LV1A
     
     t1_calpulse <= request_tri(1); -- 1 _ write _ send Calpulse
     

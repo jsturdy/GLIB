@@ -33,6 +33,8 @@ package body user_addr_decode is
 		elsif std_match(addr, "0100000000000100000000010-------") then sel := ipb_info_1;   -- 0x400401XX
 		elsif std_match(addr, "0100000000000100000000100-------") then sel := ipb_info_2;   -- 0x400402XX
         
+		elsif std_match(addr, "01000000000001010000000000000000") then sel := ipb_trigger;   -- 0x4005000
+        
 		else
 			sel := 99;
 		end if;

@@ -66,7 +66,7 @@ begin
 
     --
 
-    high_speed_gtx0_inst : entity work.high_speed_gtx
+    gtx_0_inst : entity work.gtx_gtx
     generic map(
         GTX_SIM_GTXRESET_SPEEDUP    => 1,
         GTX_TX_CLK_SOURCE           => "RXPLL",
@@ -104,7 +104,7 @@ begin
         TXRESETDONE_OUT     => open
     );   
 
-    high_speed_gtx1_inst : entity work.high_speed_gtx
+    gtx_1_inst : entity work.gtx_gtx
     generic map(
         GTX_SIM_GTXRESET_SPEEDUP    => 1,
         GTX_TX_CLK_SOURCE           => "RXPLL",
@@ -142,7 +142,7 @@ begin
         TXRESETDONE_OUT     => open
     );   
 
-    high_speed_gtx2_inst : entity work.high_speed_gtx
+    gtx_2_inst : entity work.gtx_gtx
     generic map(
         GTX_SIM_GTXRESET_SPEEDUP    => 1,
         GTX_TX_CLK_SOURCE           => "RXPLL",
@@ -180,7 +180,7 @@ begin
         TXRESETDONE_OUT     => open
     );   
 
-    high_speed_gtx3_inst : entity work.high_speed_gtx
+    gtx_3_inst : entity work.gtx_gtx
     generic map(
         GTX_SIM_GTXRESET_SPEEDUP    => 1,
         GTX_TX_CLK_SOURCE           => "RXPLL",

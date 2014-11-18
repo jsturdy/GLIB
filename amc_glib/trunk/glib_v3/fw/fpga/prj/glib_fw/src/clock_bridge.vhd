@@ -24,8 +24,8 @@ end clock_bridge;
 architecture behavioral of clock_bridge is
 
     -- Status registers
-    signal in_status    : std_logic := '0';
-    signal out_status   : std_logic := '0';
+    signal strobe   : std_logic := '0';
+    signal ack      : std_logic := '0';
     
 begin
 
@@ -39,23 +39,26 @@ begin
             -- Reset signal
             if (reset_i = '1') then
             
-                in_status <= '0';
+                strobe <= '0';
                 
             else
             
-                -- Detect an input strobe
-                if (m_en_i = '1') then
-                
-                    -- Check if the module is busy
-                    if (in_status = out_status) then
-                    
-                        -- If not, change the status
-                        in_status <= not in_status;
-                        
+                -- Ready to send data
+                if (strobe = '0' and ack = '0') then
+            
+                    -- Detect an input strobe
+                    if (m_en_i = '1') then
+            
                         -- Set the data
                         s_data_o <= m_data_i;
+                    
+                        strobe <= '1';
                         
                     end if;
+                    
+                elsif (strobe = '1' and ack = '1') then
+                
+                    strobe <= '0';
                     
                 end if;
                 
@@ -77,23 +80,30 @@ begin
             
                 s_en_o <= '0';
                 
-                out_status <= '0';
+                ack <= '0';
                 
             else   
             
                 -- Check if a strobe is waiting
-                if (in_status /= out_status) then
+                if (strobe = '1' and ack = '0') then
                 
                     -- If so, set an output strobe
                     s_en_o <= '1';
                     
                     -- Change the status
-                    out_status <= not out_status;
+                    ack <= '1';
                     
                 -- Otherwhise
+                elsif (strobe = '0' and ack = '1') then
+                
+                    -- Reset the strobe
+                    s_en_o <= '0';
+                    
+                    -- Reset the acknowledgement
+                    ack <= '0';
+                
                 else
                 
-                    -- reset the strobe
                     s_en_o <= '0';
                     
                 end if;

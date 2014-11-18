@@ -267,4 +267,22 @@ begin
         ipb_info_o  => ipb_miso_o(ipb_info_1)
     );
 
+    --================================--
+    -- Trigger links
+    --================================--
+    
+    link_trigger_inst : entity work.link_trigger
+    port map(
+        gtx_clk_i       => gtx_clk,
+        ipb_clk_i       => ipb_clk_i,
+        reset_i         => reset_i,
+        rx_error_i      => rx_error(3),
+        rx_kchar_i      => rx_kchar(7 downto 6),
+        rx_data_i       => rx_data(63 downto 48),
+        tx_kchar_o      => tx_kchar(7 downto 6),
+        tx_data_o       => tx_data(63 downto 48),
+        ipb_trigger_i   => ipb_mosi_i(ipb_trigger),
+        ipb_trigger_o   => ipb_miso_o(ipb_trigger)
+    );
+
 end user_logic_arch;

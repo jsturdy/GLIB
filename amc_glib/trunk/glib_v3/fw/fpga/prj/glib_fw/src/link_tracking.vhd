@@ -47,7 +47,7 @@ architecture Behavioral of link_tracking is
     -- Track data
     
     signal track_rx_en              : std_logic := '0';
-    signal track_rx_data            : std_logic_vector(191 downto 0) := (others => '0');
+    signal track_rx_data            : std_logic_vector(223 downto 0) := (others => '0');
     signal track_fifo_reset         : std_logic := '0';
     signal track_fifo_count         : std_logic_vector(5 downto 0) := (others => '0');
          
@@ -85,7 +85,6 @@ architecture Behavioral of link_tracking is
     signal cs_icon0                 : std_logic_vector(35 downto 0);
     signal cs_ila0                  : std_logic_vector(31 downto 0);
     signal cs_ila1                  : std_logic_vector(31 downto 0);
-    
     
 begin
 
@@ -190,7 +189,7 @@ begin
     --================================--
     -- Counters
     --================================--
-
+    
     rx_error_counter_inst : entity work.counter port map(fabric_clk_i => gtx_clk_i, reset_i => rx_error_counter_reset, en_i => rx_error_i, data_o => rx_error_counter);
     vi2c_rx_counter_inst : entity work.counter port map(fabric_clk_i => gtx_clk_i, reset_i => vi2c_rx_counter_reset, en_i => vi2c_rx_en, data_o => vi2c_rx_counter);
     vi2c_tx_counter_inst : entity work.counter port map(fabric_clk_i => gtx_clk_i, reset_i => vi2c_tx_counter_reset, en_i => vi2c_tx_en, data_o => vi2c_tx_counter);

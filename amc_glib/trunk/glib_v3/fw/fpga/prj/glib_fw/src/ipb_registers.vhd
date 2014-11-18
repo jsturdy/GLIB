@@ -32,11 +32,15 @@ architecture rtl of ipb_registers is
 
     signal tx_en        : std_logic := '0';
     signal tx_data      : std_logic_vector(47 downto 0) := (others => '0');
-
-    signal rx_en        : std_logic := '0';
-    signal rx_data      : std_logic_vector(47 downto 0) := (others => '0');
+    
+    signal rx_strobe    : std_logic := '0';
+    signal rx_ack       : std_logic := '0';
 
 begin
+
+    --================================--
+    -- Clock bridges
+    --================================--
 
     clock_bridge_tx_inst : entity work.clock_bridge
     port map(
@@ -49,16 +53,9 @@ begin
         s_data_o    => tx_data_o
     );
 
-    clock_bridge_rx_inst : entity work.clock_bridge
-    port map(
-        reset_i     => reset_i,
-        m_clk_i     => gtx_clk_i,
-        m_en_i      => rx_en_i,
-        m_data_i    => rx_data_i,
-        s_clk_i     => ipb_clk_i,
-        s_en_o      => rx_en,
-        s_data_o    => rx_data
-    );
+    --================================--
+    -- TX
+    --================================--
 
     process(ipb_clk_i)
 
@@ -136,7 +133,11 @@ begin
 
     end process;
 
-    process(ipb_clk_i)
+    --================================--
+    -- RX
+    --================================--
+    
+    process(gtx_clk_i)
 
         variable state          : integer range 0 to 3 := 0;
 
@@ -144,32 +145,30 @@ begin
         variable register_byte  : std_logic_vector(7 downto 0) := (others => '0');
         variable crc_byte       : std_logic_vector(7 downto 0) := (others => '0');
         variable crc_check      : std_logic_vector(7 downto 0) := (others => '0');
-
+        
     begin
-
-        if (rising_edge(ipb_clk_i)) then
+    
+        if (rising_edge(gtx_clk_i)) then
 
             if (reset_i = '1') then
-
-                ipb_ack <= '0';
-
+            
+                rx_strobe <= '0';
+                
                 state := 0;
 
             else
-
+        
                 -- Wait
                 if (state = 0) then
 
-                    ipb_ack <= '0';
-
                     -- Register data
-                    if (rx_en = '1') then
+                    if (rx_en_i = '1') then
 
-                        data_byte := rx_data(47 downto 16);
+                        data_byte := rx_data_i(47 downto 16);
 
-                        register_byte := rx_data(15 downto 8);
+                        register_byte := rx_data_i(15 downto 8);
 
-                        crc_byte := rx_data(7 downto 0);
+                        crc_byte := rx_data_i(7 downto 0);
 
                         crc_check := def_gtx_regs 
                                      xor rx_data_i(47 downto 40) 
@@ -200,16 +199,65 @@ begin
                 -- Return data
                 elsif (state = 2) then
 
-                    ipb_ack <= '1';
+                    rx_strobe <= '1';
 
-                    state := 0;
+                    state := 3;
+                    
+                -- Wait for ack
+                elsif (state = 3) then
+                
+                    if (rx_ack = '1') then
+                    
+                        rx_strobe <= '0';
+                        
+                        state := 0;
+                        
+                    end if;
 
                 else
 
-                    ipb_ack <= '0';
+                    rx_strobe <= '0';
 
                     state := 0;
 
+                end if;
+        
+            end if;
+            
+        end if;
+    
+    end process;
+
+
+    process(ipb_clk_i)
+    begin
+
+        if (rising_edge(ipb_clk_i)) then
+
+            if (reset_i = '1') then
+            
+                rx_ack <= '0';
+
+                ipb_ack <= '0';
+
+            else
+            
+                if (rx_strobe = '1' and rx_ack = '0') then
+                
+                    ipb_ack <= '1';
+                    
+                    rx_ack <= '1';
+               
+                elsif (rx_strobe = '0' and rx_ack = '1') then
+            
+                    ipb_ack <= '0';
+                    
+                    rx_ack <= '0';
+                    
+                else
+                
+                    ipb_ack <= '0';
+                    
                 end if;
 
             end if;

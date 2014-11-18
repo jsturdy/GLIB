@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt)
+Release 14.7 Map P.20131013 (nt64)
 Xilinx Mapping Report File for Design 'glib_top'
 
 Design Information
@@ -9,23 +9,23 @@ Target Device  : xc6vlx130t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Sat Nov 15 17:12:29 2014
+Mapped Date    : Tue Nov 18 16:03:42 2014
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:  466
 Slice Logic Utilization:
-  Number of Slice Registers:                12,031 out of 160,000    7%
-    Number used as Flip Flops:              12,019
+  Number of Slice Registers:                12,387 out of 160,000    7%
+    Number used as Flip Flops:              12,375
     Number used as Latches:                     12
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      9,805 out of  80,000   12%
-    Number used as logic:                    9,177 out of  80,000   11%
-      Number using O6 output only:           5,854
-      Number using O5 output only:             572
-      Number using O5 and O6:                2,751
+  Number of Slice LUTs:                     10,201 out of  80,000   12%
+    Number used as logic:                    9,452 out of  80,000   11%
+      Number using O6 output only:           6,005
+      Number using O5 output only:             599
+      Number using O5 and O6:                2,848
       Number used as ROM:                        0
     Number used as Memory:                     153 out of  27,840    1%
       Number used as Dual Port RAM:              0
@@ -37,20 +37,20 @@ Slice Logic Utilization:
         Number using O6 output only:            75
         Number using O5 output only:             0
         Number using O5 and O6:                 30
-    Number used exclusively as route-thrus:    475
-      Number with same-slice register load:    441
-      Number with same-slice carry load:        34
+    Number used exclusively as route-thrus:    596
+      Number with same-slice register load:    560
+      Number with same-slice carry load:        36
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,321 out of  20,000   21%
-  Number of LUT Flip Flop pairs used:       13,094
-    Number with an unused Flip Flop:         3,114 out of  13,094   23%
-    Number with an unused LUT:               3,289 out of  13,094   25%
-    Number of fully used LUT-FF pairs:       6,691 out of  13,094   51%
-    Number of unique control sets:             523
+  Number of occupied Slices:                 4,405 out of  20,000   22%
+  Number of LUT Flip Flop pairs used:       13,402
+    Number with an unused Flip Flop:         3,256 out of  13,402   24%
+    Number with an unused LUT:               3,201 out of  13,402   23%
+    Number of fully used LUT-FF pairs:       6,945 out of  13,402   51%
+    Number of unique control sets:             533
     Number of slice register sites lost
-      to control set restrictions:           1,612 out of 160,000    1%
+      to control set restrictions:           1,656 out of 160,000    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -72,10 +72,12 @@ IO Utilization:
       Number of LOCed OPADs:                     4 out of      12   33%
 
 Specific Feature Utilization:
-  Number of RAMB36E1/FIFO36E1s:                 39 out of     264   14%
-    Number using RAMB36E1 only:                 39
+  Number of RAMB36E1/FIFO36E1s:                 53 out of     264   20%
+    Number using RAMB36E1 only:                 53
     Number using FIFO36E1 only:                  0
-  Number of RAMB18E1/FIFO18E1s:                  0 out of     528    0%
+  Number of RAMB18E1/FIFO18E1s:                  2 out of     528    1%
+    Number using RAMB18E1 only:                  2
+    Number using FIFO18E1 only:                  0
   Number of BUFG/BUFGCTRLs:                     11 out of      32   34%
     Number used as BUFGs:                        8
     Number used as BUFGCTRLs:                    3
@@ -106,11 +108,11 @@ Specific Feature Utilization:
   Number of TEMAC_SINGLEs:                       2 out of       4   50%
 
   Number of RPM macros:           11
-Average Fanout of Non-Clock Nets:                3.63
+Average Fanout of Non-Clock Nets:                3.67
 
-Peak Memory Usage:  640 MB
-Total REAL time to MAP completion:  3 mins 14 secs 
-Total CPU time to MAP completion (all processors):   3 mins 27 secs 
+Peak Memory Usage:  943 MB
+Total REAL time to MAP completion:  3 mins 35 secs 
+Total CPU time to MAP completion (all processors):   3 mins 50 secs 
 
 Table of Contents
 -----------------
@@ -1145,19 +1147,23 @@ WARNING:Place:837 - Partially locked IO Bus is found.
    	 Comp: amc_port_tx_n<11>
 
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
+   FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1168,7 +1174,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1179,7 +1185,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1190,7 +1196,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
@@ -1201,17 +1207,13 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
-   FF)
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
@@ -1224,7 +1226,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_fr
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
@@ -1264,20 +1266,22 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net usr/link_tracking_1_inst/cs_icon0<13> is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][0]_AND_773_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][3]_AND_767_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_934_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][1]_AND_771_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][2]_AND_769_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][3]_AND_767_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net usr/link_tracking_1_inst/cs_icon0<13> is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
@@ -1290,8 +1294,6 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_934_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
    MC_D1_O> is incomplete. The signal does not drive any load pins in the design.
@@ -1299,17 +1301,14 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
    MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
+   AMC_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
    MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
    MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
@@ -1317,22 +1316,25 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
-   AMC_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 
 Section 3 - Informational
@@ -1342,7 +1344,7 @@ INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    machine load, Map will use 2 processors during this run.
 INFO:Security:56 - Part 'xc6vlx130t' is not a WebPack part.
 INFO:LIT:243 - Logical network user_ipb_miso[1]_ipb_err has no load.
-INFO:LIT:395 - The above info message is repeated 1044 more times for the
+INFO:LIT:395 - The above info message is repeated 1051 more times for the
    following (max. 5 shown):
    user_mac_addr<43>,
    user_mac_addr<29>,
@@ -1366,9 +1368,9 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-1163 block(s) removed
- 323 block(s) optimized away
-1349 signal(s) removed
+1165 block(s) removed
+ 328 block(s) optimized away
+1333 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -2791,144 +2793,108 @@ The signal "usr/gtx_wrapper_inst/rx_data_o<33>" is sourceless and has been
 removed.
 The signal "usr/gtx_wrapper_inst/rx_data_o<32>" is sourceless and has been
 removed.
-The signal "usr/gtx_wrapper_inst/rx_kchar_o<7>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_kchar_o<6>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<63>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<62>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<61>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<60>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<59>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<58>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<57>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<56>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<55>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<54>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<53>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<52>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<51>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<50>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<49>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<48>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXDISPERR_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXDISPERR_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXLOSSOFSYNC_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXLOSSOFSYNC_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXNOTINTABLE_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXNOTINTABLE_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXBYTEISALIGNED_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXCOMMADET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXRECCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/TXOUTCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/TXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/TXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXDISPERR_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXDISPERR_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXLOSSOFSYNC_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXLOSSOFSYNC_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXNOTINTABLE_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXNOTINTABLE_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXBYTEISALIGNED_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXCOMMADET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXRECCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/TXOUTCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/TXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/TXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXLOSSOFSYNC_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXLOSSOFSYNC_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXBYTEISALIGNED_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXCOMMADET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXRECCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/TXOUTCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/TXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/TXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXDISPERR_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXDISPERR_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXLOSSOFSYNC_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXLOSSOFSYNC_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXNOTINTABLE_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXNOTINTABLE_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXBYTEISALIGNED_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXCOMMADET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXRECCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXRESETDONE_OUT" is
-sourceless and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXDISPERR_OUT<1>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXDISPERR_OUT<0>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXLOSSOFSYNC_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXLOSSOFSYNC_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXNOTINTABLE_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXNOTINTABLE_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXBYTEISALIGNED_OUT" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXCOMMADET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXRECCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/TXOUTCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/TXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/TXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXDISPERR_OUT<1>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXDISPERR_OUT<0>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXLOSSOFSYNC_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXLOSSOFSYNC_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXNOTINTABLE_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXNOTINTABLE_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXBYTEISALIGNED_OUT" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXCOMMADET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXRECCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/TXOUTCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/TXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/TXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXLOSSOFSYNC_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXLOSSOFSYNC_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXBYTEISALIGNED_OUT" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXCOMMADET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXRECCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/TXOUTCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/TXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/TXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXDISPERR_OUT<1>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXDISPERR_OUT<0>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXLOSSOFSYNC_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXLOSSOFSYNC_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXNOTINTABLE_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXNOTINTABLE_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXBYTEISALIGNED_OUT" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXCOMMADET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXRECCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/TXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/TXRESETDONE_OUT" is sourceless and
+has been removed.
 The signal "usr/link_tracking_1_inst/cs_icon0<35>" is sourceless and has been
 removed.
 The signal "usr/link_tracking_1_inst/cs_icon0<34>" is sourceless and has been
@@ -2974,8 +2940,8 @@ removed.
 The signal "usr/link_tracking_1_inst/cs_icon0<7>" is sourceless and has been
 removed.
 The signal
-"usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_gener
-ator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is
+"usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_
+generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is
 sourceless and has been removed.
 The signal
 "usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0
@@ -3059,6 +3025,10 @@ D[3].U_HCE" (ROM) removed.
  Sourceless block
 "usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
 D[3].U_LCE" (ROM) removed.
+The signal
+"usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_gener
+ator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is
+sourceless and has been removed.
 The signal "system/sram_w[1]_oe_b" is sourceless and has been removed.
 The signal "system/ipb_from_slaves[5]_ipb_err" is sourceless and has been
 removed.
@@ -3069,25 +3039,25 @@ The signal "system/wb_bridge/sel_wb_slave<31>" is sourceless and has been
 removed.
 The signal "system/wb_bridge/sel_wb_slave<6>" is sourceless and has been
 removed.
-The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1033_o" is sourceless and
+The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o" is sourceless and
 has been removed.
- Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1033_o2" (ROM)
+ Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o2" (ROM)
 removed.
-  The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1033_o1" is sourceless and
+  The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o1" is sourceless and
 has been removed.
-   Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1033_o3" (ROM)
+   Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o3" (ROM)
 removed.
-    The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1033_o2" is sourceless and
+    The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o2" is sourceless and
 has been removed.
-     Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1033_o4" (ROM)
+     Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o4" (ROM)
 removed.
-      The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1033_o3" is sourceless and
+      The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o3" is sourceless and
 has been removed.
-       Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1033_o5" (ROM)
+       Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o5" (ROM)
 removed.
-The signal "system/ipb_usr_fabric/n0368<5>" is sourceless and has been removed.
-The signal "system/ipb_usr_fabric/N70" is sourceless and has been removed.
- Sourceless block "system/ipb_usr_fabric/Mmux_n03685" (ROM) removed.
+The signal "system/ipb_usr_fabric/n0398<5>" is sourceless and has been removed.
+The signal "system/ipb_usr_fabric/N18" is sourceless and has been removed.
+ Sourceless block "system/ipb_usr_fabric/Mmux_n03985" (ROM) removed.
 The signal "system/amc_p0_en.amc_p0_eth/basex/rx_statistics_vector<27>" is
 sourceless and has been removed.
  Sourceless block
@@ -5381,6 +5351,8 @@ The signal "user_ipb_miso[7]_ipb_err" is unused and has been removed.
 removed.
 The signal "user_ipb_miso[10]_ipb_err" is unused and has been removed.
  Unused block "usr/link_tracking_1_inst/ipb_info_inst/XST_GND" (ZERO) removed.
+The signal "user_ipb_miso[12]_ipb_err" is unused and has been removed.
+ Unused block "usr/link_trigger_inst/ipb_trigger_inst/XST_GND" (ZERO) removed.
 The signal "fmc2_tx_p_OBUF" is unused and has been removed.
 The signal "fmc2_tx_n_OBUF" is unused and has been removed.
 The signal "amc_port_tx_out<17>" is unused and has been removed.
@@ -5579,7 +5551,7 @@ st/gen_sdp_ram.sdpram_inst/Mram_ram61" (RAM32X1D) removed.
 Unused block
 "system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_in
 st/gen_sdp_ram.sdpram_inst/Mram_ram62" (RAM32X1D) removed.
-Unused block "system/ipb_usr_fabric/Mmux_n03685_SW0" (ROM) removed.
+Unused block "system/ipb_usr_fabric/Mmux_n03985_SW0" (ROM) removed.
 Unused block "system/ipb_usr_fabric/XST_GND" (ZERO) removed.
 Unused block "system/phy_en.phy_eth/sgmii/v6emac_core/VCC" (ONE) removed.
 Unused block "system/phy_en.phy_ipb_ctrl/stretch_rx/clkdiv/XST_VCC" (ONE)
@@ -5597,7 +5569,7 @@ removed.
 Unused block
 "system/sram1_if/sramInterface/control_process.dataFromSram_inv1_INV_0" (BUF)
 removed.
-Unused block "system/wb_bridge/GND_365_o_GND_365_o_OR_1033_o1" (ROM) removed.
+Unused block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o1" (ROM) removed.
 Unused block "system/wb_bridge/XST_GND" (ZERO) removed.
 Unused block
 "usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.F
@@ -5642,7 +5614,11 @@ Unused block
 "usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
 D[9].U_HCE" (ROM) removed.
 Unused block
-"usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_gener
+"usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_
+generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i"
+(FF) removed.
+Unused block
+"usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_gener
 ator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" (FF)
 removed.
 
@@ -6099,14 +6075,14 @@ VCC 		system/sram2_if/sramInterfaceIoControl/XST_VCC
 GND 		usr/XST_GND
 GND 		usr/gtx_wrapper_inst/XST_GND
 VCC 		usr/gtx_wrapper_inst/XST_VCC
-GND 		usr/gtx_wrapper_inst/high_speed_gtx0_inst/XST_GND
-VCC 		usr/gtx_wrapper_inst/high_speed_gtx0_inst/XST_VCC
-GND 		usr/gtx_wrapper_inst/high_speed_gtx1_inst/XST_GND
-VCC 		usr/gtx_wrapper_inst/high_speed_gtx1_inst/XST_VCC
-GND 		usr/gtx_wrapper_inst/high_speed_gtx2_inst/XST_GND
-VCC 		usr/gtx_wrapper_inst/high_speed_gtx2_inst/XST_VCC
-GND 		usr/gtx_wrapper_inst/high_speed_gtx3_inst/XST_GND
-VCC 		usr/gtx_wrapper_inst/high_speed_gtx3_inst/XST_VCC
+GND 		usr/gtx_wrapper_inst/gtx_0_inst/XST_GND
+VCC 		usr/gtx_wrapper_inst/gtx_0_inst/XST_VCC
+GND 		usr/gtx_wrapper_inst/gtx_1_inst/XST_GND
+VCC 		usr/gtx_wrapper_inst/gtx_1_inst/XST_VCC
+GND 		usr/gtx_wrapper_inst/gtx_2_inst/XST_GND
+VCC 		usr/gtx_wrapper_inst/gtx_2_inst/XST_VCC
+GND 		usr/gtx_wrapper_inst/gtx_3_inst/XST_GND
+VCC 		usr/gtx_wrapper_inst/gtx_3_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/XST_GND
 GND 		usr/link_tracking_1_inst/chipscope_icon_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/chipscope_icon_inst/XST_VCC
@@ -6211,15 +6187,15 @@ VCC 		usr/link_tracking_1_inst/chipscope_ila_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/gtx_tx_mux_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/gtx_tx_mux_inst/XST_VCC
 GND
-		usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_gene
-rator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnative
-bmg.native_blk_mem_gen/valid.cstr/XST_GND
+		usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo
+_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gn
+ativebmg.native_blk_mem_gen/valid.cstr/XST_GND
 VCC
-		usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/U0/xst_fifo_gene
-rator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnative
-bmg.native_blk_mem_gen/valid.cstr/XST_VCC
-GND 		usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/XST_GND
-VCC 		usr/link_tracking_1_inst/ipb_tracking_inst/tracking_fifo_inst/XST_VCC
+		usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo
+_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gn
+ativebmg.native_blk_mem_gen/valid.cstr/XST_VCC
+GND 		usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/XST_GND
+VCC 		usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/regs_rx_counter_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/regs_rx_counter_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/regs_tx_counter_inst/XST_GND
@@ -6230,6 +6206,17 @@ GND 		usr/link_tracking_1_inst/vi2c_rx_counter_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/vi2c_rx_counter_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/vi2c_tx_counter_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/vi2c_tx_counter_inst/XST_VCC
+GND 		usr/link_trigger_inst/XST_GND
+GND
+		usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_gene
+rator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnative
+bmg.native_blk_mem_gen/valid.cstr/XST_GND
+VCC
+		usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_gene
+rator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnative
+bmg.native_blk_mem_gen/valid.cstr/XST_VCC
+GND 		usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/XST_GND
+VCC 		usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.

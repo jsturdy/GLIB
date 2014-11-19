@@ -5,20 +5,36 @@
 NET "fpga_clk" TNM_NET = "fpga_clk";
 TIMESPEC TS_fpga_clk = PERIOD "fpga_clk" 20 ns;
 
-NET "clk40MHz" TNM_NET = "clk40MHz";
-TIMESPEC TS_clk40MHz = PERIOD "clk40MHz" 25 ns;
 
-#NET "gtp_clk" TNM_NET = "gtp_clk";
-#TIMESPEC "TS_gtp_clk" = PERIOD "gtp_clk" 6.25 ns;
+NET "vfat2_clk_ext" TNM_NET = "vfat2_clk_ext";
+TIMESPEC TS_vfat2_clk_ext = PERIOD "vfat2_clk_ext" 25 ns;
+
+NET "vfat2_clk_fpga" TNM_NET = "vfat2_clk_fpga";
+TIMESPEC TS_vfat2_clk_fpga = PERIOD "vfat2_clk_fpga" 25 ns;
+
+NET "vfat2_clk_muxed" TNM_NET = "vfat2_clk_muxed";
+TIMESPEC TS_vfat2_clk_muxed = PERIOD "vfat2_clk_muxed" 25 ns;
+
+
+NET "rec_clk" TNM_NET = "rec_clk";
+TIMESPEC TS_rec_clk = PERIOD "rec_clk" 3.125 ns;
+
+NET "cdce_clk_rec" TNM_NET = "cdce_clk_rec";
+TIMESPEC TS_cdce_clk_rec = PERIOD "cdce_clk_rec" 25 ns;
+
+NET "cdce_clk_muxed" TNM_NET = "cdce_clk_muxed";
+TIMESPEC TS_cdce_clk_muxed = PERIOD "cdce_clk_muxed" 25 ns;
+
+
+NET "gtp_clk" TNM_NET = "gtp_clk";
+TIMESPEC "TS_gtp_clk" = PERIOD "gtp_clk" 6.25 ns;
+
+NET "vfat2_clk" TNM_NET = "vfat2_clk";
+TIMESPEC TS_vfat2_clk = PERIOD "vfat2_clk" 25 ns;
+
 
 NET "gtp_wrapper_inst/gtp_userclk[0]" TNM_NET = "gtp_userclk00";
 TIMESPEC "TS_gtp_userclk00" = PERIOD "gtp_userclk00" 3.125 ns;
 
-#NET "gtp_wrapper_inst/gtp_userclk2[0]" TNM_NET = "gtp_userclk20";
-#TIMESPEC "TS_gtp_userclk20" = PERIOD "gtp_userclk20" 6.25 ns;
-
 NET "gtp_wrapper_inst/gtp_userclk[1]" TNM_NET = "gtp_userclk01";
 TIMESPEC "TS_gtp_userclk01" = PERIOD "gtp_userclk01" 3.125 ns;
-
-#NET "gtp_wrapper_inst/gtp_userclk2[1]" TNM_NET = "gtp_userclk21";
-#TIMESPEC "TS_gtp_userclk21" = PERIOD "gtp_userclk21" 6.25 ns;

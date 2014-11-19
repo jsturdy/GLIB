@@ -27,6 +27,11 @@ port(
     request_write_o : out array32(63 downto 0);
     request_tri_o   : out std_logic_vector(63 downto 0);
     request_read_i  : in array32(63 downto 0);
+    
+    -- LV1A data
+    
+    lv1a_sent_i     : in std_logic;
+    bx_counter_i    : in std_logic_vector(31 downto 0);
 
     -- IIC signals
 
@@ -65,7 +70,7 @@ architecture Behavioral of link_tracking is
 
     signal track_tx_ready           : std_logic := '0';
     signal track_tx_done            : std_logic := '0';
-    signal track_tx_data            : std_logic_vector(191 downto 0) := (others => '0');
+    signal track_tx_data            : std_logic_vector(223 downto 0) := (others => '0');
 
     -- Registers requests
 
@@ -85,12 +90,6 @@ architecture Behavioral of link_tracking is
     signal request_tri              : std_logic_vector(63 downto 0);
     signal request_read             : array32(63 downto 0) := (others => (others => '0'));
 
-    -- Registers
-
-    signal registers_write          : array32(7 downto 0) := (others => (others => '0'));
-    signal registers_tri            : std_logic_vector(7 downto 0);
-    signal registers_read           : array32(7 downto 0) := (others => (others => '0'));
-
     -- Counters
 
     signal rx_error_counter         : std_logic_vector(31 downto 0) := (others => '0');
@@ -104,17 +103,6 @@ architecture Behavioral of link_tracking is
     signal vi2c_tx_counter_reset    : std_logic := '0';
     signal regs_rx_counter_reset    : std_logic := '0';
     signal regs_tx_counter_reset    : std_logic := '0';
-
-    -- ChipScope signals
-
-    signal tx_data                  : std_logic_vector(15 downto 0);
-
-    signal cs_icon0                 : std_logic_vector(35 downto 0);
-    signal cs_icon1                 : std_logic_vector(35 downto 0);
-    signal cs_in                    : std_logic_vector(31 downto 0);
-    signal cs_out                   : std_logic_vector(31 downto 0);
-    signal cs_ila0                  : std_logic_vector(31 downto 0);
-    signal cs_ila1                  : std_logic_vector(31 downto 0);
 
 begin
 
@@ -148,10 +136,8 @@ begin
         track_done_o    => track_tx_done,
         track_data_i    => track_tx_data,
         tx_kchar_o      => tx_kchar_o,
-        tx_data_o       => tx_data -- tx_data_o
+        tx_data_o       => tx_data_o
     );
-
-    tx_data_o <= tx_data;
 
     --================================--
     -- VFAT2 I2C
@@ -184,7 +170,9 @@ begin
         tx_ready_o      => track_tx_ready,
         tx_done_i       => track_tx_done,
         tx_data_o       => track_tx_data,
-        vfat2_dvalid_i  => '0' & vfat2_dvalid_i(0),
+        lv1a_sent_i     => lv1a_sent_i,
+        bx_counter_i    => bx_counter_i,
+        vfat2_dvalid_i  => vfat2_dvalid_i,
         vfat2_data_0_i  => vfat2_data_0_i,
         vfat2_data_1_i  => vfat2_data_1_i,
         vfat2_data_2_i  => vfat2_data_2_i,
@@ -220,20 +208,6 @@ begin
     
     request_write <= regs_req_write(63 downto 0);       -- Local mapping
     request_tri <= regs_req_tri(63 downto 0);
-    
-    --================================--
-    -- Registers
-    --================================--
-
-    registers_inst : entity work.registers
-    generic map(SIZE => 8)
-    port map(
-        fabric_clk_i    => gtp_clk_i,
-        reset_i         => reset_i,
-        wbus_i          => registers_write,
-        wbus_t          => registers_tri,
-        rbus_o          => registers_read
-    );
    
     --================================--
     -- Counters
@@ -272,24 +246,7 @@ begin
     regs_rx_counter_reset <= request_tri(8);
     
     regs_tx_counter_reset <= request_tri(9);
-    
-    -- Writable registers : 17 downto 10
-    
-    registers_write(7 downto 0) <= request_write(17 downto 10);
-    registers_tri(7 downto 0) <= request_tri(17 downto 10);
-    request_read(17 downto 10) <= registers_read(7 downto 0);
 
     -- Other registers : 63 downto 18
-
-    --================================--
-    -- ChipScope
-    --================================--
-
-    chipscope_icon_inst : entity work.chipscope_icon port map (CONTROL0 => cs_icon0);
-
-    chipscope_ila_inst : entity work.chipscope_ila port map (CONTROL => cs_icon0, CLK => gtp_clk_i, TRIG0 => cs_ila0, TRIG1 => cs_ila1);
-
-    cs_ila0 <= tx_data & rx_data_i;
-    cs_ila1 <= x"000000" & track_tx_done & track_tx_ready & vfat2_data_4_i & vfat2_data_3_i & vfat2_data_1_i & vfat2_data_0_i & vfat2_dvalid_i(1) & vfat2_dvalid_i(0);
-
+    
 end Behavioral;

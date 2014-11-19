@@ -7,16 +7,17 @@ use work.user_package.all;
 entity tracking_readout is
 port(
 
-    gtp_clk_i       : in std_logic;
-    reset_i         : in std_logic;
+    gtp_clk_i           : in std_logic;
+    reset_i             : in std_logic;
     
-    fifo_read_o     : out std_logic;
-    fifo_valid_i    : in std_logic;
-    fifo_data_i     : in std_logic_vector(191 downto 0);
+    fifo_read_o         : out std_logic;
+    fifo_valid_i        : in std_logic;
+    fifo_underflow_i    : in std_logic;
+    fifo_data_i         : in std_logic_vector(223 downto 0);
     
-    tx_ready_o      : out std_logic;
-    tx_done_i       : in std_logic;
-    tx_data_o       : out std_logic_vector(191 downto 0)
+    tx_ready_o          : out std_logic;
+    tx_done_i           : in std_logic;
+    tx_data_o           : out std_logic_vector(223 downto 0)
     
 );
 end tracking_readout;
@@ -27,9 +28,8 @@ begin
     process(gtp_clk_i)
         
         variable state      : integer range 0 to 3 := 0;
-        variable wait_cnt   : integer range 0 to 3 := 0;
         
-        variable data       : std_logic_vector(191 downto 0) := (others => '0');    
+        variable data       : std_logic_vector(223 downto 0) := (others => '0');    
     
     begin
     
@@ -50,8 +50,6 @@ begin
                 
                     fifo_read_o <= '1';
                     
-                    wait_cnt := 2;
-                    
                     state := 1;
                 
                 -- Wait for valid
@@ -65,13 +63,9 @@ begin
                         
                         state := 2;
                         
-                    elsif (wait_cnt = 0) then
+                    elsif (fifo_underflow_i = '1') then
                         
                         state := 0;
-                   
-                    else
-                    
-                        wait_cnt := wait_cnt - 1;
                         
                     end if;
                                         

@@ -60,25 +60,30 @@ INST "system/gbt_phase_monitoring/fmc1_cdce_pm/xor_ffd" LOC = SLICE_X59Y100;
 ###############################
 ## SYSTEM AREA FLOORPLANNING ##
 ###############################
-#INST "system/rst" 							      AREA_GROUP = "pblock_sys"                     ;
-#INST "system/pll" 						      	AREA_GROUP = "pblock_sys"                     ;
-#INST "system/*eth*"							      AREA_GROUP = "pblock_sys"                     ;
-#INST "system/*ipb*"		 					      AREA_GROUP = "pblock_sys"                     ;
-#INST "system/*arb*"		 					      AREA_GROUP = "pblock_sys"                     ;
-#INST "system/*fabric*"		 				      AREA_GROUP = "pblock_sys"                     ;
-#INST "system/*sys*"					      		AREA_GROUP = "pblock_sys"                     ;
-#INST "system/wb_bridge"						   AREA_GROUP = "pblock_sys"                     ;
-#INST "system/ip_mac" 						      AREA_GROUP = "pblock_sys"                     ;
-#INST "system/i2c*" 							      AREA_GROUP = "pblock_sys"                     ;
-#INST "system/spi" 							      AREA_GROUP = "pblock_sys"                     ;
-#INST "system/cdce_synch" 					      AREA_GROUP = "pblock_sys"                     ;
-#INST "system/gbt_phase_monitoring"          AREA_GROUP = "pblock_sys"                     ;
-##INST "system/icap_if"						      AREA_GROUP = "pblock_sys"                     ;
-##INST "system/buffers"						      AREA_GROUP = "pblock_sys"                     ;
-##INST "system/flash_if"						   AREA_GROUP = "pblock_sys"                     ;
-##INST "system/sram2_if"						   AREA_GROUP = "pblock_sys"                     ;
-##INST "system/sram1_if"						   AREA_GROUP = "pblock_sys"                     ;
-#AREA_GROUP "pblock_sys" 					      RANGE=CLOCKREGION_X0Y2:CLOCKREGION_X1Y2       ;
+#INST "system/icap_if"						      AREA_GROUP = "pblock_sys"                     ;
+#INST "system/buffers"						      AREA_GROUP = "pblock_sys"                     ;
+#INST "system/flash_if"						   AREA_GROUP = "pblock_sys"                     ;
+#INST "system/sram2_if"						   AREA_GROUP = "pblock_sys"                     ;
+#INST "system/sram1_if"						   AREA_GROUP = "pblock_sys"                     ;
+#INST "system/rst" AREA_GROUP = "pblock_sys";
+#INST "system/pll" AREA_GROUP = "pblock_sys";
+#INST "system/amc_p0_en.amc_p0_eth" AREA_GROUP = "pblock_sys";
+#INST "system/phy_en.phy_eth" AREA_GROUP = "pblock_sys";
+#INST "system/amc_p0_en.amc_p0_ipb_ctrl" AREA_GROUP = "pblock_sys";
+#INST "system/ipb_arb" AREA_GROUP = "pblock_sys";
+#INST "system/ipb_fabric" AREA_GROUP = "pblock_sys";
+#INST "system/ipb_sys_regs" AREA_GROUP = "pblock_sys";
+#INST "system/ipb_usr_fabric" AREA_GROUP = "pblock_sys";
+#INST "system/phy_en.phy_ipb_ctrl" AREA_GROUP = "pblock_sys";
+#INST "system/wb_bridge" AREA_GROUP = "pblock_sys";
+#INST "system/ip_mac" AREA_GROUP = "pblock_sys";
+#INST "system/i2c_ro" AREA_GROUP = "pblock_sys";
+#INST "system/i2c_s" AREA_GROUP = "pblock_sys";
+#INST "system/spi" AREA_GROUP = "pblock_sys";
+#INST "system/cdce_synch" AREA_GROUP = "pblock_sys";
+#INST "system/gbt_phase_monitoring" AREA_GROUP = "pblock_sys";
+#INST "system/icap_if/ioControl/Mmux_IPBUS_O_ipb_ack11" AREA_GROUP = "pblock_sys";
+#AREA_GROUP "pblock_sys" RANGE=CLOCKREGION_X0Y2:CLOCKREGION_X1Y3;
 ############################################################################################
 ############################################################################################
 ############################################################################################
@@ -509,10 +514,8 @@ NET "fmc1_la_n[26]" LOC = Y27;
 NET "fmc1_la_p[26]" LOC = Y28;
 # IO_L19N_15
 NET "fmc1_la_n[27]" LOC = R29;
-NET "fmc1_la_n[27]" IOSTANDARD = LVCMOS25;
 # IO_L19P_15
 NET "fmc1_la_p[27]" LOC = P29;
-NET "fmc1_la_p[27]" IOSTANDARD = LVCMOS25;
 # IO_L14N_VREF_15
 NET "fmc1_la_n[28]" LOC = R32;
 # IO_L14P_15
@@ -794,40 +797,52 @@ NET "fmc2_la_n[16]" LOC = AK11;
 NET "fmc2_la_p[16]" LOC = AJ11;
 # IO_L9N_MRCC_35
 NET "fmc2_la_n[17]" LOC = M13;
+NET "fmc2_la_n[17]" IOSTANDARD = LVDS_25;
 # IO_L9P_MRCC_35
 NET "fmc2_la_p[17]" LOC = L13;
+NET "fmc2_la_p[17]" IOSTANDARD = LVDS_25;
 # IO_L9N_MRCC_26
 NET "fmc2_la_n[18]" LOC = C19;
 # IO_L9P_MRCC_26
 NET "fmc2_la_p[18]" LOC = B20;
 # IO_L2N_33
 NET "fmc2_la_n[19]" LOC = AC14;
+NET "fmc2_la_n[19]" IOSTANDARD = LVDS_25;
 # IO_L2P_33
 NET "fmc2_la_p[19]" LOC = AD14;
+NET "fmc2_la_p[19]" IOSTANDARD = LVDS_25;
 # IO_L19N_26
 NET "fmc2_la_n[20]" LOC = D22;
 # IO_L19P_26
 NET "fmc2_la_p[20]" LOC = C22;
 # IO_L7N_33
 NET "fmc2_la_n[21]" LOC = AM11;
+NET "fmc2_la_n[21]" IOSTANDARD = LVDS_25;
 # IO_L7P_33
 NET "fmc2_la_p[21]" LOC = AL11;
+NET "fmc2_la_p[21]" IOSTANDARD = LVDS_25;
 # IO_L8N_SRCC_26
 NET "fmc2_la_n[22]" LOC = F20;
+NET "fmc2_la_n[22]" IOSTANDARD = LVDS_25;
 # IO_L8P_SRCC_26
 NET "fmc2_la_p[22]" LOC = F19;
+NET "fmc2_la_p[22]" IOSTANDARD = LVDS_25;
 # IO_L12N_VRP_26
 NET "fmc2_la_n[23]" LOC = E21;
 # IO_L12P_VRN_26
 NET "fmc2_la_p[23]" LOC = D21;
 # IO_L0N_35
 NET "fmc2_la_n[24]" LOC = H14;
+NET "fmc2_la_n[24]" IOSTANDARD = LVDS_25;
 # IO_L0P_35
 NET "fmc2_la_p[24]" LOC = G13;
+NET "fmc2_la_p[24]" IOSTANDARD = LVDS_25;
 # IO_L13N_26
 NET "fmc2_la_n[25]" LOC = D19;
+NET "fmc2_la_n[25]" IOSTANDARD = LVDS_25;
 # IO_L13P_26
 NET "fmc2_la_p[25]" LOC = E19;
+NET "fmc2_la_p[25]" IOSTANDARD = LVDS_25;
 # IO_L0N_26
 NET "fmc2_la_n[26]" LOC = D20;
 # IO_L0P_26
@@ -835,33 +850,49 @@ NET "fmc2_la_p[26]" LOC = C20;
 # IO_L15N_26
 NET "fmc2_la_n[27]" LOC = A19;
 NET "fmc2_la_n[27]" IOSTANDARD = LVCMOS25;
+NET "fmc2_la_n[27]" SLEW = FAST;
+NET "fmc2_la_n[27]" DRIVE = 6;
 # IO_L15P_26
 NET "fmc2_la_p[27]" LOC = A18;
 NET "fmc2_la_p[27]" IOSTANDARD = LVCMOS25;
+NET "fmc2_la_p[27]" SLEW = FAST;
+NET "fmc2_la_p[27]" DRIVE = 6;
 # IO_L6N_SM3N_35
 NET "fmc2_la_n[28]" LOC = G10;
+NET "fmc2_la_n[28]" IOSTANDARD = LVDS_25;
 # IO_L6P_SM3P_35
 NET "fmc2_la_p[28]" LOC = H10;
+NET "fmc2_la_p[28]" IOSTANDARD = LVDS_25;
 # IO_L8N_SRCC_35
 NET "fmc2_la_n[29]" LOC = J14;
+NET "fmc2_la_n[29]" IOSTANDARD = LVDS_25;
 # IO_L8P_SRCC_35
 NET "fmc2_la_p[29]" LOC = K14;
+NET "fmc2_la_p[29]" IOSTANDARD = LVDS_25;
 # IO_L14N_VREF_35
 NET "fmc2_la_n[30]" LOC = J10;
+NET "fmc2_la_n[30]" IOSTANDARD = LVDS_25;
 # IO_L14P_35
 NET "fmc2_la_p[30]" LOC = J11;
+NET "fmc2_la_p[30]" IOSTANDARD = LVDS_25;
 # IO_L4N_VREF_35
 NET "fmc2_la_n[31]" LOC = H13;
+NET "fmc2_la_n[31]" IOSTANDARD = LVDS_25;
 # IO_L4P_35
 NET "fmc2_la_p[31]" LOC = G12;
+NET "fmc2_la_p[31]" IOSTANDARD = LVDS_25;
 # IO_L16N_VRP_35
 NET "fmc2_la_n[32]" LOC = L11;
+NET "fmc2_la_n[32]" IOSTANDARD = LVDS_25;
 # IO_L16P_VRN_35
 NET "fmc2_la_p[32]" LOC = K11;
+NET "fmc2_la_p[32]" IOSTANDARD = LVDS_25;
 # IO_L12N_SM5N_35
 NET "fmc2_la_n[33]" LOC = J12;
+NET "fmc2_la_n[33]" IOSTANDARD = LVDS_25;
 # IO_L12P_SM5P_35
 NET "fmc2_la_p[33]" LOC = H12;
+NET "fmc2_la_p[33]" IOSTANDARD = LVDS_25;
 ###########      
 ## SRAMs ##
 ###########
@@ -1284,10 +1315,3 @@ NET "amc_port_rx_in[18]" LOC = AD34;
 NET "amc_port_rx_in[19]" LOC = AF33;
 # IO_L12P_VRN_13
 NET "amc_port_rx_in[20]" LOC = AB32;
-
-
-NET "fmc2_la_p[27]" SLEW = FAST;
-NET "fmc2_la_n[27]" SLEW = FAST;
-NET "fmc2_la_n[27]" DRIVE = 6;
-NET "fmc2_la_p[27]" DRIVE = 6;
-

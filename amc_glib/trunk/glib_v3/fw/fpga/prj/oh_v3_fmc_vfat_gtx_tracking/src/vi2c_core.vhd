@@ -85,33 +85,7 @@ begin
                 elsif (state = 1) then
 
                     -- Convert the chip select to the chip ID
-                    case chip_byte(4 downto 0) is
-                        when "00000" => chip_select <= "001"; -- Fiber 0
-                        when "00001" => chip_select <= "001"; 
-                        when "00010" => chip_select <= "001"; 
-                        when "00011" => chip_select <= "001"; 
-                        when "00100" => chip_select <= "001"; 
-                        when "00101" => chip_select <= "001"; 
-                        when "00110" => chip_select <= "001"; 
-                        when "00111" => chip_select <= "001"; 
-                        when "01000" => chip_select <= "001"; -- Fiber 1
-                        when "01001" => chip_select <= "001"; 
-                        when "01010" => chip_select <= "001"; 
-                        when "01011" => chip_select <= "001"; 
-                        when "01100" => chip_select <= "001"; 
-                        when "01101" => chip_select <= "001"; 
-                        when "01110" => chip_select <= "001"; 
-                        when "01111" => chip_select <= "001"; 
-                        when "10000" => chip_select <= "001"; -- Fiber 2
-                        when "10001" => chip_select <= "001"; 
-                        when "10010" => chip_select <= "001"; 
-                        when "10011" => chip_select <= "001"; 
-                        when "10100" => chip_select <= "001"; 
-                        when "10101" => chip_select <= "001"; 
-                        when "10110" => chip_select <= "001"; 
-                        when "10111" => chip_select <= "001"; 
-                        when others => chip_select <= "001";
-                    end case;
+                    chip_select <= "001";
                         
                     -- Extract the information from the data packet
                     register_select <= register_byte;
@@ -119,15 +93,7 @@ begin
                     din <= data_byte;
 
                     -- Select the IIC line according to the chip select (GEB V1)
-                    case chip_byte(4 downto 0) is
-                        when "00000" | "00001" | "00010" | "00011"  => selected_iic <= 0; -- Fiber 0, IIC 0
-                        when "00100" | "00101" | "00110" | "00111"  => selected_iic <= 0; -- Fiber 0, IIC 1
-                        when "01000" | "01001" | "01010" => selected_iic <= 0; -- Fiber 1, IIC 0
-                        when "01011" | "01100" | "01101" | "01110" | "01111"  => selected_iic <= 0; -- Fiber 1, IIC 1
-                        when "10000" | "10001" | "10010" | "10011"  => selected_iic <= 0; -- Fiber 2, IIC 0
-                        when "10100" | "10101" | "10110" | "10111"  => selected_iic <= 0; -- Fiber 2, IIC 1
-                        when others => selected_iic <= 0;
-                    end case; 
+                    selected_iic <= 0;
 
                     if (crc_check = crc_byte) then
                         

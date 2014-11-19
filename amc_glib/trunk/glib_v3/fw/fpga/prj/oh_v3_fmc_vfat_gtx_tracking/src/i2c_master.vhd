@@ -195,7 +195,7 @@ port map
 ); 			
 
 --===========================================
-u2: entity work.i2c_ctrl_vfat
+u2: entity work.i2c_ctrl_cus
 --===========================================
 port map
 (

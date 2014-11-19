@@ -9,48 +9,48 @@ Target Device  : xc6vlx130t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Sat Nov 15 12:15:18 2014
+Mapped Date    : Wed Nov 19 09:21:44 2014
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  461
+Number of warnings:  447
 Slice Logic Utilization:
-  Number of Slice Registers:                13,654 out of 160,000    8%
-    Number used as Flip Flops:              13,641
-    Number used as Latches:                     13
+  Number of Slice Registers:                13,253 out of 160,000    8%
+    Number used as Flip Flops:              13,241
+    Number used as Latches:                     12
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                     10,962 out of  80,000   13%
-    Number used as logic:                   10,391 out of  80,000   12%
-      Number using O6 output only:           6,870
-      Number using O5 output only:             651
-      Number using O5 and O6:                2,870
+  Number of Slice LUTs:                     11,689 out of  80,000   14%
+    Number used as logic:                   11,244 out of  80,000   14%
+      Number using O6 output only:           7,430
+      Number using O5 output only:             798
+      Number using O5 and O6:                3,016
       Number used as ROM:                        0
-    Number used as Memory:                     153 out of  27,840    1%
+    Number used as Memory:                      53 out of  27,840    1%
       Number used as Dual Port RAM:              0
       Number used as Single Port RAM:           48
         Number using O6 output only:             0
         Number using O5 output only:             2
         Number using O5 and O6:                 46
-      Number used as Shift Register:           105
-        Number using O6 output only:            75
+      Number used as Shift Register:             5
+        Number using O6 output only:             5
         Number using O5 output only:             0
-        Number using O5 and O6:                 30
-    Number used exclusively as route-thrus:    418
-      Number with same-slice register load:    383
-      Number with same-slice carry load:        35
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:    392
+      Number with same-slice register load:    355
+      Number with same-slice carry load:        37
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 5,066 out of  20,000   25%
-  Number of LUT Flip Flop pairs used:       15,242
-    Number with an unused Flip Flop:         3,612 out of  15,242   23%
-    Number with an unused LUT:               4,280 out of  15,242   28%
-    Number of fully used LUT-FF pairs:       7,350 out of  15,242   48%
-    Number of unique control sets:             577
+  Number of occupied Slices:                 4,950 out of  20,000   24%
+  Number of LUT Flip Flop pairs used:       15,171
+    Number with an unused Flip Flop:         3,773 out of  15,171   24%
+    Number with an unused LUT:               3,482 out of  15,171   22%
+    Number of fully used LUT-FF pairs:       7,916 out of  15,171   52%
+    Number of unique control sets:             507
     Number of slice register sites lost
-      to control set restrictions:           1,693 out of 160,000    1%
+      to control set restrictions:           1,424 out of 160,000    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -61,29 +61,31 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       254 out of     600   42%
-    Number of LOCed IOBs:                      234 out of     254   92%
+  Number of bonded IOBs:                       276 out of     600   46%
+    Number of LOCed IOBs:                      256 out of     276   92%
     IOB Flip Flops:                              2
-    IOB Master Pads:                             1
-    IOB Slave Pads:                              1
+    IOB Master Pads:                             3
+    IOB Slave Pads:                              3
     Number of bonded IPADs:                     16
       Number of LOCed IPADs:                     8 out of      16   50%
     Number of bonded OPADs:                     12
       Number of LOCed OPADs:                     4 out of      12   33%
 
 Specific Feature Utilization:
-  Number of RAMB36E1/FIFO36E1s:                 39 out of     264   14%
-    Number using RAMB36E1 only:                 39
+  Number of RAMB36E1/FIFO36E1s:                 37 out of     264   14%
+    Number using RAMB36E1 only:                 37
     Number using FIFO36E1 only:                  0
-  Number of RAMB18E1/FIFO18E1s:                  0 out of     528    0%
-  Number of BUFG/BUFGCTRLs:                     13 out of      32   40%
-    Number used as BUFGs:                       10
+  Number of RAMB18E1/FIFO18E1s:                  2 out of     528    1%
+    Number using RAMB18E1 only:                  2
+    Number using FIFO18E1 only:                  0
+  Number of BUFG/BUFGCTRLs:                     14 out of      32   43%
+    Number used as BUFGs:                       11
     Number used as BUFGCTRLs:                    3
   Number of ILOGICE1/ISERDESE1s:                 0 out of     600    0%
   Number of OLOGICE1/OSERDESE1s:                 5 out of     600    1%
     Number used as OLOGICE1s:                    5
     Number used as OSERDESE1s:                   0
-  Number of BSCANs:                              1 out of       4   25%
+  Number of BSCANs:                              0 out of       4    0%
   Number of BUFHCEs:                             2 out of     120    1%
     Number of LOCed BUFHCEs:                     2 out of       2  100%
   Number of BUFIODQSs:                           0 out of      60    0%
@@ -105,12 +107,12 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       2 out of       4   50%
 
-  Number of RPM macros:           11
-Average Fanout of Non-Clock Nets:                3.61
+  Number of RPM macros:            6
+Average Fanout of Non-Clock Nets:                3.63
 
-Peak Memory Usage:  958 MB
-Total REAL time to MAP completion:  4 mins 19 secs 
-Total CPU time to MAP completion (all processors):   4 mins 37 secs 
+Peak Memory Usage:  966 MB
+Total REAL time to MAP completion:  4 mins 18 secs 
+Total CPU time to MAP completion (all processors):   4 mins 35 secs 
 
 Table of Contents
 -----------------
@@ -136,38 +138,6 @@ Section 2 - Warnings
 WARNING:Security:42 - Your software subscription period has lapsed. Your current
 version of Xilinx tools will continue to function, but you no longer qualify for
 Xilinx software updates or new releases.
-WARNING:MapLib:701 - Signal fmc2_la_p<24> connected to top level port
-   fmc2_la_p<24> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_n<24> connected to top level port
-   fmc2_la_n<24> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_p<25> connected to top level port
-   fmc2_la_p<25> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_n<25> connected to top level port
-   fmc2_la_n<25> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_p<28> connected to top level port
-   fmc2_la_p<28> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_n<28> connected to top level port
-   fmc2_la_n<28> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_p<29> connected to top level port
-   fmc2_la_p<29> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_n<29> connected to top level port
-   fmc2_la_n<29> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_p<30> connected to top level port
-   fmc2_la_p<30> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_n<30> connected to top level port
-   fmc2_la_n<30> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_p<31> connected to top level port
-   fmc2_la_p<31> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_n<31> connected to top level port
-   fmc2_la_n<31> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_p<32> connected to top level port
-   fmc2_la_p<32> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_n<32> connected to top level port
-   fmc2_la_n<32> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_p<33> connected to top level port
-   fmc2_la_p<33> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_n<33> connected to top level port
-   fmc2_la_n<33> has been removed.
 WARNING:MapLib:701 - Signal fmc1_la_p<0> connected to top level port
    fmc1_la_p<0> has been removed.
 WARNING:MapLib:701 - Signal fmc1_la_p<1> connected to top level port
@@ -696,8 +666,6 @@ WARNING:MapLib:701 - Signal fmc2_la_p<8> connected to top level port
    fmc2_la_p<8> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_p<9> connected to top level port
    fmc2_la_p<9> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_p<10> connected to top level port
-   fmc2_la_p<10> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_p<11> connected to top level port
    fmc2_la_p<11> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_p<12> connected to top level port
@@ -708,12 +676,8 @@ WARNING:MapLib:701 - Signal fmc2_la_p<14> connected to top level port
    fmc2_la_p<14> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_p<16> connected to top level port
    fmc2_la_p<16> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_p<17> connected to top level port
-   fmc2_la_p<17> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_p<18> connected to top level port
    fmc2_la_p<18> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_p<19> connected to top level port
-   fmc2_la_p<19> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_p<20> connected to top level port
    fmc2_la_p<20> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_p<23> connected to top level port
@@ -740,8 +704,6 @@ WARNING:MapLib:701 - Signal fmc2_la_n<8> connected to top level port
    fmc2_la_n<8> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_n<9> connected to top level port
    fmc2_la_n<9> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_n<10> connected to top level port
-   fmc2_la_n<10> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_n<11> connected to top level port
    fmc2_la_n<11> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_n<12> connected to top level port
@@ -752,12 +714,8 @@ WARNING:MapLib:701 - Signal fmc2_la_n<14> connected to top level port
    fmc2_la_n<14> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_n<15> connected to top level port
    fmc2_la_n<15> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_n<17> connected to top level port
-   fmc2_la_n<17> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_n<18> connected to top level port
    fmc2_la_n<18> has been removed.
-WARNING:MapLib:701 - Signal fmc2_la_n<19> connected to top level port
-   fmc2_la_n<19> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_n<20> connected to top level port
    fmc2_la_n<20> has been removed.
 WARNING:MapLib:701 - Signal fmc2_la_n<23> connected to top level port
@@ -1111,18 +1069,40 @@ WARNING:Pack:1186 - One or more I/O components have conflicting property values.
    option).
 WARNING:Place:838 - An IO Bus with more than one IO standard is found.
    Components associated with this bus are as follows: 
+   	 Comp: fmc2_la_p<33>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_p<32>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_p<31>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_p<30>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_p<29>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_p<28>   IOSTANDARD = LVDS_25
    	 Comp: fmc2_la_p<27>   IOSTANDARD = LVCMOS25
+   	 Comp: fmc2_la_p<25>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_p<24>   IOSTANDARD = LVDS_25
    	 Comp: fmc2_la_p<22>   IOSTANDARD = LVDS_25
    	 Comp: fmc2_la_p<21>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_p<19>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_p<17>   IOSTANDARD = LVDS_25
    	 Comp: fmc2_la_p<15>   IOSTANDARD = LVCMOS25
+   	 Comp: fmc2_la_p<10>   IOSTANDARD = LVCMOS25
 
 
 WARNING:Place:838 - An IO Bus with more than one IO standard is found.
    Components associated with this bus are as follows: 
+   	 Comp: fmc2_la_n<33>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_n<32>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_n<31>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_n<30>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_n<29>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_n<28>   IOSTANDARD = LVDS_25
    	 Comp: fmc2_la_n<27>   IOSTANDARD = LVCMOS25
+   	 Comp: fmc2_la_n<25>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_n<24>   IOSTANDARD = LVDS_25
    	 Comp: fmc2_la_n<22>   IOSTANDARD = LVDS_25
    	 Comp: fmc2_la_n<21>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_n<19>   IOSTANDARD = LVDS_25
+   	 Comp: fmc2_la_n<17>   IOSTANDARD = LVDS_25
    	 Comp: fmc2_la_n<16>   IOSTANDARD = LVCMOS25
+   	 Comp: fmc2_la_n<10>   IOSTANDARD = LVCMOS25
 
 
 WARNING:Place:837 - Partially locked IO Bus is found. 
@@ -1157,6 +1137,9 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
    FF)
    The load component should be of clock buffer type.
+WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load
+   fmc2_la_p<17> (type DIFFM)
+   The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
    FF)
@@ -1165,27 +1148,8 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
    FF)
    The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
-   FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
-   FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[1]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
-   FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
-   FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[2]_ipb_ack (type FF)
+WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load
+   fmc2_la_p<17> (type DIFFM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
@@ -1209,11 +1173,41 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
+WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load
+   fmc2_la_p<17> (type DIFFM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
+   FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
+   FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/ipb_from_slaves[1]_ipb_ack (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
+   FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
+   FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/ipb_from_slaves[2]_ipb_ack (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load
+   fmc2_la_p<17> (type DIFFM)
+   The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load fmc2_la_p<17> (type DIFFM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
@@ -1241,6 +1235,10 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_fr
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
+WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load fmc2_la_p<17> (type DIFFM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load fmc2_la_p<17> (type DIFFM)
+   The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
    The load component should be of clock buffer type.
@@ -1268,6 +1266,8 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load fmc2_la_p<17> (type DIFFM)
    The load component should be of clock buffer type.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
@@ -1278,16 +1278,14 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][2]_AND_769_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net usr/link_tracking_1_inst/cs_icon0<13> is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_934_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][0]_AND_773_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][3]_AND_767_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_934_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
@@ -1304,26 +1302,11 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
    MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
-   AMC_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
    MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
@@ -1331,14 +1314,31 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
    MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
+   AMC_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:2045 - The MMCM_ADV block <usr/fpga_clk_pll_inst/mmcm_adv_inst> has CLKOUT pins that do not
+   drive the same kind of BUFFER load. Routing from the different buffer types will not be phase aligned. 
 
 Section 3 - Informational
 -------------------------
@@ -1347,7 +1347,7 @@ INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    machine load, Map will use 2 processors during this run.
 INFO:Security:56 - Part 'xc6vlx130t' is not a WebPack part.
 INFO:LIT:243 - Logical network user_sram_rdata<1><35> has no load.
-INFO:LIT:395 - The above info message is repeated 2919 more times for the
+INFO:LIT:395 - The above info message is repeated 2944 more times for the
    following (max. 5 shown):
    user_sram_rdata<1><34>,
    user_sram_rdata<1><33>,
@@ -1364,16 +1364,16 @@ INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more inform
    Command Line Tools User Guide for information on generating a TSI report.
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 254 IOs, 234 are locked
+INFO:Place:834 - Only a subset of IOs are locked. Out of 276 IOs, 256 are locked
    and 20 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-1139 block(s) removed
- 346 block(s) optimized away
-1318 signal(s) removed
+1082 block(s) removed
+ 274 block(s) optimized away
+1282 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -1388,94 +1388,6 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
-Loadless block "usr/S1_BIT_BUFFER" (IBUFDS) removed.
- The signal "fmc2_la_p<32>" is loadless and has been removed.
-  Loadless block "fmc2_la_p<32>" (PAD) removed.
- The signal "fmc2_la_n<32>" is loadless and has been removed.
-  Loadless block "fmc2_la_n<32>" (PAD) removed.
-Loadless block "usr/S2_BIT_BUFFER" (IBUFDS) removed.
- The signal "fmc2_la_p<33>" is loadless and has been removed.
-  Loadless block "fmc2_la_p<33>" (PAD) removed.
- The signal "fmc2_la_n<33>" is loadless and has been removed.
-  Loadless block "fmc2_la_n<33>" (PAD) removed.
-Loadless block "usr/S3_BIT_BUFFER" (IBUFDS) removed.
- The signal "fmc2_la_p<30>" is loadless and has been removed.
-  Loadless block "fmc2_la_p<30>" (PAD) removed.
- The signal "fmc2_la_n<30>" is loadless and has been removed.
-  Loadless block "fmc2_la_n<30>" (PAD) removed.
-Loadless block "usr/S4_BIT_BUFFER" (IBUFDS) removed.
- The signal "fmc2_la_p<31>" is loadless and has been removed.
-  Loadless block "fmc2_la_p<31>" (PAD) removed.
- The signal "fmc2_la_n<31>" is loadless and has been removed.
-  Loadless block "fmc2_la_n<31>" (PAD) removed.
-Loadless block "usr/S5_BIT_BUFFER" (IBUFDS) removed.
- The signal "fmc2_la_p<28>" is loadless and has been removed.
-  Loadless block "fmc2_la_p<28>" (PAD) removed.
- The signal "fmc2_la_n<28>" is loadless and has been removed.
-  Loadless block "fmc2_la_n<28>" (PAD) removed.
-Loadless block "usr/S6_BIT_BUFFER" (IBUFDS) removed.
- The signal "fmc2_la_p<29>" is loadless and has been removed.
-  Loadless block "fmc2_la_p<29>" (PAD) removed.
- The signal "fmc2_la_n<29>" is loadless and has been removed.
-  Loadless block "fmc2_la_n<29>" (PAD) removed.
-Loadless block "usr/S7_BIT_BUFFER" (IBUFDS) removed.
- The signal "fmc2_la_p<24>" is loadless and has been removed.
-  Loadless block "fmc2_la_p<24>" (PAD) removed.
- The signal "fmc2_la_n<24>" is loadless and has been removed.
-  Loadless block "fmc2_la_n<24>" (PAD) removed.
-Loadless block "usr/S8_BIT_BUFFER" (IBUFDS) removed.
- The signal "fmc2_la_p<25>" is loadless and has been removed.
-  Loadless block "fmc2_la_p<25>" (PAD) removed.
- The signal "fmc2_la_n<25>" is loadless and has been removed.
-  Loadless block "fmc2_la_n<25>" (PAD) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[10].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[11].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[12].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[13].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[14].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[1].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[2].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[3].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[4].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[5].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[6].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[7].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[8].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.F
-I[9].U_LUT" (ROM) removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM)
-removed.
-Loadless block
-"usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORA
-GE_QUAL.U_CAP_B" (ROM) removed.
 The signal "fmc1_la_p_0_OBUF" is sourceless and has been removed.
  Sourceless block "fmc1_la_p_0_OBUF" (BUF) removed.
   The signal "fmc1_la_p<0>" is sourceless and has been removed.
@@ -2524,10 +2436,6 @@ The signal "fmc2_la_p_9_OBUF" is sourceless and has been removed.
  Sourceless block "fmc2_la_p_9_OBUF" (BUF) removed.
   The signal "fmc2_la_p<9>" is sourceless and has been removed.
    Sourceless block "fmc2_la_p<9>" (PAD) removed.
-The signal "fmc2_la_p_10_OBUF" is sourceless and has been removed.
- Sourceless block "fmc2_la_p_10_OBUF" (BUF) removed.
-  The signal "fmc2_la_p<10>" is sourceless and has been removed.
-   Sourceless block "fmc2_la_p<10>" (PAD) removed.
 The signal "fmc2_la_p_11_OBUF" is sourceless and has been removed.
  Sourceless block "fmc2_la_p_11_OBUF" (BUF) removed.
   The signal "fmc2_la_p<11>" is sourceless and has been removed.
@@ -2548,18 +2456,10 @@ The signal "fmc2_la_p_16_OBUF" is sourceless and has been removed.
  Sourceless block "fmc2_la_p_16_OBUF" (BUF) removed.
   The signal "fmc2_la_p<16>" is sourceless and has been removed.
    Sourceless block "fmc2_la_p<16>" (PAD) removed.
-The signal "fmc2_la_p_17_OBUF" is sourceless and has been removed.
- Sourceless block "fmc2_la_p_17_OBUF" (BUF) removed.
-  The signal "fmc2_la_p<17>" is sourceless and has been removed.
-   Sourceless block "fmc2_la_p<17>" (PAD) removed.
 The signal "fmc2_la_p_18_OBUF" is sourceless and has been removed.
  Sourceless block "fmc2_la_p_18_OBUF" (BUF) removed.
   The signal "fmc2_la_p<18>" is sourceless and has been removed.
    Sourceless block "fmc2_la_p<18>" (PAD) removed.
-The signal "fmc2_la_p_19_OBUF" is sourceless and has been removed.
- Sourceless block "fmc2_la_p_19_OBUF" (BUF) removed.
-  The signal "fmc2_la_p<19>" is sourceless and has been removed.
-   Sourceless block "fmc2_la_p<19>" (PAD) removed.
 The signal "fmc2_la_p_20_OBUF" is sourceless and has been removed.
  Sourceless block "fmc2_la_p_20_OBUF" (BUF) removed.
   The signal "fmc2_la_p<20>" is sourceless and has been removed.
@@ -2612,10 +2512,6 @@ The signal "fmc2_la_n_9_OBUF" is sourceless and has been removed.
  Sourceless block "fmc2_la_n_9_OBUF" (BUF) removed.
   The signal "fmc2_la_n<9>" is sourceless and has been removed.
    Sourceless block "fmc2_la_n<9>" (PAD) removed.
-The signal "fmc2_la_n_10_OBUF" is sourceless and has been removed.
- Sourceless block "fmc2_la_n_10_OBUF" (BUF) removed.
-  The signal "fmc2_la_n<10>" is sourceless and has been removed.
-   Sourceless block "fmc2_la_n<10>" (PAD) removed.
 The signal "fmc2_la_n_11_OBUF" is sourceless and has been removed.
  Sourceless block "fmc2_la_n_11_OBUF" (BUF) removed.
   The signal "fmc2_la_n<11>" is sourceless and has been removed.
@@ -2636,18 +2532,10 @@ The signal "fmc2_la_n_15_OBUF" is sourceless and has been removed.
  Sourceless block "fmc2_la_n_15_OBUF" (BUF) removed.
   The signal "fmc2_la_n<15>" is sourceless and has been removed.
    Sourceless block "fmc2_la_n<15>" (PAD) removed.
-The signal "fmc2_la_n_17_OBUF" is sourceless and has been removed.
- Sourceless block "fmc2_la_n_17_OBUF" (BUF) removed.
-  The signal "fmc2_la_n<17>" is sourceless and has been removed.
-   Sourceless block "fmc2_la_n<17>" (PAD) removed.
 The signal "fmc2_la_n_18_OBUF" is sourceless and has been removed.
  Sourceless block "fmc2_la_n_18_OBUF" (BUF) removed.
   The signal "fmc2_la_n<18>" is sourceless and has been removed.
    Sourceless block "fmc2_la_n<18>" (PAD) removed.
-The signal "fmc2_la_n_19_OBUF" is sourceless and has been removed.
- Sourceless block "fmc2_la_n_19_OBUF" (BUF) removed.
-  The signal "fmc2_la_n<19>" is sourceless and has been removed.
-   Sourceless block "fmc2_la_n<19>" (PAD) removed.
 The signal "fmc2_la_n_20_OBUF" is sourceless and has been removed.
  Sourceless block "fmc2_la_n_20_OBUF" (BUF) removed.
   The signal "fmc2_la_n<20>" is sourceless and has been removed.
@@ -2668,6 +2556,24 @@ The signal "gbe_sda_mdio_OBUF" is sourceless and has been removed.
  Sourceless block "gbe_sda_mdio_OBUF" (BUF) removed.
   The signal "gbe_sda_mdio" is sourceless and has been removed.
    Sourceless block "gbe_sda_mdio" (PAD) removed.
+The signal "usr/rx_kchar<7>" is sourceless and has been removed.
+The signal "usr/rx_kchar<6>" is sourceless and has been removed.
+The signal "usr/rx_data<63>" is sourceless and has been removed.
+The signal "usr/rx_data<62>" is sourceless and has been removed.
+The signal "usr/rx_data<61>" is sourceless and has been removed.
+The signal "usr/rx_data<60>" is sourceless and has been removed.
+The signal "usr/rx_data<59>" is sourceless and has been removed.
+The signal "usr/rx_data<58>" is sourceless and has been removed.
+The signal "usr/rx_data<57>" is sourceless and has been removed.
+The signal "usr/rx_data<56>" is sourceless and has been removed.
+The signal "usr/rx_data<55>" is sourceless and has been removed.
+The signal "usr/rx_data<54>" is sourceless and has been removed.
+The signal "usr/rx_data<53>" is sourceless and has been removed.
+The signal "usr/rx_data<52>" is sourceless and has been removed.
+The signal "usr/rx_data<51>" is sourceless and has been removed.
+The signal "usr/rx_data<50>" is sourceless and has been removed.
+The signal "usr/rx_data<49>" is sourceless and has been removed.
+The signal "usr/rx_data<48>" is sourceless and has been removed.
 The signal "usr/gtx_wrapper_inst/rx_kchar_o<1>" is sourceless and has been
 removed.
 The signal "usr/gtx_wrapper_inst/rx_kchar_o<0>" is sourceless and has been
@@ -2740,316 +2646,235 @@ The signal "usr/gtx_wrapper_inst/rx_data_o<33>" is sourceless and has been
 removed.
 The signal "usr/gtx_wrapper_inst/rx_data_o<32>" is sourceless and has been
 removed.
-The signal "usr/gtx_wrapper_inst/rx_kchar_o<7>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_kchar_o<6>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<63>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<62>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<61>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<60>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<59>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<58>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<57>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<56>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<55>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<54>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<53>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<52>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<51>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<50>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<49>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/rx_data_o<48>" is sourceless and has been
-removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXDISPERR_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXDISPERR_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXLOSSOFSYNC_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXLOSSOFSYNC_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXNOTINTABLE_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXNOTINTABLE_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXBYTEISALIGNED_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXCOMMADET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXRECCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/RXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/TXOUTCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/TXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx3_inst/TXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXDISPERR_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXDISPERR_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXLOSSOFSYNC_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXLOSSOFSYNC_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXNOTINTABLE_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXNOTINTABLE_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXBYTEISALIGNED_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXCOMMADET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXRECCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/RXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/TXOUTCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/TXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx2_inst/TXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXLOSSOFSYNC_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXLOSSOFSYNC_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXBYTEISALIGNED_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXCOMMADET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXRECCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/RXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/TXOUTCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/TXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx1_inst/TXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXDISPERR_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXDISPERR_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXLOSSOFSYNC_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXLOSSOFSYNC_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXNOTINTABLE_OUT<1>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXNOTINTABLE_OUT<0>" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXBYTEISALIGNED_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXCOMMADET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXRECCLK_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/RXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXPLLLKDET_OUT" is
-sourceless and has been removed.
-The signal "usr/gtx_wrapper_inst/high_speed_gtx0_inst/TXRESETDONE_OUT" is
-sourceless and has been removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<35>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<34>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<33>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<32>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<31>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<30>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<29>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<28>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<27>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<26>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<25>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<24>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<23>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<22>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<19>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<18>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<17>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<16>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<15>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<11>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<10>" is sourceless and has been
-removed.
-The signal "usr/link_tracking_1_inst/cs_icon0<7>" is sourceless and has been
-removed.
-The signal
-"usr/link_tracking_1_inst/tracking_core_inst/tracking_buffer_fifo/U0/xst_fifo_ge
-nerator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is
-sourceless and has been removed.
-The signal
-"usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0
-].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/
-U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/SRL_Q_O" is sourceless and has
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXDISPERR_OUT<1>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXDISPERR_OUT<0>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXLOSSOFSYNC_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXLOSSOFSYNC_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXNOTINTABLE_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXNOTINTABLE_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXBYTEISALIGNED_OUT" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXCOMMADET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXRECCLK_OUT" is sourceless and has
 been removed.
-The signal
-"usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1
-].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/
-U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/SRL_Q_O" is sourceless and has
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/RXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/TXOUTCLK_OUT" is sourceless and has
 been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/TXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_3_inst/TXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXDISPERR_OUT<1>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXDISPERR_OUT<0>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXLOSSOFSYNC_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXLOSSOFSYNC_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXNOTINTABLE_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXNOTINTABLE_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXBYTEISALIGNED_OUT" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXCOMMADET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXRECCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/RXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/TXOUTCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/TXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_2_inst/TXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXLOSSOFSYNC_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXLOSSOFSYNC_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXBYTEISALIGNED_OUT" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXCOMMADET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXRECCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/RXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/TXOUTCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/TXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_1_inst/TXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXDISPERR_OUT<1>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXDISPERR_OUT<0>" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXLOSSOFSYNC_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXLOSSOFSYNC_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXNOTINTABLE_OUT<1>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXNOTINTABLE_OUT<0>" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXBYTEISALIGNED_OUT" is sourceless
+and has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXCOMMADET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXRECCLK_OUT" is sourceless and has
+been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/RXRESETDONE_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/TXPLLLKDET_OUT" is sourceless and
+has been removed.
+The signal "usr/gtx_wrapper_inst/gtx_0_inst/TXRESETDONE_OUT" is sourceless and
+has been removed.
 The signal
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<15>" is
+"usr/link_tracking_1_inst/tracking_core_inst/tracking_bx_fifo_inst/U0/xst_fifo_g
+enerator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is
 sourceless and has been removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[15].U_HCE" (ROM) removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[15].U_LCE" (ROM) removed.
 The signal
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<14>" is
+"usr/link_tracking_1_inst/tracking_core_inst/tracking_data_fifo_inst/U0/xst_fifo
+_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is
 sourceless and has been removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[14].U_HCE" (ROM) removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[14].U_LCE" (ROM) removed.
-The signal
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<13>" is
-sourceless and has been removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[13].U_HCE" (ROM) removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[13].U_LCE" (ROM) removed.
-The signal
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<12>" is
-sourceless and has been removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[12].U_HCE" (ROM) removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[12].U_LCE" (ROM) removed.
-The signal
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<11>" is
-sourceless and has been removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[11].U_HCE" (ROM) removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[11].U_LCE" (ROM) removed.
-The signal
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<7>" is
-sourceless and has been removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[7].U_HCE" (ROM) removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[7].U_LCE" (ROM) removed.
-The signal
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<6>" is
-sourceless and has been removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[6].U_HCE" (ROM) removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[6].U_LCE" (ROM) removed.
-The signal
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<3>" is
-sourceless and has been removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[3].U_HCE" (ROM) removed.
- Sourceless block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[3].U_LCE" (ROM) removed.
-The signal "usr/clocking_inst/clkout0" is sourceless and has been removed.
- Sourceless block "usr/clocking_inst/clkout1_buf" (CKBUF) removed.
-  The signal "usr/clocking_inst/fabric_clk" is sourceless and has been removed.
+The signal "usr/fpga_clk_pll_inst/clkout0" is sourceless and has been removed.
+ Sourceless block "usr/fpga_clk_pll_inst/clkout1_buf" (CKBUF) removed.
+  The signal "usr/fpga_clk_pll_inst/fpga_clk_o" is sourceless and has been
+removed.
 The signal "system/sram_w[1]_oe_b" is sourceless and has been removed.
-The signal "system/ipb_from_slaves[5]_ipb_rdata<0>" is sourceless and has been
+The signal "system/ipb_from_slaves[5]_ipb_ack" is sourceless and has been
 removed.
-The signal "system/glib_pll_clkout_200" is sourceless and has been removed.
- Sourceless block "system/clkbuf_pllout6" (CKBUF) removed.
-  The signal "user_clk200_bufg" is sourceless and has been removed.
 The signal "system/wb_bridge/sel_wb_slave<31>" is sourceless and has been
 removed.
 The signal "system/wb_bridge/sel_wb_slave<6>" is sourceless and has been
 removed.
-The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_670_o" is sourceless and has
+The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o" is sourceless and
+has been removed.
+ Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o2" (ROM)
+removed.
+  The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o1" is sourceless and
+has been removed.
+   Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o3" (ROM)
+removed.
+    The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o2" is sourceless and
+has been removed.
+     Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o4" (ROM)
+removed.
+      The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o3" is sourceless and
+has been removed.
+       Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o5" (ROM)
+removed.
+The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_990_o" is sourceless
+and has been removed.
+ Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_875_o_SW0" (ROM)
+removed.
+  The signal "system/ipb_usr_fabric/N4" is sourceless and has been removed.
+   Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_875_o" (ROM)
+removed.
+    The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_875_o" is sourceless
+and has been removed.
+     Sourceless block "system/ipb_usr_fabric/GND_364_o_INV_1127_o11" (ROM) removed.
+      The signal "system/ipb_usr_fabric/GND_364_o_INV_1127_o1" is sourceless and has
 been removed.
- Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_670_o2" (ROM) removed.
-  The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_670_o1" is sourceless and
-has been removed.
-   Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_670_o3" (ROM) removed.
-    The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_670_o2" is sourceless and
-has been removed.
-     Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_670_o4" (ROM) removed.
-      The signal "system/wb_bridge/GND_365_o_GND_365_o_OR_670_o3" is sourceless and
-has been removed.
-       Sourceless block "system/wb_bridge/GND_365_o_GND_365_o_OR_670_o5" (ROM) removed.
-The signal "system/ipb_usr_fabric/n0118<6>" is sourceless and has been removed.
-The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_637_o" is sourceless
-and has been removed.
- Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_637_o2" (ROM)
+       Sourceless block "system/ipb_usr_fabric/Mmux_n03983" (ROM) removed.
+        The signal "system/ipb_usr_fabric/n0398<2>" is sourceless and has been removed.
+       Sourceless block "system/ipb_usr_fabric/Mmux_n039843" (ROM) removed.
+        The signal "system/ipb_usr_fabric/Mmux_n039843" is sourceless and has been
 removed.
-  The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_637_o1" is sourceless
-and has been removed.
-   Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_637_o3" (ROM)
+         Sourceless block "system/ipb_usr_fabric/Mmux_n039844" (ROM) removed.
+          The signal "system/ipb_usr_fabric/n0398<3>" is sourceless and has been removed.
+     Sourceless block "system/ipb_usr_fabric/Mmux_n039851" (ROM) removed.
+      The signal "system/ipb_usr_fabric/Mmux_n03985" is sourceless and has been
 removed.
-    The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_637_o2" is sourceless
-and has been removed.
-     Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_637_o4" (ROM)
+       Sourceless block "system/ipb_usr_fabric/Mmux_n039852" (ROM) removed.
+        The signal "system/ipb_usr_fabric/n0398<5>" is sourceless and has been removed.
+     Sourceless block "system/ipb_usr_fabric/Mmux_n0398521" (ROM) removed.
+      The signal "system/ipb_usr_fabric/Mmux_n039852" is sourceless and has been
 removed.
-      The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_637_o3" is sourceless
-and has been removed.
-       Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_637_o5" (ROM)
+     Sourceless block "system/ipb_usr_fabric/Mmux_n039841" (ROM) removed.
+      The signal "system/ipb_usr_fabric/Mmux_n03984" is sourceless and has been
 removed.
+       Sourceless block "system/ipb_usr_fabric/Mmux_n039842" (ROM) removed.
+        The signal "system/ipb_usr_fabric/Mmux_n039841" is sourceless and has been
+removed.
+The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_992_o" is sourceless
+and has been removed.
+ Sourceless block "system/ipb_usr_fabric/GND_364_o_INV_1226_o11" (ROM) removed.
+  The signal "system/ipb_usr_fabric/GND_364_o_INV_1226_o1" is sourceless and has
+been removed.
+ Sourceless block "system/ipb_usr_fabric/GND_364_o_INV_1259_o1" (ROM) removed.
+  The signal "system/ipb_usr_fabric/GND_364_o_INV_1259_o" is sourceless and has
+been removed.
+ Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_1009_o1" (ROM)
+removed.
+  The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_1009_o1" is sourceless
+and has been removed.
+   Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_1009_o2" (ROM)
+removed.
+    The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_1009_o2" is sourceless
+and has been removed.
+     Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_1009_o3" (ROM)
+removed.
+      The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_1009_o3" is sourceless
+and has been removed.
+       Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_1009_o4" (ROM)
+removed.
+        The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_1009_o" is sourceless
+and has been removed.
+         Sourceless block "system/ipb_usr_fabric/Mmux_n03983_SW0" (ROM) removed.
+          The signal "system/ipb_usr_fabric/N8" is sourceless and has been removed.
+The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_686_o" is sourceless
+and has been removed.
+ Sourceless block "system/ipb_usr_fabric/Mmux_n0398421" (ROM) removed.
+  The signal "system/ipb_usr_fabric/Mmux_n039842" is sourceless and has been
+removed.
+The signal "system/ipb_usr_fabric/GND_364_o_INV_1061_o" is sourceless and has
+been removed.
+The signal "system/ipb_usr_fabric/GND_364_o_INV_1028_o1" is sourceless and has
+been removed.
+ Sourceless block "system/ipb_usr_fabric/GND_364_o_INV_1061_o1" (ROM) removed.
+The signal "system/ipb_usr_fabric/GND_364_o_INV_1028_o11" is sourceless and has
+been removed.
+ Sourceless block "system/ipb_usr_fabric/GND_364_o_INV_1028_o1_SW0" (ROM)
+removed.
+  The signal "system/ipb_usr_fabric/N6" is sourceless and has been removed.
+   Sourceless block "system/ipb_usr_fabric/GND_364_o_INV_1028_o1" (ROM) removed.
+The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_990_o1" is sourceless
+and has been removed.
+ Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_990_o2" (ROM)
+removed.
+  The signal "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_990_o2" is sourceless
+and has been removed.
+   Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_990_o3" (ROM)
+removed.
+   Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_992_o1" (ROM)
+removed.
+   Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_686_o_SW0" (ROM)
+removed.
+    The signal "system/ipb_usr_fabric/N0" is sourceless and has been removed.
+     Sourceless block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_686_o" (ROM)
+removed.
+The signal "system/ipb_usr_fabric/N2" is sourceless and has been removed.
+ Sourceless block "system/ipb_usr_fabric/GND_364_o_INV_1028_o11" (ROM) removed.
 The signal "system/amc_p0_en.amc_p0_eth/basex/rx_statistics_vector<27>" is
 sourceless and has been removed.
  Sourceless block
@@ -5531,8 +5356,9 @@ st/gen_sdp_ram.sdpram_inst/Mram_ram61" (RAM32X1D) removed.
 Unused block
 "system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_in
 st/gen_sdp_ram.sdpram_inst/Mram_ram62" (RAM32X1D) removed.
-Unused block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_637_o1" (ROM)
+Unused block "system/ipb_usr_fabric/GND_364_o_GND_364_o_OR_990_o1" (ROM)
 removed.
+Unused block "system/ipb_usr_fabric/GND_364_o_INV_1028_o11_SW0" (ROM) removed.
 Unused block "system/ipb_usr_fabric/XST_GND" (ZERO) removed.
 Unused block "system/phy_en.phy_eth/sgmii/v6emac_core/VCC" (ONE) removed.
 Unused block "system/phy_en.phy_ipb_ctrl/stretch_rx/clkdiv/XST_VCC" (ONE)
@@ -5550,54 +5376,16 @@ removed.
 Unused block
 "system/sram1_if/sramInterface/control_process.dataFromSram_inv1_INV_0" (BUF)
 removed.
-Unused block "system/wb_bridge/GND_365_o_GND_365_o_OR_670_o1" (ROM) removed.
+Unused block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o1" (ROM) removed.
 Unused block "system/wb_bridge/XST_GND" (ZERO) removed.
 Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.F
-I[11].U_LUT" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.F
-I[12].U_LUT" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.F
-I[13].U_LUT" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.F
-I[14].U_LUT" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.F
-I[15].U_LUT" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.F
-I[3].U_LUT" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.F
-I[6].U_LUT" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.F
-I[7].U_LUT" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[10].U_HCE" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[2].U_HCE" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[4].U_HCE" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[5].U_HCE" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[8].U_HCE" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CM
-D[9].U_HCE" (ROM) removed.
-Unused block
-"usr/link_tracking_1_inst/tracking_core_inst/tracking_buffer_fifo/U0/xst_fifo_ge
-nerator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" (FF)
+"usr/link_tracking_1_inst/tracking_core_inst/tracking_bx_fifo_inst/U0/xst_fifo_g
+enerator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" (FF)
 removed.
+Unused block
+"usr/link_tracking_1_inst/tracking_core_inst/tracking_data_fifo_inst/U0/xst_fifo
+_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i"
+(FF) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
@@ -6053,122 +5841,34 @@ GND 		usr/XST_GND
 VCC 		usr/XST_VCC
 GND 		usr/bc0_counter_inst/XST_GND
 VCC 		usr/bc0_counter_inst/XST_VCC
+GND 		usr/bx_counter_inst/XST_GND
+VCC 		usr/bx_counter_inst/XST_VCC
 GND 		usr/calpulse_counter_inst/XST_GND
 VCC 		usr/calpulse_counter_inst/XST_VCC
-GND 		usr/clocking_inst/XST_GND
-VCC 		usr/clocking_inst/XST_VCC
+GND 		usr/del_calpulse_counter_inst/XST_GND
+VCC 		usr/del_calpulse_counter_inst/XST_VCC
+GND 		usr/del_lv1a_counter_inst/XST_GND
+VCC 		usr/del_lv1a_counter_inst/XST_VCC
+GND 		usr/ext_lv1a_counter_inst/XST_GND
+VCC 		usr/ext_lv1a_counter_inst/XST_VCC
+GND 		usr/fpga_clk_pll_inst/XST_GND
+VCC 		usr/fpga_clk_pll_inst/XST_VCC
 GND 		usr/gtx_wrapper_inst/XST_GND
 VCC 		usr/gtx_wrapper_inst/XST_VCC
-GND 		usr/gtx_wrapper_inst/high_speed_gtx0_inst/XST_GND
-VCC 		usr/gtx_wrapper_inst/high_speed_gtx0_inst/XST_VCC
-GND 		usr/gtx_wrapper_inst/high_speed_gtx1_inst/XST_GND
-VCC 		usr/gtx_wrapper_inst/high_speed_gtx1_inst/XST_VCC
-GND 		usr/gtx_wrapper_inst/high_speed_gtx2_inst/XST_GND
-VCC 		usr/gtx_wrapper_inst/high_speed_gtx2_inst/XST_VCC
-GND 		usr/gtx_wrapper_inst/high_speed_gtx3_inst/XST_GND
-VCC 		usr/gtx_wrapper_inst/high_speed_gtx3_inst/XST_VCC
+GND 		usr/gtx_wrapper_inst/gtx_0_inst/XST_GND
+VCC 		usr/gtx_wrapper_inst/gtx_0_inst/XST_VCC
+GND 		usr/gtx_wrapper_inst/gtx_1_inst/XST_GND
+VCC 		usr/gtx_wrapper_inst/gtx_1_inst/XST_VCC
+GND 		usr/gtx_wrapper_inst/gtx_2_inst/XST_GND
+VCC 		usr/gtx_wrapper_inst/gtx_2_inst/XST_VCC
+GND 		usr/gtx_wrapper_inst/gtx_3_inst/XST_GND
+VCC 		usr/gtx_wrapper_inst/gtx_3_inst/XST_VCC
+GND 		usr/int_calpulse_counter_inst/XST_GND
+VCC 		usr/int_calpulse_counter_inst/XST_VCC
+GND 		usr/int_lv1a_counter_inst/XST_GND
+VCC 		usr/int_lv1a_counter_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/XST_VCC
-GND 		usr/link_tracking_1_inst/chipscope_icon_inst/XST_GND
-VCC 		usr/link_tracking_1_inst/chipscope_icon_inst/XST_VCC
-GND
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/
-U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM
-_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_GND
-VCC
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/
-U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM
-_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_VCC
-VCC
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/
-U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM
-_EQ0.U_GAND_SRL_SET/XST_VCC
-GND
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/
-U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RP
-M_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_GND
-VCC
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/
-U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RP
-M_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_VCC
-VCC
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/
-U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RP
-M_EQ0.U_GAND_SRL_SET/XST_VCC
-GND
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/
-U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RP
-M_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_GND
-VCC
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/
-U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RP
-M_EQ0.U_GAND_SRL_SET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_VCC
-VCC
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/
-U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RP
-M_EQ0.U_GAND_SRL_SET/XST_VCC
-GND
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GA
-ND_SRL_SLICE/XST_GND
-VCC
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GA
-ND_SRL_SLICE/XST_VCC
-GND
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GA
-ND_SRL_SLICE/XST_GND
-GND
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GA
-ND_SRL_SLICE/XST_GND
-GND
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GA
-ND_SRL_SLICE/XST_GND
-VCC
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GA
-ND_SRL_SLICE/XST_VCC
-GND
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-1].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GA
-ND_SRL_SLICE/XST_GND
-VCC
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-1].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GA
-ND_SRL_SLICE/XST_VCC
-GND
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-1].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GA
-ND_SRL_SLICE/XST_GND
-GND
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-1].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GA
-ND_SRL_SLICE/XST_GND
-GND
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-1].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GA
-ND_SRL_SLICE/XST_GND
-VCC
-		usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[
-1].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6
-/U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GA
-ND_SRL_SLICE/XST_VCC
-GND 		usr/link_tracking_1_inst/chipscope_ila_inst/XST_GND
-VCC 		usr/link_tracking_1_inst/chipscope_ila_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/gtp_tx_mux_inst/XST_GND
 GND 		usr/link_tracking_1_inst/registers_core_inst/XST_GND
 GND 		usr/link_tracking_1_inst/regs_rx_counter_inst/XST_GND
@@ -6183,10 +5883,23 @@ VCC 		usr/link_tracking_1_inst/tracking_core_inst/track_1_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/tracking_core_inst/track_2_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/tracking_core_inst/track_2_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/tracking_core_inst/track_3_inst/XST_GND
-GND 		usr/link_tracking_1_inst/tracking_core_inst/tracking_buffer_fifo/XST_GND
-VCC 		usr/link_tracking_1_inst/tracking_core_inst/tracking_buffer_fifo/XST_VCC
+GND
+		usr/link_tracking_1_inst/tracking_core_inst/tracking_bx_fifo_inst/U0/xst_fifo_
+generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gna
+tivebmg.native_blk_mem_gen/valid.cstr/XST_GND
+GND 		usr/link_tracking_1_inst/tracking_core_inst/tracking_bx_fifo_inst/XST_GND
 GND
 		usr/link_tracking_1_inst/tracking_core_inst/tracking_concentrator_inst/XST_GND
+GND
+		usr/link_tracking_1_inst/tracking_core_inst/tracking_data_fifo_inst/U0/xst_fif
+o_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/g
+nativebmg.native_blk_mem_gen/valid.cstr/XST_GND
+VCC
+		usr/link_tracking_1_inst/tracking_core_inst/tracking_data_fifo_inst/U0/xst_fif
+o_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/g
+nativebmg.native_blk_mem_gen/valid.cstr/XST_VCC
+GND
+		usr/link_tracking_1_inst/tracking_core_inst/tracking_data_fifo_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/vi2c_core_inst/XST_VCC
 VCC 		usr/link_tracking_1_inst/vi2c_core_inst/vi2c_wrapper_inst/XST_VCC
 GND
@@ -6205,10 +5918,12 @@ GND 		usr/link_tracking_1_inst/vi2c_rx_counter_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/vi2c_rx_counter_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/vi2c_tx_counter_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/vi2c_tx_counter_inst/XST_VCC
+GND 		usr/link_trigger_inst/XST_GND
 GND 		usr/lv1a_counter_inst/XST_GND
 VCC 		usr/lv1a_counter_inst/XST_VCC
 GND 		usr/resync_counter_inst/XST_GND
 VCC 		usr/resync_counter_inst/XST_VCC
+VCC 		usr/t1_delayed_inst/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -6289,14 +6004,36 @@ Section 6 - IOB Properties
 | clk125_2_n                         | IPAD             | INPUT     |                      |       |          |      |              |          |          |
 | clk125_2_p                         | IPAD             | INPUT     |                      |       |          |      |              |          |          |
 | fmc1_present_l                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc2_la_n<10>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | fmc2_la_n<16>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fmc2_la_n<17>                      | IOBS             | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
+| fmc2_la_n<19>                      | IOBS             | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
 | fmc2_la_n<21>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
 | fmc2_la_n<22>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_n<24>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_n<25>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
 | fmc2_la_n<27>                      | IOB              | BIDIR     | LVCMOS25             |       | 6        | FAST |              |          |          |
+| fmc2_la_n<28>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_n<29>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_n<30>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_n<31>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_n<32>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_n<33>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_p<10>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | fmc2_la_p<15>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fmc2_la_p<17>                      | IOBM             | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
+| fmc2_la_p<19>                      | IOBM             | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
 | fmc2_la_p<21>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
 | fmc2_la_p<22>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_p<24>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_p<25>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
 | fmc2_la_p<27>                      | IOB              | OUTPUT    | LVCMOS25             |       | 6        | FAST |              |          |          |
+| fmc2_la_p<28>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_p<29>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_p<30>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_p<31>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_p<32>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_p<33>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
 | fmc2_present_l                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | fpga_a21                           | IOB              | OUTPUT    | LVCMOS25             |       | 24       | FAST |              |          |          |
 | fpga_a22                           | IOB              | OUTPUT    | LVCMOS25             |       | 24       | FAST |              |          |          |
@@ -6514,21 +6251,6 @@ hset
 system/phy_en.phy_eth/sgmii/gtx_reset_gen/hset
 system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/resetdone_rx_sync_block/hset
 system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/resetdone_tx_sync_block/hset
-usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_
-CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_E
-Q0.U_GAND_SRL_SET/MSET
-usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_
-CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_
-EQ0.U_GAND_SRL_SET/MSET
-usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_
-CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_
-EQ0.U_GAND_SRL_SET/MSET
-usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0]
-.U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U
-_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
-usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1]
-.U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U
-_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSET
 
 Section 8 - Guide Report
 ------------------------
@@ -6552,15 +6274,15 @@ Area Group "pblock_vi2c_core_inst"
   RANGE: DSP48_X2Y66:DSP48_X2Y69
   RANGE: SLICE_X24Y163:SLICE_X33Y178
   Slice Logic Utilization:
-    Number of Slice Registers:             304 out of  1,280   23%
-    Number of Slice LUTs:                  282 out of    640   44%
-      Number used as logic:                282
+    Number of Slice Registers:             303 out of  1,280   23%
+    Number of Slice LUTs:                  278 out of    640   43%
+      Number used as logic:                278
   Slice Logic Distribution:
-    Number of occupied Slices:             110 out of    160   68%
-    Number of LUT Flip Flop pairs used:    365
-      Number with an unused Flip Flop:     109 out of    365   29%
-      Number with an unused LUT:            63 out of    365   17%
-      Number of fully used LUT-FF pairs:   193 out of    365   52%
+    Number of occupied Slices:             116 out of    160   72%
+    Number of LUT Flip Flop pairs used:    367
+      Number with an unused Flip Flop:     110 out of    367   29%
+      Number with an unused LUT:            64 out of    367   17%
+      Number of fully used LUT-FF pairs:   193 out of    367   52%
   IO Utilization:
     Number of bonded IOBs:                   1
   Number of OLOGICE1:                        1

@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_unsigned.all;
 USE ieee.numeric_std.all;
 
-ENTITY i2c_ctrl_vfat IS
+ENTITY i2c_ctrl_cus IS
 	PORT
 	(
 		clk				: in  	std_logic;
@@ -46,9 +46,9 @@ ENTITY i2c_ctrl_vfat IS
 		error			: out   std_logic
 	);
 
-END i2c_ctrl_vfat;
+END i2c_ctrl_cus;
 
-ARCHITECTURE behave OF i2c_ctrl_vfat IS
+ARCHITECTURE behave OF i2c_ctrl_cus IS
 
 
 

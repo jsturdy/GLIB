@@ -13,7 +13,10 @@ port(
     
     tx_ready_o      : out std_logic;
     tx_done_i       : in std_logic;
-    tx_data_o       : out std_logic_vector(191 downto 0);
+    tx_data_o       : out std_logic_vector(223 downto 0);
+    
+    lv1a_sent_i     : in std_logic;
+    bx_counter_i    : in std_logic_vector(31 downto 0);
     
     vfat2_dvalid_i  : in std_logic_vector(1 downto 0);
     
@@ -31,18 +34,42 @@ end tracking_core;
 
 architecture Behavioral of tracking_core is
 
-    signal track_en     : std_logic_vector(7 downto 0) := (others => '0');
-    signal track_data   : array192(7 downto 0);
+    signal track_en                 : std_logic_vector(7 downto 0) := (others => '0');
+    signal track_data               : array192(7 downto 0);
     
-    signal fifo_wr      : std_logic := '0';
-    signal fifo_din     : std_logic_vector(191 downto 0) := (others => '0');
+    signal data_fifo_wr             : std_logic := '0';
+    signal data_fifo_din            : std_logic_vector(223 downto 0) := (others => '0');
+    signal data_fifo_rd             : std_logic := '0';
+    signal data_fifo_valid          : std_logic := '0';
+    signal data_fifo_underflow      : std_logic := '0';
+    signal data_fifo_dout           : std_logic_vector(223 downto 0) := (others => '0');
     
-    signal fifo_rd      : std_logic := '0';
-    signal fifo_valid   : std_logic := '0';
-    signal fifo_dout    : std_logic_vector(191 downto 0) := (others => '0');
+    signal trigger_fifo_rd          : std_logic := '0';
+    signal trigger_fifo_valid       : std_logic := '0';
+    signal trigger_fifo_underflow   : std_logic := '0';
+    signal trigger_fifo_dout        : std_logic_vector(31 downto 0) := (others => '0');
 
 begin  
 
+    --================================--
+    -- BX accepted FIFO
+    --================================--  
+    
+    tracking_bx_fifo_inst : entity work.tracking_bx_fifo
+    port map(
+        rst         => reset_i,
+        wr_clk      => gtp_clk_i,
+        wr_en       => lv1a_sent_i,
+        din         => bx_counter_i,
+        rd_clk      => vfat2_clk_i,
+        rd_en       => trigger_fifo_rd,
+        valid       => trigger_fifo_valid,
+        underflow   => trigger_fifo_underflow,
+        dout        => trigger_fifo_dout,
+        empty       => open,
+        full        => open
+    );
+    
     --================================--
     -- Tracking decoder
     --================================--  
@@ -62,30 +89,35 @@ begin
     
     tracking_concentrator_inst : entity work.tracking_concentrator
     port map(
-        vfat2_clk_i => vfat2_clk_i,
-        reset_i     => reset_i,
-        en_i        => track_en,
-        data_i      => track_data,
-        en_o        => fifo_wr,
-        data_o      => fifo_din
+        vfat2_clk_i         => vfat2_clk_i,
+        reset_i             => reset_i,
+        en_i                => track_en,
+        data_i              => track_data,
+        fifo_read_o         => trigger_fifo_rd,
+        fifo_valid_i        => trigger_fifo_valid,
+        fifo_underflow_i    => trigger_fifo_underflow,
+        fifo_data_i         => trigger_fifo_dout,
+        en_o                => data_fifo_wr,
+        data_o              => data_fifo_din
     );
     
     --================================--
-    -- FIFO
+    -- Tracking data FIFO
     --================================--  
    
-    tracking_buffer_fifo : entity work.tracking_fifo
+    tracking_data_fifo_inst : entity work.tracking_data_fifo
     port map(
-        wr_clk  => vfat2_clk_i,
-        rst     => reset_i,
-        wr_en   => fifo_wr,
-        din     => fifo_din,
-        rd_clk  => gtp_clk_i,
-        rd_en   => fifo_rd,
-        valid   => fifo_valid,
-        dout    => fifo_dout,
-        empty   => open,
-        full    => open
+        rst         => reset_i,
+        wr_clk      => vfat2_clk_i,
+        wr_en       => data_fifo_wr,
+        din         => data_fifo_din,
+        rd_clk      => gtp_clk_i,
+        rd_en       => data_fifo_rd,
+        valid       => data_fifo_valid,
+        underflow   => data_fifo_underflow,
+        dout        => data_fifo_dout,
+        empty       => open,
+        full        => open
     );
     
     --================================--
@@ -94,14 +126,15 @@ begin
     
     tracking_readout_inst : entity work.tracking_readout
     port map(
-        gtp_clk_i       => gtp_clk_i,
-        reset_i         => reset_i,
-        fifo_read_o     => fifo_rd,
-        fifo_valid_i    => fifo_valid,
-        fifo_data_i     => fifo_dout,
-        tx_ready_o      => tx_ready_o,
-        tx_done_i       => tx_done_i,
-        tx_data_o       => tx_data_o
+        gtp_clk_i           => gtp_clk_i,
+        reset_i             => reset_i,
+        fifo_read_o         => data_fifo_rd,
+        fifo_valid_i        => data_fifo_valid,
+        fifo_underflow_i    => data_fifo_underflow,
+        fifo_data_i         => data_fifo_dout,
+        tx_ready_o          => tx_ready_o,
+        tx_done_i           => tx_done_i,
+        tx_data_o           => tx_data_o
     );
 
 end Behavioral;

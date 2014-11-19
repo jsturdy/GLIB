@@ -20,7 +20,7 @@ port(
     
     track_ready_i   : in std_logic;
     track_done_o    : out std_logic;
-    track_data_i    : in std_logic_vector(191 downto 0);  
+    track_data_i    : in std_logic_vector(223 downto 0);  
     
     tx_kchar_o      : out std_logic_vector(1 downto 0);
     tx_data_o       : out std_logic_vector(15 downto 0)
@@ -38,7 +38,7 @@ begin
         
         -- Data
         variable header         : std_logic_vector(7 downto 0) := (others => '0');
-        variable data           : std_logic_vector(191 downto 0) := (others => '0');
+        variable data           : std_logic_vector(223 downto 0) := (others => '0');
         variable data_cnt       : integer range 0 to 15 := 0;
     
         -- Last kchar sent
@@ -119,9 +119,9 @@ begin
                     
                         header := def_gtp_tracks;
                     
-                        data(191 downto 0) := track_data_i;
+                        data(223 downto 0) := track_data_i;
                         
-                        data_cnt := 12;
+                        data_cnt := 14;
                         
                         track_done_o <= '1';
                         

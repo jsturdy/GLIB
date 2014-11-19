@@ -1,7 +1,9 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
  
 library work; 
+use work.user_package.all;
  
 entity sim_link_tracking is
 end sim_link_tracking;
@@ -16,6 +18,8 @@ architecture behavior of sim_link_tracking is
     signal rx_kchar_i           : std_logic_vector(1 downto 0) := (others => '0');
     signal rx_data_i            : std_logic_vector(15 downto 0) := (others => '0');
     signal vfat2_dvalid_i       : std_logic_vector(1 downto 0) := (others => '0');
+    signal lv1a_sent_i          : std_logic := '0';
+    signal bx_counter_i         : std_logic_vector(31 downto 0) := (others => '0');
     signal vfat2_data_0_i       : std_logic := '0';
     signal vfat2_data_1_i       : std_logic := '0';
     signal vfat2_data_2_i       : std_logic := '0';
@@ -32,6 +36,10 @@ architecture behavior of sim_link_tracking is
     signal vfat2_sda_o          : std_logic_vector(1 downto 0) := (others => '0');
     signal vfat2_sda_t          : std_logic_vector(1 downto 0) := (others => '0');
     signal vfat2_scl_o          : std_logic_vector(1 downto 0) := (others => '0');
+    
+    signal request_write_o      : array32(63 downto 0) := (others => (others => '0'));
+    signal request_tri_o        : std_logic_vector(63 downto 0);
+    signal request_read_i       : array32(63 downto 0) := (others => (others => '0'));
 
     constant vfat2_clk_period   : time := 25 ns;
     constant gtp_clk_period     : time := 6.25 ns;
@@ -48,6 +56,11 @@ begin
         rx_data_i       => rx_data_i,
         tx_kchar_o      => tx_kchar_o,
         tx_data_o       => tx_data_o,
+        request_write_o => request_write_o,
+        request_tri_o   => request_tri_o,
+        request_read_i  => request_read_i,
+        lv1a_sent_i     => lv1a_sent_i,
+        bx_counter_i    => bx_counter_i,
         vfat2_sda_i     => vfat2_sda_i,
         vfat2_sda_o     => vfat2_sda_o,
         vfat2_sda_t     => vfat2_sda_t,
@@ -102,6 +115,38 @@ begin
             end if;
         end if;
     end process;
+    
+    -- LV1A counter
+    process(gtp_clk_i)
+        variable cnt : integer range 0 to 3 := 0;
+        variable c : unsigned(31 downto 0) := (others => '0');
+    begin
+        if (rising_edge(gtp_clk_i)) then
+            if (cnt = 3) then
+                c := c + 1;
+                cnt := 0;
+            else
+                cnt := cnt + 1;
+            end if;
+            bx_counter_i <= std_logic_vector(c);
+        end if;
+    end process;
+    
+    -- LV1A sender    
+    process(gtp_clk_i)
+        variable cnt : integer range 0 to 776 := 0;
+    begin
+        if (rising_edge(gtp_clk_i)) then
+            if (cnt = 775) then
+                lv1a_sent_i <= '1';
+                cnt := 0;
+            else
+                lv1a_sent_i <= '0';
+                cnt := cnt + 1;
+            end if;
+        end if;
+    end process;
+    
     
     -- Requests
     process(gtp_clk_i)

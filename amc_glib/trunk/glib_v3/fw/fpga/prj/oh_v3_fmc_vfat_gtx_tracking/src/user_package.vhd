@@ -9,6 +9,7 @@ package user_package is
     constant def_gtp_vi2c       : std_logic_vector(7 downto 0) := x"01";  
     constant def_gtp_tracks     : std_logic_vector(7 downto 0) := x"02";  
     constant def_gtp_regs       : std_logic_vector(7 downto 0) := x"03";  
+    constant def_gtp_trigger    : std_logic_vector(7 downto 0) := x"04";  
     
     --=== Custom types ==========--
     

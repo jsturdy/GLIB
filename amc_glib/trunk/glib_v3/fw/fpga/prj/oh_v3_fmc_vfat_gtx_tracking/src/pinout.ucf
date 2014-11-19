@@ -8,12 +8,12 @@ NET "fpga_tx_o"             LOC = C1 | IOSTANDARD = LVCMOS33;
 
 NET "enable_gtp_o"          LOC = AA23 | IOSTANDARD = LVCMOS33;
 
-NET "fpga_test_o<0>"        LOC = E1 | IOSTANDARD = LVCMOS33;
-NET "fpga_test_o<1>"        LOC = D1 | IOSTANDARD = LVCMOS33;
-NET "fpga_test_o<2>"        LOC = G1 | IOSTANDARD = LVCMOS33;
-NET "fpga_test_o<3>"        LOC = F1 | IOSTANDARD = LVCMOS33;
-NET "fpga_test_o<4>"        LOC = J1 | IOSTANDARD = LVCMOS33;
-NET "fpga_test_o<5>"        LOC = H1 | IOSTANDARD = LVCMOS33;
+NET "fpga_test_io<0>"       LOC = E1 | IOSTANDARD = LVCMOS33;
+NET "fpga_test_io<1>"       LOC = D1 | IOSTANDARD = LVCMOS33;
+NET "fpga_test_io<2>"       LOC = G1 | IOSTANDARD = LVCMOS33;
+NET "fpga_test_io<3>"       LOC = F1 | IOSTANDARD = LVCMOS33;
+NET "fpga_test_io<4>"       LOC = J1 | IOSTANDARD = LVCMOS33;
+NET "fpga_test_io<5>"       LOC = H1 | IOSTANDARD = LVCMOS33;
 
 NET "leds_o<0>"             LOC = AF13 | IOSTANDARD = LVCMOS33;
 NET "leds_o<1>"             LOC = AF14 | IOSTANDARD = LVCMOS33;
@@ -30,7 +30,7 @@ NET "cdce_mosi_o"           LOC = L9 | IOSTANDARD = LVCMOS33;
 NET "cdce_sclk_o"           LOC = K10 | IOSTANDARD = LVCMOS33;
 
 NET "cdce_auxout_i"         LOC = H5 | IOSTANDARD = LVCMOS33;
-NET "cdce_plllock_i"        LOC = J7 | IOSTANDARD = LVCMOS33;
+NET "cdce_pll_locked_i"     LOC = J7 | IOSTANDARD = LVCMOS33;
 NET "cdce_powerdown_o"      LOC = G4 | IOSTANDARD = LVCMOS33;
 NET "cdce_ref_o"            LOC = J9 | IOSTANDARD = LVCMOS33;
 NET "cdce_sync_o"           LOC = H6 | IOSTANDARD = LVCMOS33;

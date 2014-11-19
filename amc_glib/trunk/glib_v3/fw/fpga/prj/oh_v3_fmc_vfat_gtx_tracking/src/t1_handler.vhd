@@ -4,16 +4,16 @@ use ieee.std_logic_1164.all;
 entity t1_handler is
 port(
 
-    gtp_clk_i   : in std_logic;
-    vfat2_clk_i : in std_logic;
-    reset_i     : in std_logic;
+    fabric_clk_i    : in std_logic;
+    vfat2_clk_i     : in std_logic;
+    reset_i         : in std_logic;
     
-    lv1a_i      : in std_logic;
-    calpulse_i  : in std_logic;
-    resync_i    : in std_logic;
-    bc0_i       : in std_logic;
+    lv1a_i          : in std_logic;
+    calpulse_i      : in std_logic;
+    resync_i        : in std_logic;
+    bc0_i           : in std_logic;
     
-    t1_o        : out std_logic
+    t1_o            : out std_logic
     
 );
 end t1_handler;
@@ -30,7 +30,7 @@ begin
     clock_bridge_strobes_inst : entity work.clock_bridge_strobes
     port map(
         reset_i => reset_i,
-        m_clk_i => gtp_clk_i,
+        m_clk_i => fabric_clk_i,
         m_en_i  => fast_signals,
         s_clk_i => vfat2_clk_i,
         s_en_o  => slow_signals

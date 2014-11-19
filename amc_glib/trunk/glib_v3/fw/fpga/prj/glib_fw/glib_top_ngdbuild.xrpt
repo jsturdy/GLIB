@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<document OS="nt64" product="ISE" version="14.7">
+<document OS="nt" product="ISE" version="14.7">
 
   <!--The data in this file is primarily intended for consumption by Xilinx tools.
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Tue Nov 18 16:03:37 2014">
+  <application stringID="NgdBuild" timeStamp="Wed Nov 19 16:26:11 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files (x86)\Parallels\Parallels Tools\Applications;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt;C:\Program Files (x86)\Parallels\Parallels Tools\Applications;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -21,18 +21,6 @@
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
           <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\"/>
-        </row>
-        <row stringID="row" value="3">
-          <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE"/>
-        </row>
-        <row stringID="row" value="4">
-          <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\EDK"/>
-        </row>
-        <row stringID="row" value="5">
-          <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\PlanAhead"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
@@ -55,14 +43,14 @@
         <item DEFAULT="None" label="-dd" stringID="NGDBUILD_output_dir" value="_ngo"/>
         <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="xc6vlx130t-ff1156-1"/>
         <item DEFAULT="None" label="-sd" stringID="NGDBUILD_search_path" value="../../src/system/pll"/>
-        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="src/system.ucf"/>
+        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="src/gtx.ucf"/>
       </section>
     </task>
     <task stringID="NGDBUILD_REPORT">
       <section stringID="NGDBUILD_DESIGN_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="NGDBUILD_FILTERED_WARNINGS" value="0"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="1092"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="1071"/>
         <item dataType="int" stringID="NGDBUILD_FILTERED_INFOS" value="0"/>
         <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="9"/>
       </section>
@@ -102,8 +90,9 @@
         <item dataType="int" stringID="NGDBUILD_NUM_MUXCY_L" value="102"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="103"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF8" value="20"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="494"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="461"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUFDS" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUFT" value="33"/>
         <item dataType="int" stringID="NGDBUILD_NUM_ODDR" value="2"/>
         <item dataType="int" stringID="NGDBUILD_NUM_RAM32M" value="20"/>
         <item dataType="int" stringID="NGDBUILD_NUM_RAM32X1D" value="8"/>
@@ -114,7 +103,7 @@
         <item dataType="int" stringID="NGDBUILD_NUM_SRLC16E" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_SRLC32E" value="61"/>
         <item dataType="int" stringID="NGDBUILD_NUM_TEMAC_SINGLE" value="2"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="92"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="93"/>
         <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="1162"/>
       </section>
       <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
@@ -152,9 +141,9 @@
         <item dataType="int" stringID="NGDBUILD_NUM_MUXCY_L" value="102"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="103"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF8" value="20"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="494"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="461"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUFDS" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_OBUFT" value="74"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUFT" value="107"/>
         <item dataType="int" stringID="NGDBUILD_NUM_ODDR" value="2"/>
         <item dataType="int" stringID="NGDBUILD_NUM_RAM32M" value="20"/>
         <item dataType="int" stringID="NGDBUILD_NUM_RAMB18E1" value="2"/>
@@ -165,7 +154,7 @@
         <item dataType="int" stringID="NGDBUILD_NUM_SRLC32E" value="61"/>
         <item dataType="int" stringID="NGDBUILD_NUM_TEMAC_SINGLE" value="2"/>
         <item dataType="int" stringID="NGDBUILD_NUM_TS_TIMESPEC" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="94"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="95"/>
         <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="1162"/>
       </section>
       <section stringID="NGDBUILD_CORE_SUMMARY">

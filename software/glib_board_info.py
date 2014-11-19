@@ -7,7 +7,7 @@ glibAddrTable = AddressTable("./glibAddrTable.dat")
 ########################################
 # IP address
 ########################################
-ipaddr = '192.168.0.115'
+ipaddr = '192.168.0.116'
 glib = ChipsBusUdp(glibAddrTable, ipaddr, 50001)
 print
 print "--=======================================--"

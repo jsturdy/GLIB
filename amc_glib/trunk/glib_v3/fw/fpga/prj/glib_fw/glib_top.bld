@@ -1,17 +1,16 @@
-Release 14.7 ngdbuild P.20131013 (nt64)
+Release 14.7 ngdbuild P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
--intstyle ise -dd _ngo -sd ipcore_dir -sd
-../../src/system/cdce/cdce_phase_mon_v2/dpram -sd
-../../src/system/ethernet/ipcore_dir/basex -sd
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -sd ipcore_dir -sd ../../src/system/cdce/cdce_phase_mon_v2/dpram
+-sd ../../src/system/ethernet/ipcore_dir/basex -sd
 ../../src/system/ethernet/ipcore_dir/sgmii -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ezdma2_ctrl_dpram -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ipbus_ctrl_dpram -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo -sd
 ../../src/system/cdce/cdce_phase_mon_v2/pll -sd ../../src/system/pll -nt
-timestamp -uc src/gtx.ucf -uc src/system_clk.ucf -uc src/system.ucf -p
+timestamp -uc src/system_clk.ucf -uc src/system.ucf -uc src/gtx.ucf -p
 xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
 
 Reading NGO file
@@ -45,9 +44,9 @@ Xilinx software updates or new releases.
 Gathering constraint information from source properties...
 Done.
 
-Annotating constraints to design from ucf file "src/gtx.ucf" ...
 Annotating constraints to design from ucf file "src/system_clk.ucf" ...
 Annotating constraints to design from ucf file "src/system.ucf" ...
+Annotating constraints to design from ucf file "src/gtx.ucf" ...
 WARNING:NgdBuild - The value of SIM_DEVICE on instance
    'system/amc_p0_en.amc_p0_eth/clkbuf' of type BUFR has been changed from
    'VIRTEX4' to 'VIRTEX6' to correct post-ngdbuild and timing simulation for
@@ -147,40 +146,6 @@ WARNING:NgdBuild:452 - logical net 'fmc1_tx_n_1_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_tx_n_2_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_tx_n_3_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_tx_n_4_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_0_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_1_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_2_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_3_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_4_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_5_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_6_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_7_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_8_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_9_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_10_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_11_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_12_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_13_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_14_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_15_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_16_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_17_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_18_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_19_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_20_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_21_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_22_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_23_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_24_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_25_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_26_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_27_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_28_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_29_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_30_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_31_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_32_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'fmc1_la_p_33_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_la_n_0_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_la_n_1_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc1_la_n_2_OBUF' has no driver
@@ -475,26 +440,6 @@ WARNING:NgdBuild:452 - logical net 'fmc2_clk_c2m_p_0_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc2_clk_c2m_p_1_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc2_clk_c2m_n_0_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'fmc2_clk_c2m_n_1_OBUF' has no driver
-WARNING:NgdBuild:452 - logical net 'user_mac_addr<43>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_mac_addr<29>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_mac_addr<28>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_mac_addr<23>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_mac_addr<22>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_mac_addr<21>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_mac_addr<20>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_mac_addr<16>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_mac_addr<7>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_mac_addr<5>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_ip_addr<31>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_ip_addr<30>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_ip_addr<23>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_ip_addr<21>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_ip_addr<19>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_ip_addr<6>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_ip_addr<5>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_ip_addr<4>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_ip_addr<1>' has no driver
-WARNING:NgdBuild:452 - logical net 'user_ip_addr<0>' has no driver
 WARNING:NgdBuild:452 - logical net 'amc_tclkb_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'sram1_bwa_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'sram1_bwb_OBUF' has no driver
@@ -595,6 +540,39 @@ WARNING:NgdBuild:452 - logical net 'user_ipb_mosi[6]_ipb_strobe' has no driver
 WARNING:NgdBuild:452 - logical net 'user_ipb_mosi[8]_ipb_strobe' has no driver
 WARNING:NgdBuild:452 - logical net 'user_ipb_mosi[9]_ipb_strobe' has no driver
 WARNING:NgdBuild:452 - logical net 'user_ipb_mosi[11]_ipb_strobe' has no driver
+WARNING:NgdBuild:452 - logical net 'N411' has no driver
+WARNING:NgdBuild:452 - logical net 'N412' has no driver
+WARNING:NgdBuild:452 - logical net 'N413' has no driver
+WARNING:NgdBuild:452 - logical net 'N414' has no driver
+WARNING:NgdBuild:452 - logical net 'N415' has no driver
+WARNING:NgdBuild:452 - logical net 'N416' has no driver
+WARNING:NgdBuild:452 - logical net 'N417' has no driver
+WARNING:NgdBuild:452 - logical net 'N418' has no driver
+WARNING:NgdBuild:452 - logical net 'N419' has no driver
+WARNING:NgdBuild:452 - logical net 'N420' has no driver
+WARNING:NgdBuild:452 - logical net 'N422' has no driver
+WARNING:NgdBuild:452 - logical net 'N423' has no driver
+WARNING:NgdBuild:452 - logical net 'N424' has no driver
+WARNING:NgdBuild:452 - logical net 'N425' has no driver
+WARNING:NgdBuild:452 - logical net 'N426' has no driver
+WARNING:NgdBuild:452 - logical net 'N427' has no driver
+WARNING:NgdBuild:452 - logical net 'N428' has no driver
+WARNING:NgdBuild:452 - logical net 'N429' has no driver
+WARNING:NgdBuild:452 - logical net 'N430' has no driver
+WARNING:NgdBuild:452 - logical net 'N431' has no driver
+WARNING:NgdBuild:452 - logical net 'N432' has no driver
+WARNING:NgdBuild:452 - logical net 'N433' has no driver
+WARNING:NgdBuild:452 - logical net 'N434' has no driver
+WARNING:NgdBuild:452 - logical net 'N435' has no driver
+WARNING:NgdBuild:452 - logical net 'N436' has no driver
+WARNING:NgdBuild:452 - logical net 'N437' has no driver
+WARNING:NgdBuild:452 - logical net 'N438' has no driver
+WARNING:NgdBuild:452 - logical net 'N439' has no driver
+WARNING:NgdBuild:452 - logical net 'N440' has no driver
+WARNING:NgdBuild:452 - logical net 'N441' has no driver
+WARNING:NgdBuild:452 - logical net 'N442' has no driver
+WARNING:NgdBuild:452 - logical net 'N443' has no driver
+WARNING:NgdBuild:452 - logical net 'N444' has no driver
 WARNING:NgdBuild:452 - logical net 'N731' has no driver
 WARNING:NgdBuild:452 - logical net 'N732' has no driver
 WARNING:NgdBuild:452 - logical net 'N733' has no driver
@@ -1724,12 +1702,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 1092
+  Number of warnings: 1071
 
-Total memory usage is 323936 kilobytes
+Total memory usage is 232024 kilobytes
 
 Writing NGD file "glib_top.ngd" ...
-Total REAL time to NGDBUILD completion:  28 sec
-Total CPU time to NGDBUILD completion:   28 sec
+Total REAL time to NGDBUILD completion:  27 sec
+Total CPU time to NGDBUILD completion:   27 sec
 
 Writing NGDBUILD log file "glib_top.bld"...

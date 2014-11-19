@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Nov 18 16:07:09 2014
+// Written by: Map P.20131013 on Wed Nov 19 16:29:29 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -203,6 +203,7 @@ COMP "fpga_rs0" LOCATE = SITE "AA23" LEVEL 1;
 COMP "fpga_rs1" LOCATE = SITE "AG23" LEVEL 1;
 COMP "fpga_sda" LOCATE = SITE "AP21" LEVEL 1;
 COMP "fpga_scl" LOCATE = SITE "AP20" LEVEL 1;
+COMP "fmc1_la_p<10>" LOCATE = SITE "K26" LEVEL 1;
 COMP "fpga_reset_b" LOCATE = SITE "AE33" LEVEL 1;
 COMP "amc_port_rx_n<0>" LOCATE = SITE "W4" LEVEL 1;
 COMP "amc_port_rx_n<2>" LOCATE = SITE "AC12" LEVEL 1;
@@ -26265,9 +26266,6 @@ TIMEGRP TO_systemi2c_sregs_6_1_LDC = BEL "system/i2c_s/regs_6_1_LDC";
 TIMEGRP TO_systemi2c_sregs_6_3_LDC = BEL "system/i2c_s/regs_6_3_LDC";
 TIMEGRP TO_systemi2c_sregs_6_2_LDC = BEL "system/i2c_s/regs_6_2_LDC";
 TIMEGRP TO_systemi2c_sregs_6_0_LDC = BEL "system/i2c_s/regs_6_0_LDC";
-TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
-TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
-TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
 TS_clk125_2_p = PERIOD TIMEGRP "clk125_2_p" 8 ns HIGH 50%;
 TS_clk125_2_n = PERIOD TIMEGRP "clk125_2_n" TS_clk125_2_p PHASE 4 ns HIGH 50%;
 TS_system_phy_en_phy_eth_clk125_out = PERIOD TIMEGRP
@@ -26277,6 +26275,9 @@ TS_system_amc_p0_en_amc_p0_eth_clk125_out = PERIOD TIMEGRP
 TS_xpoint1_clk1_p = PERIOD TIMEGRP "xpoint1_clk1_p" 25 ns HIGH 50%;
 TS_xpoint1_clk1_n = PERIOD TIMEGRP "xpoint1_clk1_n" TS_xpoint1_clk1_p PHASE
         12.5 ns HIGH 50%;
+TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
+TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
+TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
 TS_system_glib_pll_clkout_31_25_c = PERIOD TIMEGRP
         "system_glib_pll_clkout_31_25_c" TS_clk125_2_p / 0.25 HIGH 50%;
 TS_system_glib_pll_clkout_31_25_a = PERIOD TIMEGRP

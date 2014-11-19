@@ -19,6 +19,8 @@ port(
     
     tx_kchar_o      : out std_logic_vector(1 downto 0);
     tx_data_o       : out std_logic_vector(15 downto 0);
+    
+    ext_sbit_o      : out std_logic;
 
 	ipb_trigger_i   : in ipb_wbus;
 	ipb_trigger_o   : out ipb_rbus
@@ -32,6 +34,8 @@ architecture Behavioral of link_trigger is
     signal trigger_rx_data  : std_logic_vector(47 downto 0) := (others => '0');
     
 begin
+
+    ext_sbit_o <= trigger_rx_data(0);
 
     trigger_data_decoder_inst : entity work.trigger_data_decoder
     port map(

@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Mapping Report File for Design 'glib_top'
 
 Design Information
@@ -9,22 +9,22 @@ Target Device  : xc6vlx130t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Tue Nov 18 16:03:42 2014
+Mapped Date    : Wed Nov 19 16:26:16 2014
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  466
+Number of warnings:  465
 Slice Logic Utilization:
   Number of Slice Registers:                12,387 out of 160,000    7%
     Number used as Flip Flops:              12,375
     Number used as Latches:                     12
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                     10,201 out of  80,000   12%
-    Number used as logic:                    9,452 out of  80,000   11%
+  Number of Slice LUTs:                     10,196 out of  80,000   12%
+    Number used as logic:                    9,451 out of  80,000   11%
       Number using O6 output only:           6,005
-      Number using O5 output only:             599
+      Number using O5 output only:             598
       Number using O5 and O6:                2,848
       Number used as ROM:                        0
     Number used as Memory:                     153 out of  27,840    1%
@@ -37,17 +37,17 @@ Slice Logic Utilization:
         Number using O6 output only:            75
         Number using O5 output only:             0
         Number using O5 and O6:                 30
-    Number used exclusively as route-thrus:    596
-      Number with same-slice register load:    560
-      Number with same-slice carry load:        36
+    Number used exclusively as route-thrus:    592
+      Number with same-slice register load:    555
+      Number with same-slice carry load:        37
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,405 out of  20,000   22%
-  Number of LUT Flip Flop pairs used:       13,402
-    Number with an unused Flip Flop:         3,256 out of  13,402   24%
-    Number with an unused LUT:               3,201 out of  13,402   23%
-    Number of fully used LUT-FF pairs:       6,945 out of  13,402   51%
+  Number of occupied Slices:                 4,390 out of  20,000   21%
+  Number of LUT Flip Flop pairs used:       13,375
+    Number with an unused Flip Flop:         3,198 out of  13,375   23%
+    Number with an unused LUT:               3,179 out of  13,375   23%
+    Number of fully used LUT-FF pairs:       6,998 out of  13,375   52%
     Number of unique control sets:             533
     Number of slice register sites lost
       to control set restrictions:           1,656 out of 160,000    1%
@@ -61,8 +61,8 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       246 out of     600   41%
-    Number of LOCed IOBs:                      226 out of     246   91%
+  Number of bonded IOBs:                       247 out of     600   41%
+    Number of LOCed IOBs:                      227 out of     247   91%
     IOB Flip Flops:                              2
     IOB Master Pads:                             1
     IOB Slave Pads:                              1
@@ -110,9 +110,9 @@ Specific Feature Utilization:
   Number of RPM macros:           11
 Average Fanout of Non-Clock Nets:                3.67
 
-Peak Memory Usage:  943 MB
-Total REAL time to MAP completion:  3 mins 35 secs 
-Total CPU time to MAP completion (all processors):   3 mins 50 secs 
+Peak Memory Usage:  648 MB
+Total REAL time to MAP completion:  3 mins 20 secs 
+Total CPU time to MAP completion (all processors):   3 mins 37 secs 
 
 Table of Contents
 -----------------
@@ -158,8 +158,6 @@ WARNING:MapLib:701 - Signal fmc1_la_p<8> connected to top level port
    fmc1_la_p<8> has been removed.
 WARNING:MapLib:701 - Signal fmc1_la_p<9> connected to top level port
    fmc1_la_p<9> has been removed.
-WARNING:MapLib:701 - Signal fmc1_la_p<10> connected to top level port
-   fmc1_la_p<10> has been removed.
 WARNING:MapLib:701 - Signal fmc1_la_p<11> connected to top level port
    fmc1_la_p<11> has been removed.
 WARNING:MapLib:701 - Signal fmc1_la_p<12> connected to top level port
@@ -1295,22 +1293,25 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
-   MC_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMC_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
    MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
+   MC_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
    MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
@@ -1322,19 +1323,16 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 
 Section 3 - Informational
@@ -1344,13 +1342,13 @@ INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    machine load, Map will use 2 processors during this run.
 INFO:Security:56 - Part 'xc6vlx130t' is not a WebPack part.
 INFO:LIT:243 - Logical network user_ipb_miso[1]_ipb_err has no load.
-INFO:LIT:395 - The above info message is repeated 1051 more times for the
+INFO:LIT:395 - The above info message is repeated 1064 more times for the
    following (max. 5 shown):
-   user_mac_addr<43>,
-   user_mac_addr<29>,
-   user_mac_addr<28>,
-   user_mac_addr<23>,
-   user_mac_addr<22>
+   user_ipb_miso[4]_ipb_err,
+   user_ipb_miso[7]_ipb_err,
+   user_ipb_miso[10]_ipb_err,
+   user_ipb_miso[12]_ipb_err,
+   user_sram_rdata<1><35>
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
@@ -1361,16 +1359,16 @@ INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more inform
    Command Line Tools User Guide for information on generating a TSI report.
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 246 IOs, 226 are locked
+INFO:Place:834 - Only a subset of IOs are locked. Out of 247 IOs, 227 are locked
    and 20 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-1165 block(s) removed
+1164 block(s) removed
  328 block(s) optimized away
-1333 signal(s) removed
+1299 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -1433,142 +1431,72 @@ removed.
 Loadless block
 "usr/link_tracking_1_inst/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORA
 GE_QUAL.U_CAP_B" (ROM) removed.
-The signal "fmc1_la_p_0_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_0_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<0>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<0>" (PAD) removed.
-The signal "fmc1_la_p_1_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_1_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<1>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<1>" (PAD) removed.
-The signal "fmc1_la_p_2_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_2_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<2>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<2>" (PAD) removed.
-The signal "fmc1_la_p_3_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_3_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<3>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<3>" (PAD) removed.
-The signal "fmc1_la_p_4_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_4_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<4>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<4>" (PAD) removed.
-The signal "fmc1_la_p_5_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_5_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<5>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<5>" (PAD) removed.
-The signal "fmc1_la_p_6_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_6_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<6>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<6>" (PAD) removed.
-The signal "fmc1_la_p_7_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_7_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<7>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<7>" (PAD) removed.
-The signal "fmc1_la_p_8_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_8_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<8>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<8>" (PAD) removed.
-The signal "fmc1_la_p_9_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_9_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<9>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<9>" (PAD) removed.
-The signal "fmc1_la_p_10_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_10_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<10>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<10>" (PAD) removed.
-The signal "fmc1_la_p_11_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_11_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<11>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<11>" (PAD) removed.
-The signal "fmc1_la_p_12_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_12_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<12>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<12>" (PAD) removed.
-The signal "fmc1_la_p_13_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_13_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<13>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<13>" (PAD) removed.
-The signal "fmc1_la_p_14_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_14_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<14>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<14>" (PAD) removed.
-The signal "fmc1_la_p_15_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_15_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<15>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<15>" (PAD) removed.
-The signal "fmc1_la_p_16_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_16_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<16>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<16>" (PAD) removed.
-The signal "fmc1_la_p_17_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_17_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<17>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<17>" (PAD) removed.
-The signal "fmc1_la_p_18_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_18_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<18>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<18>" (PAD) removed.
-The signal "fmc1_la_p_19_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_19_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<19>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<19>" (PAD) removed.
-The signal "fmc1_la_p_20_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_20_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<20>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<20>" (PAD) removed.
-The signal "fmc1_la_p_21_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_21_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<21>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<21>" (PAD) removed.
-The signal "fmc1_la_p_22_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_22_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<22>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<22>" (PAD) removed.
-The signal "fmc1_la_p_23_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_23_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<23>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<23>" (PAD) removed.
-The signal "fmc1_la_p_24_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_24_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<24>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<24>" (PAD) removed.
-The signal "fmc1_la_p_25_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_25_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<25>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<25>" (PAD) removed.
-The signal "fmc1_la_p_26_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_26_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<26>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<26>" (PAD) removed.
-The signal "fmc1_la_p_27_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_27_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<27>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<27>" (PAD) removed.
-The signal "fmc1_la_p_28_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_28_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<28>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<28>" (PAD) removed.
-The signal "fmc1_la_p_29_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_29_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<29>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<29>" (PAD) removed.
-The signal "fmc1_la_p_30_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_30_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<30>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<30>" (PAD) removed.
-The signal "fmc1_la_p_31_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_31_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<31>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<31>" (PAD) removed.
-The signal "fmc1_la_p_32_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_32_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<32>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<32>" (PAD) removed.
-The signal "fmc1_la_p_33_OBUF" is sourceless and has been removed.
- Sourceless block "fmc1_la_p_33_OBUF" (BUF) removed.
-  The signal "fmc1_la_p<33>" is sourceless and has been removed.
-   Sourceless block "fmc1_la_p<33>" (PAD) removed.
+The signal "fmc1_la_p<0>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<0>" (PAD) removed.
+The signal "fmc1_la_p<1>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<1>" (PAD) removed.
+The signal "fmc1_la_p<2>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<2>" (PAD) removed.
+The signal "fmc1_la_p<3>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<3>" (PAD) removed.
+The signal "fmc1_la_p<4>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<4>" (PAD) removed.
+The signal "fmc1_la_p<5>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<5>" (PAD) removed.
+The signal "fmc1_la_p<6>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<6>" (PAD) removed.
+The signal "fmc1_la_p<7>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<7>" (PAD) removed.
+The signal "fmc1_la_p<8>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<8>" (PAD) removed.
+The signal "fmc1_la_p<9>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<9>" (PAD) removed.
+The signal "fmc1_la_p<11>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<11>" (PAD) removed.
+The signal "fmc1_la_p<12>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<12>" (PAD) removed.
+The signal "fmc1_la_p<13>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<13>" (PAD) removed.
+The signal "fmc1_la_p<14>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<14>" (PAD) removed.
+The signal "fmc1_la_p<15>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<15>" (PAD) removed.
+The signal "fmc1_la_p<16>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<16>" (PAD) removed.
+The signal "fmc1_la_p<17>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<17>" (PAD) removed.
+The signal "fmc1_la_p<18>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<18>" (PAD) removed.
+The signal "fmc1_la_p<19>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<19>" (PAD) removed.
+The signal "fmc1_la_p<20>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<20>" (PAD) removed.
+The signal "fmc1_la_p<21>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<21>" (PAD) removed.
+The signal "fmc1_la_p<22>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<22>" (PAD) removed.
+The signal "fmc1_la_p<23>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<23>" (PAD) removed.
+The signal "fmc1_la_p<24>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<24>" (PAD) removed.
+The signal "fmc1_la_p<25>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<25>" (PAD) removed.
+The signal "fmc1_la_p<26>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<26>" (PAD) removed.
+The signal "fmc1_la_p<27>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<27>" (PAD) removed.
+The signal "fmc1_la_p<28>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<28>" (PAD) removed.
+The signal "fmc1_la_p<29>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<29>" (PAD) removed.
+The signal "fmc1_la_p<30>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<30>" (PAD) removed.
+The signal "fmc1_la_p<31>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<31>" (PAD) removed.
+The signal "fmc1_la_p<32>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<32>" (PAD) removed.
+The signal "fmc1_la_p<33>" is sourceless and has been removed.
+ Sourceless block "fmc1_la_p<33>" (PAD) removed.
 The signal "fmc1_la_n_0_OBUF" is sourceless and has been removed.
  Sourceless block "fmc1_la_n_0_OBUF" (BUF) removed.
   The signal "fmc1_la_n<0>" is sourceless and has been removed.
@@ -5333,6 +5261,8 @@ The signal "fmc2_clk_c2m_n_0_OBUF" is unused and has been removed.
 The signal "fmc2_clk_c2m_n_1_OBUF" is unused and has been removed.
 The signal "user_ipb_miso[1]_ipb_err" is unused and has been removed.
  Unused block "usr/link_tracking_1_inst/ipb_vi2c_inst/XST_GND" (ZERO) removed.
+The signal "user_ip_addr<0>" is unused and has been removed.
+ Unused block "usr/XST_VCC" (ONE) removed.
 The signal "amc_tclkb_OBUF" is unused and has been removed.
 The signal "sram1_bwa_OBUF" is unused and has been removed.
 The signal "sram1_bwb_OBUF" is unused and has been removed.
@@ -5571,6 +5501,39 @@ Unused block
 removed.
 Unused block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o1" (ROM) removed.
 Unused block "system/wb_bridge/XST_GND" (ZERO) removed.
+Unused block "usr/fmc1_la_p_0_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_11_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_12_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_13_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_14_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_15_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_16_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_17_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_18_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_19_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_1_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_20_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_21_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_22_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_23_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_24_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_25_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_26_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_27_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_28_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_29_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_2_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_30_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_31_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_32_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_33_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_3_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_4_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_5_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_6_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_7_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_8_OBUFT" (TRI) removed.
+Unused block "usr/fmc1_la_p_9_OBUFT" (TRI) removed.
 Unused block
 "usr/link_tracking_1_inst/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.F
 I[11].U_LUT" (ROM) removed.
@@ -6296,6 +6259,7 @@ Section 6 - IOB Properties
 | cdce_sync                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | clk125_2_n                         | IPAD             | INPUT     |                      |       |          |      |              |          |          |
 | clk125_2_p                         | IPAD             | INPUT     |                      |       |          |      |              |          |          |
+| fmc1_la_p<10>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | fmc1_present_l                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | fmc2_present_l                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | fpga_a21                           | IOB              | OUTPUT    | LVCMOS25             |       | 24       | FAST |              |          |          |

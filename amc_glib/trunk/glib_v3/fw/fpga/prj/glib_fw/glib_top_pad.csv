@@ -1,7 +1,7 @@
-#Release 14.7 - par P.20131013 (nt64)
+#Release 14.7 - par P.20131013 (nt)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Tue Nov 18 16:08:49 2014
+#Wed Nov 19 16:31:03 2014
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -826,7 +826,7 @@ K22,,IOBS,IO_L16N_26,UNUSED,,26,,,,,,,,,
 K23,,IOBS,IO_L1N_GC_24,UNUSED,,24,,,,,,,,,
 K24,,IOBM,IO_L1P_GC_24,UNUSED,,24,,,,,,,,,
 K25,,,VCCO_16,,,16,,,,,2.50,,,,
-K26,,IOBM,IO_L9P_MRCC_16,UNUSED,,16,,,,,,,,,
+K26,fmc1_la_p<10>,IOB,IO_L9P_MRCC_16,OUTPUT,LVCMOS25*,16,12,SLOW,,,,LOCATED,NO,NONE,
 K27,,IOBS,IO_L9N_MRCC_16,UNUSED,,16,,,,,,,,,
 K28,,IOBM,IO_L7P_16,UNUSED,,16,,,,,,,,,
 K29,,IOBS,IO_L13N_16,UNUSED,,16,,,,,,,,,

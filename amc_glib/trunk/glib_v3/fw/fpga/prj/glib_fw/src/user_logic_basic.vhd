@@ -207,6 +207,10 @@ architecture user_logic_arch of user_logic is
 
     signal gtx_clk          : std_logic := '0';
     
+    -- External signals
+    
+    signal ext_sbit         : std_logic := '0';
+    
     -- GTX signals
     
     signal rx_error         : std_logic_vector(3 downto 0) := (others => '0');
@@ -221,6 +225,8 @@ begin
     mac_addr_o <= x"080030F100a" & amc_slot_i;  -- 08:00:30:F1:00:0[A0:AF]
     user_v6_led_o(1) <= '0';
     user_v6_led_o(2) <= '0';
+    
+    fmc1_io_pin.la_p(10) <= ext_sbit;
 
     --================================--
     -- GTX
@@ -281,6 +287,7 @@ begin
         rx_data_i       => rx_data(63 downto 48),
         tx_kchar_o      => tx_kchar(7 downto 6),
         tx_data_o       => tx_data(63 downto 48),
+        ext_sbit_o      => ext_sbit,
         ipb_trigger_i   => ipb_mosi_i(ipb_trigger),
         ipb_trigger_o   => ipb_miso_o(ipb_trigger)
     );

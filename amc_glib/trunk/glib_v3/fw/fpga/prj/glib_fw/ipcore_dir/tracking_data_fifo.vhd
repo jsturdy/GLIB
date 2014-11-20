@@ -53,7 +53,7 @@ ENTITY tracking_data_fifo IS
     empty : OUT STD_LOGIC;
     valid : OUT STD_LOGIC;
     underflow : OUT STD_LOGIC;
-    rd_data_count : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+    rd_data_count : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
   );
 END tracking_data_fifo;
 
@@ -72,7 +72,7 @@ COMPONENT wrapped_tracking_data_fifo
     empty : OUT STD_LOGIC;
     valid : OUT STD_LOGIC;
     underflow : OUT STD_LOGIC;
-    rd_data_count : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+    rd_data_count : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
   );
 END COMPONENT;
 
@@ -219,7 +219,7 @@ END COMPONENT;
       c_prog_full_type_wdch => 0,
       c_prog_full_type_wrch => 0,
       c_rach_type => 0,
-      c_rd_data_count_width => 6,
+      c_rd_data_count_width => 9,
       c_rd_depth => 512,
       c_rd_freq => 1,
       c_rd_pntr_width => 9,

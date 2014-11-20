@@ -17,7 +17,9 @@ port(
 	ipb_miso_o      : out ipb_rbus;
     
     rx_en_i         : in std_logic;
-    rx_data_i       : in std_logic_vector(47 downto 0)
+    rx_data_i       : in std_logic_vector(47 downto 0);
+    
+    fifo_reset_i    : in std_logic
     
 );
 end ipb_trigger;
@@ -38,11 +40,11 @@ architecture rtl of ipb_trigger is
     
 begin
 
-    wr_data <= rx_data_i(25 downto 0) & rx_data_i(5 downto 0);
+    wr_data <= rx_data_i(41 downto 16) & rx_data_i(5 downto 0);
     
     trigger_data_fifo_inst : entity work.trigger_data_fifo
     port map(
-        rst             => (reset_i or reset),
+        rst             => fifo_reset_i,
         wr_clk          => gtx_clk_i,
         wr_en           => rx_en_i,
         din             => wr_data,
@@ -89,18 +91,10 @@ begin
                 
                     if (ipb_mosi_i.ipb_strobe = '1' and last_ipb_strobe = '0') then
                     
-                        if (ipb_mosi_i.ipb_write = '1') then
+                        rd_en <= '1';
                         
-                            state := 3;
+                        state := 1;
                             
-                        else
-                        
-                            rd_en <= '1';
-                            
-                            state := 1;
-                            
-                        end if;
-                    
                     end if;
                     
                 elsif (state = 1) then
@@ -124,12 +118,6 @@ begin
                 elsif (state = 2) then
                 
                     ipb_ack <= '1';
-                    
-                    state := 0;
-                    
-                elsif (state = 3) then
-
-                    reset <= '1';
                     
                     state := 0;
                     

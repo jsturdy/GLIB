@@ -9,12 +9,12 @@ port(
 
     gtx_clk_i       : in std_logic;
     reset_i         : in std_logic;
-    
-    trigger_en_o    : out std_logic;
-    trigger_data_o  : out std_logic_vector(47 downto 0);
   
     rx_kchar_i      : in std_logic_vector(1 downto 0);
-    rx_data_i       : in std_logic_vector(15 downto 0)
+    rx_data_i       : in std_logic_vector(15 downto 0);
+    
+    trigger_en_o    : out std_logic;
+    trigger_data_o  : out std_logic_vector(47 downto 0)
     
 );
 end trigger_data_decoder;
@@ -46,8 +46,12 @@ begin
                     
                 -- Wait for packet
                 if (state = 0) then
-                    
-                    trigger_en_o <= '0';
+
+                    -- Set the data
+                    trigger_data_o <= data(47 downto 0);
+                
+                    -- Storbe
+                    trigger_en_o <= '1';
                 
                     -- Detect data package
                     if (rx_kchar_i = "01") then
@@ -66,15 +70,17 @@ begin
                 -- Receive data
                 elsif (state = 1) then
                 
+                    trigger_en_o <= '0';
+                
                     if (rx_kchar_i = "00") then
                 
                         -- Receive data
                         data((data_cnt * 16 - 1) downto ((data_cnt - 1) * 16)) := rx_data_i;
                         
                         if (data_cnt = 1) then
-                        
-                            state := 2;
                             
+                            state := 0;
+                    
                         else
                             
                             data_cnt := data_cnt - 1;
@@ -86,17 +92,6 @@ begin
                         state := 0;
                     
                     end if;
-                   
-                -- Acknowledge the selected core     
-                elsif (state = 2) then
-
-                    -- Set the data
-                    trigger_data_o <= data(47 downto 0);
-                
-                    -- Storbe
-                    trigger_en_o <= '1';
-                    
-                    state := 0;
                     
                 -- Out of FSM
                 else

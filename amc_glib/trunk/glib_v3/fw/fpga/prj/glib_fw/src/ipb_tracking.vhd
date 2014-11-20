@@ -20,7 +20,7 @@ port(
     rx_data_i       : in std_logic_vector(223 downto 0);
     
     fifo_reset_i    : in std_logic;
-    fifo_count_o    : out std_logic_vector(5 downto 0)
+    fifo_count_o    : out std_logic_vector(8 downto 0)
     
 );
 end ipb_tracking;
@@ -34,8 +34,6 @@ architecture rtl of ipb_tracking is
     signal rd_data      : std_logic_vector(223 downto 0) := (others => '0');
     signal rd_valid     : std_logic := '0';
     signal rd_underflow : std_logic := '0';
-    
-    signal fifo_empty   : std_logic := '1';
     
 begin
     
@@ -52,7 +50,7 @@ begin
         dout            => rd_data,
         rd_data_count   => fifo_count_o,
         full            => open,
-        empty           => fifo_empty
+        empty           => open
     ); 
    
     process(ipb_clk_i)

@@ -97,7 +97,7 @@ ARCHITECTURE simulation_arch OF tracking_data_fifo_synth IS
     -- FIFO interface signal declarations
     SIGNAL wr_clk_i                       :   STD_LOGIC;
     SIGNAL rd_clk_i                       :   STD_LOGIC;
-    SIGNAL rd_data_count                  :   STD_LOGIC_VECTOR(6-1 DOWNTO 0);
+    SIGNAL rd_data_count                  :   STD_LOGIC_VECTOR(9-1 DOWNTO 0);
     SIGNAL valid                          :   STD_LOGIC;
     SIGNAL rst	                          :   STD_LOGIC;
     SIGNAL underflow                      :   STD_LOGIC;

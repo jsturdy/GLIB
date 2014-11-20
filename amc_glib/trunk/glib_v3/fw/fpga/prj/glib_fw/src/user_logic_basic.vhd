@@ -205,19 +205,30 @@ architecture user_logic_arch of user_logic is
 
     -- Global signals
 
-    signal gtx_clk          : std_logic := '0';
+    signal gtx_clk              : std_logic := '0';
     
     -- External signals
     
-    signal ext_sbit         : std_logic := '0';
+    signal ext_sbit             : std_logic := '0';
     
     -- GTX signals
     
-    signal rx_error         : std_logic_vector(3 downto 0) := (others => '0');
-    signal rx_kchar         : std_logic_vector(7 downto 0) := (others => '0');
-    signal rx_data          : std_logic_vector(63 downto 0) := (others => '0');
-    signal tx_kchar         : std_logic_vector(7 downto 0) := (others => '0');
-    signal tx_data          : std_logic_vector(63 downto 0) := (others => '0');
+    signal rx_error             : std_logic_vector(3 downto 0) := (others => '0');
+    signal rx_kchar             : std_logic_vector(7 downto 0) := (others => '0');
+    signal rx_data              : std_logic_vector(63 downto 0) := (others => '0');
+    signal tx_kchar             : std_logic_vector(7 downto 0) := (others => '0');
+    signal tx_data              : std_logic_vector(63 downto 0) := (others => '0');
+    
+    -- Registers requests
+    
+    signal request_write        : array32(127 downto 0) := (others => (others => '0'));
+    signal request_tri          : std_logic_vector(127 downto 0);
+    signal request_read         : array32(127 downto 0) := (others => (others => '0'));
+    
+    -- Trigger
+    
+    signal empty_trigger_fifo   : std_logic := '0';
+    signal sbit_configuration   : std_logic_vector(2 downto 0) := (others => '0');
 
 begin
 
@@ -255,22 +266,25 @@ begin
     
     link_tracking_1_inst : entity work.link_tracking
     port map(
-        gtx_clk_i   => gtx_clk,
-        ipb_clk_i   => ipb_clk_i,
-        reset_i     => reset_i,
-        rx_error_i  => rx_error(1),
-        rx_kchar_i  => rx_kchar(3 downto 2),
-        rx_data_i   => rx_data(31 downto 16),
-        tx_kchar_o  => tx_kchar(3 downto 2),
-        tx_data_o   => tx_data(31 downto 16),
-        ipb_vi2c_i  => ipb_mosi_i(ipb_vi2c_1),
-        ipb_vi2c_o  => ipb_miso_o(ipb_vi2c_1),
-        ipb_track_i => ipb_mosi_i(ipb_track_1),
-        ipb_track_o => ipb_miso_o(ipb_track_1),
-        ipb_regs_i  => ipb_mosi_i(ipb_regs_1),
-        ipb_regs_o  => ipb_miso_o(ipb_regs_1),
-        ipb_info_i  => ipb_mosi_i(ipb_info_1),
-        ipb_info_o  => ipb_miso_o(ipb_info_1)
+        gtx_clk_i       => gtx_clk,
+        ipb_clk_i       => ipb_clk_i,
+        reset_i         => reset_i,
+        rx_error_i      => rx_error(1),
+        rx_kchar_i      => rx_kchar(3 downto 2),
+        rx_data_i       => rx_data(31 downto 16),
+        tx_kchar_o      => tx_kchar(3 downto 2),
+        tx_data_o       => tx_data(31 downto 16),
+        ipb_vi2c_i      => ipb_mosi_i(ipb_vi2c_1),
+        ipb_vi2c_o      => ipb_miso_o(ipb_vi2c_1),
+        ipb_track_i     => ipb_mosi_i(ipb_track_1),
+        ipb_track_o     => ipb_miso_o(ipb_track_1),
+        ipb_regs_i      => ipb_mosi_i(ipb_regs_1),
+        ipb_regs_o      => ipb_miso_o(ipb_regs_1),
+        ipb_info_i      => ipb_mosi_i(ipb_info_1),
+        ipb_info_o      => ipb_miso_o(ipb_info_1),
+        request_write_o => request_write,
+        request_tri_o   => request_tri,
+        request_read_i  => request_read
     );
 
     --================================--
@@ -287,9 +301,25 @@ begin
         rx_data_i       => rx_data(63 downto 48),
         tx_kchar_o      => tx_kchar(7 downto 6),
         tx_data_o       => tx_data(63 downto 48),
-        ext_sbit_o      => ext_sbit,
         ipb_trigger_i   => ipb_mosi_i(ipb_trigger),
-        ipb_trigger_o   => ipb_miso_o(ipb_trigger)
+        ipb_trigger_o   => ipb_miso_o(ipb_trigger),
+        fifo_reset_i    => empty_trigger_fifo,
+        sbit_config_i   => sbit_configuration,
+        ext_sbit_o      => ext_sbit
     );
 
+    --================================--
+    -- Register mapping
+    --================================--
+    
+    -- Empty trigger fifo
+    
+    empty_trigger_fifo <= request_tri(0);
+
+    -- S Bits configuration : 0 -- read / write _ Controls the Sbits to send to the TDC
+    
+    sbit_configuration_reg : entity work.reg port map(fabric_clk_i => gtx_clk, reset_i => reset_i, wbus_i => request_write(1), wbus_t => request_tri(1), rbus_o => request_read(1));        
+    sbit_configuration <= request_read(1)(2 downto 0); 
+    
+    
 end user_logic_arch;

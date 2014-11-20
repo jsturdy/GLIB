@@ -30,7 +30,13 @@ port(
 	ipb_regs_o      : out ipb_rbus;
     
 	ipb_info_i      : in ipb_wbus;
-	ipb_info_o      : out ipb_rbus
+	ipb_info_o      : out ipb_rbus;
+
+    -- Global requets
+  
+    request_write_o : out array32(127 downto 0);
+    request_tri_o   : out std_logic_vector(127 downto 0);
+    request_read_i  : in array32(127 downto 0)
     
 );
 end link_tracking;
@@ -49,7 +55,7 @@ architecture Behavioral of link_tracking is
     signal track_rx_en              : std_logic := '0';
     signal track_rx_data            : std_logic_vector(223 downto 0) := (others => '0');
     signal track_fifo_reset         : std_logic := '0';
-    signal track_fifo_count         : std_logic_vector(5 downto 0) := (others => '0');
+    signal track_fifo_count         : std_logic_vector(8 downto 0) := (others => '0');
          
     -- Registers signals
     
@@ -64,6 +70,12 @@ architecture Behavioral of link_tracking is
     signal regs_req_tri             : std_logic_vector(255 downto 0);
     signal regs_req_read            : array32(255 downto 0) := (others => (others => '0'));
 
+    -- Local requests
+
+    signal request_write            : array32(127 downto 0) := (others => (others => '0'));
+    signal request_tri              : std_logic_vector(127 downto 0);
+    signal request_read             : array32(127 downto 0) := (others => (others => '0'));
+
     -- Counters
 
     signal rx_error_counter         : std_logic_vector(31 downto 0) := (others => '0');
@@ -77,14 +89,6 @@ architecture Behavioral of link_tracking is
     signal vi2c_tx_counter_reset    : std_logic := '0';
     signal regs_rx_counter_reset    : std_logic := '0';
     signal regs_tx_counter_reset    : std_logic := '0';
-
-    -- ChipScope signals
-
-    signal tx_data                  : std_logic_vector(15 downto 0);
-
-    signal cs_icon0                 : std_logic_vector(35 downto 0);
-    signal cs_ila0                  : std_logic_vector(31 downto 0);
-    signal cs_ila1                  : std_logic_vector(31 downto 0);
     
 begin
 
@@ -101,7 +105,7 @@ begin
         regs_en_i   => regs_tx_en,
         regs_data_i => regs_tx_data,
         tx_kchar_o  => tx_kchar_o,
-        tx_data_o   => tx_data -- tx_data_o  
+        tx_data_o   => tx_data_o  
     );
     
     gtx_rx_mux_inst : entity work.gtx_rx_mux
@@ -117,8 +121,6 @@ begin
         rx_kchar_i      => rx_kchar_i,
         rx_data_i       => rx_data_i
     );
-    
-    tx_data_o <= tx_data;
     
     --================================--
     -- VFAT2 I2C
@@ -185,6 +187,14 @@ begin
         wbus_t      => regs_req_tri,
         rbus_i      => regs_req_read
     );
+    
+    regs_req_read <= request_read_i & request_read;    -- Global & Local
+    
+    request_write_o <= regs_req_write(255 downto 128);   -- Global mapping
+    request_tri_o <= regs_req_tri(255 downto 128);
+    
+    request_write <= regs_req_write(127 downto 0);       -- Local mapping
+    request_tri <= regs_req_tri(127 downto 0);
 
     --================================--
     -- Counters
@@ -202,49 +212,38 @@ begin
     
     -- Counters : 4 downto 0
     
-    regs_req_read(0) <= rx_error_counter;
+    request_read(0) <= rx_error_counter;
     
-    regs_req_read(1) <= vi2c_rx_counter;
+    request_read(1) <= vi2c_rx_counter;
     
-    regs_req_read(2) <= vi2c_tx_counter;
+    request_read(2) <= vi2c_tx_counter;
     
-    regs_req_read(3) <= regs_rx_counter;
+    request_read(3) <= regs_rx_counter;
     
-    regs_req_read(4) <= regs_tx_counter;
+    request_read(4) <= regs_tx_counter;
     
     -- Counters reset : 9 downto 5
     
-    rx_error_counter_reset <= regs_req_tri(5);
+    rx_error_counter_reset <= request_tri(5);
     
-    vi2c_rx_counter_reset <= regs_req_tri(6);
+    vi2c_rx_counter_reset <= request_tri(6);
     
-    vi2c_tx_counter_reset <= regs_req_tri(7);
+    vi2c_tx_counter_reset <= request_tri(7);
     
-    regs_rx_counter_reset <= regs_req_tri(8);
+    regs_rx_counter_reset <= request_tri(8);
     
-    regs_tx_counter_reset <= regs_req_tri(9);
+    regs_tx_counter_reset <= request_tri(9);
     
     -- Firmware date : 10
     
-    regs_req_read(10) <= x"20141115";
+    request_read(10) <= x"20141120";
     
     -- Tracking fifo : 12 downto 11
     
-    regs_req_read(11) <= x"000000" & "00" & track_fifo_count; -- Occupancy
+    request_read(11) <= x"00000" & "000" & track_fifo_count; -- Occupancy
     
-    track_fifo_reset <= regs_req_tri(12); -- Reset
+    track_fifo_reset <= request_tri(12); -- Reset
     
-    -- Others : 255 downto 13
-   
-    --================================--
-    -- ChipScope
-    --================================--
-
-    chipscope_icon_inst : entity work.chipscope_icon port map (CONTROL0 => cs_icon0);
-    
-    chipscope_ila_inst : entity work.chipscope_ila port map (CONTROL => cs_icon0, CLK => gtx_clk_i, TRIG0 => cs_ila0, TRIG1 => cs_ila1);
-
-    cs_ila0 <= tx_data & rx_data_i;
-    cs_ila1 <= track_rx_data(191 downto 168) & "0000000" & track_rx_en;
+    -- Others : 127 downto 13
     
 end Behavioral;

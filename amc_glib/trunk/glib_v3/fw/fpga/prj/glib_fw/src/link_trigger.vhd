@@ -38,6 +38,14 @@ architecture Behavioral of link_trigger is
     
 begin
 
+    trigger_tx_inst : entity work.trigger_tx
+    port map(
+        gtx_clk_i   => gtx_clk_i,
+        reset_i     => reset_i,
+        tx_kchar_o  => tx_kchar_o,
+        tx_data_o   => tx_data_o
+    );
+
     trigger_sbits_inst : entity work.trigger_sbits
     port map(
         sbits_i         => trigger_rx_data(5 downto 0),

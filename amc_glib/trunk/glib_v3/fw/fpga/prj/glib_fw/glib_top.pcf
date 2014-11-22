@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Nov 22 13:10:51 2014
+// Written by: Map P.20131013 on Sat Nov 22 15:43:04 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -1866,7 +1866,17 @@ TIMEGRP gtx0_tx_out_clk = BEL "usr/gtx_wrapper_inst/tx_out_clk_bufg" PIN
         "usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1"
         BEL
         "usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0"
-        PIN
+        BEL "usr/link_trigger_inst/trigger_tx_inst/tx_kchar_o" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_0" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_1" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_2" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_3" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_4" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_5" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_6" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_7" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_8" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_9" PIN
         "usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM18.ram_pins<32>"
         PIN
         "usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.WIDE_PRIM18.ram_pins<33>"
@@ -3334,7 +3344,17 @@ TIMEGRP usr_gtx_clk = PIN "usr/gtx_wrapper_inst/gtx_3_inst/gtxe1_i_pins<150>"
         "usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1"
         BEL
         "usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0"
-        PIN
+        BEL "usr/link_trigger_inst/trigger_tx_inst/tx_kchar_o" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_0" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_1" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_2" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_3" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_4" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_5" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_6" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_7" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_8" BEL
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_9" PIN
         "usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM18.ram_pins<32>"
         PIN
         "usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.WIDE_PRIM18.ram_pins<33>"

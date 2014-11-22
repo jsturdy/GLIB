@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.11 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: glib_top.prj
 
@@ -416,6 +416,9 @@ WARNING:HDLCompiler:701 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\gli
 Parsing VHDL file "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\user_addr_decode.vhd" into library work
 Parsing package <user_addr_decode>.
 Parsing package body <user_addr_decode>.
+Parsing VHDL file "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\trigger_tx.vhd" into library work
+Parsing entity <trigger_tx>.
+Parsing architecture <Behavioral> of entity <trigger_tx>.
 Parsing VHDL file "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\trigger_sbits.vhd" into library work
 Parsing entity <trigger_sbits>.
 Parsing architecture <Behavioral> of entity <trigger_sbits>.
@@ -809,6 +812,8 @@ Elaborating entity <counter> (architecture <Behavioral>) from library <work>.
 WARNING:HDLCompiler:634 - "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_tracking.vhd" Line 77: Net <request_read[127][31]> does not have a driver.
 
 Elaborating entity <link_trigger> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <trigger_tx> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <trigger_sbits> (architecture <Behavioral>) from library <work>.
 
@@ -12819,11 +12824,25 @@ Unit <counter> synthesized.
 Synthesizing Unit <link_trigger>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\link_trigger.vhd".
 WARNING:Xst:647 - Input <rx_error_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <tx_kchar_o> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <tx_data_o> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <link_trigger> synthesized.
+
+Synthesizing Unit <trigger_tx>.
+    Related source file is "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\trigger_tx.vhd".
+    Found 10-bit register for signal <kchar_count>.
+    Found 2-bit register for signal <tx_kchar_o>.
+    Found 10-bit adder for signal <kchar_count[9]_GND_8757_o_add_1_OUT> created at line 56.
+    WARNING:Xst:2404 -  FFs/Latches <tx_data_o<1:8>> (without init value) have a constant value of 0 in block <trigger_tx>.
+    WARNING:Xst:2404 -  FFs/Latches <tx_data_o<8:8>> (without init value) have a constant value of 1 in block <trigger_tx>.
+    WARNING:Xst:2404 -  FFs/Latches <tx_data_o<8:8>> (without init value) have a constant value of 0 in block <trigger_tx>.
+    WARNING:Xst:2404 -  FFs/Latches <tx_data_o<8:11>> (without init value) have a constant value of 1 in block <trigger_tx>.
+    WARNING:Xst:2404 -  FFs/Latches <tx_data_o<11:12>> (without init value) have a constant value of 0 in block <trigger_tx>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <trigger_tx> synthesized.
 
 Synthesizing Unit <trigger_sbits>.
     Related source file is "\\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\src\trigger_sbits.vhd".
@@ -12853,8 +12872,8 @@ Synthesizing Unit <trigger_data_decoder>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 7-bit subtractor for signal <GND_8758_o_GND_8758_o_sub_10_OUT> created at line 78.
-    Found 2-bit subtractor for signal <GND_8758_o_GND_8758_o_sub_18_OUT<1:0>> created at line 86.
+    Found 7-bit subtractor for signal <GND_8759_o_GND_8759_o_sub_10_OUT> created at line 78.
+    Found 2-bit subtractor for signal <GND_8759_o_GND_8759_o_sub_18_OUT<1:0>> created at line 86.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  99 D-type flip-flop(s).
@@ -12912,9 +12931,9 @@ Macro Statistics
  4096x8-bit dual-port RAM                              : 2
  8192x32-bit dual-port RAM                             : 2
  8192x8-bit dual-port RAM                              : 8
-# Adders/Subtractors                                   : 130
+# Adders/Subtractors                                   : 131
  1-bit adder                                           : 6
- 10-bit adder                                          : 1
+ 10-bit adder                                          : 2
  10-bit subtractor                                     : 7
  11-bit subtractor                                     : 2
  12-bit adder                                          : 4
@@ -12947,9 +12966,9 @@ Macro Statistics
  8-bit subtractor                                      : 2
  9-bit adder                                           : 8
  9-bit subtractor                                      : 1
-# Registers                                            : 1485
+# Registers                                            : 1487
  1-bit register                                        : 891
- 10-bit register                                       : 13
+ 10-bit register                                       : 14
  11-bit register                                       : 4
  112-bit register                                      : 2
  12-bit register                                       : 8
@@ -12957,7 +12976,7 @@ Macro Statistics
  13-bit register                                       : 46
  16-bit register                                       : 87
  17-bit register                                       : 2
- 2-bit register                                        : 31
+ 2-bit register                                        : 32
  21-bit register                                       : 17
  224-bit register                                      : 3
  24-bit register                                       : 8
@@ -12996,14 +13015,14 @@ Macro Statistics
  8-bit comparator equal                                : 10
  8-bit comparator greater                              : 4
  8-bit comparator not equal                            : 14
-# Multiplexers                                         : 3001
+# Multiplexers                                         : 3002
  1-bit 16-to-1 multiplexer                             : 12
  1-bit 2-to-1 multiplexer                              : 2085
  1-bit 3-to-1 multiplexer                              : 18
  1-bit 4-to-1 multiplexer                              : 6
  1-bit 7-to-1 multiplexer                              : 3
  1-bit 8-to-1 multiplexer                              : 2
- 10-bit 2-to-1 multiplexer                             : 33
+ 10-bit 2-to-1 multiplexer                             : 34
  10-bit 4-to-1 multiplexer                             : 1
  112-bit 2-to-1 multiplexer                            : 2
  12-bit 2-to-1 multiplexer                             : 14
@@ -13114,15 +13133,6 @@ INFO:Xst:2261 - The FF/Latch <_i000072_6> in Unit <ipb_vi2c_inst> is equivalent 
 INFO:Xst:2261 - The FF/Latch <ipb_data_21> in Unit <ipb_vi2c_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ipb_data_22> <ipb_data_23> <ipb_data_27> <ipb_data_28> <ipb_data_29> <ipb_data_30> <ipb_data_31> 
 INFO:Xst:2261 - The FF/Latch <tx_data_30> in Unit <ipb_vi2c_inst> is equivalent to the following FF/Latch, which will be removed : <tx_data_31> 
 INFO:Xst:2261 - The FF/Latch <header_2> in Unit <gtx_tx_mux_inst> is equivalent to the following 5 FFs/Latches, which will be removed : <header_3> <header_4> <header_5> <header_6> <header_7> 
-INFO:Xst:2261 - The FF/Latch <reg_5> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_5> 
-INFO:Xst:2261 - The FF/Latch <reg_6> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_6> 
-INFO:Xst:2261 - The FF/Latch <reg_7> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_7> 
-INFO:Xst:2261 - The FF/Latch <reg_8> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_8> 
-INFO:Xst:2261 - The FF/Latch <reg_9> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_9> 
-INFO:Xst:2261 - The FF/Latch <reg_10> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_10> 
-INFO:Xst:2261 - The FF/Latch <reg_11> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_11> 
-INFO:Xst:2261 - The FF/Latch <reg_12> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_12> 
-INFO:Xst:2261 - The FF/Latch <reg_13> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_13> 
 INFO:Xst:2261 - The FF/Latch <reg_14> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_14> 
 INFO:Xst:2261 - The FF/Latch <reg_15> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_15> 
 INFO:Xst:2261 - The FF/Latch <reg_20> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_20> 
@@ -13146,6 +13156,15 @@ INFO:Xst:2261 - The FF/Latch <reg_1> in Unit <sbit_configuration_reg> is equival
 INFO:Xst:2261 - The FF/Latch <reg_2> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_2> 
 INFO:Xst:2261 - The FF/Latch <reg_3> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_3> 
 INFO:Xst:2261 - The FF/Latch <reg_4> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_4> 
+INFO:Xst:2261 - The FF/Latch <reg_5> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_5> 
+INFO:Xst:2261 - The FF/Latch <reg_6> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_6> 
+INFO:Xst:2261 - The FF/Latch <reg_7> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_7> 
+INFO:Xst:2261 - The FF/Latch <reg_8> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_8> 
+INFO:Xst:2261 - The FF/Latch <reg_9> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_9> 
+INFO:Xst:2261 - The FF/Latch <reg_10> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_10> 
+INFO:Xst:2261 - The FF/Latch <reg_11> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_11> 
+INFO:Xst:2261 - The FF/Latch <reg_12> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_12> 
+INFO:Xst:2261 - The FF/Latch <reg_13> in Unit <sbit_configuration_reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_13> 
 INFO:Xst:2261 - The FF/Latch <testModeFsm_process.state> in Unit <sramInterfaceIoControl> is equivalent to the following FF/Latch, which will be removed : <bistModeEnable_from_fsm> 
 INFO:Xst:2261 - The FF/Latch <ERRORCOUNTER_O_6> in Unit <bist> is equivalent to the following FF/Latch, which will be removed : <main_process.errorCounter_6> 
 INFO:Xst:2261 - The FF/Latch <ERRORCOUNTER_O_7> in Unit <bist> is equivalent to the following FF/Latch, which will be removed : <main_process.errorCounter_7> 
@@ -13291,7 +13310,6 @@ WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_27> (without init value) has
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_26> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_25> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_24> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_21> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_20> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_19> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_18> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
@@ -13306,6 +13324,7 @@ WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_10> (without init value) has
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_9> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_8> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_0> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <tx_kchar_o_1> (without init value) has a constant value of 0 in block <trigger_tx_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <header_2> has a constant value of 0 in block <gtx_tx_mux_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <ipb_data_21> has a constant value of 0 in block <ipb_vi2c_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <_i000072_6> has a constant value of 0 in block <ipb_vi2c_inst>. This FF/Latch will be trimmed during the optimization process.
@@ -13331,6 +13350,7 @@ WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_25> (without init value) has
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_24> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_23> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_22> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_block.data_buffer_21> (without init value) has a constant value of 0 in block <RARP_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tx_data_30> has a constant value of 0 in block <ipb_vi2c_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <trigger_data_o_6> of sequential type is unconnected in block <trigger_data_decoder_inst>.
 WARNING:Xst:2677 - Node <trigger_data_o_7> of sequential type is unconnected in block <trigger_data_decoder_inst>.
@@ -13389,6 +13409,7 @@ WARNING:Xst:2677 - Node <regs_o_11_4> of sequential type is unconnected in block
 WARNING:Xst:2677 - Node <regs_o_11_5> of sequential type is unconnected in block <eep.i2c_eep>.
 WARNING:Xst:2677 - Node <regs_o_11_6> of sequential type is unconnected in block <eep.i2c_eep>.
 WARNING:Xst:2677 - Node <regs_o_11_7> of sequential type is unconnected in block <eep.i2c_eep>.
+WARNING:Xst:2404 -  FFs/Latches <tx_kchar_o<1:1>> (without init value) have a constant value of 0 in block <trigger_tx>.
 WARNING:Xst:2404 -  FFs/Latches <rarp_end_addr<12:6>> (without init value) have a constant value of 0 in block <udp_rarp_block>.
 WARNING:Xst:2404 -  FFs/Latches <arp_end_addr<12:6>> (without init value) have a constant value of 0 in block <udp_build_arp>.
 WARNING:Xst:2404 -  FFs/Latches <status_end_addr<12:7>> (without init value) have a constant value of 0 in block <udp_build_status>.
@@ -13483,6 +13504,10 @@ Unit <transactor_sm> synthesized (advanced).
 Synthesizing (advanced) Unit <trigger_data_decoder>.
 The following registers are absorbed into counter <data_cnt>: 1 register on signal <data_cnt>.
 Unit <trigger_data_decoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <trigger_tx>.
+The following registers are absorbed into counter <kchar_count>: 1 register on signal <kchar_count>.
+Unit <trigger_tx> synthesized (advanced).
 
 Synthesizing (advanced) Unit <udp_DualPortRAM>.
 INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <dob>
@@ -13697,9 +13722,10 @@ Macro Statistics
  8-bit adder                                           : 5
  9-bit adder                                           : 8
  9-bit subtractor                                      : 1
-# Counters                                             : 71
+# Counters                                             : 72
  1-bit up counter                                      : 4
  10-bit down counter                                   : 2
+ 10-bit up counter                                     : 1
  11-bit down counter                                   : 2
  12-bit up counter                                     : 4
  16-bit up counter                                     : 6
@@ -13717,8 +13743,8 @@ Macro Statistics
  6-bit up counter                                      : 3
  8-bit down counter                                    : 2
  8-bit up counter                                      : 2
-# Registers                                            : 12463
- Flip-Flops                                            : 12463
+# Registers                                            : 12464
+ Flip-Flops                                            : 12464
 # Comparators                                          : 82
  10-bit comparator equal                               : 2
  10-bit comparator greater                             : 1
@@ -13872,15 +13898,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ip_pkt.msk_data_7> 
 WARNING:Xst:1710 - FF/Latch <status_end_addr_1> (without init value) has a constant value of 0 in block <udp_build_status>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <status_end_addr_2> (without init value) has a constant value of 0 in block <udp_build_status>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <status_end_addr_4> (without init value) has a constant value of 0 in block <udp_build_status>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <reg_5> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_5> 
-INFO:Xst:2261 - The FF/Latch <reg_6> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_6> 
-INFO:Xst:2261 - The FF/Latch <reg_7> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_7> 
-INFO:Xst:2261 - The FF/Latch <reg_8> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_8> 
-INFO:Xst:2261 - The FF/Latch <reg_9> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_9> 
-INFO:Xst:2261 - The FF/Latch <reg_10> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_10> 
-INFO:Xst:2261 - The FF/Latch <reg_11> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_11> 
-INFO:Xst:2261 - The FF/Latch <reg_12> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_12> 
-INFO:Xst:2261 - The FF/Latch <reg_13> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_13> 
 INFO:Xst:2261 - The FF/Latch <reg_14> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_14> 
 INFO:Xst:2261 - The FF/Latch <reg_15> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_15> 
 INFO:Xst:2261 - The FF/Latch <reg_20> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_20> 
@@ -13904,6 +13921,15 @@ INFO:Xst:2261 - The FF/Latch <reg_1> in Unit <reg> is equivalent to the followin
 INFO:Xst:2261 - The FF/Latch <reg_2> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_2> 
 INFO:Xst:2261 - The FF/Latch <reg_3> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_3> 
 INFO:Xst:2261 - The FF/Latch <reg_4> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_4> 
+INFO:Xst:2261 - The FF/Latch <reg_5> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_5> 
+INFO:Xst:2261 - The FF/Latch <reg_6> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_6> 
+INFO:Xst:2261 - The FF/Latch <reg_7> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_7> 
+INFO:Xst:2261 - The FF/Latch <reg_8> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_8> 
+INFO:Xst:2261 - The FF/Latch <reg_9> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_9> 
+INFO:Xst:2261 - The FF/Latch <reg_10> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_10> 
+INFO:Xst:2261 - The FF/Latch <reg_11> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_11> 
+INFO:Xst:2261 - The FF/Latch <reg_12> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_12> 
+INFO:Xst:2261 - The FF/Latch <reg_13> in Unit <reg> is equivalent to the following FF/Latch, which will be removed : <rbus_o_13> 
 INFO:Xst:2261 - The FF/Latch <testModeFsm_process.state> in Unit <glib_sram_interface_ioControl> is equivalent to the following FF/Latch, which will be removed : <bistModeEnable_from_fsm> 
 INFO:Xst:2261 - The FF/Latch <serial.sdv_reg> in Unit <PRBS> is equivalent to the following FF/Latch, which will be removed : <parallel.pdv_reg> 
 INFO:Xst:2261 - The FF/Latch <sdv> in Unit <PRBS> is equivalent to the following FF/Latch, which will be removed : <pdv> 
@@ -14825,6 +14851,8 @@ Optimizing unit <trigger_data_decoder> ...
 Optimizing unit <ipb_trigger> ...
 
 Optimizing unit <trigger_sbits> ...
+
+Optimizing unit <trigger_tx> ...
 
 Optimizing unit <reg> ...
 
@@ -24296,8 +24324,8 @@ Unit <u2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 11392
- Flip-Flops                                            : 11392
+# Registers                                            : 11403
+ Flip-Flops                                            : 11403
 # Shift Registers                                      : 4
  2-bit shift register                                  : 3
  5-bit shift register                                  : 1
@@ -24323,28 +24351,28 @@ Top Level Output File Name         : glib_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 15117
+# BELS                             : 15150
 #      GND                         : 94
 #      INV                         : 273
 #      LUT1                        : 568
 #      LUT2                        : 2435
-#      LUT3                        : 2129
+#      LUT3                        : 2139
 #      LUT4                        : 1591
-#      LUT5                        : 1682
-#      LUT6                        : 3435
-#      MUXCY                       : 1377
+#      LUT5                        : 1683
+#      LUT6                        : 3437
+#      MUXCY                       : 1386
 #      MUXF7                       : 234
 #      MUXF8                       : 114
-#      VCC                         : 80
-#      XORCY                       : 1105
-# FlipFlops/Latches                : 12220
+#      VCC                         : 81
+#      XORCY                       : 1115
+# FlipFlops/Latches                : 12231
 #      FD                          : 2293
 #      FDC                         : 1323
 #      FDCE                        : 1188
 #      FDE                         : 3634
 #      FDP                         : 122
 #      FDPE                        : 51
-#      FDR                         : 771
+#      FDR                         : 782
 #      FDRE                        : 2400
 #      FDS                         : 58
 #      FDSE                        : 345
@@ -24388,19 +24416,19 @@ Selected Device : 6vlx130tff1156-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           12220  out of  160000     7%  
- Number of Slice LUTs:                12218  out of  80000    15%  
-    Number used as Logic:             12113  out of  80000    15%  
+ Number of Slice Registers:           12231  out of  160000     7%  
+ Number of Slice LUTs:                12231  out of  80000    15%  
+    Number used as Logic:             12126  out of  80000    15%  
     Number used as Memory:              105  out of  27840     0%  
        Number used as RAM:               96
        Number used as SRL:                9
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  16969
-   Number with an unused Flip Flop:    4749  out of  16969    27%  
-   Number with an unused LUT:          4751  out of  16969    27%  
-   Number of fully used LUT-FF pairs:  7469  out of  16969    44%  
-   Number of unique control sets:       578
+ Number of LUT Flip Flop pairs used:  16982
+   Number with an unused Flip Flop:    4751  out of  16982    27%  
+   Number with an unused LUT:          4751  out of  16982    27%  
+   Number of fully used LUT-FF pairs:  7480  out of  16982    44%  
+   Number of unique control sets:       579
 
 IO Utilization: 
  Number of IOs:                         698
@@ -24434,7 +24462,7 @@ Clock Information:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+-------+
 Clock Signal                                                                                                                                                    | Clock buffer(FF name)                                         | Load  |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+-------+
-usr/gtx_wrapper_inst/gtx_0_inst/TXOUTCLK_OUT                                                                                                                    | BUFG                                                          | 1201  |
+usr/gtx_wrapper_inst/gtx_0_inst/TXOUTCLK_OUT                                                                                                                    | BUFG                                                          | 1212  |
 clk125_2_p                                                                                                                                                      | MMCM_ADV:CLKOUT1                                              | 4287  |
 usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>(usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129><7>1:O)| BUFG(*)(usr/link_tracking_1_inst/ipb_info_inst/wbus_o<129>_30)| 32    |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT                                                      | BUFR                                                          | 3278  |
@@ -24456,7 +24484,7 @@ Asynchronous Control Signals Information:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Control Signal                                                                                                                                                                                                                                                                                                                                                                                                              | Buffer(FF name)                                                                                                                                                                                                                                              | Load  |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)          | NONE(usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)   | 64    |
+usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)          | NONE(usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)   | 64    |
 usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram)| 12    |
 usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_wr_en(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1:O)                                                                                                                                                | NONE(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.WIDE_PRIM18.ram)| 8     |
 system/amc_p0_en.amc_p0_eth/N0(system/amc_p0_en.amc_p0_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                       | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                     | 1     |
@@ -24484,34 +24512,44 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'usr/gtx_wrapper_inst/gtx_0_inst/TXOUTCLK_OUT'
-  Clock period: 3.003ns (frequency: 333.037MHz)
-  Total number of paths / destination ports: 8541 / 2816
+  Clock period: 3.126ns (frequency: 319.898MHz)
+  Total number of paths / destination ports: 9256 / 2827
 -------------------------------------------------------------------------
-Delay:               3.003ns (Levels of Logic = 3)
-  Source:            usr/link_tracking_1_inst/gtx_rx_mux_inst/data_cnt_1 (FF)
-  Destination:       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_cnt_0 (FF)
+Delay:               3.126ns (Levels of Logic = 13)
+  Source:            usr/link_trigger_inst/trigger_tx_inst/kchar_count_4 (FF)
+  Destination:       usr/link_trigger_inst/trigger_tx_inst/kchar_count_9 (FF)
   Source Clock:      usr/gtx_wrapper_inst/gtx_0_inst/TXOUTCLK_OUT rising
   Destination Clock: usr/gtx_wrapper_inst/gtx_0_inst/TXOUTCLK_OUT rising
 
-  Data Path: usr/link_tracking_1_inst/gtx_rx_mux_inst/data_cnt_1 to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_cnt_0
+  Data Path: usr/link_trigger_inst/trigger_tx_inst/kchar_count_4 to usr/link_trigger_inst/trigger_tx_inst/kchar_count_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q            229   0.375   0.834  data_cnt_1 (data_cnt_1)
-     LUT4:I0->O            1   0.068   0.417  GND_555_o_GND_555_o_equal_24_o1 (GND_555_o_GND_555_o_equal_24_o)
-     LUT6:I5->O            1   0.068   0.491  _n0434_inv1 (_n0434_inv1)
-     LUT4:I2->O            4   0.068   0.419  _n0434_inv2 (_n0434_inv)
-     FDE:CE                    0.263          data_cnt_0
+     FDR:C->Q              2   0.375   0.781  kchar_count_4 (kchar_count_4)
+     LUT5:I0->O            2   0.068   0.423  PWR_216_o_kchar_count[9]_equal_1_o<9>_SW0 (N0)
+     LUT6:I5->O           11   0.068   0.647  PWR_216_o_kchar_count[9]_equal_1_o<9> (PWR_216_o_kchar_count[9]_equal_1_o)
+     LUT3:I0->O            1   0.068   0.000  Mcount_kchar_count_lut<0> (Mcount_kchar_count_lut<0>)
+     MUXCY:S->O            1   0.290   0.000  Mcount_kchar_count_cy<0> (Mcount_kchar_count_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_kchar_count_cy<1> (Mcount_kchar_count_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_kchar_count_cy<2> (Mcount_kchar_count_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_kchar_count_cy<3> (Mcount_kchar_count_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_kchar_count_cy<4> (Mcount_kchar_count_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_kchar_count_cy<5> (Mcount_kchar_count_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_kchar_count_cy<6> (Mcount_kchar_count_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_kchar_count_cy<7> (Mcount_kchar_count_cy<7>)
+     MUXCY:CI->O           0   0.019   0.000  Mcount_kchar_count_cy<8> (Mcount_kchar_count_cy<8>)
+     XORCY:CI->O           1   0.239   0.000  Mcount_kchar_count_xor<9> (Mcount_kchar_count9)
+     FDR:D                     0.011          kchar_count_9
     ----------------------------------------
-    Total                      3.003ns (0.842ns logic, 2.161ns route)
-                                       (28.0% logic, 72.0% route)
+    Total                      3.126ns (1.275ns logic, 1.851ns route)
+                                       (40.8% logic, 59.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk125_2_p'
-  Clock period: 3.185ns (frequency: 313.931MHz)
+  Clock period: 3.186ns (frequency: 313.883MHz)
   Total number of paths / destination ports: 12168680 / 10591
 -------------------------------------------------------------------------
-Delay:               3.185ns (Levels of Logic = 5)
+Delay:               3.186ns (Levels of Logic = 5)
   Source:            system/rst/rst_fabric_o (FF)
   Destination:       system/sram2_if/sramInterface/DATA_O_0 (FF)
   Source Clock:      clk125_2_p rising
@@ -24521,7 +24559,7 @@ Delay:               3.185ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q           997   0.375   0.694  rst_fabric_o (rst_fabric_o)
+     FDPE:C->Q          1008   0.375   0.694  rst_fabric_o (rst_fabric_o)
      end scope: 'system/rst:rst_fabric_o'
      begin scope: 'system/sram2_if:RESET_I'
      begin scope: 'system/sram2_if/sramInterfaceIoControl:IPBUS_RESET_I'
@@ -24531,7 +24569,7 @@ Delay:               3.185ns (Levels of Logic = 5)
      LUT6:I0->O           36   0.068   0.552  _n01471 (_n0147)
      FDRE:R                    0.434          DATA_O_0
     ----------------------------------------
-    Total                      3.185ns (0.945ns logic, 2.240ns route)
+    Total                      3.186ns (0.945ns logic, 2.241ns route)
                                        (29.7% logic, 70.3% route)
 
 =========================================================================
@@ -24948,7 +24986,7 @@ Clock to Setup on destination clock usr/gtx_wrapper_inst/gtx_0_inst/TXOUTCLK_OUT
 Source Clock                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------------+---------+---------+---------+---------+
 clk125_2_p                                  |    2.738|         |         |         |
-usr/gtx_wrapper_inst/gtx_0_inst/TXOUTCLK_OUT|    3.003|         |         |         |
+usr/gtx_wrapper_inst/gtx_0_inst/TXOUTCLK_OUT|    3.126|         |         |         |
 --------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>
@@ -24971,14 +25009,14 @@ xpoint1_clk1_p |    2.931|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 158.00 secs
-Total CPU time to Xst completion: 158.67 secs
+Total REAL time to Xst completion: 153.00 secs
+Total CPU time to Xst completion: 153.58 secs
  
 --> 
 
-Total memory usage is 361744 kilobytes
+Total memory usage is 363792 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 18663 (   0 filtered)
+Number of warnings : 18668 (   0 filtered)
 Number of infos    :  906 (   0 filtered)
 

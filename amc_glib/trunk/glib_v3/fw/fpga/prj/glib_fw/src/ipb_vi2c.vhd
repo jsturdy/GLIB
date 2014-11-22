@@ -90,12 +90,22 @@ begin
                 
                     -- Register data
                     if (last_ipb_strobe = '0' and ipb_mosi_i.ipb_strobe = '1') then
-                       
-                        chip_byte := "00" & (not ipb_mosi_i.ipb_write) & ipb_mosi_i.ipb_addr(12 downto 8);
+                    
+                        if (ipb_mosi_i.ipb_write = '1') then
+                    
+                            chip_byte := "00" & '0' & ipb_mosi_i.ipb_addr(12 downto 8);
+
+                            data_byte := ipb_mosi_i.ipb_wdata(7 downto 0); 
+                            
+                        else
+                    
+                            chip_byte := "00" & '1' & ipb_mosi_i.ipb_addr(12 downto 8);
+
+                            data_byte := (others => '0');
+                        
+                        end if;
                                                     
                         register_byte := ipb_mosi_i.ipb_addr(7 downto 0);
-                        
-                        data_byte := ipb_mosi_i.ipb_wdata(7 downto 0); 
                         
                         state := 1;
                         

@@ -222,7 +222,7 @@ architecture user_logic_arch of user_logic is
     -- Registers requests
     
     signal request_write        : array32(127 downto 0) := (others => (others => '0'));
-    signal request_tri          : std_logic_vector(127 downto 0);
+    signal request_tri          : std_logic_vector(127 downto 0) := (others => '0');
     signal request_read         : array32(127 downto 0) := (others => (others => '0'));
     
     -- Trigger
@@ -233,9 +233,9 @@ architecture user_logic_arch of user_logic is
 begin
 
     ip_addr_o <= x"c0a80073";  -- 192.168.0.115
-    mac_addr_o <= x"080030F100a" & amc_slot_i;  -- 08:00:30:F1:00:0[A0:AF]
-    user_v6_led_o(1) <= '0';
-    user_v6_led_o(2) <= '0';
+    mac_addr_o <= x"080030F100a0";  -- 08:00:30:F1:00:A0
+    user_v6_led_o(1) <= '1';
+    user_v6_led_o(2) <= '1';
     
     fmc1_io_pin.la_p(10) <= ext_sbit;
 
@@ -318,7 +318,7 @@ begin
 
     -- S Bits configuration : 0 -- read / write _ Controls the Sbits to send to the TDC
     
-    sbit_configuration_reg : entity work.reg port map(fabric_clk_i => gtx_clk, reset_i => reset_i, wbus_i => request_write(1), wbus_t => request_tri(1), rbus_o => request_read(1));        
+    sbit_configuration_reg : entity work.reg port map(fabric_clk_i => ipb_clk_i, reset_i => reset_i, wbus_i => request_write(1), wbus_t => request_tri(1), rbus_o => request_read(1));        
     sbit_configuration <= request_read(1)(2 downto 0); 
     
     

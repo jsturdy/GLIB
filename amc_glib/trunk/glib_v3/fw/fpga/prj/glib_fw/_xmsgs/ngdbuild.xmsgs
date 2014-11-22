@@ -5,9 +5,6 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="NgdBuild" num="1317" delta="old" >Using core <arg fmt="%s" index="1">chipscope_ila_v1</arg> requires a ChipScopePro license.  The following blocks are instances of core <arg fmt="%s" index="2">chipscope_ila_v1</arg>:
-</msg>
-
 <msg type="warning" file="NgdBuild" num="0" delta="new" >The value of SIM_DEVICE on instance &apos;<arg fmt="%s" index="1">system/amc_p0_en.amc_p0_eth/clkbuf</arg>&apos; of type <arg fmt="%s" index="2">BUFR</arg> has been changed from &apos;<arg fmt="%s" index="3">VIRTEX4</arg>&apos; to &apos;<arg fmt="%s" index="4">VIRTEX6</arg>&apos; to correct post-ngdbuild and timing simulation for this primitive.  In order for functional simulation to be correct, the value of SIM_DEVICE should be changed in this same manner in the source netlist or constraint file.
 </msg>
 

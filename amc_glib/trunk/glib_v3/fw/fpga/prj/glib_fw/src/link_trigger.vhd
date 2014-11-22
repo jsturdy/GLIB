@@ -35,12 +35,6 @@ architecture Behavioral of link_trigger is
 
     signal trigger_rx_en    : std_logic := '0';
     signal trigger_rx_data  : std_logic_vector(47 downto 0) := (others => '0');
-
-    -- ChipScope signals
-
-    signal cs_icon0                 : std_logic_vector(35 downto 0);
-    signal cs_ila0                  : std_logic_vector(31 downto 0);
-    signal cs_ila1                  : std_logic_vector(31 downto 0);
     
 begin
 
@@ -72,16 +66,5 @@ begin
         rx_data_i       => trigger_rx_data,
         fifo_reset_i    => fifo_reset_i
     );
-   
-    --================================--
-    -- ChipScope
-    --================================--
-
-    chipscope_icon_inst : entity work.chipscope_icon port map (CONTROL0 => cs_icon0);
-    
-    chipscope_ila_inst : entity work.chipscope_ila port map (CONTROL => cs_icon0, CLK => gtx_clk_i, TRIG0 => cs_ila0, TRIG1 => cs_ila1);
-
-    cs_ila0 <= x"0000" & rx_data_i;
-    cs_ila1 <= (0 => trigger_rx_en, others => '0');
     
 end Behavioral;

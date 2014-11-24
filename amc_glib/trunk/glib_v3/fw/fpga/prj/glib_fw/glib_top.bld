@@ -1,16 +1,17 @@
-Release 14.7 ngdbuild P.20131013 (nt)
+Release 14.7 ngdbuild P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
-ise -dd _ngo -sd ipcore_dir -sd ../../src/system/cdce/cdce_phase_mon_v2/dpram
--sd ../../src/system/ethernet/ipcore_dir/basex -sd
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -sd
+../../src/system/cdce/cdce_phase_mon_v2/dpram -sd
+../../src/system/ethernet/ipcore_dir/basex -sd
 ../../src/system/ethernet/ipcore_dir/sgmii -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ezdma2_ctrl_dpram -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ipbus_ctrl_dpram -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo -sd
 ../../src/system/cdce/cdce_phase_mon_v2/pll -sd ../../src/system/pll -nt
-timestamp -uc src/system_clk.ucf -uc src/system.ucf -uc src/gtx.ucf -p
+timestamp -uc src/gtx.ucf -uc src/system_clk.ucf -uc src/system.ucf -p
 xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
 
 Reading NGO file
@@ -27,9 +28,9 @@ Loading design module
 Gathering constraint information from source properties...
 Done.
 
+Annotating constraints to design from ucf file "src/gtx.ucf" ...
 Annotating constraints to design from ucf file "src/system_clk.ucf" ...
 Annotating constraints to design from ucf file "src/system.ucf" ...
-Annotating constraints to design from ucf file "src/gtx.ucf" ...
 WARNING:NgdBuild - The value of SIM_DEVICE on instance
    'system/amc_p0_en.amc_p0_eth/clkbuf' of type BUFR has been changed from
    'VIRTEX4' to 'VIRTEX6' to correct post-ngdbuild and timing simulation for
@@ -10055,10 +10056,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 5255
 
-Total memory usage is 216684 kilobytes
+Total memory usage is 312636 kilobytes
 
 Writing NGD file "glib_top.ngd" ...
-Total REAL time to NGDBUILD completion:  37 sec
+Total REAL time to NGDBUILD completion:  36 sec
 Total CPU time to NGDBUILD completion:   28 sec
 
 Writing NGDBUILD log file "glib_top.bld"...

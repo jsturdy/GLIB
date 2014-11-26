@@ -332,6 +332,21 @@ architecture user_logic_arch of user_logic is
     signal bc0_counter_reset            : std_logic := '0';
     signal bx_counter_reset             : std_logic := '0';
     
+
+    signal cs_icon0                 : std_logic_vector(35 downto 0) := (others => '0');
+    signal cs_icon1                 : std_logic_vector(35 downto 0) := (others => '0');
+    
+    signal cs_async_in              : std_logic_vector(15 downto 0) := (others => '0');
+    signal cs_async_out             : std_logic_vector(15 downto 0) := (others => '0');
+    signal cs_sync_in               : std_logic_vector(15 downto 0) := (others => '0');
+    signal cs_sync_out              : std_logic_vector(15 downto 0) := (others => '0');
+    
+    signal cs_ila0                  : std_logic_vector(31 downto 0);
+    signal cs_ila1                  : std_logic_vector(31 downto 0);
+    signal cs_ila2                  : std_logic_vector(31 downto 0);
+    signal cs_ila3                  : std_logic_vector(31 downto 0);
+    
+    
 begin
 
     ip_addr_o <= x"c0a80073";  -- 192.168.0.115
@@ -711,5 +726,28 @@ begin
     s3_bit_buffer : ibufds_lvds_25 port map(o => vfat2_data_8_i(2), ib => fmc2_io_pin.la_n(30), i => fmc2_io_pin.la_p(30));
     s2_bit_buffer : ibufds_lvds_25 port map(o => vfat2_data_8_i(1), ib => fmc2_io_pin.la_n(33), i => fmc2_io_pin.la_p(33));
     s1_bit_buffer : ibufds_lvds_25 port map(o => vfat2_data_8_i(0), ib => fmc2_io_pin.la_n(32), i => fmc2_io_pin.la_p(32));
+    
+    --================================--
+    -- ChipScope
+    --================================--
 
+    chipscope_icon_inst : entity work.chipscope_icon port map (CONTROL0 => cs_icon0, CONTROL1 => cs_icon1);
+
+    chipscope_vio_inst : entity work.chipscope_vio port map (CONTROL => cs_icon0, CLK => gtx_clk, ASYNC_IN => cs_async_in, ASYNC_OUT => cs_async_out, SYNC_IN => cs_sync_in, SYNC_OUT => cs_sync_out);
+
+    --gtp_reset <= cs_sync_out(3 downto 0);
+
+    chipscope_ila_inst : entity work.chipscope_ila port map (CONTROL => cs_icon1, CLK => gtx_clk, TRIG0 => cs_ila0, TRIG1 => cs_ila1, TRIG2 => cs_ila2, TRIG3 => cs_ila3);
+
+    cs_ila0 <= tx_data(31 downto 16) & rx_data(31 downto 16);
+    cs_ila1 <= tx_data(63 downto 48) & rx_data(63 downto 48);
+    
+    cs_ila2 <= (0 => vfat2_dvalid_i(0), 1 => vfat2_dvalid_i(1),
+                2 => vfat2_data_8_i(8), 3 => vfat2_data_9_i(8), 4 => vfat2_data_10_i(8), 5 => vfat2_data_11_i(8), 6 => vfat2_data_12_i(8), 7 => vfat2_data_13_i(8),
+                others => '0');
+                
+    cs_ila3 <= (0 => ext_lv1a, 1 => req_lv1a, 2 => t1_lv1a, 3 => '0',
+                4 => t1_calpulse, 5 => t1_resync, 6 => t1_bc0, 7 => '0',
+                others => '0');
+                
 end user_logic_arch;

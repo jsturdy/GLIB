@@ -24,7 +24,7 @@ architecture Behavioral of adc_handler is
     
     signal uart_en      : std_logic := '0';
     signal uart_data    : std_logic_vector(7 downto 0) := (others => '0');
-
+    
 begin
 
     uart_rx_inst : entity work.uart_rx

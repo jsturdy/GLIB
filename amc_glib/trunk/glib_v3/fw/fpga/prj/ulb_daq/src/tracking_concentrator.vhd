@@ -25,11 +25,14 @@ port(
 end tracking_concentrator;
 
 architecture Behavioral of tracking_concentrator is
-begin  
+begin
     
     process(vfat2_clk_i)
     
         variable state      : integer range 0 to 3 := 0;
+        
+        variable en         : std_logic_vector(7 downto 0) := (others => '0');
+        variable data       : array192(7 downto 0) := (others => (others => '0'));
         
         variable cnt        : integer range 0 to 7 := 0;
         
@@ -49,16 +52,30 @@ begin
             
             else
             
-                -- Request BX number
+                -- Buffer incoming data
                 if (state = 0) then
                 
-                    fifo_read_o <= '1';
-                
                     en_o <= '0';
+                           
+                    if (en_i /= "00000000") then
+                        
+                        en := en_i;
+                        data := data_i;
+                        
+                        cnt := 0;
+                        
+                        state := 1;
                     
-                    state := 1;
+                    end if;
                     
+                -- Request BX number
                 elsif (state = 1) then
+                
+                    fifo_read_o <= '1';
+                    
+                    state := 2;
+                    
+                elsif (state = 2) then
                     
                     fifo_read_o <= '0';
                    
@@ -66,32 +83,23 @@ begin
                     
                         bx_data := fifo_data_i;
                         
-                        state := 2;
+                        state := 3;
                         
                     elsif (fifo_underflow_i = '1') then
                         
-                        state := 0;
-                        
-                    end if;
-                
-                -- Wait for tracking data to arrive
-                elsif (state = 2) then
-                
-                    if (en_i /= "00000000") then
-                        
-                        cnt := 0;
+                        bx_data := (others => '0');
                         
                         state := 3;
-                    
+                        
                     end if;
                     
                 -- Collect tracking data
                 elsif (state = 3) then
                 
                     -- Reject empty packets
-                    if ((data_i(cnt)(191 downto 188) /= "1111") and (data_i(cnt)(191 downto 188) /= "0000")) then
+                    if (en(cnt) = '1') then
                 
-                        data_o <= bx_data & data_i(cnt);
+                        data_o <= bx_data & data(cnt);
                     
                         en_o <= '1';
                         

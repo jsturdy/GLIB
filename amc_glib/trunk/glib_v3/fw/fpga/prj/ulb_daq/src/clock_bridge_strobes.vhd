@@ -1,16 +1,20 @@
+--
+-- This entity takes care of crossing clock-domains for one strobe and a data bus
+--
+
 library ieee;
 use ieee.std_logic_1164.all;
 
 entity clock_bridge_strobes is
 port(
 
-    reset_i : in std_logic;
+    reset_i     : in std_logic;
     
-    m_clk_i : in std_logic;
-    m_en_i  : in std_logic_vector;
+    m_clk_i     : in std_logic;
+    m_en_i      : in std_logic;
     
-    s_clk_i : in std_logic;
-    s_en_o  : out std_logic_vector
+    s_clk_i     : in std_logic;
+    s_en_o      : out std_logic
     
 );
 end clock_bridge_strobes;
@@ -18,8 +22,8 @@ end clock_bridge_strobes;
 architecture behavioral of clock_bridge_strobes is
 
     -- Status registers
-    signal in_status    : std_logic_vector(m_en_i'length - 1 downto 0) := (others => '0');
-    signal out_status   : std_logic_vector(m_en_i'length - 1 downto 0) := (others => '0');
+    signal strobe   : std_logic := '0';
+    signal ack      : std_logic := '0';
     
 begin
 
@@ -33,28 +37,25 @@ begin
             -- Reset signal
             if (reset_i = '1') then
             
-                in_status <= (others => '0');
+                strobe <= '0';
                 
             else
             
-                -- Loop over the signals
-                for i in 0 to (m_en_i'length - 1)
-                loop
-                
+                -- Ready to send data
+                if (strobe = '0' and ack = '0') then
+            
                     -- Detect an input strobe
-                    if (m_en_i(i) = '1') then
+                    if (m_en_i = '1') then
                     
-                        -- Check if the module is busy
-                        if (in_status(i) = out_status(i)) then
-                        
-                            -- If not, change the status
-                            in_status(i) <= not in_status(i);
-                            
-                        end if;
+                        strobe <= '1';
                         
                     end if;
                     
-                end loop;   
+                elsif (strobe = '1' and ack = '1') then
+                
+                    strobe <= '0';
+                    
+                end if;
                 
             end if;
             
@@ -72,34 +73,35 @@ begin
             -- Reset signal
             if (reset_i = '1') then
             
-                s_en_o <= (others => '0');
+                s_en_o <= '0';
                 
-                out_status <= (others => '0');
+                ack <= '0';
                 
             else   
             
-                -- Loop over the signals
-                for i in 0 to (m_en_i'length - 1)
-                loop  
+                -- Check if a strobe is waiting
+                if (strobe = '1' and ack = '0') then
                 
-                    -- Check if a strobe is waiting
-                    if (in_status(i) /= out_status(i)) then
+                    -- If so, set an output strobe
+                    s_en_o <= '1';
                     
-                        -- If so, set an output strobe
-                        s_en_o(i) <= '1';
-                        
-                        -- Change the status
-                        out_status(i) <= not out_status(i);
-                        
-                    -- Otherwhise
-                    else
+                    -- Change the status
+                    ack <= '1';
                     
-                        -- reset the strobe
-                        s_en_o(i) <= '0';
-                        
-                    end if;
+                -- Otherwhise
+                elsif (strobe = '0' and ack = '1') then
+                
+                    -- Reset the strobe
+                    s_en_o <= '0';
                     
-                end loop;
+                    -- Reset the acknowledgement
+                    ack <= '0';
+                
+                else
+                
+                    s_en_o <= '0';
+                    
+                end if;
                 
             end if;
             

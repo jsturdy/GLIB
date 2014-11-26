@@ -9,48 +9,48 @@ Target Device  : xc6vlx130t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Wed Nov 19 10:46:06 2014
+Mapped Date    : Mon Nov 24 16:43:36 2014
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  447
+Number of warnings:  483
 Slice Logic Utilization:
-  Number of Slice Registers:                13,253 out of 160,000    8%
-    Number used as Flip Flops:              13,241
-    Number used as Latches:                     12
+  Number of Slice Registers:                14,389 out of 160,000    8%
+    Number used as Flip Flops:              14,376
+    Number used as Latches:                     13
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                     11,679 out of  80,000   14%
-    Number used as logic:                   11,245 out of  80,000   14%
-      Number using O6 output only:           7,430
-      Number using O5 output only:             799
-      Number using O5 and O6:                3,016
+  Number of Slice LUTs:                     12,354 out of  80,000   15%
+    Number used as logic:                   11,641 out of  80,000   14%
+      Number using O6 output only:           7,700
+      Number using O5 output only:             864
+      Number using O5 and O6:                3,077
       Number used as ROM:                        0
-    Number used as Memory:                      53 out of  27,840    1%
+    Number used as Memory:                     237 out of  27,840    1%
       Number used as Dual Port RAM:              0
       Number used as Single Port RAM:           48
         Number using O6 output only:             0
         Number using O5 output only:             2
         Number using O5 and O6:                 46
-      Number used as Shift Register:             5
-        Number using O6 output only:             5
+      Number used as Shift Register:           189
+        Number using O6 output only:           131
         Number using O5 output only:             0
-        Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    381
-      Number with same-slice register load:    344
-      Number with same-slice carry load:        37
+        Number using O5 and O6:                 58
+    Number used exclusively as route-thrus:    476
+      Number with same-slice register load:    429
+      Number with same-slice carry load:        47
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 5,031 out of  20,000   25%
-  Number of LUT Flip Flop pairs used:       15,210
-    Number with an unused Flip Flop:         3,802 out of  15,210   24%
-    Number with an unused LUT:               3,531 out of  15,210   23%
-    Number of fully used LUT-FF pairs:       7,877 out of  15,210   51%
-    Number of unique control sets:             507
+  Number of occupied Slices:                 5,370 out of  20,000   26%
+  Number of LUT Flip Flop pairs used:       16,245
+    Number with an unused Flip Flop:         3,948 out of  16,245   24%
+    Number with an unused LUT:               3,891 out of  16,245   23%
+    Number of fully used LUT-FF pairs:       8,406 out of  16,245   51%
+    Number of unique control sets:             572
     Number of slice register sites lost
-      to control set restrictions:           1,424 out of 160,000    1%
+      to control set restrictions:           1,710 out of 160,000    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -72,20 +72,20 @@ IO Utilization:
       Number of LOCed OPADs:                     4 out of      12   33%
 
 Specific Feature Utilization:
-  Number of RAMB36E1/FIFO36E1s:                 37 out of     264   14%
-    Number using RAMB36E1 only:                 37
+  Number of RAMB36E1/FIFO36E1s:                 41 out of     264   15%
+    Number using RAMB36E1 only:                 41
     Number using FIFO36E1 only:                  0
   Number of RAMB18E1/FIFO18E1s:                  2 out of     528    1%
     Number using RAMB18E1 only:                  2
     Number using FIFO18E1 only:                  0
-  Number of BUFG/BUFGCTRLs:                     14 out of      32   43%
-    Number used as BUFGs:                       11
+  Number of BUFG/BUFGCTRLs:                     15 out of      32   46%
+    Number used as BUFGs:                       12
     Number used as BUFGCTRLs:                    3
   Number of ILOGICE1/ISERDESE1s:                 0 out of     600    0%
   Number of OLOGICE1/OSERDESE1s:                 5 out of     600    1%
     Number used as OLOGICE1s:                    5
     Number used as OSERDESE1s:                   0
-  Number of BSCANs:                              0 out of       4    0%
+  Number of BSCANs:                              1 out of       4   25%
   Number of BUFHCEs:                             2 out of     120    1%
     Number of LOCed BUFHCEs:                     2 out of       2  100%
   Number of BUFIODQSs:                           0 out of      60    0%
@@ -107,12 +107,12 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       2 out of       4   50%
 
-  Number of RPM macros:            6
-Average Fanout of Non-Clock Nets:                3.63
+  Number of RPM macros:           13
+Average Fanout of Non-Clock Nets:                3.60
 
-Peak Memory Usage:  663 MB
-Total REAL time to MAP completion:  3 mins 57 secs 
-Total CPU time to MAP completion (all processors):   4 mins 16 secs 
+Peak Memory Usage:  678 MB
+Total REAL time to MAP completion:  4 mins 18 secs 
+Total CPU time to MAP completion (all processors):   4 mins 40 secs 
 
 Table of Contents
 -----------------
@@ -1062,6 +1062,10 @@ WARNING:Pack:2515 - The LUT-1 inverter
    dataIoBuf/OBUFT".  This may result in suboptimal timing.  The LUT-1 inverter
    system/sram1_if/sramInterface/control_process.dataToSram_inv1_INV_0 drives
    multiple loads.
+WARNING:Pack:1185 - One or more I/O components have an illegal combination of
+   property values.  For each occurrence, the system will choose sensible
+   defaults.  To view each occurrence, create a detailed map report (run map
+   using the -detail option).
 WARNING:Pack:1186 - One or more I/O components have conflicting property values.
     For each occurrence, the system will use the property value attached to the
    pad.  Otherwise, the system will use the first property value read.  To view
@@ -1130,26 +1134,25 @@ WARNING:Place:837 - Partially locked IO Bus is found.
    	 Comp: amc_port_tx_n<11>
 
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
-   FF)
+   system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
-   FF)
+   system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load
    fmc2_la_p<17> (type DIFFM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
-   FF)
+   system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
-   FF)
+   system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load
    fmc2_la_p<17> (type DIFFM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
@@ -1160,7 +1163,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[1]_ipb_ack (type FF)
+   system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
@@ -1170,11 +1173,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[2]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
 WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load
    fmc2_la_p<17> (type DIFFM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
@@ -1185,7 +1188,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[1]_ipb_ack (type FF)
+   system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
@@ -1195,19 +1198,18 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[2]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
 WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load
    fmc2_la_p<17> (type DIFFM)
    The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load fmc2_la_p<17> (type DIFFM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
@@ -1218,9 +1220,9 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
@@ -1231,13 +1233,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
 WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load fmc2_la_p<17> (type DIFFM)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load fmc2_la_p<17> (type DIFFM)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
@@ -1251,80 +1251,120 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
-   The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp usr/fpga_clk_pll_inst/mmcm_adv_inst is driving load fmc2_la_p<17> (type DIFFM)
    The load component should be of clock buffer type.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_934_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net usr/cs_icon1<13> is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][1]_AND_771_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][2]_AND_769_o is sourced by a
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][0]_AND_773_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][0]_AND_773_o is sourced by a
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][2]_AND_769_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][3]_AND_767_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_934_o is sourced by a combinatorial
-   pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][1]_AND_771_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[24].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[27].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[28].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[26].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[31].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[30].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[29].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[23].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[25].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<0>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<1>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<2>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<3>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<8>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<9>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<10>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<11>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<4>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<5>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<6>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<7>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<12>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<13>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<14>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/UPDATE<15>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[21].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[22].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[63].UPDATE_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[20].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[19].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
    MC_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
    MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/RESET> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[16].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMC_D1_O> is incomplete. The signal does not drive any load pins in the design.
@@ -1332,11 +1372,39 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[17].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[18].SYNC_OUT_CELL/out_temp> is
+   incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:2045 - The MMCM_ADV block <usr/fpga_clk_pll_inst/mmcm_adv_inst> has CLKOUT pins that do not
    drive the same kind of BUFFER load. Routing from the different buffer types will not be phase aligned. 
 
@@ -1347,7 +1415,7 @@ INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    machine load, Map will use 2 processors during this run.
 INFO:Security:56 - Part 'xc6vlx130t' is not a WebPack part.
 INFO:LIT:243 - Logical network user_sram_rdata<1><35> has no load.
-INFO:LIT:395 - The above info message is repeated 2944 more times for the
+INFO:LIT:395 - The above info message is repeated 2984 more times for the
    following (max. 5 shown):
    user_sram_rdata<1><34>,
    user_sram_rdata<1><33>,
@@ -1371,9 +1439,9 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-1082 block(s) removed
- 274 block(s) optimized away
-1282 signal(s) removed
+1205 block(s) removed
+ 680 block(s) optimized away
+1507 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -1388,6 +1456,50 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[10].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[2].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[3].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[4].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[5].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[8].U_LUT" (ROM)
+removed.
+Loadless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[9].U_LUT" (ROM)
+removed.
+Loadless block "usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM)
+removed.
+Loadless block
+"usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_B"
+(ROM) removed.
 The signal "fmc1_la_p_0_OBUF" is sourceless and has been removed.
  Sourceless block "fmc1_la_p_0_OBUF" (BUF) removed.
   The signal "fmc1_la_p<0>" is sourceless and has been removed.
@@ -2558,22 +2670,84 @@ The signal "gbe_sda_mdio_OBUF" is sourceless and has been removed.
    Sourceless block "gbe_sda_mdio" (PAD) removed.
 The signal "usr/rx_kchar<7>" is sourceless and has been removed.
 The signal "usr/rx_kchar<6>" is sourceless and has been removed.
-The signal "usr/rx_data<63>" is sourceless and has been removed.
-The signal "usr/rx_data<62>" is sourceless and has been removed.
-The signal "usr/rx_data<61>" is sourceless and has been removed.
-The signal "usr/rx_data<60>" is sourceless and has been removed.
-The signal "usr/rx_data<59>" is sourceless and has been removed.
-The signal "usr/rx_data<58>" is sourceless and has been removed.
-The signal "usr/rx_data<57>" is sourceless and has been removed.
-The signal "usr/rx_data<56>" is sourceless and has been removed.
-The signal "usr/rx_data<55>" is sourceless and has been removed.
-The signal "usr/rx_data<54>" is sourceless and has been removed.
-The signal "usr/rx_data<53>" is sourceless and has been removed.
-The signal "usr/rx_data<52>" is sourceless and has been removed.
-The signal "usr/rx_data<51>" is sourceless and has been removed.
-The signal "usr/rx_data<50>" is sourceless and has been removed.
-The signal "usr/rx_data<49>" is sourceless and has been removed.
-The signal "usr/rx_data<48>" is sourceless and has been removed.
+The signal "usr/cs_icon0<35>" is sourceless and has been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O28"
+(ROM) removed.
+  The signal
+"usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O27"
+is sourceless and has been removed.
+The signal "usr/cs_icon0<34>" is sourceless and has been removed.
+The signal "usr/cs_icon0<33>" is sourceless and has been removed.
+The signal "usr/cs_icon0<32>" is sourceless and has been removed.
+The signal "usr/cs_icon0<31>" is sourceless and has been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O27"
+(ROM) removed.
+  The signal
+"usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O26"
+is sourceless and has been removed.
+The signal "usr/cs_icon0<30>" is sourceless and has been removed.
+The signal "usr/cs_icon0<29>" is sourceless and has been removed.
+The signal "usr/cs_icon0<28>" is sourceless and has been removed.
+The signal "usr/cs_icon0<27>" is sourceless and has been removed.
+The signal "usr/cs_icon0<26>" is sourceless and has been removed.
+The signal "usr/cs_icon0<25>" is sourceless and has been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O24"
+(ROM) removed.
+  The signal
+"usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O23"
+is sourceless and has been removed.
+The signal "usr/cs_icon0<24>" is sourceless and has been removed.
+The signal "usr/cs_icon0<23>" is sourceless and has been removed.
+The signal "usr/cs_icon0<22>" is sourceless and has been removed.
+The signal "usr/cs_icon0<21>" is sourceless and has been removed.
+The signal "usr/cs_icon0<20>" is sourceless and has been removed.
+The signal "usr/cs_icon0<19>" is sourceless and has been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O23"
+(ROM) removed.
+  The signal
+"usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O22"
+is sourceless and has been removed.
+The signal "usr/cs_icon0<18>" is sourceless and has been removed.
+The signal "usr/cs_icon0<17>" is sourceless and has been removed.
+The signal "usr/cs_icon0<16>" is sourceless and has been removed.
+The signal "usr/cs_icon0<15>" is sourceless and has been removed.
+The signal "usr/cs_icon0<14>" is sourceless and has been removed.
+The signal "usr/cs_icon0<13>" is sourceless and has been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O26"
+(ROM) removed.
+  The signal
+"usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O25"
+is sourceless and has been removed.
+The signal "usr/cs_icon0<12>" is sourceless and has been removed.
+The signal "usr/cs_icon0<11>" is sourceless and has been removed.
+The signal "usr/cs_icon0<10>" is sourceless and has been removed.
+The signal "usr/cs_icon0<9>" is sourceless and has been removed.
+The signal "usr/cs_icon0<8>" is sourceless and has been removed.
+The signal "usr/cs_icon1<35>" is sourceless and has been removed.
+The signal "usr/cs_icon1<34>" is sourceless and has been removed.
+The signal "usr/cs_icon1<33>" is sourceless and has been removed.
+The signal "usr/cs_icon1<32>" is sourceless and has been removed.
+The signal "usr/cs_icon1<31>" is sourceless and has been removed.
+The signal "usr/cs_icon1<30>" is sourceless and has been removed.
+The signal "usr/cs_icon1<29>" is sourceless and has been removed.
+The signal "usr/cs_icon1<28>" is sourceless and has been removed.
+The signal "usr/cs_icon1<27>" is sourceless and has been removed.
+The signal "usr/cs_icon1<26>" is sourceless and has been removed.
+The signal "usr/cs_icon1<25>" is sourceless and has been removed.
+The signal "usr/cs_icon1<24>" is sourceless and has been removed.
+The signal "usr/cs_icon1<19>" is sourceless and has been removed.
+The signal "usr/cs_icon1<18>" is sourceless and has been removed.
+The signal "usr/cs_icon1<17>" is sourceless and has been removed.
+The signal "usr/cs_icon1<16>" is sourceless and has been removed.
+The signal "usr/cs_icon1<15>" is sourceless and has been removed.
+The signal "usr/cs_icon1<11>" is sourceless and has been removed.
+The signal "usr/cs_icon1<10>" is sourceless and has been removed.
+The signal "usr/cs_icon1<7>" is sourceless and has been removed.
 The signal "usr/gtx_wrapper_inst/rx_kchar_o<1>" is sourceless and has been
 removed.
 The signal "usr/gtx_wrapper_inst/rx_kchar_o<0>" is sourceless and has been
@@ -2759,6 +2933,635 @@ sourceless and has been removed.
 The signal "usr/fpga_clk_pll_inst/clkout0" is sourceless and has been removed.
  Sourceless block "usr/fpga_clk_pll_inst/clkout1_buf" (CKBUF) removed.
   The signal "usr/fpga_clk_pll_inst/fpga_clk_o" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<15>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<14>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<13>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<12>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<11>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<10>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<9>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<8>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<7>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<6>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<5>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<4>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<3>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<2>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<1>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/ASYNC_OUT<0>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<15>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<14>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<13>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<12>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<11>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<10>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<9>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<8>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<7>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<6>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<5>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<4>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<3>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<2>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<1>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/SYNC_OUT<0>" is sourceless and has been
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<16>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[16].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<17>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[17].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<18>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[18].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<19>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[19].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<20>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[20].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<21>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[21].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<22>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[22].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<23>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[23].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<24>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[24].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<25>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[25].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<26>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[26].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<27>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[27].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<28>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[28].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<29>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[29].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<30>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[30].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/UPDATE<31>" is sourceless and has
+been removed.
+ Sourceless block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_OUT[31].SYNC_OUT_CELL/USER_REG" (FF)
+removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_f_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_f_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/falling" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_r_edge/iDOUT<
+0>" is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_r_edge/iDOUT<
+1>" is sourceless and has been removed.
+The signal "usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/rising"
+is sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[15].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[14].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[13].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[12].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[11].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[10].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[9].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[8].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[7].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[6].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[5].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[4].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[3].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[2].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[1].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[0].ASYNC_IN_CELL/user_in_n" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[0].ASYNC_IN_CELL/mux1_out" is
+sourceless and has been removed.
+The signal
+"usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND
+X.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_US
+E_RPM_EQ0.U_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND
+X.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_US
+E_RPM_EQ0.U_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND
+X.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_US
+E_RPM_EQ0.U_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal
+"usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND
+X.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_US
+E_RPM_EQ0.U_GAND_SRL_SET/SRL_Q_O" is sourceless and has been removed.
+The signal "usr/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<15>" is sourceless
+and has been removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_LCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[15].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[15].U_LCE" (ROM)
+removed.
+The signal "usr/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<14>" is sourceless
+and has been removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_LCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[14].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[14].U_LCE" (ROM)
+removed.
+The signal "usr/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<13>" is sourceless
+and has been removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_LCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[13].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[13].U_LCE" (ROM)
+removed.
+The signal "usr/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<12>" is sourceless
+and has been removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_LCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[12].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[12].U_LCE" (ROM)
+removed.
+The signal "usr/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<11>" is sourceless
+and has been removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_LCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[11].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[11].U_LCE" (ROM)
+removed.
+The signal "usr/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<7>" is sourceless and
+has been removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_LCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[7].U_LCE" (ROM)
+removed.
+The signal "usr/chipscope_icon_inst/U0/U_ICON/iCOMMAND_SEL<6>" is sourceless and
+has been removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_LCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[6].U_LCE" (ROM)
 removed.
 The signal "system/sram_w[1]_oe_b" is sourceless and has been removed.
 The signal "system/ipb_from_slaves[5]_ipb_ack" is sourceless and has been
@@ -5379,6 +6182,183 @@ removed.
 Unused block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o1" (ROM) removed.
 Unused block "system/wb_bridge/XST_GND" (ZERO) removed.
 Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[15].U_LUT" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_LCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[2].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_LCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_LCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_LCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[3].U_LCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[4].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[5].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[8].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_HCE" (ROM)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[0].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[10].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[11].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[12].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[13].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[14].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[15].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[1].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[2].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[3].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[4].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[5].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[6].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[7].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[8].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_OUT[9].ASYNC_OUT_CELL/USER_REG" (FF)
+removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[48].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[49].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[50].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[51].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[52].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[53].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[54].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[55].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[56].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[57].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[58].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[59].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[60].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[61].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[62].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
+"usr/chipscope_vio_inst/U0/I_VIO/GEN_UPDATE_OUT[63].UPDATE_CELL/GEN_CLK.USER_REG
+" (SFF) removed.
+Unused block
 "usr/link_tracking_1_inst/tracking_core_inst/tracking_bx_fifo_inst/U0/xst_fifo_g
 enerator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" (FF)
 removed.
@@ -5845,6 +6825,794 @@ GND 		usr/bx_counter_inst/XST_GND
 VCC 		usr/bx_counter_inst/XST_VCC
 GND 		usr/calpulse_counter_inst/XST_GND
 VCC 		usr/calpulse_counter_inst/XST_VCC
+GND 		usr/chipscope_icon_inst/XST_GND
+VCC 		usr/chipscope_icon_inst/XST_VCC
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_
+CMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I
+_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_GND
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_
+CMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/I
+_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_
+CMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/X
+ST_VCC
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_
+HCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/
+I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_GND
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_
+HCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/
+I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_
+HCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/
+XST_VCC
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_
+LCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/
+I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_GND
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_
+LCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/
+I_PARTIAL_SLICE.U_GAND_SRL_SLICE/XST_VCC
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_
+LCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/
+XST_VCC
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_GND
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GAND_SRL_SLICE/XST_GND
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GAND_SRL_SLICE/XST_VCC
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_GND
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GAND_SRL_SLICE/XST_GND
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GAND_SRL_SLICE/XST_VCC
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_GND
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GAND_SRL_SLICE/XST_GND
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GAND_SRL_SLICE/XST_VCC
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_GND
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[0].U_GAND_SRL_SLICE/XST_VCC
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[1].U_GAND_SRL_SLICE/XST_GND
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[2].U_GAND_SRL_SLICE/XST_GND
+GND
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GAND_SRL_SLICE/XST_GND
+VCC
+		usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAN
+DX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_U
+SE_RPM_EQ0.U_GAND_SRL_SET/I_WHOLE_SLICE.G_SLICE_IDX[3].U_GAND_SRL_SLICE/XST_VCC
+GND 		usr/chipscope_ila_inst/XST_GND
+VCC 		usr/chipscope_ila_inst/XST_VCC
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[0].ASYNC_IN_CELL/S_USER_REG
+   optimized to 0
+LUT3 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[0].ASYNC_IN_CELL/USER_MUX
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[0].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[0].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[0].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[10].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[10].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[10].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[11].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[11].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[11].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[12].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[12].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[12].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[13].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[13].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[13].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[14].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[14].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[14].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[15].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[15].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[15].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[1].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[1].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[1].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[2].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[2].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[2].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[3].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[3].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[3].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[4].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[4].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[4].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[5].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[5].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[5].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[6].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[6].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[6].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[7].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[7].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[7].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[8].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[8].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[8].ASYNC_IN_CELL/U_STATCMD_n
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[9].ASYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[9].ASYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_ASYNC_IN[9].ASYNC_IN_CELL/U_STATCMD_n
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+FDE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/USER_CLK_REG
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDC 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/U_STATCMD_n
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/U_SYNC_F
+   optimized to 0
+FDRE 		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/U_SYNC_R
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_f_edge/I_H2L
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_f_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_f_edge/U_DOU
+T1
+   optimized to 0
+FDR
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_r_edge/I_L2H
+.U_DOUT
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_r_edge/U_DOU
+T0
+   optimized to 0
+FDE
+		usr/chipscope_vio_inst/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_r_edge/U_DOU
+T1
+   optimized to 0
+LUT6
+		usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O25
+   optimized to 1
+LUT6
+		usr/chipscope_vio_inst/U0/I_VIO/U_STATUS/U_SMUX/U_CS_MUX/I4.U_MUX16/Mmux_O29
+   optimized to 1
+GND 		usr/chipscope_vio_inst/XST_GND
+VCC 		usr/chipscope_vio_inst/XST_VCC
 GND 		usr/del_calpulse_counter_inst/XST_GND
 VCC 		usr/del_calpulse_counter_inst/XST_VCC
 GND 		usr/del_lv1a_counter_inst/XST_GND
@@ -5878,11 +7646,6 @@ VCC 		usr/link_tracking_1_inst/regs_tx_counter_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/rx_error_counter_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/rx_error_counter_inst/XST_VCC
 VCC 		usr/link_tracking_1_inst/tracking_core_inst/track_0_inst/XST_VCC
-GND 		usr/link_tracking_1_inst/tracking_core_inst/track_1_inst/XST_GND
-VCC 		usr/link_tracking_1_inst/tracking_core_inst/track_1_inst/XST_VCC
-GND 		usr/link_tracking_1_inst/tracking_core_inst/track_2_inst/XST_GND
-VCC 		usr/link_tracking_1_inst/tracking_core_inst/track_2_inst/XST_VCC
-GND 		usr/link_tracking_1_inst/tracking_core_inst/track_3_inst/XST_GND
 GND
 		usr/link_tracking_1_inst/tracking_core_inst/tracking_bx_fifo_inst/U0/xst_fifo_
 generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gna
@@ -6008,32 +7771,32 @@ Section 6 - IOB Properties
 | fmc2_la_n<16>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | fmc2_la_n<17>                      | IOBS             | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
 | fmc2_la_n<19>                      | IOBS             | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
-| fmc2_la_n<21>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_n<22>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_n<24>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_n<25>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_n<21>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_n<22>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_n<24>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_n<25>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | fmc2_la_n<27>                      | IOB              | BIDIR     | LVCMOS25             |       | 6        | FAST |              |          |          |
-| fmc2_la_n<28>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_n<29>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_n<30>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_n<31>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_n<32>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_n<33>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_n<28>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_n<29>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_n<30>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_n<31>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_n<32>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_n<33>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | fmc2_la_p<10>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | fmc2_la_p<15>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | fmc2_la_p<17>                      | IOBM             | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
 | fmc2_la_p<19>                      | IOBM             | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
-| fmc2_la_p<21>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_p<22>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_p<24>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_p<25>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_p<21>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_p<22>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_p<24>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_p<25>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | fmc2_la_p<27>                      | IOB              | OUTPUT    | LVCMOS25             |       | 6        | FAST |              |          |          |
-| fmc2_la_p<28>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_p<29>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_p<30>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_p<31>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_p<32>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| fmc2_la_p<33>                      | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| fmc2_la_p<28>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_p<29>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_p<30>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_p<31>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_p<32>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| fmc2_la_p<33>                      | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | fmc2_present_l                     | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | fpga_a21                           | IOB              | OUTPUT    | LVCMOS25             |       | 24       | FAST |              |          |          |
 | fpga_a22                           | IOB              | OUTPUT    | LVCMOS25             |       | 24       | FAST |              |          |          |
@@ -6251,6 +8014,27 @@ hset
 system/phy_en.phy_eth/sgmii/gtx_reset_gen/hset
 system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/resetdone_rx_sync_block/hset
 system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/resetdone_tx_sync_block/hset
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CM
+P/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MSE
+T
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HC
+MP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MS
+ET
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LC
+MP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_EQ0.U_GAND_SRL_SET/MS
+ET
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX
+.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE
+_RPM_EQ0.U_GAND_SRL_SET/MSET
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GANDX
+.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE
+_RPM_EQ0.U_GAND_SRL_SET/MSET
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GANDX
+.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE
+_RPM_EQ0.U_GAND_SRL_SET/MSET
+usr/chipscope_ila_inst/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GANDX
+.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_V6.U_CS_GANDX_SRL_V6/U_CS_GAND_SRL_V6/I_USE
+_RPM_EQ0.U_GAND_SRL_SET/MSET
 
 Section 8 - Guide Report
 ------------------------
@@ -6278,11 +8062,11 @@ Area Group "pblock_vi2c_core_inst"
     Number of Slice LUTs:                  278 out of    640   43%
       Number used as logic:                278
   Slice Logic Distribution:
-    Number of occupied Slices:             122 out of    160   76%
-    Number of LUT Flip Flop pairs used:    362
-      Number with an unused Flip Flop:     110 out of    362   30%
-      Number with an unused LUT:            58 out of    362   16%
-      Number of fully used LUT-FF pairs:   194 out of    362   53%
+    Number of occupied Slices:             118 out of    160   73%
+    Number of LUT Flip Flop pairs used:    373
+      Number with an unused Flip Flop:     115 out of    373   30%
+      Number with an unused LUT:            76 out of    373   20%
+      Number of fully used LUT-FF pairs:   182 out of    373   48%
   IO Utilization:
     Number of bonded IOBs:                   1
   Number of OLOGICE1:                        1

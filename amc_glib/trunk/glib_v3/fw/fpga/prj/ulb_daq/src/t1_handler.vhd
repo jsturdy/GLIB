@@ -20,30 +20,26 @@ end t1_handler;
 
 architecture Behavioral of t1_handler is
 
-    signal fast_signals : std_logic_vector(3 downto 0) := (others => '0');
-    signal slow_signals : std_logic_vector(3 downto 0) := (others => '0');
+    signal lv1a     : std_logic := '0';
+    signal calpulse : std_logic := '0';
+    signal resync   : std_logic := '0';
+    signal bc0      : std_logic := '0';
 
 begin
-    
-    fast_signals <= lv1a_i & calpulse_i & resync_i & bc0_i;
 
-    clock_bridge_strobes_inst : entity work.clock_bridge_strobes
-    port map(
-        reset_i => reset_i,
-        m_clk_i => fabric_clk_i,
-        m_en_i  => fast_signals,
-        s_clk_i => vfat2_clk_i,
-        s_en_o  => slow_signals
-    );
+    lv1a_inst : entity work.clock_bridge_strobes port map(reset_i => reset_i, m_clk_i => fabric_clk_i, m_en_i => lv1a_i, s_clk_i => vfat2_clk_i, s_en_o => lv1a);
+    calpulse_inst : entity work.clock_bridge_strobes port map(reset_i => reset_i, m_clk_i => fabric_clk_i, m_en_i => calpulse_i, s_clk_i => vfat2_clk_i, s_en_o => calpulse);
+    resync_inst : entity work.clock_bridge_strobes port map(reset_i => reset_i, m_clk_i => fabric_clk_i, m_en_i => resync_i, s_clk_i => vfat2_clk_i, s_en_o => resync);
+    bc0_inst : entity work.clock_bridge_strobes port map(reset_i => reset_i, m_clk_i => fabric_clk_i, m_en_i => bc0_i, s_clk_i => vfat2_clk_i, s_en_o => bc0);
 
     t1_encoder_inst : entity work.t1_encoder
     port map(
         vfat2_clk_i => vfat2_clk_i,
         reset_i     => reset_i,
-        lv1a_i      => slow_signals(3),
-        calpulse_i  => slow_signals(2),
-        resync_i    => slow_signals(1),
-        bc0_i       => slow_signals(0),  
+        lv1a_i      => lv1a,
+        calpulse_i  => calpulse,
+        resync_i    => resync,
+        bc0_i       => bc0,  
         t1_o        => t1_o
     );    
     

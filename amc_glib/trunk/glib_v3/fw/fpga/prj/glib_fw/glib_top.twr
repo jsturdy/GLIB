@@ -28,506 +28,6 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
    please see the device datasheet.
 
 ================================================================================
-Timing constraint: TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
-For more information, see Period Analysis in the Timing Closure User Guide (UG612).
-
- 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
- 0 timing errors detected. (0 component switching limit errors)
- Minimum period is   1.538ns.
---------------------------------------------------------------------------------
-
-Component Switching Limit Checks: TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
---------------------------------------------------------------------------------
-Slack: 4.712ns (period - min period limit)
-  Period: 6.250ns
-  Min period limit: 1.538ns (650.195MHz) (Tgtxper_REFCLK(Fgclk))
-  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/MGTREFCLKRX0
-  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/MGTREFCLKRX0
-  Location pin: GTXE1_X0Y2.SOUTHREFCLKRX1
-  Clock network: usr/gtx_wrapper_inst/gtx_clk
---------------------------------------------------------------------------------
-Slack: 4.712ns (period - min period limit)
-  Period: 6.250ns
-  Min period limit: 1.538ns (650.195MHz) (Tgtxper_REFCLK(Fgclk))
-  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/MGTREFCLKTX0
-  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/MGTREFCLKTX0
-  Location pin: GTXE1_X0Y2.SOUTHREFCLKTX1
-  Clock network: usr/gtx_wrapper_inst/gtx_clk
---------------------------------------------------------------------------------
-Slack: 4.712ns (period - min period limit)
-  Period: 6.250ns
-  Min period limit: 1.538ns (650.195MHz) (Tgtxper_REFCLK(Fgclk))
-  Physical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/MGTREFCLKRX0
-  Logical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/MGTREFCLKRX0
-  Location pin: GTXE1_X0Y1.SOUTHREFCLKRX1
-  Clock network: usr/gtx_wrapper_inst/gtx_clk
---------------------------------------------------------------------------------
-
-================================================================================
-Timing constraint: TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 
-ns HIGH 50%;
-For more information, see Period Analysis in the Timing Closure User Guide (UG612).
-
- 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
- 0 timing errors detected. (0 component switching limit errors)
- Minimum period is   4.000ns.
---------------------------------------------------------------------------------
-
-Component Switching Limit Checks: TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
---------------------------------------------------------------------------------
-Slack: 2.250ns (period - min period limit)
-  Period: 6.250ns
-  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
-  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/RXUSRCLK2
-  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/RXUSRCLK2
-  Location pin: GTXE1_X0Y2.RXUSRCLK2
-  Clock network: usr/gtx_clk
---------------------------------------------------------------------------------
-Slack: 2.250ns (period - min period limit)
-  Period: 6.250ns
-  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
-  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/TXUSRCLK2
-  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/TXUSRCLK2
-  Location pin: GTXE1_X0Y2.TXUSRCLK2
-  Clock network: usr/gtx_clk
---------------------------------------------------------------------------------
-Slack: 2.250ns (period - min period limit)
-  Period: 6.250ns
-  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
-  Physical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/RXUSRCLK2
-  Logical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/RXUSRCLK2
-  Location pin: GTXE1_X0Y1.RXUSRCLK2
-  Clock network: usr/gtx_clk
---------------------------------------------------------------------------------
-
-================================================================================
-Timing constraint: TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 
-50%;
-For more information, see Period Analysis in the Timing Closure User Guide (UG612).
-
- 10983 paths analyzed, 5418 endpoints analyzed, 0 failing endpoints
- 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   5.126ns.
---------------------------------------------------------------------------------
-
-Paths for end point usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196 (SLICE_X81Y1.CE), 4 paths
---------------------------------------------------------------------------------
-Slack (setup path):     1.124ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
-  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196 (FF)
-  Requirement:          6.250ns
-  Data Path Delay:      4.639ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.452ns (0.848 - 1.300)
-  Source Clock:         usr/gtx_clk rising at 0.000ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    GTXE1_X0Y1.RXCHARISK0Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-    SLICE_X94Y13.D4      net (fanout=4)        1.068   usr/rx_kchar<2>
-    SLICE_X94Y13.DMUX    Tilo                  0.186   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
-    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
-    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
-    -------------------------------------------------  ---------------------------
-    Total                                      4.639ns (1.045ns logic, 3.594ns route)
-                                                       (22.5% logic, 77.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     1.191ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
-  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196 (FF)
-  Requirement:          6.250ns
-  Data Path Delay:      4.572ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.452ns (0.848 - 1.300)
-  Source Clock:         usr/gtx_clk rising at 0.000ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    GTXE1_X0Y1.RXCHARISK1Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-    SLICE_X94Y13.D5      net (fanout=4)        0.996   usr/rx_kchar<3>
-    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
-    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
-    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
-    -------------------------------------------------  ---------------------------
-    Total                                      4.572ns (1.050ns logic, 3.522ns route)
-                                                       (23.0% logic, 77.0% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     2.144ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 (FF)
-  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196 (FF)
-  Requirement:          6.250ns
-  Data Path Delay:      3.997ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.074ns (0.848 - 0.922)
-  Source Clock:         usr/gtx_clk rising at 0.000ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X94Y13.CQ      Tcko                  0.337   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-    SLICE_X94Y13.D2      net (fanout=12)       0.625   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
-    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
-    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
-    -------------------------------------------------  ---------------------------
-    Total                                      3.997ns (0.846ns logic, 3.151ns route)
-                                                       (21.2% logic, 78.8% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197 (SLICE_X81Y1.CE), 4 paths
---------------------------------------------------------------------------------
-Slack (setup path):     1.124ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
-  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197 (FF)
-  Requirement:          6.250ns
-  Data Path Delay:      4.639ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.452ns (0.848 - 1.300)
-  Source Clock:         usr/gtx_clk rising at 0.000ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    GTXE1_X0Y1.RXCHARISK0Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-    SLICE_X94Y13.D4      net (fanout=4)        1.068   usr/rx_kchar<2>
-    SLICE_X94Y13.DMUX    Tilo                  0.186   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
-    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
-    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
-    -------------------------------------------------  ---------------------------
-    Total                                      4.639ns (1.045ns logic, 3.594ns route)
-                                                       (22.5% logic, 77.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     1.191ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
-  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197 (FF)
-  Requirement:          6.250ns
-  Data Path Delay:      4.572ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.452ns (0.848 - 1.300)
-  Source Clock:         usr/gtx_clk rising at 0.000ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    GTXE1_X0Y1.RXCHARISK1Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-    SLICE_X94Y13.D5      net (fanout=4)        0.996   usr/rx_kchar<3>
-    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
-    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
-    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
-    -------------------------------------------------  ---------------------------
-    Total                                      4.572ns (1.050ns logic, 3.522ns route)
-                                                       (23.0% logic, 77.0% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     2.144ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 (FF)
-  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197 (FF)
-  Requirement:          6.250ns
-  Data Path Delay:      3.997ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.074ns (0.848 - 0.922)
-  Source Clock:         usr/gtx_clk rising at 0.000ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X94Y13.CQ      Tcko                  0.337   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-    SLICE_X94Y13.D2      net (fanout=12)       0.625   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
-    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
-    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
-    -------------------------------------------------  ---------------------------
-    Total                                      3.997ns (0.846ns logic, 3.151ns route)
-                                                       (21.2% logic, 78.8% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198 (SLICE_X81Y1.CE), 4 paths
---------------------------------------------------------------------------------
-Slack (setup path):     1.124ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
-  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198 (FF)
-  Requirement:          6.250ns
-  Data Path Delay:      4.639ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.452ns (0.848 - 1.300)
-  Source Clock:         usr/gtx_clk rising at 0.000ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    GTXE1_X0Y1.RXCHARISK0Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-    SLICE_X94Y13.D4      net (fanout=4)        1.068   usr/rx_kchar<2>
-    SLICE_X94Y13.DMUX    Tilo                  0.186   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
-    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
-    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
-    -------------------------------------------------  ---------------------------
-    Total                                      4.639ns (1.045ns logic, 3.594ns route)
-                                                       (22.5% logic, 77.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     1.191ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
-  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198 (FF)
-  Requirement:          6.250ns
-  Data Path Delay:      4.572ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.452ns (0.848 - 1.300)
-  Source Clock:         usr/gtx_clk rising at 0.000ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    GTXE1_X0Y1.RXCHARISK1Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
-    SLICE_X94Y13.D5      net (fanout=4)        0.996   usr/rx_kchar<3>
-    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
-    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
-    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
-    -------------------------------------------------  ---------------------------
-    Total                                      4.572ns (1.050ns logic, 3.522ns route)
-                                                       (23.0% logic, 77.0% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     2.144ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 (FF)
-  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198 (FF)
-  Requirement:          6.250ns
-  Data Path Delay:      3.997ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.074ns (0.848 - 0.922)
-  Source Clock:         usr/gtx_clk rising at 0.000ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X94Y13.CQ      Tcko                  0.337   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-    SLICE_X94Y13.D2      net (fanout=12)       0.625   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
-    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
-    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
-                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
-    -------------------------------------------------  ---------------------------
-    Total                                      3.997ns (0.846ns logic, 3.151ns route)
-                                                       (21.2% logic, 78.8% route)
-
---------------------------------------------------------------------------------
-
-Hold Paths: TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
---------------------------------------------------------------------------------
-
-Paths for end point usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram (RAMB36_X6Y1.DIPADIP3), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.024ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_143 (FF)
-  Destination:          usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram (RAM)
-  Requirement:          0.000ns
-  Data Path Delay:      0.178ns (Levels of Logic = 0)
-  Clock Path Skew:      0.154ns (0.549 - 0.395)
-  Source Clock:         usr/gtx_clk rising at 6.250ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_143 to usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    SLICE_X92Y9.DQ         Tcko                  0.115   usr/link_tracking_1_inst/track_rx_data<143>
-                                                         usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_143
-    RAMB36_X6Y1.DIPADIP3   net (fanout=1)        0.261   usr/link_tracking_1_inst/track_rx_data<143>
-    RAMB36_X6Y1.CLKBWRCLKL Trckd_DIA   (-Th)     0.198   usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
-                                                         usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
-    ---------------------------------------------------  ---------------------------
-    Total                                        0.178ns (-0.083ns logic, 0.261ns route)
-                                                         (-46.6% logic, 146.6% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram (RAMB36_X6Y1.DIADI19), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.025ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_129 (FF)
-  Destination:          usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram (RAM)
-  Requirement:          0.000ns
-  Data Path Delay:      0.178ns (Levels of Logic = 0)
-  Clock Path Skew:      0.153ns (0.549 - 0.396)
-  Source Clock:         usr/gtx_clk rising at 6.250ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_129 to usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    SLICE_X92Y7.BQ         Tcko                  0.115   usr/link_tracking_1_inst/track_rx_data<131>
-                                                         usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_129
-    RAMB36_X6Y1.DIADI19    net (fanout=1)        0.261   usr/link_tracking_1_inst/track_rx_data<129>
-    RAMB36_X6Y1.CLKBWRCLKL Trckd_DIA   (-Th)     0.198   usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
-                                                         usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
-    ---------------------------------------------------  ---------------------------
-    Total                                        0.178ns (-0.083ns logic, 0.261ns route)
-                                                         (-46.6% logic, 146.6% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAMB36_X5Y7.DIPADIP0), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.027ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               usr/link_trigger_inst/trigger_data_decoder_inst/trigger_data_o_41 (FF)
-  Destination:          usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAM)
-  Requirement:          0.000ns
-  Data Path Delay:      0.180ns (Levels of Logic = 0)
-  Clock Path Skew:      0.153ns (0.544 - 0.391)
-  Source Clock:         usr/gtx_clk rising at 6.250ns
-  Destination Clock:    usr/gtx_clk rising at 6.250ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: usr/link_trigger_inst/trigger_data_decoder_inst/trigger_data_o_41 to usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    SLICE_X89Y30.DQ        Tcko                  0.098   usr/link_trigger_inst/trigger_rx_data<41>
-                                                         usr/link_trigger_inst/trigger_data_decoder_inst/trigger_data_o_41
-    RAMB36_X5Y7.DIPADIP0   net (fanout=8)        0.280   usr/link_trigger_inst/trigger_rx_data<41>
-    RAMB36_X5Y7.CLKARDCLKL Trckd_DIPA  (-Th)     0.198   usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
-                                                         usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
-    ---------------------------------------------------  ---------------------------
-    Total                                        0.180ns (-0.100ns logic, 0.280ns route)
-                                                         (-55.6% logic, 155.6% route)
-
---------------------------------------------------------------------------------
-
-Component Switching Limit Checks: TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
---------------------------------------------------------------------------------
-Slack: 2.250ns (period - min period limit)
-  Period: 6.250ns
-  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
-  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/RXUSRCLK2
-  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/RXUSRCLK2
-  Location pin: GTXE1_X0Y2.RXUSRCLK2
-  Clock network: usr/gtx_clk
---------------------------------------------------------------------------------
-Slack: 2.250ns (period - min period limit)
-  Period: 6.250ns
-  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
-  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/TXUSRCLK2
-  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/TXUSRCLK2
-  Location pin: GTXE1_X0Y2.TXUSRCLK2
-  Clock network: usr/gtx_clk
---------------------------------------------------------------------------------
-Slack: 2.250ns (period - min period limit)
-  Period: 6.250ns
-  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
-  Physical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/RXUSRCLK2
-  Logical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/RXUSRCLK2
-  Location pin: GTXE1_X0Y1.RXUSRCLK2
-  Clock network: usr/gtx_clk
---------------------------------------------------------------------------------
-
-================================================================================
 Timing constraint: TS_clk125_2_p = PERIOD TIMEGRP "clk125_2_p" 8 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
@@ -2128,6 +1628,506 @@ Slack: 15.000ns (period - (min high pulse limit / (high pulse / period)))
   Logical resource: system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst/CLKIN1
   Location pin: MMCM_ADV_X0Y5.CLKIN1
   Clock network: system/xpoint1_clk1
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.538ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 4.712ns (period - min period limit)
+  Period: 6.250ns
+  Min period limit: 1.538ns (650.195MHz) (Tgtxper_REFCLK(Fgclk))
+  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/MGTREFCLKRX0
+  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/MGTREFCLKRX0
+  Location pin: GTXE1_X0Y2.SOUTHREFCLKRX1
+  Clock network: usr/gtx_wrapper_inst/gtx_clk
+--------------------------------------------------------------------------------
+Slack: 4.712ns (period - min period limit)
+  Period: 6.250ns
+  Min period limit: 1.538ns (650.195MHz) (Tgtxper_REFCLK(Fgclk))
+  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/MGTREFCLKTX0
+  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/MGTREFCLKTX0
+  Location pin: GTXE1_X0Y2.SOUTHREFCLKTX1
+  Clock network: usr/gtx_wrapper_inst/gtx_clk
+--------------------------------------------------------------------------------
+Slack: 4.712ns (period - min period limit)
+  Period: 6.250ns
+  Min period limit: 1.538ns (650.195MHz) (Tgtxper_REFCLK(Fgclk))
+  Physical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/MGTREFCLKRX0
+  Logical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/MGTREFCLKRX0
+  Location pin: GTXE1_X0Y1.SOUTHREFCLKRX1
+  Clock network: usr/gtx_wrapper_inst/gtx_clk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 
+ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 2.250ns (period - min period limit)
+  Period: 6.250ns
+  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
+  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/RXUSRCLK2
+  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/RXUSRCLK2
+  Location pin: GTXE1_X0Y2.RXUSRCLK2
+  Clock network: usr/gtx_clk
+--------------------------------------------------------------------------------
+Slack: 2.250ns (period - min period limit)
+  Period: 6.250ns
+  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
+  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/TXUSRCLK2
+  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/TXUSRCLK2
+  Location pin: GTXE1_X0Y2.TXUSRCLK2
+  Clock network: usr/gtx_clk
+--------------------------------------------------------------------------------
+Slack: 2.250ns (period - min period limit)
+  Period: 6.250ns
+  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
+  Physical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/RXUSRCLK2
+  Logical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/RXUSRCLK2
+  Location pin: GTXE1_X0Y1.RXUSRCLK2
+  Clock network: usr/gtx_clk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 10983 paths analyzed, 5418 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.126ns.
+--------------------------------------------------------------------------------
+
+Paths for end point usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196 (SLICE_X81Y1.CE), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.124ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
+  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.639ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.452ns (0.848 - 1.300)
+  Source Clock:         usr/gtx_clk rising at 0.000ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    GTXE1_X0Y1.RXCHARISK0Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+    SLICE_X94Y13.D4      net (fanout=4)        1.068   usr/rx_kchar<2>
+    SLICE_X94Y13.DMUX    Tilo                  0.186   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
+    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
+    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
+    -------------------------------------------------  ---------------------------
+    Total                                      4.639ns (1.045ns logic, 3.594ns route)
+                                                       (22.5% logic, 77.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.191ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
+  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.572ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.452ns (0.848 - 1.300)
+  Source Clock:         usr/gtx_clk rising at 0.000ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    GTXE1_X0Y1.RXCHARISK1Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+    SLICE_X94Y13.D5      net (fanout=4)        0.996   usr/rx_kchar<3>
+    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
+    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
+    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
+    -------------------------------------------------  ---------------------------
+    Total                                      4.572ns (1.050ns logic, 3.522ns route)
+                                                       (23.0% logic, 77.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.144ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 (FF)
+  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      3.997ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.074ns (0.848 - 0.922)
+  Source Clock:         usr/gtx_clk rising at 0.000ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X94Y13.CQ      Tcko                  0.337   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+    SLICE_X94Y13.D2      net (fanout=12)       0.625   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
+    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
+    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_196
+    -------------------------------------------------  ---------------------------
+    Total                                      3.997ns (0.846ns logic, 3.151ns route)
+                                                       (21.2% logic, 78.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197 (SLICE_X81Y1.CE), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.124ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
+  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.639ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.452ns (0.848 - 1.300)
+  Source Clock:         usr/gtx_clk rising at 0.000ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    GTXE1_X0Y1.RXCHARISK0Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+    SLICE_X94Y13.D4      net (fanout=4)        1.068   usr/rx_kchar<2>
+    SLICE_X94Y13.DMUX    Tilo                  0.186   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
+    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
+    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
+    -------------------------------------------------  ---------------------------
+    Total                                      4.639ns (1.045ns logic, 3.594ns route)
+                                                       (22.5% logic, 77.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.191ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
+  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.572ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.452ns (0.848 - 1.300)
+  Source Clock:         usr/gtx_clk rising at 0.000ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    GTXE1_X0Y1.RXCHARISK1Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+    SLICE_X94Y13.D5      net (fanout=4)        0.996   usr/rx_kchar<3>
+    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
+    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
+    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
+    -------------------------------------------------  ---------------------------
+    Total                                      4.572ns (1.050ns logic, 3.522ns route)
+                                                       (23.0% logic, 77.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.144ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 (FF)
+  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      3.997ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.074ns (0.848 - 0.922)
+  Source Clock:         usr/gtx_clk rising at 0.000ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X94Y13.CQ      Tcko                  0.337   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+    SLICE_X94Y13.D2      net (fanout=12)       0.625   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
+    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
+    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_197
+    -------------------------------------------------  ---------------------------
+    Total                                      3.997ns (0.846ns logic, 3.151ns route)
+                                                       (21.2% logic, 78.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198 (SLICE_X81Y1.CE), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.124ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
+  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.639ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.452ns (0.848 - 1.300)
+  Source Clock:         usr/gtx_clk rising at 0.000ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    GTXE1_X0Y1.RXCHARISK0Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+    SLICE_X94Y13.D4      net (fanout=4)        1.068   usr/rx_kchar<2>
+    SLICE_X94Y13.DMUX    Tilo                  0.186   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
+    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
+    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
+    -------------------------------------------------  ---------------------------
+    Total                                      4.639ns (1.045ns logic, 3.594ns route)
+                                                       (22.5% logic, 77.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.191ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i (HSIO)
+  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.572ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.452ns (0.848 - 1.300)
+  Source Clock:         usr/gtx_clk rising at 0.000ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    GTXE1_X0Y1.RXCHARISK1Tgtxcko_RXCHARISK     0.541   usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+                                                       usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i
+    SLICE_X94Y13.D5      net (fanout=4)        0.996   usr/rx_kchar<3>
+    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
+    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
+    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
+    -------------------------------------------------  ---------------------------
+    Total                                      4.572ns (1.050ns logic, 3.522ns route)
+                                                       (23.0% logic, 77.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.144ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 (FF)
+  Destination:          usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      3.997ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.074ns (0.848 - 0.922)
+  Source Clock:         usr/gtx_clk rising at 0.000ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1 to usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X94Y13.CQ      Tcko                  0.337   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+    SLICE_X94Y13.D2      net (fanout=12)       0.625   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+    SLICE_X94Y13.DMUX    Tilo                  0.191   usr/link_tracking_1_inst/gtx_rx_mux_inst/state_FSM_FFd1
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv1
+    SLICE_X81Y1.CE       net (fanout=56)       2.526   usr/link_tracking_1_inst/gtx_rx_mux_inst/_n0444_inv
+    SLICE_X81Y1.CLK      Tceck                 0.318   usr/link_tracking_1_inst/gtx_rx_mux_inst/data<199>
+                                                       usr/link_tracking_1_inst/gtx_rx_mux_inst/data_198
+    -------------------------------------------------  ---------------------------
+    Total                                      3.997ns (0.846ns logic, 3.151ns route)
+                                                       (21.2% logic, 78.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram (RAMB36_X6Y1.DIPADIP3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.024ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_143 (FF)
+  Destination:          usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.178ns (Levels of Logic = 0)
+  Clock Path Skew:      0.154ns (0.549 - 0.395)
+  Source Clock:         usr/gtx_clk rising at 6.250ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_143 to usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X92Y9.DQ         Tcko                  0.115   usr/link_tracking_1_inst/track_rx_data<143>
+                                                         usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_143
+    RAMB36_X6Y1.DIPADIP3   net (fanout=1)        0.261   usr/link_tracking_1_inst/track_rx_data<143>
+    RAMB36_X6Y1.CLKBWRCLKL Trckd_DIA   (-Th)     0.198   usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
+                                                         usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        0.178ns (-0.083ns logic, 0.261ns route)
+                                                         (-46.6% logic, 146.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram (RAMB36_X6Y1.DIADI19), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.025ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_129 (FF)
+  Destination:          usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.178ns (Levels of Logic = 0)
+  Clock Path Skew:      0.153ns (0.549 - 0.396)
+  Source Clock:         usr/gtx_clk rising at 6.250ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_129 to usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X92Y7.BQ         Tcko                  0.115   usr/link_tracking_1_inst/track_rx_data<131>
+                                                         usr/link_tracking_1_inst/gtx_rx_mux_inst/track_data_o_129
+    RAMB36_X6Y1.DIADI19    net (fanout=1)        0.261   usr/link_tracking_1_inst/track_rx_data<129>
+    RAMB36_X6Y1.CLKBWRCLKL Trckd_DIA   (-Th)     0.198   usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
+                                                         usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        0.178ns (-0.083ns logic, 0.261ns route)
+                                                         (-46.6% logic, 146.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAMB36_X5Y7.DIPADIP0), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.027ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               usr/link_trigger_inst/trigger_data_decoder_inst/trigger_data_o_41 (FF)
+  Destination:          usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.180ns (Levels of Logic = 0)
+  Clock Path Skew:      0.153ns (0.544 - 0.391)
+  Source Clock:         usr/gtx_clk rising at 6.250ns
+  Destination Clock:    usr/gtx_clk rising at 6.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: usr/link_trigger_inst/trigger_data_decoder_inst/trigger_data_o_41 to usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X89Y30.DQ        Tcko                  0.098   usr/link_trigger_inst/trigger_rx_data<41>
+                                                         usr/link_trigger_inst/trigger_data_decoder_inst/trigger_data_o_41
+    RAMB36_X5Y7.DIPADIP0   net (fanout=8)        0.280   usr/link_trigger_inst/trigger_rx_data<41>
+    RAMB36_X5Y7.CLKARDCLKL Trckd_DIPA  (-Th)     0.198   usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+                                                         usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        0.180ns (-0.100ns logic, 0.280ns route)
+                                                         (-55.6% logic, 155.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 2.250ns (period - min period limit)
+  Period: 6.250ns
+  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
+  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/RXUSRCLK2
+  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/RXUSRCLK2
+  Location pin: GTXE1_X0Y2.RXUSRCLK2
+  Clock network: usr/gtx_clk
+--------------------------------------------------------------------------------
+Slack: 2.250ns (period - min period limit)
+  Period: 6.250ns
+  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
+  Physical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/TXUSRCLK2
+  Logical resource: usr/gtx_wrapper_inst/gtx_2_inst/gtxe1_i/TXUSRCLK2
+  Location pin: GTXE1_X0Y2.TXUSRCLK2
+  Clock network: usr/gtx_clk
+--------------------------------------------------------------------------------
+Slack: 2.250ns (period - min period limit)
+  Period: 6.250ns
+  Min period limit: 4.000ns (250.000MHz) (Tgtxper_USRCLK)
+  Physical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/RXUSRCLK2
+  Logical resource: usr/gtx_wrapper_inst/gtx_1_inst/gtxe1_i/RXUSRCLK2
+  Location pin: GTXE1_X0Y1.RXUSRCLK2
+  Clock network: usr/gtx_clk
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -4912,14 +4912,14 @@ Design statistics:
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Mon Nov 24 10:44:41 2014 
+Analysis completed Wed Nov 26 08:41:06 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 750 MB
+Peak Memory Usage: 754 MB
 
 
 

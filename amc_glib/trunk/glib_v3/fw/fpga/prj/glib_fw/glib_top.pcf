@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Nov 24 10:41:20 2014
+// Written by: Map P.20131013 on Wed Nov 26 08:37:39 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -24638,9 +24638,6 @@ TIMEGRP system_gbt_phase_monitoring_ttclk_pll_clkout0_0 = BEL
         "system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD_D1"
         BEL
         "system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD";
-TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
-TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
-TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
 TS_clk125_2_p = PERIOD TIMEGRP "clk125_2_p" 8 ns HIGH 50%;
 TS_clk125_2_n = PERIOD TIMEGRP "clk125_2_n" TS_clk125_2_p PHASE 4 ns HIGH 50%;
 TS_system_phy_en_phy_eth_clk125_out = PERIOD TIMEGRP
@@ -24650,6 +24647,9 @@ TS_system_amc_p0_en_amc_p0_eth_clk125_out = PERIOD TIMEGRP
 TS_xpoint1_clk1_p = PERIOD TIMEGRP "xpoint1_clk1_p" 25 ns HIGH 50%;
 TS_xpoint1_clk1_n = PERIOD TIMEGRP "xpoint1_clk1_n" TS_xpoint1_clk1_p PHASE
         12.5 ns HIGH 50%;
+TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
+TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
+TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
 TS_system_glib_pll_clkout_31_25_c = PERIOD TIMEGRP
         "system_glib_pll_clkout_31_25_c" TS_clk125_2_p / 0.25 HIGH 50%;
 TS_system_glib_pll_clkout_31_25_a = PERIOD TIMEGRP

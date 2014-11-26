@@ -58,7 +58,6 @@ end link_trigger;
 architecture Behavioral of link_trigger is
 
     signal orbits   : std_logic_vector(5 downto 0) := (others => '0');
-    signal status   : std_logic := '0';
 
 begin
     
@@ -77,9 +76,7 @@ begin
             orbits(3) <= vfat2_data_11_i(0) or vfat2_data_11_i(1) or vfat2_data_11_i(2) or vfat2_data_11_i(3) or vfat2_data_11_i(4) or vfat2_data_11_i(5) or vfat2_data_11_i(6) or vfat2_data_11_i(7);
             orbits(4) <= vfat2_data_12_i(0) or vfat2_data_12_i(1) or vfat2_data_12_i(2) or vfat2_data_12_i(3) or vfat2_data_12_i(4) or vfat2_data_12_i(5) or vfat2_data_12_i(6) or vfat2_data_12_i(7);
             orbits(5) <= vfat2_data_13_i(0) or vfat2_data_13_i(1) or vfat2_data_13_i(2) or vfat2_data_13_i(3) or vfat2_data_13_i(4) or vfat2_data_13_i(5) or vfat2_data_13_i(6) or vfat2_data_13_i(7);
-
-            status <= not status;
-
+            
         end if;
         
     end process;
@@ -90,8 +87,6 @@ begin
     
 
     process(gtp_clk_i)
-    
-        variable last_status    : std_logic := '0';
         
         variable state          : integer range 0 to 3;
         
@@ -112,22 +107,14 @@ begin
             else
             
                 if (state = 0) then
-                
-                    if (status /= last_status) then
                     
-                        tx_kchar_o <= "01";
-                        
-                        data := bx_counter_i & "0000000000" & orbits;
-                        
-                        state := 1;
-                        
-                    else
+                    tx_kchar_o <= "01";
                     
-                        tx_kchar_o <= "00";
-                        
-                    end if;
-                        
                     tx_data_o <= def_gtp_trigger & x"BC";
+                    
+                    data := bx_counter_i & "0000000000" & orbits;
+                    
+                    state := 1;
                     
                 elsif (state = 1) then
                 
@@ -162,8 +149,6 @@ begin
                     state := 0;
                 
                 end if;
-                
-                last_status := status;
             
             end if;
         

@@ -206,43 +206,43 @@ architecture user_logic_arch of user_logic is
     -- Global signals
 
     signal gtx_clk              : std_logic := '0';
-    
+
     -- External signals
-    
+
     signal ext_sbit             : std_logic := '0';
-    
+
     -- GTX signals
-    
+
     signal rx_error             : std_logic_vector(3 downto 0) := (others => '0');
     signal rx_kchar             : std_logic_vector(7 downto 0) := (others => '0');
     signal rx_data              : std_logic_vector(63 downto 0) := (others => '0');
     signal tx_kchar             : std_logic_vector(7 downto 0) := (others => '0');
     signal tx_data              : std_logic_vector(63 downto 0) := (others => '0');
-    
+
     -- Registers requests
-    
+
     signal request_write        : array32(127 downto 0) := (others => (others => '0'));
     signal request_tri          : std_logic_vector(127 downto 0) := (others => '0');
     signal request_read         : array32(127 downto 0) := (others => (others => '0'));
-    
+
     -- Trigger
-    
+
     signal empty_trigger_fifo   : std_logic := '0';
     signal sbit_configuration   : std_logic_vector(2 downto 0) := (others => '0');
 
 begin
 
-    ip_addr_o <= x"898A7382";  -- c0a80073 = 192.168.0.115 -- 137.138.115.146
+    ip_addr_o <= x"898A7392";  -- c0a80073 = 192.168.0.115 -- 898A7392 = 137.138.115.146
     mac_addr_o <= x"080030F100A0";  -- 08:00:30:F1:00:A0
     user_v6_led_o(1) <= '0';
     user_v6_led_o(2) <= '1';
-    
+
     fmc1_io_pin.la_p(10) <= ext_sbit;
 
     --================================--
     -- GTX
     --================================--
-    
+
     gtx_wrapper_inst : entity work.gtx_wrapper
     port map(
         gtx_clk_o       => gtx_clk,
@@ -258,12 +258,12 @@ begin
         tx_p_o          => sfp_tx_p,
         gtp_refclk_n_i  => cdce_out1_n,
         gtp_refclk_p_i  => cdce_out1_p
-    );   
+    );
 
     --================================--
     -- Tracking links
     --================================--
-    
+
     link_tracking_1_inst : entity work.link_tracking
     port map(
         gtx_clk_i       => gtx_clk,
@@ -290,7 +290,7 @@ begin
     --================================--
     -- Trigger links
     --================================--
-    
+
     link_trigger_inst : entity work.link_trigger
     port map(
         gtx_clk_i       => gtx_clk,
@@ -311,15 +311,15 @@ begin
     --================================--
     -- Register mapping
     --================================--
-    
+
     -- Empty trigger fifo
-    
+
     empty_trigger_fifo <= request_tri(0);
 
     -- S Bits configuration : 0 -- read / write _ Controls the Sbits to send to the TDC
-    
-    sbit_configuration_reg : entity work.reg port map(fabric_clk_i => ipb_clk_i, reset_i => reset_i, wbus_i => request_write(1), wbus_t => request_tri(1), rbus_o => request_read(1));        
-    sbit_configuration <= request_read(1)(2 downto 0); 
-    
-    
+
+    sbit_configuration_reg : entity work.reg port map(fabric_clk_i => ipb_clk_i, reset_i => reset_i, wbus_i => request_write(1), wbus_t => request_tri(1), rbus_o => request_read(1));
+    sbit_configuration <= request_read(1)(2 downto 0);
+
+
 end user_logic_arch;

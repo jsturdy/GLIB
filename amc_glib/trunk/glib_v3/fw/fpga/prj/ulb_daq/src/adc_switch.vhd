@@ -49,6 +49,8 @@ begin
                     elsif (uart_data_i(7 downto 6) = "01") then
                     
                         voltage(11 downto 6) := uart_data_i(5 downto 0);
+    
+                        voltage_o <= voltage;
                         
                     elsif (uart_data_i(7 downto 6) = "10") then
                     
@@ -57,14 +59,12 @@ begin
                     elsif (uart_data_i(7 downto 6) = "11") then
                     
                         current(11 downto 6) := uart_data_i(5 downto 0);
+                
+                        current_o <= current;
                     
                     end if;
                 
                 end if;
-    
-                voltage_o <= voltage;
-                
-                current_o <= current;
             
             end if;
         

@@ -23,7 +23,7 @@ begin
     
         variable state  : integer range 0 to 3 := 0;
         
-        variable timer  : unsigned(23 downto 0) := (others => '0');
+        variable timer  : integer range 0 to 32767 := 0;
         
         variable exec   : std_logic := '0';
         
@@ -41,14 +41,14 @@ begin
                 
                 state := 0;
                 
-                timer := (others => '0');
+                timer := 0;
                 
             else
             
                 -- Handle clock division
-                if (timer = 16667) then
+                if (timer = 16666) then
                 
-                    timer := (others => '0');
+                    timer := 0;
                     
                     exec := '1';
                     
@@ -68,7 +68,7 @@ begin
                     
                         if (uart_rx_i = '0') then
                         
-                            cnt := 7;
+                            cnt := 0;
                     
                             state := 1;
                         
@@ -83,20 +83,20 @@ begin
                     
                         data(cnt) := uart_rx_i;
                     
-                        if (cnt = 0) then
+                        if (cnt = 7) then
                         
                             state := 2;
                             
                         else
                     
-                            cnt := cnt - 1;
+                            cnt := cnt + 1;
                             
                         end if;
                         
                     end if;
                     
                 -- End of the signal
-                elsif (state = 9) then
+                elsif (state = 2) then
                 
                     data_o <= data;
    
@@ -119,7 +119,7 @@ begin
                     
                     state := 0;
                     
-                    timer := (others => '0');
+                    timer := 0;
                     
                 end if;
                 

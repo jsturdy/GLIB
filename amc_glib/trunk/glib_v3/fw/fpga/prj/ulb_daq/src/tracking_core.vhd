@@ -136,6 +136,6 @@ begin
         tx_done_i           => tx_done_i,
         tx_data_o           => tx_data_o
     );
-
+    
 end Behavioral;
 

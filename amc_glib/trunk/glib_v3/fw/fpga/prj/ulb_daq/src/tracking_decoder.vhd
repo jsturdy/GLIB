@@ -75,9 +75,22 @@ begin
                         state := 0;
                         
                     end if;
+                    
+                -- Check data
+                elsif (state = 2) then
+                
+                    if (data(191 downto 188) = "1010") then
+                    
+                        state := 3;
+                        
+                    else
+                    
+                        state := 0;
+                        
+                    end if;
                 
                 -- Data ready
-                elsif (state = 2) then
+                elsif (state = 3) then
                 
                     data_o <= data;
                 

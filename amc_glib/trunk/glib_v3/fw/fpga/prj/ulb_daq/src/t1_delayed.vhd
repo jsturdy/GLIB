@@ -42,7 +42,7 @@ begin
             
                 if (state = 0) then
                     
-                    calpulse_o <= '0';
+                    lv1a_o <= '0';
             
                     if (en_i = '1') then
                     
@@ -52,7 +52,7 @@ begin
                 
                 elsif (state = 1) then
                 
-                    lv1a_o <= '1';
+                    calpulse_o <= '1';
                     
                     counter(31 downto 2) := unsigned(delay_i(29 downto 0));
                     counter(1 downto 0) := "00";
@@ -61,11 +61,11 @@ begin
                 
                 elsif (state = 2) then
                 
-                    lv1a_o <= '0';
+                    calpulse_o <= '0';
                     
                     if (counter = 0) then
                     
-                        calpulse_o <= '1';
+                        lv1a_o <= '1';
                     
                         state := 0;
                         

@@ -1,0 +1,159 @@
+#
+# Global signals
+#
+
+NET "fpga_clk_i"            LOC = AD14 | IOSTANDARD = LVCMOS33;
+NET "fpga_rx_i"             LOC = B1 | IOSTANDARD = LVCMOS25;
+NET "fpga_tx_o"             LOC = C1 | IOSTANDARD = LVCMOS33;
+
+NET "enable_gtp_o"          LOC = AA23 | IOSTANDARD = LVCMOS33;
+
+NET "fpga_test_io<0>"       LOC = E1 | IOSTANDARD = LVCMOS33;
+NET "fpga_test_io<1>"       LOC = D1 | IOSTANDARD = LVCMOS33;
+NET "fpga_test_io<2>"       LOC = G1 | IOSTANDARD = LVCMOS33;
+NET "fpga_test_io<3>"       LOC = F1 | IOSTANDARD = LVCMOS33;
+NET "fpga_test_io<4>"       LOC = J1 | IOSTANDARD = LVCMOS33;
+NET "fpga_test_io<5>"       LOC = H1 | IOSTANDARD = LVCMOS33;
+
+NET "leds_o<0>"             LOC = AF13 | IOSTANDARD = LVCMOS33;
+NET "leds_o<1>"             LOC = AF14 | IOSTANDARD = LVCMOS33;
+NET "leds_o<2>"             LOC = AF15 | IOSTANDARD = LVCMOS33;
+NET "leds_o<3>"             LOC = AE15 | IOSTANDARD = LVCMOS33;
+
+#
+# CDCE
+#
+
+NET "cdce_le_o"             LOC = L10 | IOSTANDARD = LVCMOS33;
+NET "cdce_miso_i"           LOC = K9 | IOSTANDARD = LVCMOS33;
+NET "cdce_mosi_o"           LOC = L9 | IOSTANDARD = LVCMOS33;
+NET "cdce_sclk_o"           LOC = K10 | IOSTANDARD = LVCMOS33;
+
+NET "cdce_auxout_i"         LOC = H5 | IOSTANDARD = LVCMOS33;
+NET "cdce_pll_locked_i"     LOC = J7 | IOSTANDARD = LVCMOS33;
+NET "cdce_powerdown_o"      LOC = G4 | IOSTANDARD = LVCMOS33;
+NET "cdce_ref_o"            LOC = J9 | IOSTANDARD = LVCMOS33;
+NET "cdce_sync_o"           LOC = H6 | IOSTANDARD = LVCMOS33;
+NET "cdce_pri_p_o"          LOC = B12 | IOSTANDARD = LVDS_25;
+NET "cdce_pri_n_o"          LOC = A12 | IOSTANDARD = LVDS_25;
+
+#
+# IIC
+#
+
+
+#
+# VFAT2 signals
+#
+
+NET "vfat2_resets_o<0>"     LOC = E18 | IOSTANDARD = LVCMOS25;
+NET "vfat2_resets_o<1>"     LOC = F18 | IOSTANDARD = LVCMOS25;
+
+NET "vfat2_mclk_p_o"        LOC = E13 | IOSTANDARD = LVDS_25;
+NET "vfat2_mclk_n_o"        LOC = D13 | IOSTANDARD = LVDS_25;
+
+NET "vfat2_t1_p_o"          LOC = J16 | IOSTANDARD = LVDS_25;
+NET "vfat2_t1_n_o"          LOC = J17 | IOSTANDARD = LVDS_25;
+
+NET "vfat2_scl_o<2>"        LOC = B23 | IOSTANDARD = I2C;
+NET "vfat2_scl_o<3>"        LOC = D22 | IOSTANDARD = I2C;
+
+NET "vfat2_sda_io<2>"       LOC = B22 | IOSTANDARD = I2C;
+NET "vfat2_sda_io<3>"       LOC = D21 | IOSTANDARD = I2C;
+
+NET "vfat2_dvalid_i<2>"     LOC = F24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_dvalid_i<3>"     LOC = G24 | IOSTANDARD = LVCMOS33;
+
+NET "vfat2_data_8_i<0>"     LOC = G26 | IOSTANDARD = LVCMOS33; # Done C8
+NET "vfat2_data_8_i<1>"     LOC = G25 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_8_i<2>"     LOC = F26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_8_i<3>"     LOC = E26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_8_i<4>"     LOC = E25 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_8_i<5>"     LOC = D26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_8_i<6>"     LOC = C26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_8_i<7>"     LOC = C25 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_8_i<8>"     LOC = B26 | IOSTANDARD = LVCMOS33;
+
+NET "vfat2_data_9_i<0>"     LOC = AE26 | IOSTANDARD = LVCMOS33; # Done C3
+NET "vfat2_data_9_i<1>"     LOC = AD26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_9_i<2>"     LOC = AC25 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_9_i<3>"     LOC = AC26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_9_i<4>"     LOC = AB26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_9_i<5>"     LOC = AA25 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_9_i<6>"     LOC = AA26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_9_i<7>"     LOC = Y26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_9_i<8>"     LOC = W25 | IOSTANDARD = LVCMOS33;
+
+NET "vfat2_data_10_i<0>"    LOC = W26 | IOSTANDARD = LVCMOS33; # Done C4
+NET "vfat2_data_10_i<1>"    LOC = V26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_10_i<2>"    LOC = U25 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_10_i<3>"    LOC = U26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_10_i<4>"    LOC = T26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_10_i<5>"    LOC = R25 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_10_i<6>"    LOC = R26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_10_i<7>"    LOC = P26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_10_i<8>"    LOC = N26 | IOSTANDARD = LVCMOS33;
+
+NET "vfat2_data_11_i<0>"    LOC = D24 | IOSTANDARD = LVCMOS33; # Done C7
+NET "vfat2_data_11_i<1>"    LOC = C24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_11_i<2>"    LOC = M26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_11_i<3>"    LOC = L26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_11_i<4>"    LOC = L25 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_11_i<5>"    LOC = K26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_11_i<6>"    LOC = J26 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_11_i<7>"    LOC = J25 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_11_i<8>"    LOC = H26 | IOSTANDARD = LVCMOS33;
+
+NET "vfat2_data_12_i<0>"    LOC = R24 | IOSTANDARD = LVCMOS33; # Done C6
+NET "vfat2_data_12_i<1>"    LOC = P24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_12_i<2>"    LOC = N24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_12_i<3>"    LOC = M24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_12_i<4>"    LOC = L24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_12_i<5>"    LOC = K24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_12_i<6>"    LOC = J24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_12_i<7>"    LOC = H24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_12_i<8>"    LOC = E24 | IOSTANDARD = LVCMOS33;
+
+NET "vfat2_data_13_i<0>"    LOC = AD24 | IOSTANDARD = LVCMOS33; # Done C5
+NET "vfat2_data_13_i<1>"    LOC = AC24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_13_i<2>"    LOC = AB24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_13_i<3>"    LOC = AA24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_13_i<4>"    LOC = Y24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_13_i<5>"    LOC = W24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_13_i<6>"    LOC = V24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_13_i<7>"    LOC = U24 | IOSTANDARD = LVCMOS33;
+NET "vfat2_data_13_i<8>"    LOC = T24 | IOSTANDARD = LVCMOS33;
+
+#
+# GTX signals
+#
+
+NET "gtp_refclk_n_i<0>"     LOC = A10;
+NET "gtp_refclk_n_i<1>"     LOC = C11;
+NET "gtp_refclk_n_i<2>"     LOC = C15;
+NET "gtp_refclk_n_i<3>"     LOC = A16;
+
+NET "gtp_refclk_p_i<0>"     LOC = B10;
+NET "gtp_refclk_p_i<1>"     LOC = D11;
+NET "gtp_refclk_p_i<2>"     LOC = D15;
+NET "gtp_refclk_p_i<3>"     LOC = B16;
+  
+NET "rx_n_i<0>"             LOC = C7;
+NET "rx_n_i<1>"             LOC = C9;
+NET "rx_n_i<2>"             LOC = C17;
+NET "rx_n_i<3>"             LOC = C19;
+
+NET "rx_p_i<0>"             LOC = D7;
+NET "rx_p_i<1>"             LOC = D9;
+NET "rx_p_i<2>"             LOC = D17;
+NET "rx_p_i<3>"             LOC = D19;
+
+NET "tx_n_o<0>"             LOC = A6;
+NET "tx_n_o<1>"             LOC = A8;
+NET "tx_n_o<2>"             LOC = A18;
+NET "tx_n_o<3>"             LOC = A20;
+
+NET "tx_p_o<0>"             LOC = B6;
+NET "tx_p_o<1>"             LOC = B8;
+NET "tx_p_o<2>"             LOC = B18;
+NET "tx_p_o<3>"             LOC = B20;

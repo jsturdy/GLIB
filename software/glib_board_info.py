@@ -1,5 +1,5 @@
 import sys, os, time
-sys.path.append('/Users/tlenzi/Desktop/GLIB_SW/src')
+sys.path.append('/Users/tlenzi/Documents/PhD/Code/GLIB/software/src')
 
 from PyChipsUser import *
 glibAddrTable = AddressTable("./glibAddrTable.dat")
@@ -7,7 +7,7 @@ glibAddrTable = AddressTable("./glibAddrTable.dat")
 ########################################
 # IP address
 ########################################
-ipaddr = '192.168.0.115'
+ipaddr = '192.168.0.116'
 glib = ChipsBusUdp(glibAddrTable, ipaddr, 50001)
 print
 print "--=======================================--"

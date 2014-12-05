@@ -1,5 +1,5 @@
 import sys, os, time, signal, random
-sys.path.append('/Users/tlenzi/Desktop/GLIB_SW/src')
+sys.path.append('/Users/tlenzi/Documents/PhD/Code/GLIB/software/src')
 
 from PyChipsUser import *
 
@@ -20,25 +20,14 @@ class colors:
 
 
 # Send a read transaction
-def testRead(vfat2, register, exp):
+def testRead(register):
     global nOK, nBadHeader, nErrorOnRead, nTimedOut, nMismatch, nOthers
 
     try:
-        controlChar = glib.read("vfat2_" + str(vfat2) + "_" + register)
-        # time.sleep(0.01)
-
-    # Next is for debugging (error tracking, data matching, ...)
-
-        if (controlChar == exp):
-            print colors.GREEN, "-> Match : ", hex(controlChar), colors.ENDC
-            nOK += 1
-            return True
-        else:
-            print colors.RED, "-> Error, result does not match expectation : ", hex(controlChar), " != ", hex(exp), colors.ENDC
-            nMismatch += 1
-            return False
+        controlChar = glib.read(register)
+        nOK += 1
+        return True
     except ChipsException, e:
-        print colors.BLUE, "-> Error : ", e, colors.ENDC
         if ('amount of data' in e.value):
             nBadHeader += 1
         elif ('INFO CODE = 0x4L' in e.value):
@@ -51,20 +40,14 @@ def testRead(vfat2, register, exp):
         pass
 
 # Send a write transaction
-def testWrite(vfat2, register, value):
+def testWrite(register, value):
     global nOK, nBadHeader, nErrorOnRead, nTimedOut, nMismatch, nOthers
 
     try:
-        glib.write("vfat2_" + str(vfat2) + "_" + register, value)
-        # time.sleep(0.01)
-
-    # Next is for debugging (error tracking, data matching, ...)
-
-        print colors.GREEN, "-> OK", colors.ENDC
+        glib.write(register, value)
         nOK += 1
         return True
     except ChipsException, e:
-        print colors.BLUE, "-> Error : ", e, colors.ENDC
         if ('amount of data' in e.value):
             nBadHeader += 1
         elif ('INFO CODE = 0x4L' in e.value):
@@ -75,39 +58,6 @@ def testWrite(vfat2, register, value):
             nOthers += 1
         return False
         pass
-
-def randomRW():
-    val8 = random.randint(0, 255)
-    val9 = random.randint(0, 255)
-    val10 = random.randint(0, 255)
-    val11 = random.randint(0, 255)
-    val12 = random.randint(0, 255)
-    val13 = random.randint(0, 255)
-
-    res8 = 0x3080000 + val8
-    res9 = 0x3090100 + val9
-    res10 = 0x30a9500 + val10
-    res11 = 0x30b0000 + val11
-    res12 = 0x30c0100 + val12
-    res13 = 0x30d9500 + val13
-
-    print "Random: ", hex(val8), hex(val9), hex(val10), hex(val11), hex(val12), hex(val13)
-    wr8 = testWrite(8, "ctrl0", val8)
-    wr9 = testWrite(9, "ctrl1", val9)
-    wr10 = testWrite(10, "ctrl2", val10)
-    if wr9:
-        testRead(9, "ctrl1", res9)
-    if wr8:
-        testRead(8, "ctrl0", res8)
-    wr11 = testWrite(11, "ctrl0", val11)
-    if wr10:
-        testRead(10, "ctrl2", res10)
-    wr12 = testWrite(12, "ctrl1", val12)
-    wr13 = testWrite(13, "ctrl2", val13)
-    if wr13:
-        testRead(13, "ctrl2", res13)
-    if wr12:
-        testRead(12, "ctrl1", res12)
 
 def signal_handler(signal, frame):
     global nOK, nBadHeader, nErrorOnRead, nTimedOut, nMismatch, nOthers, timeStart
@@ -149,27 +99,18 @@ if __name__ == "__main__":
 
     while True:
 
-        if (time.time() - timeStart > 60):
-            break
+        testRead("vfat2_8_chipid0")
+        testRead("vfat2_8_chipid1")
 
-        # testRead(8, "chipid0", 0x30808cf)
-        # testRead(9, "chipid0", 0x3090854)
-        # testRead(10, "chipid0", 0x30a08e4)
-        # testRead(11, "chipid0", 0x30b086c)
-        # testRead(12, "chipid0", 0x30c0868)
-        # testRead(13, "chipid0", 0x30d0868)
+        # testRead("opto_1_0")
+        # testRead("opto_1_1")
+        # testRead("opto_1_2")
+        # testRead("opto_1_84")
 
-        randomRW()
+        # testRead("info_1_0")
+        # testRead("info_1_2")
+        # testRead("info_1_64")
 
-        # testRead(8,  "chipid0", 0x30808e4)
-        # testRead(8,  "chipid1", 0x30809f0)
-        # testRead(9,  "chipid0", 0x30908cf)
-        # testRead(9,  "chipid1", 0x30909fe)
-        # testRead(10, "chipid0", 0x30a0854)
-        # testRead(10, "chipid1", 0x30a09f0)
-
-        # print "----------------"
-        # raw_input()
 
     signal_handler(0, 0)
 

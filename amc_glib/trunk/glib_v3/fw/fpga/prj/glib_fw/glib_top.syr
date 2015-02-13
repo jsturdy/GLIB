@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: glib_top.prj
 
@@ -24351,26 +24351,26 @@ Top Level Output File Name         : glib_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 15150
+# BELS                             : 15246
 #      GND                         : 94
-#      INV                         : 273
-#      LUT1                        : 568
-#      LUT2                        : 2435
-#      LUT3                        : 2139
-#      LUT4                        : 1591
+#      INV                         : 272
+#      LUT1                        : 592
+#      LUT2                        : 2440
+#      LUT3                        : 2135
+#      LUT4                        : 1597
 #      LUT5                        : 1683
-#      LUT6                        : 3437
-#      MUXCY                       : 1386
-#      MUXF7                       : 234
+#      LUT6                        : 3446
+#      MUXCY                       : 1415
+#      MUXF7                       : 237
 #      MUXF8                       : 114
 #      VCC                         : 81
-#      XORCY                       : 1115
-# FlipFlops/Latches                : 12231
+#      XORCY                       : 1140
+# FlipFlops/Latches                : 12274
 #      FD                          : 2293
-#      FDC                         : 1315
-#      FDCE                        : 1188
+#      FDC                         : 1350
+#      FDCE                        : 1204
 #      FDE                         : 3634
-#      FDP                         : 130
+#      FDP                         : 122
 #      FDPE                        : 51
 #      FDR                         : 782
 #      FDRE                        : 2400
@@ -24379,11 +24379,11 @@ Primitive and Black Box Usage:
 #      LD                          : 32
 #      LDC                         : 1
 #      ODDR                        : 2
-# RAMS                             : 81
+# RAMS                             : 102
 #      RAM32M                      : 20
 #      RAM32X1D                    : 8
-#      RAMB18E1                    : 2
-#      RAMB36E1                    : 51
+#      RAMB18E1                    : 1
+#      RAMB36E1                    : 73
 # Shift Registers                  : 9
 #      SRL16                       : 5
 #      SRLC16E                     : 4
@@ -24416,18 +24416,18 @@ Selected Device : 6vlx130tff1156-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           12231  out of  160000     7%  
- Number of Slice LUTs:                12231  out of  80000    15%  
-    Number used as Logic:             12126  out of  80000    15%  
+ Number of Slice Registers:           12274  out of  160000     7%  
+ Number of Slice LUTs:                12270  out of  80000    15%  
+    Number used as Logic:             12165  out of  80000    15%  
     Number used as Memory:              105  out of  27840     0%  
        Number used as RAM:               96
        Number used as SRL:                9
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  16982
-   Number with an unused Flip Flop:    4751  out of  16982    27%  
-   Number with an unused LUT:          4751  out of  16982    27%  
-   Number of fully used LUT-FF pairs:  7480  out of  16982    44%  
+ Number of LUT Flip Flop pairs used:  17044
+   Number with an unused Flip Flop:    4770  out of  17044    27%  
+   Number with an unused LUT:          4774  out of  17044    28%  
+   Number of fully used LUT-FF pairs:  7500  out of  17044    44%  
    Number of unique control sets:       579
 
 IO Utilization: 
@@ -24435,8 +24435,8 @@ IO Utilization:
  Number of bonded IOBs:                 610  out of    600   101% (*) 
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:               52  out of    264    19%  
-    Number using Block RAM only:         52
+ Number of Block RAM/FIFO:               74  out of    264    28%  
+    Number using Block RAM only:         74
  Number of BUFG/BUFGCTRLs:               13  out of     32    40%  
 
 WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
@@ -24462,8 +24462,8 @@ Clock Information:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+-------+
 Clock Signal                                                                                                                                                    | Clock buffer(FF name)                                         | Load  |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+-------+
-usr/gtx_wrapper_inst/gtx_0_inst/TXOUTCLK_OUT                                                                                                                    | BUFG                                                          | 1212  |
-clk125_2_p                                                                                                                                                      | MMCM_ADV:CLKOUT1                                              | 4287  |
+usr/gtx_wrapper_inst/gtx_0_inst/TXOUTCLK_OUT                                                                                                                    | BUFG                                                          | 1255  |
+clk125_2_p                                                                                                                                                      | MMCM_ADV:CLKOUT1                                              | 4329  |
 usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>(usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129><7>1:O)| BUFG(*)(usr/link_tracking_1_inst/ipb_info_inst/wbus_o<129>_30)| 32    |
 system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/TXOUTCLK_OUT                                                      | BUFR                                                          | 3278  |
 clk125_2_p                                                                                                                                                      | IBUF+IBUFDS_GTXE1+BUFR                                        | 111   |
@@ -24481,21 +24481,20 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Control Signal                                                                                                                                                                                                                                                                                                                                                                                                              | Buffer(FF name)                                                                                                                                                                                                                                              | Load  |
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)          | NONE(usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)   | 64    |
-usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SDP.WIDE_PRIM36.ram)| 12    |
-usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_wr_en(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1:O)                                                                                                                                                | NONE(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.WIDE_PRIM18.ram)| 8     |
-system/amc_p0_en.amc_p0_eth/N0(system/amc_p0_en.amc_p0_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                       | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                     | 1     |
-system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/N1(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                               | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                    | 1     |
-system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/n0017<0>(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                                                         | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                    | 1     |
-system/amc_p0_en.amc_p0_eth/hostbus_out_hostmiimrdy(system/amc_p0_en.amc_p0_eth/XST_GND:G)                                                                                                                                                                                                                                                                                                                                  | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                     | 1     |
-system/phy_en.phy_eth/N0(system/phy_en.phy_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                                   | NONE(system/phy_en.phy_eth/clkbuf)                                                                                                                                                                                                                           | 1     |
-system/phy_en.phy_eth/hostbus_out_hostmiimrdy(system/phy_en.phy_eth/XST_GND:G)                                                                                                                                                                                                                                                                                                                                              | NONE(system/phy_en.phy_eth/clkbuf)                                                                                                                                                                                                                           | 1     |
-system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/N1(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                                           | NONE(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                          | 1     |
-system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/n0017<0>(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                                                                     | NONE(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                          | 1     |
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                                                                                                                                              | Buffer(FF name)                                                                                                                                                                                                                                                 | Load  |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(usr/link_tracking_1_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 100   |
+usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)          | NONE(usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)      | 64    |
+system/amc_p0_en.amc_p0_eth/N0(system/amc_p0_en.amc_p0_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                       | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                        | 1     |
+system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/N1(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                               | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                       | 1     |
+system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/n0017<0>(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                                                         | NONE(system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                       | 1     |
+system/amc_p0_en.amc_p0_eth/hostbus_out_hostmiimrdy(system/amc_p0_en.amc_p0_eth/XST_GND:G)                                                                                                                                                                                                                                                                                                                                  | NONE(system/amc_p0_en.amc_p0_eth/clkbuf)                                                                                                                                                                                                                        | 1     |
+system/phy_en.phy_eth/N0(system/phy_en.phy_eth/XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                                   | NONE(system/phy_en.phy_eth/clkbuf)                                                                                                                                                                                                                              | 1     |
+system/phy_en.phy_eth/hostbus_out_hostmiimrdy(system/phy_en.phy_eth/XST_GND:G)                                                                                                                                                                                                                                                                                                                                              | NONE(system/phy_en.phy_eth/clkbuf)                                                                                                                                                                                                                              | 1     |
+system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/N1(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                                           | NONE(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                             | 1     |
+system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/n0017<0>(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/XST_GND:G)                                                                                                                                                                                                                                                                                                     | NONE(system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/bufr_clk_ds)                                                                                                                                                                                             | 1     |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -24513,7 +24512,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'usr/gtx_wrapper_inst/gtx_0_inst/TXOUTCLK_OUT'
   Clock period: 3.126ns (frequency: 319.898MHz)
-  Total number of paths / destination ports: 9256 / 2827
+  Total number of paths / destination ports: 10022 / 3399
 -------------------------------------------------------------------------
 Delay:               3.126ns (Levels of Logic = 13)
   Source:            usr/link_trigger_inst/trigger_tx_inst/kchar_count_4 (FF)
@@ -24547,7 +24546,7 @@ Delay:               3.126ns (Levels of Logic = 13)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk125_2_p'
   Clock period: 3.186ns (frequency: 313.883MHz)
-  Total number of paths / destination ports: 12168680 / 10591
+  Total number of paths / destination ports: 12169603 / 11130
 -------------------------------------------------------------------------
 Delay:               3.186ns (Levels of Logic = 5)
   Source:            system/rst/rst_fabric_o (FF)
@@ -25009,12 +25008,12 @@ xpoint1_clk1_p |    2.931|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 166.00 secs
-Total CPU time to Xst completion: 166.78 secs
+Total REAL time to Xst completion: 159.00 secs
+Total CPU time to Xst completion: 159.10 secs
  
 --> 
 
-Total memory usage is 539700 kilobytes
+Total memory usage is 545780 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 18668 (   0 filtered)

@@ -20,7 +20,7 @@ port(
     rx_data_i       : in std_logic_vector(223 downto 0);
     
     fifo_reset_i    : in std_logic;
-    fifo_count_o    : out std_logic_vector(8 downto 0)
+    fifo_count_o    : out std_logic_vector(11 downto 0)
     
 );
 end ipb_tracking;

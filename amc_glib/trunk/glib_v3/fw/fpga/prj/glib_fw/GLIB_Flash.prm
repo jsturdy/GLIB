@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o Z:\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw//GLIB_Flash -x xcf128x -u 00000000 Z:/Documents/PhD/Code/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/glib_fw/glib_top.bit -bpi_dc parallel -data_width 16 
+
+PROM \\psf\home\Documents\PhD\Code\GLIB\amc_glib\trunk\glib_v3\fw\fpga\prj\glib_fw\GLIB_Flash.prm map: Fri Feb 13 09:20:47 2015
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          16384K
+PROM start    0000:0000
+PROM end      00ff:ffff
+PROM checksum d52342f0
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    002b:ef27     Dec 01 11:33:20 2014 Z:/Documents/PhD/Code/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/glib_fw/glib_top.bit

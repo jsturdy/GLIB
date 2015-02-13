@@ -55,7 +55,7 @@ architecture Behavioral of link_tracking is
     signal track_rx_en              : std_logic := '0';
     signal track_rx_data            : std_logic_vector(223 downto 0) := (others => '0');
     signal track_fifo_reset         : std_logic := '0';
-    signal track_fifo_count         : std_logic_vector(8 downto 0) := (others => '0');
+    signal track_fifo_count         : std_logic_vector(11 downto 0) := (others => '0');
          
     -- Registers signals
     
@@ -240,7 +240,7 @@ begin
     
     -- Tracking fifo : 12 downto 11
     
-    request_read(11) <= x"00000" & "000" & track_fifo_count; -- Occupancy
+    request_read(11) <= x"00000" & track_fifo_count; -- Occupancy
     
     track_fifo_reset <= request_tri(12); -- Reset
     

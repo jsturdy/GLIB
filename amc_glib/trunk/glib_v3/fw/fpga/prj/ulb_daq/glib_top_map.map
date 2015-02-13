@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt)
+Release 14.7 Map P.20131013 (nt64)
 Xilinx Map Application Log File for Design 'glib_top'
 
 Design Information
@@ -10,7 +10,7 @@ Target Device  : xc6vlx130t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Mon Nov 24 16:43:36 2014
+Mapped Date    : Mon Dec 01 11:24:17 2014
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:56 - Part 'xc6vlx130t' is not a WebPack part.
@@ -958,11 +958,11 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 57 secs 
-Total CPU  time at the beginning of Placer: 56 secs 
+Total REAL time at the beginning of Placer: 1 mins 2 secs 
+Total CPU  time at the beginning of Placer: 1 mins 2 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:62669ff8) REAL time: 1 mins 5 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:62669ff8) REAL time: 1 mins 10 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:838 - An IO Bus with more than one IO standard is found.
@@ -1030,13 +1030,13 @@ WARNING:Place:837 - Partially locked IO Bus is found.
 INFO:Place:834 - Only a subset of IOs are locked. Out of 276 IOs, 256 are locked
    and 20 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:62669ff8) REAL time: 1 mins 7 secs 
+Phase 2.7  Design Feasibility Check (Checksum:62669ff8) REAL time: 1 mins 12 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:ad06ce5e) REAL time: 1 mins 7 secs 
+Phase 3.31  Local Placement Optimization (Checksum:ad06ce5e) REAL time: 1 mins 12 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:ad06ce5e) REAL time: 1 mins 7 secs 
+Phase 4.37  Local Placement Optimization (Checksum:ad06ce5e) REAL time: 1 mins 12 secs 
 
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/ipb_from_slaves[1]_ipb_ack (type FF)
@@ -1239,10 +1239,10 @@ CLOCKREGION_X1Y4, CLOCKREGION_X1Y2;
 
 
 ...
-Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:2e938b41) REAL time: 1 mins 26 secs 
+Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:2e938b41) REAL time: 1 mins 35 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:2e938b41) REAL time: 1 mins 26 secs 
+Phase 6.36  Local Placement Optimization (Checksum:2e938b41) REAL time: 1 mins 35 secs 
 
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
@@ -1672,37 +1672,37 @@ maybe moved to adjacent clock-regions as long as the "number of clocks per regio
 ######################################################################################
 
 
-Phase 7.30  Global Clock Region Assignment (Checksum:2e938b41) REAL time: 1 mins 42 secs 
+Phase 7.30  Global Clock Region Assignment (Checksum:2e938b41) REAL time: 1 mins 54 secs 
 
 Phase 8.3  Local Placement Optimization
 ....
 .....
-Phase 8.3  Local Placement Optimization (Checksum:4fb85c42) REAL time: 1 mins 44 secs 
+Phase 8.3  Local Placement Optimization (Checksum:4fb85c42) REAL time: 1 mins 56 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:4fb85c42) REAL time: 1 mins 44 secs 
+Phase 9.5  Local Placement Optimization (Checksum:4fb85c42) REAL time: 1 mins 56 secs 
 
 Phase 10.8  Global Placement
 ..............................................................................................................................................................
 ..................................................................................................................................................................................
 .................................................................................................................
 .......................................................
-Phase 10.8  Global Placement (Checksum:be66af47) REAL time: 2 mins 48 secs 
+Phase 10.8  Global Placement (Checksum:be66af47) REAL time: 3 mins 10 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:be66af47) REAL time: 2 mins 50 secs 
+Phase 11.5  Local Placement Optimization (Checksum:be66af47) REAL time: 3 mins 11 secs 
 
 Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:bab4d0cb) REAL time: 3 mins 55 secs 
+Phase 12.18  Placement Optimization (Checksum:bab4d0cb) REAL time: 4 mins 22 secs 
 
 Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:bab4d0cb) REAL time: 3 mins 56 secs 
+Phase 13.5  Local Placement Optimization (Checksum:bab4d0cb) REAL time: 4 mins 22 secs 
 
 Phase 14.34  Placement Validation
-Phase 14.34  Placement Validation (Checksum:ea856f1a) REAL time: 3 mins 56 secs 
+Phase 14.34  Placement Validation (Checksum:ea856f1a) REAL time: 4 mins 23 secs 
 
-Total REAL time to Placer completion: 4 mins 2 secs 
-Total CPU  time to Placer completion: 4 mins 23 secs 
+Total REAL time to Placer completion: 4 mins 29 secs 
+Total CPU  time to Placer completion: 4 mins 50 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_934_o is sourced by a combinatorial
@@ -1947,9 +1947,9 @@ Specific Feature Utilization:
   Number of RPM macros:           13
 Average Fanout of Non-Clock Nets:                3.60
 
-Peak Memory Usage:  678 MB
-Total REAL time to MAP completion:  4 mins 18 secs 
-Total CPU time to MAP completion (all processors):   4 mins 40 secs 
+Peak Memory Usage:  982 MB
+Total REAL time to MAP completion:  4 mins 49 secs 
+Total CPU time to MAP completion (all processors):   5 mins 9 secs 
 
 Mapping completed.
 See MAP report file "glib_top_map.mrp" for details.

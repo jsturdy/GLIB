@@ -1139,7 +1139,7 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="warning" file="Pack" num="2515" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">system/sram1_if/sramInterface/control_process.dataToSram_inv1_INV_0</arg>&quot; failed to join the OLOGIC comp matched to output buffer &quot;<arg fmt="%s" index="2">system/buffers/sram1_sram2flash_dataIoBuf_generate[1].dataIoBuf_generate[9].dataIoBuf/OBUFT</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="3">The LUT-1 inverter system/sram1_if/sramInterface/control_process.dataToSram_inv1_INV_0 drives multiple loads.</arg>
 </msg>
 
-<msg type="warning" file="Pack" num="1185" delta="new" >One or more I/O components have an illegal combination of property values.  For each occurrence, the system will choose sensible defaults.  To view each occurrence, create a detailed map report (run map using the -detail option).
+<msg type="warning" file="Pack" num="1185" delta="old" >One or more I/O components have an illegal combination of property values.  For each occurrence, the system will choose sensible defaults.  To view each occurrence, create a detailed map report (run map using the -detail option).
 </msg>
 
 <msg type="warning" file="Pack" num="1186" delta="old" >One or more I/O components have conflicting property values.  For each occurrence, the system will use the property value attached to the pad.  Otherwise, the system will use the first property value read.  To view each occurrence, create a detailed map report (run map using the -detail option).

@@ -232,8 +232,12 @@ architecture user_logic_arch of user_logic is
 
 begin
 
-    ip_addr_o <= x"c0a80073";  -- c0a80073 = 192.168.0.115 -- 898A7392 = 137.138.115.146
-    mac_addr_o <= x"080030F100A0";  -- 08:00:30:F1:00:A0
+    --ip_addr_o <= x"c0a80073";  -- c0a80073 = 192.168.0.115 -- 898A7392 = 137.138.115.146
+    --mac_addr_o <= x"080030F100A0";  -- 08:00:30:F1:00:A0
+    
+    ip_addr_o <= x"c0a800a" & amc_slot_i;  -- 192.168.0.[160:175]
+    mac_addr_o <= x"080030F100a" & amc_slot_i;  -- 08:00:30:F1:00:0[A0:AF]     
+    
     user_v6_led_o(1) <= '0';
     user_v6_led_o(2) <= '1';
 

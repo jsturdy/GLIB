@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Map Application Log File for Design 'glib_top'
 
 Design Information
@@ -10,7 +10,7 @@ Target Device  : xc6vlx130t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Mon Dec 01 11:24:12 2014
+Mapped Date    : Tue Mar 10 07:57:18 2015
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:56 - Part 'xc6vlx130t' is not a WebPack part.
@@ -1007,11 +1007,11 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 58 secs 
-Total CPU  time at the beginning of Placer: 57 secs 
+Total REAL time at the beginning of Placer: 56 secs 
+Total CPU  time at the beginning of Placer: 52 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:3defacfe) REAL time: 1 mins 5 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:c41fe2a3) REAL time: 1 mins 4 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:837 - Partially locked IO Bus is found. 
@@ -1041,13 +1041,13 @@ WARNING:Place:837 - Partially locked IO Bus is found.
 INFO:Place:834 - Only a subset of IOs are locked. Out of 247 IOs, 227 are locked
    and 20 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:3defacfe) REAL time: 1 mins 7 secs 
+Phase 2.7  Design Feasibility Check (Checksum:c41fe2a3) REAL time: 1 mins 6 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:bf046eab) REAL time: 1 mins 7 secs 
+Phase 3.31  Local Placement Optimization (Checksum:5a684515) REAL time: 1 mins 6 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:bf046eab) REAL time: 1 mins 7 secs 
+Phase 4.37  Local Placement Optimization (Checksum:5a684515) REAL time: 1 mins 6 secs 
 
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
@@ -1241,10 +1241,10 @@ AREA_GROUP "CLKAG_system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/clk_ds
 CLOCKREGION_X1Y4, CLOCKREGION_X1Y2;
 
 
-Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:8b962622) REAL time: 1 mins 29 secs 
+Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:371648e0) REAL time: 1 mins 24 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:8b962622) REAL time: 1 mins 29 secs 
+Phase 6.36  Local Placement Optimization (Checksum:371648e0) REAL time: 1 mins 24 secs 
 
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
@@ -1254,7 +1254,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    The load component should be of clock buffer type.
 ....
 ....
-............................................................................................
+..............................................................................
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
    The load component should be of clock buffer type.
@@ -1438,7 +1438,7 @@ Number of Global Clock Networks: 18
 Clock Region Assignment: SUCCESSFUL
 
 Clock-Region: <CLOCKREGION_X0Y0> 
- key resource utilizations (used/available): global-clocks - 3/12 ;
+ key resource utilizations (used/available): global-clocks - 4/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1448,15 +1448,16 @@ Clock-Region: <CLOCKREGION_X0Y0>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/cdce_synch/clk_from_bufg_mux
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |system/sram_w[1]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     14 |    353 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |system/sram_w[1]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     96 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     69 |usr/gtx_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     14 |    370 | Total 
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |    178 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X1Y0> 
- key resource utilizations (used/available): global-clocks - 4/12 ;
+ key resource utilizations (used/available): global-clocks - 3/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1466,16 +1467,15 @@ Clock-Region: <CLOCKREGION_X1Y0>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/sram_w[1]_clk
-     25 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |    419 |user_ipb_clk
-     25 |      0 |      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    983 |usr/gtx_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>_BUFG
+     21 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    374 |user_ipb_clk
+     21 |      0 |      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    840 |usr/gtx_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     50 |      0 |      4 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     12 |   1406 | Total 
+     42 |      0 |      4 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |   1214 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X0Y1> 
- key resource utilizations (used/available): global-clocks - 5/12 ;
+ key resource utilizations (used/available): global-clocks - 6/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1486,16 +1486,17 @@ Clock-Region: <CLOCKREGION_X0Y1>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/cdce_synch/clk_from_bufg_mux
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    421 |system/sram_w[1]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     34 |system/sram_w[2]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |user_clk125_2_bufg
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1201 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     49 |system/sram_w[2]_clk
+     14 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     36 |   1549 |user_ipb_clk
+     14 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     59 |usr/gtx_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>_BUFG
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1658 | Total 
+     28 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     36 |   2083 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X1Y1> 
- key resource utilizations (used/available): global-clocks - 3/12 ;
+ key resource utilizations (used/available): global-clocks - 6/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1504,11 +1505,14 @@ Clock-Region: <CLOCKREGION_X1Y1>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     20 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |    714 |user_ipb_clk
-     12 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    230 |usr/gtx_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |system/sram_w[1]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |system/sram_w[2]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      2 |user_clk125_2_bufg
+     11 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |    749 |user_ipb_clk
+      5 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    243 |usr/gtx_clk
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>_BUFG
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     32 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |    972 | Total 
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     14 |   1032 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
@@ -1523,16 +1527,16 @@ Clock-Region: <CLOCKREGION_X0Y2>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     22 |system/cdce_synch/clk_from_bufg_mux
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    396 |system/sram_w[2]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |     56 |user_clk125_2_bufg
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |    171 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    376 |system/sram_w[2]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     33 |user_clk125_2_bufg
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |    127 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     14 |    645 | Total 
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |    558 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
 Clock-Region: <CLOCKREGION_X1Y2> 
- key resource utilizations (used/available): global-clocks - 7/12 ;
+ key resource utilizations (used/available): global-clocks - 6/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1543,13 +1547,12 @@ Clock-Region: <CLOCKREGION_X1Y2>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/gbt_phase_monitoring/sfp_ttclk_x6_cdce
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |     26 |system/gbt_phase_monitoring/ttclk_x6
-      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      7 |system/sram_w[2]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      5 |user_clk125_2_bufg
-     15 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |    397 |user_ipb_clk
-      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |usr/gtx_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |     25 |system/gbt_phase_monitoring/ttclk_x6
+      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |system/sram_w[2]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     19 |user_clk125_2_bufg
+     23 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |    406 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     18 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     22 |    437 | Total 
+     23 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     34 |    458 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
@@ -1569,7 +1572,7 @@ Clock-Region: <CLOCKREGION_X0Y3>
 
 
 Clock-Region: <CLOCKREGION_X1Y3> 
- key resource utilizations (used/available): global-clocks - 1/12 ;
+ key resource utilizations (used/available): global-clocks - 2/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -1578,9 +1581,10 @@ Clock-Region: <CLOCKREGION_X1Y3>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     12 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     71 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |user_clk125_2_bufg
+      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     13 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     12 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     71 | Total 
+      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     13 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 
@@ -1623,47 +1627,89 @@ maybe moved to adjacent clock-regions as long as the "number of clocks per regio
 ######################################################################################
 
 
-Phase 7.30  Global Clock Region Assignment (Checksum:8b962622) REAL time: 1 mins 42 secs 
+Phase 7.30  Global Clock Region Assignment (Checksum:371648e0) REAL time: 1 mins 35 secs 
 
 Phase 8.3  Local Placement Optimization
 ....
 ....
-Phase 8.3  Local Placement Optimization (Checksum:981e40b4) REAL time: 1 mins 44 secs 
+Phase 8.3  Local Placement Optimization (Checksum:452e81a3) REAL time: 1 mins 37 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:981e40b4) REAL time: 1 mins 44 secs 
+Phase 9.5  Local Placement Optimization (Checksum:452e81a3) REAL time: 1 mins 37 secs 
 
 Phase 10.8  Global Placement
-..............................................................................................
-.................................................................................................................................................................................................
-.....................................................................................................................................................
-.......................................................
-Phase 10.8  Global Placement (Checksum:61842912) REAL time: 2 mins 45 secs 
+..................................................................................................................................................
+.....................................................................................................................................................................................
+.................................................................................................................
+..................................................
+Phase 10.8  Global Placement (Checksum:54779495) REAL time: 2 mins 29 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:61842912) REAL time: 2 mins 46 secs 
+Phase 11.5  Local Placement Optimization (Checksum:54779495) REAL time: 2 mins 30 secs 
 
 Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:3fdac2ec) REAL time: 3 mins 22 secs 
+Phase 12.18  Placement Optimization (Checksum:7226062e) REAL time: 3 mins 1 secs 
 
 Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:3fdac2ec) REAL time: 3 mins 22 secs 
+Phase 13.5  Local Placement Optimization (Checksum:7226062e) REAL time: 3 mins 1 secs 
 
 Phase 14.34  Placement Validation
-Phase 14.34  Placement Validation (Checksum:f2985fa8) REAL time: 3 mins 23 secs 
+Phase 14.34  Placement Validation (Checksum:3dcc19f0) REAL time: 3 mins 1 secs 
 
-Total REAL time to Placer completion: 3 mins 28 secs 
-Total CPU  time to Placer completion: 3 mins 44 secs 
+Total REAL time to Placer completion: 3 mins 6 secs 
+Total CPU  time to Placer completion: 3 mins 17 secs 
 Running post-placement packing...
 Writing output files...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][2]_AND_833_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][2]_AND_769_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[3]_AND_173_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][3]_AND_831_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][0]_AND_773_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][3]_AND_767_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[0]_AND_179_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_934_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][0]_AND_837_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][1]_AND_835_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][1]_AND_771_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[1]_AND_177_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[2]_AND_175_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMC_D1_O> is incomplete. The signal does not drive any load pins in the design.
@@ -1671,8 +1717,17 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
+   MC_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
@@ -1683,22 +1738,19 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
-   MC_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 
 Design Summary
@@ -1706,18 +1758,18 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:  456
+Number of warnings:  472
 Slice Logic Utilization:
-  Number of Slice Registers:                12,045 out of 160,000    7%
-    Number used as Flip Flops:              12,010
-    Number used as Latches:                     35
+  Number of Slice Registers:                12,077 out of 160,000    7%
+    Number used as Flip Flops:              12,026
+    Number used as Latches:                     51
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                     10,127 out of  80,000   12%
-    Number used as logic:                    9,642 out of  80,000   12%
-      Number using O6 output only:           6,255
-      Number using O5 output only:             568
-      Number using O5 and O6:                2,819
+  Number of Slice LUTs:                     10,113 out of  80,000   12%
+    Number used as logic:                    9,673 out of  80,000   12%
+      Number using O6 output only:           6,271
+      Number using O5 output only:             567
+      Number using O5 and O6:                2,835
       Number used as ROM:                        0
     Number used as Memory:                      53 out of  27,840    1%
       Number used as Dual Port RAM:              0
@@ -1729,20 +1781,20 @@ Slice Logic Utilization:
         Number using O6 output only:             5
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    432
-      Number with same-slice register load:    401
+    Number used exclusively as route-thrus:    387
+      Number with same-slice register load:    356
       Number with same-slice carry load:        31
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,277 out of  20,000   21%
-  Number of LUT Flip Flop pairs used:       13,329
-    Number with an unused Flip Flop:         3,340 out of  13,329   25%
-    Number with an unused LUT:               3,202 out of  13,329   24%
-    Number of fully used LUT-FF pairs:       6,787 out of  13,329   50%
-    Number of unique control sets:             457
+  Number of occupied Slices:                 4,428 out of  20,000   22%
+  Number of LUT Flip Flop pairs used:       13,476
+    Number with an unused Flip Flop:         3,392 out of  13,476   25%
+    Number with an unused LUT:               3,363 out of  13,476   24%
+    Number of fully used LUT-FF pairs:       6,721 out of  13,476   49%
+    Number of unique control sets:             505
     Number of slice register sites lost
-      to control set restrictions:           1,200 out of 160,000    1%
+      to control set restrictions:           1,536 out of 160,000    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -1800,11 +1852,11 @@ Specific Feature Utilization:
   Number of TEMAC_SINGLEs:                       2 out of       4   50%
 
   Number of RPM macros:            6
-Average Fanout of Non-Clock Nets:                3.82
+Average Fanout of Non-Clock Nets:                3.81
 
-Peak Memory Usage:  932 MB
-Total REAL time to MAP completion:  3 mins 43 secs 
-Total CPU time to MAP completion (all processors):   3 mins 59 secs 
+Peak Memory Usage:  653 MB
+Total REAL time to MAP completion:  3 mins 19 secs 
+Total CPU time to MAP completion (all processors):   3 mins 30 secs 
 
 Mapping completed.
 See MAP report file "glib_top_map.mrp" for details.

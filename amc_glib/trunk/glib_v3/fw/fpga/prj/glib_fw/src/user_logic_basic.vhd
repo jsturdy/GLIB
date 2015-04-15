@@ -230,6 +230,36 @@ architecture user_logic_arch of user_logic is
     signal empty_trigger_fifo   : std_logic := '0';
     signal sbit_configuration   : std_logic_vector(2 downto 0) := (others => '0');
 
+    component amc13_top is
+      Port ( TTC_CLK_p  : in  STD_LOGIC;
+             TTC_CLK_n  : in  STD_LOGIC;
+             TTC_data_p : in  STD_LOGIC;
+             TTC_data_n : in  STD_LOGIC;
+             TTC_CLK   : out  STD_LOGIC;
+             TTCready  : out  STD_LOGIC;
+             L1Accept  : out  STD_LOGIC;
+             BCntRes   : out  STD_LOGIC;
+             EvCntRes  : out  STD_LOGIC;
+             SinErrStr : out  STD_LOGIC;
+             DbErrStr  : out  STD_LOGIC;
+             BrcstStr  : out  STD_LOGIC;
+             Brcst     : out  STD_LOGIC_VECTOR (7 downto 2));
+    end component amc13_top;
+
+    --AMC13 signal def !! fix the indentation 
+    signal BCntRes   : STD_LOGIC;
+    signal EvCntRes  : STD_LOGIC;
+    signal SinErrStr : STD_LOGIC;
+    signal DbErrStr  : STD_LOGIC;
+    signal Brcst     : STD_LOGIC_VECTOR(5 downto 0);
+    signal BrcstStr  : STD_LOGIC;
+    signal Brcst_r   : STD_LOGIC;
+    signal Brcst4_r  : STD_LOGIC;
+
+    signal L1ACCEPT	: STD_LOGIC;
+    signal L1ACCEPT_r	: STD_LOGIC;
+    signal cdce_clkout4 : STD_LOGIC;
+
 begin
 
     --ip_addr_o <= x"c0a80073";  -- c0a80073 = 192.168.0.115 -- 898A7392 = 137.138.115.146
@@ -311,6 +341,79 @@ begin
         sbit_config_i   => sbit_configuration,
         ext_sbit_o      => ext_sbit
     );
+
+    --TTC/TTT signal handling 	
+    -- from ngFEC_logic.vhd (HCAL)
+    amc13: amc13_top
+      Port map( TTC_CLK_p  => cdce_out4_p,
+                TTC_CLK_n  => cdce_out4_n,
+                TTC_data_p => amc_port_rx_p(3),
+                TTC_data_n => amc_port_rx_n(3),
+                TTC_CLK    => cdce_clkout4,
+                TTCready   => OPEN,
+                L1Accept   => L1ACCEPT,
+                BCntRes    => BCntRes,
+                EvCntRes   => EvCntRes, 
+                SinErrStr  => SinErrStr,
+                DbErrStr   => DbErrStr,
+                BrcstStr   => BrcstStr,
+                Brcst      => Brcst);
+
+    
+    --TTC counters for debugging
+    -- from ngFEC_logic.vhd--signal_check : process ( reset_i,cdce_clkout4,Brcst(6), Brcst(0),regs_to_wb(16), QIE_reset_counter, BrcstStr ) is
+    -- from ngFEC_logic.vhd--  variable led: STD_LOGIC;
+    -- from ngFEC_logic.vhd--  variable led2: STD_LOGIC;
+    -- from ngFEC_logic.vhd--
+    -- from ngFEC_logic.vhd--begin
+    -- from ngFEC_logic.vhd--  
+    -- from ngFEC_logic.vhd--  if reset_i = '1' then
+    -- from ngFEC_logic.vhd--    led := '0';
+    -- from ngFEC_logic.vhd--    led2 := '0';
+    -- from ngFEC_logic.vhd--    Brcst_r <= '0';
+    -- from ngFEC_logic.vhd--    Brcst4_r <= '0';
+    -- from ngFEC_logic.vhd--    QIE_reset_counter	<= x"00000000";
+    -- from ngFEC_logic.vhd--    SinErr_counter <= x"00000000";
+    -- from ngFEC_logic.vhd--    DbErr_counter<= x"00000000";
+    -- from ngFEC_logic.vhd--    BCnt<= x"00000000";
+    -- from ngFEC_logic.vhd--    EvCnt<= x"00000000";
+    -- from ngFEC_logic.vhd--  elsif rising_edge(cdce_clkout4) then
+    -- from ngFEC_logic.vhd--    if Brcst(4) = '1' and Brcst4_r = '0' then
+    -- from ngFEC_logic.vhd--      led := not led;
+    -- from ngFEC_logic.vhd--    end if;
+    -- from ngFEC_logic.vhd--    
+    -- from ngFEC_logic.vhd--    Brcst4_r <= Brcst(4);	
+    -- from ngFEC_logic.vhd--    user_v6_led_o(1) <= led;
+    -- from ngFEC_logic.vhd--    
+    -- from ngFEC_logic.vhd--    if Brcst(0) = '1' and BrcstStr = '1' then
+    -- from ngFEC_logic.vhd--      led2 := not led2;
+    -- from ngFEC_logic.vhd--      QIE_reset_counter <= QIE_reset_counter + 1;
+    -- from ngFEC_logic.vhd--    end if;
+    -- from ngFEC_logic.vhd--    --Single Err Counter 
+    -- from ngFEC_logic.vhd--    if SinErrStr = '1' then
+    -- from ngFEC_logic.vhd--      SinErr_counter <= SinErr_counter + 1;
+    -- from ngFEC_logic.vhd--    end if;
+    -- from ngFEC_logic.vhd--    --Double err counter
+    -- from ngFEC_logic.vhd--    if DbErrStr = '1' then
+    -- from ngFEC_logic.vhd--      DbErr_counter <= DbErr_counter + 1;
+    -- from ngFEC_logic.vhd--    end if;
+    -- from ngFEC_logic.vhd--    -- Bunch counter
+    -- from ngFEC_logic.vhd--    if BCntRes = '1' then 
+    -- from ngFEC_logic.vhd--      BCnt <= BCnt +1;
+    -- from ngFEC_logic.vhd--    end if;
+    -- from ngFEC_logic.vhd--    --event counter
+    -- from ngFEC_logic.vhd--    if EvCntRes = '1' then 
+    -- from ngFEC_logic.vhd--      EvCnt <= EvCnt +1;
+    -- from ngFEC_logic.vhd--    end if;
+    -- from ngFEC_logic.vhd--    user_v6_led_o(2) <= led2; 
+    -- from ngFEC_logic.vhd--    Brcst_r <= Brcst(0);
+    -- from ngFEC_logic.vhd--    regs_to_wb(32)	<= QIE_reset_counter;
+    -- from ngFEC_logic.vhd--    regs_to_wb(7)  <= DbErr_counter;
+    -- from ngFEC_logic.vhd--    regs_to_wb(8)	<= SinErr_counter;
+    -- from ngFEC_logic.vhd--    regs_to_wb(10)	<= BCnt;
+    -- from ngFEC_logic.vhd--    regs_to_wb(11)	<= EvCnt;
+    -- from ngFEC_logic.vhd--  end if;
+    -- from ngFEC_logic.vhd--end process;
 
     --================================--
     -- Register mapping

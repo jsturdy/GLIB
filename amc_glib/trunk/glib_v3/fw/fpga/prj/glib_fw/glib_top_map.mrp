@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt)
+Release 14.7 Map P.20131013 (nt64)
 Xilinx Mapping Report File for Design 'glib_top'
 
 Design Information
@@ -9,48 +9,48 @@ Target Device  : xc6vlx130t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Tue Mar 10 07:57:18 2015
+Mapped Date    : Thu Apr 16 18:26:09 2015
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  472
+Number of warnings:  475
 Slice Logic Utilization:
-  Number of Slice Registers:                12,077 out of 160,000    7%
-    Number used as Flip Flops:              12,026
-    Number used as Latches:                     51
+  Number of Slice Registers:                12,130 out of 160,000    7%
+    Number used as Flip Flops:              12,078
+    Number used as Latches:                     52
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                     10,113 out of  80,000   12%
-    Number used as logic:                    9,673 out of  80,000   12%
-      Number using O6 output only:           6,271
-      Number using O5 output only:             567
-      Number using O5 and O6:                2,835
+  Number of Slice LUTs:                     10,080 out of  80,000   12%
+    Number used as logic:                    9,709 out of  80,000   12%
+      Number using O6 output only:           6,272
+      Number using O5 output only:             544
+      Number using O5 and O6:                2,893
       Number used as ROM:                        0
-    Number used as Memory:                      53 out of  27,840    1%
+    Number used as Memory:                      55 out of  27,840    1%
       Number used as Dual Port RAM:              0
       Number used as Single Port RAM:           48
         Number using O6 output only:             0
         Number using O5 output only:             2
         Number using O5 and O6:                 46
-      Number used as Shift Register:             5
-        Number using O6 output only:             5
+      Number used as Shift Register:             7
+        Number using O6 output only:             7
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    387
-      Number with same-slice register load:    356
-      Number with same-slice carry load:        31
+    Number used exclusively as route-thrus:    316
+      Number with same-slice register load:    284
+      Number with same-slice carry load:        32
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,428 out of  20,000   22%
-  Number of LUT Flip Flop pairs used:       13,476
-    Number with an unused Flip Flop:         3,392 out of  13,476   25%
-    Number with an unused LUT:               3,363 out of  13,476   24%
-    Number of fully used LUT-FF pairs:       6,721 out of  13,476   49%
-    Number of unique control sets:             505
+  Number of occupied Slices:                 4,525 out of  20,000   22%
+  Number of LUT Flip Flop pairs used:       13,610
+    Number with an unused Flip Flop:         3,379 out of  13,610   24%
+    Number with an unused LUT:               3,530 out of  13,610   25%
+    Number of fully used LUT-FF pairs:       6,701 out of  13,610   49%
+    Number of unique control sets:             511
     Number of slice register sites lost
-      to control set restrictions:           1,536 out of 160,000    1%
+      to control set restrictions:           1,577 out of 160,000    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -61,9 +61,9 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       247 out of     600   41%
-    Number of LOCed IOBs:                      227 out of     247   91%
-    IOB Flip Flops:                              2
+  Number of bonded IOBs:                       249 out of     600   41%
+    Number of LOCed IOBs:                      229 out of     249   91%
+    IOB Flip Flops:                              3
     IOB Master Pads:                             1
     IOB Slave Pads:                              1
     Number of bonded IPADs:                     16
@@ -78,10 +78,12 @@ Specific Feature Utilization:
   Number of RAMB18E1/FIFO18E1s:                  1 out of     528    1%
     Number using RAMB18E1 only:                  1
     Number using FIFO18E1 only:                  0
-  Number of BUFG/BUFGCTRLs:                     11 out of      32   34%
-    Number used as BUFGs:                        8
+  Number of BUFG/BUFGCTRLs:                     13 out of      32   40%
+    Number used as BUFGs:                       10
     Number used as BUFGCTRLs:                    3
-  Number of ILOGICE1/ISERDESE1s:                 0 out of     600    0%
+  Number of ILOGICE1/ISERDESE1s:                 1 out of     600    1%
+    Number used as ILOGICE1s:                    1
+    Number used as ISERDESE1s:                   0
   Number of OLOGICE1/OSERDESE1s:                 4 out of     600    1%
     Number used as OLOGICE1s:                    4
     Number used as OSERDESE1s:                   0
@@ -100,19 +102,19 @@ Specific Feature Utilization:
   Number of ICAPs:                               1 out of       2   50%
   Number of IDELAYCTRLs:                         0 out of      15    0%
   Number of IODELAYE1s:                          0 out of     600    0%
-  Number of MMCM_ADVs:                           2 out of      10   20%
-    Number of LOCed MMCM_ADVs:                   1 out of       2   50%
+  Number of MMCM_ADVs:                           3 out of      10   30%
+    Number of LOCed MMCM_ADVs:                   1 out of       3   33%
   Number of PCIE_2_0s:                           0 out of       2    0%
   Number of STARTUPs:                            1 out of       1  100%
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       2 out of       4   50%
 
   Number of RPM macros:            6
-Average Fanout of Non-Clock Nets:                3.81
+Average Fanout of Non-Clock Nets:                3.80
 
-Peak Memory Usage:  653 MB
-Total REAL time to MAP completion:  3 mins 19 secs 
-Total CPU time to MAP completion (all processors):   3 mins 30 secs 
+Peak Memory Usage:  944 MB
+Total REAL time to MAP completion:  5 mins 39 secs 
+Total CPU time to MAP completion (all processors):   5 mins 46 secs 
 
 Table of Contents
 -----------------
@@ -135,9 +137,12 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Security:42 - Your software subscription period has lapsed. Your current
-version of Xilinx tools will continue to function, but you no longer qualify for
-Xilinx software updates or new releases.
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+WARNING:Security:42 - Your license support version '2015.04' for ISE expires in
+14 days after which you will not qualify for Xilinx software updates or new
+releases.
 WARNING:MapLib:701 - Signal fmc1_la_p<0> connected to top level port
    fmc1_la_p<0> has been removed.
 WARNING:MapLib:701 - Signal fmc1_la_p<1> connected to top level port
@@ -1120,6 +1125,26 @@ WARNING:Pack:2515 - The LUT-1 inverter
    dataIoBuf/OBUFT".  This may result in suboptimal timing.  The LUT-1 inverter
    system/sram1_if/sramInterface/control_process.dataToSram_inv1_INV_0 drives
    multiple loads.
+WARNING:Place:838 - An IO Bus with more than one IO standard is found.
+   Components associated with this bus are as follows: 
+   	 Comp: amc_port_rx_p<15>   IOSTANDARD = LVCMOS25
+   	 Comp: amc_port_rx_p<14>   IOSTANDARD = LVCMOS25
+   	 Comp: amc_port_rx_p<13>   IOSTANDARD = LVCMOS25
+   	 Comp: amc_port_rx_p<12>   IOSTANDARD = LVCMOS25
+   	 Comp: amc_port_rx_p<3>   IOSTANDARD = LVDS_25
+   	 Comp: amc_port_rx_p<2>   IOSTANDARD = LVCMOS25
+
+
+WARNING:Place:838 - An IO Bus with more than one IO standard is found.
+   Components associated with this bus are as follows: 
+   	 Comp: amc_port_rx_n<15>   IOSTANDARD = LVCMOS25
+   	 Comp: amc_port_rx_n<14>   IOSTANDARD = LVCMOS25
+   	 Comp: amc_port_rx_n<13>   IOSTANDARD = LVCMOS25
+   	 Comp: amc_port_rx_n<12>   IOSTANDARD = LVCMOS25
+   	 Comp: amc_port_rx_n<3>   IOSTANDARD = LVDS_25
+   	 Comp: amc_port_rx_n<2>   IOSTANDARD = LVCMOS25
+
+
 WARNING:Place:837 - Partially locked IO Bus is found. 
     Following components of the bus are not locked: 
    	 Comp: amc_port_tx_p<1>
@@ -1149,16 +1174,14 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
-   FF)
+   system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
    FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
-   FF)
+   system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
@@ -1172,11 +1195,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
-   FF)
+   system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[2]_ipb_ack (type FF)
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
+   FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
@@ -1194,11 +1217,11 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
-   FF)
+   system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/ipb_from_slaves[2]_ipb_ack (type FF)
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type
+   FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type
@@ -1207,8 +1230,7 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
    The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
@@ -1223,6 +1245,10 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_fr
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
+   The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
    The load component should be of clock buffer type.
@@ -1231,10 +1257,6 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram1_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
@@ -1250,20 +1272,38 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[1]_ipb_ack (type FF)
    The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
-   The load component should be of clock buffer type.
-WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
-   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
-   The load component should be of clock buffer type.
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load system/ipb_from_slaves[2]_ipb_ack (type FF)
    The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd1 (type FF)
+   The load component should be of clock buffer type.
+WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
+   system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
+   The load component should be of clock buffer type.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][1]_AND_835_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[0]_AND_179_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[1]_AND_177_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[2]_AND_175_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[3]_AND_173_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][2]_AND_833_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
@@ -1271,9 +1311,6 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][2]_AND_769_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[3]_AND_173_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][3]_AND_831_o is sourced by a
@@ -1285,15 +1322,9 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][3]_AND_767_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[0]_AND_179_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_934_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][0]_AND_837_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][1]_AND_835_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][1]_AND_771_o is sourced by a
@@ -1302,18 +1333,36 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[1]_AND_177_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[2]_AND_175_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
+   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMC_D1_O> is incomplete. The signal does not drive any load pins in the design.
@@ -1327,44 +1376,23 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
    MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
    RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
-   AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
+   block:<usr/amc13/Inst_TTC_decoder/IDDR_inst>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is not
+   used.
 
 Section 3 - Informational
 -------------------------
 INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    supports the use of up to 2 processors. Based on the the user options and
    machine load, Map will use 2 processors during this run.
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'2112@lxlic01,2112@lxlic02,2112@lxlic03'.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
 INFO:Security:56 - Part 'xc6vlx130t' is not a WebPack part.
 INFO:LIT:243 - Logical network user_ipb_miso[1]_ipb_err has no load.
-INFO:LIT:395 - The above info message is repeated 5223 more times for the
+INFO:LIT:395 - The above info message is repeated 5230 more times for the
    following (max. 5 shown):
    user_ipb_miso[4]_ipb_err,
    user_ipb_miso[7]_ipb_err,
@@ -1381,16 +1409,16 @@ INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more inform
    Command Line Tools User Guide for information on generating a TSI report.
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 247 IOs, 227 are locked
+INFO:Place:834 - Only a subset of IOs are locked. Out of 249 IOs, 229 are locked
    and 20 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-1115 block(s) removed
- 243 block(s) optimized away
-1264 signal(s) removed
+1170 block(s) removed
+ 245 block(s) optimized away
+1319 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -1405,6 +1433,167 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
+Loadless block "usr/amc13/Inst_TTC_decoder/i_brcst_str3" (SRL16E) removed.
+ The signal "usr/amc13/Inst_TTC_decoder/brcst_str_2" is loadless and has been
+removed.
+  Loadless block "usr/amc13/Inst_TTC_decoder/brcst_str_2" (FF) removed.
+   The signal "usr/amc13/Inst_TTC_decoder/brcst_str[1]_double_err_AND_1507_o" is
+loadless and has been removed.
+    Loadless block "usr/amc13/Inst_TTC_decoder/brcst_str[1]_double_err_AND_1507_o1"
+(ROM) removed.
+     The signal "usr/amc13/Inst_TTC_decoder/double_err" is loadless and has been
+removed.
+      Loadless block "usr/amc13/Inst_TTC_decoder/double_err" (FF) removed.
+       The signal "usr/amc13/Inst_TTC_decoder/brcst_syn[4]_frame_err_OR_1336_o" is
+loadless and has been removed.
+        Loadless block "usr/amc13/Inst_TTC_decoder/brcst_syn[4]_frame_err_OR_1336_o11"
+(ROM) removed.
+         The signal "usr/amc13/Inst_TTC_decoder/frame_err" is loadless and has been
+removed.
+          Loadless block "usr/amc13/Inst_TTC_decoder/frame_err" (FF) removed.
+           The signal "usr/amc13/Inst_TTC_decoder/FMT_rec_cntr[3]_AND_1502_o" is loadless
+and has been removed.
+            Loadless block "usr/amc13/Inst_TTC_decoder/FMT_rec_cntr[3]_AND_1502_o1" (ROM)
+removed.
+             The signal "usr/amc13/Inst_TTC_decoder/FMT" is loadless and has been removed.
+              Loadless block "usr/amc13/Inst_TTC_decoder/FMT" (FF) removed.
+               The signal "usr/amc13/Inst_TTC_decoder/FMT_rstpot" is loadless and has been
+removed.
+                Loadless block "usr/amc13/Inst_TTC_decoder/FMT_rstpot" (ROM) removed.
+                 The signal "usr/amc13/Inst_TTC_decoder/rec_cntr[5]_reduce_or_6_o_inv" is
+loadless and has been removed.
+                  Loadless block "usr/amc13/Inst_TTC_decoder/rec_cntr[5]_reduce_or_6_o_inv1" (ROM)
+removed.
+                   The signal "usr/amc13/Inst_TTC_decoder/rec_cntr<5>" is loadless and has been
+removed.
+                    Loadless block "usr/amc13/Inst_TTC_decoder/rec_cntr_5" (SFF) removed.
+                     The signal "usr/amc13/Inst_TTC_decoder/Result<5>" is loadless and has been
+removed.
+                      Loadless block "usr/amc13/Inst_TTC_decoder/Result<5>1" (ROM) removed.
+                       The signal "usr/amc13/Inst_TTC_decoder/rec_cntr<3>" is loadless and has been
+removed.
+                        Loadless block "usr/amc13/Inst_TTC_decoder/rec_cntr_3" (SFF) removed.
+                         The signal "usr/amc13/Inst_TTC_decoder/Result<3>" is loadless and has been
+removed.
+                          Loadless block "usr/amc13/Inst_TTC_decoder/Result<3>1" (ROM) removed.
+                           The signal "usr/amc13/Inst_TTC_decoder/rec_cntr<0>" is loadless and has been
+removed.
+                            Loadless block "usr/amc13/Inst_TTC_decoder/rec_cntr_0" (SFF) removed.
+                             The signal "usr/amc13/Inst_TTC_decoder/Result<0>" is loadless and has been
+removed.
+                              Loadless block "usr/amc13/Inst_TTC_decoder/Mcount_rec_cntr_xor<0>11_INV_0" (BUF)
+removed.
+                             The signal "usr/amc13/Inst_TTC_decoder/rec_cmd_inv" is loadless and has been
+removed.
+                              Loadless block "usr/amc13/Inst_TTC_decoder/rec_cmd_inv1_INV_0" (BUF) removed.
+                               The signal "usr/amc13/Inst_TTC_decoder/rec_cmd" is loadless and has been
+removed.
+                                Loadless block "usr/amc13/Inst_TTC_decoder/rec_cmd" (FF) removed.
+                                 The signal "usr/amc13/Inst_TTC_decoder/rec_cmd_rstpot" is loadless and has been
+removed.
+                                  Loadless block "usr/amc13/Inst_TTC_decoder/rec_cmd_rstpot" (ROM) removed.
+                                   The signal "usr/amc13/Inst_TTC_decoder/N2" is loadless and has been removed.
+                                    Loadless block "usr/amc13/Inst_TTC_decoder/rec_cmd_rstpot_SW0" (ROM) removed.
+                                     The signal "usr/amc13/Inst_TTC_decoder/TTC_data<1>" is loadless and has been
+removed.
+                                   The signal "usr/amc13/Inst_TTC_decoder/N01" is loadless and has been removed.
+                                    Loadless block "usr/amc13/Inst_TTC_decoder/TTC_lock_q_FMT_OR_1330_o_SW0" (ROM)
+removed.
+                                     The signal "usr/amc13/Inst_TTC_decoder/rec_cntr<1>" is loadless and has been
+removed.
+                                      Loadless block "usr/amc13/Inst_TTC_decoder/rec_cntr_1" (SFF) removed.
+                                       The signal "usr/amc13/Inst_TTC_decoder/Result<1>" is loadless and has been
+removed.
+                                        Loadless block "usr/amc13/Inst_TTC_decoder/Mcount_rec_cntr_xor<1>11" (ROM)
+removed.
+                                   The signal "usr/amc13/Inst_TTC_decoder/rec_cntr<4>" is loadless and has been
+removed.
+                                    Loadless block "usr/amc13/Inst_TTC_decoder/rec_cntr_4" (SFF) removed.
+                                     The signal "usr/amc13/Inst_TTC_decoder/Result<4>" is loadless and has been
+removed.
+                                      Loadless block "usr/amc13/Inst_TTC_decoder/Result<4>1" (ROM) removed.
+                                       The signal "usr/amc13/Inst_TTC_decoder/rec_cntr<2>" is loadless and has been
+removed.
+                                        Loadless block "usr/amc13/Inst_TTC_decoder/rec_cntr_2" (SFF) removed.
+                                         The signal "usr/amc13/Inst_TTC_decoder/Result<2>" is loadless and has been
+removed.
+                                          Loadless block "usr/amc13/Inst_TTC_decoder/Mcount_rec_cntr_xor<2>11" (ROM)
+removed.
+           The signal "usr/amc13/Inst_TTC_decoder/TTC_data<1>_inv" is loadless and has been
+removed.
+            Loadless block "usr/amc13/Inst_TTC_decoder/TTC_data<1>_inv1_INV_0" (BUF)
+removed.
+         The signal "usr/amc13/Inst_TTC_decoder/brcst_syn<0>" is loadless and has been
+removed.
+          Loadless block "usr/amc13/Inst_TTC_decoder/brcst_syn_0" (FF) removed.
+           The signal "usr/amc13/Inst_TTC_decoder/sr[0]_sr[8]_XOR_445_o" is loadless and
+has been removed.
+            Loadless block "usr/amc13/Inst_TTC_decoder/Mxor_sr[0]_sr[8]_XOR_445_o_xo<0>1"
+(ROM) removed.
+             The signal "usr/amc13/Inst_TTC_decoder/sr<0>" is loadless and has been removed.
+              Loadless block "usr/amc13/Inst_TTC_decoder/sr_0" (FF) removed.
+             The signal "usr/amc13/Inst_TTC_decoder/sr<5>" is loadless and has been removed.
+              Loadless block "usr/amc13/Inst_TTC_decoder/sr_5" (FF) removed.
+               The signal "usr/amc13/Inst_TTC_decoder/sr<4>" is loadless and has been removed.
+                Loadless block "usr/amc13/Inst_TTC_decoder/sr_4" (FF) removed.
+                 The signal "usr/amc13/Inst_TTC_decoder/sr<3>" is loadless and has been removed.
+                  Loadless block "usr/amc13/Inst_TTC_decoder/sr_3" (FF) removed.
+                   The signal "usr/amc13/Inst_TTC_decoder/sr<2>" is loadless and has been removed.
+                    Loadless block "usr/amc13/Inst_TTC_decoder/sr_2" (FF) removed.
+                     The signal "usr/amc13/Inst_TTC_decoder/sr<1>" is loadless and has been removed.
+                      Loadless block "usr/amc13/Inst_TTC_decoder/sr_1" (FF) removed.
+             The signal "usr/amc13/Inst_TTC_decoder/sr<6>" is loadless and has been removed.
+              Loadless block "usr/amc13/Inst_TTC_decoder/sr_6" (FF) removed.
+             The signal "usr/amc13/Inst_TTC_decoder/sr<7>" is loadless and has been removed.
+              Loadless block "usr/amc13/Inst_TTC_decoder/sr_7" (FF) removed.
+             The signal "usr/amc13/Inst_TTC_decoder/sr<8>" is loadless and has been removed.
+              Loadless block "usr/amc13/Inst_TTC_decoder/sr_8" (FF) removed.
+         The signal "usr/amc13/Inst_TTC_decoder/brcst_syn<1>" is loadless and has been
+removed.
+          Loadless block "usr/amc13/Inst_TTC_decoder/brcst_syn_1" (FF) removed.
+           The signal "usr/amc13/Inst_TTC_decoder/sr[1]_sr[11]_XOR_449_o" is loadless and
+has been removed.
+            Loadless block "usr/amc13/Inst_TTC_decoder/Mxor_sr[1]_sr[11]_XOR_449_o_xo<0>1"
+(ROM) removed.
+             The signal "usr/amc13/Inst_TTC_decoder/sr<10>" is loadless and has been removed.
+              Loadless block "usr/amc13/Inst_TTC_decoder/sr_10" (FF) removed.
+               The signal "usr/amc13/Inst_TTC_decoder/sr<9>" is loadless and has been removed.
+                Loadless block "usr/amc13/Inst_TTC_decoder/sr_9" (FF) removed.
+             The signal "usr/amc13/Inst_TTC_decoder/sr<11>" is loadless and has been removed.
+              Loadless block "usr/amc13/Inst_TTC_decoder/sr_11" (FF) removed.
+         The signal "usr/amc13/Inst_TTC_decoder/brcst_syn<2>" is loadless and has been
+removed.
+          Loadless block "usr/amc13/Inst_TTC_decoder/brcst_syn_2" (FF) removed.
+           The signal "usr/amc13/Inst_TTC_decoder/sr[2]_sr[12]_XOR_454_o" is loadless and
+has been removed.
+            Loadless block "usr/amc13/Inst_TTC_decoder/Mxor_sr[2]_sr[12]_XOR_454_o_xo<0>1"
+(ROM) removed.
+             The signal "usr/amc13/Inst_TTC_decoder/sr<12>" is loadless and has been removed.
+              Loadless block "usr/amc13/Inst_TTC_decoder/sr_12" (FF) removed.
+         The signal "usr/amc13/Inst_TTC_decoder/brcst_syn<3>" is loadless and has been
+removed.
+          Loadless block "usr/amc13/Inst_TTC_decoder/brcst_syn_3" (FF) removed.
+           The signal "usr/amc13/Inst_TTC_decoder/sr[3]_sr[12]_XOR_459_o" is loadless and
+has been removed.
+            Loadless block "usr/amc13/Inst_TTC_decoder/Mxor_sr[3]_sr[12]_XOR_459_o_xo<0>1"
+(ROM) removed.
+         The signal "usr/amc13/Inst_TTC_decoder/brcst_syn<4>" is loadless and has been
+removed.
+          Loadless block "usr/amc13/Inst_TTC_decoder/brcst_syn_4" (FF) removed.
+           The signal "usr/amc13/Inst_TTC_decoder/sr[12]_reduce_xor_8_o" is loadless and
+has been removed.
+            Loadless block "usr/amc13/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>3" (ROM)
+removed.
+             The signal "usr/amc13/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>1" is loadless
+and has been removed.
+              Loadless block "usr/amc13/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>2" (ROM)
+removed.
+             The signal "usr/amc13/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>" is loadless
+and has been removed.
+              Loadless block "usr/amc13/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>1" (ROM)
+removed.
+     The signal "usr/amc13/Inst_TTC_decoder/brcst_str<1>" is loadless and has been
+removed.
 The signal "fmc1_la_p<0>" is sourceless and has been removed.
  Sourceless block "fmc1_la_p<0>" (PAD) removed.
 The signal "fmc1_la_p<1>" is sourceless and has been removed.
@@ -2805,6 +2994,8 @@ The signal
 "usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_gener
 ator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is
 sourceless and has been removed.
+The signal "usr/amc13/Inst_TTC_decoder/brcst_str_0" is sourceless and has been
+removed.
 The signal "system/sram_w[1]_oe_b" is sourceless and has been removed.
 The signal "system/ipb_from_slaves[5]_ipb_err" is sourceless and has been
 removed.
@@ -5343,6 +5534,8 @@ Unused block
 removed.
 Unused block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o1" (ROM) removed.
 Unused block "system/wb_bridge/XST_GND" (ZERO) removed.
+Unused block "usr/amc13/Inst_TTC_decoder/brcst_str_0" (FF) removed.
+Unused block "usr/amc13/Inst_TTC_decoder/i_brcst_str1" (SRL16E) removed.
 Unused block "usr/fmc1_la_p_0_OBUFT" (TRI) removed.
 Unused block "usr/fmc1_la_p_11_OBUFT" (TRI) removed.
 Unused block "usr/fmc1_la_p_12_OBUFT" (TRI) removed.
@@ -5837,6 +6030,8 @@ GND 		system/sram2_if/sramInterfaceIoControl/XST_GND
 VCC 		system/sram2_if/sramInterfaceIoControl/XST_VCC
 GND 		usr/XST_GND
 VCC 		usr/XST_VCC
+GND 		usr/amc13/Inst_TTC_decoder/XST_GND
+VCC 		usr/amc13/Inst_TTC_decoder/XST_VCC
 GND 		usr/gtx_wrapper_inst/XST_GND
 VCC 		usr/gtx_wrapper_inst/XST_VCC
 GND 		usr/gtx_wrapper_inst/gtx_0_inst/XST_GND
@@ -5901,14 +6096,14 @@ Section 6 - IOB Properties
 | amc_port_rx_in<20>                 | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | amc_port_rx_n<0>                   | IPAD             | INPUT     |                      |       |          |      |              |          |          |
 | amc_port_rx_n<2>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| amc_port_rx_n<3>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| amc_port_rx_n<3>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | amc_port_rx_n<12>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | amc_port_rx_n<13>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | amc_port_rx_n<14>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | amc_port_rx_n<15>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | amc_port_rx_p<0>                   | IPAD             | INPUT     |                      |       |          |      |              |          |          |
 | amc_port_rx_p<2>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| amc_port_rx_p<3>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| amc_port_rx_p<3>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          |          |
 | amc_port_rx_p<12>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | amc_port_rx_p<13>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | amc_port_rx_p<14>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
@@ -5951,6 +6146,8 @@ Section 6 - IOB Properties
 | amc_port_tx_p<15>                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | cdce_out1_n                        | IPAD             | INPUT     |                      |       |          |      |              |          |          |
 | cdce_out1_p                        | IPAD             | INPUT     |                      |       |          |      |              |          |          |
+| cdce_out4_n                        | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| cdce_out4_p                        | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | cdce_pll_lock                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | cdce_pwr_down                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | cdce_ref_sel                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |

@@ -43,6 +43,17 @@
 <arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_system_gbt_phase_monitoring_ttclk_pll_clkout0_0 = PERIOD &quot;system_gbt_phase_monitoring_ttclk_pll_clkout0_0&quot; TS_xpoint1_clk1_n / 6 PHASE 2.083333333 ns HIGH 50%&gt;</arg>
 </msg>
 
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">cdce_out4_p</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_cdce_out4_p</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MMCM_BASE_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm = PERIOD &quot;usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm&quot; TS_cdce_out4_p PHASE -1.75 ns HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">cdce_out4_n</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_cdce_out4_n</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MMCM_BASE_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm_0 = PERIOD &quot;usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm_0&quot; TS_cdce_out4_n PHASE -1.75 ns HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1440" delta="new" >User specified non-default attribute value (<arg fmt="%s" index="1">24.95</arg>) was detected for the <arg fmt="%s" index="2">CLKIN1_PERIOD</arg> attribute on <arg fmt="%s" index="3">MMCM</arg> &quot;<arg fmt="%s" index="4">MMCM_BASE_inst</arg>&quot;.  This does not match the PERIOD constraint value (<arg fmt="%s" index="5">25 ns.</arg>).  The uncertainty calculation will use the PERIOD constraint value.  This could result in incorrect uncertainty calculated for <arg fmt="%s" index="6">MMCM</arg> output clocks.
+</msg>
+
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">amc_port_tx_out_17_OBUF</arg>&apos; has no driver
 </msg>
 
@@ -14243,6 +14254,39 @@
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;6&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13/Brcst&lt;7&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13/Brcst&lt;6&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13/Brcst&lt;5&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13/Brcst&lt;4&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13/Brcst&lt;3&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13/Brcst&lt;2&gt;</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13/BCntRes</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13/EvCntRes</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13/SinErrStr</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13/DbErrStr</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13/BrcstStr</arg>&apos; has no driver
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">system/user_cdce_sync_done_o</arg>&apos; has no driver

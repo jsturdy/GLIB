@@ -1,21 +1,23 @@
-Release 14.7 ngdbuild P.20131013 (nt)
+Release 14.7 ngdbuild P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
-ise -dd _ngo -sd ipcore_dir -sd ../../src/system/cdce/cdce_phase_mon_v2/dpram
--sd ../../src/system/ethernet/ipcore_dir/basex -sd
+Command Line: C:\EDA\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -sd
+../../src/system/cdce/cdce_phase_mon_v2/dpram -sd
+../../src/system/ethernet/ipcore_dir/basex -sd
 ../../src/system/ethernet/ipcore_dir/sgmii -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ezdma2_ctrl_dpram -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/ipbus_ctrl_dpram -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo -sd
 ../../src/system/cdce/cdce_phase_mon_v2/pll -sd ../../src/system/pll -nt
-timestamp -uc src/system_clk.ucf -uc src/system.ucf -uc src/gtx.ucf -p
-xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
+timestamp -uc src/system_clk.ucf -uc src/gtx.ucf -uc src/system.ucf -uc
+G:/Users/s/sturdy/sourcecode/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/user/ucf/us
+er_fabric_clk.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
 
 Reading NGO file
-"Z:/Documents/PhD/Code/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/glib_fw/glib_top.
-ngc" ...
+"G:/Users/s/sturdy/sourcecode/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/glib_fw/gl
+ib_top.ngc" ...
 Loading design module "ipcore_dir/tracking_data_fifo.ngc"...
 Loading design module "ipcore_dir/trigger_data_fifo.ngc"...
 Loading design module
@@ -28,8 +30,11 @@ Gathering constraint information from source properties...
 Done.
 
 Annotating constraints to design from ucf file "src/system_clk.ucf" ...
-Annotating constraints to design from ucf file "src/system.ucf" ...
 Annotating constraints to design from ucf file "src/gtx.ucf" ...
+Annotating constraints to design from ucf file "src/system.ucf" ...
+Annotating constraints to design from ucf file
+"G:/Users/s/sturdy/sourcecode/GLIB/amc_glib/trunk/glib_v3/fw/fpga/src/user/ucf/u
+ser_fabric_clk.ucf" ...
 WARNING:NgdBuild - The value of SIM_DEVICE on instance
    'system/amc_p0_en.amc_p0_eth/clkbuf' of type BUFR has been changed from
    'VIRTEX4' to 'VIRTEX6' to correct post-ngdbuild and timing simulation for
@@ -102,8 +107,29 @@ INFO:ConstraintSystem:178 - TNM 'xpoint1_clk1_n', used in period specification
    PERIOD "system_gbt_phase_monitoring_ttclk_pll_clkout0_0" TS_xpoint1_clk1_n /
    6 PHASE 2.083333333 ns HIGH 50%>
 
+INFO:ConstraintSystem:178 - TNM 'cdce_out4_p', used in period specification
+   'TS_cdce_out4_p', was traced into MMCM_ADV instance MMCM_BASE_inst. The
+   following new TNM groups and period specifications were generated at the
+   MMCM_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm = PERIOD
+   "usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm" TS_cdce_out4_p PHASE -1.75 ns HIGH
+   50%>
+
+INFO:ConstraintSystem:178 - TNM 'cdce_out4_n', used in period specification
+   'TS_cdce_out4_n', was traced into MMCM_ADV instance MMCM_BASE_inst. The
+   following new TNM groups and period specifications were generated at the
+   MMCM_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm_0 = PERIOD
+   "usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm_0" TS_cdce_out4_n PHASE -1.75 ns HIGH
+   50%>
+
 Done...
 
+WARNING:NgdBuild:1440 - User specified non-default attribute value (24.95) was
+   detected for the CLKIN1_PERIOD attribute on MMCM "MMCM_BASE_inst".  This does
+   not match the PERIOD constraint value (25 ns.).  The uncertainty calculation
+   will use the PERIOD constraint value.  This could result in incorrect
+   uncertainty calculated for MMCM output clocks.
 Checking expanded design ...
 WARNING:NgdBuild:452 - logical net 'amc_port_tx_out_17_OBUF' has no driver
 WARNING:NgdBuild:452 - logical net 'amc_port_tx_out_18_OBUF' has no driver
@@ -9047,6 +9073,17 @@ WARNING:NgdBuild:452 - logical net 'usr/link_trigger_inst/trigger_rx_data<7>'
    has no driver
 WARNING:NgdBuild:452 - logical net 'usr/link_trigger_inst/trigger_rx_data<6>'
    has no driver
+WARNING:NgdBuild:452 - logical net 'usr/amc13/Brcst<7>' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/amc13/Brcst<6>' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/amc13/Brcst<5>' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/amc13/Brcst<4>' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/amc13/Brcst<3>' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/amc13/Brcst<2>' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/amc13/BCntRes' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/amc13/EvCntRes' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/amc13/SinErrStr' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/amc13/DbErrStr' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/amc13/BrcstStr' has no driver
 WARNING:NgdBuild:452 - logical net 'system/user_cdce_sync_done_o' has no driver
 WARNING:NgdBuild:452 - logical net 'system/ipb_from_fabric_ipb_err' has no
    driver
@@ -10053,12 +10090,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 5255
+  Number of warnings: 5267
 
-Total memory usage is 222852 kilobytes
+Total memory usage is 321488 kilobytes
 
 Writing NGD file "glib_top.ngd" ...
-Total REAL time to NGDBUILD completion:  38 sec
-Total CPU time to NGDBUILD completion:   29 sec
+Total REAL time to NGDBUILD completion: 1 min  11 sec
+Total CPU time to NGDBUILD completion:   56 sec
 
 Writing NGDBUILD log file "glib_top.bld"...

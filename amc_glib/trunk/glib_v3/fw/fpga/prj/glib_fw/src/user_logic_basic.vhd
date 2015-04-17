@@ -256,6 +256,7 @@ architecture user_logic_arch of user_logic is
     signal Brcst_r   : STD_LOGIC;
     signal Brcst4_r  : STD_LOGIC;
 
+    signal TTCready	: STD_LOGIC;
     signal L1ACCEPT	: STD_LOGIC;
     signal L1ACCEPT_r	: STD_LOGIC;
     signal cdce_clkout4 : STD_LOGIC;
@@ -268,8 +269,8 @@ begin
     ip_addr_o <= x"c0a800a" & amc_slot_i;  -- 192.168.0.[160:175]
     mac_addr_o <= x"080030F100a" & amc_slot_i;  -- 08:00:30:F1:00:0[A0:AF]     
     
-    user_v6_led_o(1) <= '0';
-    user_v6_led_o(2) <= '1';
+    --user_v6_led_o(1) <= '0';
+    --user_v6_led_o(2) <= '1';
 
     fmc1_io_pin.la_p(10) <= ext_sbit;
 
@@ -350,7 +351,9 @@ begin
                 TTC_data_p => amc_port_rx_p(3),
                 TTC_data_n => amc_port_rx_n(3),
                 TTC_CLK    => cdce_clkout4,
-                TTCready   => OPEN,
+                TTCready   => TTCready,
+--                TTCready   => OPEN,
+--                TTCready   => user_v6_led_o(2),
                 L1Accept   => L1ACCEPT,
                 BCntRes    => BCntRes,
                 EvCntRes   => EvCntRes, 
@@ -359,7 +362,37 @@ begin
                 BrcstStr   => BrcstStr,
                 Brcst      => Brcst);
 
-    
+    process(cdce_clkout4) is
+	   variable clk_count: unsigned(31 downto 0);
+		variable led: STD_LOGIC;
+		variable blink_length: integer := 20_000_000;
+		variable l1a: STD_LOGIC;
+    begin
+      if (rising_edge(cdce_clkout4)) then
+		  if (l1a = '0') then -- when we have L1A we'll stay with LED on for longer
+  		    if (TTCready = '1') then -- blink slowly when TTC is ready
+			   blink_length := 20_000_000;
+		    else -- blink fast when TTC is not ready
+			   blink_length := 5_000_000;
+		    end if;
+		  end if;
+		  
+		  if (L1ACCEPT = '1') then -- check L1ACCEPT signal and set our l1a flag to true
+		    l1a := '1';
+			 clk_count := (others => '0'); -- restart the counter
+			 blink_length := 80_000_000;   -- wait 2sec
+			 led := '1';                   -- light up the LED
+		  end if;
+		  
+        clk_count := clk_count + 1;
+		  if (clk_count > blink_length) then
+		    clk_count := (others => '0');
+			 led := not led;
+			 l1a := '0';
+		  end if;
+		  user_v6_led_o(2) <= led;
+	   end if;
+    end process;
     --TTC counters for debugging
     -- from ngFEC_logic.vhd--signal_check : process ( reset_i,cdce_clkout4,Brcst(6), Brcst(0),regs_to_wb(16), QIE_reset_counter, BrcstStr ) is
     -- from ngFEC_logic.vhd--  variable led: STD_LOGIC;

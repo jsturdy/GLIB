@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Mar 10 08:00:30 2015
+// Written by: Map P.20131013 on Thu Apr 16 18:31:31 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -111,6 +111,8 @@ COMP "tclkb_dr_en" LOCATE = SITE "AK22" LEVEL 1;
 COMP "cdce_out1_n" LOCATE = SITE "AD5" LEVEL 1;
 COMP "sram2_adv_ld_l" LOCATE = SITE "AH9" LEVEL 1;
 COMP "cdce_out1_p" LOCATE = SITE "AD6" LEVEL 1;
+COMP "cdce_out4_n" LOCATE = SITE "M22" LEVEL 1;
+COMP "cdce_out4_p" LOCATE = SITE "L23" LEVEL 1;
 COMP "cdce_spi_le" LOCATE = SITE "AD20" LEVEL 1;
 COMP "sram1_ce1_l" LOCATE = SITE "AG17" LEVEL 1;
 COMP "sram2_ce1_l" LOCATE = SITE "AC23" LEVEL 1;
@@ -273,6 +275,64 @@ COMP "system/gbt_phase_monitoring/fmc1_cdce_pm/debug_test_d_clk_cdce_o" LOCATE
         = SITE "SLICE_X58Y101" LEVEL 1;
 COMP "system/gbt_phase_monitoring/fmc1_cdce_pm/debug_test_xor_mclk_o" LOCATE =
         SITE "SLICE_X59Y100" LEVEL 1;
+PIN usr/amc13/Inst_TTC_decoder/IDDR_inst_pins<1> = BEL
+        "usr/amc13/Inst_TTC_decoder/IDDR_inst" PINNAME CK;
+PIN usr/amc13/Inst_TTC_decoder/IDDR_inst_pins<2> = BEL
+        "usr/amc13/Inst_TTC_decoder/IDDR_inst" PINNAME CKB;
+TIMEGRP usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm = BEL "usr/blink_length_6" BEL
+        "usr/blink_length_8" BEL "usr/blink_length_9" BEL
+        "usr/blink_length_10" BEL "usr/blink_length_11" BEL
+        "usr/blink_length_12" BEL "usr/blink_length_13" BEL
+        "usr/blink_length_14" BEL "usr/blink_length_15" BEL
+        "usr/blink_length_16" BEL "usr/blink_length_18" BEL
+        "usr/blink_length_19" BEL "usr/blink_length_20" BEL
+        "usr/blink_length_21" BEL "usr/blink_length_22" BEL
+        "usr/blink_length_23" BEL "usr/blink_length_24" BEL
+        "usr/blink_length_26" BEL "usr/led" BEL
+        "usr/amc13/Inst_TTC_decoder/TTC_lock_q" BEL
+        "usr/amc13/Inst_TTC_decoder/L1A" BEL
+        "usr/amc13/Inst_TTC_decoder/i_TTC_CLK_buf" BEL
+        "usr/amc13/Inst_TTC_decoder/i_L1Accept" PIN
+        "usr/amc13/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
+        "usr/amc13/Inst_TTC_decoder/IDDR_inst_pins<2>" PIN
+        "usr/amc13/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
+        "usr/amc13/Inst_TTC_decoder/IDDR_inst_pins<2>" BEL "usr/l1a" BEL
+        "usr/clk_count_0" BEL "usr/clk_count_1" BEL "usr/clk_count_2" BEL
+        "usr/clk_count_3" BEL "usr/clk_count_4" BEL "usr/clk_count_5" BEL
+        "usr/clk_count_6" BEL "usr/clk_count_7" BEL "usr/clk_count_8" BEL
+        "usr/clk_count_9" BEL "usr/clk_count_10" BEL "usr/clk_count_11" BEL
+        "usr/clk_count_12" BEL "usr/clk_count_13" BEL "usr/clk_count_14" BEL
+        "usr/clk_count_15" BEL "usr/clk_count_16" BEL "usr/clk_count_17" BEL
+        "usr/clk_count_18" BEL "usr/clk_count_19" BEL "usr/clk_count_20" BEL
+        "usr/clk_count_21" BEL "usr/clk_count_22" BEL "usr/clk_count_23" BEL
+        "usr/clk_count_24" BEL "usr/clk_count_25" BEL "usr/clk_count_26";
+TIMEGRP usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm_0 = BEL "usr/blink_length_6"
+        BEL "usr/blink_length_8" BEL "usr/blink_length_9" BEL
+        "usr/blink_length_10" BEL "usr/blink_length_11" BEL
+        "usr/blink_length_12" BEL "usr/blink_length_13" BEL
+        "usr/blink_length_14" BEL "usr/blink_length_15" BEL
+        "usr/blink_length_16" BEL "usr/blink_length_18" BEL
+        "usr/blink_length_19" BEL "usr/blink_length_20" BEL
+        "usr/blink_length_21" BEL "usr/blink_length_22" BEL
+        "usr/blink_length_23" BEL "usr/blink_length_24" BEL
+        "usr/blink_length_26" BEL "usr/led" BEL
+        "usr/amc13/Inst_TTC_decoder/TTC_lock_q" BEL
+        "usr/amc13/Inst_TTC_decoder/L1A" BEL
+        "usr/amc13/Inst_TTC_decoder/i_TTC_CLK_buf" BEL
+        "usr/amc13/Inst_TTC_decoder/i_L1Accept" PIN
+        "usr/amc13/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
+        "usr/amc13/Inst_TTC_decoder/IDDR_inst_pins<2>" PIN
+        "usr/amc13/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
+        "usr/amc13/Inst_TTC_decoder/IDDR_inst_pins<2>" BEL "usr/l1a" BEL
+        "usr/clk_count_0" BEL "usr/clk_count_1" BEL "usr/clk_count_2" BEL
+        "usr/clk_count_3" BEL "usr/clk_count_4" BEL "usr/clk_count_5" BEL
+        "usr/clk_count_6" BEL "usr/clk_count_7" BEL "usr/clk_count_8" BEL
+        "usr/clk_count_9" BEL "usr/clk_count_10" BEL "usr/clk_count_11" BEL
+        "usr/clk_count_12" BEL "usr/clk_count_13" BEL "usr/clk_count_14" BEL
+        "usr/clk_count_15" BEL "usr/clk_count_16" BEL "usr/clk_count_17" BEL
+        "usr/clk_count_18" BEL "usr/clk_count_19" BEL "usr/clk_count_20" BEL
+        "usr/clk_count_21" BEL "usr/clk_count_22" BEL "usr/clk_count_23" BEL
+        "usr/clk_count_24" BEL "usr/clk_count_25" BEL "usr/clk_count_26";
 PIN usr/gtx_wrapper_inst/gtx_3_inst/gtxe1_i_pins<150> = BEL
         "usr/gtx_wrapper_inst/gtx_3_inst/gtxe1_i" PINNAME RXUSRCLK2;
 PIN usr/gtx_wrapper_inst/gtx_3_inst/gtxe1_i_pins<286> = BEL
@@ -11554,6 +11614,12 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD_D1"
         BEL
         "system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD";
+PIN usr/amc13/Inst_TTC_decoder/MMCM_BASE_inst_pins<2> = BEL
+        "usr/amc13/Inst_TTC_decoder/MMCM_BASE_inst" PINNAME CLKIN1;
+TIMEGRP cdce_out4_p = BEL "usr/amc13/Inst_TTC_decoder/i_DCM_rst" PIN
+        "usr/amc13/Inst_TTC_decoder/MMCM_BASE_inst_pins<2>";
+TIMEGRP cdce_out4_n = BEL "usr/amc13/Inst_TTC_decoder/i_DCM_rst" PIN
+        "usr/amc13/Inst_TTC_decoder/MMCM_BASE_inst_pins<2>";
 PIN
         system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/gtxe1_i_pins<73>
         = BEL
@@ -25628,6 +25694,9 @@ TS_xpoint1_clk1_n = PERIOD TIMEGRP "xpoint1_clk1_n" TS_xpoint1_clk1_p PHASE
 TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
 TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
 TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
+TS_cdce_out4_p = PERIOD TIMEGRP "cdce_out4_p" 25 ns HIGH 50%;
+TS_cdce_out4_n = PERIOD TIMEGRP "cdce_out4_n" TS_cdce_out4_p PHASE 12.5 ns
+        HIGH 50%;
 TS_system_glib_pll_clkout_31_25_c = PERIOD TIMEGRP
         "system_glib_pll_clkout_31_25_c" TS_clk125_2_p / 0.25 HIGH 50%;
 TS_system_glib_pll_clkout_31_25_a = PERIOD TIMEGRP
@@ -25646,6 +25715,12 @@ TS_system_gbt_phase_monitoring_ttclk_pll_clkout0 = PERIOD TIMEGRP
 TS_system_gbt_phase_monitoring_ttclk_pll_clkout0_0 = PERIOD TIMEGRP
         "system_gbt_phase_monitoring_ttclk_pll_clkout0_0" TS_xpoint1_clk1_n /
         6 PHASE 2.08333333 ns HIGH 50%;
+TS_usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm = PERIOD TIMEGRP
+        "usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm" TS_cdce_out4_p PHASE -1.75 ns
+        HIGH 50%;
+TS_usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm_0 = PERIOD TIMEGRP
+        "usr_amc13_Inst_TTC_decoder_TTC_CLK_dcm_0" TS_cdce_out4_n PHASE -1.75
+        ns HIGH 50%;
 TS_TO_systemip_macmac_addr_3_LDC = MAXDELAY TO TIMEGRP
         "TO_systemip_macmac_addr_3_LDC" TS_system_glib_pll_clkout_31_25_a
         DATAPATHONLY;
@@ -25701,33 +25776,57 @@ PIN system/rst/nuke_i_pins<2> = BEL "system/rst/nuke_i" PINNAME Q;
 PIN system/rst/rst_fabric_o_pins<3> = BEL "system/rst/rst_fabric_o" PINNAME Q;
 PIN MMCM_PHASE_CALIBRATION_ML_LUT2_4_pins<2> = BEL
         "MMCM_PHASE_CALIBRATION_ML_LUT2_4" PINNAME O6;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3_pins<3> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3" PINNAME SR;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3_pins<2> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3" PINNAME Q;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2_pins<3> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2" PINNAME SR;
 PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2_pins<2> = BEL
         "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2" PINNAME Q;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1_pins<3> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1" PINNAME SR;
 PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1_pins<2> = BEL
         "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1" PINNAME Q;
 PIN MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_0_pins<0> = BEL
         "MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_0" PINNAME CK;
 PIN MMCM_PHASE_CALIBRATION_ML_LUT2_12_pins<2> = BEL
         "MMCM_PHASE_CALIBRATION_ML_LUT2_12" PINNAME O6;
-PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_11_pins<2> = BEL
-        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_11" PINNAME Q;
 PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_10_pins<2> = BEL
         "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_10" PINNAME Q;
 PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_9_pins<2> = BEL
         "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_9" PINNAME Q;
 PIN MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_8_pins<0> = BEL
         "MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_8" PINNAME CK;
+PIN MMCM_PHASE_CALIBRATION_ML_LUT2_20_pins<2> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_LUT2_20" PINNAME O6;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_19_pins<2> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_19" PINNAME Q;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_18_pins<2> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_18" PINNAME Q;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_17_pins<2> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_17" PINNAME Q;
+PIN MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_16_pins<0> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_16" PINNAME CK;
 PIN "system/rst/rst_pins<3>" TIG;
 PIN "system/rst/nuke_i_pins<2>" TIG;
 PIN "system/rst/rst_fabric_o_pins<3>" TIG;
 PIN "MMCM_PHASE_CALIBRATION_ML_LUT2_4_pins<2>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3_pins<3>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3_pins<2>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2_pins<3>" TIG;
 PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2_pins<2>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1_pins<3>" TIG;
 PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1_pins<2>" TIG;
 PIN "MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_0_pins<0>" TIG;
 PIN "MMCM_PHASE_CALIBRATION_ML_LUT2_12_pins<2>" TIG;
-PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_11_pins<2>" TIG;
 PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_10_pins<2>" TIG;
 PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_9_pins<2>" TIG;
 PIN "MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_8_pins<0>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_LUT2_20_pins<2>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_19_pins<2>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_18_pins<2>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_17_pins<2>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_16_pins<0>" TIG;
 SCHEMATIC END;
 

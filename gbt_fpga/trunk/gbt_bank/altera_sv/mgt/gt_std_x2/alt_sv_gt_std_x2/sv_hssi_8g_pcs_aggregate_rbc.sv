@@ -273,18 +273,18 @@ module sv_hssi_8g_pcs_aggregate_rbc #(
 	localparam fnl_use_default_base_address = (use_default_base_address == "<auto_any>" || use_default_base_address == "<auto_single>") ? rbc_any_use_default_base_address : use_default_base_address;
 
 	// prot_mode_tx, RBC-validated
-	localparam rbc_all_prot_mode_tx = (fnl_data_agg_bonding == "x4_cmu1" ||
-       fnl_data_agg_bonding == "x4_cmu2" || 
-       fnl_data_agg_bonding == "x4_cmu3" || 
-       fnl_data_agg_bonding == "x4_lc1" || 
-       fnl_data_agg_bonding == "x4_lc2" ||
+	localparam rbc_all_prot_mode_tx = (fnl_data_agg_bonding == "x4_cmu1" ||
+       fnl_data_agg_bonding == "x4_cmu2" || 
+       fnl_data_agg_bonding == "x4_cmu3" || 
+       fnl_data_agg_bonding == "x4_lc1" || 
+       fnl_data_agg_bonding == "x4_lc2" ||
        fnl_data_agg_bonding == "x4_lc3") ? ("(xaui_tx,srio_2p1_tx)")
 		 : (fnl_data_agg_bonding == "x2_cmu1" || fnl_data_agg_bonding == "x2_lc1") ? ("srio_2p1_tx") : "disabled_prot_mode_tx";
-	localparam rbc_any_prot_mode_tx = (fnl_data_agg_bonding == "x4_cmu1" ||
-       fnl_data_agg_bonding == "x4_cmu2" || 
-       fnl_data_agg_bonding == "x4_cmu3" || 
-       fnl_data_agg_bonding == "x4_lc1" || 
-       fnl_data_agg_bonding == "x4_lc2" ||
+	localparam rbc_any_prot_mode_tx = (fnl_data_agg_bonding == "x4_cmu1" ||
+       fnl_data_agg_bonding == "x4_cmu2" || 
+       fnl_data_agg_bonding == "x4_cmu3" || 
+       fnl_data_agg_bonding == "x4_lc1" || 
+       fnl_data_agg_bonding == "x4_lc2" ||
        fnl_data_agg_bonding == "x4_lc3") ? ("xaui_tx")
 		 : (fnl_data_agg_bonding == "x2_cmu1" || fnl_data_agg_bonding == "x2_lc1") ? ("srio_2p1_tx") : "disabled_prot_mode_tx";
 	localparam fnl_prot_mode_tx = (prot_mode_tx == "<auto_any>" || prot_mode_tx == "<auto_single>") ? rbc_any_prot_mode_tx : prot_mode_tx;

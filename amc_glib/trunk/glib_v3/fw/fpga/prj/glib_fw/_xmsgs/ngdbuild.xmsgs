@@ -11,6 +11,42 @@
 <msg type="warning" file="NgdBuild" num="0" delta="new" >The value of SIM_DEVICE on instance &apos;<arg fmt="%s" index="1">system/phy_en.phy_eth/clkbuf</arg>&apos; of type <arg fmt="%s" index="2">BUFR</arg> has been changed from &apos;<arg fmt="%s" index="3">VIRTEX4</arg>&apos; to &apos;<arg fmt="%s" index="4">VIRTEX6</arg>&apos; to correct post-ngdbuild and timing simulation for this primitive.  In order for functional simulation to be correct, the value of SIM_DEVICE should be changed in this same manner in the source netlist or constraint file.
 </msg>
 
+<msg type="warning" file="ConstraintSystem" num="137" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;xpoint1_clk3_p&quot; 						TNM_NET = &quot;xpoint1_clk3_p&quot;                                                       ;&gt; [user_fabric_clk.ucf(21)]</arg>: No appropriate instances for the TNM constraint are driven by &quot;<arg fmt="%s" index="2">xpoint1_clk3_p</arg>&quot;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="137" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;xpoint1_clk3_n&quot; 						TNM_NET = &quot;xpoint1_clk3_n&quot;                                                       ;&gt; [user_fabric_clk.ucf(22)]</arg>: No appropriate instances for the TNM constraint are driven by &quot;<arg fmt="%s" index="2">xpoint1_clk3_n</arg>&quot;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="56" delta="old" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_xpoint1_clk3_p = 			PERIOD &quot;xpoint1_clk3_p&quot; 24.95 ns HIGH 50 % INPUT_JITTER 100 ps                              ;&gt; [user_fabric_clk.ucf(23)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">xpoint1_clk3_p</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="56" delta="old" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_xpoint1_clk3_n = 			PERIOD &quot;xpoint1_clk3_n&quot; TS_xpoint1_clk3_p PHASE 12.475 ns HIGH 50 %                ;&gt; [user_fabric_clk.ucf(24)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">xpoint1_clk3_n</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="191" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">xpoint1_clk3_p</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_xpoint1_clk3_p</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification:
+<arg fmt="%s" index="5">&lt;TIMESPEC TS_xpoint1_clk3_p = 			PERIOD &quot;xpoint1_clk3_p&quot; 24.95 ns HIGH 50 % INPUT_JITTER 100 ps                              ;&gt; [user_fabric_clk.ucf(23)]
+</arg></msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="old" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC TS_xpoint1_clk3_p = 			PERIOD &quot;xpoint1_clk3_p&quot; 24.95 ns HIGH 50 % INPUT_JITTER 100 ps                              ;&gt; [user_fabric_clk.ucf(23)]</arg>
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="191" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">xpoint1_clk3_n</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_xpoint1_clk3_n</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification:
+<arg fmt="%s" index="5">&lt;TIMESPEC TS_xpoint1_clk3_n = 			PERIOD &quot;xpoint1_clk3_n&quot; TS_xpoint1_clk3_p PHASE 12.475 ns HIGH 50 %                ;&gt; [user_fabric_clk.ucf(24)]
+</arg></msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="old" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC TS_xpoint1_clk3_n = 			PERIOD &quot;xpoint1_clk3_n&quot; TS_xpoint1_clk3_p PHASE 12.475 ns HIGH 50 %                ;&gt; [user_fabric_clk.ucf(24)]</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">cdce_out4_p</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_cdce_out4_p</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MMCM_BASE_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm = PERIOD &quot;usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm&quot; TS_cdce_out4_p PHASE -1.7465 ns HIGH 50% INPUT_JITTER 100 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">cdce_out4_n</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_cdce_out4_n</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MMCM_BASE_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0 = PERIOD &quot;usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0&quot; TS_cdce_out4_n PHASE -1.7465 ns HIGH 50%&gt;</arg>
+</msg>
+
 <msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk125_2_p</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_clk125_2_p</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">mmcm_adv_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
 <arg fmt="%s" index="7">CLKOUT3</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_system_glib_pll_clkout_31_25_c = PERIOD &quot;system_glib_pll_clkout_31_25_c&quot; TS_clk125_2_p / 0.25 HIGH 50%&gt;</arg>
 </msg>
@@ -1297,6 +1333,9 @@
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">user_ipb_mosi[11]_ipb_strobe</arg>&apos; has no driver
 </msg>
 
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">user_ipb_mosi[12]_ipb_strobe</arg>&apos; has no driver
+</msg>
+
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N411</arg>&apos; has no driver
 </msg>
 
@@ -1616,9 +1655,6 @@
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N806</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/rx_error&lt;3&gt;</arg>&apos; has no driver
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_tracking_1_inst/vi2c_tx_data&lt;31&gt;</arg>&apos; has no driver
@@ -14197,52 +14233,40 @@
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_tracking_1_inst/request_tri_o&lt;2&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;47&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_tracking_1_inst/request_tri_o&lt;0&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;46&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13_inst/Brcst&lt;7&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;45&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13_inst/Brcst&lt;6&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;44&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13_inst/Brcst&lt;5&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;43&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13_inst/Brcst&lt;4&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;42&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13_inst/Brcst&lt;3&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;15&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13_inst/Brcst&lt;2&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;14&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13_inst/BCntRes</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;13&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13_inst/EvCntRes</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;12&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13_inst/SinErrStr</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;11&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13_inst/DbErrStr</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;10&gt;</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;9&gt;</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;8&gt;</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;7&gt;</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/link_trigger_inst/trigger_rx_data&lt;6&gt;</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">usr/amc13_inst/BrcstStr</arg>&apos; has no driver
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">system/user_cdce_sync_done_o</arg>&apos; has no driver
@@ -14425,9 +14449,6 @@
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">system/regs_eeprom&lt;15&gt;&lt;0&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">system/sram2_if/BIST_SEED_I&lt;1&gt;</arg>&apos; has no driver
-</msg>
-
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">system/sram2_if/BIST_TEST_O_errCounter&lt;20&gt;</arg>&apos; has no driver
 </msg>
 
@@ -14468,9 +14489,6 @@
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">system/sram2_if/BIST_TEST_O_startErrInj</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">system/sram1_if/BIST_SEED_I&lt;0&gt;</arg>&apos; has no driver
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">system/sram1_if/BIST_TEST_O_errCounter&lt;20&gt;</arg>&apos; has no driver

@@ -3,50 +3,40 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="impact" timeStamp="Tue Mar 10 08:15:20 2015">
+<application name="impact" timeStamp="Tue Apr 21 17:10:27 2015">
 <section name="Project Information" visible="false">
-<property name="ProjectID" value="ef0dbcf1eeba447aa51f74ae626b12cb"/>
+<property name="ProjectID" value="52aadac73d4e480b8e0dafa8fba8cd6a"/>
 <property name="ProjectIteration" value="1"/>
 </section>
 <section name="iMPACT Project Info" visible="true">
 <property name="Use Project File" value="Yes"/>
 <property name="Project Entry" value="ise"/>
-<property name="OS Name" value="Microsoft Windows 7"/>
+<property name="OS Name" value="Microsoft Windows 7 (64 Bit)"/>
 <property name="User Lic. Info" value="174110357_174110358_210552545_242"/>
 </section>
-<section name="iMPACT Boundary Scan Mode" visible="true">
+<section name="iMPACT One Step SVF File Mode" visible="true">
 <item name="Chain Summary">
 <property name="Number of device" value="1"/>
 <property name="Number of Xilinx device" value="1"/>
 <property name="Number of Non-Xilinx device" value="0"/>
 </item>
 <item name="Chain Description">
-<property name="Device1" value="spartan6"/>
-<property name="Part1" value="xc6slx150t"/>
+<property name="Device1" value="virtex6"/>
+<property name="Part1" value="xc6vlx130t"/>
 </item>
 <item name="Boundary Scan Operations Statistics">
+<property name="BSCAN Operation" value="Program -p 0 -dataWidth 16 -rs1 NONE -rs0 NONE -bpionly -e -v -loadfpga
+"/>
+<property name="BSCAN Operation" value="Program -p 0
+"/>
+<property name="BSCAN Operation" value="Program -p 0
+"/>
 </item>
 <item name="Cable Summary">
 <property name="Cable Type" value=""/>
 <property name="Cable Speed" value="0"/>
 <property name="Port" value="NULL"/>
 <property name="Local_Server_Mode" value="Local"/>
-</item>
-</section>
-<section name="iMPACT BPI FLASH File Generation Mode" visible="true">
-<item name="FLASH File Summary">
-<property name="Number of FLASH" value="1"/>
-<property name="FLASH Data Width" value="16"/>
-<property name="FLASH" value="1"/>
-<property name="FLASH Name" value="xcf128x"/>
-</item>
-<item name="Revision_Data File Summary">
-<property name="Number of Revision" value="1"/>
-<property name="Number of Data File" value="0"/>
-</item>
-<item name="Revision 1">
-<property name="Number of device" value="1"/>
-<property name="Part1" value="xc6vlx130t"/>
 </item>
 </section>
 </application>

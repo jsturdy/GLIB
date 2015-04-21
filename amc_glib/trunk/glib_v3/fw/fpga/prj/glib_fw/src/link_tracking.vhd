@@ -36,7 +36,11 @@ port(
   
     request_write_o : out array32(127 downto 0);
     request_tri_o   : out std_logic_vector(127 downto 0);
-    request_read_i  : in array32(127 downto 0)
+    request_read_i  : in array32(127 downto 0);
+    
+    -- Trigger
+    
+    trigger_i       : in std_logic
     
 );
 end link_tracking;
@@ -64,6 +68,10 @@ architecture Behavioral of link_tracking is
     signal regs_rx_en               : std_logic := '0';
     signal regs_rx_data             : std_logic_vector(47 downto 0) := (others => '0');
     
+    signal regs_tx_en_trig          : std_logic := '0';
+    signal regs_tx_en_ipbus         : std_logic := '0';
+    signal regs_tx_data_ipbus       : std_logic_vector(47 downto 0) := (others => '0');
+    
     -- Info signals
 
     signal regs_req_write           : array32(255 downto 0) := (others => (others => '0'));
@@ -90,6 +98,8 @@ architecture Behavioral of link_tracking is
     signal regs_rx_counter_reset    : std_logic := '0';
     signal regs_tx_counter_reset    : std_logic := '0';
     
+    signal trigger_config           : std_logic_vector(1 downto 0) := (others => '0');
+    
 begin
 
     --================================--
@@ -107,6 +117,12 @@ begin
         tx_kchar_o  => tx_kchar_o,
         tx_data_o   => tx_data_o  
     );
+    
+    regs_tx_en <= regs_tx_en_ipbus when trigger_config = "00" else
+                  regs_tx_en_trig when trigger_config = "01" else
+                  (regs_tx_en_trig or regs_tx_en_ipbus);
+    
+    regs_tx_data <= x"000000004043" when regs_tx_en_trig = '1' else regs_tx_data_ipbus;
     
     gtx_rx_mux_inst : entity work.gtx_rx_mux
     port map(
@@ -167,8 +183,8 @@ begin
         reset_i         => reset_i,
         ipb_mosi_i      => ipb_regs_i,
         ipb_miso_o      => ipb_regs_o,
-        tx_en_o         => regs_tx_en,
-        tx_data_o       => regs_tx_data,
+        tx_en_o         => regs_tx_en_ipbus,
+        tx_data_o       => regs_tx_data_ipbus,
         rx_en_i         => regs_rx_en,
         rx_data_i       => regs_rx_data
     );
@@ -236,7 +252,7 @@ begin
     
     -- Firmware date : 10
     
-    request_read(10) <= x"20141122";
+    request_read(10) <= x"AA150421";
     
     -- Tracking fifo : 12 downto 11
     
@@ -245,5 +261,8 @@ begin
     track_fifo_reset <= request_tri(12); -- Reset
     
     -- Others : 127 downto 13
+    
+    trigger_configuration_reg : entity work.reg port map(fabric_clk_i => ipb_clk_i, reset_i => reset_i, wbus_i => request_write(13), wbus_t => request_tri(13), rbus_o => request_read(13));
+    trigger_config <= request_read(13)(1 downto 0); 
     
 end Behavioral;

@@ -1366,10 +1366,10 @@ port map
 	xpoint1_s11					            <= reg_ctrl(17); 	   -- default: 1  		 
 	xpoint1_s20					            <= reg_ctrl(18); 	   -- default: 0 (xpoint_4x4 out_2 driven by in_2)
 	xpoint1_s21					            <= reg_ctrl(19); 	   -- default: 1  	 
-	xpoint1_s30					            <= reg_ctrl(20); 	   -- default: 0 (xpoint_4x4 out_3 driven by in_2)
-	xpoint1_s31					            <= reg_ctrl(21); 	   -- default: 1  	
-	xpoint1_s40					            <= reg_ctrl(22); 	   -- default: 0 (xpoint_4x4 out_4 driven by in_2)
-	xpoint1_s41					            <= reg_ctrl(23);	   -- default: 1
+	xpoint1_s30					            <= '1'; --reg_ctrl(20); 	   -- default: 0 (xpoint_4x4 out_3 driven by in_2)
+	xpoint1_s31					            <= '1'; --reg_ctrl(21); 	   -- default: 1  	
+	xpoint1_s40					            <= '1'; --reg_ctrl(22); 	   -- default: 0 (xpoint_4x4 out_4 driven by in_2)
+	xpoint1_s41					            <= '1'; --reg_ctrl(23);	   -- default: 1
 --									            	reg_ctrl(24); 		--          x 
 --									            	reg_ctrl(25); 		--          x 
    gbt_phase_mon_reset                 <= reg_ctrl(26);	   -- default: 0 

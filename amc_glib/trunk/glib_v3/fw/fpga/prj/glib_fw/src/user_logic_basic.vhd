@@ -282,29 +282,29 @@ begin
     -- Tracking links
     --================================--
 
---    link_tracking_0_inst : entity work.link_tracking
---    port map(
---        gtx_clk_i       => gtx_clk,
---        ipb_clk_i       => ipb_clk_i,
---        reset_i         => reset_i,
---        rx_error_i      => rx_error(0),
---        rx_kchar_i      => rx_kchar(1 downto 0),
---        rx_data_i       => rx_data(15 downto 0),
---        tx_kchar_o      => tx_kchar(1 downto 0),
---        tx_data_o       => tx_data(15 downto 0),
---        ipb_vi2c_i      => ipb_mosi_i(ipb_vi2c_0),
---        ipb_vi2c_o      => ipb_miso_o(ipb_vi2c_0),
---        ipb_track_i     => ipb_mosi_i(ipb_track_0),
---        ipb_track_o     => ipb_miso_o(ipb_track_0),
---        ipb_regs_i      => ipb_mosi_i(ipb_regs_0),
---        ipb_regs_o      => ipb_miso_o(ipb_regs_0),
---        ipb_info_i      => ipb_mosi_i(ipb_info_0),
---        ipb_info_o      => ipb_miso_o(ipb_info_0),
---        request_write_o => open,
---        request_tri_o   => open,
---        request_read_i  => request_read,
---        trigger_i       => '0'
---    );
+    link_tracking_0_inst : entity work.link_tracking
+    port map(
+        gtx_clk_i       => gtx_clk,
+        ipb_clk_i       => ipb_clk_i,
+        reset_i         => reset_i,
+        rx_error_i      => rx_error(0),
+        rx_kchar_i      => rx_kchar(1 downto 0),
+        rx_data_i       => rx_data(15 downto 0),
+        tx_kchar_o      => tx_kchar(1 downto 0),
+        tx_data_o       => tx_data(15 downto 0),
+        ipb_vi2c_i      => ipb_mosi_i(ipb_vi2c_0),
+        ipb_vi2c_o      => ipb_miso_o(ipb_vi2c_0),
+        ipb_track_i     => ipb_mosi_i(ipb_track_0),
+        ipb_track_o     => ipb_miso_o(ipb_track_0),
+        ipb_regs_i      => ipb_mosi_i(ipb_regs_0),
+        ipb_regs_o      => ipb_miso_o(ipb_regs_0),
+        ipb_info_i      => ipb_mosi_i(ipb_info_0),
+        ipb_info_o      => ipb_miso_o(ipb_info_0),
+        request_write_o => open,
+        request_tri_o   => open,
+        request_read_i  => request_read,
+        trigger_i       => '0'
+    );
 
     link_tracking_1_inst : entity work.link_tracking
     port map(
@@ -330,50 +330,50 @@ begin
         trigger_i       => ttc_trigger
     );
     
---    link_tracking_2_inst : entity work.link_tracking
---    port map(
---        gtx_clk_i       => gtx_clk,
---        ipb_clk_i       => ipb_clk_i,
---        reset_i         => reset_i,
---        rx_error_i      => rx_error(2),
---        rx_kchar_i      => rx_kchar(5 downto 4),
---        rx_data_i       => rx_data(47 downto 32),
---        tx_kchar_o      => tx_kchar(5 downto 4),
---        tx_data_o       => tx_data(47 downto 32),
---        ipb_vi2c_i      => ipb_mosi_i(ipb_vi2c_2),
---        ipb_vi2c_o      => ipb_miso_o(ipb_vi2c_2),
---        ipb_track_i     => ipb_mosi_i(ipb_track_2),
---        ipb_track_o     => ipb_miso_o(ipb_track_2),
---        ipb_regs_i      => ipb_mosi_i(ipb_regs_2),
---        ipb_regs_o      => ipb_miso_o(ipb_regs_2),
---        ipb_info_i      => ipb_mosi_i(ipb_info_2),
---        ipb_info_o      => ipb_miso_o(ipb_info_2),
---        request_write_o => open,
---        request_tri_o   => open,
---        request_read_i  => request_read,
---        trigger_i       => '0'
---    );
+    link_tracking_2_inst : entity work.link_tracking
+    port map(
+        gtx_clk_i       => gtx_clk,
+        ipb_clk_i       => ipb_clk_i,
+        reset_i         => reset_i,
+        rx_error_i      => rx_error(2),
+        rx_kchar_i      => rx_kchar(5 downto 4),
+        rx_data_i       => rx_data(47 downto 32),
+        tx_kchar_o      => tx_kchar(5 downto 4),
+        tx_data_o       => tx_data(47 downto 32),
+        ipb_vi2c_i      => ipb_mosi_i(ipb_vi2c_2),
+        ipb_vi2c_o      => ipb_miso_o(ipb_vi2c_2),
+        ipb_track_i     => ipb_mosi_i(ipb_track_2),
+        ipb_track_o     => ipb_miso_o(ipb_track_2),
+        ipb_regs_i      => ipb_mosi_i(ipb_regs_2),
+        ipb_regs_o      => ipb_miso_o(ipb_regs_2),
+        ipb_info_i      => ipb_mosi_i(ipb_info_2),
+        ipb_info_o      => ipb_miso_o(ipb_info_2),
+        request_write_o => open,
+        request_tri_o   => open,
+        request_read_i  => request_read,
+        trigger_i       => '0'
+    );
 
     --================================--
     -- Trigger links
     --================================--
 
---    link_trigger_inst : entity work.link_trigger
---    port map(
---        gtx_clk_i       => gtx_clk,
---        ipb_clk_i       => ipb_clk_i,
---        reset_i         => reset_i,
---        rx_error_i      => rx_error(3),
---        rx_kchar_i      => rx_kchar(7 downto 6),
---        rx_data_i       => rx_data(63 downto 48),
---        tx_kchar_o      => tx_kchar(7 downto 6),
---        tx_data_o       => tx_data(63 downto 48),
---        ipb_trigger_i   => ipb_mosi_i(ipb_trigger),
---        ipb_trigger_o   => ipb_miso_o(ipb_trigger),
---        fifo_reset_i    => empty_trigger_fifo,
---        sbit_config_i   => sbit_configuration,
---        ext_sbit_o      => ext_sbit
---    );
+    link_trigger_inst : entity work.link_trigger
+    port map(
+        gtx_clk_i       => gtx_clk,
+        ipb_clk_i       => ipb_clk_i,
+        reset_i         => reset_i,
+        rx_error_i      => rx_error(3),
+        rx_kchar_i      => rx_kchar(7 downto 6),
+        rx_data_i       => rx_data(63 downto 48),
+        tx_kchar_o      => tx_kchar(7 downto 6),
+        tx_data_o       => tx_data(63 downto 48),
+        ipb_trigger_i   => ipb_mosi_i(ipb_trigger),
+        ipb_trigger_o   => ipb_miso_o(ipb_trigger),
+        fifo_reset_i    => empty_trigger_fifo,
+        sbit_config_i   => sbit_configuration,
+        ext_sbit_o      => ext_sbit
+    );
     
     --================================--
     -- TTC/TTT signal handling 	
@@ -381,8 +381,8 @@ begin
     --================================--
     amc13_inst : entity work.amc13_top
     port map(
-        ttc_clk_p  => cdce_out4_p,
-        ttc_clk_n  => cdce_out4_n,
+        ttc_clk_p  => xpoint1_clk3_p,
+        ttc_clk_n  => xpoint1_clk3_n,
         ttc_data_p => amc_port_rx_p(3),
         ttc_data_n => amc_port_rx_n(3),
         ttc_clk    => tcc_clock,

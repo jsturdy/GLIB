@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Apr 21 17:05:13 2015
+Wed Apr 22 09:57:03 2015
 
 All signals are completely routed.
 
@@ -26,6 +26,8 @@ WARNING:ParHelpers:361 - There are 42 loadless signals in this design. This desi
    amc_port_tx_in<18>_IBUF
    amc_port_tx_in<19>_IBUF
    amc_port_tx_in<20>_IBUF
+   cdce_out4_n_IBUF
+   cdce_out4_p_IBUF
    sn<0>_IBUF
    sn<1>_IBUF
    sn<2>_IBUF
@@ -48,7 +50,5 @@ WARNING:ParHelpers:361 - There are 42 loadless signals in this design. This desi
    system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RAMD_D1_O
    system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RAMD_D1_O
    system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD_D1_O
-   xpoint1_clk3_n_IBUF
-   xpoint1_clk3_p_IBUF
 
 

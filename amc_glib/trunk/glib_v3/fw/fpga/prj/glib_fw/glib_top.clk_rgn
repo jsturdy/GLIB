@@ -1,7 +1,7 @@
 Release 14.7 - reportgen P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Apr 21 17:06:22 2015
+Wed Apr 22 09:58:27 2015
 
 
 
@@ -21,15 +21,15 @@ INST "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce_bufg" LOC = "BUFGCTRL_X0Y23
 INST "usr/amc13_inst/Inst_TTC_decoder/i_TTC_CLK_buf" LOC = "BUFGCTRL_X0Y2" ;
 INST "system/clkbuf_pllout2" LOC = "BUFGCTRL_X0Y26" ;
 INST "system/clkbuf_pllout5" LOC = "BUFGCTRL_X0Y25" ;
-INST "usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" LOC = "BUFGCTRL_X0Y4" ;
+INST "usr/link_tracking_2_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" LOC = "BUFGCTRL_X0Y4" ;
 INST "system/clkbuf_xp1_clk1" LOC = "BUFGCTRL_X0Y30" ;
 INST "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce_bufg" LOC = "BUFGCTRL_X0Y0" ;
 INST "usr/gtx_wrapper_inst/tx_out_clk_bufg" LOC = "BUFGCTRL_X0Y1" ;
-INST "system/sram1_if/sramInterfaceIoControl/clk_bufgmux" LOC = "BUFGCTRL_X0Y27" ;
-INST "system/sram2_if/sramInterfaceIoControl/clk_bufgmux" LOC = "BUFGCTRL_X0Y28" ;
+INST "system/sram1_if/sramInterfaceIoControl/clk_bufgmux" LOC = "BUFGCTRL_X0Y28" ;
+INST "system/sram2_if/sramInterfaceIoControl/clk_bufgmux" LOC = "BUFGCTRL_X0Y27" ;
 INST "usr/amc13_inst/Inst_TTC_decoder/i_CLKFB_buf" LOC = "BUFGCTRL_X0Y3" ;
 INST "xpoint1_clk1_p" LOC = "J9" ;
-INST "cdce_out4_p" LOC = "L23" ;
+INST "xpoint1_clk3_p" LOC = "A10" ;
 INST "system/phy_en.phy_eth/clkbuf" LOC = "BUFR_X2Y5" ;
 INST "system/amc_p0_en.amc_p0_eth/clkbuf" LOC = "BUFR_X2Y4" ;
 INST "system/phy_en.phy_eth/sgmii/v6_gtxwizard_top_inst/bufr_clk_ds" LOC = "BUFR_X2Y7" ;
@@ -56,12 +56,12 @@ AREA_GROUP "CLKAG_system/cdce_synch/clk_from_bufg_mux" RANGE =   CLOCKREGION_X0Y
 # system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce driven by BUFGCTRL_X0Y23
 NET "system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" TNM_NET = "TN_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" ;
 TIMEGRP "TN_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" AREA_GROUP = "CLKAG_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" ;
-AREA_GROUP "CLKAG_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" RANGE =   CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3  ;
+AREA_GROUP "CLKAG_system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3  ;
 
 # system/gbt_phase_monitoring/sfp_ttclk_x6_cdce driven by BUFGCTRL_X0Y0
 NET "system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" TNM_NET = "TN_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" ;
 TIMEGRP "TN_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" AREA_GROUP = "CLKAG_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" ;
-AREA_GROUP "CLKAG_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3  ;
+AREA_GROUP "CLKAG_system/gbt_phase_monitoring/sfp_ttclk_x6_cdce" RANGE =   CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3  ;
 
 # system/gbt_phase_monitoring/ttclk_x6 driven by BUFHCE_X1Y34
 NET "system/gbt_phase_monitoring/ttclk_x6" TNM_NET = "TN_system/gbt_phase_monitoring/ttclk_x6" ;
@@ -83,12 +83,12 @@ NET "system/ipb_inv_clk" TNM_NET = "TN_system/ipb_inv_clk" ;
 TIMEGRP "TN_system/ipb_inv_clk" AREA_GROUP = "CLKAG_system/ipb_inv_clk" ;
 AREA_GROUP "CLKAG_system/ipb_inv_clk" RANGE =   CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
 
-# system/sram_w[1]_clk driven by BUFGCTRL_X0Y27
+# system/sram_w[1]_clk driven by BUFGCTRL_X0Y28
 NET "system/sram_w[1]_clk" TNM_NET = "TN_system/sram_w[1]_clk" ;
 TIMEGRP "TN_system/sram_w[1]_clk" AREA_GROUP = "CLKAG_system/sram_w[1]_clk" ;
 AREA_GROUP "CLKAG_system/sram_w[1]_clk" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
 
-# system/sram_w[2]_clk driven by BUFGCTRL_X0Y28
+# system/sram_w[2]_clk driven by BUFGCTRL_X0Y27
 NET "system/sram_w[2]_clk" TNM_NET = "TN_system/sram_w[2]_clk" ;
 TIMEGRP "TN_system/sram_w[2]_clk" AREA_GROUP = "CLKAG_system/sram_w[2]_clk" ;
 AREA_GROUP "CLKAG_system/sram_w[2]_clk" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
@@ -123,15 +123,15 @@ NET "usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129
 TIMEGRP "TN_usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>_BUFG" AREA_GROUP = "CLKAG_usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>_BUFG" ;
 AREA_GROUP "CLKAG_usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>_BUFG" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
 
-# usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG driven by BUFGCTRL_X0Y4
-NET "usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" TNM_NET = "TN_usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" ;
-TIMEGRP "TN_usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" AREA_GROUP = "CLKAG_usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" ;
-AREA_GROUP "CLKAG_usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1  ;
+# usr/link_tracking_2_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG driven by BUFGCTRL_X0Y4
+NET "usr/link_tracking_2_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" TNM_NET = "TN_usr/link_tracking_2_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" ;
+TIMEGRP "TN_usr/link_tracking_2_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" AREA_GROUP = "CLKAG_usr/link_tracking_2_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" ;
+AREA_GROUP "CLKAG_usr/link_tracking_2_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
 
 # usr/tcc_clock driven by BUFGCTRL_X0Y2
 NET "usr/tcc_clock" TNM_NET = "TN_usr/tcc_clock" ;
 TIMEGRP "TN_usr/tcc_clock" AREA_GROUP = "CLKAG_usr/tcc_clock" ;
-AREA_GROUP "CLKAG_usr/tcc_clock" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+AREA_GROUP "CLKAG_usr/tcc_clock" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1  ;
 
 # NOTE: 
 # This report is provided to help reproduce successful clock-region 
@@ -151,7 +151,7 @@ Number of Global Clock Networks: 22
 Clock Region Assignment: SUCCESSFUL
 
 Clock-Region: <CLOCKREGION_X0Y0> 
- key resource utilizations (used/available): global-clocks - 7/12 ;
+ key resource utilizations (used/available): global-clocks - 6/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -161,28 +161,26 @@ Clock-Region: <CLOCKREGION_X0Y0>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/cdce_synch/clk_from_bufg_mux
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    129 |system/sram_w[1]_clk
-     14 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    456 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    137 |system/sram_w[1]_clk
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    478 |user_ipb_clk
       0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |usr/amc13_inst/Inst_TTC_decoder/CLKFB
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    361 |usr/gtx_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    458 |usr/gtx_clk
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |usr/tcc_clock
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     14 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    960 | Total 
+     16 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1075 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0
 
-Number of local clocks in this region: 4
+Number of local clocks in this region: 3
 List of local clocks in this region:
-   usr/amc13_inst/Inst_TTC_decoder/TTC_CLK_in driven by IOB_X1Y119 
+   MMCM_PHASE_CALIBRATION_ML_LUT2_4_ML_NEW_CLK driven by SLICE_X53Y23 
+   usr/amc13_inst/Inst_TTC_decoder/MMCM_BASE_inst_ML_NEW_OUT driven by SLICE_X54Y20 
    usr/amc13_inst/Inst_TTC_decoder/MMCM_BASE_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y0 
-   usr/amc13_inst/Inst_TTC_decoder/MMCM_BASE_inst_ML_NEW_OUT driven by SLICE_X52Y21 
-   MMCM_PHASE_CALIBRATION_ML_LUT2_4_ML_NEW_CLK driven by SLICE_X51Y23 
 
 
 Clock-Region: <CLOCKREGION_X1Y0> 
- key resource utilizations (used/available): global-clocks - 4/12 ;
+ key resource utilizations (used/available): global-clocks - 5/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -192,17 +190,20 @@ Clock-Region: <CLOCKREGION_X1Y0>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/sram_w[1]_clk
-     11 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    375 |user_ipb_clk
-      0 |      0 |      8 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    555 |usr/gtx_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     32 |usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG
+     19 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    988 |user_ipb_clk
+      0 |      0 |      8 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |   1136 |usr/gtx_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     32 |usr/link_tracking_2_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13>_BUFG
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     11 |      0 |      8 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |    962 | Total 
+     19 |      0 |      8 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |   2172 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0
 
-Number of local clocks in this region: 1
+Number of local clocks in this region: 3
 List of local clocks in this region:
+   usr/link_tracking_0_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13> driven by SLICE_X72Y48 
+   usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13> driven by SLICE_X64Y16 
    usr/gtx_wrapper_inst/gtx_clk driven by IBUFDS_GTXE1_X0Y2 
 
 
@@ -217,25 +218,25 @@ Clock-Region: <CLOCKREGION_X0Y1>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/cdce_synch/clk_from_bufg_mux
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    308 |system/sram_w[1]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |system/sram_w[2]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     14 |    957 |user_ipb_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     88 |usr/gtx_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     20 |usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>_BUFG
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     34 |usr/tcc_clock
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    274 |system/sram_w[1]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      9 |system/sram_w[2]_clk
+     21 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |   1138 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    662 |usr/gtx_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     35 |usr/tcc_clock
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |   1410 | Total 
+     21 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |   2131 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0
 
 Number of local clocks in this region: 1
 List of local clocks in this region:
-   system/spi/reset_i_cpol_i_AND_934_o driven by SLICE_X10Y49 
+   system/spi/reset_i_cpol_i_AND_934_o driven by SLICE_X15Y51 
 
 
 Clock-Region: <CLOCKREGION_X1Y1> 
- key resource utilizations (used/available): global-clocks - 3/12 ;
+ key resource utilizations (used/available): global-clocks - 6/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -244,22 +245,28 @@ Clock-Region: <CLOCKREGION_X1Y1>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     36 |    482 |user_ipb_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |usr/gtx_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     25 |system/sram_w[1]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |system/sram_w[2]_clk
+     19 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     48 |    577 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    594 |usr/gtx_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129>_BUFG
       0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |usr/tcc_clock
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     16 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      0 |      0 |      0 |     36 |    506 | Total 
+     19 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      0 |      0 |      0 |     48 |   1204 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 1
 List of regional clocks in this region:
-   system/mac_clk<0> driven by BUFR_X2Y4 
+   system/mac_clk<2> driven by BUFR_X2Y5 
 
-Number of local clocks in this region: 0
+Number of local clocks in this region: 2
+List of local clocks in this region:
+   usr/link_tracking_0_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13> driven by SLICE_X72Y48 
+   usr/amc13_inst/Inst_TTC_decoder/TTC_CLK_in driven by IOB_X2Y117 
 
 
 Clock-Region: <CLOCKREGION_X0Y2> 
- key resource utilizations (used/available): global-clocks - 6/12 ;
+ key resource utilizations (used/available): global-clocks - 7/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -268,28 +275,45 @@ Clock-Region: <CLOCKREGION_X0Y2>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |system/cdce_synch/clk_from_bufg_mux
       0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/gbt_phase_monitoring/ttclk_pll/clkfbout_buf
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    435 |system/sram_w[2]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/sram_w[1]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    421 |system/sram_w[2]_clk
       0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/xpoint1_clk1
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     20 |    419 |user_ipb_clk
+      5 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     20 |    568 |user_ipb_clk
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |usr/amc13_inst/Inst_TTC_decoder/TTC_CLK_dcm
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |usr/tcc_clock
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      2 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |     20 |    862 | Total 
+      5 |      2 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |     20 |    996 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0
 
-Number of local clocks in this region: 4
+Number of local clocks in this region: 20
 List of local clocks in this region:
+   system/i2c_s/reset_regs_i[10][0]_AND_837_o driven by SLICE_X23Y106 
+   system/i2c_s/reset_regs_i[10][1]_AND_835_o driven by SLICE_X22Y103 
+   system/i2c_s/reset_regs_i[10][2]_AND_833_o driven by SLICE_X22Y101 
+   system/i2c_s/reset_regs_i[10][3]_AND_831_o driven by SLICE_X20Y101 
+   system/ip_mac/reset_i_user_ip_addr_i[1]_AND_177_o driven by SLICE_X24Y104 
+   MMCM_PHASE_CALIBRATION_ML_LUT2_12_ML_NEW_CLK driven by SLICE_X42Y112 
    system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_I1 driven by MMCM_ADV_X0Y5 
-   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X43Y113 
+   system/gbt_phase_monitoring/ttclk_pll/mmcm_adv_inst_ML_NEW_OUT driven by SLICE_X43Y112 
+   system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o driven by SLICE_X26Y105 
+   system/ip_mac/reset_i_user_ip_addr_i[2]_AND_175_o driven by SLICE_X24Y101 
+   system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o driven by SLICE_X26Y107 
+   system/i2c_s/reset_regs_i[6][2]_AND_769_o driven by SLICE_X20Y105 
+   system/ip_mac/reset_i_user_ip_addr_i[3]_AND_173_o driven by SLICE_X24Y103 
+   system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o driven by SLICE_X28Y109 
+   system/i2c_s/reset_regs_i[6][0]_AND_773_o driven by SLICE_X22Y109 
+   system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o driven by SLICE_X28Y108 
+   system/i2c_s/reset_regs_i[6][3]_AND_767_o driven by SLICE_X21Y106 
+   system/ip_mac/reset_i_user_ip_addr_i[0]_AND_179_o driven by SLICE_X23Y105 
+   system/i2c_s/reset_regs_i[6][1]_AND_771_o driven by SLICE_X20Y108 
    system/gbt_phase_monitoring/ttclk_pll/clkfbout driven by MMCM_ADV_X0Y5 
-   MMCM_PHASE_CALIBRATION_ML_LUT2_12_ML_NEW_CLK driven by SLICE_X42Y115 
 
 
 Clock-Region: <CLOCKREGION_X1Y2> 
- key resource utilizations (used/available): global-clocks - 6/12 ;
+ key resource utilizations (used/available): global-clocks - 7/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -299,13 +323,14 @@ Clock-Region: <CLOCKREGION_X1Y2>
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/gbt_phase_monitoring/fmc1_ttclk_x6_cdce
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |      1 |system/gbt_phase_monitoring/sfp_ttclk_x6_cdce
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     76 |    106 |system/gbt_phase_monitoring/ttclk_x6
-      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |system/sram_w[2]_clk
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |      5 |user_clk125_2_bufg
-      5 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    450 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |system/gbt_phase_monitoring/sfp_ttclk_x6_cdce
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     72 |    106 |system/gbt_phase_monitoring/ttclk_x6
+      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      3 |system/sram_w[2]_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      5 |user_clk125_2_bufg
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    360 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    338 |usr/gtx_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      5 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     88 |    563 | Total 
+     16 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |     72 |    814 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 4
@@ -330,13 +355,13 @@ Clock-Region: <CLOCKREGION_X0Y3>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     22 |system/cdce_synch/clk_from_bufg_mux
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |system/cdce_synch/clk_from_bufg_mux
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |system/glib_pll_clkout_31_25_a
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |system/glib_pll_clkout_31_25_d_inv
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     34 |user_clk125_2_bufg
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     51 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |     61 |user_clk125_2_bufg
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    242 |user_ipb_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      2 |    107 | Total 
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      6 |    319 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0
@@ -354,15 +379,14 @@ Clock-Region: <CLOCKREGION_X1Y3>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
         |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |     27 |user_clk125_2_bufg
-     11 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     40 |user_ipb_clk
+     24 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    298 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     11 |usr/gtx_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-     11 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |     67 | Total 
+     24 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    309 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
-Number of regional clocks in this region: 2
+Number of regional clocks in this region: 1
 List of regional clocks in this region:
-   system/mac_clk<2> driven by BUFR_X2Y5 
    system/mac_clk<0> driven by BUFR_X2Y4 
 
 Number of local clocks in this region: 0
@@ -393,7 +417,7 @@ List of local clocks in this region:
 
 
 Clock-Region: <CLOCKREGION_X1Y4> 
- key resource utilizations (used/available): global-clocks - 2/12 ;
+ key resource utilizations (used/available): global-clocks - 4/12 ;
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
    BRAM |   MMCM |     GT |    IOB | ILOGIC | OLOGIC |   MULT |   BUFG |  TEMAC |   PCIE | IDLYCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
    FIFO |        |        |        |        |        |        |        |        |        |        |        |        |
@@ -404,8 +428,10 @@ Clock-Region: <CLOCKREGION_X1Y4>
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |system/glib_pll_clkout_31_25_b
       0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |system/glib_pll_clkout_31_25_c
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |user_ipb_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     70 |usr/gtx_clk
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
-      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 | Total 
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     94 | Total 
 --------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
 
 Number of regional clocks in this region: 0

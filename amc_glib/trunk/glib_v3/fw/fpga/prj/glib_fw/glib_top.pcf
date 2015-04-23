@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Apr 22 09:53:58 2015
+// Written by: Map P.20131013 on Thu Apr 23 11:53:35 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -35272,9 +35272,6 @@ TS_xpoint1_clk3_p = PERIOD TIMEGRP "xpoint1_clk3_p" 24.95 ns HIGH 50%
         INPUT_JITTER 0.1 ns;
 TS_xpoint1_clk3_n = PERIOD TIMEGRP "xpoint1_clk3_n" TS_xpoint1_clk3_p PHASE
         12.475 ns HIGH 50%;
-TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
-TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
-TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
 TS_clk125_2_p = PERIOD TIMEGRP "clk125_2_p" 8 ns HIGH 50%;
 TS_clk125_2_n = PERIOD TIMEGRP "clk125_2_n" TS_clk125_2_p PHASE 4 ns HIGH 50%;
 TS_system_phy_en_phy_eth_clk125_out = PERIOD TIMEGRP
@@ -35284,12 +35281,15 @@ TS_system_amc_p0_en_amc_p0_eth_clk125_out = PERIOD TIMEGRP
 TS_xpoint1_clk1_p = PERIOD TIMEGRP "xpoint1_clk1_p" 25 ns HIGH 50%;
 TS_xpoint1_clk1_n = PERIOD TIMEGRP "xpoint1_clk1_n" TS_xpoint1_clk1_p PHASE
         12.5 ns HIGH 50%;
+TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
+TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
+TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
 TS_usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm = PERIOD TIMEGRP
         "usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm" TS_xpoint1_clk3_p PHASE
-        -1.7465 ns HIGH 50% INPUT_JITTER 0.1 ns;
+        10.7285 ns HIGH 50% INPUT_JITTER 0.1 ns;
 TS_usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0 = PERIOD TIMEGRP
         "usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0" TS_xpoint1_clk3_n
-        PHASE -1.7465 ns HIGH 50%;
+        PHASE 10.7285 ns HIGH 50%;
 TS_system_glib_pll_clkout_31_25_c = PERIOD TIMEGRP
         "system_glib_pll_clkout_31_25_c" TS_clk125_2_p / 0.25 HIGH 50%;
 TS_system_glib_pll_clkout_31_25_a = PERIOD TIMEGRP

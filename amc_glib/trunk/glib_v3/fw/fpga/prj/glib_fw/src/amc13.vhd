@@ -116,7 +116,7 @@ i_DCM_rst : SRL16E
       CLKIN1_PERIOD => 24.95,      -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
       CLKOUT0_DIVIDE_F => 25.0,   -- Divide amount for CLKOUT0 (1.000-128.000).
       -- CLKOUT0_PHASE - CLKOUT6_PHASE: Phase offset for each CLKOUT (-360.000-360.000).
-      CLKOUT0_PHASE => 0.0,
+      CLKOUT0_PHASE => 180.0,
       STARTUP_WAIT => FALSE      -- Not supported. Must be set to FALSE.
    )
    port map (

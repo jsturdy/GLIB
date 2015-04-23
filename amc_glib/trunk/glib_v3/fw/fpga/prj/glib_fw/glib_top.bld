@@ -11,8 +11,8 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo -sd
 ../../src/system/cdce/cdce_phase_mon_v2/pll -sd ../../src/system/pll -nt
-timestamp -uc user_fabric_clk.ucf -uc src/gtx.ucf -uc src/system_clk.ucf -uc
-src/system.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
+timestamp -uc src/system.ucf -uc user_fabric_clk.ucf -uc src/system_clk.ucf -uc
+src/gtx.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
 
 Reading NGO file
 "Z:/Documents/PhD/Code/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/glib_fw/glib_top.
@@ -28,10 +28,10 @@ Loading design module
 Gathering constraint information from source properties...
 Done.
 
-Annotating constraints to design from ucf file "user_fabric_clk.ucf" ...
-Annotating constraints to design from ucf file "src/gtx.ucf" ...
-Annotating constraints to design from ucf file "src/system_clk.ucf" ...
 Annotating constraints to design from ucf file "src/system.ucf" ...
+Annotating constraints to design from ucf file "user_fabric_clk.ucf" ...
+Annotating constraints to design from ucf file "src/system_clk.ucf" ...
+Annotating constraints to design from ucf file "src/gtx.ucf" ...
 WARNING:NgdBuild - The value of SIM_DEVICE on instance
    'system/amc_p0_en.amc_p0_eth/clkbuf' of type BUFR has been changed from
    'VIRTEX4' to 'VIRTEX6' to correct post-ngdbuild and timing simulation for
@@ -71,7 +71,7 @@ INFO:ConstraintSystem:178 - TNM 'xpoint1_clk3_p', used in period specification
    following new TNM groups and period specifications were generated at the
    MMCM_ADV output(s): 
    CLKOUT0: <TIMESPEC TS_usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm = PERIOD
-   "usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm" TS_xpoint1_clk3_p PHASE -1.7465
+   "usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm" TS_xpoint1_clk3_p PHASE 10.7285
    ns HIGH 50% INPUT_JITTER 100 ps>
 
 INFO:ConstraintSystem:178 - TNM 'xpoint1_clk3_n', used in period specification
@@ -80,7 +80,7 @@ INFO:ConstraintSystem:178 - TNM 'xpoint1_clk3_n', used in period specification
    MMCM_ADV output(s): 
    CLKOUT0: <TIMESPEC TS_usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0 = PERIOD
    "usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0" TS_xpoint1_clk3_n PHASE
-   -1.7465 ns HIGH 50%>
+   10.7285 ns HIGH 50%>
 
 WARNING:ConstraintSystem:191 - The TNM 'cdce_out4_p', does not directly or
    indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
@@ -27028,10 +27028,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 13716
 
-Total memory usage is 372072 kilobytes
+Total memory usage is 374448 kilobytes
 
 Writing NGD file "glib_top.ngd" ...
-Total REAL time to NGDBUILD completion:  51 sec
-Total CPU time to NGDBUILD completion:   45 sec
+Total REAL time to NGDBUILD completion:  49 sec
+Total CPU time to NGDBUILD completion:   44 sec
 
 Writing NGDBUILD log file "glib_top.bld"...

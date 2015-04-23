@@ -1362,8 +1362,8 @@ port map
 	xpoint2_s11					            <= reg_ctrl(13);		-- default: 1 (out_1 driven by in_4)
 --									            	reg_ctrl(14); 		--          x 
 --									            	reg_ctrl(15); 		--          x 
-	xpoint1_s10					            <= '1'; --reg_ctrl(16); 	   -- default: 0 (xpoint_4x4 out_1 driven by in_2)
-	xpoint1_s11					            <= '1'; --reg_ctrl(17); 	   -- default: 1  		 
+	xpoint1_s10					            <= reg_ctrl(16); 	   -- default: 0 (xpoint_4x4 out_1 driven by in_2)
+	xpoint1_s11					            <= reg_ctrl(17); 	   -- default: 1  		 
 	xpoint1_s20					            <= reg_ctrl(18); 	   -- default: 0 (xpoint_4x4 out_2 driven by in_2)
 	xpoint1_s21					            <= reg_ctrl(19); 	   -- default: 1  	 
 	xpoint1_s30					            <= '1'; --reg_ctrl(20); 	   -- default: 0 (xpoint_4x4 out_3 driven by in_2)

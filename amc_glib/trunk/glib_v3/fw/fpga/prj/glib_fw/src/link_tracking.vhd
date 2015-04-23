@@ -124,6 +124,8 @@ begin
     
     regs_tx_data <= x"000000004043" when regs_tx_en_trig = '1' else regs_tx_data_ipbus;
     
+    regs_tx_en_trig <= trigger_i;
+    
     gtx_rx_mux_inst : entity work.gtx_rx_mux
     port map(
         gtx_clk_i       => gtx_clk_i,

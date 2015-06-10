@@ -416,7 +416,7 @@ begin
     
     -- Firmware date : 2
     
-    request_read(2) <= x"AA150610";
+    request_read(2) <= x"BB150610";
 
 
 end user_logic_arch;

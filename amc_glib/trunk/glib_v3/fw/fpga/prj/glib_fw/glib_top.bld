@@ -11,8 +11,8 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_rd_fifo -sd
 ../../src/system/pcie/sys_pcie/ezdma2_ipbus_int/cores/slv_wr_fifo -sd
 ../../src/system/cdce/cdce_phase_mon_v2/pll -sd ../../src/system/pll -nt
-timestamp -uc src/system.ucf -uc user_fabric_clk.ucf -uc src/system_clk.ucf -uc
-src/gtx.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
+timestamp -uc src/gtx.ucf -uc src/system_clk.ucf -uc src/system.ucf -uc
+user_fabric_clk.ucf -p xc6vlx130t-ff1156-1 glib_top.ngc glib_top.ngd
 
 Reading NGO file
 "Z:/Documents/PhD/Code/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/glib_fw/glib_top.
@@ -28,10 +28,10 @@ Loading design module
 Gathering constraint information from source properties...
 Done.
 
+Annotating constraints to design from ucf file "src/gtx.ucf" ...
+Annotating constraints to design from ucf file "src/system_clk.ucf" ...
 Annotating constraints to design from ucf file "src/system.ucf" ...
 Annotating constraints to design from ucf file "user_fabric_clk.ucf" ...
-Annotating constraints to design from ucf file "src/system_clk.ucf" ...
-Annotating constraints to design from ucf file "src/gtx.ucf" ...
 WARNING:NgdBuild - The value of SIM_DEVICE on instance
    'system/amc_p0_en.amc_p0_eth/clkbuf' of type BUFR has been changed from
    'VIRTEX4' to 'VIRTEX6' to correct post-ngdbuild and timing simulation for
@@ -65,54 +65,6 @@ WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_cdce_out4_n = 				PERIOD
    "cdce_out4_n" TS_cdce_out4_p PHASE 12.475 ns HIGH 50%                      
    ;> [user_fabric_clk.ucf(38)]: Unable to find an active 'TNM' or 'TimeGrp'
    constraint named 'cdce_out4_n'.
-
-INFO:ConstraintSystem:178 - TNM 'xpoint1_clk3_p', used in period specification
-   'TS_xpoint1_clk3_p', was traced into MMCM_ADV instance MMCM_BASE_inst. The
-   following new TNM groups and period specifications were generated at the
-   MMCM_ADV output(s): 
-   CLKOUT0: <TIMESPEC TS_usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm = PERIOD
-   "usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm" TS_xpoint1_clk3_p PHASE 10.7285
-   ns HIGH 50% INPUT_JITTER 100 ps>
-
-INFO:ConstraintSystem:178 - TNM 'xpoint1_clk3_n', used in period specification
-   'TS_xpoint1_clk3_n', was traced into MMCM_ADV instance MMCM_BASE_inst. The
-   following new TNM groups and period specifications were generated at the
-   MMCM_ADV output(s): 
-   CLKOUT0: <TIMESPEC TS_usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0 = PERIOD
-   "usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0" TS_xpoint1_clk3_n PHASE
-   10.7285 ns HIGH 50%>
-
-WARNING:ConstraintSystem:191 - The TNM 'cdce_out4_p', does not directly or
-   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
-   used by the referencing Period constraint 'TS_cdce_out4_p'. If clock manager
-   blocks are directly or indirectly driven, a new TNM constraint will not be
-   derived even though the referencing constraint is a PERIOD constraint unless
-   an output of the clock manager drives flip-flops, latches or RAMs. This TNM
-   is used in the following user PERIOD specification:
-   <TIMESPEC TS_cdce_out4_p = 				PERIOD "cdce_out4_p" 24.95 ns HIGH 50%
-   INPUT_JITTER 100 ps                                            ;>
-   [user_fabric_clk.ucf(37)]
-
-WARNING:ConstraintSystem:197 - The following specification is invalid because
-   the referenced TNM constraint was removed:
-   <TIMESPEC TS_cdce_out4_p = 				PERIOD "cdce_out4_p" 24.95 ns HIGH 50%
-   INPUT_JITTER 100 ps                                            ;>
-   [user_fabric_clk.ucf(37)]
-
-WARNING:ConstraintSystem:191 - The TNM 'cdce_out4_n', does not directly or
-   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
-   used by the referencing Period constraint 'TS_cdce_out4_n'. If clock manager
-   blocks are directly or indirectly driven, a new TNM constraint will not be
-   derived even though the referencing constraint is a PERIOD constraint unless
-   an output of the clock manager drives flip-flops, latches or RAMs. This TNM
-   is used in the following user PERIOD specification:
-   <TIMESPEC TS_cdce_out4_n = 				PERIOD "cdce_out4_n" TS_cdce_out4_p PHASE
-   12.475 ns HIGH 50%                       ;> [user_fabric_clk.ucf(38)]
-
-WARNING:ConstraintSystem:197 - The following specification is invalid because
-   the referenced TNM constraint was removed:
-   <TIMESPEC TS_cdce_out4_n = 				PERIOD "cdce_out4_n" TS_cdce_out4_p PHASE
-   12.475 ns HIGH 50%                       ;> [user_fabric_clk.ucf(38)]
 
 INFO:ConstraintSystem:178 - TNM 'clk125_2_p', used in period specification
    'TS_clk125_2_p', was traced into MMCM_ADV instance mmcm_adv_inst. The
@@ -171,6 +123,54 @@ INFO:ConstraintSystem:178 - TNM 'xpoint1_clk1_n', used in period specification
    CLKOUT0: <TIMESPEC TS_system_gbt_phase_monitoring_ttclk_pll_clkout0_0 =
    PERIOD "system_gbt_phase_monitoring_ttclk_pll_clkout0_0" TS_xpoint1_clk1_n /
    6 PHASE 2.083333333 ns HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'xpoint1_clk3_p', used in period specification
+   'TS_xpoint1_clk3_p', was traced into MMCM_ADV instance MMCM_BASE_inst. The
+   following new TNM groups and period specifications were generated at the
+   MMCM_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_usr_ttc_inst_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm =
+   PERIOD "usr_ttc_inst_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm"
+   TS_xpoint1_clk3_p PHASE 10.7285 ns HIGH 50% INPUT_JITTER 100 ps>
+
+INFO:ConstraintSystem:178 - TNM 'xpoint1_clk3_n', used in period specification
+   'TS_xpoint1_clk3_n', was traced into MMCM_ADV instance MMCM_BASE_inst. The
+   following new TNM groups and period specifications were generated at the
+   MMCM_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_usr_ttc_inst_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0
+   = PERIOD "usr_ttc_inst_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0"
+   TS_xpoint1_clk3_n PHASE 10.7285 ns HIGH 50%>
+
+WARNING:ConstraintSystem:191 - The TNM 'cdce_out4_p', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TS_cdce_out4_p'. If clock manager
+   blocks are directly or indirectly driven, a new TNM constraint will not be
+   derived even though the referencing constraint is a PERIOD constraint unless
+   an output of the clock manager drives flip-flops, latches or RAMs. This TNM
+   is used in the following user PERIOD specification:
+   <TIMESPEC TS_cdce_out4_p = 				PERIOD "cdce_out4_p" 24.95 ns HIGH 50%
+   INPUT_JITTER 100 ps                                            ;>
+   [user_fabric_clk.ucf(37)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_cdce_out4_p = 				PERIOD "cdce_out4_p" 24.95 ns HIGH 50%
+   INPUT_JITTER 100 ps                                            ;>
+   [user_fabric_clk.ucf(37)]
+
+WARNING:ConstraintSystem:191 - The TNM 'cdce_out4_n', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TS_cdce_out4_n'. If clock manager
+   blocks are directly or indirectly driven, a new TNM constraint will not be
+   derived even though the referencing constraint is a PERIOD constraint unless
+   an output of the clock manager drives flip-flops, latches or RAMs. This TNM
+   is used in the following user PERIOD specification:
+   <TIMESPEC TS_cdce_out4_n = 				PERIOD "cdce_out4_n" TS_cdce_out4_p PHASE
+   12.475 ns HIGH 50%                       ;> [user_fabric_clk.ucf(38)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_cdce_out4_n = 				PERIOD "cdce_out4_n" TS_cdce_out4_p PHASE
+   12.475 ns HIGH 50%                       ;> [user_fabric_clk.ucf(38)]
 
 Done...
 
@@ -8762,70 +8762,6 @@ WARNING:NgdBuild:452 - logical net
 WARNING:NgdBuild:452 - logical net
    'usr/link_tracking_2_inst/request_write_o<2><0>' has no driver
 WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><31>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><30>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><29>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><28>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><27>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><26>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><25>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><24>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><23>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><22>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><21>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><20>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><19>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><18>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><17>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><16>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><15>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><14>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><13>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><12>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><11>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><10>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><9>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><8>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><7>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><6>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><5>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><4>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><3>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><2>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><1>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_2_inst/request_write_o<1><0>' has no driver
-WARNING:NgdBuild:452 - logical net
    'usr/link_tracking_2_inst/request_write_o<0><31>' has no driver
 WARNING:NgdBuild:452 - logical net
    'usr/link_tracking_2_inst/request_write_o<0><30>' has no driver
@@ -9140,10 +9076,6 @@ WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/request_tri_o<4>'
 WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/request_tri_o<3>'
    has no driver
 WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/request_tri_o<2>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/request_tri_o<1>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_2_inst/request_tri_o<0>'
    has no driver
 WARNING:NgdBuild:452 - logical net 'usr/link_tracking_1_inst/vi2c_tx_data<31>'
    has no driver
@@ -25598,70 +25530,6 @@ WARNING:NgdBuild:452 - logical net
 WARNING:NgdBuild:452 - logical net
    'usr/link_tracking_0_inst/request_write_o<2><0>' has no driver
 WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><31>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><30>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><29>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><28>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><27>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><26>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><25>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><24>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><23>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><22>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><21>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><20>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><19>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><18>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><17>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><16>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><15>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><14>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><13>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><12>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><11>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><10>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><9>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><8>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><7>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><6>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><5>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><4>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><3>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><2>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><1>' has no driver
-WARNING:NgdBuild:452 - logical net
-   'usr/link_tracking_0_inst/request_write_o<1><0>' has no driver
-WARNING:NgdBuild:452 - logical net
    'usr/link_tracking_0_inst/request_write_o<0><31>' has no driver
 WARNING:NgdBuild:452 - logical net
    'usr/link_tracking_0_inst/request_write_o<0><30>' has no driver
@@ -25977,10 +25845,6 @@ WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/request_tri_o<3>'
    has no driver
 WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/request_tri_o<2>'
    has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/request_tri_o<1>'
-   has no driver
-WARNING:NgdBuild:452 - logical net 'usr/link_tracking_0_inst/request_tri_o<0>'
-   has no driver
 WARNING:NgdBuild:452 - logical net 'usr/link_trigger_inst/trigger_rx_data<47>'
    has no driver
 WARNING:NgdBuild:452 - logical net 'usr/link_trigger_inst/trigger_rx_data<46>'
@@ -26013,17 +25877,28 @@ WARNING:NgdBuild:452 - logical net 'usr/link_trigger_inst/trigger_rx_data<7>'
    has no driver
 WARNING:NgdBuild:452 - logical net 'usr/link_trigger_inst/trigger_rx_data<6>'
    has no driver
-WARNING:NgdBuild:452 - logical net 'usr/amc13_inst/Brcst<7>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/amc13_inst/Brcst<6>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/amc13_inst/Brcst<5>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/amc13_inst/Brcst<4>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/amc13_inst/Brcst<3>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/amc13_inst/Brcst<2>' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/amc13_inst/BCntRes' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/amc13_inst/EvCntRes' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/amc13_inst/SinErrStr' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/amc13_inst/DbErrStr' has no driver
-WARNING:NgdBuild:452 - logical net 'usr/amc13_inst/BrcstStr' has no driver
+WARNING:NgdBuild:452 - logical net 'usr/ttc_inst/amc13_inst/Brcst<7>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'usr/ttc_inst/amc13_inst/Brcst<6>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'usr/ttc_inst/amc13_inst/Brcst<5>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'usr/ttc_inst/amc13_inst/Brcst<4>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'usr/ttc_inst/amc13_inst/Brcst<3>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'usr/ttc_inst/amc13_inst/Brcst<2>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'usr/ttc_inst/amc13_inst/BCntRes' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'usr/ttc_inst/amc13_inst/EvCntRes' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'usr/ttc_inst/amc13_inst/SinErrStr' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'usr/ttc_inst/amc13_inst/DbErrStr' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'usr/ttc_inst/amc13_inst/BrcstStr' has no
+   driver
 WARNING:NgdBuild:452 - logical net 'system/user_cdce_sync_done_o' has no driver
 WARNING:NgdBuild:452 - logical net 'system/ipb_from_fabric_ipb_err' has no
    driver
@@ -27026,12 +26901,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 13716
+  Number of warnings: 13648
 
-Total memory usage is 374448 kilobytes
+Total memory usage is 373316 kilobytes
 
 Writing NGD file "glib_top.ngd" ...
-Total REAL time to NGDBUILD completion:  49 sec
+Total REAL time to NGDBUILD completion:  45 sec
 Total CPU time to NGDBUILD completion:   44 sec
 
 Writing NGDBUILD log file "glib_top.bld"...

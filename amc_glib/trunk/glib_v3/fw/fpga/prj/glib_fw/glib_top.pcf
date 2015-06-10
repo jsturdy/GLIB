@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Apr 23 11:53:35 2015
+// Written by: Map P.20131013 on Wed Jun 10 11:27:47 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -279,48 +279,6 @@ COMP "system/gbt_phase_monitoring/fmc1_cdce_pm/debug_test_d_clk_cdce_o" LOCATE
         = SITE "SLICE_X58Y101" LEVEL 1;
 COMP "system/gbt_phase_monitoring/fmc1_cdce_pm/debug_test_xor_mclk_o" LOCATE =
         SITE "SLICE_X59Y100" LEVEL 1;
-PIN usr/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<1> = BEL
-        "usr/amc13_inst/Inst_TTC_decoder/IDDR_inst" PINNAME CK;
-PIN usr/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<2> = BEL
-        "usr/amc13_inst/Inst_TTC_decoder/IDDR_inst" PINNAME CKB;
-TIMEGRP usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm = BEL "usr/l1_led" BEL
-        "usr/bc0_led" BEL "usr/i_0" BEL "usr/i_1" BEL "usr/i_2" BEL "usr/i_3"
-        BEL "usr/i_4" BEL "usr/i_5" BEL "usr/i_6" BEL "usr/i_7" BEL "usr/i_8"
-        BEL "usr/_i000014_0" BEL "usr/_i000014_1" BEL "usr/_i000014_2" BEL
-        "usr/_i000014_3" BEL "usr/_i000014_4" BEL "usr/_i000014_5" BEL
-        "usr/_i000014_6" BEL "usr/_i000014_7" BEL "usr/_i000014_8" BEL
-        "usr/_i000014_9" BEL "usr/_i000014_10" BEL "usr/_i000014_11" BEL
-        "usr/_i000014_12" BEL "usr/_i000014_13" BEL "usr/_i000014_14" BEL
-        "usr/_i000014_15" BEL "usr/_i000014_16" BEL "usr/_i000014_17" BEL
-        "usr/_i000014_18" BEL "usr/_i000014_19" BEL "usr/_i000014_20" BEL
-        "usr/_i000014_21" BEL "usr/_i000014_22" BEL
-        "usr/amc13_inst/Inst_TTC_decoder/TTC_lock_q" BEL
-        "usr/amc13_inst/Inst_TTC_decoder/L1A" BEL
-        "usr/amc13_inst/Inst_TTC_decoder/i_TTC_CLK_buf" BEL
-        "usr/amc13_inst/Inst_TTC_decoder/i_L1Accept" PIN
-        "usr/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
-        "usr/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<2>" PIN
-        "usr/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
-        "usr/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<2>";
-TIMEGRP usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0 = BEL "usr/l1_led" BEL
-        "usr/bc0_led" BEL "usr/i_0" BEL "usr/i_1" BEL "usr/i_2" BEL "usr/i_3"
-        BEL "usr/i_4" BEL "usr/i_5" BEL "usr/i_6" BEL "usr/i_7" BEL "usr/i_8"
-        BEL "usr/_i000014_0" BEL "usr/_i000014_1" BEL "usr/_i000014_2" BEL
-        "usr/_i000014_3" BEL "usr/_i000014_4" BEL "usr/_i000014_5" BEL
-        "usr/_i000014_6" BEL "usr/_i000014_7" BEL "usr/_i000014_8" BEL
-        "usr/_i000014_9" BEL "usr/_i000014_10" BEL "usr/_i000014_11" BEL
-        "usr/_i000014_12" BEL "usr/_i000014_13" BEL "usr/_i000014_14" BEL
-        "usr/_i000014_15" BEL "usr/_i000014_16" BEL "usr/_i000014_17" BEL
-        "usr/_i000014_18" BEL "usr/_i000014_19" BEL "usr/_i000014_20" BEL
-        "usr/_i000014_21" BEL "usr/_i000014_22" BEL
-        "usr/amc13_inst/Inst_TTC_decoder/TTC_lock_q" BEL
-        "usr/amc13_inst/Inst_TTC_decoder/L1A" BEL
-        "usr/amc13_inst/Inst_TTC_decoder/i_TTC_CLK_buf" BEL
-        "usr/amc13_inst/Inst_TTC_decoder/i_L1Accept" PIN
-        "usr/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
-        "usr/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<2>" PIN
-        "usr/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
-        "usr/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<2>";
 PIN usr/gtx_wrapper_inst/gtx_3_inst/gtxe1_i_pins<150> = BEL
         "usr/gtx_wrapper_inst/gtx_3_inst/gtxe1_i" PINNAME RXUSRCLK2;
 PIN usr/gtx_wrapper_inst/gtx_3_inst/gtxe1_i_pins<286> = BEL
@@ -4923,7 +4881,9 @@ TIMEGRP gtx0_tx_out_clk = BEL "usr/gtx_wrapper_inst/tx_out_clk_bufg" PIN
         "usr/link_trigger_inst/trigger_tx_inst/kchar_count_6" BEL
         "usr/link_trigger_inst/trigger_tx_inst/kchar_count_7" BEL
         "usr/link_trigger_inst/trigger_tx_inst/kchar_count_8" BEL
-        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_9" PIN
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_9" BEL
+        "usr/ttc_inst/clock_bridge_trigger_inst/s_en_o" BEL
+        "usr/ttc_inst/clock_bridge_trigger_inst/ack" PIN
         "usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM18.ram_pins<32>"
         PIN
         "usr/link_tracking_0_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram_pins<63>"
@@ -8971,7 +8931,9 @@ TIMEGRP usr_gtx_clk = PIN "usr/gtx_wrapper_inst/gtx_3_inst/gtxe1_i_pins<150>"
         "usr/link_trigger_inst/trigger_tx_inst/kchar_count_6" BEL
         "usr/link_trigger_inst/trigger_tx_inst/kchar_count_7" BEL
         "usr/link_trigger_inst/trigger_tx_inst/kchar_count_8" BEL
-        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_9" PIN
+        "usr/link_trigger_inst/trigger_tx_inst/kchar_count_9" BEL
+        "usr/ttc_inst/clock_bridge_trigger_inst/s_en_o" BEL
+        "usr/ttc_inst/clock_bridge_trigger_inst/ack" PIN
         "usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM18.ram_pins<32>"
         PIN
         "usr/link_tracking_0_inst/ipb_tracking_inst/tracking_data_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram_pins<63>"
@@ -11229,6 +11191,8 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/link_tracking_2_inst/ipb_info_inst/wbus_t_9" BEL
         "usr/link_tracking_2_inst/ipb_info_inst/wbus_t_12" BEL
         "usr/link_tracking_2_inst/ipb_info_inst/wbus_t_13" BEL
+        "usr/link_tracking_2_inst/ipb_info_inst/wbus_t_128" BEL
+        "usr/link_tracking_2_inst/ipb_info_inst/wbus_t_129" BEL
         "usr/link_tracking_2_inst/ipb_info_inst/last_ipb_strobe" BEL
         "usr/link_tracking_2_inst/trigger_configuration_reg/reg_0" BEL
         "usr/link_tracking_2_inst/trigger_configuration_reg/reg_1" BEL
@@ -12857,6 +12821,8 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "usr/link_tracking_0_inst/ipb_info_inst/wbus_t_9" BEL
         "usr/link_tracking_0_inst/ipb_info_inst/wbus_t_12" BEL
         "usr/link_tracking_0_inst/ipb_info_inst/wbus_t_13" BEL
+        "usr/link_tracking_0_inst/ipb_info_inst/wbus_t_128" BEL
+        "usr/link_tracking_0_inst/ipb_info_inst/wbus_t_129" BEL
         "usr/link_tracking_0_inst/ipb_info_inst/last_ipb_strobe" BEL
         "usr/link_tracking_0_inst/trigger_configuration_reg/reg_0" BEL
         "usr/link_tracking_0_inst/trigger_configuration_reg/reg_1" BEL
@@ -13221,29 +13187,25 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "system/ip_mac/mac_addr_10" BEL "system/ip_mac/mac_addr_9" BEL
         "system/ip_mac/mac_addr_8" BEL "system/ip_mac/mac_addr_7" BEL
         "system/ip_mac/mac_addr_4" BEL "system/ip_mac/mac_addr_6" BEL
-        "system/ip_mac/mac_addr_5" BEL "system/ip_mac/mac_addr_3_C_3" BEL
-        "system/ip_mac/mac_addr_3_P_3" BEL "system/ip_mac/mac_addr_2_C_2" BEL
-        "system/ip_mac/mac_addr_2_P_2" BEL "system/ip_mac/mac_addr_1_C_1" BEL
-        "system/ip_mac/mac_addr_1_P_1" BEL "system/ip_mac/ip_addr_29" BEL
-        "system/ip_mac/ip_addr_31" BEL "system/ip_mac/ip_addr_30" BEL
-        "system/ip_mac/ip_addr_28" BEL "system/ip_mac/ip_addr_27" BEL
-        "system/ip_mac/ip_addr_26" BEL "system/ip_mac/ip_addr_25" BEL
-        "system/ip_mac/ip_addr_22" BEL "system/ip_mac/ip_addr_24" BEL
-        "system/ip_mac/ip_addr_23" BEL "system/ip_mac/ip_addr_19" BEL
-        "system/ip_mac/ip_addr_21" BEL "system/ip_mac/ip_addr_20" BEL
-        "system/ip_mac/ip_addr_16" BEL "system/ip_mac/ip_addr_18" BEL
-        "system/ip_mac/ip_addr_17" BEL "system/ip_mac/ip_addr_15" BEL
-        "system/ip_mac/ip_addr_14" BEL "system/ip_mac/ip_addr_13" BEL
-        "system/ip_mac/ip_addr_12" BEL "system/ip_mac/ip_addr_9" BEL
-        "system/ip_mac/ip_addr_11" BEL "system/ip_mac/ip_addr_10" BEL
-        "system/ip_mac/ip_addr_6" BEL "system/ip_mac/ip_addr_8" BEL
-        "system/ip_mac/ip_addr_7" BEL "system/ip_mac/ip_addr_3_C_3" BEL
-        "system/ip_mac/ip_addr_3_P_3" BEL "system/ip_mac/ip_addr_5" BEL
-        "system/ip_mac/ip_addr_4" BEL "system/ip_mac/ip_addr_2_C_2" BEL
-        "system/ip_mac/ip_addr_2_P_2" BEL "system/ip_mac/ip_addr_1_C_1" BEL
-        "system/ip_mac/ip_addr_1_P_1" BEL "system/ip_mac/mac_addr_0_C_0" BEL
-        "system/ip_mac/mac_addr_0_P_0" BEL "system/ip_mac/ip_addr_0_C_0" BEL
-        "system/ip_mac/ip_addr_0_P_0" BEL "system/spi/en.ssdelay_0" BEL
+        "system/ip_mac/mac_addr_5" BEL "system/ip_mac/mac_addr_3" BEL
+        "system/ip_mac/mac_addr_2" BEL "system/ip_mac/mac_addr_1" BEL
+        "system/ip_mac/ip_addr_29" BEL "system/ip_mac/ip_addr_31" BEL
+        "system/ip_mac/ip_addr_30" BEL "system/ip_mac/ip_addr_28" BEL
+        "system/ip_mac/ip_addr_27" BEL "system/ip_mac/ip_addr_26" BEL
+        "system/ip_mac/ip_addr_25" BEL "system/ip_mac/ip_addr_22" BEL
+        "system/ip_mac/ip_addr_24" BEL "system/ip_mac/ip_addr_23" BEL
+        "system/ip_mac/ip_addr_19" BEL "system/ip_mac/ip_addr_21" BEL
+        "system/ip_mac/ip_addr_20" BEL "system/ip_mac/ip_addr_16" BEL
+        "system/ip_mac/ip_addr_18" BEL "system/ip_mac/ip_addr_17" BEL
+        "system/ip_mac/ip_addr_15" BEL "system/ip_mac/ip_addr_14" BEL
+        "system/ip_mac/ip_addr_13" BEL "system/ip_mac/ip_addr_12" BEL
+        "system/ip_mac/ip_addr_9" BEL "system/ip_mac/ip_addr_11" BEL
+        "system/ip_mac/ip_addr_10" BEL "system/ip_mac/ip_addr_6" BEL
+        "system/ip_mac/ip_addr_8" BEL "system/ip_mac/ip_addr_7" BEL
+        "system/ip_mac/ip_addr_3" BEL "system/ip_mac/ip_addr_5" BEL
+        "system/ip_mac/ip_addr_4" BEL "system/ip_mac/ip_addr_2" BEL
+        "system/ip_mac/ip_addr_1" BEL "system/ip_mac/mac_addr_0" BEL
+        "system/ip_mac/ip_addr_0" BEL "system/spi/en.ssdelay_0" BEL
         "system/spi/en.ssdelay_1" BEL "system/spi/en.ssdelay_2" BEL
         "system/spi/en.ssdelay_3" BEL "system/spi/en.ssdelay_4" BEL
         "system/spi/en.ssdelay_5" BEL "system/spi/en.ssdelay_6" BEL
@@ -14698,10 +14660,8 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "system/i2c_s/regs_5_3" BEL "system/i2c_s/regs_5_2" BEL
         "system/i2c_s/regs_6_6" BEL "system/i2c_s/regs_5_0" BEL
         "system/i2c_s/regs_6_5" BEL "system/i2c_s/regs_6_4" BEL
-        "system/i2c_s/regs_6_1_C_1" BEL "system/i2c_s/regs_6_1_P_1" BEL
-        "system/i2c_s/regs_6_3_C_3" BEL "system/i2c_s/regs_6_3_P_3" BEL
-        "system/i2c_s/regs_6_2_C_2" BEL "system/i2c_s/regs_6_2_P_2" BEL
-        "system/i2c_s/regs_6_0_C_0" BEL "system/i2c_s/regs_6_0_P_0" BEL
+        "system/i2c_s/regs_6_1" BEL "system/i2c_s/regs_6_3" BEL
+        "system/i2c_s/regs_6_2" BEL "system/i2c_s/regs_6_0" BEL
         "system/i2c_s/regs_7_4" BEL "system/i2c_s/regs_7_6" BEL
         "system/i2c_s/regs_7_5" BEL "system/i2c_s/regs_7_3" BEL
         "system/i2c_s/regs_7_2" BEL "system/i2c_s/regs_7_1" BEL
@@ -14713,11 +14673,9 @@ TIMEGRP system_glib_pll_clkout_31_25_a = BEL
         "system/i2c_s/regs_9_4" BEL "system/i2c_s/regs_9_3" BEL
         "system/i2c_s/regs_9_0" BEL "system/i2c_s/regs_9_2" BEL
         "system/i2c_s/regs_9_1" BEL "system/i2c_s/regs_10_6" BEL
-        "system/i2c_s/regs_10_3_C_3" BEL "system/i2c_s/regs_10_3_P_3" BEL
-        "system/i2c_s/regs_10_5" BEL "system/i2c_s/regs_10_4" BEL
-        "system/i2c_s/regs_10_0_C_0" BEL "system/i2c_s/regs_10_0_P_0" BEL
-        "system/i2c_s/regs_10_2_C_2" BEL "system/i2c_s/regs_10_2_P_2" BEL
-        "system/i2c_s/regs_10_1_C_1" BEL "system/i2c_s/regs_10_1_P_1" BEL
+        "system/i2c_s/regs_10_3" BEL "system/i2c_s/regs_10_5" BEL
+        "system/i2c_s/regs_10_4" BEL "system/i2c_s/regs_10_0" BEL
+        "system/i2c_s/regs_10_2" BEL "system/i2c_s/regs_10_1" BEL
         "system/i2c_s/regs_1_7" BEL "system/i2c_s/regs_2_7" BEL
         "system/i2c_s/regs_3_7" BEL "system/i2c_s/regs_4_7" BEL
         "system/i2c_s/regs_5_7" BEL "system/i2c_s/regs_6_7" BEL
@@ -16605,6 +16563,8 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/link_tracking_2_inst/ipb_info_inst/wbus_t_9" BEL
         "usr/link_tracking_2_inst/ipb_info_inst/wbus_t_12" BEL
         "usr/link_tracking_2_inst/ipb_info_inst/wbus_t_13" BEL
+        "usr/link_tracking_2_inst/ipb_info_inst/wbus_t_128" BEL
+        "usr/link_tracking_2_inst/ipb_info_inst/wbus_t_129" BEL
         "usr/link_tracking_2_inst/ipb_info_inst/last_ipb_strobe" BEL
         "usr/link_tracking_2_inst/trigger_configuration_reg/reg_0" BEL
         "usr/link_tracking_2_inst/trigger_configuration_reg/reg_1" BEL
@@ -18233,6 +18193,8 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "usr/link_tracking_0_inst/ipb_info_inst/wbus_t_9" BEL
         "usr/link_tracking_0_inst/ipb_info_inst/wbus_t_12" BEL
         "usr/link_tracking_0_inst/ipb_info_inst/wbus_t_13" BEL
+        "usr/link_tracking_0_inst/ipb_info_inst/wbus_t_128" BEL
+        "usr/link_tracking_0_inst/ipb_info_inst/wbus_t_129" BEL
         "usr/link_tracking_0_inst/ipb_info_inst/last_ipb_strobe" BEL
         "usr/link_tracking_0_inst/trigger_configuration_reg/reg_0" BEL
         "usr/link_tracking_0_inst/trigger_configuration_reg/reg_1" BEL
@@ -18597,29 +18559,25 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "system/ip_mac/mac_addr_10" BEL "system/ip_mac/mac_addr_9" BEL
         "system/ip_mac/mac_addr_8" BEL "system/ip_mac/mac_addr_7" BEL
         "system/ip_mac/mac_addr_4" BEL "system/ip_mac/mac_addr_6" BEL
-        "system/ip_mac/mac_addr_5" BEL "system/ip_mac/mac_addr_3_C_3" BEL
-        "system/ip_mac/mac_addr_3_P_3" BEL "system/ip_mac/mac_addr_2_C_2" BEL
-        "system/ip_mac/mac_addr_2_P_2" BEL "system/ip_mac/mac_addr_1_C_1" BEL
-        "system/ip_mac/mac_addr_1_P_1" BEL "system/ip_mac/ip_addr_29" BEL
-        "system/ip_mac/ip_addr_31" BEL "system/ip_mac/ip_addr_30" BEL
-        "system/ip_mac/ip_addr_28" BEL "system/ip_mac/ip_addr_27" BEL
-        "system/ip_mac/ip_addr_26" BEL "system/ip_mac/ip_addr_25" BEL
-        "system/ip_mac/ip_addr_22" BEL "system/ip_mac/ip_addr_24" BEL
-        "system/ip_mac/ip_addr_23" BEL "system/ip_mac/ip_addr_19" BEL
-        "system/ip_mac/ip_addr_21" BEL "system/ip_mac/ip_addr_20" BEL
-        "system/ip_mac/ip_addr_16" BEL "system/ip_mac/ip_addr_18" BEL
-        "system/ip_mac/ip_addr_17" BEL "system/ip_mac/ip_addr_15" BEL
-        "system/ip_mac/ip_addr_14" BEL "system/ip_mac/ip_addr_13" BEL
-        "system/ip_mac/ip_addr_12" BEL "system/ip_mac/ip_addr_9" BEL
-        "system/ip_mac/ip_addr_11" BEL "system/ip_mac/ip_addr_10" BEL
-        "system/ip_mac/ip_addr_6" BEL "system/ip_mac/ip_addr_8" BEL
-        "system/ip_mac/ip_addr_7" BEL "system/ip_mac/ip_addr_3_C_3" BEL
-        "system/ip_mac/ip_addr_3_P_3" BEL "system/ip_mac/ip_addr_5" BEL
-        "system/ip_mac/ip_addr_4" BEL "system/ip_mac/ip_addr_2_C_2" BEL
-        "system/ip_mac/ip_addr_2_P_2" BEL "system/ip_mac/ip_addr_1_C_1" BEL
-        "system/ip_mac/ip_addr_1_P_1" BEL "system/ip_mac/mac_addr_0_C_0" BEL
-        "system/ip_mac/mac_addr_0_P_0" BEL "system/ip_mac/ip_addr_0_C_0" BEL
-        "system/ip_mac/ip_addr_0_P_0" BEL "system/spi/en.ssdelay_0" BEL
+        "system/ip_mac/mac_addr_5" BEL "system/ip_mac/mac_addr_3" BEL
+        "system/ip_mac/mac_addr_2" BEL "system/ip_mac/mac_addr_1" BEL
+        "system/ip_mac/ip_addr_29" BEL "system/ip_mac/ip_addr_31" BEL
+        "system/ip_mac/ip_addr_30" BEL "system/ip_mac/ip_addr_28" BEL
+        "system/ip_mac/ip_addr_27" BEL "system/ip_mac/ip_addr_26" BEL
+        "system/ip_mac/ip_addr_25" BEL "system/ip_mac/ip_addr_22" BEL
+        "system/ip_mac/ip_addr_24" BEL "system/ip_mac/ip_addr_23" BEL
+        "system/ip_mac/ip_addr_19" BEL "system/ip_mac/ip_addr_21" BEL
+        "system/ip_mac/ip_addr_20" BEL "system/ip_mac/ip_addr_16" BEL
+        "system/ip_mac/ip_addr_18" BEL "system/ip_mac/ip_addr_17" BEL
+        "system/ip_mac/ip_addr_15" BEL "system/ip_mac/ip_addr_14" BEL
+        "system/ip_mac/ip_addr_13" BEL "system/ip_mac/ip_addr_12" BEL
+        "system/ip_mac/ip_addr_9" BEL "system/ip_mac/ip_addr_11" BEL
+        "system/ip_mac/ip_addr_10" BEL "system/ip_mac/ip_addr_6" BEL
+        "system/ip_mac/ip_addr_8" BEL "system/ip_mac/ip_addr_7" BEL
+        "system/ip_mac/ip_addr_3" BEL "system/ip_mac/ip_addr_5" BEL
+        "system/ip_mac/ip_addr_4" BEL "system/ip_mac/ip_addr_2" BEL
+        "system/ip_mac/ip_addr_1" BEL "system/ip_mac/mac_addr_0" BEL
+        "system/ip_mac/ip_addr_0" BEL "system/spi/en.ssdelay_0" BEL
         "system/spi/en.ssdelay_1" BEL "system/spi/en.ssdelay_2" BEL
         "system/spi/en.ssdelay_3" BEL "system/spi/en.ssdelay_4" BEL
         "system/spi/en.ssdelay_5" BEL "system/spi/en.ssdelay_6" BEL
@@ -20074,10 +20032,8 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "system/i2c_s/regs_5_3" BEL "system/i2c_s/regs_5_2" BEL
         "system/i2c_s/regs_6_6" BEL "system/i2c_s/regs_5_0" BEL
         "system/i2c_s/regs_6_5" BEL "system/i2c_s/regs_6_4" BEL
-        "system/i2c_s/regs_6_1_C_1" BEL "system/i2c_s/regs_6_1_P_1" BEL
-        "system/i2c_s/regs_6_3_C_3" BEL "system/i2c_s/regs_6_3_P_3" BEL
-        "system/i2c_s/regs_6_2_C_2" BEL "system/i2c_s/regs_6_2_P_2" BEL
-        "system/i2c_s/regs_6_0_C_0" BEL "system/i2c_s/regs_6_0_P_0" BEL
+        "system/i2c_s/regs_6_1" BEL "system/i2c_s/regs_6_3" BEL
+        "system/i2c_s/regs_6_2" BEL "system/i2c_s/regs_6_0" BEL
         "system/i2c_s/regs_7_4" BEL "system/i2c_s/regs_7_6" BEL
         "system/i2c_s/regs_7_5" BEL "system/i2c_s/regs_7_3" BEL
         "system/i2c_s/regs_7_2" BEL "system/i2c_s/regs_7_1" BEL
@@ -20089,11 +20045,9 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "system/i2c_s/regs_9_4" BEL "system/i2c_s/regs_9_3" BEL
         "system/i2c_s/regs_9_0" BEL "system/i2c_s/regs_9_2" BEL
         "system/i2c_s/regs_9_1" BEL "system/i2c_s/regs_10_6" BEL
-        "system/i2c_s/regs_10_3_C_3" BEL "system/i2c_s/regs_10_3_P_3" BEL
-        "system/i2c_s/regs_10_5" BEL "system/i2c_s/regs_10_4" BEL
-        "system/i2c_s/regs_10_0_C_0" BEL "system/i2c_s/regs_10_0_P_0" BEL
-        "system/i2c_s/regs_10_2_C_2" BEL "system/i2c_s/regs_10_2_P_2" BEL
-        "system/i2c_s/regs_10_1_C_1" BEL "system/i2c_s/regs_10_1_P_1" BEL
+        "system/i2c_s/regs_10_3" BEL "system/i2c_s/regs_10_5" BEL
+        "system/i2c_s/regs_10_4" BEL "system/i2c_s/regs_10_0" BEL
+        "system/i2c_s/regs_10_2" BEL "system/i2c_s/regs_10_1" BEL
         "system/i2c_s/regs_1_7" BEL "system/i2c_s/regs_2_7" BEL
         "system/i2c_s/regs_3_7" BEL "system/i2c_s/regs_4_7" BEL
         "system/i2c_s/regs_5_7" BEL "system/i2c_s/regs_6_7" BEL
@@ -21200,12 +21154,71 @@ TIMEGRP system_glib_pll_clkout_31_25_a_0 = BEL
         "system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD_D1"
         BEL
         "system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD";
-PIN usr/amc13_inst/Inst_TTC_decoder/MMCM_BASE_inst_pins<2> = BEL
-        "usr/amc13_inst/Inst_TTC_decoder/MMCM_BASE_inst" PINNAME CLKIN1;
-TIMEGRP xpoint1_clk3_p = BEL "usr/amc13_inst/Inst_TTC_decoder/i_DCM_rst" PIN
-        "usr/amc13_inst/Inst_TTC_decoder/MMCM_BASE_inst_pins<2>";
-TIMEGRP xpoint1_clk3_n = BEL "usr/amc13_inst/Inst_TTC_decoder/i_DCM_rst" PIN
-        "usr/amc13_inst/Inst_TTC_decoder/MMCM_BASE_inst_pins<2>";
+PIN usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<1> = BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst" PINNAME CK;
+PIN usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<2> = BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst" PINNAME CKB;
+TIMEGRP usr_ttc_inst_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm = BEL
+        "usr/ttc_inst/l1_led_o" BEL "usr/ttc_inst/bc0_led_o" BEL
+        "usr/ttc_inst/i_0" BEL "usr/ttc_inst/i_1" BEL "usr/ttc_inst/i_2" BEL
+        "usr/ttc_inst/i_3" BEL "usr/ttc_inst/i_4" BEL "usr/ttc_inst/i_5" BEL
+        "usr/ttc_inst/i_6" BEL "usr/ttc_inst/i_7" BEL "usr/ttc_inst/i_8" BEL
+        "usr/ttc_inst/_i000012_0" BEL "usr/ttc_inst/_i000012_1" BEL
+        "usr/ttc_inst/_i000012_2" BEL "usr/ttc_inst/_i000012_3" BEL
+        "usr/ttc_inst/_i000012_4" BEL "usr/ttc_inst/_i000012_5" BEL
+        "usr/ttc_inst/_i000012_6" BEL "usr/ttc_inst/_i000012_7" BEL
+        "usr/ttc_inst/_i000012_8" BEL "usr/ttc_inst/_i000012_9" BEL
+        "usr/ttc_inst/_i000012_10" BEL "usr/ttc_inst/_i000012_11" BEL
+        "usr/ttc_inst/_i000012_12" BEL "usr/ttc_inst/_i000012_13" BEL
+        "usr/ttc_inst/_i000012_14" BEL "usr/ttc_inst/_i000012_15" BEL
+        "usr/ttc_inst/_i000012_16" BEL "usr/ttc_inst/_i000012_17" BEL
+        "usr/ttc_inst/_i000012_18" BEL "usr/ttc_inst/_i000012_19" BEL
+        "usr/ttc_inst/_i000012_20" BEL "usr/ttc_inst/_i000012_21" BEL
+        "usr/ttc_inst/_i000012_22" BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/TTC_lock_q" BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/L1A" BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/i_TTC_CLK_buf" BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/i_L1Accept" PIN
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<2>" PIN
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<2>" BEL
+        "usr/ttc_inst/clock_bridge_trigger_inst/strobe";
+TIMEGRP usr_ttc_inst_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0 = BEL
+        "usr/ttc_inst/l1_led_o" BEL "usr/ttc_inst/bc0_led_o" BEL
+        "usr/ttc_inst/i_0" BEL "usr/ttc_inst/i_1" BEL "usr/ttc_inst/i_2" BEL
+        "usr/ttc_inst/i_3" BEL "usr/ttc_inst/i_4" BEL "usr/ttc_inst/i_5" BEL
+        "usr/ttc_inst/i_6" BEL "usr/ttc_inst/i_7" BEL "usr/ttc_inst/i_8" BEL
+        "usr/ttc_inst/_i000012_0" BEL "usr/ttc_inst/_i000012_1" BEL
+        "usr/ttc_inst/_i000012_2" BEL "usr/ttc_inst/_i000012_3" BEL
+        "usr/ttc_inst/_i000012_4" BEL "usr/ttc_inst/_i000012_5" BEL
+        "usr/ttc_inst/_i000012_6" BEL "usr/ttc_inst/_i000012_7" BEL
+        "usr/ttc_inst/_i000012_8" BEL "usr/ttc_inst/_i000012_9" BEL
+        "usr/ttc_inst/_i000012_10" BEL "usr/ttc_inst/_i000012_11" BEL
+        "usr/ttc_inst/_i000012_12" BEL "usr/ttc_inst/_i000012_13" BEL
+        "usr/ttc_inst/_i000012_14" BEL "usr/ttc_inst/_i000012_15" BEL
+        "usr/ttc_inst/_i000012_16" BEL "usr/ttc_inst/_i000012_17" BEL
+        "usr/ttc_inst/_i000012_18" BEL "usr/ttc_inst/_i000012_19" BEL
+        "usr/ttc_inst/_i000012_20" BEL "usr/ttc_inst/_i000012_21" BEL
+        "usr/ttc_inst/_i000012_22" BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/TTC_lock_q" BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/L1A" BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/i_TTC_CLK_buf" BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/i_L1Accept" PIN
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<2>" PIN
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<1>" PIN
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst_pins<2>" BEL
+        "usr/ttc_inst/clock_bridge_trigger_inst/strobe";
+PIN usr/ttc_inst/amc13_inst/Inst_TTC_decoder/MMCM_BASE_inst_pins<2> = BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/MMCM_BASE_inst" PINNAME
+        CLKIN1;
+TIMEGRP xpoint1_clk3_p = BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/i_DCM_rst" PIN
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/MMCM_BASE_inst_pins<2>";
+TIMEGRP xpoint1_clk3_n = BEL
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/i_DCM_rst" PIN
+        "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/MMCM_BASE_inst_pins<2>";
 PIN
         system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/gtxe1_i_pins<73>
         = BEL
@@ -23222,14 +23235,6 @@ TIMEGRP system_glib_pll_clkout_31_25_b_0 = BEL
         "system/sram1_if/sramInterface/control_process.idleState" BEL
         "system/sram1_if/sramInterface/control_process.done" PIN
         "system/buffers/sramClockInverter_generate[1].sramClockInverter_pins<1>";
-TIMEGRP TO_systemip_macmac_addr_3_LDC = BEL "system/ip_mac/mac_addr_3_LDC";
-TIMEGRP TO_systemip_macmac_addr_2_LDC = BEL "system/ip_mac/mac_addr_2_LDC";
-TIMEGRP TO_systemip_macmac_addr_1_LDC = BEL "system/ip_mac/mac_addr_1_LDC";
-TIMEGRP TO_systemip_macip_addr_3_LDC = BEL "system/ip_mac/ip_addr_3_LDC";
-TIMEGRP TO_systemip_macip_addr_2_LDC = BEL "system/ip_mac/ip_addr_2_LDC";
-TIMEGRP TO_systemip_macip_addr_1_LDC = BEL "system/ip_mac/ip_addr_1_LDC";
-TIMEGRP TO_systemip_macmac_addr_0_LDC = BEL "system/ip_mac/mac_addr_0_LDC";
-TIMEGRP TO_systemip_macip_addr_0_LDC = BEL "system/ip_mac/ip_addr_0_LDC";
 PIN
         system/amc_p0_en.amc_p0_eth/basex/v6_gtxwizard_top_inst/v6_gtxwizard_inst/gtx0_v6_gtxwizard_i/gtxe1_i_pins<152>
         = BEL
@@ -35260,18 +35265,9 @@ TIMEGRP system_gbt_phase_monitoring_ttclk_pll_clkout0_0 = BEL
         "system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD_D1"
         BEL
         "system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RAMD";
-TIMEGRP TO_systemi2c_sregs_6_1_LDC = BEL "system/i2c_s/regs_6_1_LDC";
-TIMEGRP TO_systemi2c_sregs_6_3_LDC = BEL "system/i2c_s/regs_6_3_LDC";
-TIMEGRP TO_systemi2c_sregs_6_2_LDC = BEL "system/i2c_s/regs_6_2_LDC";
-TIMEGRP TO_systemi2c_sregs_6_0_LDC = BEL "system/i2c_s/regs_6_0_LDC";
-TIMEGRP TO_systemi2c_sregs_10_3_LDC = BEL "system/i2c_s/regs_10_3_LDC";
-TIMEGRP TO_systemi2c_sregs_10_0_LDC = BEL "system/i2c_s/regs_10_0_LDC";
-TIMEGRP TO_systemi2c_sregs_10_2_LDC = BEL "system/i2c_s/regs_10_2_LDC";
-TIMEGRP TO_systemi2c_sregs_10_1_LDC = BEL "system/i2c_s/regs_10_1_LDC";
-TS_xpoint1_clk3_p = PERIOD TIMEGRP "xpoint1_clk3_p" 24.95 ns HIGH 50%
-        INPUT_JITTER 0.1 ns;
-TS_xpoint1_clk3_n = PERIOD TIMEGRP "xpoint1_clk3_n" TS_xpoint1_clk3_p PHASE
-        12.475 ns HIGH 50%;
+TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
+TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
+TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
 TS_clk125_2_p = PERIOD TIMEGRP "clk125_2_p" 8 ns HIGH 50%;
 TS_clk125_2_n = PERIOD TIMEGRP "clk125_2_n" TS_clk125_2_p PHASE 4 ns HIGH 50%;
 TS_system_phy_en_phy_eth_clk125_out = PERIOD TIMEGRP
@@ -35281,15 +35277,10 @@ TS_system_amc_p0_en_amc_p0_eth_clk125_out = PERIOD TIMEGRP
 TS_xpoint1_clk1_p = PERIOD TIMEGRP "xpoint1_clk1_p" 25 ns HIGH 50%;
 TS_xpoint1_clk1_n = PERIOD TIMEGRP "xpoint1_clk1_n" TS_xpoint1_clk1_p PHASE
         12.5 ns HIGH 50%;
-TS_gtx_clk = PERIOD TIMEGRP "gtx_clk" 6.25 ns HIGH 50%;
-TS_gtx0_tx_out_clk = PERIOD TIMEGRP "gtx0_tx_out_clk" 6.25 ns HIGH 50%;
-TS_usr_gtx_clk = PERIOD TIMEGRP "usr_gtx_clk" 6.25 ns HIGH 50%;
-TS_usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm = PERIOD TIMEGRP
-        "usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm" TS_xpoint1_clk3_p PHASE
-        10.7285 ns HIGH 50% INPUT_JITTER 0.1 ns;
-TS_usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0 = PERIOD TIMEGRP
-        "usr_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0" TS_xpoint1_clk3_n
-        PHASE 10.7285 ns HIGH 50%;
+TS_xpoint1_clk3_p = PERIOD TIMEGRP "xpoint1_clk3_p" 24.95 ns HIGH 50%
+        INPUT_JITTER 0.1 ns;
+TS_xpoint1_clk3_n = PERIOD TIMEGRP "xpoint1_clk3_n" TS_xpoint1_clk3_p PHASE
+        12.475 ns HIGH 50%;
 TS_system_glib_pll_clkout_31_25_c = PERIOD TIMEGRP
         "system_glib_pll_clkout_31_25_c" TS_clk125_2_p / 0.25 HIGH 50%;
 TS_system_glib_pll_clkout_31_25_a = PERIOD TIMEGRP
@@ -35308,56 +35299,14 @@ TS_system_gbt_phase_monitoring_ttclk_pll_clkout0 = PERIOD TIMEGRP
 TS_system_gbt_phase_monitoring_ttclk_pll_clkout0_0 = PERIOD TIMEGRP
         "system_gbt_phase_monitoring_ttclk_pll_clkout0_0" TS_xpoint1_clk1_n /
         6 PHASE 2.08333333 ns HIGH 50%;
-TS_TO_systemip_macmac_addr_3_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemip_macmac_addr_3_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemip_macmac_addr_2_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemip_macmac_addr_2_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemip_macmac_addr_1_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemip_macmac_addr_1_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemip_macip_addr_3_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemip_macip_addr_3_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemip_macip_addr_2_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemip_macip_addr_2_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemip_macip_addr_1_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemip_macip_addr_1_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemip_macmac_addr_0_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemip_macmac_addr_0_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemip_macip_addr_0_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemip_macip_addr_0_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
+TS_usr_ttc_inst_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm = PERIOD TIMEGRP
+        "usr_ttc_inst_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm"
+        TS_xpoint1_clk3_p PHASE 10.7285 ns HIGH 50% INPUT_JITTER 0.1 ns;
+TS_usr_ttc_inst_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0 = PERIOD TIMEGRP
+        "usr_ttc_inst_amc13_inst_Inst_TTC_decoder_TTC_CLK_dcm_0"
+        TS_xpoint1_clk3_n PHASE 10.7285 ns HIGH 50%;
 TS_TO_systemspisck_LDC = MAXDELAY TO TIMEGRP "TO_systemspisck_LDC"
         TS_system_glib_pll_clkout_31_25_a DATAPATHONLY;
-TS_TO_systemi2c_sregs_6_1_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemi2c_sregs_6_1_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemi2c_sregs_6_3_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemi2c_sregs_6_3_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemi2c_sregs_6_2_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemi2c_sregs_6_2_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemi2c_sregs_6_0_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemi2c_sregs_6_0_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemi2c_sregs_10_3_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemi2c_sregs_10_3_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemi2c_sregs_10_0_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemi2c_sregs_10_0_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemi2c_sregs_10_2_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemi2c_sregs_10_2_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
-TS_TO_systemi2c_sregs_10_1_LDC = MAXDELAY TO TIMEGRP
-        "TO_systemi2c_sregs_10_1_LDC" TS_system_glib_pll_clkout_31_25_a
-        DATAPATHONLY;
 PIN system/rst/rst_pins<3> = BEL "system/rst/rst" PINNAME Q;
 PIN system/rst/nuke_i_pins<2> = BEL "system/rst/nuke_i" PINNAME Q;
 PIN system/rst/rst_fabric_o_pins<3> = BEL "system/rst/rst_fabric_o" PINNAME Q;

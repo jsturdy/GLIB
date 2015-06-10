@@ -254,7 +254,7 @@ begin
     
     -- Firmware date : 10
     
-    request_read(10) <= x"AA150422";
+    request_read(10) <= request_read_i(2); -- Mapped for backwards compatibility
     
     -- Tracking fifo : 12 downto 11
     

@@ -9,23 +9,23 @@ Target Device  : xc6vlx130t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Thu Apr 23 11:48:13 2015
+Mapped Date    : Wed Jun 10 11:22:38 2015
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  477
+Number of warnings:  463
 Slice Logic Utilization:
-  Number of Slice Registers:                15,588 out of 160,000    9%
-    Number used as Flip Flops:              15,440
-    Number used as Latches:                    148
+  Number of Slice Registers:                15,627 out of 160,000    9%
+    Number used as Flip Flops:              15,431
+    Number used as Latches:                    196
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                     12,785 out of  80,000   15%
-    Number used as logic:                   12,102 out of  80,000   15%
-      Number using O6 output only:           8,108
-      Number using O5 output only:             932
-      Number using O5 and O6:                3,062
+  Number of Slice LUTs:                     12,849 out of  80,000   16%
+    Number used as logic:                   12,180 out of  80,000   15%
+      Number using O6 output only:           8,264
+      Number using O5 output only:             933
+      Number using O5 and O6:                2,983
       Number used as ROM:                        0
     Number used as Memory:                      55 out of  27,840    1%
       Number used as Dual Port RAM:              0
@@ -37,20 +37,20 @@ Slice Logic Utilization:
         Number using O6 output only:             7
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    628
-      Number with same-slice register load:    582
-      Number with same-slice carry load:        46
+    Number used exclusively as route-thrus:    614
+      Number with same-slice register load:    567
+      Number with same-slice carry load:        47
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 5,487 out of  20,000   27%
-  Number of LUT Flip Flop pairs used:       17,513
-    Number with an unused Flip Flop:         4,219 out of  17,513   24%
-    Number with an unused LUT:               4,728 out of  17,513   26%
-    Number of fully used LUT-FF pairs:       8,566 out of  17,513   48%
-    Number of unique control sets:             598
+  Number of occupied Slices:                 5,505 out of  20,000   27%
+  Number of LUT Flip Flop pairs used:       17,648
+    Number with an unused Flip Flop:         4,262 out of  17,648   24%
+    Number with an unused LUT:               4,799 out of  17,648   27%
+    Number of fully used LUT-FF pairs:       8,587 out of  17,648   48%
+    Number of unique control sets:             553
     Number of slice register sites lost
-      to control set restrictions:           1,735 out of 160,000    1%
+      to control set restrictions:           1,408 out of 160,000    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -110,11 +110,11 @@ Specific Feature Utilization:
   Number of TEMAC_SINGLEs:                       2 out of       4   50%
 
   Number of RPM macros:            6
-Average Fanout of Non-Clock Nets:                3.87
+Average Fanout of Non-Clock Nets:                3.88
 
-Peak Memory Usage:  1050 MB
-Total REAL time to MAP completion:  5 mins 33 secs 
-Total CPU time to MAP completion (all processors):   5 mins 42 secs 
+Peak Memory Usage:  1033 MB
+Total REAL time to MAP completion:  5 mins 18 secs 
+Total CPU time to MAP completion (all processors):   5 mins 32 secs 
 
 Table of Contents
 -----------------
@@ -1280,62 +1280,20 @@ WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
 WARNING:Place - MMCM comp system/pll/mmcm_adv_inst is driving load
    system/sram2_if/sramInterfaceIoControl/ack_process.ack_ctrl_FSM_FFd3 (type FF)
    The load component should be of clock buffer type.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][0]_AND_837_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][1]_AND_835_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][2]_AND_833_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[10][3]_AND_831_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[1]_AND_177_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[1]_AND_113_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[2]_AND_175_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[2]_AND_111_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][2]_AND_769_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   usr/link_tracking_0_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129> is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<129> is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    usr/link_tracking_0_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13> is sourced by a combinatorial pin. This
    is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    usr/link_tracking_1_inst/ipb_info_inst/register_select[7]_Decoder_2_OUT<13> is sourced by a combinatorial pin. This
    is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[3]_AND_173_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[0]_AND_115_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][0]_AND_773_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_mac_addr_i[3]_AND_109_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][3]_AND_767_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net system/spi/reset_i_cpol_i_AND_934_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/ip_mac/reset_i_user_ip_addr_i[0]_AND_179_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net system/i2c_s/reset_regs_i[6][1]_AND_771_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_RA
    MC_D1_O> is incomplete. The signal does not drive any load pins in the design.
@@ -1349,38 +1307,38 @@ WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
+   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_R
    AMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
+   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram3
    _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/fmc1_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1
-   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/ctrl_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram2_RA
-   MD_D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <system/gbt_phase_monitoring/sfp_cdce_pm/status_dpram/U0/xst_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/Mram_ram1_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
-   block:<usr/amc13_inst/Inst_TTC_decoder/IDDR_inst>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is
-   not used.
+   block:<usr/ttc_inst/amc13_inst/Inst_TTC_decoder/IDDR_inst>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin
+   of IFF is not used.
 
 Section 3 - Informational
 -------------------------
@@ -1389,7 +1347,7 @@ INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    machine load, Map will use 2 processors during this run.
 INFO:Security:56 - Part 'xc6vlx130t' is not a WebPack part.
 INFO:LIT:243 - Logical network user_ipb_miso[0]_ipb_err has no load.
-INFO:LIT:395 - The above info message is repeated 13636 more times for the
+INFO:LIT:395 - The above info message is repeated 13568 more times for the
    following (max. 5 shown):
    user_ipb_miso[1]_ipb_err,
    user_ipb_miso[2]_ipb_err,
@@ -1414,7 +1372,7 @@ INFO:Pack:1650 - Map created a placed design.
 Section 4 - Removed Logic Summary
 ---------------------------------
 1178 block(s) removed
- 284 block(s) optimized away
+ 281 block(s) optimized away
 1283 signal(s) removed
 
 Section 5 - Removed Logic
@@ -1430,191 +1388,224 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
-Loadless block "usr/amc13_inst/Inst_TTC_decoder/i_brcst_str3" (SRL16E) removed.
- The signal "usr/amc13_inst/Inst_TTC_decoder/brcst_str_2" is loadless and has
-been removed.
-  Loadless block "usr/amc13_inst/Inst_TTC_decoder/brcst_str_2" (FF) removed.
-   The signal "usr/amc13_inst/Inst_TTC_decoder/brcst_str[1]_double_err_AND_1508_o"
-is loadless and has been removed.
+Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/i_brcst_str3" (SRL16E)
+removed.
+ The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_str_2" is loadless
+and has been removed.
+  Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_str_2" (FF)
+removed.
+   The signal
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_str[1]_double_err_AND_1508_o" is
+loadless and has been removed.
     Loadless block
-"usr/amc13_inst/Inst_TTC_decoder/brcst_str[1]_double_err_AND_1508_o1" (ROM)
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_str[1]_double_err_AND_1508_o1"
+(ROM) removed.
+     The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/double_err" is loadless and
+has been removed.
+      Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/double_err" (FF)
 removed.
-     The signal "usr/amc13_inst/Inst_TTC_decoder/double_err" is loadless and has been
-removed.
-      Loadless block "usr/amc13_inst/Inst_TTC_decoder/double_err" (FF) removed.
-       The signal "usr/amc13_inst/Inst_TTC_decoder/brcst_syn[4]_frame_err_OR_1336_o" is
+       The signal
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn[4]_frame_err_OR_1593_o" is
 loadless and has been removed.
         Loadless block
-"usr/amc13_inst/Inst_TTC_decoder/brcst_syn[4]_frame_err_OR_1336_o11" (ROM)
-removed.
-         The signal "usr/amc13_inst/Inst_TTC_decoder/frame_err" is loadless and has been
-removed.
-          Loadless block "usr/amc13_inst/Inst_TTC_decoder/frame_err" (FF) removed.
-           The signal "usr/amc13_inst/Inst_TTC_decoder/FMT_rec_cntr[3]_AND_1503_o" is
-loadless and has been removed.
-            Loadless block "usr/amc13_inst/Inst_TTC_decoder/FMT_rec_cntr[3]_AND_1503_o1"
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn[4]_frame_err_OR_1593_o11"
 (ROM) removed.
-             The signal "usr/amc13_inst/Inst_TTC_decoder/FMT" is loadless and has been
+         The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/frame_err" is loadless and
+has been removed.
+          Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/frame_err" (FF)
 removed.
-              Loadless block "usr/amc13_inst/Inst_TTC_decoder/FMT" (FF) removed.
-               The signal "usr/amc13_inst/Inst_TTC_decoder/FMT_rstpot" is loadless and has been
+           The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/FMT_rec_cntr[3]_AND_1503_o"
+is loadless and has been removed.
+            Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/FMT_rec_cntr[3]_AND_1503_o1" (ROM)
 removed.
-                Loadless block "usr/amc13_inst/Inst_TTC_decoder/FMT_rstpot" (ROM) removed.
-                 The signal "usr/amc13_inst/Inst_TTC_decoder/rec_cntr[5]_reduce_or_6_o_inv" is
+             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/FMT" is loadless and has
+been removed.
+              Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/FMT" (FF) removed.
+               The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/FMT_rstpot" is loadless and
+has been removed.
+                Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/FMT_rstpot" (ROM)
+removed.
+                 The signal
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr[5]_reduce_or_6_o_inv" is
 loadless and has been removed.
-                  Loadless block "usr/amc13_inst/Inst_TTC_decoder/rec_cntr[5]_reduce_or_6_o_inv1"
-(ROM) removed.
-                   The signal "usr/amc13_inst/Inst_TTC_decoder/rec_cntr<5>" is loadless and has
-been removed.
-                    Loadless block "usr/amc13_inst/Inst_TTC_decoder/rec_cntr_5" (SFF) removed.
-                     The signal "usr/amc13_inst/Inst_TTC_decoder/Result<5>" is loadless and has been
+                  Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr[5]_reduce_or_6_o_inv1" (ROM)
 removed.
-                      Loadless block "usr/amc13_inst/Inst_TTC_decoder/Result<5>1" (ROM) removed.
-                       The signal "usr/amc13_inst/Inst_TTC_decoder/rec_cntr<3>" is loadless and has
-been removed.
-                        Loadless block "usr/amc13_inst/Inst_TTC_decoder/rec_cntr_3" (SFF) removed.
-                         The signal "usr/amc13_inst/Inst_TTC_decoder/Result<3>" is loadless and has been
+                   The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr<5>" is loadless
+and has been removed.
+                    Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr_5" (SFF)
 removed.
-                          Loadless block "usr/amc13_inst/Inst_TTC_decoder/Result<3>1" (ROM) removed.
-                           The signal "usr/amc13_inst/Inst_TTC_decoder/rec_cntr<0>" is loadless and has
-been removed.
-                            Loadless block "usr/amc13_inst/Inst_TTC_decoder/rec_cntr_0" (SFF) removed.
-                             The signal "usr/amc13_inst/Inst_TTC_decoder/Result<0>" is loadless and has been
+                     The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Result<5>" is loadless and
+has been removed.
+                      Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Result<5>1" (ROM)
 removed.
-                              Loadless block "usr/amc13_inst/Inst_TTC_decoder/Mcount_rec_cntr_xor<0>11_INV_0"
+                       The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr<3>" is loadless
+and has been removed.
+                        Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr_3" (SFF)
+removed.
+                         The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Result<3>" is loadless and
+has been removed.
+                          Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Result<3>1" (ROM)
+removed.
+                           The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr<0>" is loadless
+and has been removed.
+                            Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr_0" (SFF)
+removed.
+                             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Result<0>" is loadless and
+has been removed.
+                              Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Mcount_rec_cntr_xor<0>11_INV_0" (BUF)
+removed.
+                             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cmd_inv" is loadless
+and has been removed.
+                              Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cmd_inv1_INV_0"
 (BUF) removed.
-                             The signal "usr/amc13_inst/Inst_TTC_decoder/rec_cmd_inv" is loadless and has
+                               The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cmd" is loadless and
+has been removed.
+                                Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cmd" (FF) removed.
+                                 The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cmd_rstpot" is loadless
+and has been removed.
+                                  Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cmd_rstpot" (ROM)
+removed.
+                                   The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/N2" is loadless and has
 been removed.
-                              Loadless block "usr/amc13_inst/Inst_TTC_decoder/rec_cmd_inv1_INV_0" (BUF)
-removed.
-                               The signal "usr/amc13_inst/Inst_TTC_decoder/rec_cmd" is loadless and has been
-removed.
-                                Loadless block "usr/amc13_inst/Inst_TTC_decoder/rec_cmd" (FF) removed.
-                                 The signal "usr/amc13_inst/Inst_TTC_decoder/rec_cmd_rstpot" is loadless and has
-been removed.
-                                  Loadless block "usr/amc13_inst/Inst_TTC_decoder/rec_cmd_rstpot" (ROM) removed.
-                                   The signal "usr/amc13_inst/Inst_TTC_decoder/N2" is loadless and has been
-removed.
-                                    Loadless block "usr/amc13_inst/Inst_TTC_decoder/rec_cmd_rstpot_SW0" (ROM)
-removed.
-                                     The signal "usr/amc13_inst/Inst_TTC_decoder/TTC_data<1>" is loadless and has
-been removed.
-                                   The signal "usr/amc13_inst/Inst_TTC_decoder/N01" is loadless and has been
-removed.
-                                    Loadless block "usr/amc13_inst/Inst_TTC_decoder/TTC_lock_q_FMT_OR_1330_o_SW0"
+                                    Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cmd_rstpot_SW0"
 (ROM) removed.
-                                     The signal "usr/amc13_inst/Inst_TTC_decoder/rec_cntr<1>" is loadless and has
-been removed.
-                                      Loadless block "usr/amc13_inst/Inst_TTC_decoder/rec_cntr_1" (SFF) removed.
-                                       The signal "usr/amc13_inst/Inst_TTC_decoder/Result<1>" is loadless and has been
-removed.
-                                        Loadless block "usr/amc13_inst/Inst_TTC_decoder/Mcount_rec_cntr_xor<1>11" (ROM)
-removed.
-                                   The signal "usr/amc13_inst/Inst_TTC_decoder/rec_cntr<4>" is loadless and has
-been removed.
-                                    Loadless block "usr/amc13_inst/Inst_TTC_decoder/rec_cntr_4" (SFF) removed.
-                                     The signal "usr/amc13_inst/Inst_TTC_decoder/Result<4>" is loadless and has been
-removed.
-                                      Loadless block "usr/amc13_inst/Inst_TTC_decoder/Result<4>1" (ROM) removed.
-                                       The signal "usr/amc13_inst/Inst_TTC_decoder/rec_cntr<2>" is loadless and has
-been removed.
-                                        Loadless block "usr/amc13_inst/Inst_TTC_decoder/rec_cntr_2" (SFF) removed.
-                                         The signal "usr/amc13_inst/Inst_TTC_decoder/Result<2>" is loadless and has been
-removed.
-                                          Loadless block "usr/amc13_inst/Inst_TTC_decoder/Mcount_rec_cntr_xor<2>11" (ROM)
-removed.
-           The signal "usr/amc13_inst/Inst_TTC_decoder/TTC_data<1>_inv" is loadless and has
-been removed.
-            Loadless block "usr/amc13_inst/Inst_TTC_decoder/TTC_data<1>_inv1_INV_0" (BUF)
-removed.
-         The signal "usr/amc13_inst/Inst_TTC_decoder/brcst_syn<0>" is loadless and has
-been removed.
-          Loadless block "usr/amc13_inst/Inst_TTC_decoder/brcst_syn_0" (FF) removed.
-           The signal "usr/amc13_inst/Inst_TTC_decoder/sr[0]_sr[8]_XOR_445_o" is loadless
+                                     The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/TTC_data<1>" is loadless
 and has been removed.
-            Loadless block
-"usr/amc13_inst/Inst_TTC_decoder/Mxor_sr[0]_sr[8]_XOR_445_o_xo<0>1" (ROM)
-removed.
-             The signal "usr/amc13_inst/Inst_TTC_decoder/sr<0>" is loadless and has been
-removed.
-              Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_0" (FF) removed.
-             The signal "usr/amc13_inst/Inst_TTC_decoder/sr<5>" is loadless and has been
-removed.
-              Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_5" (FF) removed.
-               The signal "usr/amc13_inst/Inst_TTC_decoder/sr<4>" is loadless and has been
-removed.
-                Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_4" (FF) removed.
-                 The signal "usr/amc13_inst/Inst_TTC_decoder/sr<3>" is loadless and has been
-removed.
-                  Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_3" (FF) removed.
-                   The signal "usr/amc13_inst/Inst_TTC_decoder/sr<2>" is loadless and has been
-removed.
-                    Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_2" (FF) removed.
-                     The signal "usr/amc13_inst/Inst_TTC_decoder/sr<1>" is loadless and has been
-removed.
-                      Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_1" (FF) removed.
-             The signal "usr/amc13_inst/Inst_TTC_decoder/sr<6>" is loadless and has been
-removed.
-              Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_6" (FF) removed.
-             The signal "usr/amc13_inst/Inst_TTC_decoder/sr<7>" is loadless and has been
-removed.
-              Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_7" (FF) removed.
-             The signal "usr/amc13_inst/Inst_TTC_decoder/sr<8>" is loadless and has been
-removed.
-              Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_8" (FF) removed.
-         The signal "usr/amc13_inst/Inst_TTC_decoder/brcst_syn<1>" is loadless and has
+                                   The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/N01" is loadless and has
 been removed.
-          Loadless block "usr/amc13_inst/Inst_TTC_decoder/brcst_syn_1" (FF) removed.
-           The signal "usr/amc13_inst/Inst_TTC_decoder/sr[1]_sr[11]_XOR_449_o" is loadless
+                                    Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/TTC_lock_q_FMT_OR_1587_o_SW0" (ROM)
+removed.
+                                     The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr<1>" is loadless
 and has been removed.
-            Loadless block
-"usr/amc13_inst/Inst_TTC_decoder/Mxor_sr[1]_sr[11]_XOR_449_o_xo<0>1" (ROM)
+                                      Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr_1" (SFF)
 removed.
-             The signal "usr/amc13_inst/Inst_TTC_decoder/sr<10>" is loadless and has been
+                                       The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Result<1>" is loadless and
+has been removed.
+                                        Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Mcount_rec_cntr_xor<1>11" (ROM)
 removed.
-              Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_10" (FF) removed.
-               The signal "usr/amc13_inst/Inst_TTC_decoder/sr<9>" is loadless and has been
-removed.
-                Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_9" (FF) removed.
-             The signal "usr/amc13_inst/Inst_TTC_decoder/sr<11>" is loadless and has been
-removed.
-              Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_11" (FF) removed.
-         The signal "usr/amc13_inst/Inst_TTC_decoder/brcst_syn<2>" is loadless and has
-been removed.
-          Loadless block "usr/amc13_inst/Inst_TTC_decoder/brcst_syn_2" (FF) removed.
-           The signal "usr/amc13_inst/Inst_TTC_decoder/sr[2]_sr[12]_XOR_454_o" is loadless
+                                   The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr<4>" is loadless
 and has been removed.
-            Loadless block
-"usr/amc13_inst/Inst_TTC_decoder/Mxor_sr[2]_sr[12]_XOR_454_o_xo<0>1" (ROM)
+                                    Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr_4" (SFF)
 removed.
-             The signal "usr/amc13_inst/Inst_TTC_decoder/sr<12>" is loadless and has been
+                                     The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Result<4>" is loadless and
+has been removed.
+                                      Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Result<4>1" (ROM)
 removed.
-              Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr_12" (FF) removed.
-         The signal "usr/amc13_inst/Inst_TTC_decoder/brcst_syn<3>" is loadless and has
-been removed.
-          Loadless block "usr/amc13_inst/Inst_TTC_decoder/brcst_syn_3" (FF) removed.
-           The signal "usr/amc13_inst/Inst_TTC_decoder/sr[3]_sr[12]_XOR_459_o" is loadless
+                                       The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr<2>" is loadless
 and has been removed.
-            Loadless block
-"usr/amc13_inst/Inst_TTC_decoder/Mxor_sr[3]_sr[12]_XOR_459_o_xo<0>1" (ROM)
+                                        Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/rec_cntr_2" (SFF)
 removed.
-         The signal "usr/amc13_inst/Inst_TTC_decoder/brcst_syn<4>" is loadless and has
-been removed.
-          Loadless block "usr/amc13_inst/Inst_TTC_decoder/brcst_syn_4" (FF) removed.
-           The signal "usr/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_8_o" is loadless
-and has been removed.
-            Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>3"
-(ROM) removed.
-             The signal "usr/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>1" is
+                                         The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Result<2>" is loadless and
+has been removed.
+                                          Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Mcount_rec_cntr_xor<2>11" (ROM)
+removed.
+           The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/TTC_data<1>_inv" is
 loadless and has been removed.
-              Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>2"
-(ROM) removed.
-             The signal "usr/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>" is
+            Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/TTC_data<1>_inv1_INV_0"
+(BUF) removed.
+         The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn<0>" is loadless
+and has been removed.
+          Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn_0" (FF)
+removed.
+           The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr[0]_sr[8]_XOR_445_o" is
 loadless and has been removed.
-              Loadless block "usr/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>1"
+            Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Mxor_sr[0]_sr[8]_XOR_445_o_xo<0>1"
 (ROM) removed.
-     The signal "usr/amc13_inst/Inst_TTC_decoder/brcst_str<1>" is loadless and has
+             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<0>" is loadless and has
 been removed.
+              Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_0" (FF) removed.
+             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<5>" is loadless and has
+been removed.
+              Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_5" (FF) removed.
+               The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<4>" is loadless and has
+been removed.
+                Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_4" (FF) removed.
+                 The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<3>" is loadless and has
+been removed.
+                  Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_3" (FF) removed.
+                   The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<2>" is loadless and has
+been removed.
+                    Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_2" (FF) removed.
+                     The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<1>" is loadless and has
+been removed.
+                      Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_1" (FF) removed.
+             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<6>" is loadless and has
+been removed.
+              Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_6" (FF) removed.
+             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<7>" is loadless and has
+been removed.
+              Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_7" (FF) removed.
+             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<8>" is loadless and has
+been removed.
+              Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_8" (FF) removed.
+         The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn<1>" is loadless
+and has been removed.
+          Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn_1" (FF)
+removed.
+           The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr[1]_sr[11]_XOR_449_o" is
+loadless and has been removed.
+            Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Mxor_sr[1]_sr[11]_XOR_449_o_xo<0>1"
+(ROM) removed.
+             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<10>" is loadless and has
+been removed.
+              Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_10" (FF) removed.
+               The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<9>" is loadless and has
+been removed.
+                Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_9" (FF) removed.
+             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<11>" is loadless and has
+been removed.
+              Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_11" (FF) removed.
+         The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn<2>" is loadless
+and has been removed.
+          Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn_2" (FF)
+removed.
+           The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr[2]_sr[12]_XOR_454_o" is
+loadless and has been removed.
+            Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Mxor_sr[2]_sr[12]_XOR_454_o_xo<0>1"
+(ROM) removed.
+             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr<12>" is loadless and has
+been removed.
+              Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr_12" (FF) removed.
+         The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn<3>" is loadless
+and has been removed.
+          Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn_3" (FF)
+removed.
+           The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr[3]_sr[12]_XOR_459_o" is
+loadless and has been removed.
+            Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/Mxor_sr[3]_sr[12]_XOR_459_o_xo<0>1"
+(ROM) removed.
+         The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn<4>" is loadless
+and has been removed.
+          Loadless block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_syn_4" (FF)
+removed.
+           The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_8_o" is
+loadless and has been removed.
+            Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>3" (ROM)
+removed.
+             The signal
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>1" is
+loadless and has been removed.
+              Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>2" (ROM)
+removed.
+             The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>"
+is loadless and has been removed.
+              Loadless block
+"usr/ttc_inst/amc13_inst/Inst_TTC_decoder/sr[12]_reduce_xor_81_xo<0>1" (ROM)
+removed.
+     The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_str<1>" is loadless
+and has been removed.
 The signal "fmc1_la_p<0>" is sourceless and has been removed.
  Sourceless block "fmc1_la_p<0>" (PAD) removed.
 The signal "fmc1_la_p<1>" is sourceless and has been removed.
@@ -2935,8 +2926,8 @@ The signal
 "usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_gener
 ator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" is
 sourceless and has been removed.
-The signal "usr/amc13_inst/Inst_TTC_decoder/brcst_str_0" is sourceless and has
-been removed.
+The signal "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_str_0" is sourceless
+and has been removed.
 The signal "system/sram_w[1]_oe_b" is sourceless and has been removed.
 The signal "system/ipb_from_slaves[5]_ipb_err" is sourceless and has been
 removed.
@@ -5491,8 +5482,6 @@ Unused block
 removed.
 Unused block "system/wb_bridge/GND_365_o_GND_365_o_OR_1066_o1" (ROM) removed.
 Unused block "system/wb_bridge/XST_GND" (ZERO) removed.
-Unused block "usr/amc13_inst/Inst_TTC_decoder/brcst_str_0" (FF) removed.
-Unused block "usr/amc13_inst/Inst_TTC_decoder/i_brcst_str1" (SRL16E) removed.
 Unused block "usr/fmc1_la_p_0_OBUFT" (TRI) removed.
 Unused block "usr/fmc1_la_p_11_OBUFT" (TRI) removed.
 Unused block "usr/fmc1_la_p_12_OBUFT" (TRI) removed.
@@ -5541,6 +5530,10 @@ generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i"
 Unused block
 "usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/U0/xst_fifo_gener
 ator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i" (FF)
+removed.
+Unused block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/brcst_str_0" (FF)
+removed.
+Unused block "usr/ttc_inst/amc13_inst/Inst_TTC_decoder/i_brcst_str1" (SRL16E)
 removed.
 
 Optimized Block(s):
@@ -5769,9 +5762,7 @@ GND 		system/gbt_phase_monitoring/ttclk_pll/XST_GND
 VCC 		system/gbt_phase_monitoring/ttclk_pll/XST_VCC
 GND 		system/hb/XST_GND
 VCC 		system/hb/XST_VCC
-VCC 		system/i2c_s/XST_VCC
 GND 		system/ip_mac/XST_GND
-VCC 		system/ip_mac/XST_VCC
 VCC 		system/mst.i2c_m/XST_VCC
 VCC 		system/mst.i2c_m/u1/XST_VCC
 GND 		system/mst.i2c_m/u2/XST_GND
@@ -5996,8 +5987,6 @@ GND 		system/sram2_if/sramInterfaceIoControl/XST_GND
 VCC 		system/sram2_if/sramInterfaceIoControl/XST_VCC
 GND 		usr/XST_GND
 VCC 		usr/XST_VCC
-GND 		usr/amc13_inst/Inst_TTC_decoder/XST_GND
-VCC 		usr/amc13_inst/Inst_TTC_decoder/XST_VCC
 GND 		usr/gtx_wrapper_inst/XST_GND
 VCC 		usr/gtx_wrapper_inst/XST_VCC
 GND 		usr/gtx_wrapper_inst/gtx_0_inst/XST_GND
@@ -6009,7 +5998,6 @@ VCC 		usr/gtx_wrapper_inst/gtx_2_inst/XST_VCC
 GND 		usr/gtx_wrapper_inst/gtx_3_inst/XST_GND
 VCC 		usr/gtx_wrapper_inst/gtx_3_inst/XST_VCC
 GND 		usr/link_tracking_0_inst/XST_GND
-VCC 		usr/link_tracking_0_inst/XST_VCC
 GND 		usr/link_tracking_0_inst/gtx_tx_mux_inst/XST_GND
 VCC 		usr/link_tracking_0_inst/gtx_tx_mux_inst/XST_VCC
 GND 		usr/link_tracking_0_inst/ipb_info_inst/XST_GND
@@ -6034,7 +6022,6 @@ VCC 		usr/link_tracking_0_inst/vi2c_rx_counter_inst/XST_VCC
 GND 		usr/link_tracking_0_inst/vi2c_tx_counter_inst/XST_GND
 VCC 		usr/link_tracking_0_inst/vi2c_tx_counter_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/XST_GND
-VCC 		usr/link_tracking_1_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/gtx_tx_mux_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/gtx_tx_mux_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/ipb_info_inst/XST_GND
@@ -6059,7 +6046,6 @@ VCC 		usr/link_tracking_1_inst/vi2c_rx_counter_inst/XST_VCC
 GND 		usr/link_tracking_1_inst/vi2c_tx_counter_inst/XST_GND
 VCC 		usr/link_tracking_1_inst/vi2c_tx_counter_inst/XST_VCC
 GND 		usr/link_tracking_2_inst/XST_GND
-VCC 		usr/link_tracking_2_inst/XST_VCC
 GND 		usr/link_tracking_2_inst/gtx_tx_mux_inst/XST_GND
 VCC 		usr/link_tracking_2_inst/gtx_tx_mux_inst/XST_VCC
 GND 		usr/link_tracking_2_inst/ipb_info_inst/XST_GND
@@ -6095,6 +6081,10 @@ GND 		usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/XST_GND
 VCC 		usr/link_trigger_inst/ipb_trigger_inst/trigger_data_fifo_inst/XST_VCC
 GND 		usr/link_trigger_inst/trigger_tx_inst/XST_GND
 VCC 		usr/link_trigger_inst/trigger_tx_inst/XST_VCC
+GND 		usr/ttc_inst/XST_GND
+VCC 		usr/ttc_inst/XST_VCC
+GND 		usr/ttc_inst/amc13_inst/Inst_TTC_decoder/XST_GND
+VCC 		usr/ttc_inst/amc13_inst/Inst_TTC_decoder/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.

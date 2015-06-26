@@ -247,11 +247,11 @@ architecture user_logic_arch of user_logic is
 
 begin
 
-    ip_addr_o <= x"c0a8007d";  -- c0a80073 = 192.168.0.115 -- 898A7392 = 137.138.115.146
-    mac_addr_o <= x"080030F100A0";  -- 08:00:30:F1:00:A0
+    --ip_addr_o <= x"c0a8007d";  -- c0a80073 = 192.168.0.115 -- 898A7392 = 137.138.115.146
+    --mac_addr_o <= x"080030F100A0";  -- 08:00:30:F1:00:A0
     
-    --ip_addr_o <= x"c0a800a" & amc_slot_i;  -- 192.168.0.[160:175]
-    --mac_addr_o <= x"080030F100a" & amc_slot_i;  -- 08:00:30:F1:00:0[A0:AF]     
+    ip_addr_o <= x"c0a800a" & amc_slot_i;  -- 192.168.0.[160:175]
+    mac_addr_o <= x"080030F100a" & amc_slot_i;  -- 08:00:30:F1:00:0[A0:AF]     
     
     user_v6_led_o(1) <= l1_led;
     user_v6_led_o(2) <= bc0_led;
@@ -416,7 +416,7 @@ begin
     
     -- Firmware date : 2
     
-    request_read(2) <= x"BB150610";
+    request_read(2) <= x"AA150612";
 
 
 end user_logic_arch;

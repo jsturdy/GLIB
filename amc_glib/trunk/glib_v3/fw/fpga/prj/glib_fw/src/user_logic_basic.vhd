@@ -220,7 +220,16 @@ architecture user_logic_arch of user_logic is
     signal tx_data              : std_logic_vector(63 downto 0) := (others => '0');
 
     -- Registers requests
-
+    
+    signal request_write_0      : array32(127 downto 0) := (others => (others => '0'));
+    signal request_tri_0        : std_logic_vector(127 downto 0);
+    
+    signal request_write_1      : array32(127 downto 0) := (others => (others => '0'));
+    signal request_tri_1        : std_logic_vector(127 downto 0);
+    
+    signal request_write_2      : array32(127 downto 0) := (others => (others => '0'));
+    signal request_tri_2        : std_logic_vector(127 downto 0);
+    
     signal request_write        : array32(127 downto 0) := (others => (others => '0'));
     signal request_tri          : std_logic_vector(127 downto 0) := (others => '0');
     signal request_read         : array32(127 downto 0) := (others => (others => '0'));
@@ -229,17 +238,23 @@ architecture user_logic_arch of user_logic is
 
     signal empty_trigger_fifo   : std_logic := '0';
     signal sbit_configuration   : std_logic_vector(2 downto 0) := (others => '0');
+    signal ttc_trigger          : std_logic := '0';
+    
+    -- TTC
+    signal l1accept	            : std_logic := '0';
+    signal l1_led               : std_logic := '0';
+    signal bc0_led              : std_logic := '0';
 
 begin
 
-    --ip_addr_o <= x"c0a80073";  -- c0a80073 = 192.168.0.115 -- 898A7392 = 137.138.115.146
+    --ip_addr_o <= x"c0a8007d";  -- c0a80073 = 192.168.0.115 -- 898A7392 = 137.138.115.146
     --mac_addr_o <= x"080030F100A0";  -- 08:00:30:F1:00:A0
     
     ip_addr_o <= x"c0a800a" & amc_slot_i;  -- 192.168.0.[160:175]
     mac_addr_o <= x"080030F100a" & amc_slot_i;  -- 08:00:30:F1:00:0[A0:AF]     
     
-    user_v6_led_o(1) <= '0';
-    user_v6_led_o(2) <= '1';
+    user_v6_led_o(1) <= l1_led;
+    user_v6_led_o(2) <= bc0_led;
 
     fmc1_io_pin.la_p(10) <= ext_sbit;
 
@@ -268,6 +283,30 @@ begin
     -- Tracking links
     --================================--
 
+    link_tracking_0_inst : entity work.link_tracking
+    port map(
+        gtx_clk_i       => gtx_clk,
+        ipb_clk_i       => ipb_clk_i,
+        reset_i         => reset_i,
+        rx_error_i      => rx_error(0),
+        rx_kchar_i      => rx_kchar(1 downto 0),
+        rx_data_i       => rx_data(15 downto 0),
+        tx_kchar_o      => tx_kchar(1 downto 0),
+        tx_data_o       => tx_data(15 downto 0),
+        ipb_vi2c_i      => ipb_mosi_i(ipb_vi2c_0),
+        ipb_vi2c_o      => ipb_miso_o(ipb_vi2c_0),
+        ipb_track_i     => ipb_mosi_i(ipb_track_0),
+        ipb_track_o     => ipb_miso_o(ipb_track_0),
+        ipb_regs_i      => ipb_mosi_i(ipb_regs_0),
+        ipb_regs_o      => ipb_miso_o(ipb_regs_0),
+        ipb_info_i      => ipb_mosi_i(ipb_info_0),
+        ipb_info_o      => ipb_miso_o(ipb_info_0),
+        request_write_o => request_write_0,
+        request_tri_o   => request_tri_0,
+        request_read_i  => request_read,
+        trigger_i       => ttc_trigger
+    );
+
     link_tracking_1_inst : entity work.link_tracking
     port map(
         gtx_clk_i       => gtx_clk,
@@ -286,10 +325,43 @@ begin
         ipb_regs_o      => ipb_miso_o(ipb_regs_1),
         ipb_info_i      => ipb_mosi_i(ipb_info_1),
         ipb_info_o      => ipb_miso_o(ipb_info_1),
-        request_write_o => request_write,
-        request_tri_o   => request_tri,
-        request_read_i  => request_read
+        request_write_o => request_write_1,
+        request_tri_o   => request_tri_1,
+        request_read_i  => request_read,
+        trigger_i       => ttc_trigger
     );
+    
+    link_tracking_2_inst : entity work.link_tracking
+    port map(
+        gtx_clk_i       => gtx_clk,
+        ipb_clk_i       => ipb_clk_i,
+        reset_i         => reset_i,
+        rx_error_i      => rx_error(2),
+        rx_kchar_i      => rx_kchar(5 downto 4),
+        rx_data_i       => rx_data(47 downto 32),
+        tx_kchar_o      => tx_kchar(5 downto 4),
+        tx_data_o       => tx_data(47 downto 32),
+        ipb_vi2c_i      => ipb_mosi_i(ipb_vi2c_2),
+        ipb_vi2c_o      => ipb_miso_o(ipb_vi2c_2),
+        ipb_track_i     => ipb_mosi_i(ipb_track_2),
+        ipb_track_o     => ipb_miso_o(ipb_track_2),
+        ipb_regs_i      => ipb_mosi_i(ipb_regs_2),
+        ipb_regs_o      => ipb_miso_o(ipb_regs_2),
+        ipb_info_i      => ipb_mosi_i(ipb_info_2),
+        ipb_info_o      => ipb_miso_o(ipb_info_2),
+        request_write_o => request_write_2,
+        request_tri_o   => request_tri_2,
+        request_read_i  => request_read,
+        trigger_i       => ttc_trigger
+    );
+    
+    requests: for I in 0 to 127 generate
+    begin
+        request_tri(I) <= request_tri_0(I) or request_tri_1(I) or request_tri_2(I);
+        request_write(I) <= request_write_0(I) when request_tri_0(I) = '1' else 
+                            request_write_1(I) when request_tri_1(I) = '1' else 
+                            request_write_2(I);
+    end generate;    
 
     --================================--
     -- Trigger links
@@ -311,6 +383,23 @@ begin
         sbit_config_i   => sbit_configuration,
         ext_sbit_o      => ext_sbit
     );
+    
+    --================================--
+    -- TTC/TTT signal handling 	
+    -- from ngFEC_logic.vhd (HCAL)
+    --================================--
+    
+    ttc_inst : entity work.ttc
+    port map(
+        ttc_clk_p_i     => xpoint1_clk3_p,
+        ttc_clk_n_i     => xpoint1_clk3_n,
+        ttc_data_p_i    => amc_port_rx_p(3),
+        ttc_data_n_i    => amc_port_rx_n(3),
+        gtx_clk_i       => gtx_clk,
+        ttc_trigger_o   => ttc_trigger,
+        l1_led_o        => l1_led,
+        bc0_led_o       => bc0_led
+    );    
 
     --================================--
     -- Register mapping
@@ -320,10 +409,14 @@ begin
 
     empty_trigger_fifo <= request_tri(0);
 
-    -- S Bits configuration : 0 -- read / write _ Controls the Sbits to send to the TDC
+    -- S Bits configuration : 1 -- read / write _ Controls the Sbits to send to the TDC
 
     sbit_configuration_reg : entity work.reg port map(fabric_clk_i => ipb_clk_i, reset_i => reset_i, wbus_i => request_write(1), wbus_t => request_tri(1), rbus_o => request_read(1));
     sbit_configuration <= request_read(1)(2 downto 0);
+    
+    -- Firmware date : 2
+    
+    request_read(2) <= x"AA150612";
 
 
 end user_logic_arch;

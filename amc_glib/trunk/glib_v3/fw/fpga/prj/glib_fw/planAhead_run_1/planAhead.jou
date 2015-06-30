@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Wed Mar 11 09:39:38 2015
+# Process ID: 3088
+# Log file: Z:/Documents/PhD/Code/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/glib_fw/planAhead_run_1/planAhead.log
+# Journal file: Z:/Documents/PhD/Code/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/glib_fw/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source Z:/Documents/PhD/Code/GLIB/amc_glib/trunk/glib_v3/fw/fpga/prj/glib_fw/pa.fromNetlist.tcl
+startgroup
+create_pblock pblock_ipb_info_inst
+resize_pblock pblock_ipb_info_inst -add {SLICE_X68Y106:SLICE_X95Y147 DSP48_X3Y44:DSP48_X5Y57 RAMB18_X4Y44:RAMB18_X5Y57 RAMB36_X4Y22:RAMB36_X5Y28}
+add_cells_to_pblock pblock_ipb_info_inst [get_cells [list usr/link_tracking_1_inst/ipb_info_inst]] -clear_locs
+endgroup
+resize_pblock pblock_ipb_info_inst -add SLICE_X68Y143:SLICE_X95Y147 -remove {SLICE_X68Y106:SLICE_X95Y147 DSP48_X3Y44:DSP48_X5Y57 RAMB18_X4Y44:RAMB18_X5Y57 RAMB36_X4Y22:RAMB36_X5Y28} -locs keep_all
+resize_pblock pblock_ipb_info_inst -add SLICE_X68Y143:SLICE_X71Y147 -remove SLICE_X68Y143:SLICE_X95Y147 -locs keep_all
+remove_cells_from_pblock pblock_ipb_info_inst [get_cells [list usr/link_tracking_1_inst/ipb_info_inst]]
+delete_pblock [get_pblocks  pblock_ipb_info_inst]
